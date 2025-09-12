@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     initialScale: 1,
     width: "device-width",
   },
+  robots: "noindex, nofollow",
 };
 
 export default function RootLayout({
