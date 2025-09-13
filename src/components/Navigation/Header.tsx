@@ -7,19 +7,17 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ onMenuClick }) => (
-  <header>
-    <Navigation>
-      <MenuButton onClick={onMenuClick}>
-        <Menu />
-      </MenuButton>
-      <SearchButton>
-        <Search />
-      </SearchButton>
-    </Navigation>
-  </header>
+  <Wrapper>
+    <MenuButton onClick={onMenuClick}>
+      <Menu />
+    </MenuButton>
+    <SearchButton>
+      <Search />
+    </SearchButton>
+  </Wrapper>
 );
 
-const Navigation = styled("div")({
+const Wrapper = styled("header")({
   display: "flex",
   justifyContent: "space-between",
   padding: "12px 12px 0",

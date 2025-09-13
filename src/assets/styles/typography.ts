@@ -15,7 +15,7 @@ export const typography = {
   h1: {
     fontSize: "3.5rem",
     fontWeight: fontWeights.bold,
-    lineHeight: "1.5",
+    lineHeight: "1.1",
     fontFamily: fonts.fontHeading,
     margin: 0,
   },
