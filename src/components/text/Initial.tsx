@@ -15,7 +15,7 @@ const Letter = styled("span")(({ theme }) => ({
   fontFamily: fonts.fontInitial,
   fontWeight: fontWeights.regular,
   color: theme.palette.brand.red,
-  fontSize: "4rem",
+  fontSize: "1.5em",
   position: "relative",
   top: "0.3rem",
 }));

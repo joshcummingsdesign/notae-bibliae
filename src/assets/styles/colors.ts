@@ -5,4 +5,5 @@ export const colors = {
   blue: "#2274bb",
   green: "#018002",
   yellow: "#f4c00e",
+  ripple: "rgba(0,0,0,0.3)",
 };

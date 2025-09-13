@@ -20,6 +20,7 @@ export const theme = createTheme({
       blue: colors.blue,
       green: colors.green,
       yellow: colors.yellow,
+      ripple: colors.ripple,
     },
     background: {
       default: colors.white,

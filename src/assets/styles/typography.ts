@@ -8,49 +8,50 @@ export const fonts = {
 
 export const fontWeights = {
   regular: 400,
-  medium: 500,
+  bold: 700,
 };
 
 export const typography = {
   h1: {
-    fontSize: "2.5rem",
-    fontWeight: fontWeights.medium,
+    fontSize: "3.5rem",
+    fontWeight: fontWeights.bold,
     lineHeight: "1.5",
     fontFamily: fonts.fontHeading,
+    margin: 0,
   },
   h2: {
     fontSize: "2rem",
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.bold,
     lineHeight: "1.5",
     fontFamily: fonts.fontHeading,
   },
   h3: {
     fontSize: "1.25rem",
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.bold,
     lineHeight: "1.5",
     fontFamily: fonts.fontHeading,
   },
   h4: {
     fontSize: "1.125rem",
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.bold,
     lineHeight: "1.5",
     fontFamily: fonts.fontHeading,
   },
   h5: {
     fontSize: "0.875rem",
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.bold,
     lineHeight: "1.5",
     fontFamily: fonts.fontHeading,
   },
   h6: {
     fontSize: "0.75rem",
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.bold,
     lineHeight: "1.5",
     fontFamily: fonts.fontHeading,
   },
   body1: {
     fontSize: "1.0625rem",
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.regular,
     lineHeight: "1.6",
     fontFamily: fonts.fontBody,
 
