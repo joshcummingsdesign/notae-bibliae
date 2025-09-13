@@ -57,7 +57,7 @@ export const Poetry: React.FC<Props> = ({ children }) => {
 
 // TODO: Use theme
 const Wrapper = styled("pre")({
-  fontFamily: "var(--font-roboto)",
+  fontFamily: "inherit",
 
   abbr: {
     color: "red",
