@@ -23,12 +23,6 @@ export const GlobalStyles = () => (
       h6: {
         ...typography.h6,
       },
-      main: {
-        padding: "0 20px 20px",
-        maxWidth: "600px",
-        minHeight: "100vh",
-        margin: "0 auto",
-      },
       img: {
         width: "100%",
         height: "auto",

@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
 import { Providers } from "@/components/Providers";
-import { Header } from "@/components/Header/Header";
+import { Main } from "@/components/Main";
+import { Navigation } from "@/components/Navigation";
 
 interface Props {
   children: React.ReactNode;
@@ -49,8 +50,8 @@ export default function RootLayout({ children }: Props) {
     <Providers>
       <html lang="en" className={fontVariables}>
         <body>
-          <Header />
-          <main>{children}</main>
+          <Navigation />
+          <Main>{children}</Main>
         </body>
       </html>
     </Providers>

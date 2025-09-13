@@ -2,7 +2,7 @@
 import { menuItems, MenuNode } from "@/app/menu";
 import { useState } from "react";
 
-export const Nav = () => {
+export const SidebarNav = () => {
   const [path, setPath] = useState<MenuNode[]>([]);
 
   // Determine the current list to display
@@ -22,7 +22,16 @@ export const Nav = () => {
   };
 
   return (
-    <div>
+    <nav>
+      {/* <List>
+        {Object.entries(menuItems).map(([key, value]) => (
+          <ListItem key={key} disablePadding>
+            <ItemButton>
+              <ListItemText primary={key} />
+            </ItemButton>
+          </ListItem>
+        ))}
+      </List> */}
       {/* Back button */}
       {path.length > 0 && (
         <button onClick={handleBack} style={{ marginBottom: "0.5rem" }}>
@@ -54,6 +63,6 @@ export const Nav = () => {
           Breadcrumb: {path.map((n) => n.title).join(" > ")}
         </div>
       )}
-    </div>
+    </nav>
   );
 };
