@@ -9,13 +9,13 @@ interface Props {
 }
 
 const symbols = {
-  "\\V": "<abbr>℣</abbr>",
-  "\\R": "<abbr>℟</abbr>",
-  _: "<abbr>·</abbr>",
-  "*": "<abbr>*</abbr>",
-  "+": "<abbr>†</abbr>",
-  "%": "<abbr>‡</abbr>",
-  ˇ: "<abbr>ˇ</abbr>",
+  "\\V": '<span class="symbol v"></span>',
+  "\\R": '<span class="symbol r"></span>',
+  _: '<span class="symbol dot"></span>',
+  "*": '<span class="symbol star"></span>',
+  "+": '<span class="symbol cross"></span>',
+  ˇ: '<span class="symbol caret"></span>',
+  "%": '<span class="symbol dagger"></span>',
 };
 
 const replaceSymbols = (text: string) => {
@@ -55,11 +55,95 @@ export const Poetry: React.FC<Props> = ({ children }) => {
   return <Wrapper style={{ whiteSpace: "pre-wrap" }}>{content}</Wrapper>;
 };
 
-// TODO: Use theme
-const Wrapper = styled("pre")({
+const Wrapper = styled("pre")(({ theme }) => ({
   fontFamily: "inherit",
 
-  abbr: {
-    color: "red",
+  sup: {
+    position: "absolute",
   },
-});
+
+  ".symbol": {
+    color: theme.palette.brand.red,
+  },
+
+  ".v": {
+    position: "relative",
+    paddingRight: "0.875rem",
+
+    "&:before": {
+      content: "'℣'",
+      position: "absolute",
+      top: "-6px",
+      fontSize: "1.25rem",
+    },
+  },
+
+  ".r": {
+    position: "relative",
+    paddingRight: "0.875rem",
+
+    "&:before": {
+      content: "'℟'",
+      position: "absolute",
+      top: "-6px",
+      fontSize: "1.25rem",
+    },
+  },
+
+  ".dot": {
+    position: "relative",
+    paddingRight: "0.4rem",
+
+    "&:before": {
+      content: "'·'",
+      position: "absolute",
+      lineHeight: "1.5rem",
+      fontSize: "1.75rem",
+    },
+  },
+
+  ".star": {
+    position: "relative",
+    paddingLeft: "0.25rem",
+
+    "&:before": {
+      content: "'*'",
+      position: "absolute",
+      fontSize: "1.5rem",
+    },
+  },
+
+  ".cross": {
+    position: "relative",
+
+    "&:before": {
+      content: "'†'",
+      position: "absolute",
+      lineHeight: "1.75rem",
+      fontSize: "1.25rem",
+    },
+  },
+
+  ".caret": {
+    position: "relative",
+
+    "&:before": {
+      content: "'ˇ'",
+      position: "absolute",
+      fontSize: "1.75rem",
+      top: "-16px",
+    },
+  },
+
+  ".dagger": {
+    position: "relative",
+    paddingRight: "0.6rem",
+
+    "&:before": {
+      content: "'‡'",
+      position: "absolute",
+      top: "-6px",
+      fontSize: "1.25rem",
+    },
+  },
+}));

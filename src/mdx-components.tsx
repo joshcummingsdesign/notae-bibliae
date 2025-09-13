@@ -1,12 +1,12 @@
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
-import { In } from "@/components/text/In";
+import { Initial } from "@/components/text/Initial";
 import { Poetry } from "@/components/text/Poetry";
 
 // Global mdx components
 const components: MDXComponents = {
   Image,
-  In,
+  Initial,
   Poetry,
 };
 

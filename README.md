@@ -9,7 +9,7 @@ A collection of biblical, liturgical, and historical notes.
 Stylized initial letter.
 
 ```md
-<In t="G"/>loria Patri
+<Initial t="G"/>loria Patri
 ```
 
 ### Poetry
@@ -22,8 +22,8 @@ Stylized initial letter.
 _ = ·
 * = *
 + = †
-% = ‡
 ˇ = ˇ
+% = ‡
 ```
 
 Poetry with indentation and symbols.

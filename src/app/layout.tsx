@@ -1,17 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
-import CssBaseline from "@mui/material/CssBaseline";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "@/theme";
+import { Providers } from "@/components/Providers";
 
-const roboto = EB_Garamond({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-eb-garamond",
-});
+interface Props {
+  children: React.ReactNode;
+}
 
 const rediviva = localFont({
   src: "../assets/fonts/rediviva.ttf",
@@ -29,6 +23,13 @@ const canterbury = localFont({
   display: "swap",
 });
 
+const ebGaramond = EB_Garamond({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-eb-garamond",
+});
+
 export const metadata: Metadata = {
   title: "Notae Bibliae",
   description: "A collection of biblical, liturgical, and historical notes.",
@@ -40,24 +41,16 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const fontVariables = `${rediviva.variable} ${canterbury.variable} ${ebGaramond.variable}`;
+
+export default function RootLayout({ children }: Props) {
   return (
-    <AppRouterCacheProvider>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <html
-          lang="en"
-          className={`${rediviva.variable} ${canterbury.variable}`}
-        >
-          <body>
-            <main>{children}</main>
-          </body>
-        </html>
-      </ThemeProvider>
-    </AppRouterCacheProvider>
+    <Providers>
+      <html lang="en" className={fontVariables}>
+        <body>
+          <main>{children}</main>
+        </body>
+      </html>
+    </Providers>
   );
 }

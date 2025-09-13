@@ -9,12 +9,13 @@ interface Props {
 /**
  * Styled initial letter.
  */
-export const In: React.FC<Props> = ({ t }) => <Letter>{t}</Letter>;
+export const Initial: React.FC<Props> = ({ t }) => <Letter>{t}</Letter>;
 
-// TODO: Use theme
 const Letter = styled("span")(({ theme }) => ({
   fontFamily: fonts.fontInitial,
   fontWeight: fontWeights.regular,
   color: theme.palette.brand.red,
   fontSize: "4rem",
+  position: "relative",
+  top: "0.3rem",
 }));

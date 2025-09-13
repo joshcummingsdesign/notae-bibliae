@@ -55,7 +55,7 @@ export const typography = {
     fontFamily: fonts.fontBody,
 
     a: {
-      color: colors.blue,
+      color: "inherit",
       textDecoration: "none",
     },
   },
@@ -66,7 +66,7 @@ export const typography = {
     fontFamily: fonts.fontBody,
 
     a: {
-      color: colors.blue,
+      color: "inherit",
       textDecoration: "none",
     },
   },
