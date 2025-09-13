@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
+  options: {
+    remarkPlugins: ["remark-gfm"],
+  },
 });
 
 export default withMDX(nextConfig);

@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Notae Bibliae
 
-## Getting Started
+A collection of biblical, liturgical, and historical notes.
 
-First, run the development server:
+## Markdown
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Initial
+
+Stylized initial letter.
+
+```md
+<In t="G"/>loria Patri
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Poetry
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Symbols**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+\V = ℣
+\R = ℟
+_ = ·
+* = *
++ = †
+% = ‡
+ˇ = ˇ
+```
 
-## Learn More
+Poetry with indentation and symbols.
 
-To learn more about Next.js, take a look at the following resources:
+```md
+<Poetry>
+|  \V O Lord, open thou my _ lips, *
+|    \R and my mouth shall _ show forth thy praise.
+</Poetry>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Footnotes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```md
+This is some text.[^1]
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[^1]: And this is the footnote.
+```
