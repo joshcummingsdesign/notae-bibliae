@@ -48,7 +48,7 @@ export const Sidebar: React.FC<Props> = ({ className, open, onClose }) => {
     >
       <Drawer
         className={className}
-        variant="persistent"
+        variant={isDesktop ? "permanent" : "persistent"}
         anchor="left"
         open={open}
       >
@@ -88,9 +88,10 @@ const DrawerContent = styled("div")({
   minHeight: "100vh",
 });
 
-const CloseButton = styled(IconButton)({
+const CloseButton = styled(IconButton)(({ theme }) => ({
   position: "absolute",
   zIndex: 1,
   top: "6px",
   right: "8px",
-});
+  color: theme.palette.brand.black,
+}));
