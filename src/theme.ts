@@ -20,6 +20,7 @@ export const theme = createTheme({
       blue: colors.blue,
       green: colors.green,
       yellow: colors.yellow,
+      border: colors.border,
       ripple: colors.ripple,
       hover: colors.hover,
     },

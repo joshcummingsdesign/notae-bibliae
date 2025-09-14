@@ -58,7 +58,7 @@ export const Sidebar: React.FC<Props> = ({ className, open, onClose }) => {
               <Close />
             </CloseButton>
           )}
-          <SidebarNav />
+          <SidebarNav onClose={onClose} />
         </DrawerContent>
       </Drawer>
     </ClickAwayListener>
@@ -76,6 +76,7 @@ const Drawer = styled(DrawerBase)(({ theme }) => ({
   "& .MuiDrawer-paper": {
     width: SIDEBAR_WIDTH,
     boxSizing: "border-box",
+    borderRight: `1px solid ${theme.palette.brand.border}`,
 
     [theme.breakpoints.up("lg")]: {
       width: SIDEBAR_WIDTH_LG,
@@ -90,6 +91,7 @@ const DrawerContent = styled("div")({
 
 const CloseButton = styled(IconButton)(({ theme }) => ({
   position: "absolute",
+  transform: "scale(0.8)",
   zIndex: 1,
   top: "6px",
   right: "8px",

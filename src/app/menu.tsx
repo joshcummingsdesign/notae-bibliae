@@ -10,6 +10,17 @@ export const menuItems: MenuNode[] = [
     link: "/bible",
     children: [
       {
+        title: "New Testament",
+        link: "/bible/new-testament",
+        children: [
+          {
+            title: "Gospels",
+            link: "/bible/new-testament/gospels",
+            children: null,
+          },
+        ],
+      },
+      {
         title: "Old Testament",
         link: "/bible/old-testament",
         children: [
@@ -27,15 +38,14 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "New Testament",
-        link: "/bible/new-testament",
-        children: [
-          {
-            title: "Gospels",
-            link: "/bible/new-testament/gospels",
-            children: null,
-          },
-        ],
+        title: "Languages",
+        link: "/bible/languages",
+        children: null,
+      },
+      {
+        title: "Translations",
+        link: "/bible/translations",
+        children: null,
       },
     ],
   },
@@ -46,6 +56,16 @@ export const menuItems: MenuNode[] = [
       {
         title: "Calendar",
         link: "/liturgy/calendar",
+        children: null,
+      },
+      {
+        title: "Prayers",
+        link: "/liturgy/prayers",
+        children: null,
+      },
+      {
+        title: "Creeds",
+        link: "/liturgy/creeds",
         children: null,
       },
     ],
