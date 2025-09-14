@@ -1,6 +1,7 @@
 "use client";
 import { styled } from "@mui/material";
 import { SIDEBAR_WIDTH, SIDEBAR_WIDTH_LG } from "./Navigation/Sidebar";
+import { HEADER_HEIGHT } from "./Navigation";
 
 interface Props {
   children: React.ReactNode;
@@ -17,7 +18,7 @@ export const Main: React.FC<Props> = ({ children }) => {
 };
 
 const Wrapper = styled("main")(({ theme }) => ({
-  minHeight: "100vh",
+  minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
   padding: "0 20px 20px",
 
   [theme.breakpoints.up("md")]: {

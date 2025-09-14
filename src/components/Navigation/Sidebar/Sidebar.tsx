@@ -90,6 +90,7 @@ const DrawerContent = styled("div")({
 
 const CloseButton = styled(IconButton)({
   position: "absolute",
-  top: "8px",
+  zIndex: 1,
+  top: "6px",
   right: "8px",
 });

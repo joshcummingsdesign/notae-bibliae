@@ -6,12 +6,14 @@ interface Props {
   onMenuClick: () => void;
 }
 
+export const HEADER_HEIGHT = 52;
+
 export const Header: React.FC<Props> = ({ onMenuClick }) => (
   <Wrapper>
-    <MenuButton onClick={onMenuClick}>
+    <MenuButton onClick={onMenuClick} aria-label="Menu">
       <Menu />
     </MenuButton>
-    <SearchButton>
+    <SearchButton aria-label="Search">
       <Search />
     </SearchButton>
   </Wrapper>
@@ -21,6 +23,7 @@ const Wrapper = styled("header")({
   display: "flex",
   justifyContent: "space-between",
   padding: "12px 12px 0",
+  height: HEADER_HEIGHT,
 });
 
 const MenuButton = styled(IconButton)(({ theme }) => ({
