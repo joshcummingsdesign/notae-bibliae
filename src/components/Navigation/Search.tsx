@@ -90,7 +90,7 @@ export const Search: React.FC<Props> = ({ open, onChange, onClose }) => {
   );
 };
 
-const Modal = styled(ModalBase)({
+const Modal = styled(ModalBase)(({ theme }) => ({
   ".MuiBackdrop-root": {
     backgroundColor: "rgba(255, 255, 255, 0.96)",
   },
@@ -102,13 +102,17 @@ const Modal = styled(ModalBase)({
 
     ".MuiAutocomplete-listbox": {
       maxHeight: "80vh",
+
+      "li[aria-selected='true']": {
+        backgroundColor: theme.palette.brand.hover,
+      },
+    },
+
+    ".MuiAutocomplete-endAdornment": {
+      display: "none",
     },
   },
-
-  ".MuiAutocomplete-endAdornment": {
-    display: "none",
-  },
-});
+}));
 
 const ModalContent = styled("div")({
   position: "absolute",

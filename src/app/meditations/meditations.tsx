@@ -131,6 +131,10 @@ const Category = styled("div")(({ theme }) => ({
 
     ".MuiAutocomplete-listbox": {
       maxHeight: "80vh",
+
+      "li[aria-selected='true']": {
+        backgroundColor: theme.palette.brand.hover,
+      },
     },
   },
 }));
