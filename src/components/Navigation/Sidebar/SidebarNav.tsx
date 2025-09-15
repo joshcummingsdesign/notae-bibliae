@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Home } from "@mui/icons-material";
 import { menuItems, MenuNode } from "@/app/menu";
@@ -38,7 +38,15 @@ const findPath = (
 
 export const SidebarNav: React.FC<Props> = ({ onClose }) => {
   const router = useRouter();
-  const pathname = usePathname();
+  let pathname = usePathname();
+  const searchParams = useSearchParams();
+  let fullPath =
+    searchParams.size > 0 ? `${pathname}?${searchParams.toString()}` : pathname;
+
+  if (pathname.includes("meditations") && !searchParams.has("category")) {
+    pathname = "/meditations";
+    fullPath = "/meditations";
+  }
 
   const [path, setPath] = useState<MenuNode[]>([]);
 
@@ -125,7 +133,7 @@ export const SidebarNav: React.FC<Props> = ({ onClose }) => {
               onClick={onClose}
             >
               <ListItemText
-                selected={pathname === path[path.length - 1].link}
+                selected={fullPath === path[path.length - 1].link}
                 primary={path[path.length - 1].title}
               />
             </ListItemButton>
@@ -146,7 +154,7 @@ export const SidebarNav: React.FC<Props> = ({ onClose }) => {
                 onClick={onClose}
               >
                 <ListItemText
-                  selected={pathname === node.link}
+                  selected={fullPath === node.link}
                   primary={node.title}
                 />
               </ListItemButton>

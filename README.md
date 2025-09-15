@@ -6,10 +6,10 @@ A collection of biblical, liturgical, and historical notes.
 
 ### Initial
 
-Stylized initial letter.
+Stylized h1 with initial letter.
 
 ```md
-<Initial t="G"/>loria Patri
+<Initial text="Gloria Patri"/>
 ```
 
 ### Poetry

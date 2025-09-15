@@ -70,4 +70,25 @@ export const menuItems: MenuNode[] = [
       },
     ],
   },
+  {
+    title: "Meditations",
+    link: "/meditations",
+    children: [
+      {
+        title: "Luther",
+        link: "/meditations?category=Luther",
+        children: null,
+      },
+      {
+        title: "Repentance",
+        link: "/meditations?category=Repentance",
+        children: null,
+      },
+      {
+        title: "Theology",
+        link: "/meditations?category=Theology",
+        children: null,
+      },
+    ],
+  },
 ];

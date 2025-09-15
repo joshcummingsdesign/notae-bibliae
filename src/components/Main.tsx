@@ -19,7 +19,7 @@ export const Main: React.FC<Props> = ({ children }) => {
 
 const Wrapper = styled("main")(({ theme }) => ({
   minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
-  padding: "0 20px 20px",
+  padding: "10px 20px 20px",
 
   [theme.breakpoints.up("md")]: {
     padding: `0 20px 20px ${SIDEBAR_WIDTH + 20}px`,
