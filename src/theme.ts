@@ -21,6 +21,7 @@ export const theme = createTheme({
       green: colors.green,
       yellow: colors.yellow,
       grey: colors.grey,
+      darkGrey: colors.darkGrey,
       border: colors.border,
       ripple: colors.ripple,
       hover: colors.hover,

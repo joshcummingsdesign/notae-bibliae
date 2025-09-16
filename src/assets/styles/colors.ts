@@ -6,6 +6,7 @@ export const colors = {
   green: "#018002",
   yellow: "#f4c00e",
   grey: "#999999",
+  darkGrey: "#555555",
   border: "rgba(0,0,0,0.12)",
   ripple: "rgba(0,0,0,0.3)",
   hover: "rgba(0,0,0,0.04)",

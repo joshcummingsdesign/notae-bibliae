@@ -20,7 +20,7 @@ export const Meditations: React.FC<Props> = ({ allPosts, perPage = 6 }) => {
 
   const allCategories = [
     ...new Set(["All", ...allPosts.flatMap((post) => post.categories)]),
-  ];
+  ].sort((a, b) => a.localeCompare(b));
 
   // Filter by category
   const categoryParam = searchParams.get("category");
@@ -142,7 +142,7 @@ const PostWrap = styled(Link)(({ theme }) => ({
   borderRadius: "4px",
   maxWidth: "450px",
   color: "inherit",
-  textDecoration: "none",
+  textDecoration: "none !important",
 
   [theme.breakpoints.up("sm")]: {
     width: "calc(50% - 15px)",

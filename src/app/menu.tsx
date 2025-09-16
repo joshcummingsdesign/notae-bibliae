@@ -16,6 +16,158 @@ export const menuItems: MenuNode[] = [
           {
             title: "Gospels",
             link: "/bible/new-testament/gospels",
+            children: [
+              {
+                title: "Matthew",
+                link: "/bible/new-testament/gospels/matthew",
+                children: null,
+              },
+              {
+                title: "Mark",
+                link: "/bible/new-testament/gospels/mark",
+                children: null,
+              },
+              {
+                title: "Luke",
+                link: "/bible/new-testament/gospels/luke",
+                children: null,
+              },
+              {
+                title: "John",
+                link: "/bible/new-testament/gospels/john",
+                children: null,
+              },
+              {
+                title: "Harmony",
+                link: "/bible/new-testament/gospels/harmony",
+                children: null,
+              },
+            ],
+          },
+          {
+            title: "Acts",
+            link: "/bible/new-testament/acts",
+            children: null,
+          },
+          {
+            title: "Epistles",
+            link: "/bible/new-testament/epistles",
+            children: [
+              {
+                title: "Romans",
+                link: "/bible/new-testament/epistles/romans",
+                children: null,
+              },
+              {
+                title: "1 Corinthians",
+                link: "/bible/new-testament/epistles/1-corinthians",
+                children: null,
+              },
+              {
+                title: "2 Corinthians",
+                link: "/bible/new-testament/epistles/2-corinthians",
+                children: null,
+              },
+              {
+                title: "Galatians",
+                link: "/bible/new-testament/epistles/galatians",
+                children: null,
+              },
+              {
+                title: "Ephesians",
+                link: "/bible/new-testament/epistles/ephesians",
+                children: null,
+              },
+              {
+                title: "Philippians",
+                link: "/bible/new-testament/epistles/philippians",
+                children: null,
+              },
+              {
+                title: "Colossians",
+                link: "/bible/new-testament/epistles/colossians",
+                children: null,
+              },
+              {
+                title: "1 Thessalonians",
+                link: "/bible/new-testament/epistles/1-thessalonians",
+                children: null,
+              },
+              {
+                title: "2 Thessalonians",
+                link: "/bible/new-testament/epistles/2-thessalonians",
+                children: null,
+              },
+              {
+                title: "1 Timothy",
+                link: "/bible/new-testament/epistles/1-timothy",
+                children: null,
+              },
+              {
+                title: "2 Timothy",
+                link: "/bible/new-testament/epistles/2-timothy",
+                children: null,
+              },
+              {
+                title: "Titus",
+                link: "/bible/new-testament/epistles/titus",
+                children: null,
+              },
+              {
+                title: "Philemon",
+                link: "/bible/new-testament/epistles/philemon",
+                children: null,
+              },
+              {
+                title: "Hebrews",
+                link: "/bible/new-testament/epistles/hebrews",
+                children: null,
+              },
+              {
+                title: "James",
+                link: "/bible/new-testament/epistles/james",
+                children: null,
+              },
+              {
+                title: "1 Peter",
+                link: "/bible/new-testament/epistles/1-peter",
+                children: null,
+              },
+              {
+                title: "2 Peter",
+                link: "/bible/new-testament/epistles/2-peter",
+                children: null,
+              },
+              {
+                title: "1 John",
+                link: "/bible/new-testament/epistles/1-john",
+                children: null,
+              },
+              {
+                title: "2 John",
+                link: "/bible/new-testament/epistles/2-john",
+                children: null,
+              },
+              {
+                title: "3 John",
+                link: "/bible/new-testament/epistles/3-john",
+                children: null,
+              },
+              {
+                title: "Jude",
+                link: "/bible/new-testament/epistles/jude",
+                children: null,
+              },
+            ],
+          },
+          {
+            title: "Revelation",
+            link: "/bible/new-testament/revelation",
+            children: null,
+          },
+          {
+            title: "Chronological Order",
+            link: "/bible/new-testament/chronological-order",
             children: null,
           },
         ],
@@ -27,7 +179,33 @@ export const menuItems: MenuNode[] = [
           {
             title: "Pentateuch",
             link: "/bible/old-testament/pentateuch",
-            children: null,
+            children: [
+              {
+                title: "Genesis",
+                link: "/bible/old-testament/pentateuch/genesis",
+                children: null,
+              },
+              {
+                title: "Exodus",
+                link: "/bible/old-testament/pentateuch/exodus",
+                children: null,
+              },
+              {
+                title: "Leviticus",
+                link: "/bible/old-testament/pentateuch/leviticus",
+                children: null,
+              },
+              {
+                title: "Numbers",
+                link: "/bible/old-testament/pentateuch/numbers",
+                children: null,
+              },
+              {
+                title: "Deuteronomy",
+                link: "/bible/old-testament/pentateuch/deuteronomy",
+                children: null,
+              },
+            ],
           },
           {
             title: "Historical Books",
@@ -47,7 +225,23 @@ export const menuItems: MenuNode[] = [
           {
             title: "Jewish Order",
             link: "/bible/old-testament/jewish-order",
-            children: null,
+            children: [
+              {
+                title: "Torah",
+                link: "/bible/old-testament/jewish-order/torah",
+                children: null,
+              },
+              {
+                title: "Nevi’im",
+                link: "/bible/old-testament/jewish-order/neviim",
+                children: null,
+              },
+              {
+                title: "Ketuvim",
+                link: "/bible/old-testament/jewish-order/ketuvim",
+                children: null,
+              },
+            ],
           },
           {
             title: "Chronological Order",
@@ -57,30 +251,25 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "Tanakh",
-        link: "/bible/tanakh",
+        title: "Languages",
+        link: "/bible/languages",
         children: [
           {
-            title: "Torah",
-            link: "/bible/tanakh/torah",
+            title: "Biblical Hebrew",
+            link: "/bible/languages/biblical-hebrew",
             children: null,
           },
           {
-            title: "Nevi’im",
-            link: "/bible/tanakh/neviim",
+            title: "Biblical Aramaic",
+            link: "/bible/languages/biblical-aramaic",
             children: null,
           },
           {
-            title: "Ketuvim",
-            link: "/bible/tanakh/ketuvim",
+            title: "Koine Greek",
+            link: "/bible/languages/koine-greek",
             children: null,
           },
         ],
-      },
-      {
-        title: "Languages",
-        link: "/bible/languages",
-        children: null,
       },
       {
         title: "Translations",
@@ -115,6 +304,11 @@ export const menuItems: MenuNode[] = [
     link: "/meditations",
     children: [
       {
+        title: "Church History",
+        link: "/meditations?category=Church+History",
+        children: null,
+      },
+      {
         title: "Luther",
         link: "/meditations?category=Luther",
         children: null,
@@ -127,6 +321,32 @@ export const menuItems: MenuNode[] = [
       {
         title: "Theology",
         link: "/meditations?category=Theology",
+        children: null,
+      },
+    ],
+  },
+  {
+    title: "Glossary",
+    link: "/glossary",
+    children: [
+      {
+        title: "English",
+        link: "/glossary/english",
+        children: null,
+      },
+      {
+        title: "Latin",
+        link: "/glossary/latin",
+        children: null,
+      },
+      {
+        title: "Greek",
+        link: "/glossary/greek",
+        children: null,
+      },
+      {
+        title: "Hebrew",
+        link: "/glossary/hebrew",
         children: null,
       },
     ],

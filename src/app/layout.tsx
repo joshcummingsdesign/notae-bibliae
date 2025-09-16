@@ -5,6 +5,7 @@ import { Providers } from "@/components/Providers";
 import { Main } from "@/components/Main";
 import { Navigation } from "@/components/Navigation";
 import { BibleGateway } from "@/components/BibleGateway";
+import { DefinitionProvider } from "@/components/Definition/DefinitionProvider";
 
 interface Props {
   children: React.ReactNode;
@@ -51,9 +52,11 @@ export default function RootLayout({ children }: Props) {
     <Providers>
       <html lang="en" className={fontVariables}>
         <body>
-          <Navigation />
-          <Main>{children}</Main>
-          <BibleGateway />
+          <DefinitionProvider>
+            <Navigation />
+            <Main>{children}</Main>
+            <BibleGateway />
+          </DefinitionProvider>
         </body>
       </html>
     </Providers>
