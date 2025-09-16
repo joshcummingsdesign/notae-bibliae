@@ -1,6 +1,6 @@
 "use client";
 import { Initial } from "@/components/text/Initial";
-import { Post } from "./actions";
+import { PostMeta } from "./actions";
 import Link from "next/link";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import { fonts, typography } from "@/assets/styles";
@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { getPaginationRange, paginatePosts } from "./pagination";
 
 interface Props {
-  allPosts: Post[];
+  allPosts: PostMeta[];
   perPage?: number;
 }
 

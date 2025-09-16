@@ -1,12 +1,15 @@
 import path from "path";
 import { promises as fs } from "fs";
 
-export interface Post {
-  slug: string;
+export interface PostMeta {
   title: string;
   date: string;
   description: string;
   categories: string[];
+}
+
+export interface Post extends PostMeta {
+  slug: string;
 }
 
 export const getAllPosts = async () => {
