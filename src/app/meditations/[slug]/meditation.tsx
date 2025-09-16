@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { PostMeta } from "../actions";
 import Link from "next/link";
 import { typography } from "@/assets/styles";
-import { Button, styled } from "@mui/material";
+import { Button } from "@mui/material";
 
 interface Props {
   postMeta: PostMeta;

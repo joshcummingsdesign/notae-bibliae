@@ -25,15 +25,55 @@ export const menuItems: MenuNode[] = [
         link: "/bible/old-testament",
         children: [
           {
+            title: "Pentateuch",
+            link: "/bible/old-testament/pentateuch",
+            children: null,
+          },
+          {
+            title: "Historical Books",
+            link: "/bible/old-testament/historical-books",
+            children: null,
+          },
+          {
             title: "Poetic Books",
             link: "/bible/old-testament/poetic-books",
-            children: [
-              {
-                title: "Psalms",
-                link: "/bible/old-testament/poetic-books/psalms",
-                children: null,
-              },
-            ],
+            children: null,
+          },
+          {
+            title: "Prophetic Books",
+            link: "/bible/old-testament/prophetic-books",
+            children: null,
+          },
+          {
+            title: "Jewish Order",
+            link: "/bible/old-testament/jewish-order",
+            children: null,
+          },
+          {
+            title: "Chronological Order",
+            link: "/bible/old-testament/chronological-order",
+            children: null,
+          },
+        ],
+      },
+      {
+        title: "Tanakh",
+        link: "/bible/tanakh",
+        children: [
+          {
+            title: "Torah",
+            link: "/bible/tanakh/torah",
+            children: null,
+          },
+          {
+            title: "Nevi’im",
+            link: "/bible/tanakh/neviim",
+            children: null,
+          },
+          {
+            title: "Ketuvim",
+            link: "/bible/tanakh/ketuvim",
+            children: null,
           },
         ],
       },

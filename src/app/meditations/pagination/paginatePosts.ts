@@ -1,10 +1,6 @@
-import { PostMeta } from "../actions/getAllPosts";
+import { Post } from "../actions/getAllPosts";
 
-export const paginatePosts = (
-  posts: PostMeta[],
-  page: number,
-  perPage: number
-) => {
+export const paginatePosts = (posts: Post[], page: number, perPage: number) => {
   const total = posts.length;
   const totalPages = Math.ceil(total / perPage);
 

@@ -51,6 +51,28 @@ export const GlobalStyles = () => (
           },
         },
       },
+      a: {
+        color: colors.red,
+        textDecoration: "none",
+        "&:hover": {
+          textDecoration: "underline",
+        },
+      },
+      blockquote: {
+        borderLeft: `4px solid ${colors.black}`,
+        paddingLeft: "1em",
+        margin: "2rem 0",
+        cite: {
+          fontStyle: "normal",
+          display: "block",
+          fontSize: typography.body2.fontSize,
+        },
+      },
+      ".bg_popup-spinner": {
+        img: {
+          width: "auto",
+        },
+      },
     }}
   />
 );

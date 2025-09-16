@@ -54,21 +54,11 @@ export const typography = {
     fontWeight: fontWeights.regular,
     lineHeight: "1.6",
     fontFamily: fonts.fontBody,
-
-    a: {
-      color: "inherit",
-      textDecoration: "none",
-    },
   },
   body2: {
     fontSize: "0.8125rem",
     fontWeight: fontWeights.regular,
     lineHeight: "1.5",
     fontFamily: fonts.fontBody,
-
-    a: {
-      color: "inherit",
-      textDecoration: "none",
-    },
   },
 };

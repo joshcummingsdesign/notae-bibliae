@@ -1,6 +1,6 @@
 "use client";
 import { Initial } from "@/components/text/Initial";
-import { PostMeta } from "./actions";
+import { Post } from "./actions";
 import Link from "next/link";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import { fonts, typography } from "@/assets/styles";
@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { getPaginationRange, paginatePosts } from "./pagination";
 
 interface Props {
-  allPosts: PostMeta[];
+  allPosts: Post[];
   perPage?: number;
 }
 
@@ -141,6 +141,8 @@ const PostWrap = styled(Link)(({ theme }) => ({
   padding: "10px 0",
   borderRadius: "4px",
   maxWidth: "450px",
+  color: "inherit",
+  textDecoration: "none",
 
   [theme.breakpoints.up("sm")]: {
     width: "calc(50% - 15px)",
