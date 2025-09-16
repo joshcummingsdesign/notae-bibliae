@@ -3,29 +3,38 @@ import { Initial } from "@/components/text/Initial";
 import { Post } from "./getAllPosts";
 import Link from "next/link";
 import { Autocomplete, styled, TextField } from "@mui/material";
-import { fonts } from "@/assets/styles";
+import { fonts, typography } from "@/assets/styles";
 import dayjs from "dayjs";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { getPaginationRange, paginatePosts } from "./pagination";
 
 interface Props {
-  posts: Post[];
+  allPosts: Post[];
+  perPage?: number;
 }
 
-export const Meditations: React.FC<Props> = ({ posts }) => {
+export const Meditations: React.FC<Props> = ({ allPosts, perPage = 6 }) => {
   const router = useRouter();
-  const params = useSearchParams();
-  const categoryParam = params.get("category");
-  const options = [
-    ...new Set(["All", ...posts.flatMap((post) => post.categories)]),
-  ];
-  const [category, setCategory] = useState<string>(categoryParam || "All");
+  const searchParams = useSearchParams();
 
+  const allCategories = [
+    ...new Set(["All", ...allPosts.flatMap((post) => post.categories)]),
+  ];
+
+  // Filter by category
+  const categoryParam = searchParams.get("category");
+  const [category, setCategory] = useState<string>(categoryParam || "All");
   const filteredPosts =
     category && category !== "All"
-      ? posts.filter((post) => post.categories.includes(category))
-      : posts;
+      ? allPosts.filter((post) => post.categories.includes(category))
+      : allPosts;
 
+  // Pagination
+  const page = parseInt(searchParams.get("page") || "1", 10);
+  const { posts, totalPages } = paginatePosts(filteredPosts, page, perPage);
+
+  // Update category state on param change
   useEffect(() => {
     if (categoryParam) {
       setCategory(categoryParam);
@@ -34,15 +43,32 @@ export const Meditations: React.FC<Props> = ({ posts }) => {
     }
   }, [categoryParam]);
 
-  const handleChange = (value: string) => {
-    const p = new URLSearchParams(params.toString());
+  const handleCategoryChange = (value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    params.delete("page");
+
     if (!value || value === "All") {
-      p.delete("category");
+      params.delete("category");
     } else {
-      p.set("category", value);
+      params.set("category", value);
     }
+
+    router.push(`?${params.toString()}`);
+
     setCategory(value);
-    router.push(`?${p.toString()}`);
+  };
+
+  const handlePageChange = (p: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (p === 1) {
+      params.delete("page");
+    } else {
+      params.set("page", String(p));
+    }
+
+    router.push(`?${params.toString()}`);
   };
 
   return (
@@ -53,15 +79,15 @@ export const Meditations: React.FC<Props> = ({ posts }) => {
           value={category}
           disableClearable={true}
           disablePortal={true}
-          options={options}
-          onChange={(_, value) => handleChange(value)}
+          options={allCategories}
+          onChange={(_, value) => handleCategoryChange(value)}
           renderInput={(params) => (
             <CategoryInput {...params} label="Category" />
           )}
         />
       </Category>
       <Posts>
-        {filteredPosts.map((post) => {
+        {posts.map((post) => {
           return (
             <PostWrap
               key={post.slug}
@@ -76,6 +102,25 @@ export const Meditations: React.FC<Props> = ({ posts }) => {
           );
         })}
       </Posts>
+      {totalPages > 1 && (
+        <Pagination>
+          {getPaginationRange(page, totalPages).map((p, i) =>
+            typeof p === "number" ? (
+              <PaginationButton
+                key={i}
+                selected={p === page}
+                aria-current={page === p ? "page" : undefined}
+                aria-label={`Page ${p}`}
+                onClick={() => handlePageChange(p)}
+              >
+                {p}
+              </PaginationButton>
+            ) : (
+              <PaginationEllipsis key={i}>{p}</PaginationEllipsis>
+            )
+          )}
+        </Pagination>
+      )}
     </>
   );
 };
@@ -93,6 +138,7 @@ const Posts = styled("div")(({ theme }) => ({
 }));
 
 const PostWrap = styled(Link)(({ theme }) => ({
+  padding: "10px 0",
   borderRadius: "4px",
   maxWidth: "450px",
 
@@ -121,7 +167,7 @@ const PostLink = styled("p")(({ theme }) => ({
 }));
 
 const Category = styled("div")(({ theme }) => ({
-  marginTop: "20px",
+  marginTop: "30px",
 
   ".MuiPaper-root": {
     boxShadow: "none",
@@ -157,3 +203,23 @@ const CategoryInput = styled(TextField)(({ theme }) => ({
     borderBottom: `1px solid ${theme.palette.brand.border}`,
   },
 }));
+
+const Pagination = styled("div")({
+  margin: "40px 0",
+});
+
+const PaginationButton = styled("button", {
+  shouldForwardProp: (prop) => prop !== "selected",
+})<{ selected: boolean }>(({ theme, selected }) => ({
+  ...typography.body1,
+  fontWeight: selected ? "bold" : "normal",
+  color: selected ? theme.palette.brand.red : theme.palette.brand.black,
+  marginRight: "0.5rem",
+  background: "none",
+  border: "none",
+  cursor: "pointer",
+}));
+
+const PaginationEllipsis = styled("span")({
+  marginRight: "0.5rem",
+});
