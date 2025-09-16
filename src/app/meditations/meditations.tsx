@@ -1,6 +1,6 @@
 "use client";
 import { Initial } from "@/components/text/Initial";
-import { Post } from "./getAllPosts";
+import { Post } from "./actions";
 import Link from "next/link";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import { fonts, typography } from "@/assets/styles";

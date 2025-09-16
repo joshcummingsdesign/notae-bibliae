@@ -1,5 +1,5 @@
 import { use } from "react";
-import { getAllPosts } from "./getAllPosts";
+import { getAllPosts } from "./actions";
 import { Meditations } from "./meditations";
 
 export default function MeditationsPage() {

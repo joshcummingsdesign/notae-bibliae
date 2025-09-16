@@ -1,4 +1,4 @@
-import { Post } from "../getAllPosts";
+import { Post } from "../actions/getAllPosts";
 
 export const paginatePosts = (posts: Post[], page: number, perPage: number) => {
   const total = posts.length;
