@@ -10,8 +10,9 @@ export default function LinkWithTransition({ onClick, ...props }: Props) {
   const { setIsLoading } = useLoading();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    setIsLoading(true);
     onClick && onClick(e);
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    setIsLoading(true);
   };
 
   return <Link {...props} onClick={handleClick} />;
