@@ -188,7 +188,7 @@ export const menuItems: MenuNode[] = [
             link: "/bible/old-testament/prophetic-books",
           },
           {
-            title: "Jewish Order",
+            title: "Jewish Order (OT)",
             link: "/bible/old-testament/jewish-order",
             children: [
               {

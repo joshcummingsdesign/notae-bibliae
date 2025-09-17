@@ -17,3 +17,14 @@ export default async function MeditationsSinglePage({ params }: Props) {
     </Meditation>
   );
 }
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const post: { default: any; metadata: PostMeta } = await import(
+    `@/app/meditations/posts/${slug}.mdx`
+  );
+  return {
+    title: `${post.metadata.title} – Notae Bibliae`,
+    description: post.metadata.description,
+  };
+}
