@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import Link from "next/link";
+import Link from "@/components/Link";
 import {
   ChevronLeft,
   ChevronRight,
@@ -20,6 +20,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import { useLoading } from "../LoadingProvider";
 
 interface Props {
   style: React.CSSProperties;
@@ -56,6 +57,7 @@ export const MainMenu: React.FC<Props> = ({
   const router = useRouter();
   let pathname = usePathname();
   const searchParams = useSearchParams();
+  const { setIsLoading } = useLoading();
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -82,6 +84,7 @@ export const MainMenu: React.FC<Props> = ({
 
   const handleBack = () => {
     if (path.length === 0) {
+      setIsLoading(true);
       router.push("/");
       onClose();
     } else {
@@ -112,7 +115,7 @@ export const MainMenu: React.FC<Props> = ({
     }
   }, [pathname]);
 
-  // Watch current list
+  // Initialize in-page nav
   useEffect(() => {
     const currentItem = currentList.find((i) => i.link === fullPath);
     if (currentItem && currentItem.inPageNav) {

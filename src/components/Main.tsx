@@ -2,6 +2,7 @@
 import { styled } from "@mui/material";
 import { SIDEBAR_WIDTH, SIDEBAR_WIDTH_LG } from "./Navigation/Sidebar";
 import { HEADER_HEIGHT } from "./Navigation";
+import { useLoading } from "./LoadingProvider";
 
 interface Props {
   children: React.ReactNode;
@@ -10,9 +11,13 @@ interface Props {
 export const MAIN_WIDTH = 600;
 
 export const Main: React.FC<Props> = ({ children }) => {
+  const { isLoading } = useLoading();
+
   return (
     <Wrapper>
-      <Inner>{children}</Inner>
+      <Inner>
+        <LoadingWrapper isLoading={isLoading}>{children}</LoadingWrapper>
+      </Inner>
     </Wrapper>
   );
 };
@@ -38,3 +43,10 @@ const Inner = styled("div")({
     scrollMarginTop: HEADER_HEIGHT + 20,
   },
 });
+
+const LoadingWrapper = styled("span", {
+  shouldForwardProp: (prop) => prop !== "isLoading",
+})<{ isLoading: boolean }>(({ isLoading }) => ({
+  opacity: isLoading ? 0 : 1,
+  transition: "opacity 0.3s ease-in-out",
+}));

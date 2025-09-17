@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 import { useMediaQuery, useTheme } from "@mui/material";
@@ -42,12 +42,14 @@ export const Navigation = () => {
           onClose={toggleSidebar(false)}
           shouldInit={shouldInitInPageNav}
         />
-        <MainMenu
-          style={{ display: inPageNavOpen ? "none" : "block" }}
-          onClose={toggleSidebar(false)}
-          onInPageNavOpen={toggleInPageNav(true)}
-          onInitInPageNav={setShouldInitInPageNav}
-        />
+        <Suspense>
+          <MainMenu
+            style={{ display: inPageNavOpen ? "none" : "block" }}
+            onClose={toggleSidebar(false)}
+            onInPageNavOpen={toggleInPageNav(true)}
+            onInitInPageNav={setShouldInitInPageNav}
+          />
+        </Suspense>
       </Sidebar>
     </>
   );

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Definition } from "@/components/Definition";
 import { Initial } from "@/components/text/Initial";
 import { Poetry } from "@/components/text/Poetry";
-import Link from "next/link";
+import Link from "@/components/Link";
 
 // Global mdx components
 const components: MDXComponents = {

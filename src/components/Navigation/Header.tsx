@@ -3,7 +3,8 @@ import { Menu, Search as SearchIcon } from "@mui/icons-material";
 import { IconButton, styled } from "@mui/material";
 import { Search } from "./Search";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useLoading } from "../LoadingProvider";
 
 interface Props {
   onMenuClick: () => void;
@@ -13,6 +14,8 @@ export const HEADER_HEIGHT = 52;
 
 export const Header: React.FC<Props> = ({ onMenuClick }) => {
   const router = useRouter();
+  const pathname = usePathname();
+  const { setIsLoading } = useLoading();
 
   const [open, setOpen] = useState(false);
 
@@ -30,7 +33,12 @@ export const Header: React.FC<Props> = ({ onMenuClick }) => {
       </SearchButton>
       <Search
         open={open}
-        onChange={(link) => router.push(link)}
+        onChange={(link) => {
+          if (pathname !== link.split("?")[0]) {
+            setIsLoading(true);
+          }
+          router.push(link);
+        }}
         onClose={() => setOpen(false)}
       />
     </Wrapper>

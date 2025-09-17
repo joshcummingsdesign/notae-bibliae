@@ -16,7 +16,7 @@ const rediviva = localFont({
   weight: "400",
   style: "normal",
   variable: "--font-rediviva",
-  display: "block",
+  display: "swap",
 });
 
 const canterbury = localFont({

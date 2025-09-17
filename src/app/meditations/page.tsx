@@ -1,8 +1,12 @@
-import { use } from "react";
+import { Suspense, use } from "react";
 import { getAllPosts } from "./actions";
 import { Meditations } from "./meditations";
 
 export default function MeditationsPage() {
   const posts = use(getAllPosts());
-  return <Meditations allPosts={posts} />;
+  return (
+    <Suspense>
+      <Meditations allPosts={posts} />
+    </Suspense>
+  );
 }
