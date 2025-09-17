@@ -76,9 +76,11 @@ export const InPageNav: React.FC<Props> = ({
             <ChevronLeft />
             <ListItemText primary="Back" />
           </ListItemButton>
-          <CloseButton onClick={onClose}>
-            <Close />
-          </CloseButton>
+          {!isDesktop && (
+            <CloseButton onClick={onClose}>
+              <Close />
+            </CloseButton>
+          )}
         </ListHeaderItem>
 
         {headings.current.map((h) => (

@@ -17,6 +17,8 @@ import {
   ListItemButton,
   ListItemText as ListItemTextBase,
   styled,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 
 interface Props {
@@ -54,6 +56,9 @@ export const MainMenu: React.FC<Props> = ({
   const router = useRouter();
   let pathname = usePathname();
   const searchParams = useSearchParams();
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
   let fullPath =
     searchParams.size > 0 ? `${pathname}?${searchParams.toString()}` : pathname;
 
@@ -147,9 +152,11 @@ export const MainMenu: React.FC<Props> = ({
               primary={backText}
             />
           </ListItemButton>
-          <CloseButton onClick={onClose}>
-            <Close />
-          </CloseButton>
+          {!isDesktop && (
+            <CloseButton onClick={onClose}>
+              <Close />
+            </CloseButton>
+          )}
         </ListHeaderItem>
 
         {path.length > 0 && (
