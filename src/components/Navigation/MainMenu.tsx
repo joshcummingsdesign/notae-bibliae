@@ -128,8 +128,6 @@ export const MainMenu: React.FC<Props> = ({
         <ListHeaderItem disablePadding>
           {path.length > 0 && (
             <IconButton
-              component={Link}
-              href="/"
               onClick={handleHome}
               sx={(theme) => ({
                 position: "absolute",
