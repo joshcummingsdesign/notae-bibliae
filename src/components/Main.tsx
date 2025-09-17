@@ -18,18 +18,23 @@ export const Main: React.FC<Props> = ({ children }) => {
 };
 
 const Wrapper = styled("main")(({ theme }) => ({
+  marginTop: HEADER_HEIGHT,
   minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
-  padding: "10px 20px 20px",
+  padding: "20px",
 
   [theme.breakpoints.up("md")]: {
-    padding: `0 20px 20px ${SIDEBAR_WIDTH + 20}px`,
+    padding: `20px 20px 20px ${SIDEBAR_WIDTH + 20}px`,
   },
   [theme.breakpoints.up("lg")]: {
-    padding: `0 20px 20px ${SIDEBAR_WIDTH_LG + 20}px`,
+    padding: `20px 20px 20px ${SIDEBAR_WIDTH_LG + 20}px`,
   },
 }));
 
 const Inner = styled("div")({
   maxWidth: MAIN_WIDTH,
-  margin: "0 auto",
+  margin: "0 auto 40px",
+
+  h2: {
+    scrollMarginTop: HEADER_HEIGHT + 20,
+  },
 });

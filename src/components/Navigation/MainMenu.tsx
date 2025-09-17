@@ -2,7 +2,13 @@
 import { useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Home } from "@mui/icons-material";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Home,
+  List as ListIcon,
+  Close,
+} from "@mui/icons-material";
 import { menuItems, MenuNode } from "@/app/menu";
 import {
   IconButton,
@@ -14,7 +20,10 @@ import {
 } from "@mui/material";
 
 interface Props {
+  style: React.CSSProperties;
   onClose: () => void;
+  onInPageNavOpen: () => void;
+  onInitInPageNav: (shouldInit: boolean) => void;
 }
 
 /**
@@ -36,7 +45,12 @@ const findPath = (
   return null;
 };
 
-export const SidebarNav: React.FC<Props> = ({ onClose }) => {
+export const MainMenu: React.FC<Props> = ({
+  style,
+  onClose,
+  onInPageNavOpen,
+  onInitInPageNav,
+}) => {
   const router = useRouter();
   let pathname = usePathname();
   const searchParams = useSearchParams();
@@ -93,8 +107,18 @@ export const SidebarNav: React.FC<Props> = ({ onClose }) => {
     }
   }, [pathname]);
 
+  // Watch current list
+  useEffect(() => {
+    const currentItem = currentList.find((i) => i.link === fullPath);
+    if (currentItem && currentItem.inPageNav) {
+      onInitInPageNav(true);
+    } else {
+      onInitInPageNav(false);
+    }
+  }, [fullPath, currentList]);
+
   return (
-    <nav>
+    <nav style={style}>
       <List>
         <ListHeaderItem disablePadding>
           {path.length > 0 && (
@@ -123,6 +147,9 @@ export const SidebarNav: React.FC<Props> = ({ onClose }) => {
               primary={backText}
             />
           </ListItemButton>
+          <CloseButton onClick={onClose}>
+            <Close />
+          </CloseButton>
         </ListHeaderItem>
 
         {path.length > 0 && (
@@ -148,16 +175,31 @@ export const SidebarNav: React.FC<Props> = ({ onClose }) => {
                 <ChevronRight />
               </ListItemButton>
             ) : (
-              <ListItemButton
-                component={Link}
-                href={node.link}
-                onClick={onClose}
-              >
-                <ListItemText
-                  selected={fullPath === node.link}
-                  primary={node.title}
-                />
-              </ListItemButton>
+              <>
+                <ListItemButton
+                  component={Link}
+                  href={node.link}
+                  onClick={onClose}
+                >
+                  <ListItemText
+                    selected={fullPath === node.link}
+                    primary={node.title}
+                  />
+                </ListItemButton>
+                {fullPath === node.link && node.inPageNav && (
+                  <IconButton
+                    onClick={onInPageNavOpen}
+                    sx={(theme) => ({
+                      position: "absolute",
+                      zIndex: 1,
+                      right: "8px",
+                      color: theme.palette.brand.black,
+                    })}
+                  >
+                    <ListIcon />
+                  </IconButton>
+                )}
+              </>
             )}
           </ListItem>
         ))}
@@ -171,12 +213,24 @@ const List = styled(ListBase)({
 });
 
 const ListHeaderItem = styled(ListItem)(({ theme }) => ({
-  position: "relative",
+  position: "sticky",
+  top: 0,
+  zIndex: 1,
   borderBottom: `1px solid ${theme.palette.brand.border}`,
+  backgroundColor: theme.palette.brand.white,
 }));
 
 const ListItemText = styled(ListItemTextBase, {
   shouldForwardProp: (prop) => prop !== "selected",
 })<{ selected?: boolean }>(({ theme, selected }) => ({
   color: selected ? theme.palette.brand.red : theme.palette.brand.black,
+}));
+
+const CloseButton = styled(IconButton)(({ theme }) => ({
+  position: "absolute",
+  transform: "scale(0.8)",
+  zIndex: 1,
+  top: "6px",
+  right: "8px",
+  color: theme.palette.brand.black,
 }));

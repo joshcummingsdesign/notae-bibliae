@@ -1,11 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Close } from "@mui/icons-material";
-import { SidebarNav } from "./SidebarNav";
 import {
   ClickAwayListener,
   Drawer as DrawerBase,
-  IconButton,
   styled,
   useMediaQuery,
   useTheme,
@@ -13,17 +10,24 @@ import {
 
 interface Props {
   className?: string;
+  children: React.ReactNode;
   open: boolean;
+  closedOnDesktop?: boolean;
   onClose: () => void;
 }
 
 export const SIDEBAR_WIDTH = 250;
 export const SIDEBAR_WIDTH_LG = 300;
 
-export const Sidebar: React.FC<Props> = ({ className, open, onClose }) => {
+export const Sidebar: React.FC<Props> = ({
+  className,
+  children,
+  open,
+  onClose,
+}) => {
   const theme = useTheme();
-  const timeoutRef = useRef<NodeJS.Timeout>(null);
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const timeoutRef = useRef<NodeJS.Timeout>(null);
   const [isClosable, setIsClosable] = useState(false);
 
   // Use timeout to allow for click away listener
@@ -52,14 +56,7 @@ export const Sidebar: React.FC<Props> = ({ className, open, onClose }) => {
         anchor="left"
         open={open}
       >
-        <DrawerContent>
-          {!isDesktop && (
-            <CloseButton onClick={onClose}>
-              <Close />
-            </CloseButton>
-          )}
-          <SidebarNav onClose={onClose} />
-        </DrawerContent>
+        <DrawerContent>{children}</DrawerContent>
       </Drawer>
     </ClickAwayListener>
   );
@@ -88,12 +85,3 @@ const DrawerContent = styled("div")({
   position: "relative",
   minHeight: "100vh",
 });
-
-const CloseButton = styled(IconButton)(({ theme }) => ({
-  position: "absolute",
-  transform: "scale(0.8)",
-  zIndex: 1,
-  top: "6px",
-  right: "8px",
-  color: theme.palette.brand.black,
-}));

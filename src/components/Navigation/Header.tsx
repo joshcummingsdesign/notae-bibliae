@@ -37,15 +37,24 @@ export const Header: React.FC<Props> = ({ onMenuClick }) => {
   );
 };
 
-const Wrapper = styled("header")({
+const Wrapper = styled("header")(({ theme }) => ({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  zIndex: 1,
+  width: "100%",
   display: "flex",
   justifyContent: "space-between",
-  padding: "12px 12px 0",
+  padding: "6px 12px",
   height: HEADER_HEIGHT,
-});
+  borderBottom: `1px solid ${theme.palette.brand.border}`,
+  backgroundColor: theme.palette.brand.white,
+}));
 
 const MenuButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.brand.black,
+  height: `${HEADER_HEIGHT - 12}px`,
+  width: `${HEADER_HEIGHT - 12}px`,
 
   [theme.breakpoints.up("md")]: {
     visibility: "hidden",
@@ -61,6 +70,8 @@ const SearchButton = styled(IconButton, {
 })<{ open: boolean }>(({ theme, open }) => ({
   visibility: open ? "hidden" : "visible",
   color: theme.palette.brand.black,
+  height: `${HEADER_HEIGHT - 12}px`,
+  width: `${HEADER_HEIGHT - 12}px`,
 
   "& .MuiTouchRipple-ripple": {
     color: theme.palette.brand.ripple,
