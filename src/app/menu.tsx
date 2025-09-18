@@ -260,6 +260,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/poetic-books/psalms",
                 inPageNav: true,
               },
+              {
+                title: "Proverbs",
+                link: "/bible/old-testament/poetic-books/proverbs",
+                inPageNav: true,
+              },
             ],
           },
           {
