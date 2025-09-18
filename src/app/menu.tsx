@@ -189,6 +189,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/historical-books/joshua",
                 inPageNav: true,
               },
+              {
+                title: "Judges",
+                link: "/bible/old-testament/historical-books/judges",
+                inPageNav: true,
+              },
             ],
           },
           {
