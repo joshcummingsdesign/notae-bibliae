@@ -183,6 +183,13 @@ export const menuItems: MenuNode[] = [
           {
             title: "Historical Books",
             link: "/bible/old-testament/historical-books",
+            children: [
+              {
+                title: "Joshua",
+                link: "/bible/old-testament/historical-books/joshua",
+                inPageNav: true,
+              },
+            ],
           },
           {
             title: "Poetic Books",
