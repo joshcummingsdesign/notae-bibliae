@@ -291,6 +291,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/jeremiah",
                 inPageNav: true,
               },
+              {
+                title: "Lamentations",
+                link: "/bible/old-testament/prophetic-books/lamentations",
+                inPageNav: true,
+              },
             ],
           },
           {
