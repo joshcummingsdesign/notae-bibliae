@@ -301,6 +301,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/ezekiel",
                 inPageNav: true,
               },
+              {
+                title: "Daniel",
+                link: "/bible/old-testament/prophetic-books/daniel",
+                inPageNav: true,
+              },
             ],
           },
           {
