@@ -209,6 +209,16 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/historical-books/2-samuel",
                 inPageNav: true,
               },
+              {
+                title: "1 Kings",
+                link: "/bible/old-testament/historical-books/1-kings",
+                inPageNav: true,
+              },
+              {
+                title: "2 Kings",
+                link: "/bible/old-testament/historical-books/2-kings",
+                inPageNav: true,
+              },
             ],
           },
           {
