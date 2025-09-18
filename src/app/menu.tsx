@@ -249,6 +249,13 @@ export const menuItems: MenuNode[] = [
           {
             title: "Poetic Books",
             link: "/bible/old-testament/poetic-books",
+            children: [
+              {
+                title: "Job",
+                link: "/bible/old-testament/poetic-books/job",
+                inPageNav: true,
+              },
+            ],
           },
           {
             title: "Prophetic Books",
