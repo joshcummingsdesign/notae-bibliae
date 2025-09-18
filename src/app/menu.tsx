@@ -311,6 +311,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/hosea",
                 inPageNav: true,
               },
+              {
+                title: "Joel",
+                link: "/bible/old-testament/prophetic-books/joel",
+                inPageNav: true,
+              },
             ],
           },
           {
