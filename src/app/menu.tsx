@@ -194,6 +194,16 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/historical-books/judges",
                 inPageNav: true,
               },
+              {
+                title: "Ruth",
+                link: "/bible/old-testament/historical-books/ruth",
+                inPageNav: true,
+              },
+              {
+                title: "1 Samuel",
+                link: "/bible/old-testament/historical-books/1-samuel",
+                inPageNav: true,
+              },
             ],
           },
           {
