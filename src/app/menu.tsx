@@ -265,6 +265,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/poetic-books/proverbs",
                 inPageNav: true,
               },
+              {
+                title: "Ecclesiastes",
+                link: "/bible/old-testament/poetic-books/ecclesiastes",
+                inPageNav: true,
+              },
             ],
           },
           {
