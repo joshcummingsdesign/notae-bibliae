@@ -296,6 +296,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/lamentations",
                 inPageNav: true,
               },
+              {
+                title: "Ezekiel",
+                link: "/bible/old-testament/prophetic-books/ezekiel",
+                inPageNav: true,
+              },
             ],
           },
           {
