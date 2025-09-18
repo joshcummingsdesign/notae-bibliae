@@ -234,6 +234,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/historical-books/ezra",
                 inPageNav: true,
               },
+              {
+                title: "Nehemiah",
+                link: "/bible/old-testament/historical-books/nehemiah",
+                inPageNav: true,
+              },
             ],
           },
           {
