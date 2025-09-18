@@ -4,7 +4,7 @@ import { Meditations } from "./meditations";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meditations – Notae Bibliae",
+  title: "Meditations — Notae Bibliae",
   description: "A collection of biblical meditations.",
 };
 

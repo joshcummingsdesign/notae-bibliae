@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
     `@/app/meditations/posts/${slug}.mdx`
   );
   return {
-    title: `${post.metadata.title} – Notae Bibliae`,
+    title: `${post.metadata.title} — Notae Bibliae`,
     description: post.metadata.description,
   };
 }

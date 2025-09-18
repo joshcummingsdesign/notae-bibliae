@@ -156,14 +156,17 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Genesis",
                 link: "/bible/old-testament/pentateuch/genesis",
+                inPageNav: true,
               },
               {
                 title: "Exodus",
                 link: "/bible/old-testament/pentateuch/exodus",
+                inPageNav: true,
               },
               {
                 title: "Leviticus",
                 link: "/bible/old-testament/pentateuch/leviticus",
+                inPageNav: true,
               },
               {
                 title: "Numbers",
@@ -196,7 +199,7 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/jewish-order/torah",
               },
               {
-                title: "Nevi’im",
+                title: "Nevi'im",
                 link: "/bible/old-testament/jewish-order/neviim",
               },
               {
