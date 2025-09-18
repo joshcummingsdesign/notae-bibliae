@@ -270,6 +270,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/poetic-books/ecclesiastes",
                 inPageNav: true,
               },
+              {
+                title: "Song of Songs",
+                link: "/bible/old-testament/poetic-books/song-of-songs",
+                inPageNav: true,
+              },
             ],
           },
           {
