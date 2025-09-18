@@ -286,6 +286,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/isaiah",
                 inPageNav: true,
               },
+              {
+                title: "Jeremiah",
+                link: "/bible/old-testament/prophetic-books/jeremiah",
+                inPageNav: true,
+              },
             ],
           },
           {
