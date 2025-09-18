@@ -171,10 +171,12 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Numbers",
                 link: "/bible/old-testament/pentateuch/numbers",
+                inPageNav: true,
               },
               {
                 title: "Deuteronomy",
                 link: "/bible/old-testament/pentateuch/deuteronomy",
+                inPageNav: true,
               },
             ],
           },
