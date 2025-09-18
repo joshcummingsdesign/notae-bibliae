@@ -229,6 +229,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/historical-books/2-chronicles",
                 inPageNav: true,
               },
+              {
+                title: "Ezra",
+                link: "/bible/old-testament/historical-books/ezra",
+                inPageNav: true,
+              },
             ],
           },
           {
