@@ -280,6 +280,13 @@ export const menuItems: MenuNode[] = [
           {
             title: "Prophetic Books",
             link: "/bible/old-testament/prophetic-books",
+            children: [
+              {
+                title: "Isaiah",
+                link: "/bible/old-testament/prophetic-books/isaiah",
+                inPageNav: true,
+              },
+            ],
           },
           {
             title: "Jewish Order (OT)",
