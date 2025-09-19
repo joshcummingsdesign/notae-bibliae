@@ -346,6 +346,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/habakkuk",
                 inPageNav: true,
               },
+              {
+                title: "Zephaniah",
+                link: "/bible/old-testament/prophetic-books/zephaniah",
+                inPageNav: true,
+              },
             ],
           },
           {

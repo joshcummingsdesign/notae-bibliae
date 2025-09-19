@@ -12,7 +12,35 @@ Stylized h1 with initial letter.
 <Initial text="Gloria Patri"/>
 ```
 
+### Image
+
+```md
+<Image
+  src="/chants/tone-ii-with-alleluia.png"
+  alt="Tone II with Alleluia"
+  width="600"
+  height="88"
+/>
+```
+
+### Definition
+
+Display a tooltip with a word from the glossary.
+
+```md
+<Definition lang="hebrew" anchor="shalom" text="Shalom" />
+```
+
 ### Poetry
+
+Poetry with indentation and symbols.
+
+```md
+<Poetry>
+|  \V O Lord, open thou my _ lips, *
+|    \R and my mouth shall _ show forth thy praise.
+</Poetry>
+```
 
 **Symbols**
 
@@ -24,15 +52,6 @@ _ = ·
 + = †
 ˇ = ˇ
 % = ‡
-```
-
-Poetry with indentation and symbols.
-
-```md
-<Poetry>
-|  \V O Lord, open thou my _ lips, *
-|    \R and my mouth shall _ show forth thy praise.
-</Poetry>
 ```
 
 ### Footnotes
