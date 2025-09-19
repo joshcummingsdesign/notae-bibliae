@@ -336,6 +336,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/micah",
                 inPageNav: true,
               },
+              {
+                title: "Nahum",
+                link: "/bible/old-testament/prophetic-books/nahum",
+                inPageNav: true,
+              },
             ],
           },
           {
