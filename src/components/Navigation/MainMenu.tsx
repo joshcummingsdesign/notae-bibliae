@@ -84,7 +84,9 @@ export const MainMenu: React.FC<Props> = ({
 
   const handleBack = () => {
     if (path.length === 0) {
-      setIsLoading(true);
+      if (pathname !== "/") {
+        setIsLoading(true);
+      }
       router.push("/");
       onClose();
     } else {

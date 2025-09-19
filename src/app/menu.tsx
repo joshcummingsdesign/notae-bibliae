@@ -435,6 +435,36 @@ export const menuItems: MenuNode[] = [
     ],
   },
   {
+    title: "People",
+    link: "/people",
+    children: [
+      {
+        title: "Saints",
+        link: "/people/saints",
+      },
+      {
+        title: "Patriarchs",
+        link: "/people/patriarchs",
+      },
+      {
+        title: "Kings",
+        link: "/people/kings",
+      },
+      {
+        title: "Scholars",
+        link: "/people/scholars",
+      },
+      {
+        title: "Historical Figures",
+        link: "/people/historical-figures",
+      },
+      {
+        title: "Genealogies",
+        link: "/people/genealogies",
+      },
+    ],
+  },
+  {
     title: "Meditations",
     link: "/meditations",
     children: [
