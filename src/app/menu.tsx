@@ -356,6 +356,16 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/haggai",
                 inPageNav: true,
               },
+              {
+                title: "Zechariah",
+                link: "/bible/old-testament/prophetic-books/zechariah",
+                inPageNav: true,
+              },
+              {
+                title: "Malachi",
+                link: "/bible/old-testament/prophetic-books/malachi",
+                inPageNav: true,
+              },
             ],
           },
           {
