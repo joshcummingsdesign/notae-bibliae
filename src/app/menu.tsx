@@ -341,6 +341,11 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/nahum",
                 inPageNav: true,
               },
+              {
+                title: "Habakkuk",
+                link: "/bible/old-testament/prophetic-books/habakkuk",
+                inPageNav: true,
+              },
             ],
           },
           {
