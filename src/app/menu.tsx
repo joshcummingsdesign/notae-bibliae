@@ -316,6 +316,16 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/joel",
                 inPageNav: true,
               },
+              {
+                title: "Amos",
+                link: "/bible/old-testament/prophetic-books/amos",
+                inPageNav: true,
+              },
+              {
+                title: "Obadiah",
+                link: "/bible/old-testament/prophetic-books/obadiah",
+                inPageNav: true,
+              },
             ],
           },
           {
