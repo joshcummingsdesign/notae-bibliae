@@ -39,7 +39,7 @@ const Inner = styled("div")({
   maxWidth: MAIN_WIDTH,
   margin: "0 auto 40px",
 
-  h2: {
+  "h2, [id]": {
     scrollMarginTop: HEADER_HEIGHT + 20,
   },
 });

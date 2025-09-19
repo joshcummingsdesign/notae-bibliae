@@ -14,7 +14,9 @@ export interface Post extends PostMeta {
 
 export const getAllPosts = async () => {
   const postsDir = path.join(process.cwd(), "src/app/meditations/posts");
-  const files = await fs.readdir(postsDir);
+  let files = (await fs.readdir(postsDir)).filter((file) =>
+    file.endsWith(".mdx")
+  );
 
   const posts = await Promise.all(
     files.map(async (file) => {

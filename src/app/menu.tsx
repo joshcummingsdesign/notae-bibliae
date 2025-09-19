@@ -326,6 +326,16 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/old-testament/prophetic-books/obadiah",
                 inPageNav: true,
               },
+              {
+                title: "Jonah",
+                link: "/bible/old-testament/prophetic-books/jonah",
+                inPageNav: true,
+              },
+              {
+                title: "Micah",
+                link: "/bible/old-testament/prophetic-books/micah",
+                inPageNav: true,
+              },
             ],
           },
           {
@@ -399,20 +409,8 @@ export const menuItems: MenuNode[] = [
     link: "/meditations",
     children: [
       {
-        title: "Church History",
-        link: "/meditations?category=Church+History",
-      },
-      {
-        title: "Luther",
-        link: "/meditations?category=Luther",
-      },
-      {
         title: "Repentance",
         link: "/meditations?category=Repentance",
-      },
-      {
-        title: "Theology",
-        link: "/meditations?category=Theology",
       },
     ],
   },
