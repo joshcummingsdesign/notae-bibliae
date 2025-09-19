@@ -1,7 +1,7 @@
 "use client";
 import { Initial } from "@/components/text/Initial";
 import { Post } from "./actions";
-import Link from "@/components/Link";
+import { Link } from "@/components/Link";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import { fonts, typography } from "@/assets/styles";
 import dayjs from "dayjs";

@@ -1,8 +1,8 @@
 "use client";
-import { styled, Tooltip } from "@mui/material";
+import { styled } from "@mui/material";
 import { useDefinition } from "./DefinitionProvider";
 import { Glossary } from "@/app/api/glossary/route";
-import { typography } from "@/assets/styles";
+import { Tooltip } from "../Tooltip";
 
 interface Props {
   lang: keyof Glossary;
@@ -17,25 +17,15 @@ export const Definition: React.FC<Props> = ({ lang, anchor, text }) => {
     definition && definition.glossary && definition.glossary[lang][anchor];
 
   return (
-    <>
+    <span>
       {content ? (
-        <Tooltip
-          title={content}
-          slotProps={{
-            tooltip: {
-              sx: (theme) => ({
-                ...typography.body2,
-                backgroundColor: theme.palette.brand.darkGrey,
-              }),
-            },
-          }}
-        >
+        <Tooltip title={content}>
           <Text>{text}</Text>
         </Tooltip>
       ) : (
         <Text>{text}</Text>
       )}
-    </>
+    </span>
   );
 };
 

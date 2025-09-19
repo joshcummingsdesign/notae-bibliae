@@ -1,5 +1,5 @@
 "use client";
-import Link, { LinkProps } from "next/link";
+import LinkBase, { LinkProps } from "next/link";
 import { useLoading } from "./LoadingProvider";
 import { usePathname } from "next/navigation";
 
@@ -7,7 +7,7 @@ interface Props extends LinkProps {
   children: React.ReactNode;
 }
 
-export default function LinkWithTransition({ onClick, ...props }: Props) {
+export const Link = ({ onClick, ...props }: Props) => {
   const { setIsLoading } = useLoading();
   const pathname = usePathname();
 
@@ -35,7 +35,7 @@ export default function LinkWithTransition({ onClick, ...props }: Props) {
 
   if (isExternal) {
     return (
-      <Link
+      <LinkBase
         target="_blank"
         rel="noopener noreferrer"
         {...props}
@@ -44,5 +44,5 @@ export default function LinkWithTransition({ onClick, ...props }: Props) {
     );
   }
 
-  return <Link {...props} onClick={handleClick} />;
-}
+  return <LinkBase {...props} onClick={handleClick} />;
+};

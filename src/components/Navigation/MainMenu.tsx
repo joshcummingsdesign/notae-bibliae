@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import Link from "@/components/Link";
+import { Link } from "@/components/Link";
 import {
   ChevronLeft,
   ChevronRight,

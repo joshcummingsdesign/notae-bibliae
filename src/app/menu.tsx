@@ -21,22 +21,27 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Matthew",
                 link: "/bible/new-testament/gospels/matthew",
+                inPageNav: true,
               },
               {
                 title: "Mark",
                 link: "/bible/new-testament/gospels/mark",
+                inPageNav: true,
               },
               {
                 title: "Luke",
                 link: "/bible/new-testament/gospels/luke",
+                inPageNav: true,
               },
               {
                 title: "John",
                 link: "/bible/new-testament/gospels/john",
+                inPageNav: true,
               },
               {
-                title: "Harmony of the Gospels",
+                title: "Harmony",
                 link: "/bible/new-testament/gospels/harmony",
+                inPageNav: true,
               },
             ],
           },
@@ -441,6 +446,7 @@ export const menuItems: MenuNode[] = [
       {
         title: "Saints",
         link: "/people/saints",
+        inPageNav: true,
       },
       {
         title: "Patriarchs",

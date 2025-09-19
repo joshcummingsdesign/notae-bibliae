@@ -2,7 +2,7 @@
 import { Initial } from "@/components/text/Initial";
 import dayjs from "dayjs";
 import { PostMeta } from "../actions";
-import Link from "@/components/Link";
+import { Link } from "@/components/Link";
 import { typography } from "@/assets/styles";
 import { Button } from "@mui/material";
 
