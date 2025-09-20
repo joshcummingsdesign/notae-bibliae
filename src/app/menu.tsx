@@ -471,6 +471,16 @@ export const menuItems: MenuNode[] = [
     ],
   },
   {
+    title: "Places",
+    link: "/places",
+    children: [
+      {
+        title: "Eden",
+        link: "/places/eden",
+      },
+    ],
+  },
+  {
     title: "Meditations",
     link: "/meditations",
     children: [
