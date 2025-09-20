@@ -99,7 +99,7 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/new-testament/epistles/2-timothy",
               },
               {
-                title: "Titus",
+                title: "Epistle to Titus",
                 link: "/bible/new-testament/epistles/titus",
               },
               {
@@ -111,7 +111,7 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/new-testament/epistles/hebrews",
               },
               {
-                title: "James",
+                title: "Epistle of James",
                 link: "/bible/new-testament/epistles/james",
               },
               {
@@ -135,7 +135,7 @@ export const menuItems: MenuNode[] = [
                 link: "/bible/new-testament/epistles/3-john",
               },
               {
-                title: "Jude",
+                title: "Epistle of Jude",
                 link: "/bible/new-testament/epistles/jude",
               },
             ],
@@ -447,6 +447,16 @@ export const menuItems: MenuNode[] = [
         title: "Saints",
         link: "/people/saints",
         inPageNav: true,
+        children: [
+          {
+            title: "James the Less",
+            link: "/people/saints/james-the-less",
+          },
+          {
+            title: "Jude (Thaddaeus)",
+            link: "/people/saints/jude",
+          },
+        ],
       },
       {
         title: "Patriarchs",
@@ -495,20 +505,24 @@ export const menuItems: MenuNode[] = [
     link: "/glossary",
     children: [
       {
-        title: "English",
-        link: "/glossary/english",
-      },
-      {
-        title: "Latin",
-        link: "/glossary/latin",
+        title: "Hebrew",
+        link: "/glossary/hebrew",
       },
       {
         title: "Greek",
         link: "/glossary/greek",
       },
       {
-        title: "Hebrew",
-        link: "/glossary/hebrew",
+        title: "Latin",
+        link: "/glossary/latin",
+      },
+      {
+        title: "English",
+        link: "/glossary/english",
+      },
+      {
+        title: "Names",
+        link: "/glossary/names",
       },
     ],
   },
