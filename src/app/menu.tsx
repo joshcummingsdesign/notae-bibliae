@@ -469,6 +469,14 @@ export const menuItems: MenuNode[] = [
             link: "/people/saints/philip",
           },
           {
+            title: "Bartholomew",
+            link: "/people/saints/bartholomew",
+          },
+          {
+            title: "Matthew",
+            link: "/people/saints/matthew",
+          },
+          {
             title: "James the Less",
             link: "/people/saints/james-the-less",
           },
