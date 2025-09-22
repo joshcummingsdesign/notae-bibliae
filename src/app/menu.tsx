@@ -19,22 +19,22 @@ export const menuItems: MenuNode[] = [
             link: "/bible/new-testament/gospels",
             children: [
               {
-                title: "The Gospel of Matthew",
+                title: "Gospel of Matthew",
                 link: "/bible/new-testament/gospels/matthew",
                 inPageNav: true,
               },
               {
-                title: "The Gospel of Mark",
+                title: "Gospel of Mark",
                 link: "/bible/new-testament/gospels/mark",
                 inPageNav: true,
               },
               {
-                title: "The Gospel of Luke",
+                title: "Gospel of Luke",
                 link: "/bible/new-testament/gospels/luke",
                 inPageNav: true,
               },
               {
-                title: "The Gospel of John",
+                title: "Gospel of John",
                 link: "/bible/new-testament/gospels/john",
                 inPageNav: true,
               },
@@ -143,6 +143,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Revelation",
             link: "/bible/new-testament/revelation",
+            inPageNav: true,
           },
           {
             title: "Chronological Order (NT)",
