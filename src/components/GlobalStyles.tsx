@@ -68,6 +68,17 @@ export const GlobalStyles = () => (
           fontSize: typography.body2.fontSize,
         },
       },
+      sup: {
+        a: {
+          fontSize: "0.875em",
+          "&:before": {
+            content: "'['",
+          },
+          "&:after": {
+            content: "']'",
+          },
+        },
+      },
       ".bg_popup-spinner": {
         img: {
           width: "auto",

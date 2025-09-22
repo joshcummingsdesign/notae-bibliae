@@ -449,60 +449,68 @@ export const menuItems: MenuNode[] = [
         inPageNav: true,
         children: [
           {
-            title: "Michael",
-            link: "/people/saints/michael",
-          },
-          {
-            title: "Gabriel",
-            link: "/people/saints/gabriel",
-          },
-          {
-            title: "Peter",
-            link: "/people/saints/peter",
-          },
-          {
             title: "Andrew",
             link: "/people/saints/andrew",
-          },
-          {
-            title: "James",
-            link: "/people/saints/james",
-          },
-          {
-            title: "John",
-            link: "/people/saints/john",
-          },
-          {
-            title: "Philip",
-            link: "/people/saints/philip",
           },
           {
             title: "Bartholomew",
             link: "/people/saints/bartholomew",
           },
           {
-            title: "Matthew",
-            link: "/people/saints/matthew",
+            title: "Gabriel",
+            link: "/people/saints/gabriel",
           },
           {
-            title: "Thomas",
-            link: "/people/saints/thomas",
+            title: "James",
+            link: "/people/saints/james",
           },
           {
             title: "James the Less",
             link: "/people/saints/james-the-less",
           },
           {
+            title: "John",
+            link: "/people/saints/john",
+          },
+          {
             title: "Jude",
             link: "/people/saints/jude",
+          },
+          {
+            title: "Mark",
+            link: "/people/saints/mark",
+          },
+          {
+            title: "Matthew",
+            link: "/people/saints/matthew",
+          },
+          {
+            title: "Matthias",
+            link: "/people/saints/matthias",
+          },
+          {
+            title: "Michael",
+            link: "/people/saints/michael",
+          },
+          {
+            title: "Peter",
+            link: "/people/saints/peter",
+          },
+          {
+            title: "Paul",
+            link: "/people/saints/paul",
+          },
+          {
+            title: "Philip",
+            link: "/people/saints/philip",
           },
           {
             title: "Simon",
             link: "/people/saints/simon",
           },
           {
-            title: "Matthias",
-            link: "/people/saints/matthias",
+            title: "Thomas",
+            link: "/people/saints/thomas",
           },
         ],
       },
