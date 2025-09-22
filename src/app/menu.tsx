@@ -19,27 +19,27 @@ export const menuItems: MenuNode[] = [
             link: "/bible/new-testament/gospels",
             children: [
               {
-                title: "Matthew",
+                title: "The Gospel of Matthew",
                 link: "/bible/new-testament/gospels/matthew",
                 inPageNav: true,
               },
               {
-                title: "Mark",
+                title: "The Gospel of Mark",
                 link: "/bible/new-testament/gospels/mark",
                 inPageNav: true,
               },
               {
-                title: "Luke",
+                title: "The Gospel of Luke",
                 link: "/bible/new-testament/gospels/luke",
                 inPageNav: true,
               },
               {
-                title: "John",
+                title: "The Gospel of John",
                 link: "/bible/new-testament/gospels/john",
                 inPageNav: true,
               },
               {
-                title: "Harmony",
+                title: "Harmony of the Gospels",
                 link: "/bible/new-testament/gospels/harmony",
                 inPageNav: true,
               },
@@ -465,11 +465,15 @@ export const menuItems: MenuNode[] = [
             link: "/people/saints/john",
           },
           {
+            title: "Philip",
+            link: "/people/saints/philip",
+          },
+          {
             title: "James the Less",
             link: "/people/saints/james-the-less",
           },
           {
-            title: "Jude (Thaddaeus)",
+            title: "Jude",
             link: "/people/saints/jude",
           },
         ],
