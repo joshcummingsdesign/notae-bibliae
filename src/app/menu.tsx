@@ -449,6 +449,14 @@ export const menuItems: MenuNode[] = [
         inPageNav: true,
         children: [
           {
+            title: "Michael",
+            link: "/people/saints/michael",
+          },
+          {
+            title: "Gabriel",
+            link: "/people/saints/gabriel",
+          },
+          {
             title: "Peter",
             link: "/people/saints/peter",
           },
