@@ -520,12 +520,36 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/joseph",
               },
               {
+                title: "Lazarus",
+                link: "/people/saints/biblical/lazarus",
+              },
+              {
+                title: "Martha",
+                link: "/people/saints/biblical/martha",
+              },
+              {
                 title: "Mary",
                 link: "/people/saints/biblical/mary",
               },
               {
+                title: "Mary of Bethany",
+                link: "/people/saints/biblical/mary-of-bethany",
+              },
+              {
                 title: "Mary Magdalene",
                 link: "/people/saints/biblical/mary-magdalene",
+              },
+              {
+                title: "Philip the Evangelist",
+                link: "/people/saints/biblical/philip-the-evangelist",
+              },
+              {
+                title: "Silas",
+                link: "/people/saints/biblical/silas",
+              },
+              {
+                title: "Stephen",
+                link: "/people/saints/biblical/stephen",
               },
             ],
           },
