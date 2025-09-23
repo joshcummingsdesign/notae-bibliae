@@ -21,22 +21,18 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Gospel of Matthew",
                 link: "/bible/new-testament/gospels/matthew",
-                inPageNav: true,
               },
               {
                 title: "Gospel of Mark",
                 link: "/bible/new-testament/gospels/mark",
-                inPageNav: true,
               },
               {
                 title: "Gospel of Luke",
                 link: "/bible/new-testament/gospels/luke",
-                inPageNav: true,
               },
               {
                 title: "Gospel of John",
                 link: "/bible/new-testament/gospels/john",
-                inPageNav: true,
               },
               {
                 title: "Harmony of the Gospels",
@@ -238,17 +234,14 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Ezra",
                 link: "/bible/old-testament/historical-books/ezra",
-                inPageNav: true,
               },
               {
                 title: "Nehemiah",
                 link: "/bible/old-testament/historical-books/nehemiah",
-                inPageNav: true,
               },
               {
                 title: "Esther",
                 link: "/bible/old-testament/historical-books/esther",
-                inPageNav: true,
               },
             ],
           },
@@ -290,87 +283,70 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Isaiah",
                 link: "/bible/old-testament/prophetic-books/isaiah",
-                inPageNav: true,
               },
               {
                 title: "Jeremiah",
                 link: "/bible/old-testament/prophetic-books/jeremiah",
-                inPageNav: true,
               },
               {
                 title: "Lamentations",
                 link: "/bible/old-testament/prophetic-books/lamentations",
-                inPageNav: true,
               },
               {
                 title: "Ezekiel",
                 link: "/bible/old-testament/prophetic-books/ezekiel",
-                inPageNav: true,
               },
               {
                 title: "Daniel",
                 link: "/bible/old-testament/prophetic-books/daniel",
-                inPageNav: true,
               },
               {
                 title: "Hosea",
                 link: "/bible/old-testament/prophetic-books/hosea",
-                inPageNav: true,
               },
               {
                 title: "Joel",
                 link: "/bible/old-testament/prophetic-books/joel",
-                inPageNav: true,
               },
               {
                 title: "Amos",
                 link: "/bible/old-testament/prophetic-books/amos",
-                inPageNav: true,
               },
               {
                 title: "Obadiah",
                 link: "/bible/old-testament/prophetic-books/obadiah",
-                inPageNav: true,
               },
               {
                 title: "Jonah",
                 link: "/bible/old-testament/prophetic-books/jonah",
-                inPageNav: true,
               },
               {
                 title: "Micah",
                 link: "/bible/old-testament/prophetic-books/micah",
-                inPageNav: true,
               },
               {
                 title: "Nahum",
                 link: "/bible/old-testament/prophetic-books/nahum",
-                inPageNav: true,
               },
               {
                 title: "Habakkuk",
                 link: "/bible/old-testament/prophetic-books/habakkuk",
-                inPageNav: true,
               },
               {
                 title: "Zephaniah",
                 link: "/bible/old-testament/prophetic-books/zephaniah",
-                inPageNav: true,
               },
               {
                 title: "Haggai",
                 link: "/bible/old-testament/prophetic-books/haggai",
-                inPageNav: true,
               },
               {
                 title: "Zechariah",
                 link: "/bible/old-testament/prophetic-books/zechariah",
-                inPageNav: true,
               },
               {
                 title: "Malachi",
                 link: "/bible/old-testament/prophetic-books/malachi",
-                inPageNav: true,
               },
             ],
           },
@@ -450,84 +426,108 @@ export const menuItems: MenuNode[] = [
         inPageNav: true,
         children: [
           {
-            title: "Andrew",
-            link: "/people/saints/andrew",
+            title: "Angels",
+            link: "/people/saints/angels",
+            children: [
+              {
+                title: "Gabriel",
+                link: "/people/saints/angels/gabriel",
+              },
+              {
+                title: "Michael",
+                link: "/people/saints/angels/michael",
+              },
+            ],
           },
           {
-            title: "Bartholomew",
-            link: "/people/saints/bartholomew",
+            title: "Apostles",
+            link: "/people/saints/apostles",
+            children: [
+              {
+                title: "Andrew",
+                link: "/people/saints/apostles/andrew",
+              },
+              {
+                title: "Bartholomew",
+                link: "/people/saints/apostles/bartholomew",
+              },
+              {
+                title: "James",
+                link: "/people/saints/apostles/james",
+              },
+              {
+                title: "James the Less",
+                link: "/people/saints/apostles/james-the-less",
+              },
+              {
+                title: "John",
+                link: "/people/saints/apostles/john",
+              },
+              {
+                title: "Jude",
+                link: "/people/saints/apostles/jude",
+              },
+              {
+                title: "Matthew",
+                link: "/people/saints/apostles/matthew",
+              },
+              {
+                title: "Matthias",
+                link: "/people/saints/apostles/matthias",
+              },
+              {
+                title: "Peter",
+                link: "/people/saints/apostles/peter",
+              },
+              {
+                title: "Paul",
+                link: "/people/saints/apostles/paul",
+              },
+              {
+                title: "Philip",
+                link: "/people/saints/apostles/philip",
+              },
+              {
+                title: "Simon",
+                link: "/people/saints/apostles/simon",
+              },
+              {
+                title: "Thomas",
+                link: "/people/saints/apostles/thomas",
+              },
+            ],
           },
           {
-            title: "Gabriel",
-            link: "/people/saints/gabriel",
+            title: "Evangelists",
+            link: "/people/saints/evangelists",
+            children: [
+              {
+                title: "Luke",
+                link: "/people/saints/evangelists/luke",
+              },
+              {
+                title: "Mark",
+                link: "/people/saints/evangelists/mark",
+              },
+            ],
           },
           {
-            title: "James",
-            link: "/people/saints/james",
-          },
-          {
-            title: "James the Less",
-            link: "/people/saints/james-the-less",
-          },
-          {
-            title: "John",
-            link: "/people/saints/john",
-          },
-          {
-            title: "Joseph",
-            link: "/people/saints/joseph",
-          },
-          {
-            title: "Jude",
-            link: "/people/saints/jude",
-          },
-          {
-            title: "Luke",
-            link: "/people/saints/luke",
-          },
-          {
-            title: "Mark",
-            link: "/people/saints/mark",
-          },
-          {
-            title: "Mary",
-            link: "/people/saints/mary",
-          },
-          {
-            title: "Mary Magdalene",
-            link: "/people/saints/mary-magdalene",
-          },
-          {
-            title: "Matthew",
-            link: "/people/saints/matthew",
-          },
-          {
-            title: "Matthias",
-            link: "/people/saints/matthias",
-          },
-          {
-            title: "Michael",
-            link: "/people/saints/michael",
-          },
-          {
-            title: "Peter",
-            link: "/people/saints/peter",
-          },
-          {
-            title: "Paul",
-            link: "/people/saints/paul",
-          },
-          {
-            title: "Philip",
-            link: "/people/saints/philip",
-          },
-          {
-            title: "Simon",
-            link: "/people/saints/simon",
-          },
-          {
-            title: "Thomas",
-            link: "/people/saints/thomas",
+            title: "Biblical Saints",
+            link: "/people/saints/biblical",
+            children: [
+              {
+                title: "Joseph",
+                link: "/people/saints/biblical/joseph",
+              },
+              {
+                title: "Mary",
+                link: "/people/saints/biblical/mary",
+              },
+              {
+                title: "Mary Magdalene",
+                link: "/people/saints/biblical/mary-magdalene",
+              },
+            ],
           },
         ],
       },
