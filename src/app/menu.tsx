@@ -670,6 +670,48 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Latin Fathers",
+            link: "/people/saints/latin-fathers",
+            children: [
+              {
+                title: "Ambrose of Milan",
+                link: "/people/saints/latin-fathers/ambrose-of-milan",
+              },
+              {
+                title: "Augustine of Hippo",
+                link: "/people/saints/latin-fathers/augustine-of-hippo",
+              },
+              {
+                title: "Cyprian of Carthage",
+                link: "/people/saints/latin-fathers/cyprian-of-carthage",
+              },
+              {
+                title: "Damasus of Rome",
+                link: "/people/saints/latin-fathers/damasus-of-rome",
+              },
+              {
+                title: "Gregory the Great",
+                link: "/people/saints/latin-fathers/gregory-the-great",
+              },
+              {
+                title: "Hilary of Poitiers",
+                link: "/people/saints/latin-fathers/hilary-of-poitiers",
+              },
+              {
+                title: "Isidore of Seville",
+                link: "/people/saints/latin-fathers/isidore-of-seville",
+              },
+              {
+                title: "Jerome of Stridon",
+                link: "/people/saints/latin-fathers/jerome-of-stridon",
+              },
+              {
+                title: "Leo the Great",
+                link: "/people/saints/latin-fathers/leo-the-great",
+              },
+            ],
+          },
         ],
       },
       {
