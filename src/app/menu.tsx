@@ -652,6 +652,24 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Cappadocian Fathers",
+            link: "/people/saints/cappadocian-fathers",
+            children: [
+              {
+                title: "Basil the Great",
+                link: "/people/saints/cappadocian-fathers/basil-the-great",
+              },
+              {
+                title: "Gregory of Nazianzus",
+                link: "/people/saints/cappadocian-fathers/gregory-of-nazianzus",
+              },
+              {
+                title: "Gregory of Nyssa",
+                link: "/people/saints/cappadocian-fathers/gregory-of-nyssa",
+              },
+            ],
+          },
         ],
       },
       {
