@@ -712,6 +712,28 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Syriac Fathers",
+            link: "/people/saints/syriac-fathers",
+            children: [
+              {
+                title: "Aphrahat the Persian",
+                link: "/people/saints/syriac-fathers/aphrahat-the-persian",
+              },
+              {
+                title: "Ephrem the Syrian",
+                link: "/people/saints/syriac-fathers/ephrem-the-syrian",
+              },
+              {
+                title: "Isaac of Nineveh",
+                link: "/people/saints/syriac-fathers/isaac-of-nineveh",
+              },
+              {
+                title: "Jacob of Serugh",
+                link: "/people/saints/syriac-fathers/jacob-of-serugh",
+              },
+            ],
+          },
         ],
       },
       {
