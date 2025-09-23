@@ -596,6 +596,22 @@ export const menuItems: MenuNode[] = [
                 title: "Clement of Rome",
                 link: "/people/saints/apostolic-fathers/clement-of-rome",
               },
+              {
+                title: "Ignatius of Antioch",
+                link: "/people/saints/apostolic-fathers/ignatius-of-antioch",
+              },
+              {
+                title: "Papias of Hierapolis",
+                link: "/people/saints/apostolic-fathers/papias-of-hierapolis",
+              },
+              {
+                title: "Polycarp of Smyrna",
+                link: "/people/saints/apostolic-fathers/polycarp-of-smyrna",
+              },
+              {
+                title: "Quadratus of Athens",
+                link: "/people/saints/apostolic-fathers/quadratus-of-athens",
+              },
             ],
           },
         ],
