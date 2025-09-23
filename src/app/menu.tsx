@@ -614,6 +614,28 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Greek Fathers",
+            link: "/people/saints/greek-fathers",
+            children: [
+              {
+                title: "Athanasius of Alexandria",
+                link: "/people/saints/greek-fathers/athanasius-of-alexandria",
+              },
+              {
+                title: "Cyril of Jerusalem",
+                link: "/people/saints/greek-fathers/cyril-of-jerusalem",
+              },
+              {
+                title: "Irenaeus of Lyon",
+                link: "/people/saints/greek-fathers/irenaeus-of-lyon",
+              },
+              {
+                title: "Justin Martyr",
+                link: "/people/saints/greek-fathers/justin-martyr",
+              },
+            ],
+          },
         ],
       },
       {
