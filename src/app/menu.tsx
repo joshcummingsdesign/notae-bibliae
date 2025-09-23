@@ -588,6 +588,16 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Apostolic Fathers",
+            link: "/people/saints/apostolic-fathers",
+            children: [
+              {
+                title: "Clement of Rome",
+                link: "/people/saints/apostolic-fathers/clement-of-rome",
+              },
+            ],
+          },
         ],
       },
       {
