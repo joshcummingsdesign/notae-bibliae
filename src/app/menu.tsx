@@ -375,6 +375,21 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
+        title: "Apocrypha",
+        link: "/bible/apocrypha",
+        children: [
+          {
+            title: "Gospel of James",
+            link: "/bible/apocrypha/gospel-of-james",
+          },
+          {
+            title: "Gospel of Pseudo-Matthew",
+            link: "/bible/apocrypha/gospel-of-pseudo-matthew",
+            inPageNav: true,
+          },
+        ],
+      },
+      {
         title: "Languages",
         link: "/bible/languages",
         children: [
@@ -519,6 +534,10 @@ export const menuItems: MenuNode[] = [
             title: "Biblical Saints",
             link: "/people/saints/biblical",
             children: [
+              {
+                title: "Joachim and Anne",
+                link: "/people/saints/biblical/joachim-and-anne",
+              },
               {
                 title: "John the Baptist",
                 link: "/people/saints/biblical/john-the-baptist",
