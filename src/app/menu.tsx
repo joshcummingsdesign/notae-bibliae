@@ -448,6 +448,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/apostles/andrew",
               },
               {
+                title: "Barnabas",
+                link: "/people/saints/apostles/barnabas",
+              },
+              {
                 title: "Bartholomew",
                 link: "/people/saints/apostles/bartholomew",
               },
@@ -516,6 +520,10 @@ export const menuItems: MenuNode[] = [
             link: "/people/saints/biblical",
             children: [
               {
+                title: "John the Baptist",
+                link: "/people/saints/biblical/john-the-baptist",
+              },
+              {
                 title: "Joseph",
                 link: "/people/saints/biblical/joseph",
               },
@@ -550,6 +558,14 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Stephen",
                 link: "/people/saints/biblical/stephen",
+              },
+              {
+                title: "Timothy",
+                link: "/people/saints/biblical/timothy",
+              },
+              {
+                title: "Titus",
+                link: "/people/saints/biblical/titus",
               },
             ],
           },
