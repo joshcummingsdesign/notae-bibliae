@@ -494,6 +494,10 @@ export const menuItems: MenuNode[] = [
             link: "/people/saints/mary",
           },
           {
+            title: "Mary Magdalene",
+            link: "/people/saints/mary-magdalene",
+          },
+          {
             title: "Matthew",
             link: "/people/saints/matthew",
           },
