@@ -623,6 +623,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/greek-fathers/athanasius-of-alexandria",
               },
               {
+                title: "Cyril of Alexandria",
+                link: "/people/saints/greek-fathers/cyril-of-alexandria",
+              },
+              {
                 title: "Cyril of Jerusalem",
                 link: "/people/saints/greek-fathers/cyril-of-jerusalem",
               },
@@ -631,8 +635,20 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/greek-fathers/irenaeus-of-lyon",
               },
               {
+                title: "John Chrysostom",
+                link: "/people/saints/greek-fathers/john-chrysostom",
+              },
+              {
+                title: "John of Damascus",
+                link: "/people/saints/greek-fathers/john-of-damascus",
+              },
+              {
                 title: "Justin Martyr",
                 link: "/people/saints/greek-fathers/justin-martyr",
+              },
+              {
+                title: "Maximus the Confessor",
+                link: "/people/saints/greek-fathers/maximus-the-confessor",
               },
             ],
           },
