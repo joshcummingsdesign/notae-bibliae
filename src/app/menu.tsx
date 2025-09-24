@@ -431,6 +431,86 @@ export const menuItems: MenuNode[] = [
             title: "Vulgate",
             link: "/bible/translations/vulgate",
           },
+          {
+            title: "Masoretic Text",
+            link: "/bible/translations/masoretic-text",
+          },
+          {
+            title: "Wycliffe's Bible",
+            link: "/bible/translations/wycliffes-bible",
+          },
+          {
+            title: "Textus Receptus",
+            link: "/bible/translations/textus-receptus",
+          },
+          {
+            title: "Luther Bible",
+            link: "/bible/translations/luther-bible",
+          },
+          {
+            title: "Tyndale Bible",
+            link: "/bible/translations/tyndale-bible",
+          },
+          {
+            title: "Coverdale Bible",
+            link: "/bible/translations/coverdale-bible",
+          },
+          {
+            title: "Great Bible",
+            link: "/bible/translations/great-bible",
+          },
+          {
+            title: "Geneva Bible",
+            link: "/bible/translations/geneva-bible",
+          },
+          {
+            title: "King James Version",
+            link: "/bible/translations/king-james-version",
+          },
+          {
+            title: "Westcott and Hort",
+            link: "/bible/translations/westcott-and-hort",
+          },
+          {
+            title: "Novum Testamentum Graece",
+            link: "/bible/translations/novum-testamentum-graece",
+          },
+          {
+            title: "American Standard Version",
+            link: "/bible/translations/american-standard-version",
+          },
+          {
+            title: "Dead Sea Scrolls",
+            link: "/bible/translations/dead-sea-scrolls",
+          },
+          {
+            title: "Revised Standard Version",
+            link: "/bible/translations/revised-standard-version",
+          },
+          {
+            title: "The Living Bible",
+            link: "/bible/translations/the-living-bible",
+          },
+          {
+            title: "New International Version",
+            link: "/bible/translations/new-international-version",
+          },
+          {
+            title: "New King James Version",
+            link: "/bible/translations/new-king-james-version",
+          },
+          {
+            title: "New Revised Standard Version",
+            link: "/bible/translations/new-revised-standard-version",
+          },
+          {
+            title: "New Living Translation",
+            link: "/bible/translations/new-living-translation",
+          },
+          {
+            title: "English Standard Version",
+            link: "/bible/translations/english-standard-version",
+          },
         ],
       },
     ],
