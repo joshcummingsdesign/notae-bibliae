@@ -757,8 +757,32 @@ export const menuItems: MenuNode[] = [
             link: "/people/saints/early",
             children: [
               {
+                title: "Christopher of Lycia",
+                link: "/people/saints/early/christopher-of-lycia",
+              },
+              {
+                title: "Epiphanius of Salamis",
+                link: "/people/saints/early/epiphanius-of-salamis",
+              },
+              {
                 title: "Hippolytus of Rome",
                 link: "/people/saints/early/hippolytus-of-rome",
+              },
+              {
+                title: "John Cassian",
+                link: "/people/saints/early/john-cassian",
+              },
+              {
+                title: "Nicholas of Myra",
+                link: "/people/saints/early/nicholas-of-myra",
+              },
+              {
+                title: "Patrick of Ireland",
+                link: "/people/saints/early/patrick-of-ireland",
+              },
+              {
+                title: "Valentine of Rome",
+                link: "/people/saints/early/valentine-of-rome",
               },
             ],
           },
