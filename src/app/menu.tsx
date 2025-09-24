@@ -410,6 +410,28 @@ export const menuItems: MenuNode[] = [
       {
         title: "Translations",
         link: "/bible/translations",
+        children: [
+          {
+            title: "Septuagint",
+            link: "/bible/translations/septuagint",
+          },
+          {
+            title: "Targum Onkelos",
+            link: "/bible/translations/targum-onkelos",
+          },
+          {
+            title: "Targum Jonathan",
+            link: "/bible/translations/targum-jonathan",
+          },
+          {
+            title: "Vetus Latina",
+            link: "/bible/translations/vetus-latina",
+          },
+          {
+            title: "Vulgate",
+            link: "/bible/translations/vulgate",
+          },
+        ],
       },
     ],
   },
