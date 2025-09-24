@@ -23,6 +23,12 @@ Stylized h1 with initial letter.
 />
 ```
 
+### Red Text
+
+```md
+<Red text="this is red" />
+```
+
 ### Definition
 
 Display a tooltip with a word from the glossary.
@@ -45,6 +51,7 @@ Poetry with indentation and symbols.
 **Symbols**
 
 ```
+\A = Ant.
 \V = ℣
 \R = ℟
 _ = ·

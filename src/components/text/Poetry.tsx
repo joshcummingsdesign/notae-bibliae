@@ -9,6 +9,7 @@ interface Props {
 }
 
 const symbols = {
+  "\\A": '<span class="symbol a">Ant.</span>',
   "\\V": '<span class="symbol v"></span>',
   "\\R": '<span class="symbol r"></span>',
   _: '<span class="symbol dot"></span>',
@@ -41,6 +42,13 @@ const replaceSymbols = (text: string) => {
 export const Poetry: React.FC<Props> = ({ children }) => {
   let content = { ...(children as any) };
 
+  if (typeof content.props.children === "string") {
+    content = {
+      ...content,
+      props: { ...content.props, children: [content.props.children] },
+    };
+  }
+
   const text = content.props.children.map((child: any) => {
     if (typeof child === "string") {
       return parse(
@@ -64,6 +72,10 @@ const Wrapper = styled("pre")(({ theme }) => ({
 
   ".symbol": {
     color: theme.palette.brand.red,
+  },
+
+  ".a": {
+    fontWeight: "bold",
   },
 
   ".v": {

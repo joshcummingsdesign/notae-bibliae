@@ -1023,6 +1023,12 @@ export const menuItems: MenuNode[] = [
       {
         title: "Names",
         link: "/glossary/names",
+        inPageNav: true,
+      },
+      {
+        title: "Liturgical Terms",
+        link: "/glossary/liturgical-terms",
+        inPageNav: true,
       },
     ],
   },
