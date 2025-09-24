@@ -68,3 +68,11 @@ This is some text.[^1]
 
 [^1]: And this is the footnote.
 ```
+
+### Mermaid
+
+```md
+/public/mermaid/foo.mmd
+
+<Mermaid file="foo" />
+```

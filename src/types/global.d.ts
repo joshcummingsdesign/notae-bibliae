@@ -4,6 +4,10 @@ declare global {
       version: string;
       linkVerses: () => void;
     };
+    mermaid?: {
+      initialize: (config: any) => void;
+      contentLoaded: () => void;
+    };
   }
 }
 

@@ -4,8 +4,9 @@ import { EB_Garamond } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import { Main } from "@/components/Main";
 import { Navigation } from "@/components/Navigation";
-import { BibleGateway } from "@/components/BibleGateway";
+import { BibleGatewayLoader } from "@/components/BibleGatewayLoader";
 import { DefinitionProvider } from "@/components/Definition/DefinitionProvider";
+import { MermaidLoader } from "@/components/Mermaid";
 
 interface Props {
   children: React.ReactNode;
@@ -55,7 +56,8 @@ export default function RootLayout({ children }: Props) {
           <DefinitionProvider>
             <Navigation />
             <Main>{children}</Main>
-            <BibleGateway />
+            <BibleGatewayLoader />
+            <MermaidLoader />
           </DefinitionProvider>
         </body>
       </html>

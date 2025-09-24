@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { useEffect } from "react";
 
-export const BibleGateway = () => {
+export const BibleGatewayLoader = () => {
   const pathname = usePathname();
 
   const load = () => {
