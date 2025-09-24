@@ -803,12 +803,20 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/bernard-of-clairvaux",
               },
               {
+                title: "Bonaventure of Bagnoregio",
+                link: "/people/saints/medieval/bonaventure-of-bagnoregio",
+              },
+              {
                 title: "Dominic of Osma",
                 link: "/people/saints/medieval/dominic-of-osma",
               },
               {
                 title: "Francis of Assisi",
                 link: "/people/saints/medieval/francis-of-assisi",
+              },
+              {
+                title: "Thomas Aquinas",
+                link: "/people/saints/medieval/thomas-aquinas",
               },
             ],
           },
