@@ -791,8 +791,24 @@ export const menuItems: MenuNode[] = [
             link: "/people/saints/medieval",
             children: [
               {
+                title: "Anselm of Canterbury",
+                link: "/people/saints/medieval/anselm-of-canterbury",
+              },
+              {
                 title: "Benedict of Nursia",
                 link: "/people/saints/medieval/benedict-of-nursia",
+              },
+              {
+                title: "Bernard of Clairvaux",
+                link: "/people/saints/medieval/bernard-of-clairvaux",
+              },
+              {
+                title: "Dominic of Osma",
+                link: "/people/saints/medieval/dominic-of-osma",
+              },
+              {
+                title: "Francis of Assisi",
+                link: "/people/saints/medieval/francis-of-assisi",
               },
             ],
           },
