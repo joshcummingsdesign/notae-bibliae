@@ -752,6 +752,26 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Early Saints",
+            link: "/people/saints/early",
+            children: [
+              {
+                title: "Hippolytus of Rome",
+                link: "/people/saints/early/hippolytus-of-rome",
+              },
+            ],
+          },
+          {
+            title: "Medieval Saints",
+            link: "/people/saints/medieval",
+            children: [
+              {
+                title: "Benedict of Nursia",
+                link: "/people/saints/medieval/benedict-of-nursia",
+              },
+            ],
+          },
         ],
       },
       {
