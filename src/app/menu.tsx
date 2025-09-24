@@ -734,6 +734,24 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Desert Fathers",
+            link: "/people/saints/desert-fathers",
+            children: [
+              {
+                title: "Anthony the Great",
+                link: "/people/saints/desert-fathers/anthony-the-great",
+              },
+              {
+                title: "Pachomius the Great",
+                link: "/people/saints/desert-fathers/pachomius-the-great",
+              },
+              {
+                title: "Paul of Thebes",
+                link: "/people/saints/desert-fathers/paul-of-thebes",
+              },
+            ],
+          },
         ],
       },
       {
