@@ -1,6 +1,6 @@
 "use client";
 import { createTheme } from "@mui/material";
-import { colors, fonts, typography } from "@/assets/styles";
+import { colors, fonts, fontWeights, typography } from "@/assets/styles";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -17,14 +17,16 @@ export const theme = createTheme({
       black: colors.black,
       white: colors.white,
       red: colors.red,
+      pink: colors.pink,
       blue: colors.blue,
-      green: colors.green,
-      yellow: colors.yellow,
+      xLightGrey: colors.xLightGrey,
       grey: colors.grey,
+      lightGrey: colors.lightGrey,
       darkGrey: colors.darkGrey,
       border: colors.border,
       ripple: colors.ripple,
       hover: colors.hover,
+      hoverSolid: colors.hoverSolid,
     },
     background: {
       default: colors.white,
@@ -32,6 +34,8 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: fonts.fontBody,
+    fontWeightRegular: fontWeights.regular,
+    fontWeightBold: fontWeights.bold,
     h1: {
       ...typography.h1,
     },

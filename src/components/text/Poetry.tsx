@@ -75,7 +75,7 @@ const Wrapper = styled("pre")(({ theme }) => ({
   },
 
   ".a": {
-    fontWeight: "bold",
+    fontWeight: theme.typography.fontWeightBold,
   },
 
   ".v": {

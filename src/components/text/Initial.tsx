@@ -1,5 +1,5 @@
 "use client";
-import { fonts, fontWeights } from "@/assets/styles";
+import { fonts } from "@/assets/styles";
 import { styled } from "@mui/material";
 
 interface Props {
@@ -18,7 +18,7 @@ export const Initial: React.FC<Props> = ({ text }) => (
 
 const Letter = styled("span")(({ theme }) => ({
   fontFamily: fonts.fontInitial,
-  fontWeight: fontWeights.regular,
+  fontWeight: theme.typography.fontWeightRegular,
   color: theme.palette.brand.red,
   fontSize: "1.5em",
   position: "relative",

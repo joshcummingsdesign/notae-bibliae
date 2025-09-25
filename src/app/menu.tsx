@@ -979,6 +979,10 @@ export const menuItems: MenuNode[] = [
         link: "/people/genealogies",
         children: [
           {
+            title: "Biblical Genealogy",
+            link: "/people/genealogies/biblical",
+          },
+          {
             title: "Genealogy of Jesus",
             link: "/people/genealogies/jesus",
           },

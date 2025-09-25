@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--blue);
+  padding: 15px 10px 30px 30px;
+  border-radius: 8px;
+  height: 100%;
+
+  &[class~="female"] {
+    background-color: var(--pink);
+  }
+
+  &[class~="dimmed"] {
+    visibility: hidden;
+  }
+
+  &[class~="highlighted"] {
+    outline: 5px solid var(--black);
+  }
+}
+
+.heading {
+  font-family: var(--font-eb-garamond);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.alt_names {
+  font-family: var(--font-eb-garamond);
+  font-size: 13px;
+  margin: -15px 0 0;
+}
+
+.icon {
+  font-size: 18px;
+  padding: 20px;
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

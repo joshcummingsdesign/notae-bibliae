@@ -4,7 +4,7 @@ import { IconButton, styled } from "@mui/material";
 import { Search } from "./Search";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { useLoading } from "../LoadingProvider";
+import { useLoading } from "../Providers";
 
 interface Props {
   onMenuClick: () => void;

@@ -33,4 +33,30 @@ const Wrapper = styled("div")(({ theme }) => ({
   border: `1px solid ${theme.palette.brand.border}`,
   background: theme.palette.brand.white,
   color: theme.palette.brand.white,
+
+  ".node": {
+    rect: {
+      fill: `${theme.palette.brand.blue} !important`,
+      stroke: `none !important`,
+      rx: `8px !important`,
+      ry: `8px !important`,
+    },
+
+    "&.female": {
+      rect: {
+        fill: `${theme.palette.brand.pink} !important`,
+      },
+    },
+  },
+  ".nodeLabel": {
+    color: `${theme.palette.brand.black} !important`,
+    ...theme.typography.body1,
+    fontWeight: theme.typography.fontWeightBold,
+    em: {
+      fontWeight: theme.typography.fontWeightRegular,
+    },
+  },
+  ".flowchart-link": {
+    stroke: `${theme.palette.brand.lightGrey} !important`,
+  },
 }));

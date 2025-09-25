@@ -1,6 +1,6 @@
 import { Suspense, use } from "react";
 import { getAllPosts } from "./actions";
-import { Meditations } from "./meditations";
+import { Meditations } from "./Meditations";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

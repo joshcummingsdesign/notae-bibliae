@@ -21,7 +21,7 @@ export const Meditation: React.FC<Props> = ({ postMeta, children }) => (
         component={Link}
         href={`/meditations?category=${category}`}
         sx={(theme) => ({
-          ...typography.body1,
+          ...theme.typography.body1,
           color: theme.palette.brand.grey,
           border: `1px solid ${theme.palette.brand.border}`,
           textTransform: "none",

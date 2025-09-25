@@ -79,6 +79,7 @@ export const GlobalStyles = () => (
           },
         },
       },
+      // biblegateway popup spinner
       ".bg_popup-spinner": {
         img: {
           width: "auto",

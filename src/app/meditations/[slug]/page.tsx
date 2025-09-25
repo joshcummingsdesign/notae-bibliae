@@ -1,5 +1,5 @@
 import { PostMeta } from "../actions";
-import { Meditation } from "./meditation";
+import { Meditation } from "./Meditation";
 
 interface Props {
   params: Promise<{ slug: string }>;

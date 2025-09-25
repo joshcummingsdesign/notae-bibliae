@@ -1,6 +1,6 @@
 "use client";
 import LinkBase, { LinkProps } from "next/link";
-import { useLoading } from "./LoadingProvider";
+import { useLoading } from "./Providers";
 import { usePathname } from "next/navigation";
 
 interface Props extends LinkProps {

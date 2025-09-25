@@ -20,7 +20,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { useLoading } from "../LoadingProvider";
+import { useLoading } from "../Providers";
 
 interface Props {
   style: React.CSSProperties;

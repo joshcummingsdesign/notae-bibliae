@@ -12,7 +12,7 @@ export const Tooltip: React.FC<Props> = ({ title, children }) => (
     slotProps={{
       tooltip: {
         sx: (theme) => ({
-          ...typography.body2,
+          ...theme.typography.body2,
           backgroundColor: theme.palette.brand.darkGrey,
         }),
       },

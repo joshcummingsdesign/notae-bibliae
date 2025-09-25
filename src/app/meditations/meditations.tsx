@@ -3,7 +3,7 @@ import { Initial } from "@/components/text/Initial";
 import { Post } from "./actions";
 import { Link } from "@/components/Link";
 import { Autocomplete, styled, TextField } from "@mui/material";
-import { fonts, typography } from "@/assets/styles";
+import { fonts } from "@/assets/styles";
 import dayjs from "dayjs";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -213,8 +213,10 @@ const Pagination = styled("div")({
 const PaginationButton = styled("button", {
   shouldForwardProp: (prop) => prop !== "selected",
 })<{ selected: boolean }>(({ theme, selected }) => ({
-  ...typography.body1,
-  fontWeight: selected ? "bold" : "normal",
+  ...theme.typography.body1,
+  fontWeight: selected
+    ? theme.typography.fontWeightBold
+    : theme.typography.fontWeightRegular,
   color: selected ? theme.palette.brand.red : theme.palette.brand.black,
   marginRight: "0.5rem",
   background: "none",

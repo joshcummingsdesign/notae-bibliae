@@ -7,8 +7,8 @@ export const fonts = {
 };
 
 export const fontWeights = {
-  regular: 400,
-  bold: 700,
+  regular: "var(--fw-regular)",
+  bold: "var(--fw-bold)",
 };
 
 export const typography = {
