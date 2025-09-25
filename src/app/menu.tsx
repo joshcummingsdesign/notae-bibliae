@@ -995,8 +995,22 @@ export const menuItems: MenuNode[] = [
     link: "/places",
     children: [
       {
-        title: "Eden",
-        link: "/places/eden",
+        title: "Places in Genesis",
+        link: "/places/genesis",
+        children: [
+          {
+            title: "Eden",
+            link: "/places/genesis/eden",
+          },
+          {
+            title: "Havilah",
+            link: "/places/genesis/havilah",
+          },
+          {
+            title: "Nod",
+            link: "/places/genesis/nod",
+          },
+        ],
       },
     ],
   },

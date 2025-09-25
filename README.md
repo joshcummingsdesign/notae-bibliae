@@ -14,12 +14,17 @@ Stylized h1 with initial letter.
 
 ### Image
 
+The `sepia` class makes it sepia tone
+
+The `rounded` class gives it rounded corners.
+
 ```md
 <Image
-  src="/chants/tone-ii-with-alleluia.png"
-  alt="Tone II with Alleluia"
+  className="sepia rounded"
+  src="/relative-to-public/image.png"
+  alt="A nice image"
   width="600"
-  height="88"
+  height="600"
 />
 ```
 

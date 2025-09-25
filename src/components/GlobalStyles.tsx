@@ -24,6 +24,8 @@ export const GlobalStyles = () => (
         ...typography.h6,
       },
       img: {
+        display: "block",
+        margin: "1.25em 0",
         width: "100%",
         height: "auto",
       },
@@ -78,6 +80,15 @@ export const GlobalStyles = () => (
             content: "']'",
           },
         },
+      },
+      // Sepia tone images
+      ".sepia": {
+        filter:
+          "grayscale(1) sepia(1) contrast(1) brightness(0.95) saturate(0.5)",
+      },
+      // Images with rounded corners
+      ".rounded": {
+        borderRadius: 30,
       },
       // biblegateway popup spinner
       ".bg_popup-spinner": {
