@@ -36,18 +36,19 @@ const Wrapper = styled("div")(({ theme }) => ({
 
   ".node": {
     rect: {
-      fill: `${theme.palette.brand.blue} !important`,
-      stroke: `none !important`,
+      fill: `${theme.palette.brand.xLightGrey} !important`,
+      stroke: `${theme.palette.brand.grey} !important`,
       rx: `8px !important`,
       ry: `8px !important`,
     },
 
     "&.female": {
       rect: {
-        fill: `${theme.palette.brand.pink} !important`,
+        fill: `${theme.palette.brand.offWhite} !important`,
       },
     },
   },
+
   ".nodeLabel": {
     color: `${theme.palette.brand.black} !important`,
     ...theme.typography.body1,
@@ -56,7 +57,14 @@ const Wrapper = styled("div")(({ theme }) => ({
       fontWeight: theme.typography.fontWeightRegular,
     },
   },
+
   ".flowchart-link": {
     stroke: `${theme.palette.brand.lightGrey} !important`,
+  },
+
+  ".edgeLabel, .edgeLabel p, .labelBkg": {
+    backgroundColor: `${theme.palette.brand.white} !important`,
+    color: theme.palette.brand.black,
+    ...theme.typography.body1,
   },
 }));

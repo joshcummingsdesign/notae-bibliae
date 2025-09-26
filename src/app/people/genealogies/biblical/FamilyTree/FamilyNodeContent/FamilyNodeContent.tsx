@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./styles.module.scss";
 import { combineClassNames as css } from "@/lib/utils/combineClassNames";
-import { FamilyNode } from "@/app/api/family-tree/route";
+import { FamilyNode } from "@/lib/types/FamilyTree";
 
 interface Props {
   node: FamilyNode;

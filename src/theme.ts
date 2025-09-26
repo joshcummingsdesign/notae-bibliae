@@ -16,9 +16,9 @@ export const theme = createTheme({
     brand: {
       black: colors.black,
       white: colors.white,
+      offWhite: colors.offWhite,
       red: colors.red,
-      pink: colors.pink,
-      blue: colors.blue,
+      xxLightGrey: colors.xxLightGrey,
       xLightGrey: colors.xLightGrey,
       grey: colors.grey,
       lightGrey: colors.lightGrey,
@@ -26,7 +26,6 @@ export const theme = createTheme({
       border: colors.border,
       ripple: colors.ripple,
       hover: colors.hover,
-      hoverSolid: colors.hoverSolid,
     },
     background: {
       default: colors.white,

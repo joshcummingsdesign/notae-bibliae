@@ -500,7 +500,7 @@ const ButtonGroup = styled(ButtonGroupBase)(({ theme }) => ({
 }));
 
 const ActionButton = styled(Button)(({ theme }) => ({
-  backgroundColor: theme.palette.brand.hoverSolid,
+  backgroundColor: theme.palette.brand.xxLightGrey,
   color: theme.palette.brand.black,
   borderColor: `${theme.palette.brand.grey} !important`,
 
