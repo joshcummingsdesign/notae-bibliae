@@ -995,20 +995,44 @@ export const menuItems: MenuNode[] = [
     link: "/places",
     children: [
       {
-        title: "Places in Genesis",
-        link: "/places/genesis",
+        title: "Old Testament Places",
+        link: "/places/old-testament",
         children: [
           {
-            title: "Eden",
-            link: "/places/genesis/eden",
+            title: "Places in Genesis",
+            link: "/places/old-testament/genesis",
+            children: [
+              {
+                title: "Ararat",
+                link: "/places/old-testament/genesis/ararat",
+              },
+              {
+                title: "Eden",
+                link: "/places/old-testament/genesis/eden",
+              },
+              {
+                title: "Egypt",
+                link: "/places/old-testament/genesis/egypt",
+              },
+              {
+                title: "Havilah",
+                link: "/places/old-testament/genesis/havilah",
+              },
+              {
+                title: "Nod",
+                link: "/places/old-testament/genesis/nod",
+              },
+            ],
           },
           {
-            title: "Havilah",
-            link: "/places/genesis/havilah",
-          },
-          {
-            title: "Nod",
-            link: "/places/genesis/nod",
+            title: "Places in Job",
+            link: "/places/old-testament/job",
+            children: [
+              {
+                title: "Rahab",
+                link: "/places/old-testament/job/rahab",
+              },
+            ],
           },
         ],
       },

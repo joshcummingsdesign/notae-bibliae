@@ -84,7 +84,7 @@ export const GlobalStyles = () => (
       // Sepia tone images
       ".sepia": {
         filter:
-          "grayscale(1) sepia(1) contrast(1) brightness(0.95) saturate(0.5)",
+          "grayscale(0.5) sepia(0.5) contrast(0.95) brightness(0.95) saturate(0.75)",
       },
       // Images with rounded corners
       ".rounded": {
