@@ -1,5 +1,4 @@
 import { Tooltip as TooltipBase } from "@mui/material";
-import { typography } from "@/assets/styles";
 
 interface Props {
   title: string;

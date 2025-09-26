@@ -3,20 +3,24 @@ export type MenuNode = {
   link: string;
   children?: MenuNode[];
   inPageNav?: boolean;
+  priority?: number;
 };
 
 export const menuItems: MenuNode[] = [
   {
     title: "Bible",
     link: "/bible",
+    priority: 0.8,
     children: [
       {
         title: "New Testament",
         link: "/bible/new-testament",
+        priority: 0.7,
         children: [
           {
             title: "Gospels",
             link: "/bible/new-testament/gospels",
+            priority: 0.6,
             children: [
               {
                 title: "Gospel of Matthew",
@@ -49,6 +53,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Epistles",
             link: "/bible/new-testament/epistles",
+            priority: 0.6,
             children: [
               {
                 title: "Romans",
@@ -144,16 +149,19 @@ export const menuItems: MenuNode[] = [
           {
             title: "Chronological Order (NT)",
             link: "/bible/new-testament/chronological-order",
+            priority: 0.2,
           },
         ],
       },
       {
         title: "Old Testament",
         link: "/bible/old-testament",
+        priority: 0.7,
         children: [
           {
             title: "Pentateuch",
             link: "/bible/old-testament/pentateuch",
+            priority: 0.6,
             children: [
               {
                 title: "Genesis",
@@ -185,6 +193,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Historical Books",
             link: "/bible/old-testament/historical-books",
+            priority: 0.6,
             children: [
               {
                 title: "Joshua",
@@ -248,6 +257,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Poetic Books",
             link: "/bible/old-testament/poetic-books",
+            priority: 0.6,
             children: [
               {
                 title: "Job",
@@ -279,6 +289,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Prophetic Books",
             link: "/bible/old-testament/prophetic-books",
+            priority: 0.6,
             children: [
               {
                 title: "Isaiah",
@@ -353,30 +364,36 @@ export const menuItems: MenuNode[] = [
           {
             title: "Jewish Order (OT)",
             link: "/bible/old-testament/jewish-order",
+            priority: 0.2,
             children: [
               {
                 title: "Torah",
                 link: "/bible/old-testament/jewish-order/torah",
+                priority: 0.2,
               },
               {
                 title: "Nevi'im",
                 link: "/bible/old-testament/jewish-order/neviim",
+                priority: 0.2,
               },
               {
                 title: "Ketuvim",
                 link: "/bible/old-testament/jewish-order/ketuvim",
+                priority: 0.2,
               },
             ],
           },
           {
             title: "Chronological Order (OT)",
             link: "/bible/old-testament/chronological-order",
+            priority: 0.2,
           },
         ],
       },
       {
         title: "Apocrypha",
         link: "/bible/apocrypha",
+        priority: 0.6,
         children: [
           {
             title: "Gospel of James",
@@ -518,33 +535,40 @@ export const menuItems: MenuNode[] = [
   {
     title: "Liturgy",
     link: "/liturgy",
+    priority: 0.8,
     children: [
       {
         title: "Calendar",
         link: "/liturgy/calendar",
+        priority: 0.7,
       },
       {
         title: "Prayers",
         link: "/liturgy/prayers",
+        priority: 0.7,
       },
       {
         title: "Creeds",
         link: "/liturgy/creeds",
+        priority: 0.7,
       },
     ],
   },
   {
     title: "People",
     link: "/people",
+    priority: 0.8,
     children: [
       {
         title: "Saints",
         link: "/people/saints",
         inPageNav: true,
+        priority: 0.7,
         children: [
           {
             title: "Angels",
             link: "/people/saints/angels",
+            priority: 0.6,
             children: [
               {
                 title: "Gabriel",
@@ -559,6 +583,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Apostles",
             link: "/people/saints/apostles",
+            priority: 0.6,
             children: [
               {
                 title: "Andrew",
@@ -621,6 +646,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Evangelists",
             link: "/people/saints/evangelists",
+            priority: 0.6,
             children: [
               {
                 title: "Luke",
@@ -635,6 +661,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Biblical Saints",
             link: "/people/saints/biblical",
+            priority: 0.6,
             children: [
               {
                 title: "Joachim and Anne",
@@ -693,6 +720,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Apostolic Fathers",
             link: "/people/saints/apostolic-fathers",
+            priority: 0.6,
             children: [
               {
                 title: "Clement of Rome",
@@ -719,6 +747,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Greek Fathers",
             link: "/people/saints/greek-fathers",
+            priority: 0.6,
             children: [
               {
                 title: "Athanasius of Alexandria",
@@ -757,6 +786,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Cappadocian Fathers",
             link: "/people/saints/cappadocian-fathers",
+            priority: 0.6,
             children: [
               {
                 title: "Basil the Great",
@@ -775,6 +805,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Latin Fathers",
             link: "/people/saints/latin-fathers",
+            priority: 0.6,
             children: [
               {
                 title: "Ambrose of Milan",
@@ -817,6 +848,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Syriac Fathers",
             link: "/people/saints/syriac-fathers",
+            priority: 0.6,
             children: [
               {
                 title: "Aphrahat the Persian",
@@ -839,6 +871,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Desert Fathers",
             link: "/people/saints/desert-fathers",
+            priority: 0.6,
             children: [
               {
                 title: "Anthony the Great",
@@ -857,6 +890,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Early Saints",
             link: "/people/saints/early",
+            priority: 0.6,
             children: [
               {
                 title: "Christopher of Lycia",
@@ -891,6 +925,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Medieval Saints",
             link: "/people/saints/medieval",
+            priority: 0.6,
             children: [
               {
                 title: "Anselm of Canterbury",
@@ -927,18 +962,22 @@ export const menuItems: MenuNode[] = [
       {
         title: "Patriarchs",
         link: "/people/patriarchs",
+        priority: 0.7,
       },
       {
         title: "Twelve Tribes of Israel",
         link: "/people/twelve-tribes-of-israel",
+        priority: 0.7,
       },
       {
         title: "Kings of Israel",
         link: "/people/kings-of-israel",
+        priority: 0.7,
       },
       {
         title: "Scholars",
         link: "/people/scholars",
+        priority: 0.7,
         children: [
           {
             title: "Boethius",
@@ -977,10 +1016,12 @@ export const menuItems: MenuNode[] = [
       {
         title: "Historical Figures",
         link: "/people/historical-figures",
+        priority: 0.7,
       },
       {
         title: "Genealogies",
         link: "/people/genealogies",
+        priority: 0.7,
         children: [
           {
             title: "Biblical Genealogy",
@@ -997,14 +1038,17 @@ export const menuItems: MenuNode[] = [
   {
     title: "Places",
     link: "/places",
+    priority: 0.8,
     children: [
       {
         title: "Old Testament Places",
         link: "/places/old-testament",
+        priority: 0.7,
         children: [
           {
             title: "Places in Genesis",
             link: "/places/old-testament/genesis",
+            priority: 0.6,
             children: [
               {
                 title: "Ararat",
@@ -1031,6 +1075,7 @@ export const menuItems: MenuNode[] = [
           {
             title: "Places in Job",
             link: "/places/old-testament/job",
+            priority: 0.6,
             children: [
               {
                 title: "Rahab",
@@ -1045,6 +1090,7 @@ export const menuItems: MenuNode[] = [
   {
     title: "Meditations",
     link: "/meditations",
+    priority: 0.8,
     children: [
       {
         title: "Repentance",

@@ -30,7 +30,8 @@ export const GlobalStyles = () => (
         height: "auto",
       },
       "#footnote-label": {
-        display: "none",
+        visibility: "hidden",
+        fontSize: "0",
       },
       ".footnotes": {
         marginTop: "3rem",

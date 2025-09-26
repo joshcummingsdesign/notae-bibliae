@@ -64,6 +64,12 @@ export const MainMenu: React.FC<Props> = ({
   let fullPath =
     searchParams.size > 0 ? `${pathname}?${searchParams.toString()}` : pathname;
 
+  let isMeditation = false;
+
+  if (pathname.includes("/meditations/")) {
+    isMeditation = true;
+  }
+
   if (pathname.includes("meditations") && !searchParams.has("category")) {
     pathname = "/meditations";
     fullPath = "/meditations";
@@ -122,14 +128,20 @@ export const MainMenu: React.FC<Props> = ({
     const firstItem = path[path.length - 1];
     const currentItem = currentList.find((i) => i.link === fullPath);
 
-    if (firstItem && firstItem.link === fullPath && firstItem.inPageNav) {
+    if (isMeditation) {
+      onInitInPageNav(true);
+    } else if (
+      firstItem &&
+      firstItem.link === fullPath &&
+      firstItem.inPageNav
+    ) {
       onInitInPageNav(true);
     } else if (currentItem && currentItem.inPageNav) {
       onInitInPageNav(true);
     } else {
       onInitInPageNav(false);
     }
-  }, [fullPath, currentList]);
+  }, [fullPath, currentList, isMeditation]);
 
   return (
     <nav style={style}>
@@ -178,20 +190,21 @@ export const MainMenu: React.FC<Props> = ({
                 primary={path[path.length - 1].title}
               />
             </ListItemButton>
-            {fullPath === path[path.length - 1].link &&
-              path[path.length - 1].inPageNav && (
-                <IconButton
-                  onClick={onInPageNavOpen}
-                  sx={(theme) => ({
-                    position: "absolute",
-                    zIndex: 1,
-                    right: "8px",
-                    color: theme.palette.brand.black,
-                  })}
-                >
-                  <ListIcon />
-                </IconButton>
-              )}
+            {(isMeditation ||
+              (fullPath === path[path.length - 1].link &&
+                path[path.length - 1].inPageNav)) && (
+              <IconButton
+                onClick={onInPageNavOpen}
+                sx={(theme) => ({
+                  position: "absolute",
+                  zIndex: 1,
+                  right: "8px",
+                  color: theme.palette.brand.black,
+                })}
+              >
+                <ListIcon />
+              </IconButton>
+            )}
           </ListItem>
         )}
 
