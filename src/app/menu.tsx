@@ -1051,8 +1051,16 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Ai",
+                link: "/places/old-testament/genesis/ai",
+              },
+              {
                 title: "Ararat",
                 link: "/places/old-testament/genesis/ararat",
+              },
+              {
+                title: "Assyria",
+                link: "/places/old-testament/genesis/assyria",
               },
               {
                 title: "Babel",
@@ -1065,6 +1073,14 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Babylonia",
                 link: "/places/old-testament/genesis/babylonia",
+              },
+              {
+                title: "Bethel",
+                link: "/places/old-testament/genesis/bethel",
+              },
+              {
+                title: "Canaan",
+                link: "/places/old-testament/genesis/canaan",
               },
               {
                 title: "Chaldea",
@@ -1087,12 +1103,36 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/havilah",
               },
               {
+                title: "Jordan River",
+                link: "/places/old-testament/genesis/jordan-river",
+              },
+              {
+                title: "Luz",
+                link: "/places/old-testament/genesis/luz",
+              },
+              {
+                title: "Negeb",
+                link: "/places/old-testament/genesis/negeb",
+              },
+              {
+                title: "Nineveh",
+                link: "/places/old-testament/genesis/nineveh",
+              },
+              {
                 title: "Nod",
                 link: "/places/old-testament/genesis/nod",
               },
               {
+                title: "Oak of Moreh",
+                link: "/places/old-testament/genesis/oak-of-moreh",
+              },
+              {
                 title: "Paddan-aram",
                 link: "/places/old-testament/genesis/paddan-aram",
+              },
+              {
+                title: "Shechem",
+                link: "/places/old-testament/genesis/shechem",
               },
               {
                 title: "Shinar",

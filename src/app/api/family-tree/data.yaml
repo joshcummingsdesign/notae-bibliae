@@ -680,7 +680,7 @@ nodes:
     category: gentile
     type: person
     notes: |
-      * Builds Nineveh, a major city in Assyria (Gen. 10:11-2).
+      * The name of Assyria comes from him.
   - id: 104
     parentId: 16
     name: Arpachshad
@@ -703,7 +703,7 @@ nodes:
     type: nation
     notes: |
       * The term "Aramean" is derived from his name.
-      * Paddan-aram (Hebrew: "the field of Aram") is named after him (Gen. 25:20).
+      * Paddan-aram (Hebrew: פַּדָּן אֲרָם, "the field of Aram") is named after him (Gen. 25:20).
   - id: 107
     parentId: 92
     name: Nebaioth
@@ -1364,6 +1364,8 @@ nodes:
     gender: male
     category: gentile
     type: nation
+    notes: |
+      * The city of Nineveh in Assyria was built by Nimrod (Gen. 10:11).
   - id: 156
     parentId: 155
     name: Syria
@@ -1427,7 +1429,8 @@ nodes:
     category: gentile
     type: person
     notes: |
-      * Builds Babel, Erech, Accad, and Calneh, in the land of Shinar (Babylonia) (Gen. 10:8-11).
+      * Builds Babel, Erech, Accad, and Calneh, in the land of Shinar (Babylonia) (Gen. 10:10).
+      * Builds Nineveh, a major city in Assyria (Gen. 10:11).
   - id: 167
     parentId: 166
     name: Babylonia
