@@ -929,8 +929,12 @@ export const menuItems: MenuNode[] = [
         link: "/people/patriarchs",
       },
       {
-        title: "Kings",
-        link: "/people/kings",
+        title: "Twelve Tribes of Israel",
+        link: "/people/twelve-tribes-of-israel",
+      },
+      {
+        title: "Kings of Israel",
+        link: "/people/kings-of-israel",
       },
       {
         title: "Scholars",

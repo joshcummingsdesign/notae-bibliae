@@ -515,7 +515,7 @@ nodes:
     category: jew
     type: patriarch
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/the-patriarchs/abraham/)
+      * [Main Article](/people/patriarchs/abraham)
   - id: 85
     parentId: 83
     name: Nahor
@@ -599,7 +599,7 @@ nodes:
     category: jew
     type: patriarch
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/the-patriarchs/isaac/)
+      * [Main Article](/people/patriarchs/isaac)
   - id: 94
     parentId: 84
     name: Keturah
@@ -657,7 +657,7 @@ nodes:
     alt_names:
       - Reuel
     notes: |
-      * His name is Reuel (Hebrew: רְעוּאֵל, “Friend of God”) (Ex. 2:16-18),
+      * His name is Reuel (Hebrew: רְעוּאֵל, "Friend of God") (Ex. 2:16-18),
         but he is often called Jethro (Hebrew: יִתְרוֹ, *Yitró*, "His Excellence"),
         the priest of Midian (Ex. 3:1).
       * His faith in the Lord is refreshed when Moses tells him how the Lord
@@ -916,7 +916,7 @@ nodes:
     category: jew
     type: patriarch
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/the-patriarchs/jacob/)
+      * [Main Article](/people/patriarchs/jacob)
   - id: 122
     parentId: 85
     name: Milcah
@@ -966,7 +966,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/reuben/)
+      * [Main Article](/people/twelve-tribes-of-israel/reuben)
   - id: 128
     parentId: 125
     name: Simeon
@@ -974,7 +974,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/simeon/)
+      * [Main Article](/people/twelve-tribes-of-israel/simeon)
   - id: 284
     parentId: 128
     name: Jemuel
@@ -1020,7 +1020,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/levi/)
+      * [Main Article](/people/twelve-tribes-of-israel/levi)
   - id: 130
     parentId: 125
     name: Judah
@@ -1028,7 +1028,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/judah/)
+      * [Main Article](/people/twelve-tribes-of-israel/judah)
   - id: 277
     parentId: 130
     name: Bath-shua
@@ -1062,7 +1062,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/dan/)
+      * [Main Article](/people/twelve-tribes-of-israel/dan)
   - id: 321
     parentId: 131
     name: Hushim
@@ -1091,7 +1091,7 @@ nodes:
     gender: male
     category: jew
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/naphtali/)
+      * [Main Article](/people/twelve-tribes-of-israel/naphtali)
   - id: 322
     parentId: 132
     name: Jahzeel
@@ -1135,7 +1135,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/gad/)
+      * [Main Article](/people/twelve-tribes-of-israel/gad)
   - id: 298
     parentId: 135
     name: Ziphion
@@ -1185,7 +1185,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/asher/)
+      * [Main Article](/people/twelve-tribes-of-israel/asher)
   - id: 305
     parentId: 137
     name: Imnah
@@ -1235,7 +1235,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [main article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/issachar/)
+      * [main article](/people/twelve-tribes-of-israel/issachar)
   - id: 291
     parentId: 138
     name: Tola
@@ -1267,7 +1267,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/zebulun/)
+      * [Main Article](/people/twelve-tribes-of-israel/zebulun)
   - id: 295
     parentId: 140
     name: Sered
@@ -1293,7 +1293,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/joseph/)
+      * [Main Article](/people/twelve-tribes-of-israel/joseph)
   - id: 142
     parentId: 126
     name: Benjamin
@@ -1301,7 +1301,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/benjamin/)
+      * [Main Article](/people/twelve-tribes-of-israel/benjamin)
   - id: 143
     parentId: 145
     name: Manasseh
@@ -1309,7 +1309,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/manasseh/)
+      * [Main Article](/people/twelve-tribes-of-israel/manasseh)
   - id: 144
     parentId: 145
     name: Ephraim
@@ -1317,7 +1317,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * [Main Article](https://dev-bible-notes.pantheonsite.io/resources/12-tribes-of-israel/ephraim/)
+      * [Main Article](/people/twelve-tribes-of-israel/ephraim)
   - id: 145
     parentId: 141
     name: Asenath

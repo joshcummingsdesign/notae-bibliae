@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Drawer, IconButton, styled, Typography } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import Markdown from "react-markdown";
+import remarkSmartypants from "remark-smartypants";
 
 interface Props {
   open: boolean;
@@ -18,7 +19,12 @@ export const NotesDrawer: FC<Props> = ({ open, heading, text, onClose }) => (
       </CloseButton>
       <Heading variant="h1">{heading}</Heading>
       <Content>
-        <Markdown components={{ a: LinkRenderer }}>{text}</Markdown>
+        <Markdown
+          remarkPlugins={[remarkSmartypants]}
+          components={{ a: LinkRenderer }}
+        >
+          {text}
+        </Markdown>
       </Content>
     </Wrapper>
   </Drawer>
