@@ -1055,6 +1055,22 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/ararat",
               },
               {
+                title: "Babel",
+                link: "/places/old-testament/genesis/babel",
+              },
+              {
+                title: "Babylon",
+                link: "/places/old-testament/genesis/babylon",
+              },
+              {
+                title: "Babylonia",
+                link: "/places/old-testament/genesis/babylonia",
+              },
+              {
+                title: "Chaldea",
+                link: "/places/old-testament/genesis/chaldea",
+              },
+              {
                 title: "Eden",
                 link: "/places/old-testament/genesis/eden",
               },
@@ -1063,12 +1079,28 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/egypt",
               },
               {
+                title: "Haran",
+                link: "/places/old-testament/genesis/haran",
+              },
+              {
                 title: "Havilah",
                 link: "/places/old-testament/genesis/havilah",
               },
               {
                 title: "Nod",
                 link: "/places/old-testament/genesis/nod",
+              },
+              {
+                title: "Paddan-aram",
+                link: "/places/old-testament/genesis/paddan-aram",
+              },
+              {
+                title: "Shinar",
+                link: "/places/old-testament/genesis/shinar",
+              },
+              {
+                title: "Ur",
+                link: "/places/old-testament/genesis/ur",
               },
             ],
           },
