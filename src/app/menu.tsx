@@ -982,6 +982,60 @@ export const menuItems: MenuNode[] = [
         title: "Twelve Tribes of Israel",
         link: "/people/twelve-tribes-of-israel",
         priority: 0.7,
+        children: [
+          {
+            title: "Reuben",
+            link: "/people/twelve-tribes-of-israel/reuben",
+          },
+          {
+            title: "Simeon",
+            link: "/people/twelve-tribes-of-israel/simeon",
+          },
+          {
+            title: "Levi",
+            link: "/people/twelve-tribes-of-israel/levi",
+          },
+          {
+            title: "Judah",
+            link: "/people/twelve-tribes-of-israel/judah",
+          },
+          {
+            title: "Dan",
+            link: "/people/twelve-tribes-of-israel/dan",
+          },
+          {
+            title: "Naphtali",
+            link: "/people/twelve-tribes-of-israel/naphtali",
+          },
+          {
+            title: "Gad",
+            link: "/people/twelve-tribes-of-israel/gad",
+          },
+          {
+            title: "Asher",
+            link: "/people/twelve-tribes-of-israel/asher",
+          },
+          {
+            title: "Issachar",
+            link: "/people/twelve-tribes-of-israel/issachar",
+          },
+          {
+            title: "Joseph",
+            link: "/people/twelve-tribes-of-israel/joseph",
+          },
+          {
+            title: "Manasseh",
+            link: "/people/twelve-tribes-of-israel/manasseh",
+          },
+          {
+            title: "Ephraim",
+            link: "/people/twelve-tribes-of-israel/ephraim",
+          },
+          {
+            title: "Benjamin",
+            link: "/people/twelve-tribes-of-israel/benjamin",
+          },
+        ],
       },
       {
         title: "Kings of Israel",
