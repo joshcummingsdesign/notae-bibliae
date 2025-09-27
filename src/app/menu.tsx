@@ -1301,13 +1301,61 @@ export const menuItems: MenuNode[] = [
             ],
           },
           {
-            title: "Places in Job",
-            link: "/places/old-testament/job",
+            title: "Places in Exodus",
+            link: "/places/old-testament/exodus",
             priority: 0.6,
             children: [
               {
-                title: "Rahab",
-                link: "/places/old-testament/job/rahab",
+                title: "Baal-zephon",
+                link: "/places/old-testament/exodus/baal-zephon",
+              },
+              {
+                title: "Elim",
+                link: "/places/old-testament/exodus/elim",
+              },
+              {
+                title: "Etham",
+                link: "/places/old-testament/exodus/etham",
+              },
+              {
+                title: "Marah",
+                link: "/places/old-testament/exodus/marah",
+              },
+              {
+                title: "Massah and Meribah",
+                link: "/places/old-testament/exodus/massah-and-meribah",
+              },
+              {
+                title: "Migdol",
+                link: "/places/old-testament/exodus/migdol",
+              },
+              {
+                title: "Mount Sinai (Horeb)",
+                link: "/places/old-testament/exodus/mount-sinai",
+              },
+              {
+                title: "Pi-hahiroth",
+                link: "/places/old-testament/exodus/pi-hahiroth",
+              },
+              {
+                title: "Pithom",
+                link: "/places/old-testament/exodus/pithom",
+              },
+              {
+                title: "Red Sea",
+                link: "/places/old-testament/exodus/red-sea",
+              },
+              {
+                title: "Rephidim",
+                link: "/places/old-testament/exodus/rephidim",
+              },
+              {
+                title: "Succoth, Egypt",
+                link: "/places/old-testament/exodus/succoth-egypt",
+              },
+              {
+                title: "Wilderness of Sin",
+                link: "/places/old-testament/exodus/wilderness-of-sin",
               },
             ],
           },
