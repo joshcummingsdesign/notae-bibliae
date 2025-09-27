@@ -1051,8 +1051,20 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Abel-mizraim (Atad)",
+                link: "/places/old-testament/genesis/abel-mizraim",
+              },
+              {
+                title: "Achzib (Chezib)",
+                link: "/places/old-testament/genesis/achzib",
+              },
+              {
                 title: "Admah",
                 link: "/places/old-testament/genesis/admah",
+              },
+              {
+                title: "Adullam",
+                link: "/places/old-testament/genesis/adullam",
               },
               {
                 title: "Ai",
@@ -1067,15 +1079,11 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/assyria",
               },
               {
-                title: "Babel",
-                link: "/places/old-testament/genesis/babel",
-              },
-              {
-                title: "Babylon",
+                title: "Babylon (Babel)",
                 link: "/places/old-testament/genesis/babylon",
               },
               {
-                title: "Babylonia",
+                title: "Babylonia (Shinar)",
                 link: "/places/old-testament/genesis/babylonia",
               },
               {
@@ -1087,16 +1095,12 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/beersheba",
               },
               {
-                title: "Bela",
-                link: "/places/old-testament/genesis/bela",
-              },
-              {
-                title: "Bered",
-                link: "/places/old-testament/genesis/bered",
-              },
-              {
-                title: "Bethel",
+                title: "Bethel (Luz)",
                 link: "/places/old-testament/genesis/bethel",
+              },
+              {
+                title: "Bethlehem (Ephrath)",
+                link: "/places/old-testament/genesis/bethlehem",
               },
               {
                 title: "Canaan",
@@ -1107,15 +1111,19 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/chaldea",
               },
               {
-                title: "Dead Sea",
+                title: "Dead Sea (Salt Sea)",
                 link: "/places/old-testament/genesis/dead-sea",
+              },
+              {
+                title: "Dothan",
+                link: "/places/old-testament/genesis/dothan",
               },
               {
                 title: "Eden",
                 link: "/places/old-testament/genesis/eden",
               },
               {
-                title: "Edom",
+                title: "Edom (Seir)",
                 link: "/places/old-testament/genesis/edom",
               },
               {
@@ -1123,8 +1131,8 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/egypt",
               },
               {
-                title: "El-paran",
-                link: "/places/old-testament/genesis/el-paran",
+                title: "Enaim (Enam)",
+                link: "/places/old-testament/genesis/enaim",
               },
               {
                 title: "En-mishpat",
@@ -1139,8 +1147,16 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/gerar",
               },
               {
+                title: "Gilead (Geleed)",
+                link: "/places/old-testament/genesis/gilead",
+              },
+              {
                 title: "Gomorrah",
                 link: "/places/old-testament/genesis/gomorrah",
+              },
+              {
+                title: "Goshen",
+                link: "/places/old-testament/genesis/goshen",
               },
               {
                 title: "Haran",
@@ -1159,16 +1175,20 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/hebron",
               },
               {
-                title: "Jerusalem",
+                title: "Jabbok River",
+                link: "/places/old-testament/genesis/jabbok-river",
+              },
+              {
+                title: "Jegar-sahadutha",
+                link: "/places/old-testament/genesis/jegar-sahadutha",
+              },
+              {
+                title: "Jerusalem (Salem)",
                 link: "/places/old-testament/genesis/jerusalem",
               },
               {
                 title: "Jordan River",
                 link: "/places/old-testament/genesis/jordan-river",
-              },
-              {
-                title: "Kadesh",
-                link: "/places/old-testament/genesis/kadesh",
               },
               {
                 title: "Kadesh-barnea",
@@ -1179,12 +1199,20 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/kiriath-arba",
               },
               {
-                title: "Luz",
-                link: "/places/old-testament/genesis/luz",
-              },
-              {
                 title: "Machpelah",
                 link: "/places/old-testament/genesis/machpelah",
+              },
+              {
+                title: "Mahanaim",
+                link: "/places/old-testament/genesis/mahanaim",
+              },
+              {
+                title: "Mizpah",
+                link: "/places/old-testament/genesis/mizpah",
+              },
+              {
+                title: "Mount Moriah",
+                link: "/places/old-testament/genesis/mount-moriah",
               },
               {
                 title: "Negeb",
@@ -1211,36 +1239,40 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/paddan-aram",
               },
               {
-                title: "Paran",
+                title: "Paran (El-paran)",
                 link: "/places/old-testament/genesis/paran",
               },
               {
-                title: "Salem",
-                link: "/places/old-testament/genesis/salem",
+                title: "Penuel",
+                link: "/places/old-testament/genesis/penuel",
               },
               {
-                title: "Salt Sea",
-                link: "/places/old-testament/genesis/salt-sea",
-              },
-              {
-                title: "Seir",
-                link: "/places/old-testament/genesis/seir",
+                title: "Rameses",
+                link: "/places/old-testament/genesis/rameses",
               },
               {
                 title: "Shechem",
                 link: "/places/old-testament/genesis/shechem",
               },
               {
-                title: "Shinar",
-                link: "/places/old-testament/genesis/shinar",
-              },
-              {
-                title: "Shur",
+                title: "Shur (Bered)",
                 link: "/places/old-testament/genesis/shur",
               },
               {
                 title: "Sodom",
                 link: "/places/old-testament/genesis/sodom",
+              },
+              {
+                title: "Succoth",
+                link: "/places/old-testament/genesis/succoth",
+              },
+              {
+                title: "Timnah",
+                link: "/places/old-testament/genesis/timnah",
+              },
+              {
+                title: "Tower of the Flock (Eder)",
+                link: "/places/old-testament/genesis/tower-of-the-flock",
               },
               {
                 title: "Ur",
@@ -1255,7 +1287,7 @@ export const menuItems: MenuNode[] = [
                 link: "/places/old-testament/genesis/zeboiim",
               },
               {
-                title: "Zoar",
+                title: "Zoar (Bela)",
                 link: "/places/old-testament/genesis/zoar",
               },
             ],
