@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 
 interface Props {
   file: string;
+  fullScreen?: boolean;
 }
 
-export const Mermaid: React.FC<Props> = ({ file }) => {
+export const Mermaid: React.FC<Props> = ({ file, fullScreen }) => {
   const [data, setData] = useState<string | null>(null);
 
   useEffect(() => {
@@ -23,14 +24,21 @@ export const Mermaid: React.FC<Props> = ({ file }) => {
     }
   }, [data]);
 
-  return <Wrapper className="mermaid">{data}</Wrapper>;
+  return (
+    <Wrapper className="mermaid" fullScreen={fullScreen}>
+      {data}
+    </Wrapper>
+  );
 };
 
-const Wrapper = styled("div")(({ theme }) => ({
+const Wrapper = styled("div", {
+  shouldForwardProp: (prop) => prop !== "fullScreen",
+})<{ fullScreen?: boolean }>(({ theme, fullScreen }) => ({
   overflow: "auto",
   width: "100%",
-  height: 500,
-  border: `1px solid ${theme.palette.brand.border}`,
+  margin: "2em 0",
+  height: fullScreen ? undefined : 500,
+  border: fullScreen ? undefined : `1px solid ${theme.palette.brand.border}`,
   background: theme.palette.brand.white,
   color: theme.palette.brand.white,
 
@@ -53,8 +61,15 @@ const Wrapper = styled("div")(({ theme }) => ({
     color: `${theme.palette.brand.black} !important`,
     ...theme.typography.body1,
     fontWeight: theme.typography.fontWeightBold,
+
     em: {
       fontWeight: theme.typography.fontWeightRegular,
+      fontSize: "0.875em",
+    },
+
+    small: {
+      fontWeight: theme.typography.fontWeightRegular,
+      fontSize: "0.6875em",
     },
   },
 

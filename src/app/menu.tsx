@@ -672,7 +672,7 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/john-the-baptist",
               },
               {
-                title: "Joseph",
+                title: "St. Joseph",
                 link: "/people/saints/biblical/joseph",
               },
               {
@@ -1040,7 +1040,6 @@ export const menuItems: MenuNode[] = [
       {
         title: "Kings of Israel",
         link: "/people/kings-of-israel",
-        priority: 0.7,
       },
       {
         title: "Scholars",
