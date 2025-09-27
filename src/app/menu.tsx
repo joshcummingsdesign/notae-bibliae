@@ -963,6 +963,20 @@ export const menuItems: MenuNode[] = [
         title: "Patriarchs",
         link: "/people/patriarchs",
         priority: 0.7,
+        children: [
+          {
+            title: "Abraham",
+            link: "/people/patriarchs/abraham",
+          },
+          {
+            title: "Isaac",
+            link: "/people/patriarchs/isaac",
+          },
+          {
+            title: "Jacob",
+            link: "/people/patriarchs/jacob",
+          },
+        ],
       },
       {
         title: "Twelve Tribes of Israel",
