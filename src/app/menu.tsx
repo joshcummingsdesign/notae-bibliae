@@ -1091,8 +1091,8 @@ export const menuItems: MenuNode[] = [
         link: "/people/kings-of-israel",
       },
       {
-        title: "Pagan Kings",
-        link: "/people/pagan-kings",
+        title: "Pagan Rulers",
+        link: "/people/pagan-rulers",
       },
       {
         title: "Genealogies",
