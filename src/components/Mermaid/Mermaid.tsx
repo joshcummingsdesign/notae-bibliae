@@ -62,6 +62,11 @@ const Wrapper = styled("div", {
     ...theme.typography.body1,
     fontWeight: theme.typography.fontWeightBold,
 
+    p: {
+      fontSize: "1.25rem",
+      lineHeight: "1.2",
+    },
+
     em: {
       fontWeight: theme.typography.fontWeightRegular,
       fontSize: "0.875em",

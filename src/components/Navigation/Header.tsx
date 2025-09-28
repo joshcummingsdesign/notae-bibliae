@@ -2,7 +2,7 @@
 import { Menu, Search as SearchIcon } from "@mui/icons-material";
 import { IconButton, styled } from "@mui/material";
 import { Search } from "./Search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLoading } from "../Providers";
 
@@ -18,6 +18,20 @@ export const Header: React.FC<Props> = ({ onMenuClick }) => {
   const { setIsLoading } = useLoading();
 
   const [open, setOpen] = useState(false);
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (!open && event.ctrlKey && event.key.toLowerCase() === "p") {
+      setOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [pathname]);
 
   return (
     <Wrapper>

@@ -1,8 +1,6 @@
 graph TD
-    %% David
     David
 
-    %% Jeroboam
     Jeroboam["
     Jeroboam
     <small>Of Ephraim, promised 10 tribes, flees to Egypt.</small>
@@ -12,15 +10,24 @@ graph TD
     <small>Returns from Egypt.</small>
     "]
 
-    %% David to Rehoboam
     David
     ---
     Solomon["
     Solomon
-    <small>Kills his brother Adonijah and David's enemies, asks God for wisdom, builds temple, turns from God, oppresses Israel, leads people to idolatry.</small>
+    <small>Kills his brother Adonijah and David's enemies, asks God for wisdom.</small>
     "]
     ---
-    Solomon2["
+    %% First Temple
+    FirstTemple["
+    <em>First Temple</em>
+    <small>c. 966 BC</small>
+    "]
+    ---
+    Solomon3["
+    <small>Builds the first temple, turns from God, oppresses Israel, leads people to idolatry.</small>
+    "]
+    ---
+    Solomon4["
     <small>Looks to kill Jeroboam.</small>
     "]
     ---
@@ -29,7 +36,7 @@ graph TD
     <small>Threatens more oppression in Israel.</small>
     "]
     ---
-    %% Kingdom split
+    %% Kingdom Splits
     Split["
     <em>Kingdom Splits</em>
     <small>c. 930 BC</small>
@@ -216,14 +223,14 @@ graph TD
     <small>Does what is evil in the sight of the Lord, becomes vassal to king of Assyria, imprisoned for supporting king of Egypt.</small>
     "]
     ---
-    HosheaAssyria["
-    <small>God gives Israel over to the king of Assyria who captures Samaria and exiles them from the land, they are scattered around Assyria, king of Assyria brings Babylonians to Samaria where syncretism becomes widely practiced.</small>
-    "]
-    ---
     %% Assyrian exile
     AssyrianExile["
     <em>Assyrian Exile</em>
     <small>c. 722 BC</small>
+    "]
+    ---
+    HosheaAssyria["
+    <small>God gives Israel over to the king of Assyria who captures Samaria and exiles them from the land, they are scattered around Assyria, king of Assyria brings Babylonians to Samaria where syncretism becomes widely practiced.</small>
     "]
     ---
     SouthernJudah["
@@ -443,12 +450,23 @@ graph TD
     "]
     ---
     JehoahazJudah["
+    Jehoahaz
     <small>Does what is evil in the sight of the Lord, Pharaoh Neco imprisons him in Riblah, Hamath (Syria) and demands money, Neco makes Josiah's other son Eliakim king and changes his name to Jehoiakim, <b>Jeremiah</b> prophesies death in Egypt, taken to Egypt where he dies.</small>
     "]
     ---
     Jehoiakim["
     Jehoiakim
-    <small>Taxes the people to pay Pharaoh Neco, does what is evil in the sight of the Lord, puts Uriah the prophet to death, <b>Jeremiah</b> prophesies 70 years of Babylonian exile and his dishonorable death and burial beyond the gates of Jerusalem, he burns the scrolls of Jeremiah, Jeremiah prophesies that none of his sons will take the throne.</small>
+    <small>Taxes the people to pay Pharaoh Neco, does what is evil in the sight of the Lord, puts <b>Uriah</b> the prophet to death.</small>
+    "]
+    ---
+    JehoiakimSeventy["
+    <small><b>Jeremiah</b> prophesies 70 years of Babylonian exile and his dishonorable death and burial beyond the gates of Jerusalem, he burns the scrolls of Jeremiah, Jeremiah prophesies that none of his descandants will sit on the throne of David.</small>
+    "]
+    ---
+    %% First Babylonian Deportation
+    FirstBabylonianDeportation["
+    <em>First Babylonian Deportation</em>
+    <small>c. 605 BC</small>
     "]
     ---
     JehoiakimExlile["
@@ -459,24 +477,20 @@ graph TD
     <small>Chaldeans, Syrians, Moabites, and Ammonites come up against Judah to destroy it.</small>
     "]
     ---
-    FirstBabylonianDeportation["
-    <em>First Babylonian Deportation</em>
-    <small>c. 605 BC</small>
-    "]
-    ---
     Jehoiachin["
     Jehoiachin
     <em>aka Jeconiah or Coniah</em>
-    <small>Does what is evil in the sight of the Lord, <b>Jeremiah</b> prophesies capture by Babylonian king Nebuchadnezzar, and none of his offspring to take the throne.</small>
+    <small>Does what is evil in the sight of the Lord, <b>Jeremiah</b> prophesies capture by Babylonian king Nebuchadnezzar, Jeremiah prophesies that none of his descendants will sit on the throne of David.</small>
+    "]
+    ---
+    %% Babylonian Exile
+    BabylonianExile["
+    <em>Babylonian Exile</em>
+    <small>c. 597 BC</small>
     "]
     ---
     JehoiachinExile["
     <small>Nebuchadnezzar, king of Babylon, besieges Jerusalem and carries him and his family and his officials and the treasures of the house of the Lord to Babylon, king of Babylon makes Josiah's son Mattaniah king and changes his name to Zedekiah.</small>
-    "]
-    ---
-    BabylonianExile["
-    <em>Babylonian Exile</em>
-    <small>c. 597 BC</small>
     "]
     ---
     Zedekiah["
@@ -504,16 +518,18 @@ graph TD
     <small><b>Ezekiel</b> prophesies the fall of Jerusalem.</small>
     "]
     ---
-    ZedekiahBabylon["
-    <small>Nebuchadnezzar besieges Jerusalem in his 9th year of reign, Babylon overakes Jerusalem in his 11th year of reign, his sons are slaughtered before his eyes, the nobles of Judah are slaughtered, his eyes are put out, and he is taken in chains to Babylon, Jerusalem is destroyed and the people are carried into exile in Babylon, a remnant is left behind in Judah.</small>
-    "]
-    ---
+    %% Siege of Jerusalem
     SiegeOfJerusalem["
     <em>Siege of Jerusalem</em>
     <em>Destruction of Temple</em>
     <small>c. 587 BC</small>
     "]
     ---
+    ZedekiahBabylon["
+    <small>Nebuchadnezzar besieges Jerusalem in his 9th year of reign, Babylon overakes Jerusalem in his 11th year of reign, his sons are slaughtered before his eyes, the nobles of Judah are slaughtered, his eyes are put out, and he is taken in chains to Babylon, Jerusalem is destroyed and the people are carried into exile in Babylon, a remnant is left behind in Judah.</small>
+    "]
+    ---
+    %% Post Exile
     PostExile["
     Post-Exile
     "]
@@ -524,6 +540,7 @@ graph TD
     "]
     ---
     Johanan["
+    <em>Johanan Leads Jews to Egypt</em>
     <small>Johanan, another captain, goes to fight Ishmael at Gibeon, Ishmael flees and Johanan rescues the captives, <b>Jeremiah</b> warns them not to go to Egypt, but they go anyway to flee the Chaldeans, they take Jeremiah with them, Jeremiah prophesies their destruction in Egypt at the hand of Babylon.</small>
     "]
     ---
@@ -542,7 +559,11 @@ graph TD
     "]
     ---
     Cyrus["
-    <em>Cyrus' Call to Build Second Temple</em>
+    <em>Call to Build Second Temple</em>
+    <small>c. 538 BC</small>
+    "]
+    ---
+    Cyrus2["
     <small>Cyrus, king of Persia, is charged by God to build a new temple in Jerusalem, fulfilling <b>Jeremiah's</b> prophecy of 70 years of exile.</small>
     "]
     ---
@@ -562,9 +583,10 @@ graph TD
     ---
     Zerubbabel["
     <em>The Call of Zerubbabel</em>
-    <small>God chooses <b>Zerubbabel</b>, from the house of David, to be like His signet ring.</small>
+    <small>God chooses <b>Zerubbabel</b>, from the house of David, to be like his signet ring.</small>
     "]
     ---
+    %% Second Temple Period
     SecondTemplePeriod["
     <em>Second Temple Period</em>
     <small>c. 516 BC</small>
@@ -572,6 +594,15 @@ graph TD
     ---
     SecondTempleFinished["
     <small>In the time of <b>Ezra</b>, the Second Temple is finished, and the Passover is celebrated.</small>
+    "]
+    ---
+    Artaxerxes["
+    <em>Rebuilding the Wall of Jerusalem</em>
+    <small>c. 444 BC</small>
+    "]
+    ---
+    Artaxerxes2["
+    <small>Artaxerxes, king of Persia, authorizes <b>Nehemiah</b> to rebuild the wall of Jerusalem.</small>
     "]
     ---
     Nehemiah["
