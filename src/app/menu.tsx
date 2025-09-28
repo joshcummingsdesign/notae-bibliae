@@ -970,6 +970,45 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
+        title: "Scholars",
+        link: "/people/scholars",
+        priority: 0.7,
+        children: [
+          {
+            title: "Boethius",
+            link: "/people/scholars/boethius",
+          },
+          {
+            title: "Clement of Alexandria",
+            link: "/people/scholars/clement-of-alexandria",
+          },
+          {
+            title: "Duns Scotus",
+            link: "/people/scholars/duns-scotus",
+          },
+          {
+            title: "Eusebius",
+            link: "/people/scholars/eusebius",
+          },
+          {
+            title: "Origen",
+            link: "/people/scholars/origen",
+          },
+          {
+            title: "Peter Lombard",
+            link: "/people/scholars/peter-lombard",
+          },
+          {
+            title: "Tertullian",
+            link: "/people/scholars/tertullian",
+          },
+          {
+            title: "William of Ockham",
+            link: "/people/scholars/william-of-ockham",
+          },
+        ],
+      },
+      {
         title: "Patriarchs",
         link: "/people/patriarchs",
         priority: 0.7,
@@ -1052,48 +1091,8 @@ export const menuItems: MenuNode[] = [
         link: "/people/kings-of-israel",
       },
       {
-        title: "Scholars",
-        link: "/people/scholars",
-        priority: 0.7,
-        children: [
-          {
-            title: "Boethius",
-            link: "/people/scholars/boethius",
-          },
-          {
-            title: "Clement of Alexandria",
-            link: "/people/scholars/clement-of-alexandria",
-          },
-          {
-            title: "Duns Scotus",
-            link: "/people/scholars/duns-scotus",
-          },
-          {
-            title: "Eusebius",
-            link: "/people/scholars/eusebius",
-          },
-          {
-            title: "Origen",
-            link: "/people/scholars/origen",
-          },
-          {
-            title: "Peter Lombard",
-            link: "/people/scholars/peter-lombard",
-          },
-          {
-            title: "Tertullian",
-            link: "/people/scholars/tertullian",
-          },
-          {
-            title: "William of Ockham",
-            link: "/people/scholars/william-of-ockham",
-          },
-        ],
-      },
-      {
-        title: "Historical Figures",
-        link: "/people/historical-figures",
-        priority: 0.7,
+        title: "Pagan Kings",
+        link: "/people/pagan-kings",
       },
       {
         title: "Genealogies",
