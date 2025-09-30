@@ -1445,8 +1445,32 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
+        title: "Aquinas",
+        link: "/meditations?category=Aquinas",
+      },
+      {
+        title: "Bible",
+        link: "/meditations?category=Bible",
+      },
+      {
+        title: "Job",
+        link: "/meditations?category=Job",
+      },
+      {
+        title: "Old Testament",
+        link: "/meditations?category=Old+Testament",
+      },
+      {
+        title: "Poetic Books",
+        link: "/meditations?category=Poetic+Books",
+      },
+      {
         title: "Repentance",
         link: "/meditations?category=Repentance",
+      },
+      {
+        title: "Theology",
+        link: "/meditations?category=Theology",
       },
     ],
   },
