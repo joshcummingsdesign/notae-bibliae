@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 
 export interface LayoutCtx {
-  isFullWidth: boolean;
+  layout: "full-width" | "wide" | "default";
 }
 
 interface Props {
@@ -11,25 +11,28 @@ interface Props {
 }
 
 const LayoutContext = createContext<LayoutCtx>({
-  isFullWidth: false,
+  layout: "default",
 });
 
 export const LayoutProvider: React.FC<Props> = ({ children }) => {
   const pathname = usePathname();
-  const [isFullWidth, setIsFullWidth] = useState(false);
+  const [layout, setLayout] = useState<LayoutCtx["layout"]>("default");
 
   useEffect(() => {
     const fullWidthPaths = ["/people/genealogies/biblical"];
+    const widePaths = ["/people/pagan-rulers"];
 
     if (fullWidthPaths.includes(pathname)) {
-      setIsFullWidth(true);
+      setLayout("full-width");
+    } else if (widePaths.includes(pathname)) {
+      setLayout("wide");
     } else {
-      setIsFullWidth(false);
+      setLayout("default");
     }
   }, [pathname]);
 
   return (
-    <LayoutContext.Provider value={{ isFullWidth }}>
+    <LayoutContext.Provider value={{ layout }}>
       {children}
     </LayoutContext.Provider>
   );
