@@ -1,5 +1,6 @@
 import { PostMeta } from "../actions";
 import { Meditation } from "./Meditation";
+import { notFound } from "next/navigation";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -7,9 +8,17 @@ interface Props {
 
 export default async function MeditationsSinglePage({ params }: Props) {
   const { slug } = await params;
-  const post: { default: any; metadata: PostMeta } = await import(
-    `@/app/meditations/posts/${slug}.mdx`
-  );
+
+  let post: { default: any; metadata: PostMeta } | null = null;
+
+  try {
+    post = await import(`@/app/meditations/posts/${slug}.mdx`);
+  } catch (error) {
+    notFound();
+  }
+
+  if (!post) return;
+
   const Component = post.default;
   return (
     <Meditation postMeta={post.metadata}>

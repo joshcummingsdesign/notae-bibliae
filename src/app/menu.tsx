@@ -1453,16 +1453,16 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Bible",
       },
       {
-        title: "Job",
-        link: "/meditations?category=Job",
+        title: "Big Concepts",
+        link: "/meditations?category=Big+Concepts",
       },
       {
         title: "Old Testament",
         link: "/meditations?category=Old+Testament",
       },
       {
-        title: "Poetic Books",
-        link: "/meditations?category=Poetic+Books",
+        title: "Prophets",
+        link: "/meditations?category=Prophets",
       },
       {
         title: "Repentance",
@@ -1471,6 +1471,10 @@ export const menuItems: MenuNode[] = [
       {
         title: "Theology",
         link: "/meditations?category=Theology",
+      },
+      {
+        title: "Wisdom",
+        link: "/meditations?category=Wisdom",
       },
     ],
   },
