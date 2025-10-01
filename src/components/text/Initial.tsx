@@ -11,7 +11,7 @@ interface Props {
  * Styled initial letter.
  */
 export const Initial: React.FC<Props> = ({ text }) => (
-  <Text aria-label={text}>
+  <Text id="title" aria-label={text}>
     <Letter>{text.charAt(0)}</Letter>
     <span>{text.substring(1)}</span>
   </Text>

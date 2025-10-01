@@ -83,6 +83,16 @@ export const InPageNav: React.FC<Props> = ({
           )}
         </ListHeaderItem>
 
+        <ListItem disablePadding>
+          <ListItemButton
+            component="a"
+            href="#title"
+            onClick={!isDesktop ? onClose : undefined}
+          >
+            <ListItemText primary="Title" selected={true} />
+          </ListItemButton>
+        </ListItem>
+
         {headings.current.map((h) => (
           <ListItem key={h.id} disablePadding>
             <ListItemButton

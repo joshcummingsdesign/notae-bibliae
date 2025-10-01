@@ -30,7 +30,14 @@ const flattenMenu = (nodes: MenuNode[]): MenuItem[] => {
 
   function recurse(nodeList: MenuNode[]) {
     for (const node of nodeList) {
-      result.push({ title: node.title, link: node.link });
+      let title = node.title;
+
+      if (node.link.includes("/meditations?")) {
+        title = `Meditations: ${node.title}`;
+      }
+
+      result.push({ title, link: node.link });
+
       if (node.children) {
         recurse(node.children);
       }

@@ -1453,6 +1453,10 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Aquinas",
       },
       {
+        title: "Augustine",
+        link: "/meditations?category=Augustine",
+      },
+      {
         title: "Bible",
         link: "/meditations?category=Bible",
       },
@@ -1471,6 +1475,10 @@ export const menuItems: MenuNode[] = [
       {
         title: "Justification by Faith",
         link: "/meditations?category=Justification+by+Faith",
+      },
+      {
+        title: "Liturgy",
+        link: "/meditations?category=Liturgy",
       },
       {
         title: "Luther",
