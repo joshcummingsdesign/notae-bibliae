@@ -13,6 +13,7 @@ export const Tooltip: React.FC<Props> = ({ title, children }) => (
         sx: (theme) => ({
           ...theme.typography.body2,
           backgroundColor: theme.palette.brand.darkGrey,
+          color: theme.palette.brand.white,
         }),
       },
     }}

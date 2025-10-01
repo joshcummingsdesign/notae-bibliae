@@ -1473,6 +1473,10 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Theology",
       },
       {
+        title: "Trinity",
+        link: "/meditations?category=Trinity",
+      },
+      {
         title: "Wisdom",
         link: "/meditations?category=Wisdom",
       },
