@@ -1461,8 +1461,16 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Big+Concepts",
       },
       {
+        title: "Calvin",
+        link: "/meditations?category=Calvin",
+      },
+      {
         title: "Church History",
         link: "/meditations?category=Church+History",
+      },
+      {
+        title: "Justification by Faith",
+        link: "/meditations?category=Justification+by+Faith",
       },
       {
         title: "Luther",
