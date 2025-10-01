@@ -14,7 +14,7 @@ interface Props {
   perPage?: number;
 }
 
-export const Meditations: React.FC<Props> = ({ allPosts, perPage = 6 }) => {
+export const Meditations: React.FC<Props> = ({ allPosts, perPage = 8 }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
