@@ -1445,6 +1445,10 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
+        title: "Anselm",
+        link: "/meditations?category=Anselm",
+      },
+      {
         title: "Aquinas",
         link: "/meditations?category=Aquinas",
       },
@@ -1457,8 +1461,28 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Big+Concepts",
       },
       {
+        title: "Church History",
+        link: "/meditations?category=Church+History",
+      },
+      {
+        title: "Luther",
+        link: "/meditations?category=Luther",
+      },
+      {
+        title: "New Testament",
+        link: "/meditations?category=New+Testament",
+      },
+      {
         title: "Old Testament",
         link: "/meditations?category=Old+Testament",
+      },
+      {
+        title: "Philosophy",
+        link: "/meditations?category=Philosophy",
+      },
+      {
+        title: "Prayer & Fasting",
+        link: "/meditations?category=Prayer+and+Fasting",
       },
       {
         title: "Prophets",
@@ -1467,6 +1491,10 @@ export const menuItems: MenuNode[] = [
       {
         title: "Repentance",
         link: "/meditations?category=Repentance",
+      },
+      {
+        title: "The Law",
+        link: "/meditations?category=The+Law",
       },
       {
         title: "Theology",
