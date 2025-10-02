@@ -58,9 +58,15 @@ export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
     link: `/meditations/${post.slug}`,
   }));
 
-  const options = [...postItems, ...flattenMenu(menuItems)].sort((a, b) =>
-    a.title.localeCompare(b.title)
-  );
+  const options = [...postItems, ...flattenMenu(menuItems)]
+    .map((item) => ({
+      ...item,
+      title: item.title.replace(
+        /A Brief History of the Reformation, Part (\d): (.*)/,
+        "Reformation, Part $1: $2"
+      ),
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   // Focus input when modal opens
   useEffect(() => {
