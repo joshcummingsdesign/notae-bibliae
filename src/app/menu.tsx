@@ -1509,6 +1509,10 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Repentance",
       },
       {
+        title: "Sacraments",
+        link: "/meditations?category=Sacraments",
+      },
+      {
         title: "The Law",
         link: "/meditations?category=The+Law",
       },
