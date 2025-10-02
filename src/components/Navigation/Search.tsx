@@ -1,7 +1,8 @@
 "use client";
-import { menuItems, MenuNode } from "@/app/menu";
-import { Close } from "@mui/icons-material";
 import { useEffect, useRef } from "react";
+import { Close } from "@mui/icons-material";
+import { menuItems, MenuNode } from "@/app/menu";
+import { Post } from "@/app/meditations/actions";
 import {
   Modal as ModalBase,
   Autocomplete,
@@ -12,6 +13,7 @@ import {
 } from "@mui/material";
 
 interface Props {
+  posts: Post[];
   open: boolean;
   onChange: (link: string) => void;
   onClose: () => void;
@@ -48,8 +50,17 @@ const flattenMenu = (nodes: MenuNode[]): MenuItem[] => {
   return result;
 };
 
-export const Search: React.FC<Props> = ({ open, onChange, onClose }) => {
+export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const postItems: MenuItem[] = posts.map((post) => ({
+    title: post.title,
+    link: `/meditations/${post.slug}`,
+  }));
+
+  const options = [...postItems, ...flattenMenu(menuItems)].sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
 
   // Focus input when modal opens
   useEffect(() => {
@@ -77,7 +88,7 @@ export const Search: React.FC<Props> = ({ open, onChange, onClose }) => {
             <Autocomplete<MenuItem>
               ref={inputRef}
               disablePortal
-              options={flattenMenu(menuItems)}
+              options={options}
               onChange={(_, value) => {
                 value && onChange(value.link);
                 onClose();

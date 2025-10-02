@@ -1,13 +1,18 @@
 "use client";
 import { Suspense, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 import { useMediaQuery, useTheme } from "@mui/material";
 import { MainMenu } from "./MainMenu";
 import { InPageNav } from "./InPageNav";
-import { usePathname } from "next/navigation";
+import { Post } from "@/app/meditations/actions";
 
-export const Navigation = () => {
+interface Props {
+  posts: Post[];
+}
+
+export const Navigation: React.FC<Props> = ({ posts }) => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const pathname = usePathname();
@@ -34,7 +39,7 @@ export const Navigation = () => {
 
   return (
     <>
-      <Header onMenuClick={toggleSidebar(true)} />
+      <Header posts={posts} onMenuClick={toggleSidebar(true)} />
       <Sidebar open={sidebarOpen} onClose={toggleSidebar(false)}>
         <InPageNav
           style={{ display: inPageNavOpen ? "block" : "none" }}

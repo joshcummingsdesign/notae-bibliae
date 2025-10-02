@@ -1,3 +1,4 @@
+import { Suspense, use } from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { EB_Garamond } from "next/font/google";
@@ -6,6 +7,7 @@ import { Main } from "@/components/Main";
 import { Navigation } from "@/components/Navigation";
 import { BibleGatewayLoader } from "@/components/BibleGatewayLoader";
 import { MermaidLoader } from "@/components/Mermaid";
+import { getAllPosts } from "./meditations/actions";
 import "@/assets/styles/global.scss";
 
 interface Props {
@@ -49,11 +51,14 @@ export const viewport: Viewport = {
 const fontVariables = `${rediviva.variable} ${canterbury.variable} ${ebGaramond.variable}`;
 
 export default function RootLayout({ children }: Props) {
+  const posts = use(getAllPosts());
   return (
     <Providers>
       <html lang="en" className={fontVariables}>
         <body>
-          <Navigation />
+          <Suspense>
+            <Navigation posts={posts} />
+          </Suspense>
           <Main>{children}</Main>
           <BibleGatewayLoader />
           <MermaidLoader />

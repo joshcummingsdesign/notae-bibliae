@@ -5,14 +5,16 @@ import { Search } from "./Search";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLoading } from "../Providers";
+import { Post } from "@/app/meditations/actions";
 
 interface Props {
+  posts: Post[];
   onMenuClick: () => void;
 }
 
 export const HEADER_HEIGHT = 52;
 
-export const Header: React.FC<Props> = ({ onMenuClick }) => {
+export const Header: React.FC<Props> = ({ posts, onMenuClick }) => {
   const router = useRouter();
   const pathname = usePathname();
   const { setIsLoading } = useLoading();
@@ -46,6 +48,7 @@ export const Header: React.FC<Props> = ({ onMenuClick }) => {
         <SearchIcon />
       </SearchButton>
       <Search
+        posts={posts}
         open={open}
         onChange={(link) => {
           if (pathname !== link.split("?")[0]) {

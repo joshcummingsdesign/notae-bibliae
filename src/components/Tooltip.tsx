@@ -1,7 +1,7 @@
 import { Tooltip as TooltipBase } from "@mui/material";
 
 interface Props {
-  title: string;
+  title: string | React.ReactNode;
   children: React.ReactNode;
 }
 

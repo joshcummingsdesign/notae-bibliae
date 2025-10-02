@@ -13,13 +13,21 @@ interface Props {
 export const Definition: React.FC<Props> = ({ lang, anchor, text }) => {
   const definition = useDefinition();
 
+  const language = lang.charAt(0).toUpperCase() + lang.slice(1);
+
   const content =
     definition && definition.glossary && definition.glossary[lang][anchor];
 
   return (
     <span>
       {content ? (
-        <Tooltip title={content}>
+        <Tooltip
+          title={
+            <>
+              <strong>{language}:</strong> {content}
+            </>
+          }
+        >
           <Text>{text}</Text>
         </Tooltip>
       ) : (
