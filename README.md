@@ -9,7 +9,7 @@ A collection of biblical, liturgical, and historical notes.
 Stylized h1 with initial letter.
 
 ```md
-<Initial text="Gloria Patri"/>
+<Initial text="Gloria Patri" />
 ```
 
 ### Image
