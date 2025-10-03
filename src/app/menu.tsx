@@ -538,29 +538,22 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
-        title: "Liturgical Calendar",
-        link: "/liturgy/liturgical-calendar",
-        priority: 0.7,
-      },
-      {
-        title: "Feasts",
-        link: "/liturgy/feasts",
-        priority: 0.7,
-      },
-      {
-        title: "Prayers & Creeds",
-        link: "/liturgy/prayers-and-creeds",
-        priority: 0.7,
-      },
-      {
-        title: "Rites & Traditions",
-        link: "/liturgy/rites-and-traditions",
-        priority: 0.7,
-      },
-      {
         title: "Music",
         link: "/liturgy/music",
         priority: 0.7,
+        children: [
+          {
+            title: "Chant",
+            link: "/liturgy/music/chant",
+            priority: 0.6,
+            children: [
+              {
+                title: "Alleluia",
+                link: "/liturgy/music/chant/alleluia",
+              },
+            ],
+          },
+        ],
       },
     ],
   },

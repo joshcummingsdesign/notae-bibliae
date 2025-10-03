@@ -264,7 +264,9 @@ const ListHeaderItem = styled(ListItem)(({ theme }) => ({
 const ListItemText = styled(ListItemTextBase, {
   shouldForwardProp: (prop) => prop !== "selected",
 })<{ selected?: boolean }>(({ theme, selected }) => ({
-  color: selected ? theme.palette.brand.red : theme.palette.brand.black,
+  ".MuiTypography-root": {
+    color: selected ? theme.palette.brand.red : theme.palette.brand.black,
+  },
 }));
 
 const CloseButton = styled(IconButton)(({ theme }) => ({
