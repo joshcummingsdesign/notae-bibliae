@@ -58,7 +58,18 @@ export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
     link: `/meditations/${post.slug}`,
   }));
 
-  const options = [...postItems, ...flattenMenu(menuItems)]
+  const additionalItems: MenuItem[] = [
+    {
+      title: "Martin Luther",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#martin-luther",
+    },
+    {
+      title: "John Calvin",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#john-calvin",
+    },
+  ];
+
+  const options = [...postItems, ...additionalItems, ...flattenMenu(menuItems)]
     .map((item) => ({
       ...item,
       title: item.title.replace(
