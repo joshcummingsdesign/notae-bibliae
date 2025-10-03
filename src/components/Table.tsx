@@ -38,31 +38,50 @@ interface Props {
 
 type Order = "asc" | "desc";
 
-function descendingComparator(
+const formatYear = (year: string): number => {
+  let y = year;
+  if (year.toLowerCase().includes("biblical")) {
+    y = "0";
+  } else if (year.toLowerCase().includes("century")) {
+    y = String(Number(year.replace(/(\d+).*/, "$1")) - 1) + "00";
+  }
+  return Number(y);
+};
+
+const descendingComparator = (
   a: TableRow[],
   b: TableRow[],
   orderBy: string
-): number {
-  const aCell = a.find((cell) => cell.id === orderBy)?.content ?? "";
-  const bCell = b.find((cell) => cell.id === orderBy)?.content ?? "";
+): number => {
+  const aCell = a.find((cell) => cell.id === orderBy);
+  let aContent: string | number = aCell?.content ?? "";
+  if (aCell && aCell.id === "year") {
+    aContent = formatYear(aCell.content);
+  }
 
-  if (bCell < aCell) {
+  const bCell = b.find((cell) => cell.id === orderBy);
+  let bContent: string | number = bCell?.content ?? "";
+  if (bCell && bCell.id === "year") {
+    bContent = formatYear(bCell.content);
+  }
+
+  if (bContent < aContent) {
     return -1;
   }
-  if (bCell > aCell) {
+  if (bContent > aContent) {
     return 1;
   }
   return 0;
-}
+};
 
-function getComparator(
+const getComparator = (
   order: Order,
   orderBy: string
-): (a: TableRow[], b: TableRow[]) => number {
+): ((a: TableRow[], b: TableRow[]) => number) => {
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
-}
+};
 
 interface TableHeadProps {
   columns: TableColumn[];

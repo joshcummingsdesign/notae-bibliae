@@ -653,6 +653,253 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Hymns",
+            link: "/liturgy/music/hymns",
+            priority: 0.6,
+            children: [
+              {
+                title: "40 Days and 40 Nights",
+                link: "/liturgy/music/hymns/40-days-and-40-nights",
+              },
+              {
+                title: "A Mighty Fortress Is Our God",
+                link: "/liturgy/music/hymns/a-mighty-fortress-Is-our-god",
+              },
+              {
+                title: "Abendlied",
+                link: "/liturgy/music/hymns/abendlied",
+              },
+              {
+                title: "Again We Keep This Solemn Fast",
+                link: "/liturgy/music/hymns/again-we-keep-this-solemn-fast",
+              },
+              {
+                title: "All Creatures of Our God and King",
+                link: "/liturgy/music/hymns/all-creatures-of-our-god-and-king",
+              },
+              {
+                title: "Amazing Grace",
+                link: "/liturgy/music/hymns/amazing-grace",
+              },
+              {
+                title: "Angels From the Realms of Glory",
+                link: "/liturgy/music/hymns/angels-from-the-realms-of-glory",
+              },
+              {
+                title: "Angels We Have Heard on High",
+                link: "/liturgy/music/hymns/angels-we-have-heard-on-high",
+              },
+              {
+                title: "Away in a Manger",
+                link: "/liturgy/music/hymns/away-in-a-manger",
+              },
+              {
+                title: "Be Still My Soul",
+                link: "/liturgy/music/hymns/be-still-my-soul",
+              },
+              {
+                title: "Be Thou My Vision",
+                link: "/liturgy/music/hymns/be-thou-my-vision",
+              },
+              {
+                title: "Blessed Assurance",
+                link: "/liturgy/music/hymns/blessed-assurance",
+              },
+              {
+                title: "Christ the Lord Is Risen Today",
+                link: "/liturgy/music/hymns/christ-the-lord-is-risen-today",
+              },
+              {
+                title: "Come, Thou Long Expected Jesus",
+                link: "/liturgy/music/hymns/come-thou-long-expected-jesus",
+              },
+              {
+                title: "Come, Thou Redeemer of the Earth",
+                link: "/liturgy/music/hymns/come-thou-redeemer-of-the-earth",
+              },
+              {
+                title: "Crown Him with Many Crowns",
+                link: "/liturgy/music/hymns/crown-him-with-many-crowns",
+              },
+              {
+                title: "For the Beauty of the Earth",
+                link: "/liturgy/music/hymns/for-the-beauty-of-the-earth",
+              },
+              {
+                title: "From Heaven Above to Earth I Come",
+                link: "/liturgy/music/hymns/from-heaven-above-to-earth-i-come",
+              },
+              {
+                title: "God Rest Ye Merry Gentlemen",
+                link: "/liturgy/music/hymns/god-rest-ye-merry-gentlemen",
+              },
+              {
+                title: "Go, Tell It on the Mountain",
+                link: "/liturgy/music/hymns/go-tell-it-on-the-mountain",
+              },
+              {
+                title: "Haleluhu",
+                link: "/liturgy/music/hymns/haleluhu",
+              },
+              {
+                title: "Hark! The Herald Angels Sing",
+                link: "/liturgy/music/hymns/hark-the-herald-angels-sing",
+              },
+              {
+                title: "Here I Am, Lord",
+                link: "/liturgy/music/hymns/here-i-am-lord",
+              },
+              {
+                title: "Hosanna, Loud Hosanna",
+                link: "/liturgy/music/hymns/hosanna-loud-hosanna",
+              },
+              {
+                title: "How Firm a Foundation",
+                link: "/liturgy/music/hymns/how-firm-a-foundation",
+              },
+              {
+                title: "I Surrender All",
+                link: "/liturgy/music/hymns/i-surrender-all",
+              },
+              {
+                title: "In the Garden",
+                link: "/liturgy/music/hymns/in-the-garden",
+              },
+              {
+                title: "It Is Well With My Soul",
+                link: "/liturgy/music/hymns/it-is-well-with-my-soul",
+              },
+              {
+                title: "Jesus Christ is Risen Today",
+                link: "/liturgy/music/hymns/jesus-christ-is-risen-today",
+              },
+              {
+                title: "Jesus Loves Me",
+                link: "/liturgy/music/hymns/jesus-loves-me",
+              },
+              {
+                title: "Jesu, Joy of Man's Desiring",
+                link: "/liturgy/music/hymns/jesu-joy-of-mans-desiring",
+              },
+              {
+                title: "Joy to the World",
+                link: "/liturgy/music/hymns/joy-to-the-world",
+              },
+              {
+                title: "Just as I Am",
+                link: "/liturgy/music/hymns/just-as-i-am",
+              },
+              {
+                title: "Lift High the Cross",
+                link: "/liturgy/music/hymns/lift-high-the-cross",
+              },
+              {
+                title: "Let There Be Peace On Earth",
+                link: "/liturgy/music/hymns/let-there-be-peace-on-earth",
+              },
+              {
+                title: "Lord Jesus, Think on Me",
+                link: "/liturgy/music/hymns/lord-jesus-think-on-me",
+              },
+              {
+                title: "Lord of the Dance",
+                link: "/liturgy/music/hymns/lord-of-the-dance",
+              },
+              {
+                title: "Lord, Who Throughout These Forty Days",
+                link: "/liturgy/music/hymns/lord-who-throughout-these-forty-days",
+              },
+              {
+                title: "Love Came Down at Christams",
+                link: "/liturgy/music/hymns/love-came-down-at-christmas",
+              },
+              {
+                title: "Morning Has Broken",
+                link: "/liturgy/music/hymns/morning-has-broken",
+              },
+              {
+                title: "Now Thank We All Our God",
+                link: "/liturgy/music/hymns/now-thank-we-all-our-god",
+              },
+              {
+                title: "O Come, All Ye Faithful",
+                link: "/liturgy/music/hymns/o-come-all-ye-faithful",
+              },
+              {
+                title: "O Come, O Come, Emmanuel",
+                link: "/liturgy/music/hymns/o-come-o-come-emmanuel",
+              },
+              {
+                title: "O for a Thousand Tongues to Sing",
+                link: "/liturgy/music/hymns/o-for-a-thousand-tongues-to-sing",
+              },
+              {
+                title: "O Holy Night",
+                link: "/liturgy/music/hymns/o-holy-night",
+              },
+              {
+                title: "O How I Love Jesus",
+                link: "/liturgy/music/hymns/o-how-i-love-jesus",
+              },
+              {
+                title: "O Little Town of Bethlehem",
+                link: "/liturgy/music/hymns/o-little-town-of-bethlehem",
+              },
+              {
+                title: "Praise God, From Whom All Blessings Flow",
+                link: "/liturgy/music/hymns/praise-god-from-whom-all-blessings-flow",
+              },
+              {
+                title: "Praise My Soul, the King of Heaven",
+                link: "/liturgy/music/hymns/praise-my-soul-the-king-of-heaven",
+              },
+              {
+                title: "Praise to the Lord, the Almighty",
+                link: "/liturgy/music/hymns/praise-to-the-lord-the-almighty",
+              },
+              {
+                title: "Silent Night",
+                link: "/liturgy/music/hymns/silent-night",
+              },
+              {
+                title: "Softly and Tenderly",
+                link: "/liturgy/music/hymns/softly-and-tenderly",
+              },
+              {
+                title: "Spirit of the Living God",
+                link: "/liturgy/music/hymns/spirit-of-the-living-god",
+              },
+              {
+                title: "Take Up Thy Cross, The Savior Said",
+                link: "/liturgy/music/hymns/take-up-thy-cross-the-savior-said",
+              },
+              {
+                title: "Tell Me the Stories of Jesus",
+                link: "/liturgy/music/hymns/tell-me-the-stories-of-jesus",
+              },
+              {
+                title: "Thine Be the Glory",
+                link: "/liturgy/music/hymns/thine-be-the-glory",
+              },
+              {
+                title: "There's Something About That Name",
+                link: "/liturgy/music/hymns/theres-something-about-that-name",
+              },
+              {
+                title: "We Three Kings",
+                link: "/liturgy/music/hymns/we-three-kings",
+              },
+              {
+                title: "What a Friend We Have in Jesus",
+                link: "/liturgy/music/hymns/what-a-friend-we-have-in-jesus",
+              },
+              {
+                title: "Where He Leads Me",
+                link: "/liturgy/music/hymns/where-he-leads-me",
+              },
+            ],
+          },
         ],
       },
     ],

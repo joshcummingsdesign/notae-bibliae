@@ -21,7 +21,7 @@
       {
         "id": "title",
         "content": "Alleluia",
-        "link": "/liturgy/music/chants/alleluia/"
+        "link": "/liturgy/music/chants/alleluia"
       },
       {
         "id": "type",
@@ -36,7 +36,7 @@
       {
         "id": "title",
         "content": "Alleluia Confitemini",
-        "link": "/liturgy/music/chants/alleluia-confitemini/"
+        "link": "/liturgy/music/chants/alleluia-confitemini"
       },
       {
         "id": "type",
@@ -51,7 +51,7 @@
       {
         "id": "title",
         "content": "Deus in Adjutorium",
-        "link": "/liturgy/music/chants/deus-in-adjutorium/"
+        "link": "/liturgy/music/chants/deus-in-adjutorium"
       },
       {
         "id": "type",
@@ -66,7 +66,7 @@
       {
         "id": "title",
         "content": "Domine Labia Mea",
-        "link": "/liturgy/music/chants/domine-labia-mea/"
+        "link": "/liturgy/music/chants/domine-labia-mea"
       },
       {
         "id": "type",
@@ -81,7 +81,7 @@
       {
         "id": "title",
         "content": "Facta est cum Angelo",
-        "link": "/liturgy/music/chants/facta-est-cum-angelo/"
+        "link": "/liturgy/music/chants/facta-est-cum-angelo"
       },
       {
         "id": "type",
@@ -96,7 +96,7 @@
       {
         "id": "title",
         "content": "Iste pauper",
-        "link": "/liturgy/music/chants/iste-pauper/"
+        "link": "/liturgy/music/chants/iste-pauper"
       },
       {
         "id": "type",
@@ -111,7 +111,7 @@
       {
         "id": "title",
         "content": "Magnificat",
-        "link": "/liturgy/music/chants/magnificat/"
+        "link": "/liturgy/music/chants/magnificat"
       },
       {
         "id": "type",
@@ -126,7 +126,7 @@
       {
         "id": "title",
         "content": "Sanctus",
-        "link": "/liturgy/music/chants/sanctus/"
+        "link": "/liturgy/music/chants/sanctus"
       },
       {
         "id": "type",
@@ -141,7 +141,7 @@
       {
         "id": "title",
         "content": "Gloria",
-        "link": "/liturgy/music/chants/gloria/"
+        "link": "/liturgy/music/chants/gloria"
       },
       {
         "id": "type",
@@ -156,7 +156,7 @@
       {
         "id": "title",
         "content": "Gloria Patri",
-        "link": "/liturgy/music/chants/gloria-patri/"
+        "link": "/liturgy/music/chants/gloria-patri"
       },
       {
         "id": "type",
@@ -171,7 +171,7 @@
       {
         "id": "title",
         "content": "Kyrie",
-        "link": "/liturgy/music/chants/kyrie/"
+        "link": "/liturgy/music/chants/kyrie"
       },
       {
         "id": "type",
@@ -186,7 +186,7 @@
       {
         "id": "title",
         "content": "Te Decet Laus",
-        "link": "/liturgy/music/chants/te-decet-laus/"
+        "link": "/liturgy/music/chants/te-decet-laus"
       },
       {
         "id": "type",
@@ -201,7 +201,7 @@
       {
         "id": "title",
         "content": "Te Deum",
-        "link": "/liturgy/music/chants/te-deum/"
+        "link": "/liturgy/music/chants/te-deum"
       },
       {
         "id": "type",
@@ -216,7 +216,7 @@
       {
         "id": "title",
         "content": "Credo",
-        "link": "/liturgy/music/chants/credo/"
+        "link": "/liturgy/music/chants/credo"
       },
       {
         "id": "type",
@@ -231,7 +231,7 @@
       {
         "id": "title",
         "content": "Benedicite",
-        "link": "/liturgy/music/chants/benedicite/"
+        "link": "/liturgy/music/chants/benedicite"
       },
       {
         "id": "type",
@@ -246,7 +246,7 @@
       {
         "id": "title",
         "content": "O Adonai",
-        "link": "/liturgy/music/chants/o-adonai/"
+        "link": "/liturgy/music/chants/o-adonai"
       },
       {
         "id": "type",
@@ -261,7 +261,7 @@
       {
         "id": "title",
         "content": "O Clavis David",
-        "link": "/liturgy/music/chants/o-clavis-david/"
+        "link": "/liturgy/music/chants/o-clavis-david"
       },
       {
         "id": "type",
@@ -276,7 +276,7 @@
       {
         "id": "title",
         "content": "O Emmanuel",
-        "link": "/liturgy/music/chants/o-emmanuel/"
+        "link": "/liturgy/music/chants/o-emmanuel"
       },
       {
         "id": "type",
@@ -291,7 +291,7 @@
       {
         "id": "title",
         "content": "O Oriens",
-        "link": "/liturgy/music/chants/o-oriens/"
+        "link": "/liturgy/music/chants/o-oriens"
       },
       {
         "id": "type",
@@ -306,7 +306,7 @@
       {
         "id": "title",
         "content": "O Radix Jesse",
-        "link": "/liturgy/music/chants/o-radix-jesse/"
+        "link": "/liturgy/music/chants/o-radix-jesse"
       },
       {
         "id": "type",
@@ -321,7 +321,7 @@
       {
         "id": "title",
         "content": "O Rex Gentium",
-        "link": "/liturgy/music/chants/o-rex-gentium/"
+        "link": "/liturgy/music/chants/o-rex-gentium"
       },
       {
         "id": "type",
@@ -336,7 +336,7 @@
       {
         "id": "title",
         "content": "O Sapientia",
-        "link": "/liturgy/music/chants/o-sapientia/"
+        "link": "/liturgy/music/chants/o-sapientia"
       },
       {
         "id": "type",
@@ -351,7 +351,7 @@
       {
         "id": "title",
         "content": "Agnus Dei",
-        "link": "/liturgy/music/chants/agnus-dei/"
+        "link": "/liturgy/music/chants/agnus-dei"
       },
       {
         "id": "type",
@@ -366,7 +366,7 @@
       {
         "id": "title",
         "content": "Multitudo Languentium",
-        "link": "/liturgy/music/chants/multitudo-languentium/"
+        "link": "/liturgy/music/chants/multitudo-languentium"
       },
       {
         "id": "type",
@@ -381,7 +381,7 @@
       {
         "id": "title",
         "content": "Victimae Paschali Laudes",
-        "link": "/liturgy/music/chants/victimae-paschali-laudes/"
+        "link": "/liturgy/music/chants/victimae-paschali-laudes"
       },
       {
         "id": "type",
@@ -396,7 +396,7 @@
       {
         "id": "title",
         "content": "Veni Sancte Spiritus",
-        "link": "/liturgy/music/chants/veni-sancte-spiritus/"
+        "link": "/liturgy/music/chants/veni-sancte-spiritus"
       },
       {
         "id": "type",
