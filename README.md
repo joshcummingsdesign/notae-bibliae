@@ -18,7 +18,7 @@ The `sepia` class makes it sepia tone
 
 The `rounded` class gives it rounded corners.
 
-```md
+```js
 <Image
   className="sepia rounded"
   src="/relative-to-public/image.png"
