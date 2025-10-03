@@ -3,11 +3,12 @@ import {
   Table as TableBase,
   TableBody,
   TableCell,
-  TableContainer,
+  TableContainer as TableContainerBase,
   TableHead as TableHeadBase,
   TableRow,
   TableSortLabel,
   Box,
+  styled,
 } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
 import Link from "next/link";
@@ -151,3 +152,9 @@ export const Table: React.FC<Props> = ({ tableTitle, data }) => {
     </TableContainer>
   );
 };
+
+const TableContainer = styled(TableContainerBase)(({ theme }) => ({
+  ".MuiTableCell-root": {
+    ...theme.typography.body1,
+  },
+}));

@@ -543,13 +543,113 @@ export const menuItems: MenuNode[] = [
         priority: 0.7,
         children: [
           {
-            title: "Chant",
-            link: "/liturgy/music/chant",
+            title: "Chants",
+            link: "/liturgy/music/chants",
             priority: 0.6,
             children: [
               {
+                title: "Agnus Dei",
+                link: "/liturgy/music/chants/agnus-dei",
+              },
+              {
                 title: "Alleluia",
-                link: "/liturgy/music/chant/alleluia",
+                link: "/liturgy/music/chants/alleluia",
+              },
+              {
+                title: "Alleluia Confitemini",
+                link: "/liturgy/music/chants/alleluia-confitemini",
+              },
+              {
+                title: "Benedicite",
+                link: "/liturgy/music/chants/benedicite",
+              },
+              {
+                title: "Credo",
+                link: "/liturgy/music/chants/credo",
+              },
+              {
+                title: "Deus in Adjutorium",
+                link: "/liturgy/music/chants/deus-in-adjutorium",
+              },
+              {
+                title: "Domine Labia Mea",
+                link: "/liturgy/music/chants/domine-labia-mea",
+              },
+              {
+                title: "Facta est cum Angelo",
+                link: "/liturgy/music/chants/facta-est-cum-angelo",
+              },
+              {
+                title: "Gloria",
+                link: "/liturgy/music/chants/gloria",
+              },
+              {
+                title: "Gloria Patri",
+                link: "/liturgy/music/chants/gloria-patri",
+              },
+              {
+                title: "Iste pauper",
+                link: "/liturgy/music/chants/iste-pauper",
+              },
+              {
+                title: "Kyrie",
+                link: "/liturgy/music/chants/kyrie",
+              },
+              {
+                title: "Magnificat",
+                link: "/liturgy/music/chants/magnificat",
+              },
+              {
+                title: "Multitudo Languentium",
+                link: "/liturgy/music/chants/multitudo-languentium",
+              },
+              {
+                title: "O Adonai",
+                link: "/liturgy/music/chants/o-adonai",
+              },
+              {
+                title: "O Clavis David",
+                link: "/liturgy/music/chants/o-clavis-david",
+              },
+              {
+                title: "O Emmanuel",
+                link: "/liturgy/music/chants/o-emmanuel",
+              },
+              {
+                title: "O Oriens",
+                link: "/liturgy/music/chants/o-oriens",
+              },
+              {
+                title: "O Radix Jesse",
+                link: "/liturgy/music/chants/o-radix-jesse",
+              },
+              {
+                title: "O Rex Gentium",
+                link: "/liturgy/music/chants/o-rex-gentium",
+              },
+              {
+                title: "O Sapientia",
+                link: "/liturgy/music/chants/o-sapientia",
+              },
+              {
+                title: "Sanctus",
+                link: "/liturgy/music/chants/sanctus",
+              },
+              {
+                title: "Te Decet Laus",
+                link: "/liturgy/music/chants/te-decet-laus",
+              },
+              {
+                title: "Te Deum",
+                link: "/liturgy/music/chants/te-deum",
+              },
+              {
+                title: "Victimae Paschali Laudes",
+                link: "/liturgy/music/chants/victimae-paschali-laudes",
+              },
+              {
+                title: "Veni Sancte Spiritus",
+                link: "/liturgy/music/chants/veni-sancte-spiritus",
               },
             ],
           },
