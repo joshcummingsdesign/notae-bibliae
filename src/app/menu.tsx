@@ -1473,10 +1473,6 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Church+History",
       },
       {
-        title: "Justification by Faith",
-        link: "/meditations?category=Justification+by+Faith",
-      },
-      {
         title: "Liturgy",
         link: "/meditations?category=Liturgy",
       },
