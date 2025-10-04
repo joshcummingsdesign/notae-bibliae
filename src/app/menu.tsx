@@ -731,12 +731,12 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/from-heaven-above-to-earth-i-come",
               },
               {
-                title: "God Rest Ye Merry Gentlemen",
-                link: "/liturgy/music/hymns/god-rest-ye-merry-gentlemen",
-              },
-              {
                 title: "Go, Tell It on the Mountain",
                 link: "/liturgy/music/hymns/go-tell-it-on-the-mountain",
+              },
+              {
+                title: "God Rest Ye Merry Gentlemen",
+                link: "/liturgy/music/hymns/god-rest-ye-merry-gentlemen",
               },
               {
                 title: "Haleluhu",
