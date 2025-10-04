@@ -683,7 +683,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/amazing-grace",
               },
               {
-                title: "Angels From the Realms of Glory",
+                title: "Angels from the Realms of Glory",
                 link: "/liturgy/music/hymns/angels-from-the-realms-of-glory",
               },
               {
@@ -771,20 +771,20 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/in-the-garden",
               },
               {
-                title: "It Is Well With My Soul",
+                title: "It Is Well with My Soul",
                 link: "/liturgy/music/hymns/it-is-well-with-my-soul",
               },
               {
-                title: "Jesus Christ is Risen Today",
+                title: "Jesu, Joy of Man's Desiring",
+                link: "/liturgy/music/hymns/jesu-joy-of-mans-desiring",
+              },
+              {
+                title: "Jesus Christ Is Risen Today",
                 link: "/liturgy/music/hymns/jesus-christ-is-risen-today",
               },
               {
                 title: "Jesus Loves Me",
                 link: "/liturgy/music/hymns/jesus-loves-me",
-              },
-              {
-                title: "Jesu, Joy of Man's Desiring",
-                link: "/liturgy/music/hymns/jesu-joy-of-mans-desiring",
               },
               {
                 title: "Joy to the World",
@@ -795,27 +795,23 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/just-as-i-am",
               },
               {
-                title: "Lift High the Cross",
-                link: "/liturgy/music/hymns/lift-high-the-cross",
-              },
-              {
                 title: "Let There Be Peace On Earth",
                 link: "/liturgy/music/hymns/let-there-be-peace-on-earth",
+              },
+              {
+                title: "Lift High the Cross",
+                link: "/liturgy/music/hymns/lift-high-the-cross",
               },
               {
                 title: "Lord Jesus, Think on Me",
                 link: "/liturgy/music/hymns/lord-jesus-think-on-me",
               },
               {
-                title: "Lord of the Dance",
-                link: "/liturgy/music/hymns/lord-of-the-dance",
-              },
-              {
                 title: "Lord, Who Throughout These Forty Days",
                 link: "/liturgy/music/hymns/lord-who-throughout-these-forty-days",
               },
               {
-                title: "Love Came Down at Christams",
+                title: "Love Came Down at Christmas",
                 link: "/liturgy/music/hymns/love-came-down-at-christmas",
               },
               {
@@ -835,10 +831,6 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/o-come-o-come-emmanuel",
               },
               {
-                title: "O for a Thousand Tongues to Sing",
-                link: "/liturgy/music/hymns/o-for-a-thousand-tongues-to-sing",
-              },
-              {
                 title: "O Holy Night",
                 link: "/liturgy/music/hymns/o-holy-night",
               },
@@ -851,16 +843,20 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/o-little-town-of-bethlehem",
               },
               {
-                title: "Praise God, From Whom All Blessings Flow",
-                link: "/liturgy/music/hymns/praise-god-from-whom-all-blessings-flow",
+                title: "O for a Thousand Tongues to Sing",
+                link: "/liturgy/music/hymns/o-for-a-thousand-tongues-to-sing",
               },
               {
-                title: "Praise My Soul, the King of Heaven",
-                link: "/liturgy/music/hymns/praise-my-soul-the-king-of-heaven",
+                title: "Praise God, from Whom All Blessings Flow",
+                link: "/liturgy/music/hymns/praise-god-from-whom-all-blessings-flow",
               },
               {
                 title: "Praise to the Lord, the Almighty",
                 link: "/liturgy/music/hymns/praise-to-the-lord-the-almighty",
+              },
+              {
+                title: "Praise My Soul, the King of Heaven",
+                link: "/liturgy/music/hymns/praise-my-soul-the-king-of-heaven",
               },
               {
                 title: "Silent Night",
@@ -875,20 +871,20 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/spirit-of-the-living-god",
               },
               {
-                title: "Take Up Thy Cross, The Savior Said",
+                title: "Take up Thy Cross, the Savior Said",
                 link: "/liturgy/music/hymns/take-up-thy-cross-the-savior-said",
               },
               {
-                title: "Tell Me the Stories of Jesus",
-                link: "/liturgy/music/hymns/tell-me-the-stories-of-jesus",
+                title: "The First Noel",
+                link: "/liturgy/music/hymns/the-first-noel",
               },
               {
                 title: "Thine Be the Glory",
                 link: "/liturgy/music/hymns/thine-be-the-glory",
               },
               {
-                title: "There's Something About That Name",
-                link: "/liturgy/music/hymns/theres-something-about-that-name",
+                title: "Unto Us Is Born a Son",
+                link: "/liturgy/music/hymns/unto-us-is-born-a-son",
               },
               {
                 title: "We Three Kings",

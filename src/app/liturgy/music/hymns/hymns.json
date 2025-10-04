@@ -95,7 +95,7 @@
     [
       {
         "id": "title",
-        "content": "Jesus Christ is Risen Today",
+        "content": "Jesus Christ Is Risen Today",
         "link": "/liturgy/music/hymns/jesus-christ-is-risen-today"
       },
       { "id": "occasion", "content": "Easter" },
@@ -177,7 +177,7 @@
     [
       {
         "id": "title",
-        "content": "Praise God, From Whom All Blessings Flow",
+        "content": "Praise God, from Whom All Blessings Flow",
         "link": "/liturgy/music/hymns/praise-god-from-whom-all-blessings-flow"
       },
       { "id": "occasion", "content": "Ordinary Time" },
@@ -351,7 +351,7 @@
     [
       {
         "id": "title",
-        "content": "Angels From the Realms of Glory",
+        "content": "Angels from the Realms of Glory",
         "link": "/liturgy/music/hymns/angels-from-the-realms-of-glory"
       },
       { "id": "occasion", "content": "Advent" },
@@ -379,7 +379,7 @@
     [
       {
         "id": "title",
-        "content": "Take Up Thy Cross, The Savior Said",
+        "content": "Take up Thy Cross, the Savior Said",
         "link": "/liturgy/music/hymns/take-up-thy-cross-the-savior-said"
       },
       { "id": "occasion", "content": "Lent" },
@@ -603,7 +603,7 @@
     [
       {
         "id": "title",
-        "content": "It Is Well With My Soul",
+        "content": "It Is Well with My Soul",
         "link": "/liturgy/music/hymns/it-is-well-with-my-soul"
       },
       { "id": "occasion", "content": "Ordinary Time" },
@@ -663,20 +663,6 @@
         "id": "author",
         "content": "Christina Rossetti",
         "link": "/liturgy/music/composers/christina-rossetti"
-      },
-      { "id": "year", "content": "1885" }
-    ],
-    [
-      {
-        "id": "title",
-        "content": "Tell Me the Stories of Jesus",
-        "link": "/liturgy/music/hymns/tell-me-the-stories-of-jesus"
-      },
-      { "id": "occasion", "content": "Ordinary Time" },
-      {
-        "id": "author",
-        "content": "William H. Parker",
-        "link": "/liturgy/music/composers/william-h-parker"
       },
       { "id": "year", "content": "1885" }
     ],
@@ -795,20 +781,6 @@
     [
       {
         "id": "title",
-        "content": "Lord of the Dance",
-        "link": "/liturgy/music/hymns/lord-of-the-dance"
-      },
-      { "id": "occasion", "content": "Ordinary Time" },
-      {
-        "id": "author",
-        "content": "Sydney Carter",
-        "link": "/liturgy/music/composers/sydney-carter"
-      },
-      { "id": "year", "content": "1963" }
-    ],
-    [
-      {
-        "id": "title",
         "content": "I Want to Walk as a Child of the Light",
         "link": "/liturgy/music/hymns/i-want-to-walk-as-a-child-of-the-light"
       },
@@ -819,20 +791,6 @@
         "link": "/liturgy/music/composers/kathleen-thomerson"
       },
       { "id": "year", "content": "1966" }
-    ],
-    [
-      {
-        "id": "title",
-        "content": "There's Something About That Name",
-        "link": "/liturgy/music/hymns/theres-something-about-that-name"
-      },
-      { "id": "occasion", "content": "Ordinary Time" },
-      {
-        "id": "author",
-        "content": "Gloria Gaither",
-        "link": "/liturgy/music/composers/gloria-gaither"
-      },
-      { "id": "year", "content": "1970" }
     ],
     [
       {
