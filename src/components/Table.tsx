@@ -1,4 +1,8 @@
 "use client";
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import { visuallyHidden } from "@mui/utils";
+import { ExpandMore } from "@mui/icons-material";
 import {
   Table as TableBase,
   TableBody,
@@ -6,13 +10,10 @@ import {
   TableContainer as TableContainerBase,
   TableHead as TableHeadBase,
   TableRow,
-  TableSortLabel,
+  TableSortLabel as TableSortLabelBase,
   Box,
   styled,
 } from "@mui/material";
-import { visuallyHidden } from "@mui/utils";
-import Link from "next/link";
-import { useMemo, useState } from "react";
 
 export interface TableColumn {
   id: string;
@@ -113,6 +114,7 @@ const TableHead: React.FC<TableHeadProps> = ({
               active={orderBy === column.id}
               direction={orderBy === column.id ? order : "asc"}
               onClick={handleSort(column.id as any)}
+              IconComponent={ExpandMore}
             >
               {column.content}
               {orderBy === column.id ? (
@@ -175,5 +177,10 @@ export const Table: React.FC<Props> = ({ tableTitle, data }) => {
 const TableContainer = styled(TableContainerBase)(({ theme }) => ({
   ".MuiTableCell-root": {
     ...theme.typography.body1,
+    borderBottom: `1px solid ${theme.palette.brand.border}`,
   },
 }));
+
+const TableSortLabel = styled(TableSortLabelBase)({
+  fontWeight: "bold",
+});

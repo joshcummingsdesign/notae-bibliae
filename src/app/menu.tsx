@@ -900,6 +900,37 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Songs",
+            link: "/liturgy/music/songs",
+            priority: 0.6,
+            children: [
+              {
+                title: "Good King Wenceslas",
+                link: "/liturgy/music/songs/good-king-wenceslas",
+              },
+              {
+                title: "Handel's Messiah",
+                link: "/liturgy/music/songs/handels-messiah",
+              },
+              {
+                title: "Here We Come A-Wassailing",
+                link: "/liturgy/music/songs/here-we-come-a-wassailing",
+              },
+              {
+                title: "Hey, Ho, Nobody Home",
+                link: "/liturgy/music/songs/hey-ho-nobody-home",
+              },
+              {
+                title: "Souling Song",
+                link: "/liturgy/music/songs/souling-song",
+              },
+              {
+                title: "The Holly and the Ivy",
+                link: "/liturgy/music/songs/the-holly-and-the-ivy",
+              },
+            ],
+          },
         ],
       },
     ],
