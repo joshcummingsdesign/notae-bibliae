@@ -1,6 +1,6 @@
 "use client";
 import LinkBase, { LinkProps } from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useLoading } from "./Providers";
 
 interface Props extends LinkProps {
@@ -8,7 +8,6 @@ interface Props extends LinkProps {
 }
 
 export const Link = ({ onClick, ...props }: Props) => {
-  const router = useRouter();
   const pathname = usePathname();
   const { setIsLoading } = useLoading();
 
@@ -31,13 +30,7 @@ export const Link = ({ onClick, ...props }: Props) => {
     // If user is trying to open in a new tab, bail
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
-    e.preventDefault();
-
     setIsLoading(true);
-
-    requestAnimationFrame(() => {
-      router.push(href);
-    });
   };
 
   if (isExternal) {
