@@ -550,6 +550,10 @@ export const menuItems: MenuNode[] = [
             title: "Sign of the Cross",
             link: "/liturgy/prayers/sign-of-the-cross",
           },
+          {
+            title: "Hail Mary",
+            link: "/liturgy/prayers/hail-mary",
+          },
         ],
       },
       {
