@@ -763,6 +763,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/i-surrender-all",
               },
               {
+                title: "I Want to Walk as a Child of the Light",
+                link: "/liturgy/music/hymns/i-want-to-walk-as-a-child-of-the-light",
+              },
+              {
                 title: "In the Garden",
                 link: "/liturgy/music/hymns/in-the-garden",
               },
