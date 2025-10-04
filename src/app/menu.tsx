@@ -546,6 +546,10 @@ export const menuItems: MenuNode[] = [
             title: "The Lord's Prayer",
             link: "/liturgy/prayers/the-lords-prayer",
           },
+          {
+            title: "Sign of the Cross",
+            link: "/liturgy/prayers/sign-of-the-cross",
+          },
         ],
       },
       {

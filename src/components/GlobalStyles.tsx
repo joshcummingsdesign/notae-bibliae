@@ -82,6 +82,10 @@ export const GlobalStyles = () => (
           },
         },
       },
+      // Fixed width
+      ".fixed-width": {
+        width: "auto",
+      },
       // Sepia tone images
       ".sepia": {
         filter:

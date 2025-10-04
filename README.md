@@ -14,13 +14,15 @@ Stylized h1 with initial letter.
 
 ### Image
 
-The `sepia` class makes it sepia tone
+The `fixed-width` class removes the 100% width.
+
+The `sepia` class makes it sepia tone.
 
 The `rounded` class gives it rounded corners.
 
 ```js
 <Image
-  className="sepia rounded"
+  className="fixed-width sepia rounded"
   src="/relative-to-public/image.png"
   alt="A nice image"
   width="600"
