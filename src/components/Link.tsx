@@ -1,15 +1,18 @@
 "use client";
+import { useTransition } from "react";
 import LinkBase, { LinkProps } from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useLoading } from "./Providers";
-import { usePathname } from "next/navigation";
 
 interface Props extends LinkProps {
   children: React.ReactNode;
 }
 
 export const Link = ({ onClick, ...props }: Props) => {
-  const { setIsLoading } = useLoading();
+  const router = useRouter();
   const pathname = usePathname();
+  const { setIsLoading } = useLoading();
+  const [_, startTransition] = useTransition();
 
   const href = props.href.toString().split("?")[0];
   const isExternal = href.startsWith("http");
@@ -30,7 +33,13 @@ export const Link = ({ onClick, ...props }: Props) => {
     // If user is trying to open in a new tab, bail
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
+    e.preventDefault();
+
     setIsLoading(true);
+
+    startTransition(() => {
+      router.push(href);
+    });
   };
 
   if (isExternal) {
