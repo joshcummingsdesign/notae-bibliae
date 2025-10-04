@@ -60,12 +60,60 @@ export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
 
   const additionalItems: MenuItem[] = [
     {
+      title: "Peter Waldo",
+      link: "/meditations/a-brief-history-of-the-reformation-part-2#peter-waldo",
+    },
+    {
+      title: "John Wycliffe",
+      link: "/meditations/a-brief-history-of-the-reformation-part-2#john-wycliffe",
+    },
+    {
+      title: "Jan Hus",
+      link: "/meditations/a-brief-history-of-the-reformation-part-2#jan-hus",
+    },
+    {
+      title: "Erasmus",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#erasmus",
+    },
+    {
       title: "Martin Luther",
       link: "/meditations/a-brief-history-of-the-reformation-part-3#martin-luther",
     },
     {
+      title: "Ulrich Zwingli",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#ulrich-zwingli",
+    },
+    {
+      title: "William Tyndale",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#william-tyndale",
+    },
+    {
       title: "John Calvin",
       link: "/meditations/a-brief-history-of-the-reformation-part-3#john-calvin",
+    },
+    {
+      title: "Thomas Cranmer",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#the-book-of-common-prayer",
+    },
+    {
+      title: "Jacobus Arminius",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#jacobus-arminius",
+    },
+    {
+      title: "Thomas Helwys",
+      link: "/meditations/a-brief-history-of-the-reformation-part-4#the-baptist-church",
+    },
+    {
+      title: "Roger Williams",
+      link: "/meditations/a-brief-history-of-the-reformation-part-4#roger-williams",
+    },
+    {
+      title: "John Gill",
+      link: "/meditations/a-brief-history-of-the-reformation-part-4#john-gill",
+    },
+    {
+      title: "John Wesley",
+      link: "/meditations/a-brief-history-of-the-reformation-part-4#john-wesley",
     },
   ];
 

@@ -51,7 +51,8 @@ export const Header: React.FC<Props> = ({ posts, onMenuClick }) => {
         posts={posts}
         open={open}
         onChange={(link) => {
-          if (pathname !== link.split("?")[0]) {
+          const linkPathname = link.split("?")[0].split("#")[0];
+          if (pathname !== linkPathname) {
             setIsLoading(true);
           }
           router.push(link);
