@@ -931,6 +931,201 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Composers",
+            link: "/liturgy/music/composers",
+            priority: 0.6,
+            children: [
+              {
+                title: "Anna Bartlett Warner",
+                link: "/liturgy/music/composers/anna-bartlett-warner",
+              },
+              {
+                title: "Charles Austin Miles",
+                link: "/liturgy/music/composers/charles-austin-miles",
+              },
+              {
+                title: "Charles Jennens",
+                link: "/liturgy/music/composers/charles-jennens",
+              },
+              {
+                title: "Charles W. Everest",
+                link: "/liturgy/music/composers/charles-w-everest",
+              },
+              {
+                title: "Charles Wesley",
+                link: "/liturgy/music/composers/charles-wesley",
+              },
+              {
+                title: "Charlotte Elliott",
+                link: "/liturgy/music/composers/charlotte-elliott",
+              },
+              {
+                title: "Christina Rossetti",
+                link: "/liturgy/music/composers/christina-rosetti",
+              },
+              {
+                title: "Claudia Frances Hernaman",
+                link: "/liturgy/music/composers/claudia-frances-hernaman",
+              },
+              {
+                title: "Dan Schutte",
+                link: "/liturgy/music/composers/dan-schutte",
+              },
+              {
+                title: "Daniel Iverson",
+                link: "/liturgy/music/composers/daniel-iverson",
+              },
+              {
+                title: "Edmond Louis Budry",
+                link: "/liturgy/music/composers/edmond-louis-budry",
+              },
+              {
+                title: "Eleanor Farjeon",
+                link: "/liturgy/music/composers/eleanor-farjeon",
+              },
+              {
+                title: "Ernest W. Blandy",
+                link: "/liturgy/music/composers/ernest-w-blandy",
+              },
+              {
+                title: "Fanny Crosby",
+                link: "/liturgy/music/composers/fanny-crosby",
+              },
+              {
+                title: "Folliott Sandford Pierpoint",
+                link: "/liturgy/music/composers/folliott-sandford-pierpoint",
+              },
+              {
+                title: "Frederick Whitfield",
+                link: "/liturgy/music/composers/frederick-whitfield",
+              },
+              {
+                title: "George Frideric Handel",
+                link: "/liturgy/music/composers/george-frideric-handel",
+              },
+              {
+                title: "George Hunt Smyttan",
+                link: "/liturgy/music/composers/george-hunt-smyttan",
+              },
+              {
+                title: "George Kitchin",
+                link: "/liturgy/music/composers/george-kitchin",
+              },
+              {
+                title: "Henry Francis Lyte",
+                link: "/liturgy/music/composers/henry-francis-lyte",
+              },
+              {
+                title: "Horatio Spafford",
+                link: "/liturgy/music/composers/horatio-spafford",
+              },
+              {
+                title: "Isaac Watts",
+                link: "/liturgy/music/composers/isaac-watts",
+              },
+              {
+                title: "James Chadwick",
+                link: "/liturgy/music/composers/james-chadwick",
+              },
+              {
+                title: "James Montgomery",
+                link: "/liturgy/music/composers/james-montgomery",
+              },
+              {
+                title: "Jeanette Threlfall",
+                link: "/liturgy/music/composers/jeanette-threlfall",
+              },
+              {
+                title: "Jill Jackson-Miller",
+                link: "/liturgy/music/composers/jill-jackson-miller",
+              },
+              {
+                title: "Joachim Neander",
+                link: "/liturgy/music/composers/joachim-neander",
+              },
+              {
+                title: "Johann Sebastian Bach's",
+                link: "/liturgy/music/composers/johann-sebastian-bach",
+              },
+              {
+                title: "John Francis Wade",
+                link: "/liturgy/music/composers/john-francis-wade",
+              },
+              {
+                title: "John Henry Hopkins Jr.",
+                link: "/liturgy/music/composers/john-henry-hopkins-jr",
+              },
+              {
+                title: "John Mason Neale",
+                link: "/liturgy/music/composers/john-mason-neale",
+              },
+              {
+                title: "John Newton",
+                link: "/liturgy/music/composers/john-newton",
+              },
+              {
+                title: "Josef Rheinberger",
+                link: "/liturgy/music/composers/josef-rheinberger",
+              },
+              {
+                title: "Joseph M. Scriven",
+                link: "/liturgy/music/composers/joseph-m-scriven",
+              },
+              {
+                title: "Joseph Mohr",
+                link: "/liturgy/music/composers/joseph-mohr",
+              },
+              {
+                title: "Judson W. Van DeVenter",
+                link: "/liturgy/music/composers/judson-w-van-deventer",
+              },
+              {
+                title: "Kathleen Thomerson",
+                link: "/liturgy/music/composers/kathleen-thomerson",
+              },
+              {
+                title: "Katharina von Schlegel",
+                link: "/liturgy/music/composers/katharina-von-schlegel",
+              },
+              {
+                title: "Martin Rinkart",
+                link: "/liturgy/music/composers/martin-rinkart",
+              },
+              {
+                title: "Matthew Bridges",
+                link: "/liturgy/music/composers/matthew-bridges",
+              },
+              {
+                title: "Phillips Brooks",
+                link: "/liturgy/music/composers/phillips-brooks",
+              },
+              {
+                title: "Placide Cappeau",
+                link: "/liturgy/music/composers/placide-cappeau",
+              },
+              {
+                title: "Sy Miller",
+                link: "/liturgy/music/composers/sy-miller",
+              },
+              {
+                title: "Synesius of Cyrene",
+                link: "/liturgy/music/composers/synesius-of-cyrene",
+              },
+              {
+                title: "Thomas Helmore",
+                link: "/liturgy/music/composers/thomas-helmore",
+              },
+              {
+                title: "Thomas Ken",
+                link: "/liturgy/music/composers/thomas-ken",
+              },
+              {
+                title: "Will L. Thompson",
+                link: "/liturgy/music/composers/will-l-thompson",
+              },
+            ],
+          },
         ],
       },
     ],
