@@ -9,7 +9,6 @@ import {
   styled,
   TextField,
   IconButton,
-  ClickAwayListener,
 } from "@mui/material";
 
 interface Props {
@@ -149,24 +148,20 @@ export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
           <Close />
         </CloseButton>
         <ModalContent>
-          <ClickAwayListener onClickAway={() => onClose()}>
-            <Autocomplete<MenuItem>
-              ref={inputRef}
-              disablePortal
-              options={options}
-              onChange={(_, value) => {
-                value && onChange(value.link);
-                onClose();
-              }}
-              getOptionLabel={(option) => option.title}
-              isOptionEqualToValue={(option: any, value: any) =>
-                option.title === value.title
-              }
-              renderInput={(params) => (
-                <SearchInput {...params} label="Search" />
-              )}
-            />
-          </ClickAwayListener>
+          <Autocomplete<MenuItem>
+            ref={inputRef}
+            disablePortal
+            options={options}
+            onChange={(_, value) => {
+              value && onChange(value.link);
+              onClose();
+            }}
+            getOptionLabel={(option) => option.title}
+            isOptionEqualToValue={(option: any, value: any) =>
+              option.title === value.title
+            }
+            renderInput={(params) => <SearchInput {...params} label="Search" />}
+          />
         </ModalContent>
       </div>
     </Modal>
