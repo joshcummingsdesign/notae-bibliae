@@ -1,12 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  useTransition,
-} from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export interface LoadingCtx {
   isLoading: boolean;
@@ -24,7 +18,6 @@ const LoadingContext = createContext<LoadingCtx>({
 
 export const LoadingProvider: React.FC<Props> = ({ children }) => {
   const pathname = usePathname();
-  const [isPending] = useTransition();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -32,9 +25,7 @@ export const LoadingProvider: React.FC<Props> = ({ children }) => {
   }, [pathname]);
 
   return (
-    <LoadingContext.Provider
-      value={{ isLoading: isLoading || isPending, setIsLoading }}
-    >
+    <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
       {children}
     </LoadingContext.Provider>
   );

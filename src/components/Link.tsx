@@ -1,5 +1,4 @@
 "use client";
-import { useTransition } from "react";
 import LinkBase, { LinkProps } from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useLoading } from "./Providers";
@@ -12,7 +11,6 @@ export const Link = ({ onClick, ...props }: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   const { setIsLoading } = useLoading();
-  const [_, startTransition] = useTransition();
 
   const href = props.href.toString().split("?")[0];
   const isExternal = href.startsWith("http");
@@ -37,7 +35,7 @@ export const Link = ({ onClick, ...props }: Props) => {
 
     setIsLoading(true);
 
-    startTransition(() => {
+    requestAnimationFrame(() => {
       router.push(href);
     });
   };
