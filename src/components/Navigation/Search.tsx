@@ -200,7 +200,7 @@ const ModalContent = styled("div")({
   width: "100%",
   maxWidth: 550,
   textAlign: "center",
-  padding: "20px",
+  padding: "48px 20px 20px",
   outline: "none",
 });
 
@@ -226,7 +226,7 @@ const SearchInput = styled(TextField)(({ theme }) => ({
 const CloseButton = styled(IconButton)(({ theme }) => ({
   position: "absolute",
   zIndex: 1,
-  top: "12px",
+  top: "6px",
   right: "12px",
   color: theme.palette.brand.black,
 }));
