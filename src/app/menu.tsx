@@ -543,16 +543,24 @@ export const menuItems: MenuNode[] = [
         priority: 0.7,
         children: [
           {
-            title: "The Lord's Prayer",
-            link: "/liturgy/prayers/the-lords-prayer",
-          },
-          {
             title: "Sign of the Cross",
             link: "/liturgy/prayers/sign-of-the-cross",
           },
           {
+            title: "Our Father",
+            link: "/liturgy/prayers/our-father",
+          },
+          {
+            title: "Glory Be",
+            link: "/liturgy/prayers/glory-be",
+          },
+          {
             title: "Hail Mary",
             link: "/liturgy/prayers/hail-mary",
+          },
+          {
+            title: "Rosary",
+            link: "/liturgy/prayers/rosary",
           },
         ],
       },
