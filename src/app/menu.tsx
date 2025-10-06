@@ -546,6 +546,26 @@ export const menuItems: MenuNode[] = [
             title: "Apostles' Creed",
             link: "/liturgy/creeds/apostles-creed",
           },
+          {
+            title: "Nicene Creed",
+            link: "/liturgy/creeds/nicene-creed",
+          },
+          {
+            title: "Niceno-Constantinopolitan Creed",
+            link: "/liturgy/creeds/niceno-constantinopolitan-creed",
+          },
+          {
+            title: "Chalcedonian Creed",
+            link: "/liturgy/creeds/chalcedonian-creed",
+          },
+          {
+            title: "Nicene Creed with Filioque",
+            link: "/liturgy/creeds/nicene-creed-with-filioque",
+          },
+          {
+            title: "Athanasian Creed",
+            link: "/liturgy/creeds/athanasian-creed",
+          },
         ],
       },
       {

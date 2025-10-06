@@ -66,10 +66,6 @@ export const Poetry: React.FC<Props> = ({ children }) => {
 const Wrapper = styled("pre")(({ theme }) => ({
   fontFamily: "inherit",
 
-  sup: {
-    position: "absolute",
-  },
-
   ".symbol": {
     color: theme.palette.brand.red,
   },
