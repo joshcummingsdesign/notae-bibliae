@@ -555,8 +555,20 @@ export const menuItems: MenuNode[] = [
             link: "/liturgy/prayers/glory-be",
           },
           {
+            title: "Jesus Prayer",
+            link: "/liturgy/prayers/jesus-prayer",
+          },
+          {
             title: "Hail Mary",
             link: "/liturgy/prayers/hail-mary",
+          },
+          {
+            title: "Hail Holy Queen",
+            link: "/liturgy/prayers/hail-holy-queen",
+          },
+          {
+            title: "O My Jesus",
+            link: "/liturgy/prayers/o-my-jesus",
           },
           {
             title: "Rosary",
