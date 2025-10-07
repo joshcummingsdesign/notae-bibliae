@@ -538,6 +538,11 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
+        title: "Liturgical Calendar",
+        link: "/liturgy/liturgical-calendar",
+        priority: 0.7,
+      },
+      {
         title: "Creeds",
         link: "/liturgy/creeds",
         priority: 0.7,
