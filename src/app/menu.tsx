@@ -543,6 +543,91 @@ export const menuItems: MenuNode[] = [
         priority: 0.7,
       },
       {
+        title: "Seasons",
+        link: "/liturgy/seasons",
+        priority: 0.7,
+        children: [
+          {
+            title: "Advent",
+            link: "/liturgy/seasons/advent",
+            priority: 0.6,
+          },
+          {
+            title: "Chirstmastide",
+            link: "/liturgy/seasons/christmastide",
+            priority: 0.6,
+            children: [
+              {
+                title: "Christmas",
+                link: "/liturgy/seasons/christmastide/christmas",
+              },
+              {
+                title: "The Holy Innocents",
+                link: "/liturgy/seasons/christmastide/the-holy-innocents",
+              },
+              {
+                title: "Circumcision of the Lord",
+                link: "/liturgy/seasons/christmastide/circumcision-of-the-lord",
+              },
+            ],
+          },
+          {
+            title: "Epiphanytide",
+            link: "/liturgy/seasons/epiphanytide",
+            priority: 0.6,
+            children: [
+              {
+                title: "Epiphany",
+                link: "/liturgy/seasons/epiphanytide/epiphany",
+              },
+              {
+                title: "Baptism of the Lord",
+                link: "/liturgy/seasons/epiphanytide/baptism-of-the-lord",
+              },
+              {
+                title: "Presentation of the Lord",
+                link: "/liturgy/seasons/epiphanytide/presentation-of-the-lord",
+              },
+            ],
+          },
+          {
+            title: "Lent",
+            link: "/liturgy/seasons/lent",
+            priority: 0.6,
+          },
+          {
+            title: "Passiontide",
+            link: "/liturgy/seasons/passiontide",
+            priority: 0.6,
+          },
+          {
+            title: "Eastertide",
+            link: "/liturgy/seasons/eastertide",
+            priority: 0.6,
+          },
+          {
+            title: "Ascensiontide",
+            link: "/liturgy/seasons/ascensiontide",
+            priority: 0.6,
+          },
+          {
+            title: "Whitsuntide",
+            link: "/liturgy/seasons/whitsuntide",
+            priority: 0.6,
+          },
+          {
+            title: "Ordinary Time",
+            link: "/liturgy/seasons/ordinary-time",
+            priority: 0.6,
+          },
+          {
+            title: "Allhallowtide",
+            link: "/liturgy/seasons/allhallowtide",
+            priority: 0.6,
+          },
+        ],
+      },
+      {
         title: "Creeds",
         link: "/liturgy/creeds",
         priority: 0.7,
