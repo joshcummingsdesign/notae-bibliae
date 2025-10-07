@@ -1196,6 +1196,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/composers/claudia-frances-hernaman",
               },
               {
+                title: "Dallán Forgaill",
+                link: "/liturgy/music/composers/dallan-forgaill",
+              },
+              {
                 title: "Dan Schutte",
                 link: "/liturgy/music/composers/dan-schutte",
               },
@@ -1380,6 +1384,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Michael",
                 link: "/people/saints/angels/michael",
+              },
+              {
+                title: "Raphael",
+                link: "/people/saints/angels/raphael",
               },
             ],
           },
@@ -1696,6 +1704,10 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Catherine of Alexandria",
+                link: "/people/saints/early/catherine-of-alexandria",
+              },
+              {
                 title: "Christopher of Lycia",
                 link: "/people/saints/early/christopher-of-lycia",
               },
@@ -1710,6 +1722,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "John Cassian",
                 link: "/people/saints/early/john-cassian",
+              },
+              {
+                title: "Martin of Tours",
+                link: "/people/saints/early/martin-of-tours",
               },
               {
                 title: "Nicholas of Myra",
@@ -1747,8 +1763,12 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/bonaventure-of-bagnoregio",
               },
               {
-                title: "Dominic of Osma",
-                link: "/people/saints/medieval/dominic-of-osma",
+                title: "Dominic of Guzmán",
+                link: "/people/saints/medieval/dominic-of-guzman",
+              },
+              {
+                title: "Dunstan of Canterbury",
+                link: "/people/saints/medieval/dunstan-of-canterbury",
               },
               {
                 title: "Francis of Assisi",

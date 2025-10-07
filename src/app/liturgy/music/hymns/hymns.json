@@ -65,7 +65,11 @@
         "link": "/liturgy/music/hymns/be-thou-my-vision"
       },
       { "id": "occasion", "content": "Ordinary Time" },
-      { "id": "author", "content": "St. Dallán Forgaill" },
+      {
+        "id": "author",
+        "content": "St. Dallán Forgaill",
+        "link": "/liturgy/music/composers/dallan-forgaill"
+      },
       { "id": "year", "content": "6th Century" }
     ],
     [
