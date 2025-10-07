@@ -599,6 +599,36 @@ export const menuItems: MenuNode[] = [
             title: "Passiontide",
             link: "/liturgy/seasons/passiontide",
             priority: 0.6,
+            children: [
+              {
+                title: "Palm Sunday",
+                link: "/liturgy/seasons/passiontide/palm-sunday",
+              },
+              {
+                title: "Holy Monday",
+                link: "/liturgy/seasons/passiontide/holy-monday",
+              },
+              {
+                title: "Holy Tuesday",
+                link: "/liturgy/seasons/passiontide/holy-tuesday",
+              },
+              {
+                title: "Spy Wednesday",
+                link: "/liturgy/seasons/passiontide/spy-wednesday",
+              },
+              {
+                title: "Maundy Thursday",
+                link: "/liturgy/seasons/passiontide/maundy-thursday",
+              },
+              {
+                title: "Good Friday",
+                link: "/liturgy/seasons/passiontide/good-friday",
+              },
+              {
+                title: "Holy Saturday",
+                link: "/liturgy/seasons/passiontide/holy-saturday",
+              },
+            ],
           },
           {
             title: "Eastertide",
