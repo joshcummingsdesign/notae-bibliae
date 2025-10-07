@@ -634,26 +634,55 @@ export const menuItems: MenuNode[] = [
             title: "Eastertide",
             link: "/liturgy/seasons/eastertide",
             priority: 0.6,
-          },
-          {
-            title: "Ascensiontide",
-            link: "/liturgy/seasons/ascensiontide",
-            priority: 0.6,
-          },
-          {
-            title: "Whitsuntide",
-            link: "/liturgy/seasons/whitsuntide",
-            priority: 0.6,
+            children: [
+              {
+                title: "Easter Vigil",
+                link: "/liturgy/seasons/eastertide/easter-vigil",
+              },
+              {
+                title: "Easter",
+                link: "/liturgy/seasons/eastertide/easter",
+              },
+              {
+                title: "Second Sunday of Easter",
+                link: "/liturgy/seasons/eastertide/second-sunday-of-easter",
+              },
+              {
+                title: "Annunciation",
+                link: "/liturgy/seasons/eastertide/annunciation",
+              },
+              {
+                title: "Ascension Day",
+                link: "/liturgy/seasons/eastertide/ascension-day",
+              },
+              {
+                title: "Pentecost",
+                link: "/liturgy/seasons/eastertide/pentecost",
+              },
+            ],
           },
           {
             title: "Ordinary Time",
             link: "/liturgy/seasons/ordinary-time",
             priority: 0.6,
-          },
-          {
-            title: "Allhallowtide",
-            link: "/liturgy/seasons/allhallowtide",
-            priority: 0.6,
+            children: [
+              {
+                title: "Trinity Sunday",
+                link: "/liturgy/seasons/ordinary-time/trinity-sunday",
+              },
+              {
+                title: "Transfiguration",
+                link: "/liturgy/seasons/ordinary-time/transfiguration",
+              },
+              {
+                title: "Holy Cross Day",
+                link: "/liturgy/seasons/ordinary-time/holy-cross-day",
+              },
+              {
+                title: "Allhallowtide",
+                link: "/liturgy/seasons/ordinary-time/allhallowtide",
+              },
+            ],
           },
         ],
       },
