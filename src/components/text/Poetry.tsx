@@ -16,6 +16,7 @@ const symbols = {
   "*": '<span class="symbol star"></span>',
   "+": '<span class="symbol cross"></span>',
   ˇ: '<span class="symbol caret"></span>',
+  "¯": '<span class="symbol line"></span>',
   "%": '<span class="symbol dagger"></span>',
 };
 
@@ -137,6 +138,17 @@ const Wrapper = styled("pre")(({ theme }) => ({
 
     "&:before": {
       content: "'ˇ'",
+      position: "absolute",
+      fontSize: "1.75rem",
+      top: "-16px",
+    },
+  },
+
+  ".line": {
+    position: "relative",
+
+    "&:before": {
+      content: "'¯'",
       position: "absolute",
       fontSize: "1.75rem",
       top: "-16px",
