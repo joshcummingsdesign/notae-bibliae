@@ -766,6 +766,18 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
+        title: "Rites",
+        link: "/liturgy/rites",
+        priority: 0.7,
+        children: [
+          {
+            title: "Mass: Roman Rite",
+            link: "/liturgy/rites/mass-roman-rite",
+            inPageNav: true,
+          },
+        ],
+      },
+      {
         title: "Music",
         link: "/liturgy/music",
         priority: 0.7,
