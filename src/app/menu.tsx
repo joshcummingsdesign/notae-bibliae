@@ -775,6 +775,11 @@ export const menuItems: MenuNode[] = [
             link: "/liturgy/rites/mass-roman-rite",
             inPageNav: true,
           },
+          {
+            title: "Liturgy of the Hours: Benedictine",
+            link: "/liturgy/rites/liturgy-of-the-hours-benedictine",
+            inPageNav: true,
+          },
         ],
       },
       {
