@@ -541,6 +541,7 @@ export const menuItems: MenuNode[] = [
         title: "Liturgical Calendar",
         link: "/liturgy/liturgical-calendar",
         priority: 0.7,
+        inPageNav: true,
       },
       {
         title: "Seasons",
