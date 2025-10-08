@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { Close } from "@mui/icons-material";
 import { menuItems, MenuNode } from "@/app/menu";
 import { Post } from "@/app/meditations/actions";
+import { Terms } from "@/app/glossary/liturgical-terms/actions";
 import {
   Modal as ModalBase,
   Autocomplete,
@@ -13,6 +14,7 @@ import {
 
 interface Props {
   posts: Post[];
+  terms: Terms[];
   open: boolean;
   onChange: (link: string) => void;
   onClose: () => void;
@@ -49,7 +51,13 @@ const flattenMenu = (nodes: MenuNode[]): MenuItem[] => {
   return result;
 };
 
-export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
+export const Search: React.FC<Props> = ({
+  posts,
+  terms,
+  open,
+  onChange,
+  onClose,
+}) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const postItems: MenuItem[] = posts.map((post) => ({
@@ -116,7 +124,12 @@ export const Search: React.FC<Props> = ({ posts, open, onChange, onClose }) => {
     },
   ];
 
-  const options = [...postItems, ...additionalItems, ...flattenMenu(menuItems)]
+  const options = [
+    ...postItems,
+    ...terms,
+    ...additionalItems,
+    ...flattenMenu(menuItems),
+  ]
     .map((item) => ({
       ...item,
       title: item.title.replace(

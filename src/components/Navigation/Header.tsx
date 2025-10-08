@@ -6,15 +6,17 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLoading } from "../Providers";
 import { Post } from "@/app/meditations/actions";
+import { Terms } from "@/app/glossary/liturgical-terms/actions";
 
 interface Props {
   posts: Post[];
+  terms: Terms[];
   onMenuClick: () => void;
 }
 
 export const HEADER_HEIGHT = 52;
 
-export const Header: React.FC<Props> = ({ posts, onMenuClick }) => {
+export const Header: React.FC<Props> = ({ posts, terms, onMenuClick }) => {
   const router = useRouter();
   const pathname = usePathname();
   const { setIsLoading } = useLoading();
@@ -49,6 +51,7 @@ export const Header: React.FC<Props> = ({ posts, onMenuClick }) => {
       </SearchButton>
       <Search
         posts={posts}
+        terms={terms}
         open={open}
         onChange={(link) => {
           const linkPathname = link.split("?")[0].split("#")[0];

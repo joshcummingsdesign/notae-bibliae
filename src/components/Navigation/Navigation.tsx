@@ -7,12 +7,14 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { MainMenu } from "./MainMenu";
 import { InPageNav } from "./InPageNav";
 import { Post } from "@/app/meditations/actions";
+import { Terms } from "@/app/glossary/liturgical-terms/actions";
 
 interface Props {
   posts: Post[];
+  terms: Terms[];
 }
 
-export const Navigation: React.FC<Props> = ({ posts }) => {
+export const Navigation: React.FC<Props> = ({ posts, terms }) => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const pathname = usePathname();
@@ -39,7 +41,7 @@ export const Navigation: React.FC<Props> = ({ posts }) => {
 
   return (
     <>
-      <Header posts={posts} onMenuClick={toggleSidebar(true)} />
+      <Header posts={posts} terms={terms} onMenuClick={toggleSidebar(true)} />
       <Sidebar open={sidebarOpen} onClose={toggleSidebar(false)}>
         <InPageNav
           style={{ display: inPageNavOpen ? "block" : "none" }}
