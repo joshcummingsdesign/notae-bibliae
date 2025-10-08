@@ -780,6 +780,11 @@ export const menuItems: MenuNode[] = [
             link: "/liturgy/rites/liturgy-of-the-hours-benedictine",
             inPageNav: true,
           },
+          {
+            title: "Chant Rubric: Sarum Rite",
+            link: "/liturgy/rites/chant-rubric-sarum-rite",
+            inPageNav: true,
+          },
         ],
       },
       {
