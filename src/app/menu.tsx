@@ -806,7 +806,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/alleluia",
               },
               {
-                title: "Alleluia Confitemini",
+                title: "Alleluia confitemini",
                 link: "/liturgy/music/chants/alleluia-confitemini",
               },
               {
