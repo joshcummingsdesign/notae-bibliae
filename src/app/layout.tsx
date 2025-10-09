@@ -41,7 +41,6 @@ const ebGaramond = EB_Garamond({
 export const metadata: Metadata = {
   title: "Notae Bibliae",
   description: "A collection of biblical, liturgical, and historical notes.",
-  robots: "noindex, nofollow",
 };
 
 export const viewport: Viewport = {

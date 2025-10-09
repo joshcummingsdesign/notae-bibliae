@@ -245,6 +245,36 @@
     [
       {
         "id": "title",
+        "content": "Benedictus",
+        "link": "/liturgy/music/chants/benedictus"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Ordinary Time – Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Nunc Dimittis",
+        "link": "/liturgy/music/chants/nunc-dimittis"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Ordinary Time – Compline"
+      }
+    ],
+    [
+      {
+        "id": "title",
         "content": "O Adonai",
         "link": "/liturgy/music/chants/o-adonai"
       },
@@ -375,6 +405,21 @@
       {
         "id": "occasion",
         "content": "Ordinary Time"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Salva nos Domine",
+        "link": "/liturgy/music/chants/salva-nos-domine"
+      },
+      {
+        "id": "type",
+        "content": "Antiphon"
+      },
+      {
+        "id": "occasion",
+        "content": "Easter"
       }
     ],
     [

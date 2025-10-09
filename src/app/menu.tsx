@@ -814,6 +814,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/benedicite",
               },
               {
+                title: "Benedictus",
+                link: "/liturgy/music/chants/benedictus",
+              },
+              {
                 title: "Credo",
                 link: "/liturgy/music/chants/credo",
               },
@@ -854,6 +858,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/multitudo-languentium",
               },
               {
+                title: "Nunc Dimittis",
+                link: "/liturgy/music/chants/nunc-dimittis",
+              },
+              {
                 title: "O Adonai",
                 link: "/liturgy/music/chants/o-adonai",
               },
@@ -876,6 +884,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "O Rex Gentium",
                 link: "/liturgy/music/chants/o-rex-gentium",
+              },
+              {
+                title: "Salva nos Domine",
+                link: "/liturgy/music/chants/salva-nos-domine",
               },
               {
                 title: "O Sapientia",
