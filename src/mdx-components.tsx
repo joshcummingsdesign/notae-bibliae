@@ -1,4 +1,5 @@
 import type { MDXComponents } from "mdx/types";
+import { Suspense } from "react";
 import Image from "next/image";
 import { Link } from "@/components/Link";
 import { Definition } from "@/components/Definition";
@@ -15,7 +16,11 @@ const components: MDXComponents = {
   Image,
   Initial,
   Mermaid,
-  Poetry,
+  Poetry: (props) => (
+    <Suspense>
+      <Poetry {...props} />
+    </Suspense>
+  ),
   Red,
   Table,
 };

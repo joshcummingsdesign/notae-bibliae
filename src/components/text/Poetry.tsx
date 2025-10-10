@@ -25,6 +25,9 @@ const replaceSymbols = (text: string) => {
   Object.entries(symbols).forEach(([key, value]) => {
     newText = newText.replaceAll(key, value);
   });
+  if (newText.includes("\\b ")) {
+    newText = newText.replaceAll(/\\b (.*)/g, "<strong>$1</strong>");
+  }
   return newText;
 };
 
@@ -43,6 +46,8 @@ const replaceSymbols = (text: string) => {
 export const Poetry: React.FC<Props> = ({ children }) => {
   let content = { ...(children as any) };
 
+  if (!content.props?.children) return null;
+
   if (typeof content.props.children === "string") {
     content = {
       ...content,
@@ -50,10 +55,14 @@ export const Poetry: React.FC<Props> = ({ children }) => {
     };
   }
 
-  const text = content.props.children.map((child: any) => {
+  const text = content.props.children.map((child: any, i: number) => {
     if (typeof child === "string") {
-      return parse(
-        replaceSymbols(child.replaceAll("|  ", "").replaceAll("|", ""))
+      return (
+        <React.Fragment key={i}>
+          {parse(
+            replaceSymbols(child.replaceAll("|  ", "").replaceAll("|", ""))
+          )}
+        </React.Fragment>
       );
     }
     return child;
@@ -66,6 +75,10 @@ export const Poetry: React.FC<Props> = ({ children }) => {
 
 const Wrapper = styled("pre")(({ theme }) => ({
   fontFamily: "inherit",
+
+  "strong span": {
+    fontWeight: "normal !important",
+  },
 
   ".symbol": {
     color: theme.palette.brand.red,

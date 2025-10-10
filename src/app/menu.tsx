@@ -822,11 +822,11 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/credo",
               },
               {
-                title: "Deus in Adjutorium",
+                title: "Deus in adjutorium",
                 link: "/liturgy/music/chants/deus-in-adjutorium",
               },
               {
-                title: "Domine Labia Mea",
+                title: "Domine labia mea",
                 link: "/liturgy/music/chants/domine-labia-mea",
               },
               {

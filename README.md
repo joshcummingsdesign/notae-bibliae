@@ -58,6 +58,7 @@ Poetry with indentation and symbols.
 **Symbols**
 
 ```
+\b = bold text
 \A = Ant.
 \V = ℣
 \R = ℟
