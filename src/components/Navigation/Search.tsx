@@ -67,6 +67,10 @@ export const Search: React.FC<Props> = ({
 
   const additionalItems: MenuItem[] = [
     {
+      title: "Deus in adjutorium",
+      link: "/liturgy/music/chants/domine-labia-mea",
+    },
+    {
       title: "Peter Waldo",
       link: "/meditations/a-brief-history-of-the-reformation-part-2#peter-waldo",
     },
