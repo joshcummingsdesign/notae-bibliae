@@ -12,6 +12,7 @@ const symbols = {
   "\\A": '<span class="symbol a">Ant.</span>',
   "\\V": '<span class="symbol v"></span>',
   "\\R": '<span class="symbol r"></span>',
+  "\\B": '<span class="brackets">[<span class="symbol bow">Bow</span>]</span>',
   _: '<span class="symbol dot"></span>',
   "*": '<span class="symbol star"></span>',
   "+": '<span class="symbol cross"></span>',
@@ -82,6 +83,15 @@ const Wrapper = styled("pre")(({ theme }) => ({
 
   ".symbol": {
     color: theme.palette.brand.red,
+  },
+
+  ".brackets": {
+    fontSize: "0.9375rem",
+  },
+
+  ".bow": {
+    color: theme.palette.brand.black,
+    fontStyle: "italic",
   },
 
   ".a": {
