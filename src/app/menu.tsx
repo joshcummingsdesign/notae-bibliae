@@ -850,7 +850,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/magnificat",
               },
               {
-                title: "Multitudo Languentium",
+                title: "Multitudo languentium",
                 link: "/liturgy/music/chants/multitudo-languentium",
               },
               {
