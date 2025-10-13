@@ -13,6 +13,7 @@ const symbols = {
   "\\V": '<span class="symbol v"></span>',
   "\\R": '<span class="symbol r"></span>',
   "\\B": '<span class="brackets">[<span class="symbol bow">Bow</span>]</span>',
+  "\\U": '<span class="brackets">[<span class="symbol bow">Rise</span>]</span>',
   _: '<span class="symbol dot"></span>',
   "*": '<span class="symbol star"></span>',
   "+": '<span class="symbol cross"></span>',
