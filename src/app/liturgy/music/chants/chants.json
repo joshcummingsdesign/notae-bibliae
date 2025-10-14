@@ -451,6 +451,21 @@
         "id": "occasion",
         "content": "Pentecost"
       }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Venite",
+        "link": "/liturgy/music/chants/venite"
+      },
+      {
+        "id": "type",
+        "content": "Invitatory"
+      },
+      {
+        "id": "occasion",
+        "content": "Matins"
+      }
     ]
   ]
 }

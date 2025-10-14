@@ -10,10 +10,13 @@ interface Props {
 
 const symbols = {
   "\\A": '<span class="symbol a">Ant.</span>',
+  "\\a": '<span class="symbol bow">Antiphon.</span>',
   "\\V": '<span class="symbol v"></span>',
   "\\R": '<span class="symbol r"></span>',
   "\\B":
     '<span class="brackets">[ <span class="symbol bow">Bow</span> ]</span>',
+  "\\G":
+    '<span class="brackets">[ <span class="symbol bow">Genuflect</span> ]</span>',
   "\\U":
     '<span class="brackets">[ <span class="symbol bow">Rise</span> ]</span>',
   _: '<span class="symbol dot"></span>',
@@ -103,6 +106,7 @@ const Wrapper = styled("pre")(({ theme }) => ({
   ".bow": {
     color: theme.palette.brand.black,
     fontStyle: "italic",
+    fontSize: "0.9375rem",
   },
 
   ".a": {

@@ -63,6 +63,7 @@ Poetry with indentation and symbols.
 \V = ℣
 \R = ℟
 \B = [Bow]
+\G = [Genuflect]
 \U = [Rise]
 _ = ·
 * = *
