@@ -179,7 +179,7 @@
       },
       {
         "id": "occasion",
-        "content": "Ordinary Time – Matins"
+        "content": "Matins – Lord's Days"
       }
     ],
     [
@@ -194,7 +194,7 @@
       },
       {
         "id": "occasion",
-        "content": "Ordinary Time – Matins"
+        "content": "Matins – Lord's Days"
       }
     ],
     [
@@ -254,7 +254,7 @@
       },
       {
         "id": "occasion",
-        "content": "Ordinary Time – Compline"
+        "content": "Compline"
       }
     ],
     [
@@ -404,13 +404,13 @@
       },
       {
         "id": "occasion",
-        "content": "Ordinary Time – Compline"
+        "content": "Compline"
       }
     ],
     [
       {
         "id": "title",
-        "content": "Victimae Paschali Laudes",
+        "content": "Victimae paschali laudes",
         "link": "/liturgy/music/chants/victimae-paschali-laudes"
       },
       {

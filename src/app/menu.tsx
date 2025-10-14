@@ -906,7 +906,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/veni-sancte-spiritus",
               },
               {
-                title: "Victimae Paschali Laudes",
+                title: "Victimae paschali laudes",
                 link: "/liturgy/music/chants/victimae-paschali-laudes",
               },
             ],
