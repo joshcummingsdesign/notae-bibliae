@@ -27,9 +27,8 @@ const replaceSymbols = (text: string) => {
   Object.entries(symbols).forEach(([key, value]) => {
     newText = newText.replaceAll(key, value);
   });
-  if (newText.includes("\\b ")) {
-    newText = newText.replaceAll(/\\b (.*)/g, "<strong>$1</strong>");
-  }
+  newText = newText.replaceAll(/\\b (.*)/g, "<strong>$1</strong>");
+  newText = newText.replaceAll(/(\d+\.)/g, '<span class="red">$1</span>');
   return newText;
 };
 
@@ -79,7 +78,15 @@ const Wrapper = styled("pre")(({ theme }) => ({
   fontFamily: "inherit",
 
   "strong span": {
-    fontWeight: "normal !important",
+    fontWeight: `${theme.typography.fontWeightRegular} !important`,
+  },
+
+  "strong .red": {
+    fontWeight: `${theme.typography.fontWeightBold} !important`,
+  },
+
+  ".red": {
+    color: theme.palette.brand.red,
   },
 
   ".symbol": {
