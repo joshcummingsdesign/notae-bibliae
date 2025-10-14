@@ -810,6 +810,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/alleluia-confitemini",
               },
               {
+                title: "Benedicamus",
+                link: "/liturgy/music/chants/benedicamus",
+              },
+              {
                 title: "Benedicite",
                 link: "/liturgy/music/chants/benedicite",
               },

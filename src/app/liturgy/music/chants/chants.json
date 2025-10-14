@@ -466,6 +466,21 @@
         "id": "occasion",
         "content": "Matins"
       }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Benedicamus",
+        "link": "/liturgy/music/chants/benedicamus"
+      },
+      {
+        "id": "type",
+        "content": "Versicle"
+      },
+      {
+        "id": "occasion",
+        "content": "Divine Office"
+      }
     ]
   ]
 }
