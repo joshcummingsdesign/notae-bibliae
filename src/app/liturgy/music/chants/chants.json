@@ -119,7 +119,7 @@
       },
       {
         "id": "occasion",
-        "content": "Ordinary Time"
+        "content": "Ordinary"
       }
     ],
     [
@@ -245,7 +245,7 @@
     [
       {
         "id": "title",
-        "content": "Nunc Dimittis",
+        "content": "Nunc dimittis",
         "link": "/liturgy/music/chants/nunc-dimittis"
       },
       {
@@ -335,7 +335,7 @@
     [
       {
         "id": "title",
-        "content": "O Rex Gentium",
+        "content": "O Rex gentium",
         "link": "/liturgy/music/chants/o-rex-gentium"
       },
       {
@@ -404,7 +404,7 @@
       },
       {
         "id": "occasion",
-        "content": "Easter"
+        "content": "Ordinary Time – Compline"
       }
     ],
     [
