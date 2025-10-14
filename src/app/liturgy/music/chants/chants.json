@@ -65,6 +65,21 @@
     [
       {
         "id": "title",
+        "content": "Deus in adjutorium",
+        "link": "/liturgy/music/chants/deus-in-adjutorium"
+      },
+      {
+        "id": "type",
+        "content": "Versicle"
+      },
+      {
+        "id": "occasion",
+        "content": "Divine Office"
+      }
+    ],
+    [
+      {
+        "id": "title",
         "content": "Facta est cum Angelo",
         "link": "/liturgy/music/chants/facta-est-cum-angelo"
       },
