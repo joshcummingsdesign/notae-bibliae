@@ -58,12 +58,16 @@ const descendingComparator = (
   let aContent: string | number = aCell?.content ?? "";
   if (aCell && aCell.id === "year") {
     aContent = formatYear(aCell.content);
+  } else if (typeof aContent === "string") {
+    aContent = aContent.toLowerCase();
   }
 
   const bCell = b.find((cell) => cell.id === orderBy);
   let bContent: string | number = bCell?.content ?? "";
   if (bCell && bCell.id === "year") {
     bContent = formatYear(bCell.content);
+  } else if (typeof bContent === "string") {
+    bContent = bContent.toLowerCase();
   }
 
   if (bContent < aContent) {

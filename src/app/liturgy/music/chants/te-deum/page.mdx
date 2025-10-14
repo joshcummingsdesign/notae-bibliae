@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 export const metadata = {
   title: "Te Deum — Notae Bibliae",
   description: "Notes on Gregorian chants: Te Deum.",
@@ -6,94 +8,205 @@ export const metadata = {
 <Initial text="Te Deum" />
 
 ## History
+A hymn dating back to at least the 6th century, when it was prescribed for use at [Matins](/glossary/liturgical-terms#matins) in the [*Rule of Saint Benedict*](/people/saints/medieval/benedict-of-nursia). It is traditionally ascribed to [St. Ambrose](/people/saints/latin-fathers/ambrose-of-milan), though it was most likely not written by him. Nevertheless, it is sometimes called the “Ambrosian Hymn.”[^1]
 
-Also called the "Ambrosian Hymn". A 4th-century hymn which was not likely written by [St. Ambrose](/people/saints/latin-fathers/ambrose-of-milan) himself, but was included in the *Ambrosian Hymnal*. In the 6th century it was prescribed for use at [Matins](/glossary/liturgical-terms#matins) in the [*Rule of Saint Benedict*](/people/saints/medieval/benedict-of-nursia).
+## Settings
+
+### Solemn Tone — *Liber Usualis* [^2]
+
+<Image
+  src="/chants/te-deum-1.svg"
+  alt="Te Deum Page 1"
+  width="600"
+  height="951"
+/>
+
+<Image
+  src="/chants/te-deum-2.svg"
+  alt="Te Deum Page 2"
+  width="600"
+  height="891"
+/>
+
+<Image
+  src="/chants/te-deum-3.svg"
+  alt="Te Deum Page 3"
+  width="600"
+  height="583"
+/>
 
 ## Text
 
-***TE DEUM laudamus: te Dominum confitemur.***<br/>
-O GOD, we praise Thee: we acknowledge Thee to be the Lord.
+<Poetry>
+|  \b Te Deum laudamus:
+|  \b te Dominum confitemur.
+|
+|  We praise thee O God;
+|  we acknowledge thee to be the Lord.
+|
+|  \b Te aeternum Patrem
+|  \b omnis terra veneratur.
+|
+|  All the earth doth worship thee
+|  the Father everlasting.
+|
+|  \b Tibi omnes Angeli,
+|  \b tibi Caeli et universae Potestates:
+|
+|  To thee all angels cry aloud;
+|  the heavens and all the powers therein;
+|
+|  \b Tibi Cherubim et Seraphim
+|  \b incessabili voce proclamant:
+|
+|  To thee Cherubim and Seraphim
+|  continually do cry,
+|
+|  \b Sanctus, Sanctus, Sanctus,
+|  \b Dominus Deus Sabaoth.
+|
+|  Holy, Holy, Holy,
+|  Lord God of Sabaoth;
+|
+|  \b Pleni sunt caeli et terra
+|  \b majestatis gloriae tuae.
+|
+|  Heaven and earth are full
+|  of the majesty of thy glory.
+|
+|  \b Te gloriosus
+|  \b Apostolorum chorus:
+|
+|  The glorious company
+|  of the apostles praise thee.
+|
+|  \b Te Prophetarum
+|  \b laudabilis numerus:
+|
+|  The goodly fellowship
+|  of the prophets praise thee.
+|
+|  \b Te Martyrum candidatus
+|  \b laudat exercitus.
+|
+|  The noble army
+|  of Martyrs praise thee.
+|
+|  \b Te per orbem terrarum
+|  \b sancta confitetur Ecclesia:
+|
+|  The holy Church throughout the world
+|  doth acknowledge thee;
+|
+|  \b Patrem
+|  \b immensae majestatis:
+|
+|  The Father
+|  of an infinite majesty;
+|
+|  \b Venerandum tuum verum,
+|  \b et unicum Filium:
+|
+|  Thine adorable, true,
+|  and only Son;
+|
+|  \b Sanctum quoque
+|  \b Paraclitum Spiritum.
+|
+|  Also the Holy Ghost
+|  the Comforter.
+|
+|  \b Tu Rex gloriae, Christe.
+|
+|  Thou art the King of Glory O Christ.
+|
+|  \b Tu Patris sempiternus es Filius.
+|
+|  Thou art the everlasting Son of the Father.
+|
+|  \b Tu ad liberandum suscepturus hominem,
+|  \b non horruisti Virginis uterum.
+|
+|  When thou tookest upon thee to deliver man,
+|  thou didst humble thyself to be born of a Virgin.
+|
+|  \b Tu devicto mortis aculeo,
+|  \b aperuisti credentibus regna caelorum.
+|
+|  When thou hadst overcome the sharpness of death,
+|  thou didst open the kingdom of heaven to all believers.
+|
+|  \b Tu ad dexteram Dei sedes,
+|  \b in gloria Patris.
+|
+|  Thou sittest at the right hand of God,
+|  in the glory of the Father.
+|
+|  \b Judex crederis
+|  \b esse venturus.
+|
+|  We believe that thou shalt come to be our Judge.
+|
+|  \b Te ergo quaesumus, tuis famulis subveni,
+|  \b quos pretioso sanguine redemisti.
+|
+|  We therefore pray thee help thy servants
+|  whom thou hast redeemed with thy precious blood.
+|
+|  \b Aeterna fac
+|  \b cum Sanctis tuis in gloria numerari.
+|
+|  Make them to be numbered
+|  with thy saints in glory everlasting.
+|
+|  \b Salvum fac populum tuum Domine,
+|  \b et benedic hereditati tuae.
+|
+|  O Lord save thy people
+|  and bless thine heritage.
+|
+|  \b Et rege eos,
+|  \b et extolle illos usque in aeternum.
+|
+|  Govern them
+|  and lift them up forever.
+|
+|  \b Per singulos dies,
+|  \b benedicimus te.
+|
+|  Day by day
+|  we magnify thee;
+|
+|  \b Et laudamus nomen tuum in saeculum,
+|  \b et in saeculum saeculi.
+|
+|  And we worship thy Name ever
+|  world without end.
+|
+|  \b Dignare Domine die isto
+|  \b sine peccato nos custodire.
+|
+|  Vouchsafe O Lord
+|  to keep us this day without sin.
+|
+|  \b Miserere nostri Domine,
+|  \b miserere nostri.
+|
+|  O Lord have mercy upon us,
+|  have mercy upon us.
+|
+|  \b Fiat misericordia tua Domine super nos,
+|  \b quemadmodum speravimus in te.
+|
+|  O Lord let thy mercy be upon us
+|  as our tust is in thee.
+|
+|  \b In te Domine speravi:
+|  \b non confundar in aeternum.
+|
+|  O Lord in thee have I trusted,
+|  let me never be confounded.
+</Poetry>
 
-***Te aeternum Patrem omnis terra veneratur.***<br/>
-Everlasting Father, all the earth doth worship Thee.
-
-***Tibi omnes Angeli; tibi Caeli et universae Potestates;***<br/>
-To Thee all the Angels, the Heavens and all the Powers,
-
-***Tibi Cherubim et Seraphim incessabili voce proclamant:***<br/>
-all the Cherubim and Seraphim, unceasingly proclaim:
-
-***Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth.***<br/>
-Holy, Holy, Holy, Lord God of Hosts!
-
-***Pleni sunt caeli et terra maiestatis gloriae tuae.***<br/>
-Heaven and earth are full of the Majesty of thy glory.
-
-***Te gloriosus Apostolorum chorus,***<br/>
-The glorious choir of the Apostles,
-
-***Te Prophetarum laudabilis numerus,***<br/>
-the wonderful company of Prophets,
-
-***Te Martyrum candidatus laudat exercitus.***<br/>
-the white-robed army of Martyrs, praise Thee.
-
-***Te per orbem terrarum sancta confitetur Ecclesia,***<br/>
-Holy Church throughout the world doth acknowledge Thee:
-
-***Patrem immensae maiestatis:***<br/>
-the Father of infinite Majesty;
-
-***Venerandum tuum verum et unicum Filium;***<br/>
-Thy adorable, true and only Son;
-
-***Sanctum quoque Paraclitum Spiritum.***<br/>
-and the Holy Spirit, the Comforter.
-
-***Tu Rex gloriae, Christe.***<br/>
-O Christ, thou art the King of glory!
-
-***Tu Patris sempiternus es Filius.***<br/>
-Thou art the everlasting Son of the Father.
-
-***Tu ad liberandum suscepturus hominem, non horruisti Virginis uterum.***<br/>
-Thou, having taken it upon thyself to deliver man, didst not disdain the Virgin's womb.
-
-***Tu, devicto mortis aculeo, aperuisti credentibus regna caelorum.***<br/>
-Thou overcame the sting of death and hast opened to believers the Kingdom of Heaven.
-
-***Tu ad dexteram Dei sedes, in gloria Patris.***<br/>
-Thou sittest at the right hand of God, in the glory of the Father.
-
-***Iudex crederis esse venturus.***<br/>
-We believe that thou shalt come to be our Judge.
-
-***Te ergo quaesumus, tuis famulis subveni: quos pretioso sanguine redemisti.***<br/>
-We beseech Thee, therefore, to help thy servants whom thou hast redeemed with thy Precious Blood.
-
-***Aeterna fac cum sanctis tuis in gloria numerari.***<br/>
-Make them to be numbered with thy Saints in everlasting glory.
-
-***Salvum fac populum tuum, Domine, et benedic hereditati tuae.***<br/>
-Save thy people, O Lord, and bless thine inheritance!
-
-***Et rege eos, et extolle illos usque in aeternum.***<br/>
-Govern them, and raise them up forever.
-
-***Per singulos dies benedicimus te.***<br/>
-Every day we thank Thee.
-
-***Et laudamus nomen tuum in saeculum, et in saeculum saeculi.***<br/>
-And we praise thy Name forever, yea, forever and ever.
-
-***Dignare, Domine, die isto sine peccato nos custodire.***<br/>
-O Lord, deign to keep us from sin this day.
-
-***Miserere nostri, Domine, miserere nostri.***<br/>
-Have mercy on us, O Lord, have mercy on us.
-
-***Fiat misericordia tua, Domine, super nos, quemadmodum speravimus in te.***<br/>
-Let thy mercy, O Lord, be upon us, for we have hoped in Thee.
-
-***In te, Domine, speravi: non confundar in aeternum.***<br/>
-O Lord, in Thee I have hoped; let me never be put to shame.
+[^1]: "Te Deum", [*Catholic Encyclopedia*](https://www.newadvent.org/cathen/14468c.htm)
+[^2]: "Te Deum (Solemn Tone)", *<Definition lang="latin" anchor="liber-usualis" text="Liber Usualis" />* (1961), 1832–1834

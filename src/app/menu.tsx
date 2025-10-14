@@ -894,7 +894,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/sanctus",
               },
               {
-                title: "Te Decet Laus",
+                title: "Te decet laus",
                 link: "/liturgy/music/chants/te-decet-laus",
               },
               {
