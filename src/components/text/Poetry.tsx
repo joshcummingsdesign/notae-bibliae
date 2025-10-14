@@ -12,14 +12,17 @@ const symbols = {
   "\\A": '<span class="symbol a">Ant.</span>',
   "\\V": '<span class="symbol v"></span>',
   "\\R": '<span class="symbol r"></span>',
-  "\\B": '<span class="brackets">[<span class="symbol bow">Bow</span>]</span>',
-  "\\U": '<span class="brackets">[<span class="symbol bow">Rise</span>]</span>',
+  "\\B":
+    '<span class="brackets">[ <span class="symbol bow">Bow</span> ]</span>',
+  "\\U":
+    '<span class="brackets">[ <span class="symbol bow">Rise</span> ]</span>',
   _: '<span class="symbol dot"></span>',
   "*": '<span class="symbol star"></span>',
-  "+": '<span class="symbol cross"></span>',
+  "+": '<span class="symbol flex"></span>',
   ˇ: '<span class="symbol caret"></span>',
   "¯": '<span class="symbol line"></span>',
   "%": '<span class="symbol dagger"></span>',
+  "#": '<span class="symbol cross"></span>',
 };
 
 const replaceSymbols = (text: string) => {
@@ -153,7 +156,7 @@ const Wrapper = styled("pre")(({ theme }) => ({
     },
   },
 
-  ".cross": {
+  ".flex": {
     position: "relative",
 
     "&:before": {
@@ -195,6 +198,18 @@ const Wrapper = styled("pre")(({ theme }) => ({
       position: "absolute",
       top: "-6px",
       fontSize: "1.25rem",
+    },
+  },
+
+  ".cross": {
+    position: "relative",
+    paddingRight: "0.9375rem",
+
+    "&:before": {
+      content: "'✠'",
+      position: "absolute",
+      top: "-8px",
+      fontSize: "1.5rem",
     },
   },
 }));
