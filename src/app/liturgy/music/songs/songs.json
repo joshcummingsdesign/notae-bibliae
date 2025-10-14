@@ -46,7 +46,7 @@
         "content": "Souling Song",
         "link": "/liturgy/music/songs/souling-song"
       },
-      { "id": "occasion", "content": "Allhallowtide" },
+      { "id": "occasion", "content": "Advent / Allhallowtide" },
       { "id": "author", "content": "Unknown" },
       { "id": "year", "content": "19th Century" }
     ],
@@ -66,7 +66,7 @@
         "content": "Good King Wenceslas",
         "link": "/liturgy/music/songs/good-king-wenceslas"
       },
-      { "id": "occasion", "content": "Advent" },
+      { "id": "occasion", "content": "Christmastide" },
       {
         "id": "author",
         "content": "Neale, Helmore",

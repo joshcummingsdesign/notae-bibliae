@@ -456,7 +456,7 @@
         "content": "Abendlied",
         "link": "/liturgy/music/hymns/abendlied"
       },
-      { "id": "occasion", "content": "Easter - Vespers" },
+      { "id": "occasion", "content": "Easter – Vespers" },
       {
         "id": "author",
         "content": "Josef Rheinberger",
@@ -554,7 +554,7 @@
         "content": "For the Beauty of the Earth",
         "link": "/liturgy/music/hymns/for-the-beauty-of-the-earth"
       },
-      { "id": "occasion", "content": "Ordinary Time - Communion" },
+      { "id": "occasion", "content": "Ordinary Time" },
       {
         "id": "author",
         "content": "Folliott Sandford Pierpoint",
@@ -788,7 +788,7 @@
         "content": "I Want to Walk as a Child of the Light",
         "link": "/liturgy/music/hymns/i-want-to-walk-as-a-child-of-the-light"
       },
-      { "id": "occasion", "content": "Epiphany" },
+      { "id": "occasion", "content": "Ordinary Time" },
       {
         "id": "author",
         "content": "Kathleen Thomerson",
