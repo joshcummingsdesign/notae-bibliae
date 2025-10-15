@@ -781,6 +781,11 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
           },
           {
+            title: "Liturgy of the Hours: Sarum Rite",
+            link: "/liturgy/rites/liturgy-of-the-hours-sarum-rite",
+            inPageNav: true,
+          },
+          {
             title: "Chant Rubric: Sarum Rite",
             link: "/liturgy/rites/chant-rubric-sarum-rite",
             inPageNav: true,
