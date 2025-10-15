@@ -122,6 +122,14 @@ export const Search: React.FC<Props> = ({
       title: "John Wesley",
       link: "/meditations/a-brief-history-of-the-reformation-part-4#john-wesley",
     },
+    {
+      title: "The Augsburg Confession",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#the-augsburg-confession",
+    },
+    {
+      title: "Book of Common Prayer",
+      link: "/meditations/a-brief-history-of-the-reformation-part-3#the-book-of-common-prayer",
+    },
   ];
 
   const options = [
