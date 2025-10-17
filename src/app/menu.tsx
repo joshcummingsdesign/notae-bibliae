@@ -786,6 +786,27 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
           },
           {
+            title: "Daily Office: BCP",
+            link: "/liturgy/rites/daily-office-bcp",
+            priority: 0.6,
+            children: [
+              {
+                title: "Matins",
+                link: "/liturgy/rites/daily-office-bcp/matins",
+                inPageNav: true,
+              },
+              {
+                title: "Evensong",
+                link: "/liturgy/rites/daily-office-bcp/evensong",
+                inPageNav: true,
+              },
+            ],
+          },
+          {
+            title: "The Ancient Psalter",
+            link: "/liturgy/rites/the-ancient-psalter",
+          },
+          {
             title: "Chant Rubric: Sarum Rite",
             link: "/liturgy/rites/chant-rubric-sarum-rite",
             inPageNav: true,
