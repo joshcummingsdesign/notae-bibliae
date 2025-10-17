@@ -803,13 +803,13 @@ export const menuItems: MenuNode[] = [
             ],
           },
           {
-            title: "The Ancient Psalter",
-            link: "/liturgy/rites/the-ancient-psalter",
-          },
-          {
             title: "Chant Rubric: Sarum Rite",
             link: "/liturgy/rites/chant-rubric-sarum-rite",
             inPageNav: true,
+          },
+          {
+            title: "The Ancient Psalter",
+            link: "/liturgy/rites/the-ancient-psalter",
           },
         ],
       },
