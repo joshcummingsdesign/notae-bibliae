@@ -29,7 +29,7 @@ export const PsalmTable = () => (
           <td>27 – 38</td>
           <td colSpan={4} style={{ textAlign: "left", padding: 10 }}>
             On Ferial days the 119th Psalm is divided among these four hours,
-            and at Nones, the 120th and 121st are added to the portion appointed
+            and at None, the 120th and 121st are added to the portion appointed
             for that hour.
           </td>
           <td>116 – 118</td>
