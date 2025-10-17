@@ -791,12 +791,12 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
-                title: "Matins",
+                title: "Matins: BCP",
                 link: "/liturgy/rites/daily-office-bcp/matins",
                 inPageNav: true,
               },
               {
-                title: "Evensong",
+                title: "Evensong: BCP",
                 link: "/liturgy/rites/daily-office-bcp/evensong",
                 inPageNav: true,
               },
