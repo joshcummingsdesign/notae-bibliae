@@ -756,12 +756,12 @@ export const menuItems: MenuNode[] = [
             link: "/liturgy/prayers/rosary",
           },
           {
-            title: "Luther's Morning Prayer",
-            link: "/liturgy/prayers/luthers-morning-prayer",
+            title: "Luther Morning Prayer",
+            link: "/liturgy/prayers/luther-morning-prayer",
           },
           {
-            title: "Luther's Evening Prayer",
-            link: "/liturgy/prayers/luthers-evening-prayer",
+            title: "Luther Evening Prayer",
+            link: "/liturgy/prayers/luther-evening-prayer",
           },
         ],
       },
