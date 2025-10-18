@@ -538,6 +538,28 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
+        title: "Daily Prayer",
+        link: "/liturgy/daily-prayer",
+        priority: 0.7,
+        children: [
+          {
+            title: "Daily Prayer: Matins",
+            link: "/liturgy/daily-prayer/matins",
+            inPageNav: true,
+          },
+          {
+            title: "Daily Prayer: Prime",
+            link: "/liturgy/daily-prayer/prime",
+            inPageNav: true,
+          },
+          {
+            title: "Daily Prayer: Evensong",
+            link: "/liturgy/daily-prayer/evensong",
+            inPageNav: true,
+          },
+        ],
+      },
+      {
         title: "Liturgical Calendar",
         link: "/liturgy/liturgical-calendar",
         priority: 0.7,
