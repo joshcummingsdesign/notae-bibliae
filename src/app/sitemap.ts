@@ -52,10 +52,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         "monthly";
 
       if (node.link === "/meditations") changeFrequency = "weekly";
-      if (node.link === "/liturgy/daily-prayer/morning-prayer")
-        changeFrequency = "daily";
-      if (node.link === "/liturgy/daily-prayer/evening-prayer")
-        changeFrequency = "daily";
       else if (node.link.startsWith("/glossary")) priority = 0.2;
       else if (node.link.startsWith("/bible/languages")) priority = 0.2;
       else if (node.link.startsWith("/bible/translations")) priority = 0.2;
