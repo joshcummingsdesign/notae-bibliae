@@ -543,13 +543,13 @@ export const menuItems: MenuNode[] = [
         priority: 0.7,
         children: [
           {
-            title: "Evening Prayer",
-            link: "/liturgy/daily-prayer/evening-prayer",
+            title: "Morning Prayer",
+            link: "/liturgy/daily-prayer/morning-prayer",
             inPageNav: true,
           },
           {
-            title: "Morning Prayer",
-            link: "/liturgy/daily-prayer/morning-prayer",
+            title: "Evening Prayer",
+            link: "/liturgy/daily-prayer/evening-prayer",
             inPageNav: true,
           },
         ],

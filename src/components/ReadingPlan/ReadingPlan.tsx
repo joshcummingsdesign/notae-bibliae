@@ -5,12 +5,17 @@ import { useCallback, useEffect, useState } from "react";
 
 interface Props {
   id: string;
-  type: "reading" | "psalm";
+  type?: "reading" | "psalm";
+  canon?: "OT" | "NT";
 }
 
 type PlanItems = { [index: string]: string };
 
-export const ReadingPlan: React.FC<Props> = ({ id, type }) => {
+export const ReadingPlan: React.FC<Props> = ({
+  id,
+  type = "reading",
+  canon = "OT",
+}) => {
   if (type === "psalm") {
     const plan: PlanItems = Array.from(
       { length: 150 },
@@ -23,7 +28,7 @@ export const ReadingPlan: React.FC<Props> = ({ id, type }) => {
     return <PlanPicker id={`${id}-psalm`} label="Current Psalm" plan={plan} />;
   }
 
-  const plan = readingPlan
+  const plan = readingPlan[canon]
     .map((item, i) => `Day ${i + 1}: ${item}`)
     .reduce<PlanItems>((acc, val, i) => {
       acc[String(i)] = val;
