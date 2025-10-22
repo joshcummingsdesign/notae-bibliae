@@ -957,6 +957,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/song-of-isaiah",
               },
               {
+                title: "Song of Moses from Exod.",
+                link: "/liturgy/music/chants/song-of-moses-exod",
+              },
+              {
                 title: "Te decet laus",
                 link: "/liturgy/music/chants/te-decet-laus",
               },
