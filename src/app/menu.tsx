@@ -945,6 +945,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/sanctus",
               },
               {
+                title: "Song of Habakkuk",
+                link: "/liturgy/music/chants/song-of-habakkuk",
+              },
+              {
                 title: "Song of Hannah",
                 link: "/liturgy/music/chants/song-of-hannah",
               },
