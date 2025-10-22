@@ -1,6 +1,7 @@
 "use client";
 import * as d3 from "d3";
 import { FC, useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { renderToStaticMarkup } from "react-dom/server";
 import { OrgChart } from "d3-org-chart";
 import { FamilyNodeContent } from "./FamilyNodeContent";
@@ -40,6 +41,8 @@ interface Props {
 }
 
 export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
+  const searchParams = useSearchParams();
+  const queryId = searchParams.get("id");
   const drawerTimeout = useRef<NodeJS.Timeout | null>(null);
   const linksTimeout = useRef<NodeJS.Timeout | null>(null);
   const d3Container = useRef<HTMLDivElement>(null);
@@ -354,6 +357,28 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
         .render();
     }
   }, [data, chart, d3Container]);
+
+  // Highlight node if id is set in query params
+  useLayoutEffect(() => {
+    if (!chart.current || !data) return;
+
+    if (queryId) {
+      const id = Number(queryId);
+      const node = data.find((d) => d.id === id);
+      if (node) {
+        chart.current
+          .expandAll()
+          .clearHighlighting()
+          .setHighlighted(id)
+          .setCentered(id)
+          .initialZoom(0.75)
+          .render();
+
+        setHighlightedNode(node);
+        setSearchSelectedNode(node);
+      }
+    }
+  }, [queryId, data]);
 
   // Add event listeners
   useLayoutEffect(() => {
