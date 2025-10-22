@@ -961,6 +961,14 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/song-of-isaiah",
               },
               {
+                title: "Song of Moses from Deut., Pt. 1",
+                link: "/liturgy/music/chants/song-of-moses-deut-pt-1",
+              },
+              {
+                title: "Song of Moses from Deut., Pt. 2",
+                link: "/liturgy/music/chants/song-of-moses-deut-pt-2",
+              },
+              {
                 title: "Song of Moses from Exod.",
                 link: "/liturgy/music/chants/song-of-moses-exod",
               },
