@@ -1602,6 +1602,9 @@ nodes:
     gender: male
     category: jew
     type: prophet
+    notes: |
+      * The great prophet of Israel who authored the Pentateuch—the first five books of the Hebrew Scriptures,
+        also called the Law.
   - id: 186
     parentId: 185
     name: Nadab
