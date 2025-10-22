@@ -1,21 +1,16 @@
 "use client";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import readingPlan from "./reading-plan.json";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   id: string;
   type?: "reading" | "psalm";
-  canon?: "OT" | "NT";
 }
 
 type PlanItems = { [index: string]: string };
 
-export const ReadingPlan: React.FC<Props> = ({
-  id,
-  type = "reading",
-  canon = "OT",
-}) => {
+export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
   if (type === "psalm") {
     const plan: PlanItems = Array.from(
       { length: 150 },
@@ -28,14 +23,14 @@ export const ReadingPlan: React.FC<Props> = ({
     return <PlanPicker id={`${id}-psalm`} label="Current Psalm" plan={plan} />;
   }
 
-  const plan = readingPlan[canon]
-    .map((item, i) => `Day ${i + 1}: ${item}`)
-    .reduce<PlanItems>((acc, val, i) => {
-      acc[String(i)] = val;
-      return acc;
-    }, {});
+  const plan = readingPlan.reduce<PlanItems>((acc, val, i) => {
+    acc[String(i)] = val;
+    return acc;
+  }, {});
 
-  return <PlanPicker id={`${id}-reading`} label="Current Day" plan={plan} />;
+  return (
+    <PlanPicker id={`${id}-reading`} label="Current Reading" plan={plan} />
+  );
 };
 
 export const PlanPicker = ({
