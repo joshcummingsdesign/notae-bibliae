@@ -1068,6 +1068,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/crown-him-with-many-crowns",
               },
               {
+                title: "For All the Saints",
+                link: "/liturgy/music/hymns/for-all-the-saints",
+              },
+              {
                 title: "For the Beauty of the Earth",
                 link: "/liturgy/music/hymns/for-the-beauty-of-the-earth",
               },
@@ -1472,6 +1476,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Will L. Thompson",
                 link: "/liturgy/music/composers/will-l-thompson",
+              },
+              {
+                title: "William W. How",
+                link: "/liturgy/music/composers/william-w-how",
               },
             ],
           },

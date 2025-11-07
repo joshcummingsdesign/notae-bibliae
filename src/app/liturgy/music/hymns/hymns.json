@@ -809,6 +809,20 @@
         "link": "/liturgy/music/composers/dan-schutte"
       },
       { "id": "year", "content": "1979" }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "For All the Saints",
+        "link": "/liturgy/music/hymns/for-all-the-saints"
+      },
+      { "id": "occasion", "content": "All Saints' Day" },
+      {
+        "id": "author",
+        "content": "William W. How",
+        "link": "/liturgy/music/composers/william-w-how"
+      },
+      { "id": "year", "content": "1864" }
     ]
   ]
 }

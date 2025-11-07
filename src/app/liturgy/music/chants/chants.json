@@ -481,6 +481,21 @@
         "id": "occasion",
         "content": "Divine Office"
       }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Pascha nostrum",
+        "link": "/liturgy/music/chants/pascha-nostrum"
+      },
+      {
+        "id": "type",
+        "content": "Anthem"
+      },
+      {
+        "id": "occasion",
+        "content": "Easter – Matins"
+      }
     ]
   ]
 }
