@@ -937,6 +937,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/o-sapientia",
               },
               {
+                title: "Pascha nostrum",
+                link: "/liturgy/music/chants/pascha-nostrum",
+              },
+              {
                 title: "Salva nos Domine",
                 link: "/liturgy/music/chants/salva-nos-domine",
               },
