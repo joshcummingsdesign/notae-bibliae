@@ -34,7 +34,8 @@ const replaceSymbols = (text: string) => {
     newText = newText.replaceAll(key, value);
   });
   newText = newText.replaceAll(/\\b (.*)/g, "<strong>$1</strong>");
-  newText = newText.replaceAll(/(\d+\.)/g, '<span class="red">$1</span>');
+  newText = newText.replaceAll(/\\p (.*)/g, '<em class="pilcrow">❡ $1</em>');
+  newText = newText.replaceAll(/^(\d+\.)/gm, '<span class="red">$1</span>');
   return newText;
 };
 
@@ -97,6 +98,10 @@ const Wrapper = styled("pre")(({ theme }) => ({
 
   ".symbol": {
     color: theme.palette.brand.red,
+  },
+
+  ".pilcrow": {
+    fontSize: "0.9375rem",
   },
 
   ".brackets": {
