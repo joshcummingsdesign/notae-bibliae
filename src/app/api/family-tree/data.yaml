@@ -13,7 +13,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      - Eve (חַוָּה, *ḥawwā*) is Hebrew for "life", as she is the mother of all living (Gen. 3:20).
+      - Eve (חַוָּה, *Khavá*,) is Hebrew for "life-giver", as she is the mother of all living (Gen. 3:20).
   - id: 3
     parentId: 2
     name: Cain
@@ -22,8 +22,7 @@ nodes:
     type: person
     notes: |
       * It is likely that Adam and Eve had other descendants at the time of Abel's death.
-        Thus, Cain says, "*Whoever* finds me will kill me."
-        (Gen. 4:14) (Gen 4:25) (Gen. 5:3).
+        Thus, Cain says, "*Whoever* finds me will kill me" (Gen. 4:14).
   - id: 4
     parentId: 2
     name: Abel
