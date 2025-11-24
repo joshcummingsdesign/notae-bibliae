@@ -5,7 +5,10 @@ nodes:
     category: jew
     type: person
     notes: |
-      - Adam (אָדָם) is Hebrew for "man".
+      - [Adam](/glossary/names#adam) was formed from the dust of the earth (Gen. 2:7).
+      - He calls his wife Eve, as she is the mother of all living (Gen. 3:20).
+      - He and Eve, our first parents, fell when they ate of the fruit of the tree of the knowledge
+        of good and evil after God had instructed them not to (Gen. 3:6).
   - id: 2
     parentId: 1
     name: Eve
@@ -13,7 +16,10 @@ nodes:
     category: jew
     type: person
     notes: |
-      - Eve (חַוָּה, *Khavá*,) is Hebrew for "life-giver", as she is the mother of all living (Gen. 3:20).
+      - [Eve](/glossary/names#eve) was formed from Adam's rib (Gen. 2:22).
+      - Adam calls her Eve, as she is the mother of all living (Gen. 3:20).
+      - She and Adam, our first parents, fell when they ate of the fruit of the tree of the knowledge
+        of good and evil after God had instructed them not to (Gen. 3:6).
   - id: 3
     parentId: 2
     name: Cain
@@ -21,14 +27,17 @@ nodes:
     category: jew
     type: person
     notes: |
-      * It is likely that Adam and Eve had other descendants at the time of Abel's death.
-        Thus, Cain says, "*Whoever* finds me will kill me" (Gen. 4:14).
+      - [Cain](/glossary/names#cain) was Adam's son who killed his brother Abel (Gen. 4:8).
+      - God sentenced him to be a fugitive and a wanderer (Gen. 4:12), and put a mark on him
+        so that if anyone were to kill him, vengeance would be taken on them sevenfold (Gen. 4:15).
   - id: 4
     parentId: 2
     name: Abel
     gender: male
     category: jew
     type: person
+    notes: |
+      - [Abel](/glossary/names#abel) was Adam's son who was killed his brother Cain (Gen. 4:8).
   - id: 5
     parentId: 2
     name: Seth
@@ -36,11 +45,8 @@ nodes:
     category: jew
     type: person
     notes: |
-      * His name in Hebrew (שֵׁת) means "appointed" (Gen. 4:25).
-      * During his time, people begin to call upon the name of the Lord (Gen. 4:26).
-      * His descendants are called the "sons of God", and they begin to intermarry with
-        the "daughters of man" (the ungodly). They do this merely because
-        they are attractive (Gen. 6:2).
+      - [Seth](/glossary/names#seth) is Adam's son born after Abel was killed (Gen. 4:25).
+      - During his time, people begin to call upon the name of the Lord (Gen. 4:26).
   - id: 7
     parentId: 3
     name: Lamech
@@ -48,7 +54,8 @@ nodes:
     category: gentile
     type: person
     notes: |
-      * Says, "If Cain's revenge is sevenfold, then Lamech's is seventy-sevenfold." (Gen. 4:24).
+      - Lamech is a descendant of Cain who famously said,
+        "If Cain's revenge is sevenfold, then Lamech's is seventy-sevenfold" (Gen. 4:24).
   - id: 8
     parentId: 5
     name: Enosh
@@ -88,6 +95,8 @@ nodes:
     gender: male
     category: jew
     type: person
+    notes: |
+      * Lived to be 969 years old (Gen. 5:27).
   - id: 14
     parentId: 13
     name: Lamech
@@ -101,7 +110,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * His name in Hebrew (נֹחַ, *nóakh*) means "rest".
+      * [Noah](/glossary/names#noah)
   - id: 16
     parentId: 15
     name: Shem
@@ -109,7 +118,7 @@ nodes:
     category: jew
     type: person
     notes: |
-      * His name in Hebrew (שם) means "name".
+      * [Shem](/glossary/names#shem)
   - id: 17
     parentId: 15
     name: Ham
