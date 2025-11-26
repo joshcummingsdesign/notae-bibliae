@@ -20,14 +20,10 @@ export const PsalmAttributionTable = () => (
           <td>David</td>
         </tr>
         <tr>
-          <td rowSpan={4}>II</td>
-          <td>42 – 49</td>
+          <td rowSpan={3}>II</td>
+          <td>42 – 50</td>
           <td>The Levites</td>
-          <td rowSpan={4}>Hezekiah</td>
-        </tr>
-        <tr>
-          <td>50</td>
-          <td>Azariah</td>
+          <td rowSpan={3}>Hezekiah</td>
         </tr>
         <tr>
           <td>51 – 71</td>
@@ -35,7 +31,7 @@ export const PsalmAttributionTable = () => (
         </tr>
         <tr>
           <td>72</td>
-          <td>David or Solomon</td>
+          <td>Solomon</td>
         </tr>
         <tr>
           <td rowSpan={3}>III</td>
@@ -45,7 +41,7 @@ export const PsalmAttributionTable = () => (
         </tr>
         <tr>
           <td>86</td>
-          <td>Hezekiah</td>
+          <td>David</td>
         </tr>
         <tr>
           <td>87 – 89</td>
@@ -55,9 +51,9 @@ export const PsalmAttributionTable = () => (
           <td>IV</td>
           <td>90 – 106</td>
           <td rowSpan={2}>
-            Various writers including Moses, the Prophets, and Ezra
+            Various writers including Moses, the Prophets, David, and Solomon
           </td>
-          <td rowSpan={2}>Ezra or Nehemiah</td>
+          <td rowSpan={2}>Ezra–Nehemiah</td>
         </tr>
         <tr>
           <td>V</td>

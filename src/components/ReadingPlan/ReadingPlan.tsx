@@ -1,5 +1,6 @@
 "use client";
 import { Autocomplete, styled, TextField } from "@mui/material";
+import psalmPlan from "./psalm-plan.json";
 import readingPlan from "./reading-plan.json";
 import { useEffect, useState } from "react";
 
@@ -8,19 +9,33 @@ interface Props {
   type?: "reading" | "psalm";
 }
 
-type PlanItems = { [index: string]: string };
+interface PlanItem {
+  title: string;
+  description?: string;
+  book?: string;
+  attribution?: string;
+  period?: string;
+  collections?: string[];
+  notes?: string;
+}
+
+type PlanItems = { [index: string]: PlanItem };
 
 export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
   if (type === "psalm") {
-    const plan: PlanItems = Array.from(
-      { length: 150 },
-      (_, i) => `Psalm ${i + 1}`
-    ).reduce<PlanItems>((acc, val, i) => {
+    const plan = psalmPlan.reduce<PlanItems>((acc, val, i) => {
       acc[String(i)] = val;
       return acc;
     }, {});
 
-    return <PlanPicker id={`${id}-psalm`} label="Current Psalm" plan={plan} />;
+    return (
+      <PlanPicker
+        id={`${id}-psalm`}
+        label="Current Psalm"
+        type={type}
+        plan={plan}
+      />
+    );
   }
 
   const plan = readingPlan.reduce<PlanItems>((acc, val, i) => {
@@ -29,18 +44,26 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
   }, {});
 
   return (
-    <PlanPicker id={`${id}-reading`} label="Current Reading" plan={plan} />
+    <PlanPicker
+      id={`${id}-reading`}
+      label="Current Reading"
+      type={type}
+      plan={plan}
+    />
   );
 };
 
 export const PlanPicker = ({
   id,
   label,
+  type,
   plan,
 }: {
   id: string;
   label: string;
+  type?: "reading" | "psalm";
   plan: PlanItems;
+  books?: PlanItems;
 }) => {
   const [index, setIndex] = useState<number>(0);
   const [notes, setNotes] = useState<string>("");
@@ -62,6 +85,37 @@ export const PlanPicker = ({
     localStorage.setItem(`${id}-plan-notes`, e.target.value);
   };
 
+  const getPsalmNotes = (): string => {
+    let output = [];
+    const p = plan[index];
+
+    if (p.book) {
+      output.push(p.book);
+    }
+
+    let t = p.title;
+
+    if (p.attribution) {
+      t += `— ${p.attribution}`;
+    }
+
+    if (p.description) {
+      t += `— ${p.description}`;
+    }
+
+    output.push(t);
+
+    if (p.collections && p.collections.length) {
+      output.push("Included in " + p.collections.join(", "));
+    }
+
+    if (p.period) {
+      output.push(`Collected in the time of ${p.period}`);
+    }
+
+    return output.join("\n");
+  };
+
   return (
     <>
       <Wrapper>
@@ -70,20 +124,37 @@ export const PlanPicker = ({
           value={String(index)}
           disableClearable={true}
           options={Object.keys(plan)}
-          getOptionLabel={(option) => plan[option]}
+          getOptionLabel={(option) => plan[option].title}
           onChange={(_, value) => handleChange(value)}
           renderInput={(params) => <TextInput {...params} label={label} />}
         />
       </Wrapper>
-      <TextWrap>
-        <TextInput
-          value={notes}
-          label="Notes"
-          multiline={true}
-          minRows={4}
-          onChange={handleNotesChange}
-        />
-      </TextWrap>
+      {type === "psalm" && (
+        <TextWrap>
+          <TextInput
+            value={getPsalmNotes()}
+            label="Notes"
+            multiline={true}
+            minRows={4}
+            slotProps={{
+              input: {
+                readOnly: true,
+              },
+            }}
+          />
+        </TextWrap>
+      )}
+      {type === "reading" && (
+        <TextWrap>
+          <TextInput
+            value={notes}
+            label="Notes"
+            multiline={true}
+            minRows={4}
+            onChange={handleNotesChange}
+          />
+        </TextWrap>
+      )}
     </>
   );
 };

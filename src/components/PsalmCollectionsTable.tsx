@@ -25,9 +25,9 @@ export const PsalmCollectionsTable = () => (
         </tr>
         <tr>
           <td>
-            The Fifteen Songs of Degrees
+            The Fifteen Songs of Ascents
             <br />
-            "Songs of Ascents"
+            "Songs of Degrees"
             <br />
             "Gradual Psalms"
           </td>
@@ -35,14 +35,18 @@ export const PsalmCollectionsTable = () => (
         </tr>
         <tr>
           <td>
-            The Egyptian Hallel Psalms
+            The Six Egyptian Hallel Psalms
             <br />
             "The Great Hallelujah"
           </td>
           <td>113–118</td>
         </tr>
         <tr>
-          <td>The Laudate Psalms</td>
+          <td>The Five Hallelujah Psalms</td>
+          <td>146–150</td>
+        </tr>
+        <tr>
+          <td>The Three Laudate Psalms</td>
           <td>148, 149, 150</td>
         </tr>
       </tbody>
