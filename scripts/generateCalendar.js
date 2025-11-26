@@ -29,7 +29,7 @@ const filePath = path.join(
   "src",
   "app",
   "liturgy",
-  "liturgical-calendar",
+  "calendar",
   "page.mdx"
 );
 const md = fs.readFileSync(filePath, "utf-8");
