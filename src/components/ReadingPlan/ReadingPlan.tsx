@@ -109,6 +109,10 @@ export const PlanPicker = ({
       output.push("Included in " + p.collections.join(", "));
     }
 
+    if (p.notes) {
+      output.push(p.notes);
+    }
+
     if (p.period) {
       output.push(`Collected in the time of ${p.period}`);
     }
