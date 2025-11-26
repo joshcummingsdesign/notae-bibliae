@@ -126,10 +126,6 @@ export const Search: React.FC<Props> = ({
       title: "The Augsburg Confession",
       link: "/meditations/a-brief-history-of-the-reformation-part-3#the-augsburg-confession",
     },
-    {
-      title: "Book of Common Prayer",
-      link: "/meditations/a-brief-history-of-the-reformation-part-3#the-book-of-common-prayer",
-    },
   ];
 
   const options = [
@@ -138,13 +134,41 @@ export const Search: React.FC<Props> = ({
     ...additionalItems,
     ...flattenMenu(menuItems),
   ]
-    .map((item) => ({
-      ...item,
-      title: item.title.replace(
-        /A Brief History of the Reformation, Part (\d): (.*)/,
-        "Reformation, Part $1: $2"
-      ),
-    }))
+    .map((item) => {
+      let title = item.title;
+
+      if (item.title.includes("A Brief History of the Reformation")) {
+        title = item.title.replace(
+          /A Brief History of the Reformation, Part (\d): (.*)/,
+          "Reformation, Part $1: $2"
+        );
+      }
+
+      if (item.link.includes("/liturgy/rites/roman-rite/")) {
+        title = title + ": Roman Rite";
+      }
+
+      if (item.link.includes("/liturgy/rites/benedictine-rite/")) {
+        title = title + ": Benedictine Rite";
+      }
+
+      if (item.link.includes("/liturgy/rites/sarum-rite/")) {
+        title = title + ": Sarum Rite";
+      }
+
+      if (item.link.includes("/liturgy/rites/book-of-common-prayer/")) {
+        title = title + ": BCP";
+      }
+
+      if (item.link.includes("/liturgy/prayers/daily-office/")) {
+        title = "Daily Office: " + title;
+      }
+
+      return {
+        ...item,
+        title,
+      };
+    })
     .sort((a, b) => a.title.localeCompare(b.title));
 
   // Focus input when modal opens

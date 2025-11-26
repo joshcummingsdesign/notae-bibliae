@@ -538,29 +538,6 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
-        title: "Daily Prayer",
-        link: "/liturgy/daily-prayer",
-        priority: 0.7,
-        children: [
-          {
-            title: "Morning Prayer",
-            link: "/liturgy/daily-prayer/morning-prayer",
-            inPageNav: true,
-          },
-          {
-            title: "Evening Prayer",
-            link: "/liturgy/daily-prayer/evening-prayer",
-            inPageNav: true,
-          },
-        ],
-      },
-      {
-        title: "Liturgical Calendar",
-        link: "/liturgy/liturgical-calendar",
-        priority: 0.7,
-        inPageNav: true,
-      },
-      {
         title: "Seasons",
         link: "/liturgy/seasons",
         priority: 0.7,
@@ -705,33 +682,79 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "Creeds",
-        link: "/liturgy/creeds",
+        title: "Calendar",
+        link: "/liturgy/calendar",
+        priority: 0.7,
+        inPageNav: true,
+      },
+      {
+        title: "Psalter",
+        link: "/liturgy/psalter",
+        priority: 0.7,
+        inPageNav: true,
+      },
+      {
+        title: "Rites",
+        link: "/liturgy/rites",
         priority: 0.7,
         children: [
           {
-            title: "Apostles' Creed",
-            link: "/liturgy/creeds/apostles-creed",
+            title: "Roman Rite",
+            link: "/liturgy/rites/roman-rite",
+            priority: 0.6,
+            children: [
+              {
+                title: "Mass",
+                link: "/liturgy/rites/roman-rite/mass",
+                inPageNav: true,
+              },
+            ],
           },
           {
-            title: "Nicene Creed",
-            link: "/liturgy/creeds/nicene-creed",
+            title: "Benedictine Rite",
+            link: "/liturgy/rites/benedictine-rite",
+            priority: 0.6,
+            children: [
+              {
+                title: "Liturgy of the Hours",
+                link: "/liturgy/rites/benedictine-rite/liturgy-of-the-hours",
+                inPageNav: true,
+              },
+            ],
           },
           {
-            title: "Niceno-Constantinopolitan Creed",
-            link: "/liturgy/creeds/niceno-constantinopolitan-creed",
+            title: "Sarum Rite",
+            link: "/liturgy/rites/sarum-rite",
+            priority: 0.6,
+            children: [
+              {
+                title: "Chant Rubric",
+                link: "/liturgy/rites/sarum-rite/chant-rubric",
+                inPageNav: true,
+              },
+              {
+                title: "Liturgy of the Hours",
+                link: "/liturgy/rites/sarum-rite/liturgy-of-the-hours",
+                inPageNav: true,
+              },
+            ],
           },
           {
-            title: "Chalcedonian Creed",
-            link: "/liturgy/creeds/chalcedonian-creed",
-          },
-          {
-            title: "Nicene Creed with Filioque",
-            link: "/liturgy/creeds/nicene-creed-with-filioque",
-          },
-          {
-            title: "Athanasian Creed",
-            link: "/liturgy/creeds/athanasian-creed",
+            title: "Book of Common Prayer",
+            link: "/liturgy/rites/book-of-common-prayer",
+            priority: 0.6,
+            children: [
+              {
+                title: "Matins",
+                link: "/liturgy/rites/book-of-common-prayer/matins",
+                inPageNav: true,
+              },
+              {
+                title: "Evensong",
+                link: "/liturgy/rites/book-of-common-prayer/evensong",
+                inPageNav: true,
+              },
+            ],
           },
         ],
       },
@@ -740,6 +763,28 @@ export const menuItems: MenuNode[] = [
         link: "/liturgy/prayers",
         priority: 0.7,
         children: [
+          {
+            title: "Daily Office",
+            link: "/liturgy/prayers/daily-office",
+            priority: 0.6,
+            children: [
+              {
+                title: "Ordinary",
+                link: "/liturgy/prayers/daily-office/ordinary",
+                inPageNav: true,
+              },
+              {
+                title: "Matins",
+                link: "/liturgy/prayers/daily-office/matins",
+                inPageNav: true,
+              },
+              {
+                title: "Evensong",
+                link: "/liturgy/prayers/daily-office/evensong",
+                inPageNav: true,
+              },
+            ],
+          },
           {
             title: "Sign of the Cross",
             link: "/liturgy/prayers/sign-of-the-cross",
@@ -783,53 +828,37 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "Rites",
-        link: "/liturgy/rites",
+        title: "Creeds",
+        link: "/liturgy/creeds",
         priority: 0.7,
         children: [
           {
-            title: "Mass: Roman Rite",
-            link: "/liturgy/rites/mass-roman-rite",
-            inPageNav: true,
+            title: "Apostles' Creed",
+            link: "/liturgy/creeds/apostles-creed",
           },
           {
-            title: "Liturgy of the Hours: Benedictine",
-            link: "/liturgy/rites/liturgy-of-the-hours-benedictine",
-            inPageNav: true,
+            title: "Nicene Creed",
+            link: "/liturgy/creeds/nicene-creed",
           },
           {
-            title: "Liturgy of the Hours: Sarum Rite",
-            link: "/liturgy/rites/liturgy-of-the-hours-sarum-rite",
-            inPageNav: true,
+            title: "Niceno-Constantinopolitan Creed",
+            link: "/liturgy/creeds/niceno-constantinopolitan-creed",
           },
           {
-            title: "Daily Office: BCP",
-            link: "/liturgy/rites/daily-office-bcp",
-            priority: 0.6,
-            children: [
-              {
-                title: "Matins: BCP",
-                link: "/liturgy/rites/daily-office-bcp/matins",
-                inPageNav: true,
-              },
-              {
-                title: "Evensong: BCP",
-                link: "/liturgy/rites/daily-office-bcp/evensong",
-                inPageNav: true,
-              },
-            ],
+            title: "Chalcedonian Creed",
+            link: "/liturgy/creeds/chalcedonian-creed",
           },
           {
-            title: "Chant Rubric: Sarum Rite",
-            link: "/liturgy/rites/chant-rubric-sarum-rite",
-            inPageNav: true,
+            title: "Nicene Creed with Filioque",
+            link: "/liturgy/creeds/nicene-creed-with-filioque",
           },
           {
-            title: "The Ancient Psalter",
-            link: "/liturgy/rites/the-ancient-psalter",
+            title: "Athanasian Creed",
+            link: "/liturgy/creeds/athanasian-creed",
           },
         ],
       },
+
       {
         title: "Music",
         link: "/liturgy/music",

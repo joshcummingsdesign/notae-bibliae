@@ -70,7 +70,7 @@ const Wrapper = styled("header")(({ theme }) => ({
   position: "fixed",
   top: 0,
   left: 0,
-  zIndex: 1,
+  zIndex: 2,
   width: "100%",
   display: "flex",
   justifyContent: "space-between",
