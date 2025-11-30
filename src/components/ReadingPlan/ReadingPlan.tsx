@@ -1,12 +1,13 @@
 "use client";
 import { Autocomplete, styled, TextField } from "@mui/material";
-import psalmPlan from "./psalm-plan.json";
 import readingPlan from "./reading-plan.json";
+import psalmPlan from "./psalm-plan.json";
+import collectPlan from "./collect-plan.json";
 import { useEffect, useState } from "react";
 
 interface Props {
   id: string;
-  type?: "reading" | "psalm";
+  type?: "reading" | "psalm" | "collect";
 }
 
 interface PlanItem {
@@ -38,6 +39,17 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
     );
   }
 
+  if (type === "collect") {
+    const plan = collectPlan.reduce<PlanItems>((acc, val, i) => {
+      acc[String(i)] = val;
+      return acc;
+    }, {});
+
+    return (
+      <PlanPicker id={`${id}-collect`} label="Day" type={type} plan={plan} />
+    );
+  }
+
   const plan = readingPlan.reduce<PlanItems>((acc, val, i) => {
     acc[String(i)] = val;
     return acc;
@@ -61,7 +73,7 @@ export const PlanPicker = ({
 }: {
   id: string;
   label: string;
-  type?: "reading" | "psalm";
+  type?: "reading" | "psalm" | "collect";
   plan: PlanItems;
   books?: PlanItems;
 }) => {
@@ -148,6 +160,7 @@ export const PlanPicker = ({
           />
         </TextWrap>
       )}
+      {type === "collect" && <p>{plan[index].notes}</p>}
       {type === "reading" && (
         <TextWrap>
           <TextInput

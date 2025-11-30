@@ -662,6 +662,18 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Septuagesima",
+                link: "/liturgy/seasons/ordinary-time/septuagesima",
+              },
+              {
+                title: "Sexagesima",
+                link: "/liturgy/seasons/ordinary-time/sexagesima",
+              },
+              {
+                title: "Quinquagesima",
+                link: "/liturgy/seasons/ordinary-time/quinquagesima",
+              },
+              {
                 title: "Trinity Sunday",
                 link: "/liturgy/seasons/ordinary-time/trinity-sunday",
               },
