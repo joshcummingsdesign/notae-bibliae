@@ -8,7 +8,8 @@ export const getSeasons = (
   septuagesima: Dayjs,
   shroveTuesday: Dayjs,
   ashWednesday: Dayjs,
-  easterSunday: Dayjs
+  easterSunday: Dayjs,
+  nextYearsFirstSundayOfAdvent: Dayjs
 ): Season[] => [
   {
     name: "Advent",
@@ -34,5 +35,20 @@ export const getSeasons = (
     name: "Lent",
     start: ashWednesday.format("YYYY-MM-DD"),
     end: easterSunday.subtract(1, "day").format("YYYY-MM-DD"),
+  },
+  {
+    name: "Eastertide",
+    start: easterSunday.format("YYYY-MM-DD"),
+    end: easterSunday.add(48, "day").format("YYYY-MM-DD"),
+  },
+  {
+    name: "Whitsuntide",
+    start: easterSunday.add(49, "day").format("YYYY-MM-DD"),
+    end: easterSunday.add(55, "day").format("YYYY-MM-DD"),
+  },
+  {
+    name: "Trinitytide",
+    start: easterSunday.add(56, "day").format("YYYY-MM-DD"),
+    end: nextYearsFirstSundayOfAdvent.subtract(1, "day").format("YYYY-MM-DD"),
   },
 ];

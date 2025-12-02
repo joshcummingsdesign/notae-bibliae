@@ -1,0 +1,30 @@
+export const numberToWords = (n: number): string => {
+  const ordinalWords: { [key: number]: string } = {
+    1: "First",
+    2: "Second",
+    3: "Third",
+    4: "Fourth",
+    5: "Fifth",
+    6: "Sixth",
+    7: "Seventh",
+    8: "Eighth",
+    9: "Ninth",
+    10: "Tenth",
+    11: "Eleventh",
+    12: "Twelfth",
+    13: "Thirteenth",
+    14: "Fourteenth",
+    15: "Fifteenth",
+    16: "Sixteenth",
+    17: "Seventeenth",
+    18: "Eighteenth",
+    19: "Nineteenth",
+    20: "Twentieth",
+    21: "Twenty-first",
+    22: "Twenty-second",
+    23: "Twenty-third",
+    24: "Twenty-fourth",
+    25: "Twenty-fifth",
+  };
+  return ordinalWords[n] || `${n}th`;
+};

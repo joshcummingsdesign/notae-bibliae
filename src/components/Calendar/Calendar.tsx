@@ -15,7 +15,12 @@ import {
   getPreLentDays,
   getSexagesima,
   getQuinquagesima,
+  getPassionSunday,
+  getAnnunciation,
   getLentDays,
+  getEastertideDays,
+  getWhitsuntideDays,
+  getTrinitytideDays,
   getSeasons,
   groupItemsBySeason,
   formatSeasonMap,
@@ -30,6 +35,7 @@ export const Calendar = () => {
     calendarYear,
     firstSundayOfAdvent
   );
+  const nextYearsFirstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear);
   const calendarItems = getCalendarItems(calendarYear, liturgicalYear);
   const adventSundays = getAdventSundays(firstSundayOfAdvent);
   const easter = getEasterSunday(liturgicalYear);
@@ -45,7 +51,17 @@ export const Calendar = () => {
     quinquagesima,
     shroveTuesday
   );
-  const lentDays = getLentDays(ashWednesday);
+  const passionSunday = getPassionSunday(ashWednesday);
+  const annunciation = getAnnunciation(liturgicalYear, easter);
+  const lentDays = getLentDays(
+    ashWednesday,
+    passionSunday,
+    annunciation,
+    easter
+  );
+  const eastertideDays = getEastertideDays(easter);
+  const whitsuntideDays = getWhitsuntideDays(easter);
+  const trinitytideDays = getTrinitytideDays(easter);
   const seasons = getSeasons(
     calendarYear,
     liturgicalYear,
@@ -53,7 +69,8 @@ export const Calendar = () => {
     septuagesima,
     shroveTuesday,
     ashWednesday,
-    easter
+    easter,
+    nextYearsFirstSundayOfAdvent
   );
 
   const calendar = [
@@ -62,6 +79,9 @@ export const Calendar = () => {
     ...epiphanySundays,
     ...preLentDays,
     ...lentDays,
+    ...eastertideDays,
+    ...whitsuntideDays,
+    ...trinitytideDays,
   ];
 
   const seasonMap = groupItemsBySeason(calendar, seasons);
@@ -84,5 +104,16 @@ export const Calendar = () => {
     markdown,
   ].join("\n");
 
-  return <Markdown remarkPlugins={[remarkSmartypants]}>{text}</Markdown>;
+  return (
+    <>
+      <Markdown remarkPlugins={[remarkSmartypants]}>{text}</Markdown>
+      <br />
+      <hr />
+      <small>
+        <a href="/events/liturgical-calendar.ics" download>
+          ⤓ Download Calendar
+        </a>
+      </small>
+    </>
+  );
 };

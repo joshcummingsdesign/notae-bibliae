@@ -2,23 +2,28 @@ import dayjs from "dayjs";
 import { SeasonMap, CalendarItem, FormattedSeasonMap } from "../interfaces";
 
 /**
- * Format calendar titles and include feasts of rank 1 and 3.
- * If there is no rank 1, show rank 2.
+ * Format calendar titles.
+ * Rank 1 > 2 > 3. Rank 4 and 5 always show.
  */
 const formatTitlesForDay = (items: CalendarItem[]): string => {
-  const rank1 = items.find((i) => i.rank === 1);
-  const rank2 = items.find((i) => i.rank === 2);
-  const rank3Items = items.filter((i) => i.rank === 3);
-
   const result: string[] = [];
 
-  if (rank1) {
-    result.push(rank1.title);
-  } else if (rank2) {
-    result.push(rank2.title);
-  }
+  // Always include rank 4 items
+  const rank4Items = items.filter((i) => i.rank === 4);
+  rank4Items.forEach((i) => result.push(i.title));
 
-  rank3Items.forEach((i) => result.push(i.title));
+  // Always include rank 5 items
+  const rank5Items = items.filter((i) => i.rank === 5);
+  rank5Items.forEach((i) => result.push(i.title));
+
+  // Include the highest-priority among ranks 1, 2, 3
+  const rank1 = items.find((i) => i.rank === 1);
+  const rank2 = items.find((i) => i.rank === 2);
+  const rank3 = items.find((i) => i.rank === 3);
+
+  if (rank1) result.unshift(rank1.title); // put rank 1 first
+  else if (rank2) result.unshift(rank2.title); // rank 2 next
+  else if (rank3) result.unshift(rank3.title); // rank 3 last
 
   return result.join(" — ");
 };
