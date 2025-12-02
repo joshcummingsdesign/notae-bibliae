@@ -4,7 +4,8 @@ import { CalendarItem } from "../interfaces";
 export const getEastertideDays = (easter: Dayjs): CalendarItem[] => [
   {
     date: easter.format("YYYY-MM-DD"),
-    title: "[Easter (Resurrection Sunday)](/liturgy/seasons/eastertide/easter)",
+    title:
+      "[Easter (Resurrection of the Lord)](/liturgy/seasons/eastertide/easter)",
     rank: 1,
   },
   {
@@ -45,12 +46,13 @@ export const getEastertideDays = (easter: Dayjs): CalendarItem[] => [
   },
   {
     date: easter.add(39, "day").format("YYYY-MM-DD"),
-    title: "[Ascension Day](/liturgy/seasons/eastertide/ascension-day)",
+    title:
+      "[Ascension Day](/liturgy/seasons/eastertide/ascensiontide/ascension-day)",
     rank: 1,
   },
   {
     date: easter.add(42, "day").format("YYYY-MM-DD"),
-    title: "Seventh Sunday of Easter (Sunday after Ascension Day)",
+    title: "Seventh Sunday of Easter (Sunday After Ascension Day)",
     rank: 1,
   },
 ];

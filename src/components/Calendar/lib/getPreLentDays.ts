@@ -9,22 +9,22 @@ export const getPreLentDays = (
 ): CalendarItem[] => [
   {
     date: septuagesima.format("YYYY-MM-DD"),
-    title: "[Septuagesima](/liturgy/seasons/ordinary-time/septuagesima)",
+    title: "[Septuagesima](/liturgy/seasons/pre-lent/septuagesima)",
     rank: 1,
   },
   {
     date: sexagesima.format("YYYY-MM-DD"),
-    title: "[Sexagesima](/liturgy/seasons/ordinary-time/sexagesima)",
+    title: "[Sexagesima](/liturgy/seasons/pre-lent/sexagesima)",
     rank: 1,
   },
   {
     date: quinquagesima.format("YYYY-MM-DD"),
-    title: "[Quinquagesima](/liturgy/seasons/ordinary-time/quinquagesima)",
+    title: "[Quinquagesima](/liturgy/seasons/pre-lent/quinquagesima)",
     rank: 1,
   },
   {
     date: shroveTuesday.format("YYYY-MM-DD"),
-    title: "[Shrove Tuesday](/liturgy/seasons/lent#shrove-tuesday)",
+    title: "[Shrove Tuesday](/liturgy/seasons/pre-lent/shrove-tuesday)",
     rank: 1,
   },
 ];

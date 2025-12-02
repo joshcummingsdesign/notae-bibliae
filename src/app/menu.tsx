@@ -546,6 +546,12 @@ export const menuItems: MenuNode[] = [
             title: "Advent",
             link: "/liturgy/seasons/advent",
             priority: 0.6,
+            children: [
+              {
+                title: "Gaudete Sunday",
+                link: "/liturgy/seasons/advent/gaudete-sunday",
+              },
+            ],
           },
           {
             title: "Chirstmastide",
@@ -553,8 +559,8 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
-                title: "Christmas",
-                link: "/liturgy/seasons/christmastide/christmas",
+                title: "Christmas Day",
+                link: "/liturgy/seasons/christmastide/christmas-day",
               },
               {
                 title: "The Holy Innocents",
@@ -586,42 +592,78 @@ export const menuItems: MenuNode[] = [
             ],
           },
           {
-            title: "Lent",
-            link: "/liturgy/seasons/lent",
-            priority: 0.6,
-          },
-          {
-            title: "Passiontide",
-            link: "/liturgy/seasons/passiontide",
+            title: "Pre-Lent",
+            link: "/liturgy/seasons/pre-lent",
             priority: 0.6,
             children: [
               {
-                title: "Palm Sunday",
-                link: "/liturgy/seasons/passiontide/palm-sunday",
+                title: "Septuagesima",
+                link: "/liturgy/seasons/pre-lent/septuagesima",
               },
               {
-                title: "Holy Monday",
-                link: "/liturgy/seasons/passiontide/holy-monday",
+                title: "Sexagesima",
+                link: "/liturgy/seasons/pre-lent/sexagesima",
               },
               {
-                title: "Holy Tuesday",
-                link: "/liturgy/seasons/passiontide/holy-tuesday",
+                title: "Quinquagesima",
+                link: "/liturgy/seasons/pre-lent/quinquagesima",
               },
               {
-                title: "Spy Wednesday",
-                link: "/liturgy/seasons/passiontide/spy-wednesday",
+                title: "Shrove Tuesday",
+                link: "/liturgy/seasons/pre-lent/shrove-tuesday",
+              },
+            ],
+          },
+          {
+            title: "Lent",
+            link: "/liturgy/seasons/lent",
+            priority: 0.6,
+            children: [
+              {
+                title: "Ash Wednesday",
+                link: "/liturgy/seasons/lent/ash-wednesday",
               },
               {
-                title: "Maundy Thursday",
-                link: "/liturgy/seasons/passiontide/maundy-thursday",
+                title: "Laetare Sunday",
+                link: "/liturgy/seasons/lent/laetare-sunday",
               },
               {
-                title: "Good Friday",
-                link: "/liturgy/seasons/passiontide/good-friday",
-              },
-              {
-                title: "Holy Saturday",
-                link: "/liturgy/seasons/passiontide/holy-saturday",
+                title: "Passiontide",
+                link: "/liturgy/seasons/lent/passiontide",
+                children: [
+                  {
+                    title: "Passion Sunday",
+                    link: "/liturgy/seasons/lent/passiontide/passion-sunday",
+                  },
+                  {
+                    title: "Palm Sunday",
+                    link: "/liturgy/seasons/lent/passiontide/palm-sunday",
+                  },
+                  {
+                    title: "Holy Monday",
+                    link: "/liturgy/seasons/lent/passiontide/holy-monday",
+                  },
+                  {
+                    title: "Holy Tuesday",
+                    link: "/liturgy/seasons/lent/passiontide/holy-tuesday",
+                  },
+                  {
+                    title: "Spy Wednesday",
+                    link: "/liturgy/seasons/lent/passiontide/spy-wednesday",
+                  },
+                  {
+                    title: "Maundy Thursday",
+                    link: "/liturgy/seasons/lent/passiontide/maundy-thursday",
+                  },
+                  {
+                    title: "Good Friday",
+                    link: "/liturgy/seasons/lent/passiontide/good-friday",
+                  },
+                  {
+                    title: "Holy Saturday",
+                    link: "/liturgy/seasons/lent/passiontide/holy-saturday",
+                  },
+                ],
               },
             ],
           },
@@ -643,51 +685,66 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/seasons/eastertide/second-sunday-of-easter",
               },
               {
-                title: "Annunciation",
+                title: "Annunciation of the Lord",
                 link: "/liturgy/seasons/eastertide/annunciation",
               },
               {
-                title: "Ascension Day",
-                link: "/liturgy/seasons/eastertide/ascension-day",
-              },
-              {
-                title: "Pentecost",
-                link: "/liturgy/seasons/eastertide/pentecost",
+                title: "Ascensiontide",
+                link: "/liturgy/seasons/eastertide/ascensiontide",
+                children: [
+                  {
+                    title: "Ascension Day",
+                    link: "/liturgy/seasons/eastertide/ascensiontide/ascension-day",
+                  },
+                ],
               },
             ],
           },
           {
-            title: "Ordinary Time",
-            link: "/liturgy/seasons/ordinary-time",
+            title: "Whitsuntide",
+            link: "/liturgy/seasons/whitsuntide",
             priority: 0.6,
             children: [
               {
-                title: "Septuagesima",
-                link: "/liturgy/seasons/ordinary-time/septuagesima",
+                title: "Pentecost (Whitsunday)",
+                link: "/liturgy/seasons/whitsuntide/pentecost",
               },
-              {
-                title: "Sexagesima",
-                link: "/liturgy/seasons/ordinary-time/sexagesima",
-              },
-              {
-                title: "Quinquagesima",
-                link: "/liturgy/seasons/ordinary-time/quinquagesima",
-              },
+            ],
+          },
+          {
+            title: "Trinitytide",
+            link: "/liturgy/seasons/trinitytide",
+            priority: 0.6,
+            children: [
               {
                 title: "Trinity Sunday",
-                link: "/liturgy/seasons/ordinary-time/trinity-sunday",
+                link: "/liturgy/seasons/trinitytide/trinity-sunday",
               },
               {
-                title: "Transfiguration",
-                link: "/liturgy/seasons/ordinary-time/transfiguration",
+                title: "Transfiguration of the Lord",
+                link: "/liturgy/seasons/trinitytide/transfiguration",
               },
               {
                 title: "Holy Cross Day",
-                link: "/liturgy/seasons/ordinary-time/holy-cross-day",
+                link: "/liturgy/seasons/trinitytide/holy-cross-day",
               },
               {
                 title: "Allhallowtide",
-                link: "/liturgy/seasons/ordinary-time/allhallowtide",
+                link: "/liturgy/seasons/trinitytide/allhallowtide",
+                children: [
+                  {
+                    title: "All Hallows' Eve",
+                    link: "/liturgy/seasons/trinitytide/allhallowtide/all-hallows-eve",
+                  },
+                  {
+                    title: "All Saints' Day",
+                    link: "/liturgy/seasons/trinitytide/allhallowtide/all-saints-day",
+                  },
+                  {
+                    title: "All Souls' Day",
+                    link: "/liturgy/seasons/trinitytide/allhallowtide/all-souls-day",
+                  },
+                ],
               },
             ],
           },

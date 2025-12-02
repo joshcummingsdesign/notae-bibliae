@@ -10,9 +10,20 @@ export const getEpiphanySundays = (liturgicalYear: number): CalendarItem[] => {
 
   const titles = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth"];
 
-  return titles.map((title, i) => ({
-    date: firstSunday.add(i * 7, "day").format("YYYY-MM-DD"),
-    title: `${title} Sunday of Epiphany`,
-    rank: 2,
-  }));
+  return titles.map((title, i) => {
+    const date = firstSunday.add(i * 7, "day").format("YYYY-MM-DD");
+
+    // Add "(Baptism of the Lord)" ONLY to First Sunday
+    const baseTitle = `${title} Sunday of Epiphany`;
+    const fullTitle =
+      i === 0
+        ? `${baseTitle}: [Baptism of the Lord](/liturgy/seasons/epiphanytide/baptism-of-the-lord)`
+        : baseTitle;
+
+    return {
+      date,
+      title: fullTitle,
+      rank: 2,
+    };
+  });
 };

@@ -15,7 +15,7 @@ export const getAdventSundays = (
 
     // Third Sunday (index 2) → Gaudete
     if (i === 2) {
-      title = `${title}: [Gaudete Sunday](/liturgy/seasons/advent#gaudete-sunday)`;
+      title = `${title}: [Gaudete Sunday](/liturgy/seasons/advent/gaudete-sunday)`;
     }
 
     adventSundays.push({

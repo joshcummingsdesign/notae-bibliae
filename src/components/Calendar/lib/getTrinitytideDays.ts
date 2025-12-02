@@ -11,8 +11,8 @@ export const getTrinitytideDays = (easter: Dayjs): CalendarItem[] => {
     const sunday = trinitySunday.add(i * 7, "day");
     let title =
       i === 0
-        ? "[Trinity Sunday](/liturgy/seasons/ordinary-time/trinity-sunday)"
-        : `${numberToWords(i)} Sunday after Trinity`;
+        ? "[Trinity Sunday](/liturgy/seasons/trinitytide/trinity-sunday)"
+        : `${numberToWords(i)} Sunday After Trinity`;
 
     sundays.push({
       date: sunday.format("YYYY-MM-DD"),

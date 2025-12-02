@@ -14,9 +14,9 @@ const getLentSundays = (passionSunday: Dayjs): CalendarItem[] => {
     let sundayTitle = `${title} Sunday of Lent`;
 
     if (i === 3) {
-      sundayTitle += `: [Laetare Sunday](/liturgy/seasons/lent#laetare-sunday)`;
+      sundayTitle += `: [Laetare Sunday](/liturgy/seasons/lent/laetare-sunday)`;
     } else if (i === 4) {
-      sundayTitle += `: [Passion Sunday](/liturgy/seasons/passiontide)`;
+      sundayTitle += `: [Passion Sunday](/liturgy/seasons/lent/passiontide/passion-sunday)`;
     }
 
     return {
@@ -33,43 +33,43 @@ const getHolyWeekDays = (easterSunday: Dayjs): CalendarItem[] => {
     {
       date: holyWeekStart.format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Palm Sunday](/liturgy/seasons/passiontide/palm-sunday)",
+        "Holy Week: [Palm Sunday](/liturgy/seasons/lent/passiontide/palm-sunday)",
       rank: 1,
     },
     {
       date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Holy Monday](/liturgy/seasons/passiontide/holy-monday)",
+        "Holy Week: [Holy Monday](/liturgy/seasons/lent/passiontide/holy-monday)",
       rank: 1,
     },
     {
       date: holyWeekStart.add(2, "day").format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Holy Tuesday](/liturgy/seasons/passiontide/holy-tuesday)",
+        "Holy Week: [Holy Tuesday](/liturgy/seasons/lent/passiontide/holy-tuesday)",
       rank: 1,
     },
     {
       date: holyWeekStart.add(3, "day").format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Spy Wednesday](/liturgy/seasons/passiontide/spy-wednesday)",
+        "Holy Week: [Spy Wednesday](/liturgy/seasons/lent/passiontide/spy-wednesday)",
       rank: 1,
     },
     {
       date: holyWeekStart.add(4, "day").format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Maundy Thursday](/liturgy/seasons/passiontide/maundy-thursday)",
+        "Holy Week: [Maundy Thursday](/liturgy/seasons/lent/passiontide/maundy-thursday)",
       rank: 1,
     },
     {
       date: holyWeekStart.add(5, "day").format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/seasons/passiontide/good-friday)",
+        "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/seasons/lent/passiontide/good-friday)",
       rank: 1,
     },
     {
       date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
       title:
-        "Holy Week: [Holy Saturday](/liturgy/seasons/passiontide/holy-saturday)",
+        "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
       rank: 1,
     },
     {
@@ -88,7 +88,7 @@ export const getLentDays = (
 ): CalendarItem[] => [
   {
     date: ashWednesday.format("YYYY-MM-DD"),
-    title: "[Ash Wednesday](/liturgy/seasons/lent#ash-wednesday)",
+    title: "[Ash Wednesday](/liturgy/seasons/lent/ash-wednesday)",
     rank: 1,
   },
   ...getLentSundays(passionSunday),

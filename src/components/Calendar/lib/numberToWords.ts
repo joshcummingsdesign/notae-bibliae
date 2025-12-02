@@ -20,11 +20,11 @@ export const numberToWords = (n: number): string => {
     18: "Eighteenth",
     19: "Nineteenth",
     20: "Twentieth",
-    21: "Twenty-first",
-    22: "Twenty-second",
-    23: "Twenty-third",
-    24: "Twenty-fourth",
-    25: "Twenty-fifth",
+    21: "Twenty-First",
+    22: "Twenty-Second",
+    23: "Twenty-Third",
+    24: "Twenty-Fourth",
+    25: "Twenty-Fifth",
   };
   return ordinalWords[n] || `${n}th`;
 };

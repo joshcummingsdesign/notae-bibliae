@@ -66,7 +66,7 @@
   },
   {
     "date": "calendarYear-12-25",
-    "title": "[Christmas Day (Nativity of the Lord)](/liturgy/seasons/christmastide/christmas)",
+    "title": "[Christmas Day (Nativity of the Lord)](/liturgy/seasons/christmastide/christmas-day)",
     "rank": 1
   },
   {
@@ -93,6 +93,11 @@
     "date": "liturgicalYear-01-02",
     "title": "Saints [Basil the Great](/people/saints/cappadocian-fathers/basil-the-great) and [Gregory of Nazianzus](/people/saints/cappadocian-fathers/gregory-of-nazianzus), Bishops and Doctors of the Church",
     "rank": 5
+  },
+  {
+    "date": "liturgicalYear-01-05",
+    "title": "Epiphany Eve",
+    "rank": 1
   },
   {
     "date": "liturgicalYear-01-06",
@@ -141,7 +146,7 @@
   },
   {
     "date": "liturgicalYear-02-02",
-    "title": "[Presentation of the Lord (Purification)](/liturgy/seasons/epiphanytide/presentation-of-our-lord)",
+    "title": "[Presentation of the Lord (Purification)](/liturgy/seasons/epiphanytide/presentation-of-the-lord)",
     "rank": 1
   },
   {
@@ -301,7 +306,7 @@
   },
   {
     "date": "liturgicalYear-08-06",
-    "title": "[Transfiguration of the Lord](/liturgy/seasons/ordinary-time/transfiguration)",
+    "title": "[Transfiguration of the Lord](/liturgy/seasons/trinitytide/transfiguration)",
     "rank": 1
   },
   {
@@ -356,7 +361,7 @@
   },
   {
     "date": "liturgicalYear-09-14",
-    "title": "[Holy Cross Day](/liturgy/seasons/ordinary-time/holy-cross-day)",
+    "title": "[Holy Cross Day](/liturgy/seasons/trinitytide/holy-cross-day)",
     "rank": 1
   },
   {
@@ -401,7 +406,7 @@
   },
   {
     "date": "liturgicalYear-10-31",
-    "title": "[All Hallows' Eve](/liturgy/seasons/ordinary-time/allhallowtide)",
+    "title": "[All Hallows' Eve](/liturgy/seasons/trinitytide/allhallowtide/all-hallows-eve)",
     "rank": 1
   },
   {
@@ -411,12 +416,12 @@
   },
   {
     "date": "liturgicalYear-11-01",
-    "title": "[All Saints' Day](/liturgy/seasons/ordinary-time/allhallowtide)",
+    "title": "[All Saints' Day](/liturgy/seasons/trinitytide/allhallowtide/all-saints-day)",
     "rank": 1
   },
   {
     "date": "liturgicalYear-11-02",
-    "title": "[All Souls' Day](/liturgy/seasons/ordinary-time/allhallowtide)",
+    "title": "[All Souls' Day](/liturgy/seasons/trinitytide/allhallowtide/all-souls-day)",
     "rank": 1
   },
   {

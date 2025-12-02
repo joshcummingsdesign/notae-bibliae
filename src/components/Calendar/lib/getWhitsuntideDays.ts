@@ -4,7 +4,7 @@ import { CalendarItem } from "../interfaces";
 export const getWhitsuntideDays = (easter: Dayjs): CalendarItem[] => [
   {
     date: easter.add(49, "day").format("YYYY-MM-DD"),
-    title: "[Pentecost (Whitsunday)](/liturgy/seasons/eastertide/pentecost)",
+    title: "[Pentecost (Whitsunday)](/liturgy/seasons/whitsuntide/pentecost)",
     rank: 1,
   },
   {
