@@ -5,7 +5,7 @@
     "node": "22.x"
   },
   "scripts": {
-    "generate-calendar": "node scripts/generateCalendar.js",
+    "generate-calendar": "tsx scripts/generateCalendar.ts",
     "dev": "next dev --turbopack",
     "build": "npm run generate-calendar && next build --turbopack",
     "start": "next start"
@@ -43,6 +43,7 @@
     "@types/react-dom": "^19",
     "ics": "^3.8.1",
     "sass": "^1.93.2",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
