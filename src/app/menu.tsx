@@ -554,7 +554,7 @@ export const menuItems: MenuNode[] = [
             ],
           },
           {
-            title: "Chirstmastide",
+            title: "Christmastide",
             link: "/liturgy/seasons/christmastide",
             priority: 0.6,
             children: [
