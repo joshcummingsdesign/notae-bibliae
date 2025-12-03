@@ -1,13 +1,22 @@
 "use client";
+import dayjs from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import readingPlan from "./reading-plan.json";
 import psalmPlan from "./psalm-plan.json";
 import collectPlan from "./collect-plan.json";
 import { useEffect, useState } from "react";
+import { getCalendarData } from "../Calendar/getCalendarData";
+import { getFirstSundayOfAdvent, getLiturgicalYear } from "../Calendar/lib";
+
+dayjs.extend(isSameOrBefore);
+dayjs.extend(isSameOrAfter);
 
 interface Props {
   id: string;
   type?: "reading" | "psalm" | "collect";
+  hour?: "matins" | "evensong";
 }
 
 interface PlanItem {
@@ -22,7 +31,11 @@ interface PlanItem {
 
 type PlanItems = { [index: string]: PlanItem };
 
-export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
+export const ReadingPlan: React.FC<Props> = ({
+  id,
+  type = "reading",
+  hour,
+}) => {
   if (type === "psalm") {
     const plan = psalmPlan.reduce<PlanItems>((acc, val, i) => {
       acc[String(i)] = val;
@@ -45,9 +58,69 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
       return acc;
     }, {});
 
-    return (
-      <PlanPicker id={`${id}-collect`} label="Day" type={type} plan={plan} />
+    const today = dayjs("2026-11-08");
+    const calendarYear = today.year();
+    const firstSundayOfAdvent = getFirstSundayOfAdvent(calendarYear);
+    const liturgicalYear = getLiturgicalYear(
+      today,
+      calendarYear,
+      firstSundayOfAdvent
     );
+    const calendarData = getCalendarData(
+      firstSundayOfAdvent,
+      calendarYear,
+      liturgicalYear
+    );
+
+    const days = Object.values(calendarData).reduce((acc, val) => {
+      acc = [...acc, ...val];
+      return acc;
+    }, []);
+
+    const planItems = Object.values(plan);
+
+    let currentPlan = planItems[0];
+    for (let i = 0; i < days.length; i++) {
+      const item = days[i];
+      const parts = item.split("—");
+      const firstPart = parts[1];
+      const secondPart = parts[2] || null;
+
+      let date = dayjs(`${parts[0]}, ${liturgicalYear}`);
+      if (
+        date.isSameOrAfter(dayjs(firstSundayOfAdvent.add(1, "year"), "day"))
+      ) {
+        date = date.subtract(1, "year");
+      }
+
+      if (date.isSameOrBefore(today, "day")) {
+        const p = planItems.filter((item) => {
+          const re = new RegExp(`^${item.title}`);
+          const cleanPart = firstPart
+            .trim()
+            .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+          return re.test(cleanPart);
+        });
+        if (p.length) {
+          currentPlan = p[0];
+        }
+
+        if (hour === "evensong" && secondPart) {
+          const p = planItems.filter((item) => {
+            const re = new RegExp(`^${item.title}`);
+            const cleanPart = secondPart
+              .trim()
+              .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+            return re.test(cleanPart);
+          });
+          if (p.length) {
+            currentPlan = p[0];
+          }
+        }
+      }
+    }
+
+    return <CollectViewer plan={currentPlan} />;
   }
 
   const plan = readingPlan.reduce<PlanItems>((acc, val, i) => {
@@ -73,9 +146,8 @@ export const PlanPicker = ({
 }: {
   id: string;
   label: string;
-  type?: "reading" | "psalm" | "collect";
+  type?: "reading" | "psalm";
   plan: PlanItems;
-  books?: PlanItems;
 }) => {
   const [index, setIndex] = useState<number>(0);
   const [notes, setNotes] = useState<string>("");
@@ -160,7 +232,6 @@ export const PlanPicker = ({
           />
         </TextWrap>
       )}
-      {type === "collect" && <p>{plan[index].notes}</p>}
       {type === "reading" && (
         <TextWrap>
           <TextInput
@@ -172,6 +243,17 @@ export const PlanPicker = ({
           />
         </TextWrap>
       )}
+    </>
+  );
+};
+
+export const CollectViewer = ({ plan }: { plan: PlanItem }) => {
+  return (
+    <>
+      <p>
+        <strong>Collect for {plan.title}</strong>
+      </p>
+      <p>{plan.notes}</p>
     </>
   );
 };

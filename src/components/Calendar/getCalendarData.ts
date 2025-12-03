@@ -32,7 +32,6 @@ export const getCalendarData = (
   const calendarItems = getCalendarItems(calendarYear, liturgicalYear);
   const adventSundays = getAdventSundays(firstSundayOfAdvent);
   const christmastideDays = getChristmastideDays(calendarYear);
-  console.log(christmastideDays);
   const easter = getEasterSunday(liturgicalYear);
   const ashWednesday = getAshWednesday(easter);
   const septuagesima = getSeptuagesima(easter);

@@ -11,7 +11,7 @@ export const getChristmastideDays = (calendarYear: number): CalendarItem[] => {
   return [
     {
       date: sundayAfterChristmas.format("YYYY-MM-DD"),
-      title: "Sunday after Christmas Day",
+      title: "Sunday After Christmas Day",
       rank: 2,
     },
   ];
