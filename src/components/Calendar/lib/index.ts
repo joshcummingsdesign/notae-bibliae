@@ -3,6 +3,7 @@ export * from "./getCalendarItems";
 export * from "./getFirstSundayOfAdvent";
 export * from "./getLiturgicalYear";
 export * from "./getAdventSundays";
+export * from "./getChristmastideDays";
 export * from "./getEasterSunday";
 export * from "./getAshWednesday";
 export * from "./getSeptuagesima";

@@ -3,6 +3,7 @@ import {
   getCalendarItems,
   getFirstSundayOfAdvent,
   getAdventSundays,
+  getChristmastideDays,
   getEasterSunday,
   getAshWednesday,
   getSeptuagesima,
@@ -30,6 +31,8 @@ export const getCalendarData = (
   const nextYearsFirstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear);
   const calendarItems = getCalendarItems(calendarYear, liturgicalYear);
   const adventSundays = getAdventSundays(firstSundayOfAdvent);
+  const christmastideDays = getChristmastideDays(calendarYear);
+  console.log(christmastideDays);
   const easter = getEasterSunday(liturgicalYear);
   const ashWednesday = getAshWednesday(easter);
   const septuagesima = getSeptuagesima(easter);
@@ -68,6 +71,7 @@ export const getCalendarData = (
   const calendar = [
     ...calendarItems,
     ...adventSundays,
+    ...christmastideDays,
     ...epiphanySundays,
     ...preLentDays,
     ...lentDays,
