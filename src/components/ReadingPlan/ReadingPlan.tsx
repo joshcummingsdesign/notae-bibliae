@@ -16,7 +16,6 @@ dayjs.extend(isSameOrAfter);
 interface Props {
   id: string;
   type?: "reading" | "psalm" | "collect";
-  hour?: "matins" | "evensong";
 }
 
 interface PlanItem {
@@ -31,11 +30,7 @@ interface PlanItem {
 
 type PlanItems = { [index: string]: PlanItem };
 
-export const ReadingPlan: React.FC<Props> = ({
-  id,
-  type = "reading",
-  hour,
-}) => {
+export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
   if (type === "psalm") {
     const plan = psalmPlan.reduce<PlanItems>((acc, val, i) => {
       acc[String(i)] = val;
@@ -80,6 +75,7 @@ export const ReadingPlan: React.FC<Props> = ({
     const planItems = Object.values(plan);
 
     let currentPlan = planItems[0];
+    let secondaryPlan: PlanItem | null = null;
     for (let i = 0; i < days.length; i++) {
       const item = days[i];
       const parts = item.split("—");
@@ -105,7 +101,7 @@ export const ReadingPlan: React.FC<Props> = ({
           currentPlan = p[0];
         }
 
-        if (hour === "evensong" && secondPart) {
+        if (secondPart) {
           const p = planItems.filter((item) => {
             const re = new RegExp(`^${item.title}`);
             const cleanPart = secondPart
@@ -114,13 +110,15 @@ export const ReadingPlan: React.FC<Props> = ({
             return re.test(cleanPart);
           });
           if (p.length) {
-            currentPlan = p[0];
+            secondaryPlan = p[0];
           }
         }
       }
     }
 
-    return <CollectViewer plan={currentPlan} />;
+    return (
+      <CollectViewer currentPlan={currentPlan} secondaryPlan={secondaryPlan} />
+    );
   }
 
   const plan = readingPlan.reduce<PlanItems>((acc, val, i) => {
@@ -247,13 +245,30 @@ export const PlanPicker = ({
   );
 };
 
-export const CollectViewer = ({ plan }: { plan: PlanItem }) => {
+export const CollectViewer = ({
+  currentPlan,
+  secondaryPlan,
+}: {
+  currentPlan: PlanItem;
+  secondaryPlan: PlanItem | null;
+}) => {
   return (
     <>
       <p>
-        <strong>Collect for {plan.title}</strong>
+        <strong>{currentPlan.title}</strong>
       </p>
-      <p>{plan.notes}</p>
+      <p>{currentPlan.notes}</p>
+      {secondaryPlan && (
+        <>
+          <p>
+            <strong>— or —</strong>
+          </p>
+          <p>
+            <strong>{secondaryPlan.title}</strong>
+          </p>
+          <p>{secondaryPlan.notes}</p>
+        </>
+      )}
     </>
   );
 };
