@@ -58,7 +58,7 @@ export const ReadingPlan: React.FC<Props> = ({
       return acc;
     }, {});
 
-    const today = dayjs("2026-11-08");
+    const today = dayjs();
     const calendarYear = today.year();
     const firstSundayOfAdvent = getFirstSundayOfAdvent(calendarYear);
     const liturgicalYear = getLiturgicalYear(

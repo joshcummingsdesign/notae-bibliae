@@ -1609,10 +1609,6 @@ export const menuItems: MenuNode[] = [
                 title: "Michael",
                 link: "/people/saints/angels/michael",
               },
-              {
-                title: "Raphael",
-                link: "/people/saints/angels/raphael",
-              },
             ],
           },
           {
