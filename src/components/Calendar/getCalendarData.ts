@@ -21,17 +21,29 @@ import {
   getSeasons,
   groupItemsBySeason,
   formatSeasonMap,
+  getLiturgicalYear,
 } from "./lib";
+import { FormattedSeasonMap } from "./interfaces";
 
 export const getCalendarData = (
-  firstSundayOfAdvent: Dayjs,
-  calendarYear: number,
-  liturgicalYear: number
-) => {
-  const nextYearsFirstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear);
-  const calendarItems = getCalendarItems(calendarYear, liturgicalYear);
+  today: Dayjs
+): {
+  calendarData: FormattedSeasonMap;
+  liturgicalYear: number;
+  firstSundayOfAdvent: Dayjs;
+} => {
+  const calendarYear = today.year();
+  // Get the current year's first sunday of advent
+  let firstSundayOfAdvent = getFirstSundayOfAdvent(calendarYear);
+  // This way, we can get the liturgical year
+  const liturgicalYear = getLiturgicalYear(today, firstSundayOfAdvent);
+  // But if we are already in the liturgical year, we need last year's advent dates
+  if (calendarYear === liturgicalYear) {
+    firstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear - 1);
+  }
+  const calendarItems = getCalendarItems(liturgicalYear);
   const adventSundays = getAdventSundays(firstSundayOfAdvent);
-  const christmastideDays = getChristmastideDays(calendarYear);
+  const christmastideDays = getChristmastideDays(liturgicalYear);
   const easter = getEasterSunday(liturgicalYear);
   const ashWednesday = getAshWednesday(easter);
   const septuagesima = getSeptuagesima(easter);
@@ -46,7 +58,7 @@ export const getCalendarData = (
     shroveTuesday
   );
   const passionSunday = getPassionSunday(ashWednesday);
-  const annunciation = getAnnunciation(liturgicalYear, easter);
+  const annunciation = getAnnunciation(easter);
   const lentDays = getLentDays(
     ashWednesday,
     passionSunday,
@@ -56,8 +68,8 @@ export const getCalendarData = (
   const eastertideDays = getEastertideDays(easter);
   const whitsuntideDays = getWhitsuntideDays(easter);
   const trinitytideDays = getTrinitytideDays(easter);
+  const nextYearsFirstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear);
   const seasons = getSeasons(
-    calendarYear,
     liturgicalYear,
     firstSundayOfAdvent,
     septuagesima,
@@ -80,5 +92,9 @@ export const getCalendarData = (
   ];
 
   const seasonMap = groupItemsBySeason(calendar, seasons);
-  return formatSeasonMap(seasonMap);
+  return {
+    calendarData: formatSeasonMap(seasonMap),
+    liturgicalYear,
+    firstSundayOfAdvent,
+  };
 };

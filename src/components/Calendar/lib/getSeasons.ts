@@ -2,7 +2,6 @@ import { Season } from "../interfaces";
 import { Dayjs } from "dayjs";
 
 export const getSeasons = (
-  calendarYear: number,
   liturgicalYear: number,
   firstSundayOfAdvent: Dayjs,
   septuagesima: Dayjs,
@@ -14,11 +13,11 @@ export const getSeasons = (
   {
     name: "Advent",
     start: firstSundayOfAdvent.format("YYYY-MM-DD"),
-    end: `${calendarYear}-12-24`,
+    end: `${liturgicalYear - 1}-12-24`,
   },
   {
     name: "Christmastide",
-    start: `${calendarYear}-12-25`,
+    start: `${liturgicalYear - 1}-12-25`,
     end: `${liturgicalYear}-01-05`,
   },
   {

@@ -1,12 +1,16 @@
 import dayjs from "dayjs";
 import { CalendarItem } from "../interfaces";
 
-export const getChristmastideDays = (calendarYear: number): CalendarItem[] => {
+export const getChristmastideDays = (
+  liturgicalYear: number
+): CalendarItem[] => {
+  const calendarYear = liturgicalYear - 1;
   const christmas = dayjs(`${calendarYear}-12-25`);
 
-  // Calculate the *next* Sunday (never Christmas Day itself)
-  const daysUntilSunday = (7 - christmas.day()) % 7 || 7;
-  const sundayAfterChristmas = christmas.add(daysUntilSunday, "day");
+  const sundayAfterChristmas =
+    christmas.day() === 0
+      ? christmas.add(7, "day")
+      : christmas.add(7 - christmas.day(), "day");
 
   return [
     {

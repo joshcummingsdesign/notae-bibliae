@@ -27,8 +27,8 @@ const getLentSundays = (passionSunday: Dayjs): CalendarItem[] => {
   });
 };
 
-const getHolyWeekDays = (easterSunday: Dayjs): CalendarItem[] => {
-  const holyWeekStart = easterSunday.subtract(7, "day"); // Palm Sunday
+const getHolyWeekDays = (easter: Dayjs): CalendarItem[] => {
+  const holyWeekStart = easter.subtract(7, "day"); // Palm Sunday
   return [
     {
       date: holyWeekStart.format("YYYY-MM-DD"),

@@ -1,14 +1,15 @@
-import { Dayjs } from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+
+dayjs.extend(isSameOrAfter);
 
 export const getLiturgicalYear = (
   today: Dayjs,
-  calendarYear: number,
   firstSundayOfAdvent: Dayjs
 ): number => {
-  // If today is on or after the First Sunday of Advent,
-  // the liturgical year is the next calendar year
-  return today.isSame(firstSundayOfAdvent, "day") ||
-    today.isAfter(firstSundayOfAdvent, "day")
-    ? calendarYear + 1
-    : calendarYear;
+  if (today.isSameOrAfter(firstSundayOfAdvent)) {
+    return today.add(1, "year").year();
+  }
+
+  return today.year();
 };

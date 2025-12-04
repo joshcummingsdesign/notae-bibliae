@@ -1,13 +1,10 @@
 import { CalendarItem } from "../interfaces";
 import calendarItems from "../calendar-items.json";
 
-export const getCalendarItems = (
-  calendarYear: number,
-  liturgicalYear: number
-): CalendarItem[] =>
+export const getCalendarItems = (liturgicalYear: number): CalendarItem[] =>
   calendarItems.map((item) => ({
     ...item,
     date: item.date
-      .replace("liturgicalYear", liturgicalYear.toString())
-      .replace("calendarYear", calendarYear.toString()),
+      .replace("liturgicalYear", String(liturgicalYear))
+      .replace("calendarYear", String(liturgicalYear - 1)),
   }));

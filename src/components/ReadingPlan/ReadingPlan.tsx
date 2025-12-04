@@ -8,7 +8,6 @@ import psalmPlan from "./psalm-plan.json";
 import collectPlan from "./collect-plan.json";
 import { useEffect, useState } from "react";
 import { getCalendarData } from "../Calendar/getCalendarData";
-import { getFirstSundayOfAdvent, getLiturgicalYear } from "../Calendar/lib";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
@@ -54,18 +53,8 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
     }, {});
 
     const today = dayjs();
-    const calendarYear = today.year();
-    const firstSundayOfAdvent = getFirstSundayOfAdvent(calendarYear);
-    const liturgicalYear = getLiturgicalYear(
-      today,
-      calendarYear,
-      firstSundayOfAdvent
-    );
-    const calendarData = getCalendarData(
-      firstSundayOfAdvent,
-      calendarYear,
-      liturgicalYear
-    );
+    const { calendarData, liturgicalYear, firstSundayOfAdvent } =
+      getCalendarData(today);
 
     const days = Object.values(calendarData).reduce((acc, val) => {
       acc = [...acc, ...val];
@@ -83,15 +72,15 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
       const secondPart = parts[2] || null;
 
       let date = dayjs(`${parts[0]}, ${liturgicalYear}`);
-      if (
-        date.isSameOrAfter(dayjs(firstSundayOfAdvent.add(1, "year"), "day"))
-      ) {
+      if (date.isSameOrAfter(firstSundayOfAdvent.add(1, "year"))) {
         date = date.subtract(1, "year");
       }
 
-      if (date.isSameOrBefore(today, "day")) {
+      if (date.isSameOrBefore(today)) {
         const p = planItems.filter((item) => {
-          const re = new RegExp(`^${item.title}`);
+          const re = new RegExp(
+            `^${item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
+          );
           const cleanPart = firstPart
             .trim()
             .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
@@ -103,7 +92,9 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
 
         if (secondPart) {
           const p = planItems.filter((item) => {
-            const re = new RegExp(`^${item.title}`);
+            const re = new RegExp(
+              `^${item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
+            );
             const cleanPart = secondPart
               .trim()
               .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
@@ -112,6 +103,8 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
           if (p.length) {
             secondaryPlan = p[0];
           }
+        } else {
+          secondaryPlan = null;
         }
       }
     }
@@ -255,18 +248,19 @@ export const CollectViewer = ({
   return (
     <>
       <p>
-        <strong>{currentPlan.title}</strong>
+        <strong>Collect for {currentPlan.title}</strong>
       </p>
-      <p>{currentPlan.notes}</p>
+      <CollectText
+        dangerouslySetInnerHTML={{ __html: currentPlan.notes || "" }}
+      />
       {secondaryPlan && (
         <>
           <p>
-            <strong>— or —</strong>
+            <strong>Collect for {secondaryPlan.title}</strong>
           </p>
-          <p>
-            <strong>{secondaryPlan.title}</strong>
-          </p>
-          <p>{secondaryPlan.notes}</p>
+          <CollectText
+            dangerouslySetInnerHTML={{ __html: secondaryPlan.notes || "" }}
+          />
         </>
       )}
     </>
@@ -288,6 +282,20 @@ const Wrapper = styled("div")(({ theme }) => ({
       "li[aria-selected='true']": {
         backgroundColor: theme.palette.brand.hover,
       },
+    },
+  },
+}));
+
+const CollectText = styled("p")(({ theme }) => ({
+  ".dot": {
+    color: theme.palette.brand.red,
+    position: "relative",
+    top: "2px",
+
+    "&:before": {
+      content: "'·'",
+      lineHeight: "1.5rem",
+      fontSize: "1.75rem",
     },
   },
 }));
