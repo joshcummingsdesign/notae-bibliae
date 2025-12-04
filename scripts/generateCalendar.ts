@@ -3,10 +3,6 @@ import path from "path";
 import { createEvents, EventAttributes } from "ics";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import {
-  getFirstSundayOfAdvent,
-  getLiturgicalYear,
-} from "../src/components/Calendar/lib";
 import { getCalendarData } from "../src/components/Calendar/getCalendarData";
 
 dayjs.extend(customParseFormat);
@@ -14,18 +10,7 @@ dayjs.extend(customParseFormat);
 // === CALENDAR DATA ===
 
 const today = dayjs();
-const calendarYear = today.year();
-const firstSundayOfAdvent = getFirstSundayOfAdvent(calendarYear);
-const liturgicalYear = getLiturgicalYear(
-  today,
-  calendarYear,
-  firstSundayOfAdvent
-);
-const calendarData = getCalendarData(
-  firstSundayOfAdvent,
-  calendarYear,
-  liturgicalYear
-);
+const { calendarData } = getCalendarData(today);
 
 // === CONFIG ===
 
