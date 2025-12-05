@@ -23,12 +23,14 @@ import {
   formatSeasonMap,
   getLiturgicalYear,
 } from "./lib";
-import { FormattedSeasonMap } from "./interfaces";
+import { DateMap, FormattedSeasonMap } from "./interfaces";
+import { groupItemsByDate } from "./lib/groupItemsByDate";
 
 export const getCalendarData = (
   today: Dayjs
 ): {
   calendarData: FormattedSeasonMap;
+  groupedCalendarData: DateMap;
   liturgicalYear: number;
   firstSundayOfAdvent: Dayjs;
 } => {
@@ -92,8 +94,10 @@ export const getCalendarData = (
   ];
 
   const seasonMap = groupItemsBySeason(calendar, seasons);
+
   return {
     calendarData: formatSeasonMap(seasonMap),
+    groupedCalendarData: groupItemsByDate(calendar),
     liturgicalYear,
     firstSundayOfAdvent,
   };

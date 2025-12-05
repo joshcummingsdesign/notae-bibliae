@@ -14,6 +14,10 @@ export interface SeasonMap {
   [season: string]: CalendarItem[];
 }
 
+export interface DateMap {
+  [date: string]: CalendarItem[];
+}
+
 export interface FormattedSeasonMap {
   [season: string]: string[];
 }

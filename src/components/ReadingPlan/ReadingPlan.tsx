@@ -8,6 +8,7 @@ import psalmPlan from "./psalm-plan.json";
 import collectPlan from "./collect-plan.json";
 import { useEffect, useState } from "react";
 import { getCalendarData } from "../Calendar/getCalendarData";
+import { CalendarItem } from "../Calendar/interfaces";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
@@ -53,61 +54,51 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
     }, {});
 
     const today = dayjs();
-    const { calendarData, liturgicalYear, firstSundayOfAdvent } =
-      getCalendarData(today);
-
-    const days = Object.values(calendarData).reduce((acc, val) => {
-      acc = [...acc, ...val];
-      return acc;
-    }, []);
+    const { groupedCalendarData } = getCalendarData(today);
 
     const planItems = Object.values(plan);
 
-    let currentPlan = planItems[0];
-    let secondaryPlan: PlanItem | null = null;
-    for (let i = 0; i < days.length; i++) {
-      const item = days[i];
-      const parts = item.split("—");
-      const firstPart = parts[1];
-      const secondPart = parts[2] || null;
-
-      let date = dayjs(`${parts[0]}, ${liturgicalYear}`);
-      if (date.isSameOrAfter(firstSundayOfAdvent.add(1, "year"))) {
-        date = date.subtract(1, "year");
+    const mapCalendarItemToPlanItem = (
+      items: CalendarItem[],
+      type: "primary" | "secondary" = "primary"
+    ): PlanItem | null => {
+      let filterFn = (a: CalendarItem) => a.rank < 4;
+      if (type === "secondary") {
+        filterFn = (a: CalendarItem) => a.rank >= 4;
       }
 
-      if (date.isSameOrBefore(today)) {
-        const p = planItems.filter((item) => {
+      let highestRanked = items
+        .filter(filterFn)
+        .sort((a, b) => a.rank - b.rank);
+      if (highestRanked.length) {
+        const p = planItems.filter((pi) => {
           const re = new RegExp(
-            `^${item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
+            `^${pi.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
           );
-          const cleanPart = firstPart
-            .trim()
-            .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
-          return re.test(cleanPart);
+          const t = highestRanked[0].title.replace(
+            /\[([^\]]+)\]\([^)]+\)/g,
+            "$1"
+          );
+          return re.test(t);
         });
-        if (p.length) {
-          currentPlan = p[0];
-        }
 
-        if (secondPart) {
-          const p = planItems.filter((item) => {
-            const re = new RegExp(
-              `^${item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
-            );
-            const cleanPart = secondPart
-              .trim()
-              .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
-            return re.test(cleanPart);
-          });
-          if (p.length) {
-            secondaryPlan = p[0];
-          }
-        } else {
-          secondaryPlan = null;
-        }
+        return p.length ? p[0] : null;
       }
-    }
+      return null;
+    };
+
+    let currentPlan: PlanItem = planItems[0];
+    let secondaryPlan: PlanItem | null = null;
+    Object.entries(groupedCalendarData).forEach(([date, items]) => {
+      if (dayjs(date).isSameOrBefore(today)) {
+        const p = mapCalendarItemToPlanItem(items);
+        if (p) currentPlan = p;
+      }
+      if (dayjs(date).isSame(today)) {
+        const p = mapCalendarItemToPlanItem(items, "secondary");
+        secondaryPlan = p;
+      }
+    });
 
     return (
       <CollectViewer currentPlan={currentPlan} secondaryPlan={secondaryPlan} />
