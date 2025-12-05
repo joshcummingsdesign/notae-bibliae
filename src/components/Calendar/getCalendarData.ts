@@ -43,7 +43,7 @@ export const getCalendarData = (
   if (calendarYear === liturgicalYear) {
     firstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear - 1);
   }
-  const calendarItems = getCalendarItems(liturgicalYear);
+  const calendarItems = getCalendarItems(firstSundayOfAdvent);
   const adventSundays = getAdventSundays(firstSundayOfAdvent);
   const christmastideDays = getChristmastideDays(liturgicalYear);
   const easter = getEasterSunday(liturgicalYear);
