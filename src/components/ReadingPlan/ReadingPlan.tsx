@@ -6,7 +6,7 @@ import { Autocomplete, styled, TextField } from "@mui/material";
 import readingPlan from "./reading-plan.json";
 import psalmPlan from "./psalm-plan.json";
 import collectPlan from "./collect-plan.json";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { getCalendarData } from "../Calendar/getCalendarData";
 import { CalendarItem } from "../Calendar/interfaces";
 
@@ -58,10 +58,10 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
 
     const planItems = Object.values(plan);
 
-    const mapCalendarItemToPlanItem = (
+    const mapCalendarItemsToPlanItems = (
       items: CalendarItem[],
       type: "primary" | "secondary" = "primary"
-    ): PlanItem | null => {
+    ): PlanItem[] => {
       let filterFn = (a: CalendarItem) => a.rank < 4;
       if (type === "secondary") {
         filterFn = (a: CalendarItem) => a.rank >= 4;
@@ -70,38 +70,43 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
       let highestRanked = items
         .filter(filterFn)
         .sort((a, b) => a.rank - b.rank);
+
       if (highestRanked.length) {
         const p = planItems.filter((pi) => {
           const re = new RegExp(
             `^${pi.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
           );
-          const t = highestRanked[0].title.replace(
-            /\[([^\]]+)\]\([^)]+\)/g,
-            "$1"
-          );
-          return re.test(t);
+          const t = highestRanked.map((hr) => ({
+            ...hr,
+            title: hr.title.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
+          }));
+          return t.some((r) => re.test(r.title));
         });
 
-        return p.length ? p[0] : null;
+        return p;
       }
-      return null;
+
+      return [];
     };
 
     let currentPlan: PlanItem = planItems[0];
-    let secondaryPlan: PlanItem | null = null;
+    let secondaryPlans: PlanItem[] = [];
     Object.entries(groupedCalendarData).forEach(([date, items]) => {
       if (dayjs(date).isSameOrBefore(today)) {
-        const p = mapCalendarItemToPlanItem(items);
-        if (p) currentPlan = p;
+        const p = mapCalendarItemsToPlanItems(items);
+        if (p.length) currentPlan = p[0];
       }
       if (dayjs(date).isSame(today)) {
-        const p = mapCalendarItemToPlanItem(items, "secondary");
-        secondaryPlan = p;
+        const p = mapCalendarItemsToPlanItems(items, "secondary");
+        secondaryPlans = p;
       }
     });
 
     return (
-      <CollectViewer currentPlan={currentPlan} secondaryPlan={secondaryPlan} />
+      <CollectViewer
+        currentPlan={currentPlan}
+        secondaryPlans={secondaryPlans}
+      />
     );
   }
 
@@ -231,10 +236,10 @@ export const PlanPicker = ({
 
 export const CollectViewer = ({
   currentPlan,
-  secondaryPlan,
+  secondaryPlans,
 }: {
   currentPlan: PlanItem;
-  secondaryPlan: PlanItem | null;
+  secondaryPlans: PlanItem[];
 }) => {
   return (
     <>
@@ -244,16 +249,16 @@ export const CollectViewer = ({
       <CollectText
         dangerouslySetInnerHTML={{ __html: currentPlan.notes || "" }}
       />
-      {secondaryPlan && (
-        <>
+      {secondaryPlans.map((secondaryPlan) => (
+        <Fragment key={secondaryPlan.title}>
           <p>
             <strong>Collect for {secondaryPlan.title}</strong>
           </p>
           <CollectText
             dangerouslySetInnerHTML={{ __html: secondaryPlan.notes || "" }}
           />
-        </>
-      )}
+        </Fragment>
+      ))}
     </>
   );
 };

@@ -91,7 +91,12 @@
   },
   {
     "date": "01-02",
-    "title": "Saints [Basil the Great](/people/saints/cappadocian-fathers/basil-the-great) and [Gregory of Nazianzus](/people/saints/cappadocian-fathers/gregory-of-nazianzus), Bishops and Doctors of the Church",
+    "title": "Saint [Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop and Doctor of the Church",
+    "rank": 5
+  },
+  {
+    "date": "01-02",
+    "title": "Saint [Gregory of Nazianzus](/people/saints/cappadocian-fathers/gregory-of-nazianzus), Bishop and Doctor of the Church",
     "rank": 5
   },
   {
@@ -131,7 +136,12 @@
   },
   {
     "date": "01-28",
-    "title": "Saints [Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church, and [Isaac of Nineveh](/people/saints/syriac-fathers/isaac-of-nineveh), Bishop",
+    "title": "Saint [Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
+    "rank": 5
+  },
+  {
+    "date": "01-28",
+    "title": "Saint [Isaac of Nineveh](/people/saints/syriac-fathers/isaac-of-nineveh), Bishop",
     "rank": 5
   },
   {
