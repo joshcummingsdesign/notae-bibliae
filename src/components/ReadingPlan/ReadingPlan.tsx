@@ -92,11 +92,11 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
     let currentPlan: PlanItem = planItems[0];
     let secondaryPlans: PlanItem[] = [];
     Object.entries(groupedCalendarData).forEach(([date, items]) => {
-      if (dayjs(date).isSameOrBefore(today)) {
+      if (dayjs(date).isSameOrBefore(today, "day")) {
         const p = mapCalendarItemsToPlanItems(items);
         if (p.length) currentPlan = p[0];
       }
-      if (dayjs(date).isSame(today)) {
+      if (dayjs(date).isSame(today, "day")) {
         const p = mapCalendarItemsToPlanItems(items, "secondary");
         secondaryPlans = p;
       }

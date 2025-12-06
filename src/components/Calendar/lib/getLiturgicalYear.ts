@@ -7,7 +7,7 @@ export const getLiturgicalYear = (
   today: Dayjs,
   firstSundayOfAdvent: Dayjs
 ): number => {
-  if (today.isSameOrAfter(firstSundayOfAdvent)) {
+  if (today.isSameOrAfter(firstSundayOfAdvent, "day")) {
     return today.add(1, "year").year();
   }
 

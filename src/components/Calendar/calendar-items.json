@@ -331,7 +331,12 @@
   },
   {
     "date": "08-13",
-    "title": "Saints [Hippolytus](/people/saints/early/hippolytus-of-rome), Priest and Martyr, and [Maximus](/people/saints/greek-fathers/maximus-the-confessor), Confessor",
+    "title": "Saint [Hippolytus](/people/saints/early/hippolytus-of-rome), Priest and Martyr",
+    "rank": 5
+  },
+  {
+    "date": "08-13",
+    "title": "Saint [Maximus](/people/saints/greek-fathers/maximus-the-confessor), Confessor",
     "rank": 5
   },
   {
@@ -391,7 +396,7 @@
   },
   {
     "date": "10-04",
-    "title": "[Saint Francis of Assisi](/people/saints/medieval/francis-of-assisi), Deacon",
+    "title": "[Saint Francis of Assisi](/people/saints/medieval/francis-of-assisi)",
     "rank": 5
   },
   {
