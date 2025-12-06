@@ -17,4 +17,24 @@ export const getWhitsuntideDays = (easter: Dayjs): CalendarItem[] => [
     title: "Tuesday in Whitsuntide",
     rank: 1,
   },
+  {
+    date: easter.add(52, "day").format("YYYY-MM-DD"),
+    title: "Wednesday in Whitsuntide",
+    rank: 1,
+  },
+  {
+    date: easter.add(53, "day").format("YYYY-MM-DD"),
+    title: "Thursday in Whitsuntide",
+    rank: 1,
+  },
+  {
+    date: easter.add(54, "day").format("YYYY-MM-DD"),
+    title: "Friday in Whitsuntide",
+    rank: 1,
+  },
+  {
+    date: easter.add(55, "day").format("YYYY-MM-DD"),
+    title: "Saturday in Whitsuntide",
+    rank: 1,
+  },
 ];
