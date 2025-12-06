@@ -721,6 +721,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/seasons/trinitytide/trinity-sunday",
               },
               {
+                title: "Visitation of the Blessed Virgin Mary",
+                link: "/liturgy/seasons/trinitytide/visitation",
+              },
+              {
                 title: "Transfiguration of the Lord",
                 link: "/liturgy/seasons/trinitytide/transfiguration",
               },
