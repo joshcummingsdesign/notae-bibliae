@@ -563,8 +563,8 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/seasons/christmastide/christmas-day",
               },
               {
-                title: "The Holy Innocents",
-                link: "/liturgy/seasons/christmastide/the-holy-innocents",
+                title: "Holy Innocents' Day",
+                link: "/liturgy/seasons/christmastide/holy-innocents-day",
               },
               {
                 title: "Circumcision of the Lord",
