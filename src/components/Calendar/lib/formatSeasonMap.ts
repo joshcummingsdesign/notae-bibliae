@@ -1,4 +1,4 @@
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import { SeasonMap, CalendarItem, FormattedSeasonMap } from "../interfaces";
 
 /**
@@ -54,4 +54,41 @@ export const formatSeasonMap = (seasonMap: SeasonMap): FormattedSeasonMap => {
   }
 
   return result;
+};
+
+export const getToday = (today: Dayjs, seasonMap: SeasonMap): string => {
+  let output = "";
+
+  for (const [seasonName, items] of Object.entries(seasonMap)) {
+    // Group items by date
+    const groupedByDate: Record<string, CalendarItem[]> = {};
+    items.forEach((item) => {
+      if (!groupedByDate[item.date]) groupedByDate[item.date] = [];
+      groupedByDate[item.date].push(item);
+    });
+
+    // Sort dates chronologically
+    const sortedDates = Object.keys(groupedByDate).sort(
+      (a, b) => dayjs(a).valueOf() - dayjs(b).valueOf()
+    );
+
+    // Produce a formatted title string for today
+    for (let i = 0; i < sortedDates.length; i++) {
+      const date = sortedDates[i];
+      const d = dayjs(date);
+      if (today.isSame(d, "day")) {
+        const titles = formatTitlesForDay(groupedByDate[date]).replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          '<a href="$2">$1</a>'
+        );
+        output = `${seasonName} — ${today.format("MMMM D")} — ${titles}`;
+      }
+    }
+
+    if (!output) {
+      output = `${seasonName} — ${today.format("MMMM D")}`;
+    }
+  }
+
+  return output;
 };

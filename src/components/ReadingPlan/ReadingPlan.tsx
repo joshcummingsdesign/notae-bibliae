@@ -118,7 +118,7 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
   return (
     <PlanPicker
       id={`${id}-reading`}
-      label="Current Reading"
+      label="Current Lesson"
       type={type}
       plan={plan}
     />
