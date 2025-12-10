@@ -71,8 +71,11 @@ export const getCalendarData = (
   );
   const eastertideDays = getEastertideDays(easter);
   const whitsuntideDays = getWhitsuntideDays(easter);
-  const trinitytideDays = getTrinitytideDays(easter);
   const nextYearsFirstSundayOfAdvent = getFirstSundayOfAdvent(liturgicalYear);
+  const trinitytideDays = getTrinitytideDays(
+    easter,
+    nextYearsFirstSundayOfAdvent
+  );
   const seasons = getSeasons(
     liturgicalYear,
     firstSundayOfAdvent,
