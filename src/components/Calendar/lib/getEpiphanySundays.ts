@@ -23,7 +23,7 @@ export const getEpiphanySundays = (liturgicalYear: number): CalendarItem[] => {
     return {
       date,
       title: fullTitle,
-      rank: 2,
+      rank: 3,
     };
   });
 };

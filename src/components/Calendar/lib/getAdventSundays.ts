@@ -21,7 +21,7 @@ export const getAdventSundays = (
     adventSundays.push({
       date: sunday.format("YYYY-MM-DD"),
       title,
-      rank: 1,
+      rank: 3,
     });
   }
 

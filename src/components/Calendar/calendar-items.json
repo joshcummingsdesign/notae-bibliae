@@ -20,6 +20,11 @@
     "rank": 5
   },
   {
+    "date": "12-08",
+    "title": "[Conception of the Blessed Virgin Mary](/liturgy/seasons/advent)",
+    "rank": 5
+  },
+  {
     "date": "12-11",
     "title": "[Saint Damasus I](/people/saints/latin-fathers/damasus-of-rome), Pope",
     "rank": 5
@@ -72,12 +77,12 @@
   {
     "date": "12-26",
     "title": "[Saint Stephen](/people/saints/biblical/stephen), The First Martyr",
-    "rank": 5
+    "rank": 1
   },
   {
     "date": "12-27",
     "title": "[Saint John](/people/saints/apostles/john), Apostle and Evangelist",
-    "rank": 5
+    "rank": 1
   },
   {
     "date": "12-28",
@@ -100,9 +105,14 @@
     "rank": 5
   },
   {
+    "date": "01-05",
+    "title": "Epiphany Eve",
+    "rank": 1
+  },
+  {
     "date": "01-06",
     "title": "[Epiphany](/liturgy/seasons/epiphanytide/epiphany)",
-    "rank": 1
+    "rank": 2
   },
   {
     "date": "01-10",

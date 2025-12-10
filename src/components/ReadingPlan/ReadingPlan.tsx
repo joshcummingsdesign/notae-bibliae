@@ -58,10 +58,15 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
 
     const planItems = Object.values(plan);
 
+    interface FoundItem {
+      calendarItem: CalendarItem;
+      planItem: PlanItem;
+    }
+
     const mapCalendarItemsToPlanItems = (
       items: CalendarItem[],
       type: "primary" | "secondary" = "primary"
-    ): PlanItem[] => {
+    ): FoundItem[] => {
       let filterFn = (a: CalendarItem) => a.rank < 4;
       if (type === "secondary") {
         filterFn = (a: CalendarItem) => a.rank >= 4;
@@ -71,34 +76,58 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
         .filter(filterFn)
         .sort((a, b) => a.rank - b.rank);
 
+      let foundItems: FoundItem[] = [];
+
       if (highestRanked.length) {
-        const p = planItems.filter((pi) => {
+        planItems.forEach((pi) => {
           const re = new RegExp(
             `^${pi.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
           );
+
           const t = highestRanked.map((hr) => ({
             ...hr,
             title: hr.title.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
           }));
-          return t.some((r) => re.test(r.title));
-        });
 
-        return p;
+          const found = t.find((r) => re.test(r.title));
+
+          if (found) {
+            foundItems.push({ calendarItem: found, planItem: pi });
+          }
+        });
       }
 
-      return [];
+      return foundItems.sort(
+        (a, b) => a.calendarItem.rank - b.calendarItem.rank
+      );
     };
 
     let currentPlan: PlanItem = planItems[0];
     let secondaryPlans: PlanItem[] = [];
     Object.entries(groupedCalendarData).forEach(([date, items]) => {
       if (dayjs(date).isSameOrBefore(today, "day")) {
-        const p = mapCalendarItemsToPlanItems(items);
-        if (p.length) currentPlan = p[0];
+        const foundItems = mapCalendarItemsToPlanItems(items);
+
+        if (foundItems.length) {
+          for (let i = 0; i < foundItems.length; i++) {
+            const fi = foundItems[i];
+
+            if (fi.calendarItem.rank === 1) {
+              if (dayjs(fi.calendarItem.date).isSame(today, "day")) {
+                currentPlan = fi.planItem;
+                break;
+              }
+            } else {
+              currentPlan = fi.planItem;
+              break;
+            }
+          }
+        }
       }
+
       if (dayjs(date).isSame(today, "day")) {
-        const p = mapCalendarItemsToPlanItems(items, "secondary");
-        secondaryPlans = p;
+        const foundItems = mapCalendarItemsToPlanItems(items, "secondary");
+        secondaryPlans = foundItems.map((fi) => fi.planItem);
       }
     });
 

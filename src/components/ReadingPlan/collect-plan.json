@@ -24,6 +24,10 @@
     "notes": "O God, who providest for thy people with tenderness, and governest them with love; and who dost so value them as to set ministers to rule over them <span class='dot'></span> in thy stead; give, we pray thee, (bless-ed Saint Ambrose, thy Bishop interceding), the spirit of wisdom to them whom thou hast appointed to preside over thy <span class='dot'></span> Church, that from the welfare of the holy sheep may spring the everlasting joy of the shep<span class='dot'></span>herds; through Jesus Christ our Lord, who liveth and reigneth with thee in the unity of the Holy Ghost, one God, world <span class='dot'></span> without end. Amen."
   },
   {
+    "title": "Conception of the Blessed Virgin Mary",
+    "notes": "We beseech thee, O Lord, to bestow the gift of heavenly grace up<span class='dot'></span>on thy servants: that as the Nativity of the Blessed Virgin was the dawn of our salva<span class='dot'></span>tion, so the celebration of her Conception may bring us increase of <span class='dot'></span> peace; through Jesus Christ thy Son our Lord, who liveth and reigneth with thee and the Holy Ghost, ever one God, world <span class='dot'></span> without end. Amen."
+  },
+  {
     "title": "Saint Damasus I, Pope",
     "notes": "O God, who providest for thy people with tenderness, and governest them with love; and who dost so value them as to set ministers to rule over them <span class='dot'></span> in thy stead; give, we pray thee, (bless-ed Pope Saint Damasus I, thy Bishop interceding), the spirit of wisdom to them whom thou hast appointed to preside over thy <span class='dot'></span> Church, that from the welfare of the holy sheep may spring the everlasting joy of the shep<span class='dot'></span>herds; through Jesus Christ our Lord, who liveth and reigneth with thee in the unity of the Holy Ghost, one God, world <span class='dot'></span> without end. Amen."
   },
@@ -34,6 +38,10 @@
   {
     "title": "Fourth Sunday of Advent",
     "notes": "O Lord, raise up (we pray thee) thy power, and come among us, and with <span class='dot'></span> great might succour us; that whereas, through our sins and wickedness, we are sore let and hinder-ed in running the race that is set before <span class='dot'></span> us, thy bountiful grace and mercy may speedily help and deli<span class='dot'></span>ver us; through the satisfaction of thy Son our Lord, to whom with thee and the Holy Ghost be honour and glory, world <span class='dot'></span> without end. Amen."
+  },
+  {
+    "title": "Christmas Eve",
+    "notes": "O God, who makest us glad with the yearly expectation of <span class='dot'></span> our redemption: grant that we, who with joy receive thine only-begotten Son as our Redeemer, may, without fear, behold him when he shall come to be our <span class='dot'></span> Judge, even thy Son our Lord Jesus Christ; who liveth and reigneth with thee in the unity of the Holy Ghost, God, world <span class='dot'></span> without end. Amen."
   },
   {
     "title": "Christmas Day (Nativity of the Lord)",
@@ -66,6 +74,10 @@
   {
     "title": "Saint Gregory of Nazianzus, Bishop and Doctor of the Church",
     "notes": "O God, who providest for thy people with tenderness, and governest them with love; and who dost so value them as to set ministers to rule over them <span class='dot'></span> in thy stead; give, we pray thee, (bless-ed Saint Gregory of Nazianzus, thy Bishop interceding), the spirit of wisdom to them whom thou hast appointed to preside over thy <span class='dot'></span> Church, that from the welfare of the holy sheep may spring the everlasting joy of the shep<span class='dot'></span>herds; through Jesus Christ our Lord, who liveth and reigneth with thee in the unity of the Holy Ghost, one God, world <span class='dot'></span> without end. Amen."
+  },
+  {
+    "title": "Epiphany Eve",
+    "notes": "Lighten our hearts, we beseech thee, O Lord, by this <span class='dot'></span> coming festival: that, being rid of the darkness of this world, we may come to the light of the eternal Coun<span class='dot'></span>try; through <span class='dot'></span> Jesus Christ our Lord. Amen."
   },
   {
     "title": "Epiphany",
@@ -150,6 +162,18 @@
   {
     "title": "Ash Wednesday",
     "notes": "Almighty and everlasting God, who hatest nothing that thou hast made, and dost forgive the sins of all them <span class='dot'></span> that are penitent: Create and make in us new and contrite <span class='dot'></span> hearts, that we worthily lamenting our sins, and acknowledging our wretchedness, may obtain of thee, the God of all mercy, perfect remission and forgive<span class='dot'></span>ness; through <span class='dot'></span> Jesus Christ our Lord. Amen."
+  },
+  {
+    "title": "Thursday in Lent",
+    "notes": "God, who art offended by sin, and ap<span class='dot'></span>peased by penitence; mercifully regard the prayers of thy suppliant peo<span class='dot'></span>ple, and turn away the scourges of thy wrath, which by our sins we have deserv<span class='dot'></span>ed; through <span class='dot'></span> Jesus Christ our Lord. Amen."
+  },
+  {
+    "title": "Friday in Lent",
+    "notes": "We beseech Thee, O Lord, of thy <span class='dot'></span> loving favour, that we may persevere in the fast we have be<span class='dot'></span>gun, and with pure minds perform our bodily obser<span class='dot'></span>vance; through <span class='dot'></span> Jesus Christ our Lord. Amen."
+  },
+  {
+    "title": "Saturday in Lent",
+    "notes": "Be present, O Lord, to our <span class='dot'></span> supplications; and grant that with devout service we may celebrate this holy <span class='dot'></span> fast, instituted for the health and saving of our souls and bo<span class='dot'></span>dies; through <span class='dot'></span> Jesus Christ our Lord. Amen."
   },
   {
     "title": "First Sunday of Lent",
@@ -241,11 +265,27 @@
   },
   {
     "title": "Monday of Easter Week",
-    "notes": "Almighty God, who through thy only-begotten Son Jesus Christ hast overcome death, and open-ed unto us the gate of ever<span class='dot'></span>lasting life; We humbly beseech thee, that, as by thy special grace preventing us thou dost put into our minds good de<span class='dot'></span>sires, so by thy continual help we may bring the same to good e<span class='dot'></span>ffect; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, ever one God, world <span class='dot'></span> without end. Amen."
+    "notes": "God, who by the Easter solemnity hast bestow-ed healing <span class='dot'></span> on the world, continue, we beseech thee, to thy people thy heavenly <span class='dot'></span> gifts; that they may attain to perfect freedom, and advance towards life eter<span class='dot'></span>nal; through our Lord <span class='dot'></span> Jesus Christ. Amen."
   },
   {
     "title": "Tuesday of Easter Week",
-    "notes": "Almighty God, who through thy only-begotten Son Jesus Christ overcame death, and open-ed unto us the gate of ever<span class='dot'></span>lasting life: We humbly beseech thee, that as by thy special grace preventing us thou dost put into our minds good de<span class='dot'></span>sires, so by thy continual help we may bring the same to good e<span class='dot'></span>ffect; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, ever one God, world <span class='dot'></span> without end. Amen."
+    "notes": "God, who dost ever multiply thy Church <span class='dot'></span> with new offspring; grant to thy servants that as they have receiv-ed thy Sacrament in faith, they may hold it fast in <span class='dot'></span> life; through our Lord <span class='dot'></span> Jesus Christ. Amen."
+  },
+  {
+    "title": "Wednesday of Easter Week",
+    "notes": "God, who makest us glad with the yearly solemnity of our Lord's <span class='dot'></span> Resurrection; mercifully grant that through our temporal feasts we may attain to eternal <span class='dot'></span> joys; through the same <span class='dot'></span> Jesus Christ our Lord. Amen."
+  },
+  {
+    "title": "Thursday of Easter Week",
+    "notes": "God, who hast gather-ed together divers nations in the confession <span class='dot'></span> of thy Name; grant that they who are regenerate by baptism may be one in inward faith, and in outward devo<span class='dot'></span>tion; through our Lord <span class='dot'></span> Jesus Christ. Amen."
+  },
+  {
+    "title": "Friday of Easter Week",
+    "notes": "Almighty, everlasting God, who hast given the Easter mystery for the reconciliation of the <span class='dot'></span> human race; grant to our souls, that what we profess with our lips we may shew forth with our <span class='dot'></span> lives; through our Lord <span class='dot'></span> Jesus Christ. Amen."
+  },
+  {
+    "title": "Saturday of Easter Week",
+    "notes": "Grant, we beseech thee, Al<span class='dot'></span>mighty God, that we, who have reverently pass-ed through the Easter feast, may thereby attain to eternal <span class='dot'></span> joys; through <span class='dot'></span> Jesus Christ our Lord. Amen."
   },
   {
     "title": "Second Sunday of Easter",

@@ -22,7 +22,7 @@ const getLentSundays = (passionSunday: Dayjs): CalendarItem[] => {
     return {
       date: sundays[i].format("YYYY-MM-DD"),
       title: sundayTitle,
-      rank: 1,
+      rank: 3,
     };
   });
 };
@@ -89,6 +89,21 @@ export const getLentDays = (
   {
     date: ashWednesday.format("YYYY-MM-DD"),
     title: "[Ash Wednesday](/liturgy/seasons/lent/ash-wednesday)",
+    rank: 1,
+  },
+  {
+    date: ashWednesday.add(1, "day").format("YYYY-MM-DD"),
+    title: "Thursday in Lent",
+    rank: 1,
+  },
+  {
+    date: ashWednesday.add(2, "day").format("YYYY-MM-DD"),
+    title: "Friday in Lent",
+    rank: 1,
+  },
+  {
+    date: ashWednesday.add(3, "day").format("YYYY-MM-DD"),
+    title: "Saturday in Lent",
     rank: 1,
   },
   ...getLentSundays(passionSunday),
