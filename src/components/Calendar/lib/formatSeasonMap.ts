@@ -1,5 +1,8 @@
 import dayjs, { Dayjs } from "dayjs";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 import { SeasonMap, CalendarItem, FormattedSeasonMap } from "../interfaces";
+
+dayjs.extend(isSameOrAfter);
 
 /**
  * Format calendar titles.
@@ -76,17 +79,18 @@ export const getToday = (today: Dayjs, seasonMap: SeasonMap): string => {
     for (let i = 0; i < sortedDates.length; i++) {
       const date = sortedDates[i];
       const d = dayjs(date);
-      if (today.isSame(d, "day")) {
-        const titles = formatTitlesForDay(groupedByDate[date]).replace(
-          /\[([^\]]+)\]\(([^)]+)\)/g,
-          '<a href="$2">$1</a>'
-        );
-        output = `${seasonName} — ${today.format("MMMM D")} — ${titles}`;
-      }
-    }
 
-    if (!output) {
-      output = `${seasonName} — ${today.format("MMMM D")}`;
+      if (today.isSameOrAfter(d, "day")) {
+        output = `${seasonName} — ${today.format("MMMM D")}`;
+
+        if (today.isSame(d, "day")) {
+          const titles = formatTitlesForDay(groupedByDate[date]).replace(
+            /\[([^\]]+)\]\(([^)]+)\)/g,
+            '<a href="$2">$1</a>'
+          );
+          output += ` — ${titles}`;
+        }
+      }
     }
   }
 
