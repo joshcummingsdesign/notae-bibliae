@@ -26,19 +26,19 @@ export const getTrinitytideDays = (
     });
   }
 
-  // Christ the King = Sunday before first Sunday of Advent
-  const christTheKing = firstSundayOfAdvent.subtract(7, "day");
-  sundays.push({
-    date: christTheKing.format("YYYY-MM-DD"),
-    title: "Christ the King",
-    rank: 2,
-  });
-
   // Corpus Christi = Thursday after Trinity Sunday
   const corpusChristi = trinitySunday.add(4, "day");
   sundays.push({
     date: corpusChristi.format("YYYY-MM-DD"),
-    title: "Corpus Christi",
+    title: "[Corpus Christi](/liturgy/seasons/trinitytide/corpus-christi)",
+    rank: 2,
+  });
+
+  // Christ the King = Sunday before first Sunday of Advent
+  const christTheKing = firstSundayOfAdvent.subtract(7, "day");
+  sundays.push({
+    date: christTheKing.format("YYYY-MM-DD"),
+    title: "[Christ the King](/liturgy/seasons/trinitytide/christ-the-king)",
     rank: 2,
   });
 

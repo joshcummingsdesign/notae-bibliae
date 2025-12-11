@@ -548,6 +548,10 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Conception of the Blessed Virgin Mary",
+                link: "/liturgy/seasons/advent/conception-of-the-blessed-virgin-mary",
+              },
+              {
                 title: "Gaudete Sunday",
                 link: "/liturgy/seasons/advent/gaudete-sunday",
               },
@@ -721,12 +725,20 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/seasons/trinitytide/trinity-sunday",
               },
               {
+                title: "Corpus Christi",
+                link: "/liturgy/seasons/trinitytide/corpus-christi",
+              },
+              {
                 title: "Visitation of the Blessed Virgin Mary",
                 link: "/liturgy/seasons/trinitytide/visitation",
               },
               {
                 title: "Transfiguration of the Lord",
                 link: "/liturgy/seasons/trinitytide/transfiguration",
+              },
+              {
+                title: "Nativity of the Blessed Virgin Mary",
+                link: "/liturgy/seasons/trinitytide/nativity-of-the-blessed-virgin-mary",
               },
               {
                 title: "Holy Cross Day",
@@ -749,6 +761,10 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/seasons/trinitytide/allhallowtide/all-souls-day",
                   },
                 ],
+              },
+              {
+                title: "Christ the King",
+                link: "/liturgy/seasons/trinitytide/christ-the-king",
               },
             ],
           },
@@ -1699,6 +1715,10 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Blessed Virgin Mary",
+                link: "/people/saints/biblical/blessed-virgin-mary",
+              },
+              {
                 title: "Joachim and Anne",
                 link: "/people/saints/biblical/joachim-and-anne",
               },
@@ -1707,20 +1727,12 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/john-the-baptist",
               },
               {
-                title: "St. Joseph",
-                link: "/people/saints/biblical/joseph",
-              },
-              {
                 title: "Lazarus",
                 link: "/people/saints/biblical/lazarus",
               },
               {
                 title: "Martha",
                 link: "/people/saints/biblical/martha",
-              },
-              {
-                title: "Mary",
-                link: "/people/saints/biblical/mary",
               },
               {
                 title: "Mary of Bethany",
@@ -1737,6 +1749,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Silas",
                 link: "/people/saints/biblical/silas",
+              },
+              {
+                title: "St. Joseph",
+                link: "/people/saints/biblical/joseph",
               },
               {
                 title: "Stephen",
