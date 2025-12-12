@@ -39,50 +39,51 @@ export const Invitatory = () => {
 
   const isAdvent =
     advent &&
-    today.isSameOrAfter(advent.start) &&
-    today.isSameOrBefore(advent.end);
+    today.isSameOrAfter(advent.start, "day") &&
+    today.isSameOrBefore(advent.end, "day");
 
   const isChristmastide =
     christmastide &&
-    today.isSameOrAfter(christmastide.start) &&
-    today.isSameOrBefore(christmastide.end);
+    today.isSameOrAfter(christmastide.start, "day") &&
+    today.isSameOrBefore(christmastide.end, "day");
 
   const isEpiphanytide =
     epiphanytide &&
-    today.isSameOrAfter(epiphanytide.start) &&
-    today.isSameOrBefore(epiphanytide.end);
+    today.isSameOrAfter(epiphanytide.start, "day") &&
+    today.isSameOrBefore(epiphanytide.end, "day");
 
-  const isTransfiguration = today.isSame(`${liturgicalYear}-08-06`);
+  const isTransfiguration = today.isSame(`${liturgicalYear}-08-06`, "day");
 
   const isLent =
     preLent &&
     lent &&
-    today.isSameOrAfter(preLent.start) &&
-    today.isSameOrBefore(lent.end);
+    today.isSameOrAfter(preLent.start, "day") &&
+    today.isSameOrBefore(lent.end, "day");
 
   const isOctaveOfEaster =
-    today.isSameOrAfter(easter) && today.isSameOrBefore(easter.add(7, "day"));
+    today.isSameOrAfter(easter, "day") &&
+    today.isSameOrBefore(easter.add(7, "day"), "day");
 
   const isEastertide =
     eastertide &&
-    today.isSameOrAfter(eastertide.start) &&
-    today.isSameOrBefore(eastertide.end);
+    today.isSameOrAfter(eastertide.start, "day") &&
+    today.isSameOrBefore(eastertide.end, "day");
 
   const isAscensiontide =
-    today.isSameOrAfter(easter.add(39, "day")) &&
-    today.isSameOrBefore(easter.add(48, "day"));
+    today.isSameOrAfter(easter.add(39, "day"), "day") &&
+    today.isSameOrBefore(easter.add(48, "day"), "day");
 
   const isWhitsuntide =
     whitsuntide &&
-    today.isSameOrAfter(whitsuntide.start) &&
-    today.isSameOrBefore(whitsuntide.end);
+    today.isSameOrAfter(whitsuntide.start, "day") &&
+    today.isSameOrBefore(whitsuntide.end, "day");
 
   const isTrinitytide =
     trinitytide &&
-    today.isSameOrAfter(trinitytide.start) &&
-    today.isSameOrBefore(trinitytide.end);
+    today.isSameOrAfter(trinitytide.start, "day") &&
+    today.isSameOrBefore(trinitytide.end, "day");
 
-  const isPurification = today.isSame(`${liturgicalYear}-02-02`);
+  const isPurification = today.isSame(`${liturgicalYear}-02-02`, "day");
 
   const isAnnunciation = today.isSame(annunciation, "day");
 

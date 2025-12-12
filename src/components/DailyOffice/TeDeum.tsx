@@ -31,26 +31,28 @@ export const TeDeum = () => {
 
   const isAdvent =
     advent &&
-    today.isSameOrAfter(advent.start) &&
-    today.isSameOrBefore(advent.end);
+    today.isSameOrAfter(advent.start, "day") &&
+    today.isSameOrBefore(advent.end, "day");
 
   // From Christmas through the Octave of Epiphany in this case
+  const isChristmas = today.isSame(`${liturgicalYear - 1}-12-25`, "day");
   const isChristmastide =
-    today.isSameOrAfter(`${liturgicalYear - 1}-12-25`) &&
-    today.isSameOrBefore(`${liturgicalYear}-01-13`);
+    today.isSameOrAfter(`${liturgicalYear - 1}-12-25`, "day") &&
+    today.isSameOrBefore(`${liturgicalYear}-01-13`, "day");
 
   const isLent =
     preLent &&
-    today.isSameOrAfter(preLent.start) &&
-    today.isSameOrBefore(passionSunday);
+    today.isSameOrAfter(preLent.start, "day") &&
+    today.isSameOrBefore(passionSunday, "day");
 
   const isOctaveOfEaster =
-    today.isSameOrAfter(easter) && today.isSameOrBefore(easter.add(7, "day"));
+    today.isSameOrAfter(easter, "day") &&
+    today.isSameOrBefore(easter.add(7, "day"), "day");
 
   const isWhitsuntide =
     whitsuntide &&
-    today.isSameOrAfter(whitsuntide.start) &&
-    today.isSameOrBefore(whitsuntide.end);
+    today.isSameOrAfter(whitsuntide.start, "day") &&
+    today.isSameOrBefore(whitsuntide.end, "day");
 
   const isSolemn = [
     "Maundy Thursday",
@@ -72,8 +74,34 @@ export const TeDeum = () => {
   const shouldOmitTeDeum = isAdvent || isHolyInnocents || isLent || isSolemn;
 
   if (shouldOmitTeDeum || !shouldSingTeDeum) {
-    return <OtCanticle />;
+    return <OtCanticle today={today} />;
   }
+
+  const facta = (
+    <p>
+      <em>
+        Optionally add the{" "}
+        <a href="/liturgy/music/chants/facta-est-cum-angelo">
+          Facta est cum Angelo
+        </a>
+      </em>
+    </p>
+  );
+
+  const benedicite = (
+    <>
+      <p>
+        <strong>— or —</strong>
+      </p>
+      <p>
+        <strong>
+          <a href="/liturgy/music/chants/benedicite">Benedicite</a>
+        </strong>{" "}
+        (SDP 367, Tone VII 4)
+      </p>
+      {facta}
+    </>
+  );
 
   const victimae = (
     <p>
@@ -105,6 +133,7 @@ export const TeDeum = () => {
         </strong>{" "}
         (SDP 357)
       </p>
+      {isChristmas && benedicite}
       {isEaster && victimae}
       {isPentecost && spiritus}
     </>

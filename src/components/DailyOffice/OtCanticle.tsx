@@ -1,7 +1,10 @@
-import dayjs from "dayjs";
+import { Dayjs } from "dayjs";
 
-export const OtCanticle = () => {
-  const today = dayjs();
+interface Props {
+  today: Dayjs;
+}
+
+export const OtCanticle: React.FC<Props> = ({ today }) => {
   const day = today.day();
   const monday = 1;
   const tuesday = 2;
@@ -9,7 +12,6 @@ export const OtCanticle = () => {
   const thursday = 4;
   const friday = 5;
   const saturday = 6;
-  const isChristmas = today.isSame(dayjs("2025-12-25"), "day");
 
   let canticle;
 
@@ -84,18 +86,7 @@ export const OtCanticle = () => {
       break;
   }
 
-  if (!canticle || isChristmas) {
-    const facta = (
-      <p>
-        <em>
-          Optionally add the{" "}
-          <a href="/liturgy/music/chants/facta-est-cum-angelo">
-            Facta est cum Angelo
-          </a>
-        </em>
-      </p>
-    );
-
+  if (!canticle) {
     canticle = (
       <>
         <p>
@@ -104,7 +95,6 @@ export const OtCanticle = () => {
           </strong>{" "}
           (SDP 367, Tone VII 4)
         </p>
-        {isChristmas && facta}
       </>
     );
   }
