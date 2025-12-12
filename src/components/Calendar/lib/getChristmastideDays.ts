@@ -17,6 +17,7 @@ export const getChristmastideDays = (
       date: sundayAfterChristmas.format("YYYY-MM-DD"),
       title: "Sunday After Christmas Day",
       rank: 3,
+      class: 7,
     },
   ];
 };

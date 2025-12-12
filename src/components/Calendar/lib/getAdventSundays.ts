@@ -18,10 +18,13 @@ export const getAdventSundays = (
       title = `${title}: [Gaudete Sunday](/liturgy/seasons/advent/gaudete-sunday)`;
     }
 
+    const cls = i === 0 ? 1 : 3;
+
     adventSundays.push({
       date: sunday.format("YYYY-MM-DD"),
       title,
       rank: 3,
+      class: cls,
     });
   }
 

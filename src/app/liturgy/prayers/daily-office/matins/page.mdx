@@ -1,5 +1,8 @@
 import { ReadingPlan } from "@/components/ReadingPlan";
 import { Today } from "@/components/Today";
+import { OpeningVersicles } from "@/components/DailyOffice";
+import { Invitatory } from "@/components/DailyOffice";
+import { TeDeum } from "@/components/DailyOffice";
 
 export const metadata = {
   title: "Daily Office: Matins — Notae Bibliae",
@@ -42,16 +45,11 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 
 [ *Stand* ]
 
-<Image
-  src="/chants/matins-opening-versicles.svg"
-  alt="Matins Opening Versicles"
-  width="600"
-  height="456"
-/>
+<OpeningVersicles office="matins" />
 
 ## Invitatory
 
-<Red text="‡" /> [**Venite**](/liturgy/music/chants/venite) (SDP 306–325)[^2]
+<Invitatory />
 
 ## Psalm
 
@@ -69,22 +67,7 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 
 [ *Stand* ]
 
-[**Te Deum**](/liturgy/music/chants/te-deum) (SDP 357)
-- Lord's Days; except in Advent and from Septuagesima to Passion Sunday
-- Daily during Christmastide
-- Daily during Eastertide
-- All feasts throughout their [octaves](/glossary/liturgical-terms#octave); except Holy Innocents' Day when it is not on a Lord's Day
-
-**— or —**
-
-**Old Testament Canticle**
-- **S:** <Red text="‡" /> [Benedicite](/liturgy/music/chants/benedicite) (SDP 367, Tone VII 4)[^3]
-- **M:** [Song of Isaiah](/liturgy/music/chants/song-of-isaiah) (SDP 380)
-- **T:** [Song of Hezekiah](/liturgy/music/chants/song-of-hezekiah) (SDP 381)
-- **W:** [Song of Hannah](/liturgy/music/chants/song-of-hannah) (SDP 383)
-- **Th:** [Song of Moses from Exod.](/liturgy/music/chants/song-of-moses-exod) (SDP 386)
-- **F:** [Song of Habakkuk](/liturgy/music/chants/song-of-habakkuk) (SDP 389)
-- **Sat:** [Song of Moses from Deut.](/liturgy/music/chants/song-of-moses-deut-pt-1) (SDP 392)
+<TeDeum />
 
 ## Second Lesson
 
@@ -161,7 +144,7 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 **Collect for Grace**
 
 <Poetry>
-|  O Lord, our heavenly Father, Almighty and everlasting God, who hast safely brought us to the beginning _ of this day: Defend us in the same with thy mighty pow_er; and grant that this day we fall into no sin, neither run into any kind of dan_ger; but that all our doings may be order-ed by thy governance, to do always that is righteous in thy _ sight; through _ Jesus Christ our Lord. Amen.[^4]
+|  O Lord, our heavenly Father, Almighty and everlasting God, who hast safely brought us to the beginning _ of this day: Defend us in the same with thy mighty pow_er; and grant that this day we fall into no sin, neither run into any kind of dan_ger; but that all our doings may be order-ed by thy governance, to do always that is righteous in thy _ sight; through _ Jesus Christ our Lord. Amen.[^2]
 </Poetry>
 
 ## Benedicamus
@@ -199,7 +182,7 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 |  The grace # of our Lord Jesus Christ,
 |      and the love of God,
 |      and the fellowship of the Holy Ghost,
-|          be with us all evermore. Amen.[^5]
+|          be with us all evermore. Amen.[^3]
 </Poetry>
 
 ## Dismissal
@@ -207,7 +190,5 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 *❡ Thus endeth the service of Matins. Additional time may be used for study.*
 
 [^1]: [BCP 1662](https://www.churchofengland.org/sites/default/files/2019-10/the-book-of-common-prayer-1662.pdf), 118
-[^2]: <Red text="‡" /> The [Pascha nostrum](/liturgy/music/chants/pascha-nostrum) replaces the Venite on Easter Sunday, and may be sung until the Second Sunday of Easter, when the Venite is restored to regular use.
-[^3]: <Red text="‡" /> The Benedicite is sung along with the [Facta est cum Angelo](/liturgy/music/chants/facta-est-cum-angelo) on Christmas Day.
-[^4]: BCP 1662, 16,36–143
-[^5]: BCP 1662, 17
+[^2]: BCP 1662, 16,36–143
+[^3]: BCP 1662, 17

@@ -24,7 +24,7 @@ import {
   getLiturgicalYear,
   getToday,
 } from "./lib";
-import { DateMap, FormattedSeasonMap } from "./interfaces";
+import { DateMap, FormattedSeasonMap, Season } from "./interfaces";
 import { groupItemsByDate } from "./lib/groupItemsByDate";
 
 export const getCalendarData = (
@@ -33,8 +33,12 @@ export const getCalendarData = (
   calendarData: FormattedSeasonMap;
   groupedCalendarData: DateMap;
   currentDay: string;
+  easter: Dayjs;
+  passionSunday: Dayjs;
+  annunciation: Dayjs;
   liturgicalYear: number;
   firstSundayOfAdvent: Dayjs;
+  seasons: Season[];
 } => {
   const calendarYear = today.year();
   // Get the current year's first sunday of advent
@@ -104,7 +108,11 @@ export const getCalendarData = (
     calendarData: formatSeasonMap(seasonMap),
     groupedCalendarData: groupItemsByDate(calendar),
     currentDay: getToday(today, seasonMap),
+    easter,
+    passionSunday,
+    annunciation,
     liturgicalYear,
     firstSundayOfAdvent,
+    seasons,
   };
 };

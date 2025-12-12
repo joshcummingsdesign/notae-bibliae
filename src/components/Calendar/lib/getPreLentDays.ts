@@ -11,20 +11,24 @@ export const getPreLentDays = (
     date: septuagesima.format("YYYY-MM-DD"),
     title: "[Septuagesima](/liturgy/seasons/pre-lent/septuagesima)",
     rank: 2,
+    class: 3,
   },
   {
     date: sexagesima.format("YYYY-MM-DD"),
     title: "[Sexagesima](/liturgy/seasons/pre-lent/sexagesima)",
     rank: 2,
+    class: 3,
   },
   {
     date: quinquagesima.format("YYYY-MM-DD"),
     title: "[Quinquagesima](/liturgy/seasons/pre-lent/quinquagesima)",
     rank: 2,
+    class: 3,
   },
   {
     date: shroveTuesday.format("YYYY-MM-DD"),
     title: "[Shrove Tuesday](/liturgy/seasons/pre-lent/shrove-tuesday)",
     rank: 1,
+    class: 5,
   },
 ];
