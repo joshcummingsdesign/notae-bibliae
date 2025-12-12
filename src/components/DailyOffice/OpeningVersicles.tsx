@@ -1,14 +1,12 @@
 import Image from "next/image";
-import dayjs from "dayjs";
-import { getCalendarData } from "../Calendar/getCalendarData";
+import { getCalendarData } from "@/lib/calendar";
 
 interface Props {
   office: "matins" | "evensong";
 }
 
 export const OpeningVersicles: React.FC<Props> = ({ office }) => {
-  const today = dayjs();
-  const { currentDay } = getCalendarData(today);
+  const { currentDay } = getCalendarData();
 
   const isSolemn = [
     "Maundy Thursday",

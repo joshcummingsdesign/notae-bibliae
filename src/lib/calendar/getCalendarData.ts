@@ -26,10 +26,12 @@ import {
 } from "./lib";
 import { DateMap, FormattedSeasonMap, Season } from "./interfaces";
 import { groupItemsByDate } from "./lib/groupItemsByDate";
+import { TODAY } from "./constants";
 
 export const getCalendarData = (
-  today: Dayjs
+  today: Dayjs = TODAY
 ): {
+  today: Dayjs;
   calendarData: FormattedSeasonMap;
   groupedCalendarData: DateMap;
   currentDay: string;
@@ -105,6 +107,7 @@ export const getCalendarData = (
   const seasonMap = groupItemsBySeason(calendar, seasons);
 
   return {
+    today,
     calendarData: formatSeasonMap(seasonMap),
     groupedCalendarData: groupItemsByDate(calendar),
     currentDay: getToday(today, seasonMap),

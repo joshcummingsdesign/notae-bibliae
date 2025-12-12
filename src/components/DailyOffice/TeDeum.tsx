@@ -1,22 +1,22 @@
 import dayjs from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
-import { getCalendarData } from "../Calendar/getCalendarData";
+import { getCalendarData } from "@/lib/calendar";
 import { OtCanticle } from "./OtCanticle";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
 
 export const TeDeum = () => {
-  const today = dayjs();
   const {
+    today,
     groupedCalendarData,
     currentDay,
     easter,
     passionSunday,
     liturgicalYear,
     seasons,
-  } = getCalendarData(today);
+  } = getCalendarData();
 
   const todayItem = groupedCalendarData[today.format("YYYY-MM-DD")] || [];
 

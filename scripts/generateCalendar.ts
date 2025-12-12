@@ -3,7 +3,7 @@ import path from "path";
 import { createEvents, EventAttributes } from "ics";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import { getCalendarData } from "../src/components/Calendar/getCalendarData";
+import { getCalendarData } from "../src/lib/calendar/getCalendarData";
 
 dayjs.extend(customParseFormat);
 

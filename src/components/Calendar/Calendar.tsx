@@ -1,12 +1,9 @@
 import Markdown from "react-markdown";
 import remarkSmartypants from "remark-smartypants";
-import dayjs from "dayjs";
-import { getCalendarData } from "./getCalendarData";
-import { yearToRoman } from "./lib";
+import { getCalendarData, yearToRoman } from "@/lib/calendar";
 
 export const Calendar = () => {
-  const today = dayjs();
-  const { calendarData, liturgicalYear } = getCalendarData(today);
+  const { calendarData, liturgicalYear } = getCalendarData();
 
   // Build Markdown by season
   const markdown = Object.entries(calendarData)

@@ -1,21 +1,21 @@
 import dayjs from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
-import { getCalendarData } from "../Calendar/getCalendarData";
+import { getCalendarData } from "@/lib/calendar";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
 
 export const Invitatory = () => {
-  const today = dayjs();
   const {
+    today,
     currentDay,
     groupedCalendarData,
     liturgicalYear,
     seasons,
     easter,
     annunciation,
-  } = getCalendarData(today);
+  } = getCalendarData();
 
   const todayItem = groupedCalendarData[today.format("YYYY-MM-DD")] || [];
 

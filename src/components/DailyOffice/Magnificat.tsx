@@ -1,9 +1,7 @@
-import dayjs from "dayjs";
-import { getCalendarData } from "../Calendar/getCalendarData";
+import { getCalendarData } from "@/lib/calendar";
 
 export const Magnificat = () => {
-  const today = dayjs();
-  const { liturgicalYear } = getCalendarData(today);
+  const { today, liturgicalYear } = getCalendarData();
 
   let tone = "Tone VIII S 1";
   let useAltTone = false;

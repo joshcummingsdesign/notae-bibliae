@@ -7,8 +7,7 @@ import readingPlan from "./reading-plan.json";
 import psalmPlan from "./psalm-plan.json";
 import collectPlan from "./collect-plan.json";
 import { Fragment, useEffect, useState } from "react";
-import { getCalendarData } from "../Calendar/getCalendarData";
-import { CalendarItem } from "../Calendar/interfaces";
+import { getCalendarData, CalendarItem } from "@/lib/calendar";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
@@ -53,8 +52,7 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
       return acc;
     }, {});
 
-    const today = dayjs();
-    const { groupedCalendarData } = getCalendarData(today);
+    const { today, groupedCalendarData } = getCalendarData();
 
     const planItems = Object.values(plan);
 

@@ -1,10 +1,8 @@
-import dayjs from "dayjs";
-import { getCalendarData } from "../Calendar/getCalendarData";
+import { getCalendarData } from "@/lib/calendar";
 import Image from "next/image";
 
 export const Benedicamus = () => {
-  const today = dayjs();
-  const { seasons, groupedCalendarData } = getCalendarData(today);
+  const { today, seasons, groupedCalendarData } = getCalendarData();
 
   const todayItem = groupedCalendarData[today.format("YYYY-MM-DD")] || [];
 

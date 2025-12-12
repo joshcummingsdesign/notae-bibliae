@@ -1,9 +1,7 @@
-import dayjs from "dayjs";
-import { getCalendarData } from "../Calendar/getCalendarData";
+import { getCalendarData } from "@/lib/calendar";
 
 export const ApostlesCreed = () => {
-  const today = dayjs();
-  const { liturgicalYear, easter } = getCalendarData(today);
+  const { today, liturgicalYear, easter } = getCalendarData();
   const isChristmas = today.isSame(`${liturgicalYear - 1}-12-25`, "day");
   const isEpiphany = today.isSame(`${liturgicalYear}-01-06`, "day");
   const isEaster = today.isSame(easter, "day");
