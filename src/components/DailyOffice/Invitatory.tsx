@@ -1,4 +1,5 @@
 import { Calendar } from "@/models/calendar";
+import Link from "next/link";
 
 export const Invitatory = () => {
   const calendar = new Calendar();
@@ -42,7 +43,9 @@ export const Invitatory = () => {
     return (
       <p>
         <strong>
-          <a href="/liturgy/music/chants/pascha-nostrum">Pascha nostrum</a>
+          <Link href="/liturgy/music/chants/pascha-nostrum">
+            Pascha nostrum
+          </Link>
         </strong>{" "}
         (SDP 342)
       </p>
@@ -52,7 +55,7 @@ export const Invitatory = () => {
   return (
     <p>
       <strong>
-        <a href="/liturgy/music/chants/venite">Venite</a>
+        <Link href="/liturgy/music/chants/venite">Venite</Link>
       </strong>{" "}
       (SDP {sdpPage})
     </p>

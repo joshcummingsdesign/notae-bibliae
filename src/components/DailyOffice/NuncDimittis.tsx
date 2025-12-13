@@ -1,14 +1,17 @@
-import dayjs from "dayjs";
+import { Calendar } from "@/models/calendar";
+import Link from "next/link";
 
 export const NuncDimittis = () => {
-  const today = dayjs();
-  const isSunday = today.day() === 0;
+  const calendar = new Calendar();
+  const isLordsDay = calendar.isLordsDay();
 
   const salvaNos = (
     <p>
       <em>
         Optionally add the{" "}
-        <a href="/liturgy/music/chants/salva-nos-domine">Salva nos Domine</a>
+        <Link href="/liturgy/music/chants/salva-nos-domine">
+          Salva nos Domine
+        </Link>
       </em>
     </p>
   );
@@ -17,11 +20,11 @@ export const NuncDimittis = () => {
     <>
       <p>
         <strong>
-          <a href="/liturgy/music/chants/nunc-dimittis">Nunc dimittis</a>
+          <Link href="/liturgy/music/chants/nunc-dimittis">Nunc dimittis</Link>
         </strong>{" "}
         (SDP 478, Tone III B 5)
       </p>
-      {isSunday && salvaNos}
+      {isLordsDay && salvaNos}
     </>
   );
 };

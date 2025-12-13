@@ -293,7 +293,6 @@ describe("Calendar", () => {
         "Holy Week: [Palm Sunday](/liturgy/seasons/lent/passiontide/palm-sunday)",
       rank: 1,
       class: 1,
-      isFeast: true,
     });
     expect(items[1]).toEqual({
       date: "2026-03-30",
@@ -301,7 +300,6 @@ describe("Calendar", () => {
         "Holy Week: [Holy Monday](/liturgy/seasons/lent/passiontide/holy-monday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[2]).toEqual({
       date: "2026-03-31",
@@ -309,7 +307,6 @@ describe("Calendar", () => {
         "Holy Week: [Holy Tuesday](/liturgy/seasons/lent/passiontide/holy-tuesday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[3]).toEqual({
       date: "2026-04-01",
@@ -317,7 +314,6 @@ describe("Calendar", () => {
         "Holy Week: [Spy Wednesday](/liturgy/seasons/lent/passiontide/spy-wednesday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[4]).toEqual({
       date: "2026-04-02",
@@ -325,7 +321,6 @@ describe("Calendar", () => {
         "Holy Week: [Maundy Thursday](/liturgy/seasons/lent/passiontide/maundy-thursday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[5]).toEqual({
       date: "2026-04-03",
@@ -333,7 +328,6 @@ describe("Calendar", () => {
         "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/seasons/lent/passiontide/good-friday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[6]).toEqual({
       date: "2026-04-04",
@@ -341,14 +335,12 @@ describe("Calendar", () => {
         "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[7]).toEqual({
       date: "2026-04-04",
       title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
       rank: 4,
       class: 5,
-      isFeast: true,
     });
   });
 
@@ -360,7 +352,6 @@ describe("Calendar", () => {
       title: "[Ash Wednesday](/liturgy/seasons/lent/ash-wednesday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[1]).toEqual({
       date: "2026-02-19",
@@ -426,7 +417,6 @@ describe("Calendar", () => {
         "Holy Week: [Palm Sunday](/liturgy/seasons/lent/passiontide/palm-sunday)",
       rank: 1,
       class: 1,
-      isFeast: true,
     });
     expect(items[11]).toEqual({
       date: "2026-03-30",
@@ -434,7 +424,6 @@ describe("Calendar", () => {
         "Holy Week: [Holy Monday](/liturgy/seasons/lent/passiontide/holy-monday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[12]).toEqual({
       date: "2026-03-31",
@@ -442,7 +431,6 @@ describe("Calendar", () => {
         "Holy Week: [Holy Tuesday](/liturgy/seasons/lent/passiontide/holy-tuesday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[13]).toEqual({
       date: "2026-04-01",
@@ -450,7 +438,6 @@ describe("Calendar", () => {
         "Holy Week: [Spy Wednesday](/liturgy/seasons/lent/passiontide/spy-wednesday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[14]).toEqual({
       date: "2026-04-02",
@@ -458,7 +445,6 @@ describe("Calendar", () => {
         "Holy Week: [Maundy Thursday](/liturgy/seasons/lent/passiontide/maundy-thursday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[15]).toEqual({
       date: "2026-04-03",
@@ -466,7 +452,6 @@ describe("Calendar", () => {
         "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/seasons/lent/passiontide/good-friday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[16]).toEqual({
       date: "2026-04-04",
@@ -474,14 +459,12 @@ describe("Calendar", () => {
         "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
       rank: 1,
       class: 2,
-      isFeast: true,
     });
     expect(items[17]).toEqual({
       date: "2026-04-04",
       title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
       rank: 4,
       class: 5,
-      isFeast: true,
     });
   });
 
@@ -800,7 +783,7 @@ describe("Calendar", () => {
     ]);
 
     const easterVigil = items["2026-04-04"];
-    expect(easterVigil.length).toBe(3);
+    expect(easterVigil.length).toBe(2);
     expect(easterVigil).toEqual([
       {
         date: "2026-04-04",
@@ -808,22 +791,12 @@ describe("Calendar", () => {
           "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: "2026-04-04",
         title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
         rank: 4,
         class: 5,
-        isFeast: true,
-      },
-      {
-        date: "2026-04-04",
-        title:
-          "[Saint Isidore](/people/saints/latin-fathers/isidore-of-seville), Bishop and Doctor of the Church",
-        rank: 5,
-        class: 10,
-        isSaint: true,
       },
     ]);
   });
@@ -871,14 +844,12 @@ describe("Calendar", () => {
           "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: "2026-04-04",
         title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
         rank: 4,
         class: 5,
-        isFeast: true,
       },
     ]);
   });
@@ -925,14 +896,12 @@ describe("Calendar", () => {
           "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: "2026-04-04",
         title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
         rank: 4,
         class: 5,
-        isFeast: true,
       },
     ]);
   });
@@ -1055,7 +1024,7 @@ describe("Calendar", () => {
       "November 30 — First Sunday of Advent — [Saint Andrew](/people/saints/apostles/andrew), Apostle"
     );
     expect(items["Lent"][items["Lent"].length - 1]).toBe(
-      "April 4 — Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday) — [Easter Vigil](/liturgy/seasons/eastertide/easter-vigil) — [Saint Isidore](/people/saints/latin-fathers/isidore-of-seville), Bishop and Doctor of the Church"
+      "April 4 — Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday) — [Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)"
     );
   });
 
@@ -1312,7 +1281,7 @@ describe("Calendar", () => {
     expect(c.isWhitsuntide()).toBeFalsy();
   });
 
-  test("should check to see we're in Trinitytide", () => {
+  test("should check to see we're in trinitytide", () => {
     const a = new Calendar(dayjs("2026-05-31"));
     expect(a.isTrinitytide()).toBeTruthy();
 
@@ -1323,7 +1292,7 @@ describe("Calendar", () => {
     expect(c.isTrinitytide()).toBeFalsy();
   });
 
-  test("should check to see we're in Ascensiontide", () => {
+  test("should check to see we're in ascensiontide", () => {
     const a = new Calendar(dayjs("2026-05-14"));
     expect(a.isAscensiontide()).toBeTruthy();
 
@@ -1332,6 +1301,28 @@ describe("Calendar", () => {
 
     const c = new Calendar(dayjs("2026-05-24"));
     expect(c.isAscensiontide()).toBeFalsy();
+  });
+
+  test("should check to see we're in holy week", () => {
+    const a = new Calendar(dayjs("2026-04-03"));
+    expect(a.isHolyWeek()).toBeTruthy();
+
+    const b = new Calendar(dayjs("2026-04-04"));
+    expect(b.isHolyWeek()).toBeTruthy();
+
+    const c = new Calendar(dayjs("2026-04-05"));
+    expect(c.isHolyWeek()).toBeFalsy();
+  });
+
+  test("should check to see we're in septuagesima to passion sunday", () => {
+    const a = new Calendar(dayjs("2026-02-01"));
+    expect(a.isSeptuagesimaToPassion()).toBeTruthy();
+
+    const b = new Calendar(dayjs("2026-03-22"));
+    expect(b.isSeptuagesimaToPassion()).toBeTruthy();
+
+    const c = new Calendar(dayjs("2026-03-25"));
+    expect(c.isSeptuagesimaToPassion()).toBeFalsy();
   });
 
   test("should check to see if it's holy innocents day", () => {

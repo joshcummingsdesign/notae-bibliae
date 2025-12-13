@@ -16,23 +16,37 @@ export const OpeningVersicles: React.FC<Props> = ({ office }) => {
     );
   }
 
+  const header = (
+    <>
+      <p>
+        <em>❡ Chant the Opening Versicles</em> (SDP 245)
+      </p>
+    </>
+  );
+
   if (office === "evensong") {
     return (
-      <Image
-        src="/chants/evensong-opening-versicles.svg"
-        alt="Evensong Opening Versicles"
-        width="600"
-        height="371"
-      />
+      <>
+        {header}
+        <Image
+          src="/chants/evensong-opening-versicles.svg"
+          alt="Evensong Opening Versicles"
+          width="600"
+          height="371"
+        />
+      </>
     );
   }
 
   return (
-    <Image
-      src="/chants/matins-opening-versicles.svg"
-      alt="Matins Opening Versicles"
-      width="600"
-      height="456"
-    />
+    <>
+      {header}
+      <Image
+        src="/chants/matins-opening-versicles.svg"
+        alt="Matins Opening Versicles"
+        width="600"
+        height="456"
+      />
+    </>
   );
 };

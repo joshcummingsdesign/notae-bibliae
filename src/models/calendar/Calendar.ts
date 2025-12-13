@@ -412,7 +412,6 @@ export class Calendar {
           "Holy Week: [Palm Sunday](/liturgy/seasons/lent/passiontide/palm-sunday)",
         rank: 1,
         class: 1,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
@@ -420,7 +419,6 @@ export class Calendar {
           "Holy Week: [Holy Monday](/liturgy/seasons/lent/passiontide/holy-monday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(2, "day").format("YYYY-MM-DD"),
@@ -428,7 +426,6 @@ export class Calendar {
           "Holy Week: [Holy Tuesday](/liturgy/seasons/lent/passiontide/holy-tuesday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(3, "day").format("YYYY-MM-DD"),
@@ -436,7 +433,6 @@ export class Calendar {
           "Holy Week: [Spy Wednesday](/liturgy/seasons/lent/passiontide/spy-wednesday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(4, "day").format("YYYY-MM-DD"),
@@ -444,7 +440,6 @@ export class Calendar {
           "Holy Week: [Maundy Thursday](/liturgy/seasons/lent/passiontide/maundy-thursday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(5, "day").format("YYYY-MM-DD"),
@@ -452,7 +447,6 @@ export class Calendar {
           "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/seasons/lent/passiontide/good-friday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
@@ -460,14 +454,12 @@ export class Calendar {
           "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
         title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
         rank: 4,
         class: 5,
-        isFeast: true,
       },
     ];
   }
@@ -486,7 +478,6 @@ export class Calendar {
         title: "[Ash Wednesday](/liturgy/seasons/lent/ash-wednesday)",
         rank: 1,
         class: 2,
-        isFeast: true,
       },
       {
         date: ashWednesday.add(1, "day").format("YYYY-MM-DD"),
@@ -840,6 +831,7 @@ export class Calendar {
    */
   getAll(rank: boolean = true): DateMap {
     const items = this.queryCalendarItems();
+    const easter = this.getEasterSunday;
 
     // Group by date
     const grouped: DateMap = items.reduce<DateMap>((acc, item) => {
@@ -854,8 +846,14 @@ export class Calendar {
     return Object.entries(grouped).reduce<DateMap>((acc, [date, items]) => {
       const highestRanked = items.sort((a, b) => a.rank - b.rank);
 
-      // Always show 4 and above
-      const fourAndAbove = highestRanked.filter((a) => a.rank >= 4);
+      // Always show 4 and above, except turing Holy Week
+      const isHolyWeek = this.isHolyWeek(dayjs(date));
+      const fourAndAbove = highestRanked.filter((a) => {
+        if (isHolyWeek) {
+          return a.rank >= 4 && !a.isSaint;
+        }
+        return a.rank >= 4;
+      });
 
       // If below 4, show the highest ranked
       let belowFour = highestRanked.filter((a) => a.rank < 4);
@@ -1179,6 +1177,31 @@ export class Calendar {
     return (
       this.today.isSameOrAfter(easter, "day") &&
       this.today.isSameOrBefore(easter.add(7, "day"), "day")
+    );
+  }
+
+  /**
+   * Check to see if we're in Holy Week.
+   */
+  isHolyWeek(date: Dayjs = this.today): boolean {
+    const easter = this.getEasterSunday();
+    const holyWeekStart = easter.subtract(7, "day");
+    const holyWeekEnd = easter.subtract(1, "day");
+    return (
+      date.isSameOrAfter(holyWeekStart, "day") &&
+      date.isSameOrBefore(holyWeekEnd, "day")
+    );
+  }
+
+  /**
+   * Check to see if we're in the time between Septuagesima and Passion Sunday.
+   */
+  isSeptuagesimaToPassion(): boolean {
+    const septuagesima = this.getSeptuagesima();
+    const passionSunday = this.getPassionSunday();
+    return (
+      this.today.isSameOrAfter(septuagesima, "day") &&
+      this.today.isSameOrBefore(passionSunday, "day")
     );
   }
 

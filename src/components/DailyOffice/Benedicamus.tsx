@@ -6,7 +6,7 @@ export const Benedicamus = () => {
 
   const getText = (t: string) => (
     <p>
-      <em>{`❡ ${t} Tone`}</em> (SDP 252).
+      <em>{`❡ ${t} Tone`}</em> (SDP 252)
     </p>
   );
 

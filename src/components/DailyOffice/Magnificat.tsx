@@ -1,4 +1,5 @@
 import { Calendar } from "@/models/calendar";
+import Link from "next/link";
 import { Fragment } from "react";
 
 export const Magnificat = () => {
@@ -33,7 +34,7 @@ export const Magnificat = () => {
       {antiphon}
       <p>
         <strong>
-          <a href="/liturgy/music/chants/magnificat">Magnificat</a>
+          <Link href="/liturgy/music/chants/magnificat">Magnificat</Link>
         </strong>{" "}
         (SDP 447, {tone})
       </p>

@@ -26,6 +26,7 @@
     "title": "[Saint Ambrose](/people/saints/latin-fathers/ambrose-of-milan), Bishop and Doctor of the Church",
     "rank": 5,
     "class": 6,
+    "isFeast": true,
     "isSaint": true
   },
   {
@@ -203,6 +204,7 @@
     "title": "Saint [Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
     "rank": 5,
     "class": 6,
+    "isFeast": true,
     "isSaint": true
   },
   {
@@ -309,6 +311,7 @@
     "title": "[Saint Athanasius](/people/saints/greek-fathers/athanasius-of-alexandria), Bishop and Doctor of the Church",
     "rank": 5,
     "class": 6,
+    "isFeast": true,
     "isSaint": true
   },
   {
@@ -535,6 +538,7 @@
     "title": "[Saint Augustine](/people/saints/latin-fathers/augustine-of-hippo), Bishop and Doctor of the Church",
     "rank": 5,
     "class": 6,
+    "isFeast": true,
     "isSaint": true
   },
   {
@@ -549,6 +553,7 @@
     "title": "[Saint Gregory the Great](/people/saints/latin-fathers/gregory-the-great), Pope and Doctor of the Church",
     "rank": 5,
     "class": 6,
+    "isFeast": true,
     "isSaint": true
   },
   {
@@ -664,8 +669,7 @@
     "date": "11-02",
     "title": "[All Souls' Day](/liturgy/seasons/trinitytide/allhallowtide/all-souls-day)",
     "rank": 1,
-    "class": 5,
-    "isFeast": true
+    "class": 5
   },
   {
     "date": "11-10",

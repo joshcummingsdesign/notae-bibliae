@@ -1,4 +1,5 @@
 import { Dayjs } from "dayjs";
+import Link from "next/link";
 
 interface Props {
   today: Dayjs;
@@ -18,86 +19,82 @@ export const OtCanticle: React.FC<Props> = ({ today }) => {
   switch (day) {
     case monday:
       canticle = (
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/song-of-isaiah">Song of Isaiah</a>
-          </strong>{" "}
-          (SDP 380)
-        </p>
+        <Canticle
+          link="/liturgy/music/chants/song-of-isaiah"
+          text="Song of Isaiah"
+          notes="SDP 380"
+        />
       );
       break;
     case tuesday:
       canticle = (
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/song-of-hezekiah">
-              Song of Hezekiah
-            </a>
-          </strong>{" "}
-          (SDP 381)
-        </p>
+        <Canticle
+          link="/liturgy/music/chants/song-of-hezekiah"
+          text="Song of Hezekiah"
+          notes="SDP 381"
+        />
       );
       break;
     case wednesday:
       canticle = (
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/song-of-hannah">Song of Hannah</a>
-          </strong>{" "}
-          (SDP 383)
-        </p>
+        <Canticle
+          link="/liturgy/music/chants/song-of-hannah"
+          text="Song of Hannah"
+          notes="SDP 383"
+        />
       );
       break;
     case thursday:
       canticle = (
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/song-of-moses-exod">
-              Song of Moses from Exod.
-            </a>
-          </strong>{" "}
-          (SDP 386)
-        </p>
+        <Canticle
+          link="/liturgy/music/chants/song-of-moses-exod"
+          text="Song of Moses from Exod."
+          notes="SDP 386"
+        />
       );
       break;
     case friday:
       canticle = (
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/song-of-habakkuk">
-              Song of Habakkuk
-            </a>
-          </strong>{" "}
-          (SDP 389)
-        </p>
+        <Canticle
+          link="/liturgy/music/chants/song-of-habakkuk"
+          text="Song of Habakkuk"
+          notes="SDP 389"
+        />
       );
       break;
     case saturday:
       canticle = (
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/song-of-moses-deut-pt-1">
-              Song of Moses from Deut.
-            </a>
-          </strong>{" "}
-          (SDP 392)
-        </p>
+        <Canticle
+          link="/liturgy/music/chants/song-of-moses-deut-pt-1"
+          text="Song of Moses from Deut."
+          notes="SDP 392"
+        />
       );
       break;
   }
 
   if (!canticle) {
     canticle = (
-      <>
-        <p>
-          <strong>
-            <a href="/liturgy/music/chants/benedicite">Benedicite</a>
-          </strong>{" "}
-          (SDP 367, Tone VII 4)
-        </p>
-      </>
+      <Canticle
+        link="/liturgy/music/chants/benedicite"
+        text="Benedicite"
+        notes="SDP 367, Tone VII 4"
+      />
     );
   }
 
   return canticle;
 };
+
+const Canticle: React.FC<{ link: string; text: string; notes: string }> = ({
+  text,
+  link,
+  notes,
+}) => (
+  <p>
+    <strong>
+      <Link href={link}>{text}</Link>
+    </strong>{" "}
+    ({notes})
+  </p>
+);

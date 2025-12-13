@@ -42,7 +42,7 @@ export class Collects {
     // Merge the Collects with the calendar items
     for (const collect of collects) {
       for (const item of flatItems) {
-        if (item.normalizedTitle.includes(collect.title)) {
+        if (item.normalizedTitle.startsWith(collect.title)) {
           (mergedItems[item.date] ??= []).push({
             ...item.value,
             collect: collect.text,

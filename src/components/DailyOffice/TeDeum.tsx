@@ -1,5 +1,6 @@
 import { Calendar } from "@/models/calendar";
 import { OtCanticle } from "./OtCanticle";
+import Link from "next/link";
 
 export const TeDeum = () => {
   const calendar = new Calendar();
@@ -14,7 +15,7 @@ export const TeDeum = () => {
   const shouldOmitTeDeum =
     calendar.isAdvent() ||
     calendar.isHolyInnocents() ||
-    calendar.isLent() ||
+    calendar.isSeptuagesimaToPassion() ||
     calendar.isSolemn();
 
   if (shouldOmitTeDeum || !shouldSingTeDeum) {
@@ -25,9 +26,9 @@ export const TeDeum = () => {
     <p>
       <em>
         Optionally add the{" "}
-        <a href="/liturgy/music/chants/facta-est-cum-angelo">
+        <Link href="/liturgy/music/chants/facta-est-cum-angelo">
           Facta est cum Angelo
-        </a>
+        </Link>
       </em>
     </p>
   );
@@ -39,7 +40,7 @@ export const TeDeum = () => {
       </p>
       <p>
         <strong>
-          <a href="/liturgy/music/chants/benedicite">Benedicite</a>
+          <Link href="/liturgy/music/chants/benedicite">Benedicite</Link>
         </strong>{" "}
         (SDP 367, Tone VII 4)
       </p>
@@ -51,9 +52,9 @@ export const TeDeum = () => {
     <p>
       <em>
         Optionally replace with the{" "}
-        <a href="/liturgy/music/chants/victimae-paschali-laudes">
+        <Link href="/liturgy/music/chants/victimae-paschali-laudes">
           Victimae paschali laudes
-        </a>
+        </Link>
       </em>
     </p>
   );
@@ -62,9 +63,9 @@ export const TeDeum = () => {
     <p>
       <em>
         Optionally replace with the{" "}
-        <a href="/liturgy/music/chants/veni-sancte-spiritus">
+        <Link href="/liturgy/music/chants/veni-sancte-spiritus">
           Veni Sancte Spiritus
-        </a>
+        </Link>
       </em>
     </p>
   );
@@ -73,7 +74,7 @@ export const TeDeum = () => {
     <>
       <p>
         <strong>
-          <a href="/liturgy/music/chants/te-deum">Te Deum</a>
+          <Link href="/liturgy/music/chants/te-deum">Te Deum</Link>
         </strong>{" "}
         (SDP 357)
       </p>
