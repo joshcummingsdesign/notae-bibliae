@@ -1333,6 +1333,22 @@ describe("Calendar", () => {
     expect(b.isHolyInnocents()).toBeFalsy();
   });
 
+  test("should get epiphany", () => {
+    const a = new Calendar(dayjs("2025-11-30"));
+    expect(a.getEpiphany().format("YYYY-MM-DD")).toBe("2026-01-06");
+  });
+
+  test("should check to see if it's the octave of epiphany", () => {
+    const a = new Calendar(dayjs("2025-01-06"));
+    expect(a.isOctaveOfEpiphany()).toBeTruthy();
+
+    const b = new Calendar(dayjs("2025-01-13"));
+    expect(b.isOctaveOfEpiphany()).toBeTruthy();
+
+    const c = new Calendar(dayjs("2025-01-14"));
+    expect(c.isOctaveOfEpiphany()).toBeFalsy();
+  });
+
   test("should get the o antiphons", () => {
     const a = new Calendar(dayjs("2025-11-30"));
     const oa = a.getOAntiphons();

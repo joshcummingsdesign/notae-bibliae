@@ -237,15 +237,24 @@ export class Calendar {
   }
 
   /**
+   * Get Epiphany.
+   */
+  getEpiphany(): Dayjs {
+    const liturgicalYear = this.getLiturgicalYear();
+    return dayjs(`${liturgicalYear}-01-06`);
+  }
+
+  /**
    * Get all the Sundays in Epiphanytide.
    */
   getEpiphanytideSundays(): CalendarItem[] {
-    const liturgicalYear = this.getLiturgicalYear();
+    const epiphany = this.getEpiphany();
 
     // First Sunday after Jan 6
-    const jan6 = dayjs(`${liturgicalYear}-01-06`);
     const firstSunday =
-      jan6.day() === 0 ? jan6.add(7, "day") : jan6.add(7 - jan6.day(), "day");
+      epiphany.day() === 0
+        ? epiphany.add(7, "day")
+        : epiphany.add(7 - epiphany.day(), "day");
 
     return [
       {
@@ -1203,6 +1212,17 @@ export class Calendar {
     return (
       this.today.isSameOrAfter(septuagesima, "day") &&
       this.today.isSameOrBefore(passionSunday, "day")
+    );
+  }
+
+  /**
+   * Check to see if we're in the Octave of Epiphany.
+   */
+  isOctaveOfEpiphany(): boolean {
+    const epiphany = this.getEpiphany();
+    return (
+      this.today.isSameOrAfter(epiphany, "day") &&
+      this.today.isSameOrBefore(epiphany.add(7, "day"), "day")
     );
   }
 
