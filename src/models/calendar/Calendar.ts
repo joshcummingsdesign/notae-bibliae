@@ -3,6 +3,7 @@ import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 import isBetween from "dayjs/plugin/isBetween";
 import {
+  AntiphonMap,
   CalendarItem,
   DateMap,
   FormattedSeasonItems,
@@ -1297,7 +1298,7 @@ export class Calendar {
   /**
    * Get the O Antiphons.
    */
-  getOAntiphons(): { [date: string]: { title: string; text: string } } {
+  getOAntiphons(): AntiphonMap {
     const year = this.getLiturgicalYear() - 1;
     return {
       [`${year}-12-17`]: {

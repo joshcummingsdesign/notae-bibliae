@@ -1,6 +1,6 @@
 import { Calendar } from "@/models/calendar";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Antiphon } from "@/components/Antiphon";
 
 export const Magnificat = () => {
   const calendar = new Calendar();
@@ -12,21 +12,7 @@ export const Magnificat = () => {
   let antiphon;
 
   if (currentAntiphon) {
-    antiphon = (
-      <>
-        <p>
-          <strong>{currentAntiphon.title}</strong>
-        </p>
-        <p>
-          {currentAntiphon.text.split("\n").map((line, i) => (
-            <Fragment key={i}>
-              {line}
-              <br />
-            </Fragment>
-          ))}
-        </p>
-      </>
-    );
+    antiphon = <Antiphon antiphon={currentAntiphon} />;
   }
 
   return (

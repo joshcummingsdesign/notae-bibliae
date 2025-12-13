@@ -30,3 +30,10 @@ export interface DateMap {
 export type SeasonItems = Record<SeasonName, DateMap>;
 
 export type FormattedSeasonItems = Record<SeasonName, string[]>;
+
+export interface AntiphonData {
+  title: string;
+  text: string;
+}
+
+export type AntiphonMap = { [date: string]: AntiphonData };
