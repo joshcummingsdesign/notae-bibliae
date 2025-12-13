@@ -1324,30 +1324,44 @@ export class Calendar {
       [`${year}-12-17`]: {
         title: "O Sapientia",
         text: "O come, thou Wisdom from on high,\nWho orderest all things mightily;\nTo us the path of knowledge show,\nAnd teach us in her ways to go.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-sapientia",
+        verse: "Isaiah 11:2",
       },
       [`${year}-12-18`]: {
         title: "O Adonai",
         text: "O come, O come, thou Lord of Might \nWho to thy tribes, on Sinai's height, \nIn ancient times didst give the law,\nIn cloud, and majesty, and awe.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-adonai",
+        verse: "Isaiah 33:22",
       },
       [`${year}-12-19`]: {
         title: "O Radix Jesse",
         text: "O come, thou Root of Jesse's tree,\nFree them from Satan's tyranny,\nThat trust thy mighty power to save,\nAnd give them victory o'er the grave.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-radix-jesse",
+        verse: "Isaiah 11:10",
       },
       [`${year}-12-20`]: {
         title: "O Clavis David",
         text: "O come, thou Key of David, come\nAnd open wide our heavenly home;\nMake safe the way that leads our hearts to thee,\nAnd close the door to misery.\nRejoice! Rejoice! Emmanuel\n Shall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-clavis-david",
+        verse: "Isaiah 22:22",
       },
       [`${year}-12-21`]: {
         title: "O Oriens",
         text: "O come, thou Dayspring, come and cheer\nOur spirits by thine advent here,\nAnd drive away the gloomy clouds of night,\nAnd death's dark shadows put to flight.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-oriens",
+        verse: "Isaiah 60:1-3",
       },
       [`${year}-12-22`]: {
         title: "O Rex gentium",
         text: "O come, Desire of nations, bind\nIn one the hearts of all mankind;\nBid thou our sad divisions cease,\nAnd be thyself our King of Peace.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-rex-gentium",
+        verse: "Isaiah 2:4",
       },
       [`${year}-12-23`]: {
         title: "O Emmanuel",
         text: "O come, O come, Emmanuel\nAnd ransom captive Israel,\nThat mourns in lonely exile here\nUntil the Son of God appear.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel.",
+        link: "/liturgy/music/chants/o-emmanuel",
+        verse: "Isaiah 7:14",
       },
     };
   }

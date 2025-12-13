@@ -774,7 +774,6 @@ export const menuItems: MenuNode[] = [
         title: "Calendar",
         link: "/liturgy/calendar",
         priority: 0.7,
-        inPageNav: true,
       },
       {
         title: "Psalter",

@@ -34,6 +34,8 @@ export type FormattedSeasonItems = Record<SeasonName, string[]>;
 export interface AntiphonData {
   title: string;
   text: string;
+  link: string;
+  verse: string;
 }
 
 export type AntiphonMap = { [date: string]: AntiphonData };
