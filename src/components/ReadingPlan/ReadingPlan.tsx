@@ -1,20 +1,12 @@
 "use client";
-import dayjs from "dayjs";
-import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
-import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import readingPlan from "./reading-plan.json";
 import psalmPlan from "./psalm-plan.json";
-import collectPlan from "./collect-plan.json";
-import { Fragment, useEffect, useState } from "react";
-import { getCalendarData, CalendarItem } from "@/lib/calendar";
-
-dayjs.extend(isSameOrBefore);
-dayjs.extend(isSameOrAfter);
+import { useEffect, useState } from "react";
 
 interface Props {
   id: string;
-  type?: "reading" | "psalm" | "collect";
+  type?: "reading" | "psalm";
 }
 
 interface PlanItem {
@@ -42,97 +34,6 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
         label="Current Psalm"
         type={type}
         plan={plan}
-      />
-    );
-  }
-
-  if (type === "collect") {
-    const plan = collectPlan.reduce<PlanItems>((acc, val, i) => {
-      acc[String(i)] = val;
-      return acc;
-    }, {});
-
-    const { today, groupedCalendarData } = getCalendarData();
-
-    const planItems = Object.values(plan);
-
-    interface FoundItem {
-      calendarItem: CalendarItem;
-      planItem: PlanItem;
-    }
-
-    const mapCalendarItemsToPlanItems = (
-      items: CalendarItem[],
-      type: "primary" | "secondary" = "primary"
-    ): FoundItem[] => {
-      let filterFn = (a: CalendarItem) => a.rank < 4;
-      if (type === "secondary") {
-        filterFn = (a: CalendarItem) => a.rank >= 4;
-      }
-
-      let highestRanked = items
-        .filter(filterFn)
-        .sort((a, b) => a.rank - b.rank);
-
-      let foundItems: FoundItem[] = [];
-
-      if (highestRanked.length) {
-        planItems.forEach((pi) => {
-          const re = new RegExp(
-            `^${pi.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`
-          );
-
-          const t = highestRanked.map((hr) => ({
-            ...hr,
-            title: hr.title.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
-          }));
-
-          const found = t.find((r) => re.test(r.title));
-
-          if (found) {
-            foundItems.push({ calendarItem: found, planItem: pi });
-          }
-        });
-      }
-
-      return foundItems.sort(
-        (a, b) => a.calendarItem.rank - b.calendarItem.rank
-      );
-    };
-
-    let currentPlan: PlanItem = planItems[0];
-    let secondaryPlans: PlanItem[] = [];
-    Object.entries(groupedCalendarData).forEach(([date, items]) => {
-      if (dayjs(date).isSameOrBefore(today, "day")) {
-        const foundItems = mapCalendarItemsToPlanItems(items);
-
-        if (foundItems.length) {
-          for (let i = 0; i < foundItems.length; i++) {
-            const fi = foundItems[i];
-
-            if (fi.calendarItem.rank === 1) {
-              if (dayjs(fi.calendarItem.date).isSame(today, "day")) {
-                currentPlan = fi.planItem;
-                break;
-              }
-            } else {
-              currentPlan = fi.planItem;
-              break;
-            }
-          }
-        }
-      }
-
-      if (dayjs(date).isSame(today, "day")) {
-        const foundItems = mapCalendarItemsToPlanItems(items, "secondary");
-        secondaryPlans = foundItems.map((fi) => fi.planItem);
-      }
-    });
-
-    return (
-      <CollectViewer
-        currentPlan={currentPlan}
-        secondaryPlans={secondaryPlans}
       />
     );
   }
@@ -261,35 +162,6 @@ export const PlanPicker = ({
   );
 };
 
-export const CollectViewer = ({
-  currentPlan,
-  secondaryPlans,
-}: {
-  currentPlan: PlanItem;
-  secondaryPlans: PlanItem[];
-}) => {
-  return (
-    <>
-      <p>
-        <strong>Collect for {currentPlan.title}</strong>
-      </p>
-      <CollectText
-        dangerouslySetInnerHTML={{ __html: currentPlan.notes || "" }}
-      />
-      {secondaryPlans.map((secondaryPlan) => (
-        <Fragment key={secondaryPlan.title}>
-          <p>
-            <strong>Collect for {secondaryPlan.title}</strong>
-          </p>
-          <CollectText
-            dangerouslySetInnerHTML={{ __html: secondaryPlan.notes || "" }}
-          />
-        </Fragment>
-      ))}
-    </>
-  );
-};
-
 const Wrapper = styled("div")(({ theme }) => ({
   marginTop: "30px",
 
@@ -305,20 +177,6 @@ const Wrapper = styled("div")(({ theme }) => ({
       "li[aria-selected='true']": {
         backgroundColor: theme.palette.brand.hover,
       },
-    },
-  },
-}));
-
-const CollectText = styled("p")(({ theme }) => ({
-  ".dot": {
-    color: theme.palette.brand.red,
-    position: "relative",
-    top: "2px",
-
-    "&:before": {
-      content: "'·'",
-      lineHeight: "1.5rem",
-      fontSize: "1.75rem",
     },
   },
 }));

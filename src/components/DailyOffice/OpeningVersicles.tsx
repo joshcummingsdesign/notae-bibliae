@@ -1,21 +1,14 @@
+import { Calendar } from "@/models/calendar";
 import Image from "next/image";
-import { getCalendarData } from "@/lib/calendar";
 
 interface Props {
   office: "matins" | "evensong";
 }
 
 export const OpeningVersicles: React.FC<Props> = ({ office }) => {
-  const { currentDay } = getCalendarData();
+  const calendar = new Calendar();
 
-  const isSolemn = [
-    "Maundy Thursday",
-    "Good Friday",
-    "Holy Saturday",
-    "All Souls' Day",
-  ].some((d) => currentDay.includes(d));
-
-  if (isSolemn) {
+  if (calendar.isSolemn()) {
     return (
       <p>
         [ <em>Omit Opening Versicles</em> ]

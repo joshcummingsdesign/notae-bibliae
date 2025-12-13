@@ -1,9 +1,12 @@
 import Markdown from "react-markdown";
 import remarkSmartypants from "remark-smartypants";
-import { getCalendarData, yearToRoman } from "@/lib/calendar";
+import { yearToRoman } from "@/lib/utils/yearToRoman";
+import { Calendar as CalendarClass } from "@/models/calendar";
 
 export const Calendar = () => {
-  const { calendarData, liturgicalYear } = getCalendarData();
+  const calendar = new CalendarClass();
+  const calendarData = calendar.getFormattedSeasonItems();
+  const liturgicalYear = calendar.getLiturgicalYear();
 
   // Build Markdown by season
   const markdown = Object.entries(calendarData)

@@ -1,20 +1,8 @@
-import { getCalendarData } from "@/lib/calendar";
+import { Calendar } from "@/models/calendar";
 import Image from "next/image";
 
 export const Benedicamus = () => {
-  const { today, seasons, groupedCalendarData } = getCalendarData();
-
-  const todayItem = groupedCalendarData[today.format("YYYY-MM-DD")] || [];
-
-  const eastertide = seasons.find((s) => s.name === "Eastertide");
-
-  const isFeast = todayItem.some((item) => item.isFeast);
-  const isLordsDay = today.day() === 0;
-
-  const isEastertide =
-    eastertide &&
-    today.isSameOrAfter(eastertide.start, "day") &&
-    today.isSameOrBefore(eastertide.end, "day");
+  const calendar = new Calendar();
 
   const getText = (t: string) => (
     <p>
@@ -22,7 +10,7 @@ export const Benedicamus = () => {
     </p>
   );
 
-  if (isEastertide) {
+  if (calendar.isEastertide()) {
     return (
       <>
         {getText("Eastertide")}
@@ -36,7 +24,7 @@ export const Benedicamus = () => {
     );
   }
 
-  if (isFeast || isLordsDay) {
+  if (calendar.isFeastDay() || calendar.isLordsDay()) {
     return (
       <>
         {getText("Festal")}

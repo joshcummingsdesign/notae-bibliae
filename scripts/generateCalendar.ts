@@ -3,14 +3,14 @@ import path from "path";
 import { createEvents, EventAttributes } from "ics";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import { getCalendarData } from "../src/lib/calendar/getCalendarData";
+import { Calendar, SeasonName } from "@/models/calendar";
 
 dayjs.extend(customParseFormat);
 
 // === CALENDAR DATA ===
 
-const today = dayjs();
-const { calendarData } = getCalendarData(today);
+const calendar = new Calendar();
+const calendarData = calendar.getFormattedSeasonItems();
 
 // === CONFIG ===
 
@@ -62,7 +62,7 @@ const parseEvent = (line: string): EventAttributes => {
 const events: EventAttributes[] = [];
 
 for (const season of Object.keys(calendarData)) {
-  const lines: string[] = calendarData[season];
+  const lines: string[] = calendarData[season as SeasonName];
 
   for (const line of lines) {
     events.push(parseEvent(line));

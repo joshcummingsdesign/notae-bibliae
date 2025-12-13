@@ -7,20 +7,26 @@ export interface CalendarItem {
   isSaint?: boolean;
 }
 
+export type SeasonName =
+  | "Advent"
+  | "Christmastide"
+  | "Epiphanytide"
+  | "Pre-Lent"
+  | "Lent"
+  | "Eastertide"
+  | "Whitsuntide"
+  | "Trinitytide";
+
 export interface Season {
-  name: string;
+  name: SeasonName;
   start: string;
   end: string;
-}
-
-export interface SeasonMap {
-  [season: string]: CalendarItem[];
 }
 
 export interface DateMap {
   [date: string]: CalendarItem[];
 }
 
-export interface FormattedSeasonMap {
-  [season: string]: string[];
-}
+export type SeasonItems = Record<SeasonName, DateMap>;
+
+export type FormattedSeasonItems = Record<SeasonName, string[]>;
