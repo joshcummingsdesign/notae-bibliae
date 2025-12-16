@@ -64,6 +64,7 @@ Poetry with indentation and symbols.
 \A = Ant.
 \V = ℣
 \R = ℟
+\L = All
 \B = [Bow]
 \G = [Genuflect]
 \U = [Rise]

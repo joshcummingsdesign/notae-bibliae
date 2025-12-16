@@ -10,6 +10,7 @@ interface Props {
 
 const symbols = {
   "\\A": '<span class="symbol a">Ant.</span>',
+  "\\L": '<span class="symbol l">All:</span>',
   "\\a": '<span class="symbol bow">Antiphon.</span>',
   "\\V": '<span class="symbol v"></span>',
   "\\R": '<span class="symbol r"></span>',
@@ -116,6 +117,12 @@ const Wrapper = styled("pre")(({ theme }) => ({
 
   ".a": {
     fontWeight: theme.typography.fontWeightBold,
+  },
+
+  ".l": {
+    fontWeight: theme.typography.fontWeightBold,
+    fontStyle: "italic",
+    fontSize: "0.9375rem",
   },
 
   ".v": {

@@ -1,12 +1,12 @@
 "use client";
 import { Autocomplete, styled, TextField } from "@mui/material";
-import readingPlan from "./reading-plan.json";
-import psalmPlan from "./psalm-plan.json";
+import lessons from "./lessons.json";
+import psalms from "./psalms.json";
 import { useEffect, useState } from "react";
 
 interface Props {
   id: string;
-  type?: "reading" | "psalm";
+  type?: "ot" | "nt" | "psalm"; // default: psalm
 }
 
 interface PlanItem {
@@ -21,16 +21,32 @@ interface PlanItem {
 
 type PlanItems = { [index: string]: PlanItem };
 
-export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
-  if (type === "psalm") {
-    const plan = psalmPlan.reduce<PlanItems>((acc, val, i) => {
+export const Lessons: React.FC<Props> = ({ id, type = "psalm" }) => {
+  if (type === "ot") {
+    const plan = lessons.OT.reduce<PlanItems>((acc, val, i) => {
       acc[String(i)] = val;
       return acc;
     }, {});
 
     return (
-      <PlanPicker
-        id={`${id}-psalm`}
+      <LessonPicker
+        id={`${id}-ot-lesson`}
+        label="Current Lesson"
+        type={type}
+        plan={plan}
+      />
+    );
+  }
+
+  if (type === "nt") {
+    const plan = lessons.NT.reduce<PlanItems>((acc, val, i) => {
+      acc[String(i)] = val;
+      return acc;
+    }, {});
+
+    return (
+      <LessonPicker
+        id={`${id}-nt-lesson`}
         label="Current Psalm"
         type={type}
         plan={plan}
@@ -38,30 +54,31 @@ export const ReadingPlan: React.FC<Props> = ({ id, type = "reading" }) => {
     );
   }
 
-  const plan = readingPlan.reduce<PlanItems>((acc, val, i) => {
+  // Defaults to psalm
+  const plan = psalms.reduce<PlanItems>((acc, val, i) => {
     acc[String(i)] = val;
     return acc;
   }, {});
 
   return (
-    <PlanPicker
-      id={`${id}-reading`}
-      label="Current Lesson"
+    <LessonPicker
+      id={`${id}-psalm`}
+      label="Current Psalm"
       type={type}
       plan={plan}
     />
   );
 };
 
-export const PlanPicker = ({
+export const LessonPicker = ({
   id,
   label,
-  type,
+  type = "psalm",
   plan,
 }: {
   id: string;
   label: string;
-  type?: "reading" | "psalm";
+  type?: "ot" | "nt" | "psalm";
   plan: PlanItems;
 }) => {
   const [index, setIndex] = useState<number>(0);
@@ -147,7 +164,7 @@ export const PlanPicker = ({
           />
         </TextWrap>
       )}
-      {type === "reading" && (
+      {(type === "ot" || type === "nt") && (
         <TextWrap>
           <TextInput
             value={notes}

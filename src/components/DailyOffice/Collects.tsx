@@ -17,22 +17,20 @@ export const Collects = () => {
   let header = (
     <p>
       <em>
-        ❡ Chant the Collects using the{" "}
+        ❡ Chanted using the{" "}
         <Link href="/liturgy/rites/sarum-rite/chant-rubric#chanting-the-collect">
           festal tone
         </Link>
-      </em>{" "}
-      (SDP 251)
+      </em>
     </p>
   );
   if (isFerial) {
     header = (
       <p>
         <em>
-          ❡ Chant the Collects{" "}
+          ❡ Chanted{" "}
           <Definition lang="latin" anchor="recto-tono" text="recto tono" />
-        </em>{" "}
-        (SDP 251)
+        </em>
       </p>
     );
   }

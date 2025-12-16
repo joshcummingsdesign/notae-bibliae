@@ -1,7 +1,7 @@
-import { ReadingPlan } from "@/components/ReadingPlan";
 import { Today } from "@/components/Calendar";
 import {
   OpeningVersicles,
+  Lessons,
   Magnificat,
   NuncDimittis,
   Collects,
@@ -22,26 +22,28 @@ export const metadata = {
 
 ## Silent Prayer
 
-*❡ Light a candle, make the [Sign of the Cross](/liturgy/prayers/sign-of-the-cross), and begin in silent prayer.*
+*❡ When the candles are lit, make the [Sign of the Cross](/liturgy/prayers/sign-of-the-cross) and begin in silent prayer.*
 
 [ *Kneel* ]
 
 ## Opening Sentence
 
-*❡ Read the Opening Sentence proper to the day* (SDP 256)
+*❡ The Opening Sentence proper to the day is read* (SDP 256).
 
 ## General Confession
 
-*❡ Recite the General Confession* (SDP 243)
+<Poetry>
+|  \V Let us humbly confess our sins unto Almighty God.
+</Poetry>
 
-Let us humbly confess our sins unto Almighty God.
-
-Almighty and most merciful Father; We have erred, and strayed from thy ways like lost sheep. We have followed too much the devices and desires of our own hearts. We have offended against thy holy laws. We have left undone those things which we ought to have done; And we have done those things which we ought not to have done; And there is no health in us. But thou, O Lord, have mercy upon us, miserable offenders. Spare thou those, O God, who confess their faults. Restore thou those who are penitent; According to thy promises declared unto mankind in Christ Jesus our Lord. And grant, O most merciful Father, for his sake; That we may hereafter live a godly, righteous, and sober life, To the glory of thy holy Name. Amen.
+<Poetry>
+|  \L Almighty and most merciful Father; We have erred, and strayed from thy ways like lost sheep. We have followed too much the devices and desires of our own hearts. We have offended against thy holy laws. We have left undone those things which we ought to have done; And we have done those things which we ought not to have done; And there is no health in us. But thou, O Lord, have mercy upon us, miserable offenders. Spare thou those, O God, who confess their faults. Restore thou those who are penitent; According to thy promises declared unto mankind in Christ Jesus our Lord. And grant, O most merciful Father, for his sake; That we may hereafter live a godly, righteous, and sober life, To the glory of thy holy Name. Amen.
+</Poetry>
 
 [ *Meditate on the Gospel* ]
 
 <Poetry>
-|  Grant, # we beseech thee, merciful Lord, to thy faithful people pardon and peace; that they may be cleansed from all their sins, and serve thee with a quiet mind; through Jesus Christ our Lord. Amen.[^1]
+|  \V Grant, # we beseech thee, merciful Lord, to thy faithful people pardon and peace; that they may be cleansed from all their sins, and serve thee with a quiet mind; through Jesus Christ our Lord. Amen.
 </Poetry>
 
 ## The Office Proper
@@ -57,15 +59,11 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 
 [ *Sit* ]
 
-*❡ Chant the psalm appointed to the day.*
-
-<ReadingPlan id="psalm" type="psalm" />
+<Lessons id="psalm" type="psalm" />
 
 ## First Lesson
 
-*❡ The First Lesson from the Old Testament.*
-
-<ReadingPlan id="first-lesson" type="reading" />
+<Lessons id="first-lesson" type="ot" />
 
 ## Magnificat
 
@@ -77,9 +75,7 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 
 [ *Sit* ]
 
-*❡ The Second Lesson from the New Testament.*
-
-<ReadingPlan id="second-lesson" type="reading" />
+<Lessons id="second-lesson" type="nt" />
 
 ## Nunc dimittis
 
@@ -93,13 +89,15 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 
 ## Creed
 
+<Poetry>
+|  \V Let us profess our faith.
+</Poetry>
+
 [**Apostles' Creed**](/liturgy/creeds/apostles-creed) (SDP 248)
 
 ## Kyrie
 
 [ *Kneel* ]
-
-*❡ Chant the Kyrie* (SDP 249)
 
 <Image
   src="/chants/kyrie-sarum.svg"
@@ -111,10 +109,14 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 <Poetry>
 |  \V Lord, have mer_cy upon us.
 |  \R Christ, have mer_cy upon us.
-|  Lord, have mer_cy upon us.
+|  \L Lord, have mer_cy upon us.
 </Poetry>
 
 ## Our Father
+
+<Poetry>
+|  \V Let us pray with confidence to the Father in the words our Saviour gave us.
+</Poetry>
 
 [**Our Father**](/liturgy/prayers/our-father) (SDP 249)
 
@@ -125,13 +127,13 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 **Collect for Peace**
 
 <Poetry>
-|  O God, from whom all holy desires, all good counsels, and all just works _ do proceed: Give unto thy servants that peace which the world cannot _ give; that both our hearts may be set to obey thy commandments, and also that by thee we being defended from the fear of our enemies may pass our time in rest and qui_etness; through the merits of Jesus _ Christ our Saviour. Amen.
+|  O God, who art the author of peace and lover of concord, in knowledge of whom standeth our eternal life, whose service is _ perfect freedom: Defend us thy humble servants in all assaults of our e_nemies; that we, surely trusting in thy defence, may not fear the power of any adversa_ries; through the might of _ Jesus Christ our Lord. Amen.
 </Poetry>
 
-**Collect for Aid Against Perils**
+**Collect for Grace**
 
 <Poetry>
-|  Lighten our darkness, we beseech _ thee, O Lord; and by thy great mercy defend us from all perils and dangers of this _ night; for the love of thy only Son, our _ Saviour, Jesus Christ. Amen.
+|  O Lord, our heavenly Father, Almighty and everlasting God, who hast safely brought us to the beginning _ of this day: Defend us in the same with thy mighty pow_er; and grant that this day we fall into no sin, neither run into any kind of dan_ger; but that all our doings may be order-ed by thy governance, to do always that is righteous in thy _ sight; through _ Jesus Christ our Lord. Amen.
 </Poetry>
 
 ## Benedicamus
@@ -140,8 +142,6 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 
 ## The Grace
 
-*❡ The Grace is said to end the Office* (SDP 255)
-
 <Poetry>
 |  The grace # of our Lord Jesus Christ,
 |      and the love of God,
@@ -149,8 +149,7 @@ Almighty and most merciful Father; We have erred, and strayed from thy ways like
 |          be with us all evermore. Amen.
 </Poetry>
 
-## Dismissal
+<br/>
+---
 
-*❡ Thus endeth the office of Evensong.*
-
-[^1]: "Collect for the Twenty-First Sunday After Trinity", in [BCP 1662](https://www.churchofengland.org/sites/default/files/2019-10/the-book-of-common-prayer-1662.pdf), 118
+*Thus endeth the office of Evensong.*
