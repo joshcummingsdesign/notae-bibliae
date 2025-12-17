@@ -538,6 +538,33 @@ export const menuItems: MenuNode[] = [
     priority: 0.8,
     children: [
       {
+        title: "Daily Office",
+        link: "/liturgy/daily-office",
+        priority: 0.7,
+        children: [
+          {
+            title: "Chant Rubric",
+            link: "/liturgy/daily-office/chant-rubric",
+            inPageNav: true,
+          },
+          {
+            title: "Ordinary",
+            link: "/liturgy/daily-office/ordinary",
+            inPageNav: true,
+          },
+          {
+            title: "Morning Prayer",
+            link: "/liturgy/daily-office/morning-prayer",
+            inPageNav: true,
+          },
+          {
+            title: "Evening Prayer",
+            link: "/liturgy/daily-office/evening-prayer",
+            inPageNav: true,
+          },
+        ],
+      },
+      {
         title: "Seasons",
         link: "/liturgy/seasons",
         priority: 0.7,
@@ -816,11 +843,6 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
-                title: "Chant Rubric",
-                link: "/liturgy/rites/sarum-rite/chant-rubric",
-                inPageNav: true,
-              },
-              {
                 title: "Liturgy of the Hours",
                 link: "/liturgy/rites/sarum-rite/liturgy-of-the-hours",
                 inPageNav: true,
@@ -851,28 +873,6 @@ export const menuItems: MenuNode[] = [
         link: "/liturgy/prayers",
         priority: 0.7,
         children: [
-          {
-            title: "Daily Office",
-            link: "/liturgy/prayers/daily-office",
-            priority: 0.6,
-            children: [
-              {
-                title: "Ordinary",
-                link: "/liturgy/prayers/daily-office/ordinary",
-                inPageNav: true,
-              },
-              {
-                title: "Matins",
-                link: "/liturgy/prayers/daily-office/matins",
-                inPageNav: true,
-              },
-              {
-                title: "Evensong",
-                link: "/liturgy/prayers/daily-office/evensong",
-                inPageNav: true,
-              },
-            ],
-          },
           {
             title: "Sign of the Cross",
             link: "/liturgy/prayers/sign-of-the-cross",

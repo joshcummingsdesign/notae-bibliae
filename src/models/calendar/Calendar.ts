@@ -1124,6 +1124,21 @@ export class Calendar {
   }
 
   /**
+   * Check to see if we're in Pre-Lent.
+   */
+  isPreLent(): boolean {
+    const seasons = this.getSeasons();
+
+    const preLent = seasons.find((s) => s.name === "Pre-Lent");
+
+    return (
+      !!preLent &&
+      this.today.isSameOrAfter(preLent.start, "day") &&
+      this.today.isSameOrBefore(preLent.end, "day")
+    );
+  }
+
+  /**
    * Check to see if we're in Lent.
    */
   isLent(): boolean {

@@ -1174,6 +1174,17 @@ describe("Calendar", () => {
     expect(b.isEpiphanytide()).toBeFalsy();
   });
 
+  test("should check to see if we're in pre-lent", () => {
+    const a = new Calendar(dayjs("2026-02-01"));
+    expect(a.isPreLent()).toBeTruthy();
+
+    const b = new Calendar(dayjs("2026-02-17"));
+    expect(b.isPreLent()).toBeTruthy();
+
+    const c = new Calendar(dayjs("2026-02-18"));
+    expect(c.isPreLent()).toBeFalsy();
+  });
+
   test("should check to see if we're in lent", () => {
     const a = new Calendar(dayjs("2026-02-18"));
     expect(a.isLent()).toBeTruthy();

@@ -160,7 +160,7 @@ export const Search: React.FC<Props> = ({
         title = title + ": BCP";
       }
 
-      if (item.link.includes("/liturgy/prayers/daily-office/")) {
+      if (item.link.includes("/liturgy/daily-office/")) {
         title = "Daily Office: " + title;
       }
 
