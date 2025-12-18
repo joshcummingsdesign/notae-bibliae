@@ -543,13 +543,17 @@ export const menuItems: MenuNode[] = [
         priority: 0.7,
         children: [
           {
-            title: "Chant Rubric",
-            link: "/liturgy/daily-office/chant-rubric",
-            inPageNav: true,
+            title: "Preface",
+            link: "/liturgy/daily-office/preface",
           },
           {
             title: "Ordinary",
             link: "/liturgy/daily-office/ordinary",
+            inPageNav: true,
+          },
+          {
+            title: "Chant Rubrics",
+            link: "/liturgy/daily-office/chant-rubrics",
             inPageNav: true,
           },
           {
