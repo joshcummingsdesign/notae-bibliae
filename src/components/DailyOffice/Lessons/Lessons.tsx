@@ -47,7 +47,7 @@ export const Lessons: React.FC<Props> = ({ id, type = "psalm" }) => {
     return (
       <LessonPicker
         id={`${id}-nt-lesson`}
-        label="Current Psalm"
+        label="Current Lesson"
         type={type}
         plan={plan}
       />
