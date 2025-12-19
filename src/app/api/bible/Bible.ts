@@ -8,6 +8,8 @@ interface Chapter {
   verses: string[];
 }
 
+const cache: Record<string, BiblePassage[]> = {};
+
 export class Bible {
   private readonly baseUrl: string;
   private readonly apiKey: string;
@@ -70,6 +72,10 @@ export class Bible {
 
     const all = await Promise.all(
       verses.map(async (verse) => {
+        if (cache[verse]) {
+          return cache[verse];
+        }
+
         const res = await this.get(
           `/bibles/${bible.id}/search?query=${encodeURIComponent(verse)}`
         );
@@ -85,6 +91,8 @@ export class Bible {
           errors.push({ status: 404, message: `Passage not found — ${verse}` });
           return null;
         }
+
+        cache[verse] = json.data.passages;
 
         return json.data.passages;
       })
