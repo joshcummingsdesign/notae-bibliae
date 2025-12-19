@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { TRANSLATIONS } from "./constants";
-import { bible } from "./bible";
+import { Bible } from "./Bible";
 
 export async function GET(req: NextRequest) {
   try {
@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
     }
 
     const decodedQuery = decodeURIComponent(query).toUpperCase();
-    if (!/^[ ,A-Z\d\.:-]+$/.test(decodedQuery)) {
+    if (!/^[ ,A-Z\d\.:-]+$/.test(decodedQuery) || decodedQuery.length > 50) {
       return NextResponse.json({ error: "Invalid query" }, { status: 400 });
     }
 
@@ -22,9 +22,13 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "Invalid version" }, { status: 400 });
     }
 
-    const res = bible.parseQuery(decodedQuery);
+    const bible = new Bible();
+    const res = bible.getPassages(
+      decodedQuery,
+      translation as keyof typeof TRANSLATIONS
+    );
 
-    return NextResponse.json({ message: res });
+    return NextResponse.json(res);
   } catch (err: any) {
     console.error("Bible API error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });

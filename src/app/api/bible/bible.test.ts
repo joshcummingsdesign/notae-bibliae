@@ -1,8 +1,31 @@
-import { describe, it, expect } from "vitest";
-import { bible } from "./bible";
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { Bible } from "./Bible";
+import response from "./stubs/response.json";
+
+const MOCK_CONFIG = {
+  API_DOT_BIBLE_KEY: "12345",
+};
+
+beforeEach(() => {
+  vi.restoreAllMocks();
+
+  global.fetch = vi.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          data: {
+            passages: response,
+          },
+        }),
+    } as Response)
+  );
+});
 
 describe("bible", () => {
   it("should parse the query", () => {
+    const bible = new Bible(MOCK_CONFIG);
+
     expect(bible.parseQuery("Matt 1")).toBe("Matthew 1");
 
     expect(bible.parseQuery("Gen 1:4")).toBe("Genesis 1:4");
@@ -20,5 +43,38 @@ describe("bible", () => {
     expect(bible.parseQuery("acts 3")).toBe("Acts 3");
 
     expect(bible.parseQuery("1 Chron. 16:8,31")).toBe("1 Chronicles 16:8,31");
+  });
+
+  it("should parse the chapter", () => {
+    const bible = new Bible(MOCK_CONFIG);
+
+    expect(bible.parseChapter("1 Chronicles 16:8,31")).toEqual({
+      name: "1 Chronicles 16",
+      verses: ["8", "31"],
+    });
+
+    expect(bible.parseChapter("1 Chronicles 16:23-24,30")).toEqual({
+      name: "1 Chronicles 16",
+      verses: ["23-24", "30"],
+    });
+
+    expect(bible.parseChapter("Psalms 23:1")).toEqual({
+      name: "Psalms 23",
+      verses: ["1"],
+    });
+
+    expect(bible.parseChapter("John 1")).toEqual({
+      name: "John 1",
+      verses: [],
+    });
+
+    expect(bible.parseChapter("John")).toBeNull();
+  });
+
+  it("should get the passages", async () => {
+    const bible = new Bible(MOCK_CONFIG);
+
+    const actual = await bible.getPassages("1 Chronicles 16:8,31", "KJV");
+    expect(actual).toEqual([]);
   });
 });
