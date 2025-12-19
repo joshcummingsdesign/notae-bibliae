@@ -80,6 +80,7 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
     const storedValues = getStoredValues();
     if (storedValues) {
       setCategory(storedValues.category);
+      setPassages(openingSentences[storedValues.category]);
       setPassage(storedValues.passage);
       setContent(storedValues.content);
       cache[storedValues.passage] = storedValues.content;
