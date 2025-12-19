@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { Bible } from "./Bible";
 import response from "./stubs/response.json";
+import twoResponses from "./stubs/two-responses.json";
 
 const MOCK_CONFIG = {
   API_DOT_BIBLE_KEY: "12345",
@@ -74,7 +75,10 @@ describe("bible", () => {
   it("should get the passages", async () => {
     const bible = new Bible(MOCK_CONFIG);
 
-    const actual = await bible.getPassages("1 Chronicles 16:8,31", "KJV");
-    expect(actual).toEqual([]);
+    const a = await bible.getPassages("1 Chronicles 16:28", "KJV");
+    expect(a).toEqual(response);
+
+    const b = await bible.getPassages("1 Chronicles 16:28,31", "KJV");
+    expect(b).toEqual(twoResponses);
   });
 });

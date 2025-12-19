@@ -1,5 +1,7 @@
 import { config } from "@/config";
 import { BOOKS, TRANSLATIONS } from "./constants";
+import { HttpError } from "@/types/errors";
+import { BiblePassage } from "@/types/BiblePassage";
 
 interface Chapter {
   name: string;
@@ -11,10 +13,10 @@ export class Bible {
   private readonly apiKey: string;
 
   constructor(cfg: typeof config = config) {
-    this.baseUrl = "https://api.scripture.api.bible";
+    this.baseUrl = "https://api.scripture.api.bible/v1";
     const apiKey = cfg.API_DOT_BIBLE_KEY;
     if (!apiKey) {
-      throw new Error("Missing API key for api.bible");
+      throw new Error("Missing API key");
     }
     this.apiKey = apiKey;
   }
@@ -58,29 +60,63 @@ export class Bible {
   async requestPassages(
     chapter: Chapter,
     version: keyof typeof TRANSLATIONS
-  ): Promise<any> {
-    return await Promise.all([]);
+  ): Promise<BiblePassage[]> {
+    const bible = TRANSLATIONS[version];
+    const verses = chapter.verses.length
+      ? chapter.verses.map((v) => `${chapter.name}:${v}`)
+      : [chapter.name];
+
+    const errors: { status: number; message: string }[] = [];
+
+    const all = await Promise.all(
+      verses.map(async (verse) => {
+        const res = await this.get(
+          `/bibles/${bible.id}/search?query=${encodeURIComponent(verse)}`
+        );
+
+        const json = await res.json();
+
+        if (!res.ok) {
+          errors.push({ status: 500, message: json.message });
+          return null;
+        }
+
+        if (!json.data.passages) {
+          errors.push({ status: 404, message: `Passage not found — ${verse}` });
+          return null;
+        }
+
+        return json.data.passages;
+      })
+    );
+
+    if (errors.length) {
+      throw new HttpError(errors[0].message, errors[0].status);
+    }
+
+    return all.flat();
   }
 
   /**
    * Get the Bible passages.
    */
-  async getPassages(query: string, version: keyof typeof TRANSLATIONS) {
+  async getPassages(
+    query: string,
+    version: keyof typeof TRANSLATIONS
+  ): Promise<BiblePassage[]> {
     const parsedQuery = this.parseQuery(query);
 
     if (!parsedQuery) {
-      throw new Error("Invalid Bible passage in query");
+      throw new HttpError("Invalid passage in query", 400);
     }
 
     const chapter = this.parseChapter(parsedQuery);
 
     if (!chapter) {
-      throw new Error("Invalid Bible chapter in query");
+      throw new HttpError("Invalid chapter in query", 400);
     }
 
-    const res = await this.requestPassages(chapter, version);
-
-    return res;
+    return await this.requestPassages(chapter, version);
   }
 
   /**

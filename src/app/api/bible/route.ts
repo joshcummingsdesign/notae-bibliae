@@ -29,8 +29,12 @@ export async function GET(req: NextRequest) {
     );
 
     return NextResponse.json(res);
-  } catch (err: any) {
-    console.error("Bible API error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch (error: any) {
+    const errorMessage = `Bible API error: ${error.message}`;
+    console.error(errorMessage);
+    return NextResponse.json(
+      { error: errorMessage },
+      { status: error.status || 500 }
+    );
   }
 }
