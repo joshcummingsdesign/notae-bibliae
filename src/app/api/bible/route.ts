@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     }
 
     const bible = new Bible();
-    const res = bible.getPassages(
+    const res = await bible.getPassages(
       decodedQuery,
       translation as keyof typeof TRANSLATIONS
     );
