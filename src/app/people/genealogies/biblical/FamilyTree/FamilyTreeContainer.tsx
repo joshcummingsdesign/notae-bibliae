@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { FamilyTree } from "./FamilyTree";
-import { FamilyTreeResponse } from "@/lib/types/FamilyTree";
+import { FamilyTreeResponse } from "@/types/FamilyTree";
 
 export const FamilyTreeContainer = () => {
   const timeout = useRef<NodeJS.Timeout | null>(null);

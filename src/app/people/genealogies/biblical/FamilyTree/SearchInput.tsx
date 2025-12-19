@@ -4,7 +4,7 @@ import {
   styled,
   TextField as TextFieldBase,
 } from "@mui/material";
-import { FamilyNode } from "@/lib/types/FamilyTree";
+import { FamilyNode } from "@/types/FamilyTree";
 import { CircularProgress } from "@mui/material";
 interface Props {
   className?: string;

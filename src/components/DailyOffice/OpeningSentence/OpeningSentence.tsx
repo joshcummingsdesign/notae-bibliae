@@ -6,12 +6,12 @@ import {
   TextField,
 } from "@mui/material";
 import openingSentences from "./opening-sentences.json";
-import { Fragment, useEffect, useState } from "react";
-import { BiblePassage } from "@/lib/types/BiblePassage";
+import { useEffect, useState } from "react";
+import { BiblePassage } from "@/types/BiblePassage";
 
 type SentenceCategory = keyof typeof openingSentences;
 
-const cache: Record<string, BiblePassage> = {};
+const cache: Record<string, string> = {};
 
 interface Props {
   id: string;
@@ -23,10 +23,16 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
   const [category, setCategory] = useState<SentenceCategory>("General");
   const [passages, setPassages] = useState(openingSentences[category]);
   const [passage, setPassage] = useState(passages[0]);
-  const [content, setContent] = useState<BiblePassage>({});
+  const [content, setContent] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [initialLoad, setInitialLoad] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
+
+  const transformData = (passages: BiblePassage[]): string =>
+    passages.reduce((acc, passage) => {
+      acc += passage.content;
+      return acc;
+    }, "");
 
   const handleCategoryChange = (value: SentenceCategory) => {
     setCategory(value);
@@ -41,10 +47,10 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
     setPassage(value);
   };
 
-  const cacheValues = (
+  const storeValues = (
     category: SentenceCategory,
     passage: string,
-    content: BiblePassage
+    content: string
   ) => {
     localStorage.setItem(
       `${id}-opening-sentence`,
@@ -52,10 +58,10 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
     );
   };
 
-  const getCachedValues = (): {
+  const getStoredValues = (): {
     category: SentenceCategory;
     passage: string;
-    content: BiblePassage;
+    content: string;
   } | null => {
     const v = localStorage.getItem(`${id}-opening-sentence`);
     if (v) {
@@ -65,15 +71,16 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
   };
 
   useEffect(() => {
-    const cachedValues = getCachedValues();
-    if (cachedValues) {
-      setCategory(cachedValues.category);
-      setPassage(cachedValues.passage);
-      cache[passage] = cachedValues.content;
+    const storedValues = getStoredValues();
+    if (storedValues) {
+      setCategory(storedValues.category);
+      setPassage(storedValues.passage);
+      setContent(storedValues.content);
+      cache[storedValues.passage] = storedValues.content;
     }
 
     setInitialLoad(true);
-  }, [cache]);
+  }, []);
 
   useEffect(() => {
     if (!initialLoad) {
@@ -82,23 +89,26 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
 
     if (cache[passage]) {
       setContent(cache[passage]);
-      cacheValues(category, passage, cache[passage]);
+      storeValues(category, passage, cache[passage]);
       setLoading(false);
       return;
     }
 
     setLoading(true);
 
-    fetch(`/api/bible?passage=${encodeURIComponent(passage)}`)
+    console.log("ui refetched!");
+
+    fetch(`/api/bible?flat=true&query=${encodeURIComponent(passage)}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
           setError(true);
           return;
         }
-        cache[passage] = data;
-        setContent(data);
-        cacheValues(category, passage, data);
+        const content = transformData(data);
+        setContent(content);
+        storeValues(category, passage, content);
+        cache[passage] = content;
       })
       .finally(() => setLoading(false));
   }, [initialLoad, cache, category, passage]);
@@ -133,11 +143,7 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
               <CircularProgress color="inherit" thickness={2.5} size={25} />
             );
           }
-          return Object.entries(content).map(([v, p]) => (
-            <Fragment key={v}>
-              <VerseNum>{v}</VerseNum> {p}
-            </Fragment>
-          ));
+          return <span dangerouslySetInnerHTML={{ __html: content }} />;
         })()}
       </Verse>
     </>
@@ -177,12 +183,19 @@ const TextInput = styled(TextField)(({ theme }) => ({
   },
 }));
 
-const VerseNum = styled("sup")(({ theme }) => ({
-  color: theme.palette.brand.red,
-  fontWeight: theme.typography.fontWeightBold,
-  fontSize: "0.6875rem",
-}));
-
-const Verse = styled("p")({
+const Verse = styled("p")(({ theme }) => ({
   marginTop: 25,
-});
+
+  ".nd": {
+    fontVariantCaps: "small-caps",
+  },
+
+  ".v": {
+    color: theme.palette.brand.red,
+    fontWeight: theme.typography.fontWeightBold,
+    fontSize: "0.75rem",
+    verticalAlign: "super",
+    lineHeight: 0,
+    marginRight: 4,
+  },
+}));

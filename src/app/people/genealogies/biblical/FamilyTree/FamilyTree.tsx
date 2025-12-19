@@ -30,7 +30,7 @@ import {
   nodeCategory,
   nodeGender,
   nodeType,
-} from "@/lib/types/FamilyTree";
+} from "@/types/FamilyTree";
 import { SIDEBAR_WIDTH, SIDEBAR_WIDTH_LG } from "@/components/Navigation";
 import { colors } from "@/assets/styles";
 import { Loader } from "@/components/Loader";

@@ -2,7 +2,7 @@ import path from "path";
 import { promises as fs } from "fs";
 import * as yaml from "js-yaml";
 import { NextResponse } from "next/server";
-import { FamilyTreeResponse } from "@/lib/types/FamilyTree";
+import { FamilyTreeResponse } from "@/types/FamilyTree";
 
 export async function GET() {
   const filePath = path.join(
