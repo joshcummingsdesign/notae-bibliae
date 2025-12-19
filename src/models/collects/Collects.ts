@@ -1,9 +1,9 @@
 import dayjs, { Dayjs } from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import { Calendar } from "../calendar";
-import { stripMarkdownLinks } from "../../lib/utils/markdown";
+import { stripMarkdownLinks } from "../../utils/markdown";
 import collectItems from "./collects.json";
-import { CollectDateMap, CollectItem, CurrentCollects } from "./interfaces";
+import { CollectDateMap, CollectItem, CurrentCollects } from "./types";
 
 dayjs.extend(isSameOrBefore);
 

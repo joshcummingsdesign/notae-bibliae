@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { styled } from "@mui/material";
 import { Calendar } from "@/models/calendar";
 import { Collects as CollectsClass } from "@/models/collects";
-import { stripMarkdownLinks } from "@/lib/utils/markdown";
+import { stripMarkdownLinks } from "@/utils/markdown";
 import Link from "next/link";
 import { Definition } from "../Definition";
 

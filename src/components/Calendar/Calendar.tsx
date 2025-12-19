@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
 import remarkSmartypants from "remark-smartypants";
-import { yearToRoman } from "@/lib/utils/yearToRoman";
+import { yearToRoman } from "@/utils/yearToRoman";
 import { Calendar as CalendarClass } from "@/models/calendar";
 
 export const Calendar = () => {

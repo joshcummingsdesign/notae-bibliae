@@ -1,2 +1,2 @@
 export * from "./Collects";
-export * from "./interfaces";
+export * from "./types";

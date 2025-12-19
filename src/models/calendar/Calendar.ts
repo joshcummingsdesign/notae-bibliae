@@ -10,10 +10,10 @@ import {
   Season,
   SeasonItems,
   SeasonName,
-} from "./interfaces";
+} from "./types";
 import calendarItems from "./calendar-items.json";
 import { TODAY } from "./constants";
-import { numberToWords } from "@/lib/utils/numberToWords";
+import { numberToWords } from "@/utils/numberToWords";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
