@@ -73,6 +73,10 @@ export const TeDeum = () => {
 
   return (
     <>
+      <h2 id="te-deum">Te Deum</h2>
+      <p>
+        [ <em>Stand</em> ]
+      </p>
       <p>
         <strong>
           <Link href="/liturgy/music/chants/te-deum">Te Deum</Link>

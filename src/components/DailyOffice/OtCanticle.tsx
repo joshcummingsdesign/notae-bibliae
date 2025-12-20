@@ -91,10 +91,16 @@ const Canticle: React.FC<{ link: string; text: string; notes: string }> = ({
   link,
   notes,
 }) => (
-  <p>
-    <strong>
-      <Link href={link}>{text}</Link>
-    </strong>{" "}
-    ({notes})
-  </p>
+  <>
+    <h2 id="old-testament-canticle">Old Testament Canticle</h2>
+    <p>
+      [ <em>Stand</em> ]
+    </p>
+    <p>
+      <strong>
+        <Link href={link}>{text}</Link>
+      </strong>{" "}
+      ({notes})
+    </p>
+  </>
 );
