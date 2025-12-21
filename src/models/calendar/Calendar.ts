@@ -154,6 +154,39 @@ export class Calendar {
   }
 
   /**
+   * Get the Ember Days in Advent.
+   */
+  getEmberDaysInAdvent(): CalendarItem[] {
+    const liturgicalYear = this.getLiturgicalYear();
+    const dec13 = dayjs(`${liturgicalYear - 1}-12-13`);
+    const daysUntilWednesday = (3 - dec13.day() + 7) % 7 || 7;
+    const wednesdayAfter = dec13.add(daysUntilWednesday, "day");
+    return [
+      {
+        date: wednesdayAfter.format("YYYY-MM-DD"),
+        title:
+          "[Ember Wednesday in Advent](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Friday in Advent](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Saturday in Advent](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+    ];
+  }
+
+  /**
    * Get all the Sundays in Christmastide.
    */
   getChristmastideSundays(): CalendarItem[] {
@@ -405,6 +438,37 @@ export class Calendar {
           "Fifth Sunday of Lent: [Passion Sunday](/liturgy/seasons/lent/passiontide/passion-sunday)",
         rank: 3,
         class: 1,
+      },
+    ];
+  }
+
+  /**
+   * Get the Ember Days in Lent.
+   */
+  getEmberDaysInLent(): CalendarItem[] {
+    const passionSunday = this.getPassionSunday();
+    const firstSundayOfLent = passionSunday.subtract(4, "week");
+    const wednesdayAfter = firstSundayOfLent.add(3, "day");
+    return [
+      {
+        date: wednesdayAfter.format("YYYY-MM-DD"),
+        title:
+          "[Ember Wednesday in Lent](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
+        title: "[Ember Friday in Lent](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Saturday in Lent](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
       },
     ];
   }
@@ -664,28 +728,41 @@ export class Calendar {
         class: 5,
       },
       {
-        date: easter.add(52, "day").format("YYYY-MM-DD"),
-        title: "Wednesday in Whitsuntide",
-        rank: 1,
-        class: 5,
-      },
-      {
         date: easter.add(53, "day").format("YYYY-MM-DD"),
         title: "Thursday in Whitsuntide",
         rank: 1,
         class: 9,
       },
+    ];
+  }
+
+  /**
+   * Get the Ember Days in Whitsuntide.
+   */
+  getEmberDaysInWhitsuntide(): CalendarItem[] {
+    const pentecost = this.getPentecost();
+    const wednesdayAfter = pentecost.add(3, "day");
+    return [
       {
-        date: easter.add(54, "day").format("YYYY-MM-DD"),
-        title: "Friday in Whitsuntide",
-        rank: 1,
-        class: 9,
+        date: wednesdayAfter.format("YYYY-MM-DD"),
+        title:
+          "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
       },
       {
-        date: easter.add(55, "day").format("YYYY-MM-DD"),
-        title: "Saturday in Whitsuntide",
-        rank: 1,
-        class: 9,
+        date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
       },
     ];
   }
@@ -763,6 +840,39 @@ export class Calendar {
   }
 
   /**
+   * Get the Ember Days in Trinitytide.
+   */
+  getEmberDaysInTrinitytide(): CalendarItem[] {
+    const liturgicalYear = this.getLiturgicalYear();
+    const sep14 = dayjs(`${liturgicalYear}-09-14`);
+    const daysUntilWednesday = (3 - sep14.day() + 7) % 7 || 7;
+    const wednesdayAfter = sep14.add(daysUntilWednesday, "day");
+    return [
+      {
+        date: wednesdayAfter.format("YYYY-MM-DD"),
+        title:
+          "[Ember Wednesday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Friday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
+        title:
+          "[Ember Saturday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+        rank: 3,
+        class: 11,
+      },
+    ];
+  }
+
+  /**
    * Get all the liturgical seasons for the year.
    */
   getSeasons(): Season[] {
@@ -826,13 +936,17 @@ export class Calendar {
     return [
       ...this.getFixedCalendarItems(),
       ...this.getAdventSundays(),
+      ...this.getEmberDaysInAdvent(),
       ...this.getChristmastideSundays(),
       ...this.getEpiphanytideSundays(),
       ...this.getPreLentFeastDays(),
       ...this.getLentDays(),
+      ...this.getEmberDaysInLent(),
       ...this.getEastertideDays(),
       ...this.getWhitsuntideDays(),
+      ...this.getEmberDaysInWhitsuntide(),
       ...this.getTrinitytideDays(),
+      ...this.getEmberDaysInTrinitytide(),
     ].sort((a, b) => a.date.localeCompare(b.date));
   }
 

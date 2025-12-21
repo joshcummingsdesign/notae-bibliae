@@ -54,7 +54,7 @@ describe("Calendar", () => {
   test("should get the fixed calendar items", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getFixedCalendarItems();
-    expect(items.length).toBe(99);
+    expect(items.length).toBe(100);
     expect(items[0]).toEqual({
       date: "2025-11-30",
       title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
@@ -101,6 +101,31 @@ describe("Calendar", () => {
       title: "Fourth Sunday of Advent",
       rank: 3,
       class: 3,
+    });
+  });
+
+  test("should get the ember days in advent", () => {
+    const d = new Calendar(dayjs("2025-11-30"));
+    const items = d.getEmberDaysInAdvent();
+    expect(items[0]).toEqual({
+      date: "2025-12-17",
+      title:
+        "[Ember Wednesday in Advent](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[1]).toEqual({
+      date: "2025-12-19",
+      title: "[Ember Friday in Advent](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[2]).toEqual({
+      date: "2025-12-20",
+      title:
+        "[Ember Saturday in Advent](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
     });
   });
 
@@ -281,6 +306,29 @@ describe("Calendar", () => {
         "Fifth Sunday of Lent: [Passion Sunday](/liturgy/seasons/lent/passiontide/passion-sunday)",
       rank: 3,
       class: 1,
+    });
+  });
+
+  test("should get the ember days in lent", () => {
+    const d = new Calendar(dayjs("2025-11-30"));
+    const items = d.getEmberDaysInLent();
+    expect(items[0]).toEqual({
+      date: "2026-02-25",
+      title: "[Ember Wednesday in Lent](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[1]).toEqual({
+      date: "2026-02-27",
+      title: "[Ember Friday in Lent](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[2]).toEqual({
+      date: "2026-02-28",
+      title: "[Ember Saturday in Lent](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
     });
   });
 
@@ -616,28 +664,36 @@ describe("Calendar", () => {
         class: 5,
       });
     expect(items[3]).toEqual({
-      date: "2026-05-27",
-      title: "Wednesday in Whitsuntide",
-      rank: 1,
-      class: 5,
-    });
-    expect(items[4]).toEqual({
       date: "2026-05-28",
       title: "Thursday in Whitsuntide",
       rank: 1,
       class: 9,
     });
-    expect(items[5]).toEqual({
-      date: "2026-05-29",
-      title: "Friday in Whitsuntide",
-      rank: 1,
-      class: 9,
+  });
+
+  test("should get the ember days in whitsuntide", () => {
+    const d = new Calendar(dayjs("2025-11-30"));
+    const items = d.getEmberDaysInWhitsuntide();
+    expect(items[0]).toEqual({
+      date: "2026-05-27",
+      title:
+        "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
     });
-    expect(items[6]).toEqual({
+    expect(items[1]).toEqual({
+      date: "2026-05-29",
+      title:
+        "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[2]).toEqual({
       date: "2026-05-30",
-      title: "Saturday in Whitsuntide",
-      rank: 1,
-      class: 9,
+      title:
+        "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
     });
   });
 
@@ -689,6 +745,32 @@ describe("Calendar", () => {
     });
   });
 
+  test("should get the ember days in trinitytide", () => {
+    const d = new Calendar(dayjs("2025-11-30"));
+    const items = d.getEmberDaysInTrinitytide();
+    expect(items[0]).toEqual({
+      date: "2026-09-16",
+      title:
+        "[Ember Wednesday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[1]).toEqual({
+      date: "2026-09-18",
+      title:
+        "[Ember Friday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[2]).toEqual({
+      date: "2026-09-19",
+      title:
+        "[Ember Saturday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+      rank: 3,
+      class: 11,
+    });
+  });
+
   test("should get the liturgical seasons", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getSeasons();
@@ -737,7 +819,7 @@ describe("Calendar", () => {
   test("should query the calendar items", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.queryCalendarItems();
-    expect(items.length).toBe(181);
+    expect(items.length).toBe(191);
     expect(items[0]).toEqual({
       date: "2025-11-30",
       title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
@@ -760,7 +842,7 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll();
 
-    expect(Object.keys(items).length).toBe(154);
+    expect(Object.keys(items).length).toBe(160);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
@@ -805,7 +887,7 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll(false);
 
-    expect(Object.keys(items).length).toBe(154);
+    expect(Object.keys(items).length).toBe(160);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
@@ -947,9 +1029,10 @@ describe("Calendar", () => {
       "2026-05-27": [
         {
           date: "2026-05-27",
-          title: "Wednesday in Whitsuntide",
-          rank: 1,
-          class: 5,
+          title:
+            "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+          rank: 3,
+          class: 11,
         },
       ],
       "2026-05-28": [
@@ -963,17 +1046,19 @@ describe("Calendar", () => {
       "2026-05-29": [
         {
           date: "2026-05-29",
-          title: "Friday in Whitsuntide",
-          rank: 1,
-          class: 9,
+          title:
+            "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+          rank: 3,
+          class: 11,
         },
       ],
       "2026-05-30": [
         {
           date: "2026-05-30",
-          title: "Saturday in Whitsuntide",
-          rank: 1,
-          class: 9,
+          title:
+            "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+          rank: 3,
+          class: 11,
         },
       ],
     });

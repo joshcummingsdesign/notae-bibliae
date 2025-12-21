@@ -1967,6 +1967,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/early/john-cassian",
               },
               {
+                title: "Lucy of Syracuse",
+                link: "/people/saints/early/lucy-of-syracuse",
+              },
+              {
                 title: "Martin of Tours",
                 link: "/people/saints/early/martin-of-tours",
               },
