@@ -621,11 +621,30 @@ describe("Calendar", () => {
     });
     expect(items[11]).toEqual({
       date: "2026-05-10",
-      title: "Sixth Sunday of Easter",
+      title:
+        "Sixth Sunday of Easter: [Rogation Sunday](/glossary/liturgical-terms#rogation-days)",
       rank: 3,
       class: 7,
     });
     expect(items[12]).toEqual({
+      date: "2026-05-11",
+      title: "[Rogation Monday](/glossary/liturgical-terms#rogation-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[13]).toEqual({
+      date: "2026-05-12",
+      title: "[Rogation Tuesday](/glossary/liturgical-terms#rogation-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[14]).toEqual({
+      date: "2026-05-13",
+      title: "[Rogation Wednesday](/glossary/liturgical-terms#rogation-days)",
+      rank: 3,
+      class: 11,
+    });
+    expect(items[15]).toEqual({
       date: "2026-05-14",
       title:
         "[Ascension Day](/liturgy/seasons/eastertide/ascensiontide/ascension-day)",
@@ -633,7 +652,7 @@ describe("Calendar", () => {
       class: 2,
       isFeast: true,
     });
-    expect(items[13]).toEqual({
+    expect(items[16]).toEqual({
       date: "2026-05-17",
       title: "Seventh Sunday of Easter (Sunday After Ascension Day)",
       rank: 3,
@@ -819,7 +838,7 @@ describe("Calendar", () => {
   test("should query the calendar items", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.queryCalendarItems();
-    expect(items.length).toBe(191);
+    expect(items.length).toBe(194);
     expect(items[0]).toEqual({
       date: "2025-11-30",
       title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
@@ -842,7 +861,7 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll();
 
-    expect(Object.keys(items).length).toBe(160);
+    expect(Object.keys(items).length).toBe(162);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
@@ -887,7 +906,7 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll(false);
 
-    expect(Object.keys(items).length).toBe(160);
+    expect(Object.keys(items).length).toBe(162);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
@@ -1366,7 +1385,7 @@ describe("Calendar", () => {
     expect(d.isFeastOfASaint()).toBeFalsy();
   });
 
-  test("should check to see we're in Whitsuntide", () => {
+  test("should check to see if we're in Whitsuntide", () => {
     const a = new Calendar(dayjs("2026-05-24"));
     expect(a.isWhitsuntide()).toBeTruthy();
 
@@ -1377,7 +1396,7 @@ describe("Calendar", () => {
     expect(c.isWhitsuntide()).toBeFalsy();
   });
 
-  test("should check to see we're in trinitytide", () => {
+  test("should check to see if we're in trinitytide", () => {
     const a = new Calendar(dayjs("2026-05-31"));
     expect(a.isTrinitytide()).toBeTruthy();
 
@@ -1388,7 +1407,24 @@ describe("Calendar", () => {
     expect(c.isTrinitytide()).toBeFalsy();
   });
 
-  test("should check to see we're in ascensiontide", () => {
+  test("should check to see if it's a rogation day", () => {
+    const a = new Calendar(dayjs("2026-05-11"));
+    expect(a.isRogationDay()).toBeTruthy();
+
+    const b = new Calendar(dayjs("2026-05-12"));
+    expect(b.isRogationDay()).toBeTruthy();
+
+    const c = new Calendar(dayjs("2026-05-13"));
+    expect(c.isRogationDay()).toBeTruthy();
+
+    const d = new Calendar(dayjs("2026-05-14"));
+    expect(d.isRogationDay()).toBeFalsy();
+
+    const e = new Calendar(dayjs("2026-05-10"));
+    expect(e.isRogationDay()).toBeFalsy();
+  });
+
+  test("should check to see if we're in ascensiontide", () => {
     const a = new Calendar(dayjs("2026-05-14"));
     expect(a.isAscensiontide()).toBeTruthy();
 
@@ -1399,7 +1435,7 @@ describe("Calendar", () => {
     expect(c.isAscensiontide()).toBeFalsy();
   });
 
-  test("should check to see we're in holy week", () => {
+  test("should check to see if we're in holy week", () => {
     const a = new Calendar(dayjs("2026-04-03"));
     expect(a.isHolyWeek()).toBeTruthy();
 
@@ -1410,7 +1446,7 @@ describe("Calendar", () => {
     expect(c.isHolyWeek()).toBeFalsy();
   });
 
-  test("should check to see we're in septuagesima to passion sunday", () => {
+  test("should check to see if we're in septuagesima to passion sunday", () => {
     const a = new Calendar(dayjs("2026-02-01"));
     expect(a.isSeptuagesimaToPassion()).toBeTruthy();
 

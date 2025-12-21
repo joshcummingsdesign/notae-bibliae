@@ -10,13 +10,14 @@ export const TeDeum = () => {
     calendar.isLordsDay() ||
     calendar.isChristmastide() ||
     calendar.isOctaveOfEpiphany() ||
-    calendar.isOctaveOfEaster() ||
+    calendar.isEastertide() ||
     calendar.isWhitsuntide();
 
   const shouldOmitTeDeum =
     calendar.isAdvent() ||
     (calendar.isHolyInnocents() && !calendar.isLordsDay()) ||
     calendar.isSeptuagesimaToPassion() ||
+    calendar.isRogationDay() ||
     calendar.isSolemn();
 
   if (shouldOmitTeDeum || !shouldSingTeDeum) {

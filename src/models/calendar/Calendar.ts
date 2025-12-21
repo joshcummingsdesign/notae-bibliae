@@ -671,9 +671,28 @@ export class Calendar {
       },
       {
         date: easter.add(35, "day").format("YYYY-MM-DD"),
-        title: "Sixth Sunday of Easter",
+        title:
+          "Sixth Sunday of Easter: [Rogation Sunday](/glossary/liturgical-terms#rogation-days)",
         rank: 3,
         class: 7,
+      },
+      {
+        date: easter.add(36, "day").format("YYYY-MM-DD"),
+        title: "[Rogation Monday](/glossary/liturgical-terms#rogation-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: easter.add(37, "day").format("YYYY-MM-DD"),
+        title: "[Rogation Tuesday](/glossary/liturgical-terms#rogation-days)",
+        rank: 3,
+        class: 11,
+      },
+      {
+        date: easter.add(38, "day").format("YYYY-MM-DD"),
+        title: "[Rogation Wednesday](/glossary/liturgical-terms#rogation-days)",
+        rank: 3,
+        class: 11,
       },
       {
         date: ascension.format("YYYY-MM-DD"),
@@ -1294,6 +1313,18 @@ export class Calendar {
       !!trinitytide &&
       this.today.isSameOrAfter(trinitytide.start, "day") &&
       this.today.isSameOrBefore(trinitytide.end, "day")
+    );
+  }
+
+  /**
+   * Check to see if it's a Rogation Day.
+   */
+  isRogationDay(): boolean {
+    const ascension = this.getAscensionDay();
+    return (
+      this.today.isSame(ascension.subtract(3, "day"), "day") ||
+      this.today.isSame(ascension.subtract(2, "day"), "day") ||
+      this.today.isSame(ascension.subtract(1, "day"), "day")
     );
   }
 
