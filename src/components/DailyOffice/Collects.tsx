@@ -18,7 +18,7 @@ export const Collects = () => {
     <p>
       <em>
         ❡ Chanted using the{" "}
-        <Link href="/liturgy/rites/sarum-rite/chant-rubric#chanting-the-collect">
+        <Link href="/liturgy/daily-office/chant-rubrics#chanting-the-collects">
           festal tone
         </Link>
       </em>
