@@ -2,19 +2,14 @@ import { Today } from "@/components/Calendar";
 import {
   OpeningSentence,
   OpeningVersicles,
+  Invitatory,
   Lessons,
-  Magnificat,
-  NuncDimittis,
+  TeDeum,
   Collects,
   Benedicamus,
 } from "@/components/DailyOffice";
 
-export const metadata = {
-  title: "Daily Office: Evening Prayer — Notae Bibliae",
-  description: "An office of Evening Prayer.",
-};
-
-<Initial text="Daily Office: Evening Prayer" />
+<Initial text="Daily Office: Morning Prayer" />
 
 <Today />
 
@@ -52,7 +47,11 @@ export const metadata = {
 
 ## Opening Versicles
 
-<OpeningVersicles office="evening-prayer" />
+<OpeningVersicles office="morning-prayer" />
+
+## Invitatory
+
+<Invitatory />
 
 ## Psalms
 
@@ -64,11 +63,7 @@ export const metadata = {
 
 <Lessons id="first-lesson" type="ot" />
 
-## Magnificat
-
-[ *Stand* ]
-
-<Magnificat linkAntiphon={true} showAntiphonVerse={true} />
+<TeDeum />
 
 ## Second Lesson
 
@@ -76,11 +71,11 @@ export const metadata = {
 
 <Lessons id="second-lesson" type="nt" />
 
-## Nunc dimittis
+## Benedictus
 
 [ *Stand* ]
 
-<NuncDimittis />
+[**Benedictus**](/liturgy/music/chants/benedictus) (SDP 420)
 
 ## Concluding Rites
 
@@ -104,10 +99,10 @@ export const metadata = {
 ## Suffrages
 
 <Image
-  src="/chants/evensong-suffrages.svg"
+  src="/chants/matins-suffrages.svg"
   alt="Suffrages"
   width="600"
-  height="596"
+  height="252"
 />
 
 ## Collects
@@ -142,4 +137,4 @@ export const metadata = {
 <br/>
 ---
 
-*Thus endeth The Order of Evening Prayer.*
+*Thus endeth The Order of Morning Prayer. Additional time may be used for study.*
