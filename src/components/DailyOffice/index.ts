@@ -3,7 +3,6 @@ export * from "./Invitatory";
 export * from "./TeDeum";
 export * from "./Magnificat";
 export * from "./NuncDimittis";
-export * from "./Benedicamus";
 export * from "./Collects";
 export * from "./Lessons";
 export * from "./OpeningSentence";

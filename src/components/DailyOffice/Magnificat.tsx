@@ -22,6 +22,7 @@ export const Magnificat: React.FC<Props> = ({
   if (currentAntiphon) {
     antiphon = (
       <Antiphon
+        ant={true}
         linked={linkAntiphon}
         showVerse={showAntiphonVerse}
         antiphon={currentAntiphon}
