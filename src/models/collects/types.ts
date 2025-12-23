@@ -3,6 +3,7 @@ import { CalendarItem } from "../calendar";
 export interface CollectItem {
   title: string;
   text: string;
+  source: string;
 }
 
 export interface CollectCalendarItem extends CalendarItem {

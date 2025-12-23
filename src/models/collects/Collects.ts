@@ -51,7 +51,18 @@ export class Collects {
       }
     }
 
-    return mergedItems;
+    // Convert object entries to an array and sort
+    const sortedEntries = Object.entries(mergedItems).sort(
+      ([dateA], [dateB]) => {
+        return new Date(dateA).getTime() - new Date(dateB).getTime();
+      }
+    );
+
+    // Convert back to an object
+    const sortedCollectDateMap: CollectDateMap =
+      Object.fromEntries(sortedEntries);
+
+    return sortedCollectDateMap;
   }
 
   /**
