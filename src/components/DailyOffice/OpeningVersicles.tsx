@@ -13,16 +13,11 @@ export const OpeningVersicles = () => {
   }
 
   return (
-    <>
-      <p>
-        [ <em>Stand</em> ]
-      </p>
-      <Image
-        src="/chants/daily-office-opening-versicles.svg"
-        alt="Daily Office Opening Versicles"
-        width="600"
-        height="368"
-      />
-    </>
+    <Image
+      src="/chants/daily-office-opening-versicles.svg"
+      alt="Daily Office Opening Versicles"
+      width="600"
+      height="368"
+    />
   );
 };
