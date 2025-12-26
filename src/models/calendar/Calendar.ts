@@ -1,4 +1,6 @@
 import dayjs, { Dayjs } from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 import isBetween from "dayjs/plugin/isBetween";
@@ -12,18 +14,20 @@ import {
   SeasonName,
 } from "./types";
 import calendarItems from "./calendar-items.json";
-import { TODAY } from "./constants";
 import { numberToWords } from "@/utils/numberToWords";
+import { TIMEZONE } from "@/constants";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export class Calendar {
   today: Dayjs;
 
-  constructor(today: Dayjs = TODAY) {
-    this.today = today;
+  constructor(today?: Dayjs) {
+    this.today = today || dayjs().tz(TIMEZONE);
   }
 
   /**
@@ -34,11 +38,18 @@ export class Calendar {
   }
 
   /**
+   * Create a date in the same timezone as this.today for consistent comparisons.
+   */
+  private createDate(dateString: string): Dayjs {
+    return dayjs.tz(dateString, TIMEZONE);
+  }
+
+  /**
    * Calculate the First Sunday of Advent for a given year.
    */
   calculateFirstSundayOfAdvent(year: number): Dayjs {
     // Start at December 1
-    let dec1 = dayjs(`${year}-12-01`);
+    let dec1 = this.createDate(`${year}-12-01`);
 
     // Move forward to the first Thursday of December
     while (dec1.day() !== 4) {
@@ -103,7 +114,9 @@ export class Calendar {
       .map((item) => {
         const [mm, dd] = item.date.split("-");
         // Initial attempt: same year as start
-        let fullDate = dayjs(`${firstSundayOfAdvent.year()}-${mm}-${dd}`);
+        let fullDate = this.createDate(
+          `${firstSundayOfAdvent.year()}-${mm}-${dd}`
+        );
 
         // If the date is before the starting date, bump to next year
         if (fullDate.isBefore(firstSundayOfAdvent, "day")) {
@@ -158,7 +171,7 @@ export class Calendar {
    */
   getEmberDaysInAdvent(): CalendarItem[] {
     const liturgicalYear = this.getLiturgicalYear();
-    const dec13 = dayjs(`${liturgicalYear - 1}-12-13`);
+    const dec13 = this.createDate(`${liturgicalYear - 1}-12-13`);
     const daysUntilWednesday = (3 - dec13.day() + 7) % 7 || 7;
     const wednesdayAfter = dec13.add(daysUntilWednesday, "day");
     return [
@@ -192,7 +205,7 @@ export class Calendar {
   getChristmastideSundays(): CalendarItem[] {
     const liturgicalYear = this.getLiturgicalYear();
     const calendarYear = liturgicalYear - 1;
-    const christmas = dayjs(`${calendarYear}-12-25`);
+    const christmas = this.createDate(`${calendarYear}-12-25`);
 
     const sundayAfterChristmas =
       christmas.day() === 0
@@ -226,7 +239,7 @@ export class Calendar {
     const L = I - J;
     const month = 3 + f((L + 40) / 44); // 3 = March
     const day = L + 28 - 31 * f(month / 4);
-    return dayjs(`${liturgicalYear}-${month}-${day}`);
+    return this.createDate(`${liturgicalYear}-${month}-${day}`);
   }
 
   /**
@@ -274,7 +287,7 @@ export class Calendar {
    */
   getEpiphany(): Dayjs {
     const liturgicalYear = this.getLiturgicalYear();
-    return dayjs(`${liturgicalYear}-01-06`);
+    return this.createDate(`${liturgicalYear}-01-06`);
   }
 
   /**
@@ -386,7 +399,7 @@ export class Calendar {
   getAnnunciation(): Dayjs {
     const liturgicalYear = this.getLiturgicalYear();
     const easter = this.getEasterSunday();
-    const march25 = dayjs(`${liturgicalYear}-03-25`);
+    const march25 = this.createDate(`${liturgicalYear}-03-25`);
 
     // Holy Week: Palm Sunday to Holy Saturday
     const holyWeekStart = easter.subtract(7, "day"); // Palm Sunday
@@ -863,7 +876,7 @@ export class Calendar {
    */
   getEmberDaysInTrinitytide(): CalendarItem[] {
     const liturgicalYear = this.getLiturgicalYear();
-    const sep14 = dayjs(`${liturgicalYear}-09-14`);
+    const sep14 = this.createDate(`${liturgicalYear}-09-14`);
     const daysUntilWednesday = (3 - sep14.day() + 7) % 7 || 7;
     const wednesdayAfter = sep14.add(daysUntilWednesday, "day");
     return [
@@ -990,7 +1003,7 @@ export class Calendar {
       const highestRanked = items.sort((a, b) => a.rank - b.rank);
 
       // Always show 4 and above, except turing Holy Week
-      const isHolyWeek = this.isHolyWeek(dayjs(date));
+      const isHolyWeek = this.isHolyWeek(this.createDate(date));
       const fourAndAbove = highestRanked.filter((a) => {
         if (isHolyWeek) {
           return a.rank >= 4 && !a.isSaint;
@@ -1033,9 +1046,9 @@ export class Calendar {
     const all = items || this.getAll(rank);
     return Object.entries(all).reduce<DateMap>((acc, [date, items]) => {
       if (
-        dayjs(date).isBetween(
-          dayjs(season.start),
-          dayjs(season.end),
+        this.createDate(date).isBetween(
+          this.createDate(season.start),
+          this.createDate(season.end),
           "day",
           "[]"
         )
@@ -1052,7 +1065,12 @@ export class Calendar {
   getCurrentSeason(): SeasonName {
     const seasons = this.getSeasons();
     return seasons.find((season) =>
-      this.today.isBetween(dayjs(season.start), dayjs(season.end), "day", "[]")
+      this.today.isBetween(
+        this.createDate(season.start),
+        this.createDate(season.end),
+        "day",
+        "[]"
+      )
     )!.name;
   }
 
@@ -1077,7 +1095,7 @@ export class Calendar {
       (acc, [season, dateMap]) => {
         acc[season as SeasonName] = Object.entries(dateMap).map(
           ([date, items]) =>
-            `${dayjs(date).format("MMMM D")} — ${items
+            `${this.createDate(date).format("MMMM D")} — ${items
               .map((i) => i.title)
               .join(" — ")}`
         );
@@ -1105,7 +1123,7 @@ export class Calendar {
    */
   isChristmas(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-12-25`, "day");
+    return this.today.isSame(this.createDate(`${year}-12-25`), "day");
   }
 
   /**
@@ -1113,7 +1131,7 @@ export class Calendar {
    */
   isEpiphany(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-01-06`, "day");
+    return this.today.isSame(this.createDate(`${year}-01-06`), "day");
   }
 
   /**
@@ -1145,7 +1163,7 @@ export class Calendar {
    */
   isNativityOfStJohnBaptist(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-06-24`, "day");
+    return this.today.isSame(this.createDate(`${year}-06-24`), "day");
   }
 
   /**
@@ -1153,7 +1171,7 @@ export class Calendar {
    */
   isFeastOfStJames(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-07-25`, "day");
+    return this.today.isSame(this.createDate(`${year}-07-25`), "day");
   }
 
   /**
@@ -1161,7 +1179,7 @@ export class Calendar {
    */
   isFeastOfStBartholomew(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-08-24`, "day");
+    return this.today.isSame(this.createDate(`${year}-08-24`), "day");
   }
 
   /**
@@ -1169,7 +1187,7 @@ export class Calendar {
    */
   isFeastOfStMatthew(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-09-21`, "day");
+    return this.today.isSame(this.createDate(`${year}-09-21`), "day");
   }
 
   /**
@@ -1177,7 +1195,7 @@ export class Calendar {
    */
   isFeastOfSsSimonAndJude(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-10-28`, "day");
+    return this.today.isSame(this.createDate(`${year}-10-28`), "day");
   }
 
   /**
@@ -1185,7 +1203,7 @@ export class Calendar {
    */
   isFeastOfStAndrew(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-11-30`, "day");
+    return this.today.isSame(this.createDate(`${year}-11-30`), "day");
   }
 
   /**
@@ -1406,7 +1424,7 @@ export class Calendar {
    */
   isTransfiguration(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-08-06`, "day");
+    return this.today.isSame(this.createDate(`${year}-08-06`), "day");
   }
 
   /**
@@ -1414,7 +1432,7 @@ export class Calendar {
    */
   isPurification(): boolean {
     const year = this.today.year();
-    return this.today.isSame(`${year}-02-02`, "day");
+    return this.today.isSame(this.createDate(`${year}-02-02`), "day");
   }
 
   /**
@@ -1430,7 +1448,7 @@ export class Calendar {
    */
   isHolyInnocents(): boolean {
     const year = this.today.year();
-    return this.today.isSame(dayjs(`${year}-12-28`), "day");
+    return this.today.isSame(this.createDate(`${year}-12-28`), "day");
   }
 
   /**

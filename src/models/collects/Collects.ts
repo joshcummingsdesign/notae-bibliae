@@ -1,11 +1,16 @@
 import dayjs, { Dayjs } from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
 import { Calendar } from "../calendar";
 import { stripMarkdownLinks } from "../../utils/markdown";
 import collectItems from "./collects.json";
 import { CollectDateMap, CollectItem, CurrentCollects } from "./types";
+import { TIMEZONE } from "@/constants";
 
 dayjs.extend(isSameOrBefore);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export class Collects {
   calendar: Calendar;
@@ -77,7 +82,7 @@ export class Collects {
     };
 
     Object.entries(items).forEach(([itemDateString, values]) => {
-      const itemDate = dayjs(itemDateString);
+      const itemDate = dayjs.tz(itemDateString, TIMEZONE);
 
       if (itemDate.isSameOrBefore(date, "day")) {
         const primary = values.filter((v) => v.rank < 4);
