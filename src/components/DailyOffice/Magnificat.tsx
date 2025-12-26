@@ -1,6 +1,7 @@
 import { Calendar } from "@/models/calendar";
 import Link from "next/link";
 import { Antiphon } from "@/components/Antiphon";
+import { Red } from "../text/Red";
 
 interface Props {
   linkAntiphon?: boolean;
@@ -39,6 +40,14 @@ export const Magnificat: React.FC<Props> = ({
         </strong>{" "}
         (SDP 447, {tone})
       </p>
+      {currentAntiphon && (
+        <p>
+          <strong>
+            <Red text="Ant." />
+          </strong>{" "}
+          Same as above.
+        </p>
+      )}
     </>
   );
 };
