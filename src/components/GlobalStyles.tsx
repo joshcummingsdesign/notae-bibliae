@@ -53,6 +53,10 @@ export const GlobalStyles = () => (
             margin: 0,
           },
         },
+
+        a: {
+          lineBreak: "anywhere",
+        },
       },
       a: {
         color: colors.red,
