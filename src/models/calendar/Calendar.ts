@@ -1531,7 +1531,7 @@ export class Calendar {
       },
       [`${year}-12-22`]: {
         title: "O Rex gentium",
-        text: "O come, Desire of nations, bind\nIn one the hearts of all mankind;\nBid thou our sad divisions cease,\nAnd be thyself our King of Peace.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
+        text: "O come, Desire of Nations, bind\nIn one the hearts of all mankind;\nBid thou our sad divisions cease,\nAnd be thyself our King of Peace.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-rex-gentium",
         verse: "Isaiah 2:4",
       },

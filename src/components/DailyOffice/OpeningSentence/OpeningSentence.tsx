@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { BiblePassage } from "@/types/BiblePassage";
 import openingSentences from "./opening-sentences.json";
+import { Definition } from "@/components/Definition";
 
 type SentenceCategory = keyof typeof openingSentences;
 
@@ -33,6 +34,8 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
       .replaceAll("¶", "")
       // LORD => Lord (for CSS small-caps)
       .replaceAll("LORD", "Lord")
+      // JESUS => Jesus
+      .replaceAll("JESUS", "Jesus")
       // Remove spaces after line numbers
       .replaceAll(/(?<=[0-9]+)<\/span>\s/g, "</span>")
       // Remove p tags
