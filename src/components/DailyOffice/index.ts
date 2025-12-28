@@ -4,5 +4,5 @@ export * from "./TeDeum";
 export * from "./Magnificat";
 export * from "./NuncDimittis";
 export * from "./Collects";
-export * from "./Lessons";
+export * from "./PsalmsOfTheDay";
 export * from "./OpeningSentence";

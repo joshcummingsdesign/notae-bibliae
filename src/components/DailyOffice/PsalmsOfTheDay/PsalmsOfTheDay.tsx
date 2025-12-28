@@ -1,12 +1,10 @@
 "use client";
-import { Autocomplete, styled, TextField } from "@mui/material";
-import lessons from "./lessons.json";
-import psalms from "./psalms.json";
 import { useEffect, useState } from "react";
+import { Autocomplete, styled, TextField } from "@mui/material";
+import psalms from "./psalms.json";
 
 interface Props {
   id: string;
-  type?: "ot" | "nt" | "psalm"; // default: psalm
 }
 
 interface PlanItem {
@@ -21,64 +19,22 @@ interface PlanItem {
 
 type PlanItems = { [index: string]: PlanItem };
 
-export const Lessons: React.FC<Props> = ({ id, type = "psalm" }) => {
-  if (type === "ot") {
-    const plan = lessons.OT.reduce<PlanItems>((acc, val, i) => {
-      acc[String(i)] = val;
-      return acc;
-    }, {});
-
-    return (
-      <LessonPicker
-        id={`${id}-ot-lesson`}
-        label="Current Lesson"
-        type={type}
-        plan={plan}
-      />
-    );
-  }
-
-  if (type === "nt") {
-    const plan = lessons.NT.reduce<PlanItems>((acc, val, i) => {
-      acc[String(i)] = val;
-      return acc;
-    }, {});
-
-    return (
-      <LessonPicker
-        id={`${id}-nt-lesson`}
-        label="Current Lesson"
-        type={type}
-        plan={plan}
-      />
-    );
-  }
-
-  // Defaults to psalm
+export const PsalmsOfTheDay: React.FC<Props> = ({ id }) => {
   const plan = psalms.reduce<PlanItems>((acc, val, i) => {
     acc[String(i)] = val;
     return acc;
   }, {});
 
-  return (
-    <LessonPicker
-      id={`${id}-psalm`}
-      label="Current Psalm"
-      type={type}
-      plan={plan}
-    />
-  );
+  return <LessonPicker id={`${id}-psalm`} label="Current Psalm" plan={plan} />;
 };
 
 export const LessonPicker = ({
   id,
   label,
-  type = "psalm",
   plan,
 }: {
   id: string;
   label: string;
-  type?: "ot" | "nt" | "psalm";
   plan: PlanItems;
 }) => {
   const [index, setIndex] = useState<number>(0);
@@ -139,7 +95,7 @@ export const LessonPicker = ({
   return (
     <>
       <Wrapper>
-        <Autocomplete<string, false, true> // string == index
+        <Autocomplete<string, false, true>
           disablePortal
           value={String(index)}
           disableClearable={true}
@@ -149,32 +105,19 @@ export const LessonPicker = ({
           renderInput={(params) => <TextInput {...params} label={label} />}
         />
       </Wrapper>
-      {type === "psalm" && (
-        <TextWrap>
-          <TextInput
-            value={getPsalmNotes()}
-            label="Notes"
-            multiline={true}
-            minRows={4}
-            slotProps={{
-              input: {
-                readOnly: true,
-              },
-            }}
-          />
-        </TextWrap>
-      )}
-      {(type === "ot" || type === "nt") && (
-        <TextWrap>
-          <TextInput
-            value={notes}
-            label="Notes"
-            multiline={true}
-            minRows={4}
-            onChange={handleNotesChange}
-          />
-        </TextWrap>
-      )}
+      <TextWrap>
+        <TextInput
+          value={getPsalmNotes()}
+          label="Notes"
+          multiline={true}
+          minRows={4}
+          slotProps={{
+            input: {
+              readOnly: true,
+            },
+          }}
+        />
+      </TextWrap>
     </>
   );
 };
