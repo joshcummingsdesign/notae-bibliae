@@ -215,7 +215,13 @@ export class Calendar {
     return [
       {
         date: sundayAfterChristmas.format("YYYY-MM-DD"),
-        title: "Sunday After Christmas Day",
+        title: "First Sunday After Christmas",
+        rank: 3,
+        class: 7,
+      },
+      {
+        date: sundayAfterChristmas.add(7, "day").format("YYYY-MM-DD"),
+        title: "Second Sunday After Christmas",
         rank: 3,
         class: 7,
       },

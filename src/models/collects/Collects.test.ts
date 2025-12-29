@@ -59,7 +59,7 @@ describe("Collects", () => {
     const c = new Collects(mockCalendar);
     const items = c.queryCollects();
 
-    expect(items.length).toBe(186);
+    expect(items.length).toBe(187);
     expect(items[0].title).toBe("First Sunday of Advent");
     expect(items[0].text).toBeTruthy();
     expect(items[items.length - 1].title).toBe("Saint Jacob of Serugh, Bishop");

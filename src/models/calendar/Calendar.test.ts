@@ -134,7 +134,13 @@ describe("Calendar", () => {
     const items = d.getChristmastideSundays();
     expect(items[0]).toEqual({
       date: "2025-12-28",
-      title: "Sunday After Christmas Day",
+      title: "First Sunday After Christmas",
+      rank: 3,
+      class: 7,
+    });
+    expect(items[1]).toEqual({
+      date: "2026-01-04",
+      title: "Second Sunday After Christmas",
       rank: 3,
       class: 7,
     });
@@ -838,7 +844,7 @@ describe("Calendar", () => {
   test("should query the calendar items", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.queryCalendarItems();
-    expect(items.length).toBe(194);
+    expect(items.length).toBe(195);
     expect(items[0]).toEqual({
       date: "2025-11-30",
       title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
@@ -861,7 +867,7 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll();
 
-    expect(Object.keys(items).length).toBe(162);
+    expect(Object.keys(items).length).toBe(163);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
@@ -906,7 +912,7 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll(false);
 
-    expect(Object.keys(items).length).toBe(162);
+    expect(Object.keys(items).length).toBe(163);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
