@@ -16,6 +16,7 @@ import {
 import calendarItems from "./calendar-items.json";
 import { numberToWords } from "@/utils/numberToWords";
 import { TIMEZONE } from "@/constants";
+import { stripMarkdownLinks } from "@/utils/markdown";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
@@ -143,12 +144,14 @@ export class Calendar {
         rank: 3,
         class: 1,
         isFeast: true,
+        isSunday: true,
       },
       {
         date: firstSundayOfAdvent.add(1, "week").format("YYYY-MM-DD"),
         title: "Second Sunday of Advent",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
       {
         date: firstSundayOfAdvent.add(2, "week").format("YYYY-MM-DD"),
@@ -156,12 +159,14 @@ export class Calendar {
           "Third Sunday of Advent: [Gaudete Sunday](/liturgy/seasons/advent/gaudete-sunday)",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
       {
         date: firstSundayOfAdvent.add(3, "week").format("YYYY-MM-DD"),
         title: "Fourth Sunday of Advent",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
     ];
   }
@@ -218,12 +223,14 @@ export class Calendar {
         title: "First Sunday After Christmas",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: sundayAfterChristmas.add(7, "day").format("YYYY-MM-DD"),
         title: "Second Sunday After Christmas",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
     ];
   }
@@ -315,36 +322,42 @@ export class Calendar {
           "First Sunday of Epiphany: [Baptism of the Lord](/liturgy/seasons/epiphanytide/baptism-of-the-lord)",
         rank: 3,
         class: 2,
+        isSunday: true,
       },
       {
         date: firstSunday.add(1, "week").format("YYYY-MM-DD"),
         title: "Second Sunday of Epiphany",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: firstSunday.add(2, "week").format("YYYY-MM-DD"),
         title: "Third Sunday of Epiphany",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: firstSunday.add(3, "week").format("YYYY-MM-DD"),
         title: "Fourth Sunday of Epiphany",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: firstSunday.add(4, "week").format("YYYY-MM-DD"),
         title: "Fifth Sunday of Epiphany",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: firstSunday.add(5, "week").format("YYYY-MM-DD"),
         title: "Sixth Sunday of Epiphany",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
     ];
   }
@@ -363,18 +376,21 @@ export class Calendar {
         title: "[Septuagesima](/liturgy/seasons/pre-lent/septuagesima)",
         rank: 2,
         class: 3,
+        isSunday: true,
       },
       {
         date: sexagesima.format("YYYY-MM-DD"),
         title: "[Sexagesima](/liturgy/seasons/pre-lent/sexagesima)",
         rank: 2,
         class: 3,
+        isSunday: true,
       },
       {
         date: quinquagesima.format("YYYY-MM-DD"),
         title: "[Quinquagesima](/liturgy/seasons/pre-lent/quinquagesima)",
         rank: 2,
         class: 3,
+        isSunday: true,
       },
       {
         date: shroveTuesday.format("YYYY-MM-DD"),
@@ -431,18 +447,21 @@ export class Calendar {
         title: "First Sunday of Lent",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
       {
         date: passionSunday.subtract(3, "week").format("YYYY-MM-DD"),
         title: "Second Sunday of Lent",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
       {
         date: passionSunday.subtract(2, "week").format("YYYY-MM-DD"),
         title: "Third Sunday of Lent",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
       {
         date: passionSunday.subtract(1, "week").format("YYYY-MM-DD"),
@@ -450,6 +469,7 @@ export class Calendar {
           "Fourth Sunday of Lent: [Laetare Sunday](/liturgy/seasons/lent/laetare-sunday)",
         rank: 3,
         class: 3,
+        isSunday: true,
       },
       {
         date: passionSunday.format("YYYY-MM-DD"),
@@ -457,6 +477,7 @@ export class Calendar {
           "Fifth Sunday of Lent: [Passion Sunday](/liturgy/seasons/lent/passiontide/passion-sunday)",
         rank: 3,
         class: 1,
+        isSunday: true,
       },
     ];
   }
@@ -505,6 +526,7 @@ export class Calendar {
           "Holy Week: [Palm Sunday](/liturgy/seasons/lent/passiontide/palm-sunday)",
         rank: 1,
         class: 1,
+        isSunday: true,
       },
       {
         date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
@@ -625,6 +647,7 @@ export class Calendar {
         rank: 1,
         class: 2,
         isFeast: true,
+        isSunday: true,
       },
       {
         date: easter.add(1, "day").format("YYYY-MM-DD"),
@@ -669,24 +692,28 @@ export class Calendar {
         rank: 3,
         class: 8,
         isFeast: true,
+        isSunday: true,
       },
       {
         date: easter.add(14, "day").format("YYYY-MM-DD"),
         title: "Third Sunday of Easter",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: easter.add(21, "day").format("YYYY-MM-DD"),
         title: "Fourth Sunday of Easter",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: easter.add(28, "day").format("YYYY-MM-DD"),
         title: "Fifth Sunday of Easter",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: easter.add(35, "day").format("YYYY-MM-DD"),
@@ -694,6 +721,7 @@ export class Calendar {
           "Sixth Sunday of Easter: [Rogation Sunday](/glossary/liturgical-terms#rogation-days)",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
       {
         date: easter.add(36, "day").format("YYYY-MM-DD"),
@@ -726,6 +754,7 @@ export class Calendar {
         title: "Seventh Sunday of Easter (Sunday After Ascension Day)",
         rank: 3,
         class: 7,
+        isSunday: true,
       },
     ];
   }
@@ -752,6 +781,7 @@ export class Calendar {
         rank: 1,
         class: 2,
         isFeast: true,
+        isSunday: true,
       },
       {
         date: easter.add(50, "day").format("YYYY-MM-DD"),
@@ -855,6 +885,7 @@ export class Calendar {
         rank,
         class: cls,
         isFeast,
+        isSunday: true,
       });
     }
 
@@ -872,6 +903,7 @@ export class Calendar {
       rank: 2,
       class: 2,
       isFeast: true,
+      isSunday: true,
     });
 
     return days;
@@ -1025,6 +1057,20 @@ export class Calendar {
 
       return acc;
     }, {});
+  }
+
+  getAllSundays(): Record<string, string> {
+    const events = this.getAll(false);
+    return Object.entries(events).reduce<Record<string, string>>(
+      (acc, [date, items]) => {
+        const sundays = items.filter((item) => item.isSunday);
+        if (sundays.length > 0) {
+          acc[date] = stripMarkdownLinks(sundays[0].title);
+        }
+        return acc;
+      },
+      {}
+    );
   }
 
   /**
