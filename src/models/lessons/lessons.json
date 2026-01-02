@@ -1373,6 +1373,97 @@
       }
     }
   ],
+  "Fifth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Prov. 15:1-10, Prov. 15:26"],
+        "second": ["Matt. 19:16-30"]
+      },
+      "evening": {
+        "first": ["Prov. 3:1-7, Prov. 3:11-12"],
+        "second": ["Luke 14:25-34"]
+      }
+    },
+    {
+      "morning": { "first": ["Ruth 2:1-13"], "second": ["Luke 9:46-62"] },
+      "evening": { "first": ["1 Macc. 3:1-9"], "second": ["Acts 18:1-11"] }
+    },
+    {
+      "morning": { "first": ["Ruth 2:14-23"], "second": ["Luke 10:1-24"] },
+      "evening": { "first": ["1 Macc. 3:42-54"], "second": ["Acts 18:12-23"] }
+    },
+    {
+      "morning": { "first": ["Ruth 3:1-13"], "second": ["Luke 10:25-37"] },
+      "evening": {
+        "first": ["1 Macc. 4:36-51"],
+        "second": ["Acts 18:24-28, Acts 19:1-7"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Ruth 4:1-8"],
+        "second": ["Luke 10:38-42, Luke 11:1-13"]
+      },
+      "evening": { "first": ["1 Macc. 4:52-61"], "second": ["Acts 19:8-20"] }
+    },
+    {
+      "morning": { "first": ["Ruth 4:9-17"], "second": ["Luke 11:14-28"] },
+      "evening": {
+        "first": ["Dan. 1:1-7, Dan. 1:17-21"],
+        "second": ["Acts 19:21-41"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 1:1-11"], "second": ["Luke 11:29-36"] },
+      "evening": {
+        "first": ["Dan. 2:1-6, Dan. 2:10-13"],
+        "second": ["Acts 20:1-16"]
+      }
+    }
+  ],
+  "Sixth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["2 Sam. 19:16-23"],
+        "second": ["Matt. 5:38-48"]
+      },
+      "evening": {
+        "first": ["Exod. 24:1-11, Exod. 24:16-18"],
+        "second": ["Heb. 9:18-28"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 1:12-20"], "second": ["Luke 11:37-54"] },
+      "evening": { "first": ["Dan. 2:14-24"], "second": ["Acts 20:17-38"] }
+    },
+    {
+      "morning": {
+        "first": ["1 Sam. 1:21-28, 1 Sam. 2:11"],
+        "second": ["Luke 12:1-12"]
+      },
+      "evening": { "first": ["Dan. 2:25-35"], "second": ["Acts 21:1-14"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 2:18-26"], "second": ["Luke 12:13-21"] },
+      "evening": { "first": ["Dan. 2:36-45"], "second": ["Acts 21:15-26"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 3:1-18"], "second": ["Luke 12:22-34"] },
+      "evening": { "first": ["Dan. 3:1-7"], "second": ["Acts 21:27-36"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 4:1-11"], "second": ["Luke 12:35-48"] },
+      "evening": {
+        "first": ["Dan. 3:8-18"],
+        "second": ["Acts 21:37-40, Acts 22:1-16"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 4:12-22"], "second": ["Luke 12:49-59"] },
+      "evening": { "first": ["Dan. 3:19-30"], "second": ["Acts 22:17-29"] }
+    }
+  ],
+
   "Saint Andrew, Apostle": [
     {
       "morning": { "first": ["Isa. 55:1-5"], "second": ["John 1:35-42"] },
