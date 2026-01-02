@@ -9,7 +9,7 @@ describe("Lessons", () => {
     const l = new Lessons(c);
     const a = l.getAll();
     const entries = Object.entries(a);
-    expect(entries.length).toBe(356);
+    expect(entries.length).toBe(364);
     expect(entries[0]).toEqual([
       "2025-11-30",
       {
@@ -25,17 +25,19 @@ describe("Lessons", () => {
       },
     ]);
     expect(entries[entries.length - 1]).toEqual([
-      "2026-11-21",
+      "2026-11-29",
       {
         evening: {
-          first: ["Deut. 19:11-21"],
-          second: ["Matt. 28:11-20"],
+          first: [
+            "Ecclesiastes 11:9-10, Ecclesiastes 12:1-8, Ecclesiastes 12:13-14",
+          ],
+          second: ["Heb. 13:1-21"],
         },
         morning: {
-          first: ["Lev. 26:27-42"],
-          second: ["Phil. 4:1-23"],
+          first: ["Jer. 4:23-31"],
+          second: ["Matt. 25:31-46"],
         },
-        title: "Twenty-Fourth Sunday After Trinity - Saturday",
+        title: "Christ the King - Sunday",
       },
     ]);
   });

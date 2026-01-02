@@ -11,14 +11,13 @@ export const Lesson: React.FC<Props> = ({ office, lesson }) => {
   const lessons = new Lessons(calendar);
   const lessonData = lessons.getToday();
 
-  // TODO: Third Sunday After Trinity
-  // TODO: Find alternatives for deuterocanonical books
   // TODO: Cleanup duplicates
+  // TODO: Find alternatives for deuterocanonical books
   // TODO: Fix malformatted passages
   // TODO: Fix missing days
   // console.log(
   //   Object.entries(lessons.getAll())
-  //     .slice(300)
+  //     .slice(350)
   //     .reduce<any>((acc, [k, v]) => {
   //       acc[k] = v;
   //       return acc;

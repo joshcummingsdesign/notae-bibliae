@@ -2366,6 +2366,146 @@
       "evening": { "first": ["Deut. 19:11-21"], "second": ["Matt. 28:11-20"] }
     }
   ],
+  "Twenty-Fifth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Ruth 1:1-17"],
+        "second": ["Col. 3:5-11"]
+      },
+      "evening": {
+        "first": ["Joel 3:9-17"],
+        "second": ["Matt. 13:36-52"]
+      }
+    },
+    {
+      "morning": { "first": ["Obadiah 1:1-9"], "second": ["1 Pet. 1:1-12"] },
+      "evening": { "first": ["Deut. 24:10-18"], "second": ["1 Thess. 1:1-10"] }
+    },
+    {
+      "morning": { "first": ["Obadiah 1:10-21"], "second": ["1 Pet. 1:13-25"] },
+      "evening": {
+        "first": ["Deut. 25:1-3, Deut. 25:13-16"],
+        "second": ["1 Thess. 2:1-16"]
+      }
+    },
+    {
+      "morning": { "first": ["Mal. 1:6-11"], "second": ["1 Pet. 2:1-10"] },
+      "evening": {
+        "first": ["Deut. 26:1-11"],
+        "second": ["1 Thess. 2:17-20, 1 Thess. 3:1-13"]
+      }
+    },
+    {
+      "morning": { "first": ["Mal. 2:1-10"], "second": ["1 Pet. 2:11-17"] },
+      "evening": { "first": ["Deut. 28:1-14"], "second": ["1 Thess. 4:1-12"] }
+    },
+    {
+      "morning": { "first": ["Mal. 3:1-15"], "second": ["1 Pet. 2:18-25"] },
+      "evening": {
+        "first": ["Deut. 29:2, Deut. 29:9-21"],
+        "second": ["1 Thess. 4:13-18"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Mal. 3:16-18, Mal. 4:1-6"],
+        "second": ["1 Pet. 3:1-12"]
+      },
+      "evening": { "first": ["Deut. 30:11-20"], "second": ["1 Thess. 5:1-11"] }
+    }
+  ],
+  "Twenty-Sixth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Isa. 2:6-19"],
+        "second": ["Matt. 25:14-29"]
+      },
+      "evening": {
+        "first": ["Gen. 19:1-3, Gen. 19:12-17, Gen. 19:24-28"],
+        "second": ["Luke 17:20-37"]
+      }
+    },
+    {
+      "morning": { "first": ["Lam. 1:1-6"], "second": ["1 Pet. 3:13-22"] },
+      "evening": { "first": ["Wisdom 1:1-7"], "second": ["1 Thess. 5:12-28"] }
+    },
+    {
+      "morning": { "first": ["Lam. 1:15-22"], "second": ["1 Pet. 4:1-6"] },
+      "evening": { "first": ["Wisdom 6:1-11"], "second": ["2 Thess. 1:1-12"] }
+    },
+    {
+      "morning": { "first": ["Lam. 2:1-10"], "second": ["1 Pet. 4:7-11"] },
+      "evening": { "first": ["Wisdom 6:12-21"], "second": ["2 Thess. 2:1-12"] }
+    },
+    {
+      "morning": {
+        "first": ["Lam. 4:1-6, Lam. 4:9"],
+        "second": ["1 Pet. 4:12-19"]
+      },
+      "evening": {
+        "first": ["Wisdom 7:7-14"],
+        "second": ["2 Thess. 2:13-17, 2 Thess. 3:1-5"]
+      }
+    },
+    {
+      "morning": { "first": ["Lam. 4:11-20"], "second": ["1 Pet. 5:1-7"] },
+      "evening": { "first": ["Wisdom 7:15-22"], "second": ["2 Thess. 3:6-18"] }
+    },
+    {
+      "morning": { "first": ["Lam. 5:1-22"], "second": ["1 Pet. 5:8-14"] },
+      "evening": {
+        "first": ["Wisdom 7:22-30, Wisdom 8:1"],
+        "second": ["Jude 1:1-25"]
+      }
+    }
+  ],
+  "Christ the King": [
+    {
+      "morning": {
+        "first": ["Jer. 4:23-31"],
+        "second": ["Matt. 25:31-46"]
+      },
+      "evening": {
+        "first": [
+          "Ecclesiastes 11:9-10, Ecclesiastes 12:1-8, Ecclesiastes 12:13-14"
+        ],
+        "second": ["Heb. 13:1-21"]
+      }
+    },
+    {
+      "morning": { "first": ["Joel 1:13-20"], "second": ["2 Pet. 1:1-11"] },
+      "evening": {
+        "first": ["Wisdom 9:1-4, Wisdom 9:9-11"],
+        "second": ["Rev. 1:1-8"]
+      }
+    },
+    {
+      "morning": { "first": ["Joel 2:1-11"], "second": ["2 Pet. 1:12-21"] },
+      "evening": { "first": ["Wisdom 9:13-18"], "second": ["Rev. 1:9-20"] }
+    },
+    {
+      "morning": { "first": ["Joel 2:12-19"], "second": ["2 Pet. 2:1-10"] },
+      "evening": {
+        "first": ["Wisdom 10:1-4, Wisdom 10:15-21"],
+        "second": ["Rev. 2:1-11"]
+      }
+    },
+    {
+      "morning": { "first": ["Joel 2:21-32"], "second": ["2 Pet. 2:10-22"] },
+      "evening": {
+        "first": ["Wisdom 11:21-26, Wisdom 12:1-2"],
+        "second": ["Rev. 2:12-17"]
+      }
+    },
+    {
+      "morning": { "first": ["Joel 3:1-8"], "second": ["2 Pet. 3:1-10"] },
+      "evening": { "first": ["Wisdom 12:12-19"], "second": ["Rev. 3:1-6"] }
+    },
+    {
+      "morning": { "first": ["Joel 3:9-17"], "second": ["2 Pet. 3:11-18"] },
+      "evening": { "first": ["Wisdom 13:1-9"], "second": ["Rev. 3:7-13"] }
+    }
+  ],
   "Saint Andrew, Apostle": [
     {
       "morning": { "first": ["Isa. 55:1-5"], "second": ["John 1:35-42"] },
