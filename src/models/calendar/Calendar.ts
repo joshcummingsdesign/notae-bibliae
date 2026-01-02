@@ -1096,7 +1096,8 @@ export class Calendar {
   getBySeason(
     seasonName: SeasonName,
     rank: boolean = true,
-    items?: DateMap
+    items?: DateMap,
+    stripHtml?: boolean
   ): DateMap {
     const season = this.getSeasons().find(
       (season) => season.name === seasonName
@@ -1111,7 +1112,12 @@ export class Calendar {
           "[]"
         )
       ) {
-        acc[date] = items;
+        acc[date] = stripHtml
+          ? items.map((item) => ({
+              ...item,
+              title: stripMarkdownLinks(item.title),
+            }))
+          : items;
       }
       return acc;
     }, {});
@@ -1135,11 +1141,11 @@ export class Calendar {
   /**
    * Get all items sorted by season.
    */
-  getSeasonItems(): SeasonItems {
+  getSeasonItems(stripHtml?: boolean): SeasonItems {
     const seasons = this.getSeasons();
     const all = this.getAll();
     return seasons.reduce<SeasonItems>((acc, season) => {
-      acc[season.name] = this.getBySeason(season.name, true, all);
+      acc[season.name] = this.getBySeason(season.name, true, all, stripHtml);
       return acc;
     }, {} as SeasonItems);
   }

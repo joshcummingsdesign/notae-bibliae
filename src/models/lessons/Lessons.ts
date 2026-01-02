@@ -36,6 +36,9 @@ export class Lessons {
     return dayjs.tz(dateString, TIMEZONE);
   }
 
+  /**
+   * Get all lessons.
+   */
   getAll(): LessonDateMap {
     const calendarData = this.calendar.getAll();
     const sundays = this.calendar.getAllSundays();
@@ -99,6 +102,9 @@ export class Lessons {
     return output;
   }
 
+  /**
+   * Get today's lessons.
+   */
   getToday(): OfficeDay {
     const today = this.calendar.getToday();
     const lessons = this.getAll();
