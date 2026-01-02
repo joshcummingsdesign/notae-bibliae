@@ -473,6 +473,159 @@
       }
     }
   ],
+  "Septuagesima": [
+    {
+      "morning": {
+        "first": ["Ezek. 3:4-11"],
+        "second": ["2 Tim. 2:1-13"]
+      },
+      "evening": {
+        "first": ["Isa. 5:1-7"],
+        "second": ["1 Tim. 6:11-19"]
+      }
+    },
+    {
+      "morning": { "first": ["Gen. 1:1-19"], "second": ["Mark 6:7-13"] },
+      "evening": {
+        "first": ["Amos 7:1-8, Amos 8:1-3"],
+        "second": ["Gal. 1:1-10"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 1:20-31, Gen. 2:1-3"],
+        "second": ["Mark 6:14-29"]
+      },
+      "evening": {
+        "first": ["Amos 1:1-5, Amos 1:13-15, Amos 2:1-3"],
+        "second": ["Gal. 1:11-24"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 2:4-9, Gen. 2:16-25"],
+        "second": ["Mark 6:30-44"]
+      },
+      "evening": { "first": ["Amos 2:6-16"], "second": ["Gal. 2:1-10"] }
+    },
+    {
+      "morning": { "first": ["Gen. 3:1-24"], "second": ["Mark 6:45-56"] },
+      "evening": { "first": ["Amos 3:1-15"], "second": ["Gal. 2:11-21"] }
+    },
+    {
+      "morning": { "first": ["Gen. 4:1-16"], "second": ["Mark 7:1-13"] },
+      "evening": { "first": ["Amos 4:4-13"], "second": ["Gal. 3:1-9"] }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 6:5-8, Gen. 6:13-22"],
+        "second": ["Mark 7:14-23"]
+      },
+      "evening": { "first": ["Amos 5:1-13"], "second": ["Gal. 3:10-18"] }
+    }
+  ],
+  "Sexagesima": [
+    {
+      "morning": {
+        "first": ["Isa. 30:8-21"],
+        "second": ["2 Cor. 12:1-12"]
+      },
+      "evening": {
+        "first": ["Eccles. 11:1-6"],
+        "second": ["John 4:31-38"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 7:1, Gen. 7:7-10, Gen. 7:17-23"],
+        "second": ["Mark 7:24-37"]
+      },
+      "evening": { "first": ["Amos 5:14-24"], "second": ["Gal. 3:19-29"] }
+    },
+    {
+      "morning": { "first": ["Gen. 8:6-22"], "second": ["Mark 8:11-26"] },
+      "evening": { "first": ["Amos 6:1-8"], "second": ["Gal. 4:1-11"] }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 9:8-17"],
+        "second": ["Mark 8:27-38, Mark 9:1"]
+      },
+      "evening": { "first": ["Amos 8:4-12"], "second": ["Gal. 4:12-20"] }
+    },
+    {
+      "morning": { "first": ["Gen. 11:1-9"], "second": ["Mark 9:2-13"] },
+      "evening": { "first": ["Amos 9:1-10"], "second": ["Gal. 4:21-31"] }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 11:27-32, Gen. 12:1-8"],
+        "second": ["Mark 9:14-29"]
+      },
+      "evening": { "first": ["Amos 7:10-17"], "second": ["Gal. 5:1-12"] }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 13:2, Gen. 13:5-18"],
+        "second": ["Mark 9:30-37"]
+      },
+      "evening": {
+        "first": ["Hosea 4:1-2, Hosea 4:6-10"],
+        "second": ["Gal. 5:13-26"]
+      }
+    }
+  ],
+  "Quinquagesima": [
+    {
+      "morning": {
+        "first": ["Wisdom 7:7-14"],
+        "second": ["John 15:1-17"]
+      },
+      "evening": {
+        "first": ["Lev. 19:1-2, Lev. 19:9-18"],
+        "second": ["1 John 4:1-21"]
+      }
+    },
+    {
+      "morning": { "first": ["Gen. 18:1-16"], "second": ["Mark 9:38-50"] },
+      "evening": { "first": ["Hosea 5:10-6:6"], "second": ["Gal. 6:1-10"] }
+    },
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "First Sunday of Lent": [
+    {
+      "morning": {
+        "first": ["Sirach 2:1-18"],
+        "second": ["Matt. 6:1-18"]
+      },
+      "evening": {
+        "first": ["Jer. 17:5-14"],
+        "second": ["1 Cor. 10:1-13"]
+      }
+    },
+    {
+      "morning": { "first": ["Gen. 24:1-27"], "second": ["1 Cor. 3:1-17"] },
+      "evening": { "first": ["Jer. 3:19-25"], "second": ["John 9:1-23"] }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 24:28-38, Gen. 24:49-51, Gen. 24:58-67"],
+        "second": ["1 Cor. 3:18-4:5"]
+      },
+      "evening": { "first": ["Jer. 4:1-9"], "second": ["John 9:24-41"] }
+    },
+    null,
+    {
+      "morning": { "first": ["Gen. 25:28-34"], "second": ["1 Cor. 4:6-19"] },
+      "evening": { "first": ["Jer. 4:11-22"], "second": ["John 10:1-10"] }
+    },
+    null,
+    null
+  ],
   "Saint Andrew, Apostle": [
     {
       "morning": { "first": ["Isa. 55:1-5"], "second": ["John 1:35-42"] },
@@ -681,6 +834,78 @@
         "first": ["Jer. 1:4-10"],
         "second": ["Acts 26:1-23"]
       }
+    }
+  ],
+  "Shrove Tuesday": [
+    {
+      "morning": { "first": ["Gen. 18:20-33"], "second": ["Mark 10:1-16"] },
+      "evening": {
+        "first": ["Hosea 11:1-4, Hosea 13:5-16"],
+        "second": ["Gal. 6:11-18"]
+      }
+    }
+  ],
+  "Ash Wednesday": [
+    {
+      "morning": { "first": ["Isa. 58:1-12"], "second": ["Heb. 12:1-14"] },
+      "evening": {
+        "first": ["Jonah 3:1-10, Jonah 4:1-11"],
+        "second": ["Luke 15:10-32"]
+      }
+    }
+  ],
+  "Thursday in Lent": [
+    {
+      "morning": {
+        "first": ["Gen. 19:1-3, Gen. 19:12-17, Gen. 19:24-28"],
+        "second": ["Cor. 1:1-17"]
+      },
+      "evening": {
+        "first": ["Jer. 1:4-10, Jer. 1:13-19"],
+        "second": ["John 8:1-11"]
+      }
+    }
+  ],
+  "Friday in Lent": [
+    {
+      "morning": { "first": ["Gen. 21:9-21"], "second": ["1 Cor. 1:18-31"] },
+      "evening": {
+        "first": ["Jer. 2:1-9, Jer. 2:13"],
+        "second": ["John 8:12-20, John 8:31-36"]
+      }
+    }
+  ],
+  "Saturday in Lent": [
+    {
+      "morning": {
+        "first": ["Gen. 22:1-14, Gen. 22:19"],
+        "second": ["1 Cor. 2:1-16"]
+      },
+      "evening": { "first": ["Jer. 3:11-18"], "second": ["John 8:45-59"] }
+    }
+  ],
+  "Ember Wednesday in Lent": [
+    {
+      "morning": { "first": ["Ezek. 2:1-10"], "second": ["Matt. 9:1-13"] },
+      "evening": { "first": ["Ezek. 3:16-27"], "second": ["2 Cor. 4:1-18"] }
+    }
+  ],
+  "Ember Friday in Lent": [
+    {
+      "morning": {
+        "first": ["Ezek. 34:1-16"],
+        "second": ["Matt. 10:24-33, Matt. 10:37-42"]
+      },
+      "evening": { "first": ["Ezek. 37:1-14"], "second": ["1 Tim. 4:1-16"] }
+    }
+  ],
+  "Ember Saturday in Lent": [
+    {
+      "morning": {
+        "first": ["Ezek. 34:17-25, Ezek. 34:30-31"],
+        "second": ["2 Tim. 2:1-15"]
+      },
+      "evening": { "first": ["Ezek. 37:21-28"], "second": ["1 Tim. 6:6-21"] }
     }
   ]
 }

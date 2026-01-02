@@ -1063,9 +1063,15 @@ export class Calendar {
     const events = this.getAll(false);
     return Object.entries(events).reduce<Record<string, string>>(
       (acc, [date, items]) => {
-        const sundays = items.filter((item) => item.isSunday);
-        if (sundays.length > 0) {
-          acc[date] = stripMarkdownLinks(sundays[0].title);
+        const sunday = items
+          .filter((item) => item.isSunday)
+          .reduce<CalendarItem | null>(
+            (lowest, item) =>
+              lowest === null || item.rank < lowest.rank ? item : lowest,
+            null
+          );
+        if (sunday) {
+          acc[date] = stripMarkdownLinks(sunday.title);
         }
         return acc;
       },
