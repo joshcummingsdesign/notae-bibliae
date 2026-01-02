@@ -1559,6 +1559,87 @@
       }
     }
   ],
+  "Ninth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Ezek. 14:1-11"],
+        "second": ["1 Thess. 4:1-12"]
+      },
+      "evening": {
+        "first": ["Prov. 4:1-4, Prov. 4:20-27"],
+        "second": ["Heb. 12:1-13"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 16:1-13"], "second": ["Luke 17:20-37"] },
+      "evening": { "first": ["Esther 5:1-14"], "second": ["Rom. 1:1-17"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 16:14-23"], "second": ["Luke 18:1-14"] },
+      "evening": { "first": ["Esther 6:1-13"], "second": ["Rom. 2:1-16"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 17:1-11"], "second": ["Luke 18:15-30"] },
+      "evening": { "first": ["Esther 7:1-10"], "second": ["Rom. 2:17-29"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 17:17-27"], "second": ["Luke 18:31-43"] },
+      "evening": { "first": ["Micah 1:1-7"], "second": ["Rom. 3:1-20"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 17:28-40"], "second": ["Luke 19:1-10"] },
+      "evening": { "first": ["Micah 2:1-13"], "second": ["Rom. 3:21-31"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 17:41-51"], "second": ["Luke 19:11-28"] },
+      "evening": { "first": ["Micah 3:1-8"], "second": ["Rom. 4:1-12"] }
+    }
+  ],
+  "Tenth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Jer. 26:1-7, Jer. 26:10-15"],
+        "second": ["John 8:25-36"]
+      },
+      "evening": {
+        "first": ["Isa. 44:1-8, Isa. 44:21-23"],
+        "second": ["Rom. 12:1-9"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 18:1-9"], "second": ["Luke 19:29-40"] },
+      "evening": { "first": ["Micah 4:1-8"], "second": ["Rom. 4:13-25"] }
+    },
+    {
+      "morning": {
+        "first": ["1 Sam. 20:1-7, 1 Sam. 20:12-23"],
+        "second": ["Luke 19:47-48, Luke 20:1-8"]
+      },
+      "evening": {
+        "first": ["Micah 4:9-13, Micah 5:1"],
+        "second": ["Rom. 5:1-21"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 20:24-39"], "second": ["Luke 20:9-26"] },
+      "evening": { "first": ["Micah 6:1-8"], "second": ["Rom. 6:1-23"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 22:6-23"], "second": ["Luke 20:27-40"] },
+      "evening": { "first": ["Micah 6:9-16"], "second": ["Rom. 7:1-13"] }
+    },
+    {
+      "morning": {
+        "first": ["1 Sam. 23:7-18"],
+        "second": ["Luke 20:41-47, Luke 21:1-4"]
+      },
+      "evening": { "first": ["Micah 7:1-9"], "second": ["Rom. 7:14-25"] }
+    },
+    {
+      "morning": { "first": ["1 Sam. 28:3-19"], "second": ["Luke 21:5-19"] },
+      "evening": { "first": ["Micah 7:14-20"], "second": ["Rom. 8:1-17"] }
+    }
+  ],
   "Saint Andrew, Apostle": [
     {
       "morning": { "first": ["Isa. 55:1-5"], "second": ["John 1:35-42"] },
@@ -2103,6 +2184,12 @@
         "second": ["1 Pet. 1:22-25, 1 Pet. 2:1-10"]
       },
       "evening": { "first": ["Jer. 26:8-15"], "second": ["Matt. 10:16-32"] }
+    }
+  ],
+  "Transfiguration of the Lord": [
+    {
+      "morning": { "first": ["Exod. 34:29-35"], "second": ["2 Cor. 3:1-18"] },
+      "evening": { "first": ["Exod. 24:12-18"], "second": ["Phil. 3:13-21"] }
     }
   ]
 }

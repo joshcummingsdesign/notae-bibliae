@@ -48,7 +48,7 @@ export class Lessons {
     const output: LessonDateMap = {};
 
     // while (currentDay.isSameOrBefore(endDate, "day")) {
-    while (currentDay.isSameOrBefore(dayjs("2026-08-01"), "day")) {
+    while (currentDay.isSameOrBefore(dayjs("2026-08-16"), "day")) {
       const index = currentDay.day();
       const date = currentDay.format("YYYY-MM-DD");
       const dateStr = currentDay.format("MMMM D");
