@@ -1012,7 +1012,7 @@ describe("Calendar", () => {
     expect(entries[0]).toEqual(["2025-11-30", "First Sunday of Advent"]);
     expect(entries[entries.length - 1]).toEqual([
       "2026-11-22",
-      "Twenty-Fifth Sunday After Trinity",
+      "Christ the King",
     ]);
   });
 
