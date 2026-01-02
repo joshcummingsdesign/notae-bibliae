@@ -1885,7 +1885,7 @@
       }
     },
     {
-      "morning": { "first": ["1 Kings 3:16-28"], "second": ["2 Cor. 13:1-14"] },
+      "morning": { "first": ["1 Kings 3:16-28"], "second": ["2 Cor. 13:1-13"] },
       "evening": { "first": ["Sirach 43:1-12"], "second": ["Matt. 9:9-17"] }
     }
   ],
@@ -2068,7 +2068,7 @@
       },
       "evening": {
         "first": ["Jer. 5:7-19"],
-        "second": ["2 Cor. 13:1-11"]
+        "second": ["2 Cor. 13:1-13"]
       }
     },
     {
@@ -2274,6 +2274,96 @@
     {
       "morning": { "first": ["2 Kings 23:24-30"], "second": ["3 John 1:1-15"] },
       "evening": { "first": ["Deut. 5:22-33"], "second": ["Matt. 25:31-46"] }
+    }
+  ],
+  "Twenty-Third Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Jer. 29:1, Jer. 29:4-14"],
+        "second": ["Titus 3:1-8"]
+      },
+      "evening": {
+        "first": ["Ezek. 33:30-33"],
+        "second": ["1 Cor. 4:8-16"]
+      }
+    },
+    {
+      "morning": { "first": ["Jer. 35:1-11"], "second": ["Col. 1:1-17"] },
+      "evening": { "first": ["Deut. 6:1-9"], "second": ["Matt. 26:1-16"] }
+    },
+    {
+      "morning": {
+        "first": ["Jer. 35:12-19"],
+        "second": ["Col. 1:18-29, Col. 2:1-5"]
+      },
+      "evening": {
+        "first": ["Deut. 6:10-16, Deut. 6:20-25"],
+        "second": ["Matt. 26:17-30"]
+      }
+    },
+    {
+      "morning": { "first": ["Jer. 36:1-8"], "second": ["Col. 2:6-19"] },
+      "evening": { "first": ["Deut. 7:6-13"], "second": ["Matt. 26:31-46"] }
+    },
+    {
+      "morning": { "first": ["Jer. 36:11-19"], "second": ["Col. 2:20-3:11"] },
+      "evening": { "first": ["Deut. 8:1-10"], "second": ["Matt. 26:47-56"] }
+    },
+    {
+      "morning": { "first": ["Jer. 36:20-26"], "second": ["Col. 3:12-17"] },
+      "evening": { "first": ["Deut. 8:11-20"], "second": ["Matt. 26:57-75"] }
+    },
+    {
+      "morning": {
+        "first": ["2 Kings 25:8-11, 1 Kings 25:22, 1 Kings 25:25-26"],
+        "second": ["Col. 3:18-25, Col. 4:1-6"]
+      },
+      "evening": {
+        "first": ["Deut. 9:7-17, Deut. 9:25-29"],
+        "second": ["Matt. 27:1-10"]
+      }
+    }
+  ],
+  "Twenty-Fourth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Sirach 36:1-17"],
+        "second": ["Luke 10:17-24"]
+      },
+      "evening": {
+        "first": ["Deut. 33:1-3, Deut. 33:26-29"],
+        "second": ["Jude 1:1-4, Jude 1:17-25"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Lev. 19:1-2, Lev. 19:9-18"],
+        "second": ["Phil. 1:1-11"]
+      },
+      "evening": { "first": ["Deut. 10:12-22"], "second": ["Matt. 27:11-26"] }
+    },
+    {
+      "morning": { "first": ["Lev. 19:26-37"], "second": ["Phil. 1:12-26"] },
+      "evening": { "first": ["Deut. 13:1-11"], "second": ["Matt. 27:27-44"] }
+    },
+    {
+      "morning": {
+        "first": ["Lev. 20:1-8"],
+        "second": ["Phil. 1:27-30, Phil. 2:1-18"]
+      },
+      "evening": { "first": ["Deut. 15:7-15"], "second": ["Matt. 27:45-56"] }
+    },
+    {
+      "morning": { "first": ["Lev. 25:23-31"], "second": ["Phil. 2:19-30"] },
+      "evening": { "first": ["Deut. 17:14-20"], "second": ["Matt. 27:57-66"] }
+    },
+    {
+      "morning": { "first": ["Lev. 26:1-13"], "second": ["Phil. 3:1-21"] },
+      "evening": { "first": ["Deut. 18:15-22"], "second": ["Matt. 28:1-10"] }
+    },
+    {
+      "morning": { "first": ["Lev. 26:27-42"], "second": ["Phil. 4:1-23"] },
+      "evening": { "first": ["Deut. 19:11-21"], "second": ["Matt. 28:11-20"] }
     }
   ],
   "Saint Andrew, Apostle": [
@@ -2777,7 +2867,7 @@
   "Ember Saturday in Whitsuntide": [
     {
       "morning": { "first": ["Micah 3:5-8"], "second": ["2 Tim. 1:1-14"] },
-      "evening": { "first": ["Num. 6:22-27"], "second": ["2 Cor. 13:5-14"] }
+      "evening": { "first": ["Num. 6:22-27"], "second": ["2 Cor. 13:5-13"] }
     }
   ],
   "Corpus Christi": [
