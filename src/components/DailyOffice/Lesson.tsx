@@ -18,7 +18,7 @@ export const Lesson: React.FC<Props> = ({ office, lesson }) => {
   // TODO: Fix missing days
   // console.log(
   //   Object.entries(lessons.getAll())
-  //     .slice(250)
+  //     .slice(300)
   //     .reduce<any>((acc, [k, v]) => {
   //       acc[k] = v;
   //       return acc;
