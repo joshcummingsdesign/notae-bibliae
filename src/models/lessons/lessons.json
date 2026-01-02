@@ -2060,6 +2060,96 @@
       }
     }
   ],
+  "Nineteenth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Jer. 30:12-22"],
+        "second": ["Titus 2:1-15"]
+      },
+      "evening": {
+        "first": ["Jer. 5:7-19"],
+        "second": ["2 Cor. 13:1-11"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["1 Kings 21:11-22"],
+        "second": ["James 4:13-17, James 5:1-11"]
+      },
+      "evening": { "first": ["Job 28:12-28"], "second": ["Matt. 16:13-28"] }
+    },
+    {
+      "morning": { "first": ["1 Kings 22:1-12"], "second": ["James 5:12-20"] },
+      "evening": {
+        "first": ["Job 38:1-11, Job 38:16-18"],
+        "second": ["Matt. 17:1-13"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Kings 22:13-28"], "second": ["1 Tim. 1:1-11"] },
+      "evening": { "first": ["Job 38:19-30"], "second": ["Matt. 17:14-27"] }
+    },
+    {
+      "morning": {
+        "first": ["1 Kings 22:29-40"],
+        "second": ["1 Tim. 1:12-20"]
+      },
+      "evening": { "first": ["Job 38:31-38"], "second": ["Matt. 18:1-14"] }
+    },
+    {
+      "morning": {
+        "first": ["2 Kings 1:2-8, 2 Kings 1:17"],
+        "second": ["1 Tim. 2:1-10"]
+      },
+      "evening": { "first": ["Job 39:19-30"], "second": ["Matt. 18:15-35"] }
+    },
+    {
+      "morning": { "first": ["2 Kings 2:1-15"], "second": ["1 Tim. 3:1-13"] },
+      "evening": { "first": ["Job 42:1-9"], "second": ["Matt. 19:1-15"] }
+    }
+  ],
+  "Twentieth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Mal. 2:14-17"],
+        "second": ["Matt. 19:3-9, Matt. 19:13-15"]
+      },
+      "evening": {
+        "first": ["Jer. 31:31-37"],
+        "second": ["John 13:31-35"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["2 Kings 4:8-17"],
+        "second": ["1 Tim. 3:14-16, 1 Tim. 4:1-5"]
+      },
+      "evening": { "first": ["Sirach 1:2-11"], "second": ["Matt. 19:16-30"] }
+    },
+    {
+      "morning": { "first": ["2 Kings 4:18-25"], "second": ["1 Tim. 4:6-16"] },
+      "evening": { "first": ["Sirach 2:1-11"], "second": ["Matt. 20:1-16"] }
+    },
+    {
+      "morning": { "first": ["2 Kings 4:25-37"], "second": ["1 Tim. 5:1-16"] },
+      "evening": { "first": ["Sirach 2:18"], "second": ["Matt. 20:17-34"] }
+    },
+    {
+      "morning": { "first": ["2 Kings 5:1-8"], "second": ["1 Tim. 5:17"] },
+      "evening": {
+        "first": ["Sirach 3:1-2, Sirach 3:9-15"],
+        "second": ["Matt. 21:1-16"]
+      }
+    },
+    {
+      "morning": { "first": ["2 Kings 5:9-19"], "second": ["1 Tim. 6:1-11"] },
+      "evening": { "first": ["Sirach 3:16-31"], "second": ["Matt. 21:17-32"] }
+    },
+    {
+      "morning": { "first": ["2 Kings 5:20-27"], "second": ["1 Tim. 6:12-21"] },
+      "evening": { "first": ["Sirach 5:1-7"], "second": ["Matt. 21:33-46"] }
+    }
+  ],
   "Saint Andrew, Apostle": [
     {
       "morning": { "first": ["Isa. 55:1-5"], "second": ["John 1:35-42"] },
@@ -2658,6 +2748,12 @@
         "second": ["Heb. 1:13-14, Heb. 2:1-10"]
       },
       "evening": { "first": ["2 Kings 6:8-17"], "second": ["Acts 12:1-11"] }
+    }
+  ],
+  "Saint Luke, Evangelist": [
+    {
+      "morning": { "first": ["Isa. 52:7-10"], "second": ["Acts 1:1-8"] },
+      "evening": { "first": ["Sirach 38:1-14"], "second": ["Col. 4:2-18"] }
     }
   ]
 }
