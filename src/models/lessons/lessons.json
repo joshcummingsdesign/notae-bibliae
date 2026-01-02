@@ -872,6 +872,507 @@
       "evening": { "first": ["Isa. 43:1-7"], "second": ["1 Pet. 3:1-12"] }
     }
   ],
+  "Third Sunday of Easter": [
+    {
+      "morning": {
+        "first": ["Baruch 4:21-30"],
+        "second": ["John 10:1-10"]
+      },
+      "evening": {
+        "first": ["Ezek. 34:11-16, Ezek. 34:30-31"],
+        "second": ["John 21:1-19"]
+      }
+    },
+    {
+      "morning": { "first": ["Exod. 17:8-16"], "second": ["Heb. 6:1-12"] },
+      "evening": { "first": ["Isa. 43:8-13"], "second": ["1 Pet. 3:13-22"] }
+    },
+    {
+      "morning": { "first": ["Exod. 18:1-12"], "second": ["Heb. 6:13-20"] },
+      "evening": {
+        "first": ["Isa. 43:15-21, Isa. 44:1-3"],
+        "second": ["1 Pet. 4:1-6"]
+      }
+    },
+    {
+      "morning": { "first": ["Exod. 18:13-27"], "second": ["Heb. 7:1-11"] },
+      "evening": {
+        "first": ["Isa. 44:6-8, Isa. 44:21-23"],
+        "second": ["1 Pet. 4:7-11"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 19:1-7, Exod. 19:16-20"],
+        "second": ["Heb. 7:12-28"]
+      },
+      "evening": { "first": ["Isa. 44:9-20"], "second": ["1 Pet. 4:12-19"] }
+    },
+    {
+      "morning": { "first": ["Exod. 20:1-21"], "second": ["Heb. 8:1-13"] },
+      "evening": {
+        "first": ["Isa. 44:24-28, Isa. 45:1-4"],
+        "second": ["1 Pet. 5:1-7"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 24:1-11, Exod. 24:16-18"],
+        "second": ["Heb. 9:1-14"]
+      },
+      "evening": {
+        "first": ["Isa. 45:5-12, Isa. 45:15-19"],
+        "second": ["1 Pet. 5:8-14"]
+      }
+    }
+  ],
+  "Fourth Sunday of Easter": [
+    {
+      "morning": {
+        "first": ["2 Sam. 12:15-23"],
+        "second": ["John 14:1-14"]
+      },
+      "evening": {
+        "first": ["Isa. 26:12-16, Isa. 26:19"],
+        "second": ["2 Cor. 5:1-21"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 25:1-11, Exod. 25:17-22"],
+        "second": ["Heb. 9:15-28"]
+      },
+      "evening": { "first": ["Isa. 45:20-25"], "second": ["Eph. 1:1-14"] }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 28:1-4, Exod. 28:29-38"],
+        "second": ["Heb. 10:1-14"]
+      },
+      "evening": {
+        "first": ["Isa. 46:3-4, Isa. 46:9-13"],
+        "second": ["Eph. 1:15:23"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 32:1-7, Exod. 32:15-20"],
+        "second": ["Heb. 10:15-25"]
+      },
+      "evening": { "first": ["Isa. 48:12-21"], "second": ["Eph. 2:1-10"] }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 32:21-24, Exod. 32:30-34"],
+        "second": ["Heb. 10:26-39"]
+      },
+      "evening": { "first": ["Isa. 49:1-12"], "second": ["Eph. 2:11-22"] }
+    },
+    {
+      "morning": { "first": ["Exod. 33:7-23"], "second": ["Heb. 11:1-16"] },
+      "evening": { "first": ["Isa. 49:13-23"], "second": ["Eph. 3:1-12"] }
+    },
+    {
+      "morning": {
+        "first": ["Exod. 34:1-10, Exod. 34:29-35"],
+        "second": ["Heb. 11:17-31"]
+      },
+      "evening": { "first": ["Isa. 50:4-10"], "second": ["Eph. 3:13-21"] }
+    }
+  ],
+  "Fifth Sunday of Easter": [
+    {
+      "morning": {
+        "first": ["Ezek. 37:1-14"],
+        "second": ["John 12:44-50"]
+      },
+      "evening": {
+        "first": ["Dan. 12:1-4, Dan. 12:13"],
+        "second": ["1 Thess. 4:13-18"]
+      }
+    },
+    {
+      "morning": { "first": ["Num. 10:29-36"], "second": ["Heb. 11:32-40"] },
+      "evening": { "first": ["Isa. 51:1-11"], "second": ["Eph. 4:1-16"] }
+    },
+    {
+      "morning": {
+        "first": ["Num. 11:4-6, Num. 11:10-15, Num. 11:23, Num. 11:31-32"],
+        "second": ["Heb. 12:1-17"]
+      },
+      "evening": { "first": ["Isa. 51:12-16"], "second": ["Eph. 4:17-32"] }
+    },
+    {
+      "morning": { "first": ["Num. 12:1-16"], "second": ["Heb. 12:18-29"] },
+      "evening": {
+        "first": ["Isa. 52:1-2, Isa. 52:7-12"],
+        "second": ["Eph. 5:1-14"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Num. 13:17-26, Num. 13:30-33"],
+        "second": ["Heb. 13:1-8"]
+      },
+      "evening": { "first": ["Isa. 54:1-10"], "second": ["Eph. 5:15-33"] }
+    },
+    {
+      "morning": { "first": ["Num. 14:1-10"], "second": ["Heb. 13:9-16"] },
+      "evening": { "first": ["Isa. 54:11-17"], "second": ["Eph. 6:1-9"] }
+    },
+    {
+      "morning": { "first": ["Num. 14:11-25"], "second": ["Heb. 13:17-25"] },
+      "evening": { "first": ["Isa. 55:1-13"], "second": ["Eph. 6:10-24"] }
+    }
+  ],
+  "Sixth Sunday of Easter: Rogation Sunday": [
+    {
+      "morning": {
+        "first": ["2 Esdras 14:27-35"],
+        "second": ["Luke 11:1-13"]
+      },
+      "evening": {
+        "first": ["Isa. 48:12-21"],
+        "second": ["Rev. 5:1-14"]
+      }
+    },
+    null,
+    null,
+    null,
+    null,
+    {
+      "morning": { "first": ["Micah 4:1-7"], "second": ["Rom. 8:31-39"] },
+      "evening": { "first": ["Isa. 12:1-6"], "second": ["Acts 1:12-26"] }
+    },
+    {
+      "morning": {
+        "first": ["Gen. 49:1-2, Gen. 49:8-10"],
+        "second": ["2 Thess. 2:13-37"]
+      },
+      "evening": {
+        "first": ["Jer. 23:5-8"],
+        "second": ["Acts 2:1-21"]
+      }
+    }
+  ],
+  "Seventh Sunday of Easter (Sunday After Ascension Day)": [
+    {
+      "morning": {
+        "first": ["Isa. 4:2-6"],
+        "second": ["John 17:1-26"]
+      },
+      "evening": {
+        "first": ["Wisdom 9:1-18"],
+        "second": ["Eph. 1:1-23"]
+      }
+    },
+    {
+      "morning": { "first": ["1 Sam. 2:1-10"], "second": ["Rev. 5:1-14"] },
+      "evening": {
+        "first": ["Isa. 66:1-2, Isa. 66:10-13"],
+        "second": ["Acts 2:22-36"]
+      }
+    },
+    {
+      "morning": { "first": ["2 Sam. 7:18-29"], "second": ["Rev. 11:15-19"] },
+      "evening": { "first": ["Isa. 26:1-7"], "second": ["Acts 2:37-47"] }
+    },
+    {
+      "morning": { "first": ["Isa. 4:2-6"], "second": ["Rev. 19:11-16"] },
+      "evening": { "first": ["Isa. 25:1-9"], "second": ["Acts 3:1-10"] }
+    },
+    {
+      "morning": { "first": ["2 Kings 2:1-15"], "second": ["Rev. 21:1-8"] },
+      "evening": { "first": ["Isa. 9:2-7"], "second": ["Acts 3:11-26"] }
+    },
+    {
+      "morning": { "first": ["Isa. 35:1-10"], "second": ["Rev. 21:9-27"] },
+      "evening": {
+        "first": ["2 Sam. 22:32-34, 2 Sam. 22:44-51"],
+        "second": ["Acts 4:1-12"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Zech. 8:1-8, 20-23"],
+        "second": ["Rev. 22:1-17"]
+      },
+      "evening": { "first": ["Deut. 16:9-12"], "second": ["Rom. 8:12-18"] }
+    }
+  ],
+  "Pentecost (Whitsunday)": [
+    {
+      "morning": {
+        "first": ["Wisdom 1:1-7"],
+        "second": ["John 4:19-26"]
+      },
+      "evening": {
+        "first": ["Wisdom 7:22-8:1"],
+        "second": ["1 Cor. 2:1-16"]
+      }
+    },
+    {
+      "morning": { "first": ["Wisdom 9:1-6"], "second": ["1 Cor. 3:9-17"] },
+      "evening": { "first": ["Jer. 31:31-34"], "second": ["Acts 4:13-22"] }
+    },
+    {
+      "morning": { "first": ["Ezek. 36:22-28"], "second": ["1 Cor. 12:1-13"] },
+      "evening": {
+        "first": ["Num. 11:16-17, Num. 11:24-30"],
+        "second": ["Acts 4:23-37"]
+      }
+    },
+    null,
+    {
+      "morning": {
+        "first": ["Isa. 44:1-8, Isa. 44:21-23"],
+        "second": ["Gal. 5:16-25"]
+      },
+      "evening": { "first": ["Wisdom 11:21-12:2"], "second": ["Acts 5:29-42"] }
+    },
+    null,
+    null
+  ],
+  "Trinity Sunday": [
+    {
+      "morning": {
+        "first": ["Gen. 1:1-31, Gen. 2:1-3"],
+        "second": ["1 Pet. 1:1-12"]
+      },
+      "evening": {
+        "first": ["Sirach 43:1-12, Sirach 43:27-33"],
+        "second": ["Eph. 4:1-16"]
+      }
+    },
+    {
+      "morning": { "first": ["Num. 16:1-14"], "second": ["Luke 1:1-25"] },
+      "evening": { "first": ["Ezra 1:1-8"], "second": ["Acts 7:1-16"] }
+    },
+    {
+      "morning": { "first": ["Num. 16:15-35"], "second": ["Luke 1:26-38"] },
+      "evening": {
+        "first": ["Ezra 4:7, Ezra 4:11-24"],
+        "second": ["Acts 7:17-34"]
+      }
+    },
+    {
+      "morning": { "first": ["Num. 17:1-11"], "second": ["Luke 1:39-56"] },
+      "evening": {
+        "first": ["Haggai 1:1-8, Haggai 1:12-15"],
+        "second": ["Acts 7:35-53"]
+      }
+    },
+    null,
+    {
+      "morning": { "first": ["Num. 20:14-29"], "second": ["Luke 2:1-7"] },
+      "evening": { "first": ["Zech. 1:7-17"], "second": ["Acts 8:5-25"] }
+    },
+    {
+      "morning": { "first": ["Num. 21:4-9"], "second": ["Luke 2:8-20"] },
+      "evening": { "first": ["Zech. 2:1-13"], "second": ["Acts 8:26-40"] }
+    }
+  ],
+  "First Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Isa. 5:8-12, Isa. 5:18-24"],
+        "second": ["Matt. 7:13-14, Matt. 7:21-29"]
+      },
+      "evening": {
+        "first": ["Deut. 30:11-20"],
+        "second": ["John 13:1-17, John 13:34-35"]
+      }
+    },
+    {
+      "morning": { "first": ["Num. 22:2-14"], "second": ["Luke 2:21-40"] },
+      "evening": {
+        "first": ["Ezra 5:1-2, Ezra 5:6-17"],
+        "second": ["Acts 9:1-19"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Num. 22:15-21, Num. 22:36-40"],
+        "second": ["Luke 2:41-52"]
+      },
+      "evening": { "first": ["Ezra 6:1-12"], "second": ["Acts 9:20-31"] }
+    },
+    {
+      "morning": {
+        "first": ["Num. 22:41, Num. 23:1-12"],
+        "second": ["Luke 3:1-22"]
+      },
+      "evening": { "first": ["Ezra 6:13-18"], "second": ["Acts 9:32-43"] }
+    },
+    {
+      "morning": { "first": ["Num. 23:13-26"], "second": ["Luke 4:1-13"] },
+      "evening": { "first": ["Zech. 7:8-14"], "second": ["Acts 10:1-23"] }
+    },
+    {
+      "morning": {
+        "first": ["Num. 23:27-30, Num. 24:1-13, Num. 24:25"],
+        "second": ["Luke 4:14-30"]
+      },
+      "evening": { "first": ["Zech. 8:1-13"], "second": ["Acts 10:24-33"] }
+    },
+    {
+      "morning": { "first": ["Deut. 34:1-12"], "second": ["Luke 4:31-41"] },
+      "evening": { "first": ["Zech. 8:14-23"], "second": ["Acts 10:34-48"] }
+    }
+  ],
+  "Second Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Job 31:13-28"],
+        "second": ["1 Cor. 13:1-13"]
+      },
+      "evening": {
+        "first": ["1 Sam. 20:1-7, 1 Sam. 20:12-42"],
+        "second": ["1 Pet. 1:17-25"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Joshua 1:1-18"],
+        "second": ["Luke 4:42-44, Luke 5:1-11"]
+      },
+      "evening": {
+        "first": ["Ezra 7:1, Ezra 7:6-16, Ezra 7:25-28"],
+        "second": ["Acts 11:1-18"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Joshua 3:1-6, Joshua 3:13-17"],
+        "second": ["Luke 5:12-26"]
+      },
+      "evening": {
+        "first": ["Ezra 8:15, Ezra 8:21-23, Ezra 8:31-36"],
+        "second": ["Acts 11:19"]
+      }
+    },
+    {
+      "morning": { "first": ["Joshua 4:1-8"], "second": ["Luke 5:27-39"] },
+      "evening": { "first": ["Neh. 1:1-11"], "second": ["Acts 12:1-24"] }
+    },
+    {
+      "morning": {
+        "first": ["Joshua 6:1-7, Joshua 6:11, Joshua 6:14-20"],
+        "second": ["Luke 6:1-11"]
+      },
+      "evening": {
+        "first": ["Neh. 2:1-8"],
+        "second": ["Acts 12:25, Acts 13:1-12"]
+      }
+    },
+    {
+      "morning": { "first": ["Joshua 14:6-15"], "second": ["Luke 6:12-26"] },
+      "evening": { "first": ["Neh. 2:9-20"], "second": ["Acts 13:13-25"] }
+    },
+    {
+      "morning": {
+        "first": ["Joshua 23:1-3, Joshua 23:11-16"],
+        "second": ["Luke 6:27-38"]
+      },
+      "evening": { "first": ["Neh. 4:6-23"], "second": ["Acts 13:26-43"] }
+    }
+  ],
+  "Third Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Prov. 16:18-24, Prov. 16:32"],
+        "second": ["Matt. 9:9-13"]
+      },
+      "evening": {
+        "first": ["Jer. 23:1-8"],
+        "second": ["Luke 19:2-10"]
+      }
+    },
+    {
+      "morning": { "first": ["Judges 5:1-18"], "second": ["Luke 6:39-49"] },
+      "evening": {
+        "first": ["Neh. 5:1-13"],
+        "second": ["Acts 13:44-52, Acts 14:1-7"]
+      }
+    },
+    {
+      "morning": { "first": ["Judges 5:19-31"], "second": ["Luke 7:1-10"] },
+      "evening": {
+        "first": ["Neh. 8:1-3, Neh. 8:5-6, Neh. 8:9-12"],
+        "second": ["Acts 14:8-18"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Judges 6:1, Judges 6:11-16, Judges 6:33-35"],
+        "second": ["Luke 7:11-17"]
+      },
+      "evening": { "first": ["Neh. 9:5-15"], "second": ["Acts 14:19-28"] }
+    },
+    {
+      "morning": { "first": ["Judges 7:1-8"], "second": ["Luke 7:18-35"] },
+      "evening": { "first": ["Neh. 9:32-38"], "second": ["Acts 15:1-12"] }
+    },
+    {
+      "morning": { "first": ["Judges 7:16-25"], "second": ["Luke 7:36-50"] },
+      "evening": { "first": ["Neh. 13:15-22"], "second": ["Acts 15:13-21"] }
+    },
+    {
+      "morning": {
+        "first": ["Judges 10:17, Judges 11:29-40"],
+        "second": ["Luke 8:1-15"]
+      },
+      "evening": {
+        "first": ["1 Macc. 1:1, 1 Macc. 1:7-15"],
+        "second": ["Acts 15:22-35"]
+      }
+    }
+  ],
+  "Fourth Sunday After Trinity": [
+    {
+      "morning": {
+        "first": ["Deut. 32:1-4, Deut. 32:34-39"],
+        "second": ["Matt. 10:24-39"]
+      },
+      "evening": {
+        "first": ["Isa. 29:9-15"],
+        "second": ["Matt. 15:1-20"]
+      }
+    },
+    {
+      "morning": {
+        "first": ["Judges 13:2-14, Judges 13:24"],
+        "second": ["Luke 8:16-25"]
+      },
+      "evening": {
+        "first": ["1 Macc. 1:41-53"],
+        "second": ["Acts 15:36-41, Acts 16:1-5"]
+      }
+    },
+    {
+      "morning": { "first": ["Judges 16:4-14"], "second": ["Luke 8:26-39"] },
+      "evening": { "first": ["1 Macc. 1:54-64"], "second": ["Acts 16:6-15"] }
+    },
+    {
+      "morning": { "first": ["Judges 16:15-22"], "second": ["Luke 8:40-56"] },
+      "evening": { "first": ["1 Macc. 2:1-14"], "second": ["Acts 16:16-24"] }
+    },
+    {
+      "morning": { "first": ["Judges 16:23-31"], "second": ["Luke 9:1-17"] },
+      "evening": { "first": ["1 Macc. 2:15-30"], "second": ["Acts 16:25-40"] }
+    },
+    {
+      "morning": { "first": ["Ruth 1:1-14"], "second": ["Luke 9:18-27"] },
+      "evening": { "first": ["1 Macc. 2:31-43"], "second": ["Acts 17:1-15"] }
+    },
+    {
+      "morning": { "first": ["Ruth 1:15-22"], "second": ["Luke 9:28-45"] },
+      "evening": {
+        "first": ["1 Macc. 2:49-52, 1 Macc. 2:61-70"],
+        "second": ["Acts 17:16-34"]
+      }
+    }
+  ],
   "Saint Andrew, Apostle": [
     {
       "morning": { "first": ["Isa. 55:1-5"], "second": ["John 1:35-42"] },
@@ -1296,6 +1797,117 @@
     {
       "morning": { "first": ["Isa. 25:1-9"], "second": ["Rev. 7:9-17"] },
       "evening": { "first": ["Jer. 31:10-14"], "second": ["John 21:15-25"] }
+    }
+  ],
+  "Saint Mark, Evangelist": [
+    {
+      "morning": { "first": ["Isa. 62:6-12"], "second": ["Rom. 15:4-13"] },
+      "evening": {
+        "first": ["Sirach 2:1-11, Sirach 2:16-18"],
+        "second": ["2 Tim. 4:1-11"]
+      }
+    }
+  ],
+  "Saints Philip and James the Less, Apostles": [
+    {
+      "morning": { "first": ["Job 23:3-12"], "second": ["John 1:43-51"] },
+      "evening": { "first": ["Isa. 30:18-21"], "second": ["John 17:1-8"] }
+    }
+  ],
+  "Rogation Monday": [
+    {
+      "morning": {
+        "first": ["Deut. 8:1-11, Deut. 8:17-20"],
+        "second": ["Matt. 6:5-15"]
+      },
+      "evening": { "first": ["Deut. 28:1-14"], "second": ["James 1:1-17"] }
+    }
+  ],
+  "Rogation Tuesday": [
+    {
+      "morning": { "first": ["Deut. 11:10-17"], "second": ["Matt. 6:24-34"] },
+      "evening": { "first": ["Kings 8:22-30"], "second": ["James 4:8-17"] }
+    }
+  ],
+  "Rogation Wednesday": [
+    {
+      "morning": { "first": ["Jer. 14:1-9"], "second": ["1 John 5:5-15"] },
+      "evening": {
+        "first": ["Three Children 29-37"],
+        "second": ["Luke 24:44"]
+      }
+    }
+  ],
+  "Ascension Day": [
+    {
+      "morning": {
+        "first": ["Dan. 7:9-10, Dan. 7:13-14"],
+        "second": ["Eph. 4:1-16"]
+      },
+      "evening": {
+        "first": ["Isa. 33:5-6, Isa. 33:17, Isa. 33:20-22"],
+        "second": ["Heb. 4:14-16, Heb. 5:1-10"]
+      }
+    }
+  ],
+  "Saint Matthias, Apostle": [
+    {
+      "morning": { "first": ["1 Sam. 2:27-35"], "second": ["Matt. 7:15-27"] },
+      "evening": { "first": ["1 Sam. 12:1-5"], "second": ["Acts 20:17-35"] }
+    }
+  ],
+  "Ember Wednesday in Whitsuntide": [
+    {
+      "morning": { "first": ["Sirach 39:1-8"], "second": ["1 Cor. 2:1-16"] },
+      "evening": {
+        "first": ["Wisdom 9:9-11, Wisdom 9:17-18"],
+        "second": ["Acts 5:12-28"]
+      }
+    }
+  ],
+  "Ember Friday in Whitsuntide": [
+    {
+      "morning": { "first": ["Isa. 61:1-9"], "second": ["2 Cor. 3:1-18"] },
+      "evening": { "first": ["Isa. 52:1-10"], "second": ["Acts 6:1-15"] }
+    }
+  ],
+  "Ember Saturday in Whitsuntide": [
+    {
+      "morning": { "first": ["Micah 3:5-8"], "second": ["2 Tim. 1:1-14"] },
+      "evening": { "first": ["Num. 6:22-27"], "second": ["2 Cor. 13:5-14"] }
+    }
+  ],
+  "Corpus Christi": [
+    {
+      "morning": { "first": ["Num. 20:1-13"], "second": ["Luke 1:57-66"] },
+      "evening": {
+        "first": ["Haggai 2:1-9"],
+        "second": ["Acts 7:54-60, Acts 8:1-4"]
+      }
+    }
+  ],
+  "Saint Barnabas, Apostle": [
+    {
+      "morning": { "first": ["Job 29:11-16"], "second": ["Acts 9:26-31"] },
+      "evening": { "first": ["Isa. 42:5-12"], "second": ["Acts 14:8-27"] }
+    }
+  ],
+  "Nativity of Saint John the Baptist": [
+    {
+      "morning": { "first": ["Mal. 3:1-6"], "second": ["Matt. 3:1-17"] },
+      "evening": { "first": ["Mal. 4:1-6"], "second": ["Matt. 11:2-19"] }
+    }
+  ],
+  "Saints Peter and Paul, Apostles": [
+    {
+      "morning": { "first": ["Ezek. 2:1-7"], "second": ["Acts 11:1-18"] },
+      "evening": { "first": ["Ezek. 34:11-16"], "second": ["John 21:15-22"] }
+    }
+  ],
+  "Saint Thomas, Apostle": [
+    {
+      "morning": { "first": ["Job 42:1-6"], "second": ["John 14:1-7"] },
+      "evening": { "first": ["Isa. 43:8-13"], "second": ["1 Pet. 1:3-9"] }
     }
   ]
 }

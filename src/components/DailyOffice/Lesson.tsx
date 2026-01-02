@@ -11,7 +11,11 @@ export const Lesson: React.FC<Props> = ({ office, lesson }) => {
   const lessons = new Lessons(calendar);
   const lessonData = lessons.getToday();
 
-  // // TODO: Third Sunday of Easter
+  // TODO: Third Sunday After Trinity
+  // TODO: Find alternatives for deuterocanonical books
+  // TODO: Cleanup duplicates
+  // TODO: Fix malformatted passages
+  // TODO: Fix missing days
   // console.log(
   //   Object.entries(lessons.getAll())
   //     .slice(100)
