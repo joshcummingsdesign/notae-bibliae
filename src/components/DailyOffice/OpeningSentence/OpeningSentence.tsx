@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import { BiblePassage } from "@/types/BiblePassage";
 import openingSentences from "./opening-sentences.json";
-import { Definition } from "@/components/Definition";
 
 type SentenceCategory = keyof typeof openingSentences;
 

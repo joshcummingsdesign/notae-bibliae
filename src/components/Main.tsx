@@ -62,7 +62,7 @@ const Inner = styled("div", {
   },
 }));
 
-const LoadingWrapper = styled("span", {
+const LoadingWrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isLoading",
 })<{ isLoading: boolean }>(({ isLoading }) => ({
   opacity: isLoading ? 0 : 1,
