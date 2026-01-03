@@ -36,8 +36,12 @@ export async function GET(req: NextRequest) {
   const calendar = new Calendar(day);
   const collects = new Collects(calendar);
   const { primary, secondary } = collects.getByDay();
+  const items = [];
+  if (primary) {
+    items.push(primary);
+  }
 
-  const res = { date, items: [primary, ...secondary] };
+  const res = { date, items: [...items, ...secondary] };
 
   return NextResponse.json(res);
 }
