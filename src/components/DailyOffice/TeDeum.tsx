@@ -1,3 +1,4 @@
+"use client";
 import { Calendar } from "@/models/calendar";
 import { OtCanticle } from "./OtCanticle";
 import Link from "next/link";

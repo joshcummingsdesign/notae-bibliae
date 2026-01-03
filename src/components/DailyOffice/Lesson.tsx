@@ -1,3 +1,4 @@
+"use client";
 import { Calendar } from "@/models/calendar";
 import { Lessons } from "@/models/lessons";
 

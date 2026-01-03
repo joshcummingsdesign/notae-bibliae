@@ -1,3 +1,4 @@
+"use client";
 import { Calendar } from "@/models/calendar";
 import Link from "next/link";
 import { Antiphon } from "@/components/Antiphon";
