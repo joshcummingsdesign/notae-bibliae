@@ -1,18 +1,17 @@
 "use client";
 import { Fragment } from "react";
 import { styled } from "@mui/material";
-import { Calendar } from "@/models/calendar";
-import { Collects as CollectsClass } from "@/models/collects";
+import { CollectCalendarItem } from "@/models/collects";
 import Link from "next/link";
 import { Definition } from "../Definition";
 
-export const Collects = () => {
-  const calendar = new Calendar();
-  const collects = new CollectsClass(calendar);
-  const { primary, secondary } = collects.getByDay();
-  const isFestal = calendar.isFeastDay() || calendar.isLordsDay();
-  const isFerial = calendar.isSolemn() || !isFestal;
+interface Props {
+  primary: CollectCalendarItem | null;
+  secondary: CollectCalendarItem[];
+  isFerial: boolean;
+}
 
+export const Collects: React.FC<Props> = ({ primary, secondary, isFerial }) => {
   let header = (
     <p>
       <em>

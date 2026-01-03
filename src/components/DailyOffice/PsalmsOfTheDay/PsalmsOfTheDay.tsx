@@ -38,13 +38,10 @@ export const LessonPicker = ({
   plan: PlanItems;
 }) => {
   const [index, setIndex] = useState<number>(0);
-  const [notes, setNotes] = useState<string>("");
 
   useEffect(() => {
     const index = localStorage.getItem(`${id}-plan-index`);
-    const notes = localStorage.getItem(`${id}-plan-notes`);
     if (index) setIndex(Number(index));
-    if (notes) setNotes(notes);
   }, []);
 
   const handleChange = (value: string) => {

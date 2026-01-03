@@ -1,27 +1,26 @@
-import { Calendar } from "@/models/calendar";
+import { Dayjs } from "dayjs";
 import { OtCanticle } from "./OtCanticle";
 import Link from "next/link";
 
-export const TeDeum = () => {
-  const calendar = new Calendar();
+interface Props {
+  today: Dayjs;
+  shouldSing: boolean;
+  shouldOmit: boolean;
+  isChristmas: boolean;
+  isEaster: boolean;
+  isPentecost: boolean;
+}
 
-  const shouldSingTeDeum =
-    calendar.isFeastDay() ||
-    calendar.isLordsDay() ||
-    calendar.isChristmastide() ||
-    calendar.isOctaveOfEpiphany() ||
-    calendar.isEastertide() ||
-    calendar.isWhitsuntide();
-
-  const shouldOmitTeDeum =
-    calendar.isAdvent() ||
-    (calendar.isHolyInnocents() && !calendar.isLordsDay()) ||
-    calendar.isSeptuagesimaToPassion() ||
-    calendar.isRogationDay() ||
-    calendar.isSolemn();
-
-  if (shouldOmitTeDeum || !shouldSingTeDeum) {
-    return <OtCanticle today={calendar.getToday()} />;
+export const TeDeum: React.FC<Props> = ({
+  today,
+  shouldSing,
+  shouldOmit,
+  isChristmas,
+  isEaster,
+  isPentecost,
+}) => {
+  if (shouldOmit || !shouldSing) {
+    return <OtCanticle today={today} />;
   }
 
   const facta = (
@@ -84,9 +83,9 @@ export const TeDeum = () => {
         </strong>{" "}
         (SDP 357)
       </p>
-      {calendar.isChristmas() && benedicite}
-      {calendar.isEaster() && victimae}
-      {calendar.isPentecost() && spiritus}
+      {isChristmas && benedicite}
+      {isEaster && victimae}
+      {isPentecost && spiritus}
     </>
   );
 };

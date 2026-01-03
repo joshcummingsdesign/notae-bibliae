@@ -6,4 +6,3 @@ export * from "./NuncDimittis";
 export * from "./Collects";
 export * from "./PsalmsOfTheDay";
 export * from "./OpeningSentence";
-export * from "./Lesson";
