@@ -17,7 +17,7 @@ vi.mock("../calendar", () => ({
         },
         {
           date: "2025-11-30",
-          title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
+          title: "Saint Andrew, Apostle",
           rank: 5,
           class: 6,
           isFeast: true,
@@ -27,23 +27,21 @@ vi.mock("../calendar", () => ({
       "2026-04-04": [
         {
           date: "2026-04-04",
-          title:
-            "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
+          title: "Holy Week: Holy Saturday",
           rank: 1,
           class: 2,
           isFeast: true,
         },
         {
           date: "2026-04-04",
-          title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
+          title: "Easter Vigil",
           rank: 4,
           class: 5,
           isFeast: true,
         },
         {
           date: "2026-04-04",
-          title:
-            "[Saint Isidore](/people/saints/latin-fathers/isidore-of-seville), Bishop and Doctor of the Church",
+          title: "Saint Isidore, Bishop and Doctor of the Church",
           rank: 5,
           class: 10,
           isSaint: true,
@@ -75,9 +73,7 @@ describe("Collects", () => {
     expect(items["2025-11-30"][0].title).toBe("First Sunday of Advent");
     expect(items["2025-11-30"][0].collect).toBeTruthy();
     expect(items["2026-04-04"].length).toBe(3);
-    expect(items["2026-04-04"][0].title).toBe(
-      "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)"
-    );
+    expect(items["2026-04-04"][0].title).toBe("Holy Week: Holy Saturday");
     expect(items["2026-04-04"][0].collect).toBeTruthy();
   });
 
@@ -85,15 +81,11 @@ describe("Collects", () => {
     const mockCalendar = new Calendar(dayjs("2025-11-30"));
     const c = new Collects(mockCalendar);
     const items = c.getByDay();
-    expect(items.primary!.title).toBe(
-      "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)"
-    );
+    expect(items.primary!.title).toBe("Holy Week: Holy Saturday");
     expect(items.secondary.length).toBe(2);
-    expect(items.secondary[0].title).toBe(
-      "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)"
-    );
+    expect(items.secondary[0].title).toBe("Easter Vigil");
     expect(items.secondary[1].title).toBe(
-      "[Saint Isidore](/people/saints/latin-fathers/isidore-of-seville), Bishop and Doctor of the Church"
+      "Saint Isidore, Bishop and Doctor of the Church"
     );
   });
 });
