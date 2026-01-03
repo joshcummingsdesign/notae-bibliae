@@ -487,7 +487,7 @@ describe("Calendar", () => {
       date: "2026-03-25",
       title:
         "[Annunciation of the Lord](/liturgy/seasons/eastertide/annunciation)",
-      rank: 1,
+      rank: 4,
       class: 5,
       isFeast: true,
     });
@@ -796,7 +796,7 @@ describe("Calendar", () => {
     expect(items[26]).toEqual({
       date: "2026-06-04",
       title: "[Corpus Christi](/liturgy/seasons/trinitytide/corpus-christi)",
-      rank: 2,
+      rank: 4,
       class: 4,
       isFeast: true,
     });
