@@ -617,7 +617,7 @@ export class Calendar {
         date: annunciation.format("YYYY-MM-DD"),
         title:
           "[Annunciation of the Lord](/liturgy/seasons/eastertide/annunciation)",
-        rank: 1,
+        rank: 4,
         class: 5,
         isFeast: true,
       },
@@ -892,7 +892,7 @@ export class Calendar {
     days.push({
       date: corpusChristi.format("YYYY-MM-DD"),
       title: "[Corpus Christi](/liturgy/seasons/trinitytide/corpus-christi)",
-      rank: 2,
+      rank: 4,
       class: 4,
       isFeast: true,
     });

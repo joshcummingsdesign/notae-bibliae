@@ -109,7 +109,7 @@
   {
     "date": "12-26",
     "title": "[Saint Stephen](/people/saints/biblical/stephen), The First Martyr",
-    "rank": 1,
+    "rank": 4,
     "class": 5,
     "isFeast": true,
     "isSaint": true
@@ -117,7 +117,7 @@
   {
     "date": "12-27",
     "title": "[Saint John](/people/saints/apostles/john), Apostle and Evangelist",
-    "rank": 1,
+    "rank": 4,
     "class": 5,
     "isFeast": true,
     "isSaint": true
@@ -125,14 +125,14 @@
   {
     "date": "12-28",
     "title": "[Holy Innocents' Day](/liturgy/seasons/christmastide/holy-innocents-day)",
-    "rank": 1,
+    "rank": 4,
     "class": 5,
     "isFeast": true
   },
   {
     "date": "01-01",
     "title": "[Circumcision of the Lord](/liturgy/seasons/christmastide/circumcision-of-the-lord)",
-    "rank": 1,
+    "rank": 4,
     "class": 5,
     "isFeast": true
   },
@@ -153,7 +153,7 @@
   {
     "date": "01-05",
     "title": "Epiphany Eve",
-    "rank": 1,
+    "rank": 2,
     "class": 5
   },
   {
@@ -231,7 +231,7 @@
   {
     "date": "02-02",
     "title": "[Presentation of the Lord (Purification)](/liturgy/seasons/epiphanytide/presentation-of-the-lord)",
-    "rank": 1,
+    "rank": 4,
     "class": 4,
     "isFeast": true
   },
@@ -492,7 +492,7 @@
   {
     "date": "08-06",
     "title": "[Transfiguration of the Lord](/liturgy/seasons/trinitytide/transfiguration)",
-    "rank": 1,
+    "rank": 4,
     "class": 5,
     "isFeast": true
   },
@@ -580,7 +580,7 @@
   {
     "date": "09-14",
     "title": "[Holy Cross Day](/liturgy/seasons/trinitytide/holy-cross-day)",
-    "rank": 1,
+    "rank": 4,
     "class": 5,
     "isFeast": true
   },
@@ -655,7 +655,7 @@
   {
     "date": "10-31",
     "title": "[All Hallows' Eve](/liturgy/seasons/trinitytide/allhallowtide/all-hallows-eve)",
-    "rank": 1,
+    "rank": 4,
     "class": 12
   },
   {
@@ -667,7 +667,7 @@
   {
     "date": "11-01",
     "title": "[All Saints' Day](/liturgy/seasons/trinitytide/allhallowtide/all-saints-day)",
-    "rank": 1,
+    "rank": 4,
     "class": 4,
     "isFeast": true,
     "isSaint": true
@@ -675,7 +675,7 @@
   {
     "date": "11-02",
     "title": "[All Souls' Day](/liturgy/seasons/trinitytide/allhallowtide/all-souls-day)",
-    "rank": 1,
+    "rank": 4,
     "class": 5
   },
   {

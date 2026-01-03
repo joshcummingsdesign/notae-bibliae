@@ -87,8 +87,8 @@ export class Collects {
       if (itemDate.isSameOrBefore(date, "day")) {
         const primary = values.filter((v) => v.rank < 4);
         primary.forEach((value) => {
-          if (value.rank === 1 && itemDate.isSame(date, "day")) {
-            collects.primary = value;
+          if (value.rank === 1 && !itemDate.isSame(date, "day")) {
+            collects.primary = null;
           } else {
             collects.primary = value;
           }
