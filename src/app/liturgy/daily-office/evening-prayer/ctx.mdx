@@ -1,0 +1,142 @@
+import { Today } from "@/components/Calendar";
+import {
+  OpeningSentence,
+  OpeningVersicles,
+  PsalmsOfTheDay,
+  Lesson,
+  Magnificat,
+  NuncDimittis,
+  Collects,
+} from "@/components/DailyOffice";
+
+export const metadata = {
+  title: "Daily Office: Evening Prayer — Notae Bibliae",
+  description: "An Order of Evening Prayer.",
+};
+
+
+<Initial text="Daily Office: Evening Prayer" />
+
+<Today />
+
+## Introductory Rites
+---
+
+## Opening Sentence
+
+<OpeningSentence id="daily-office" />
+
+## General Confession
+
+<Poetry>
+|  \V Let us humbly confess our sins unto Almighty God.
+</Poetry>
+
+[ *Kneel* ]
+
+<Poetry>
+|  \L Almighty and most merciful Father; We have erred, and strayed from thy ways like lost sheep. We have followed too much the devices and desires of our own hearts. We have offended against thy holy laws. We have left undone those things which we ought to have done; And we have done those things which we ought not to have done; And there is no health in us. But thou, O Lord, have mercy upon us, miserable offenders. Spare thou those, O God, who confess their faults. Restore thou those who are penitent; According to thy promises declared unto mankind in Christ Jesus our Lord. And grant, O most merciful Father, for his sake; That we may hereafter live a godly, righteous, and sober life, To the glory of thy holy Name. Amen.
+</Poetry>
+
+[ *Meditate on the Gospel* ]
+
+<Poetry>
+|  \V Grant, we beseech thee, merciful Lord, to thy faithful people pardon and peace; that they may be cleansed from all their sins, and serve thee with a quiet mind; through Jesus Christ our Lord. Amen.
+</Poetry>
+
+## Our Father
+
+[**Our Father**](/liturgy/prayers/our-father) (SDP 249)
+
+## Office Proper
+---
+
+## Opening Versicles
+
+<OpeningVersicles />
+
+## Psalms of the Day
+
+[ *Sit* ]
+
+<PsalmsOfTheDay id="psalm" />
+
+## First Lesson
+
+<Lesson office="evening" lesson="first" />
+
+## Magnificat
+
+[ *Stand* ]
+
+<Magnificat linkAntiphon={true} showAntiphonVerse={true} />
+
+## Second Lesson
+
+[ *Sit* ]
+
+<Lesson office="evening" lesson="second" />
+
+## Nunc dimittis
+
+[ *Stand* ]
+
+<NuncDimittis />
+
+## Concluding Rites
+
+---
+
+## Apostles' Creed
+
+[**Apostles' Creed**](/liturgy/creeds/apostles-creed) (SDP 248)
+
+## Salutation
+
+<Image
+  src="/chants/salutation.svg"
+  alt="Salutation"
+  width="600"
+  height="78"
+/>
+
+[ *Kneel* ]
+
+## Suffrages
+
+<Image
+  src="/chants/evensong-suffrages.svg"
+  alt="Suffrages"
+  width="600"
+  height="596"
+/>
+
+## Collects
+
+<Collects />
+
+**Collect for Peace**
+
+<Poetry>
+|  O God, from whom all holy desires, all good counsels, and all just works _ do proceed: Give unto thy servants that peace which the world cannot _ give; that both our hearts may be set to obey thy commandments, and also that by thee we being defended from the fear of our enemies may pass our time in rest and qui_etness; through the merits of Jesus _ Christ our Saviour. Amen.
+</Poetry>
+
+**Collect for Aid Against Perils**
+
+<Poetry>
+|  Lighten our darkness, we beseech _ thee, O Lord; and by thy great mercy defend us from all perils and dangers of this _ night; for the love of thy only Son, our _ Saviour, Jesus Christ. Amen.
+</Poetry>
+
+## The Grace
+
+<Poetry>
+|  The grace # of our Lord Jesus Christ,
+|      and the love of God,
+|      and the fellowship of the Holy Ghost,
+|          be with us all evermore. Amen.
+</Poetry>
+
+<br/>
+---
+
+*Thus endeth The Order of Evening Prayer.*

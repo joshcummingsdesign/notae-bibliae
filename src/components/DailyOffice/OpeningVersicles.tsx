@@ -1,10 +1,11 @@
-import { Calendar } from "@/models/calendar";
 import Image from "next/image";
 
-export const OpeningVersicles = () => {
-  const calendar = new Calendar();
+interface Props {
+  isSolemn: boolean;
+}
 
-  if (calendar.isSolemn()) {
+export const OpeningVersicles: React.FC<Props> = ({ isSolemn }) => {
+  if (isSolemn) {
     return (
       <p>
         [ <em>Omit Opening Versicles</em> ]
