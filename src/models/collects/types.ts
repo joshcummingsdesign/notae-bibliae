@@ -8,6 +8,7 @@ export interface CollectItem {
 
 export interface CollectCalendarItem extends CalendarItem {
   collect: string;
+  source: string;
 }
 
 export interface CollectDateMap {

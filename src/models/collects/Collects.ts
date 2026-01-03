@@ -50,7 +50,9 @@ export class Collects {
         if (item.normalizedTitle.startsWith(collect.title)) {
           (mergedItems[item.date] ??= []).push({
             ...item.value,
+            title: item.normalizedTitle,
             collect: collect.text,
+            source: collect.source,
           });
         }
       }

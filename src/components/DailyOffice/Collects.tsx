@@ -3,7 +3,6 @@ import { Fragment } from "react";
 import { styled } from "@mui/material";
 import { Calendar } from "@/models/calendar";
 import { Collects as CollectsClass } from "@/models/collects";
-import { stripMarkdownLinks } from "@/utils/markdown";
 import Link from "next/link";
 import { Definition } from "../Definition";
 
@@ -41,7 +40,7 @@ export const Collects = () => {
       {primary && (
         <>
           <p>
-            <strong>Collect for {stripMarkdownLinks(primary.title)}</strong>
+            <strong>Collect for {primary.title}</strong>
           </p>
           <CollectText text={primary.collect} />
         </>
@@ -49,9 +48,7 @@ export const Collects = () => {
       {secondary.map((secondaryCollect) => (
         <Fragment key={secondaryCollect.title}>
           <p>
-            <strong>
-              Collect for {stripMarkdownLinks(secondaryCollect.title)}
-            </strong>
+            <strong>Collect for {secondaryCollect.title}</strong>
           </p>
           <CollectText text={secondaryCollect.collect} />
         </Fragment>
