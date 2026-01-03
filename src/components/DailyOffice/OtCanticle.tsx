@@ -1,4 +1,3 @@
-"use client";
 import { Dayjs } from "dayjs";
 import Link from "next/link";
 

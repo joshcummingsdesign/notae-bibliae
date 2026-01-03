@@ -52,11 +52,6 @@ export const LessonPicker = ({
     localStorage.setItem(`${id}-plan-index`, value);
   };
 
-  const handleNotesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNotes(e.target.value);
-    localStorage.setItem(`${id}-plan-notes`, e.target.value);
-  };
-
   const getPsalmNotes = (): string => {
     let output = [];
     const p = plan[index];

@@ -1,4 +1,3 @@
-"use client";
 import { Calendar } from "@/models/calendar";
 import Image from "next/image";
 
