@@ -1,22 +1,19 @@
-import { Calendar } from "@/models/calendar";
+import { AntiphonData } from "@/models/calendar";
 import Link from "next/link";
 import { Antiphon } from "@/components/Antiphon";
 import { Red } from "../text/Red";
 
 interface Props {
+  currentAntiphon: AntiphonData;
   linkAntiphon?: boolean;
   showAntiphonVerse?: boolean;
 }
 
 export const Magnificat: React.FC<Props> = ({
+  currentAntiphon,
   linkAntiphon,
   showAntiphonVerse,
 }) => {
-  const calendar = new Calendar();
-  const today = calendar.getToday();
-  const oAntiphons = calendar.getOAntiphons();
-  const currentAntiphon = oAntiphons[today.format("YYYY-MM-DD")];
-
   let tone = !!currentAntiphon ? "Tone II S 1" : "Tone VIII S 1";
   let antiphon;
 

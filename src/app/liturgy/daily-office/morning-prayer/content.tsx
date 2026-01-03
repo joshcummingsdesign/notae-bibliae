@@ -1,4 +1,8 @@
 "use client";
+import { Collects as CollectsClass } from "@/models/collects";
+import { Calendar } from "@/models/calendar";
+import { Lessons } from "@/models/lessons";
+import { Initial } from "@/components/text/Initial";
 import { Today } from "@/components/Calendar";
 import {
   Collects,
@@ -8,15 +12,17 @@ import {
   PsalmsOfTheDay,
   TeDeum,
 } from "@/components/DailyOffice";
-import { Initial } from "@/components/text/Initial";
-import { Calendar } from "@/models/calendar";
-import Confession from "./confession.mdx";
-import { Lessons } from "@/models/lessons";
+import GeneralConfession from "../shared-content/general-confession.mdx";
+import OurFather from "../shared-content/our-father.mdx";
+import Benedictus from "./benedictus.mdx";
+import ApostlesCreed from "../shared-content/apostles-creed.mdx";
+import Salutation from "../shared-content/salutation.mdx";
 import Suffrages from "./suffrages.mdx";
-import { Collects as CollectsClass } from "@/models/collects";
-import Grace from "./grace.mdx";
+import OrdinaryCollects from "./ordinary-collects.mdx";
+import Grace from "../shared-content/grace.mdx";
+import Footer from "./footer.mdx";
 
-export const Container = () => {
+export const Content = () => {
   const calendar = new Calendar();
   const lessons = new Lessons(calendar);
   const lessonData = lessons.getToday();
@@ -82,7 +88,8 @@ export const Container = () => {
       <hr />
       <h2>Opening Sentence</h2>
       <OpeningSentence id="daily-office" />
-      <Confession />
+      <GeneralConfession />
+      <OurFather />
       <h2>Office Proper</h2>
       <hr />
       <h2>Opening Versicles</h2>
@@ -117,10 +124,17 @@ export const Container = () => {
       <p>
         <strong>{lessonData["morning"]["second"]}</strong>
       </p>
+      <Benedictus />
+      <h2>Concluding Rites</h2>
+      <hr />
+      <ApostlesCreed />
+      <Salutation />
       <Suffrages />
       <h2>Collects</h2>
       <Collects primary={primary} secondary={secondary} isFerial={isFerial} />
+      <OrdinaryCollects />
       <Grace />
+      <Footer />
     </>
   );
 };

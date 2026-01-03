@@ -1,10 +1,10 @@
-import { Calendar } from "@/models/calendar";
 import Link from "next/link";
 
-export const NuncDimittis = () => {
-  const calendar = new Calendar();
-  const isLordsDay = calendar.isLordsDay();
+interface Props {
+  isLordsDay: boolean;
+}
 
+export const NuncDimittis: React.FC<Props> = ({ isLordsDay }) => {
   const salvaNos = (
     <p>
       <em>

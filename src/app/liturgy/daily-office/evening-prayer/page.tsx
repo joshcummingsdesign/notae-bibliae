@@ -3,8 +3,8 @@ import { Content } from "./content";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Daily Office: Morning Prayer — Notae Bibliae",
-  description: "An Order of Morning Prayer.",
+  title: "Daily Office: Evening Prayer — Notae Bibliae",
+  description: "An Order of Evening Prayer.",
 };
 
 export default function Page() {
