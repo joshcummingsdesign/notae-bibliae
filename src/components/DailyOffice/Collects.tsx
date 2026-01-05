@@ -59,7 +59,7 @@ export const Collects: React.FC<Props> = ({ primary, secondary, isFerial }) => {
 const CollectText: React.FC<{ text: string }> = ({ text }) => (
   <StyledText
     dangerouslySetInnerHTML={{
-      __html: text.replaceAll("_", '<span class="dot"></span>'),
+      __html: text.replaceAll("·", '<span class="dot"></span>'),
     }}
   />
 );

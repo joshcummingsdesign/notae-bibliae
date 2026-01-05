@@ -13,9 +13,18 @@ dayjs.extend(isBetween);
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-export async function GET(req: NextRequest) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { slug?: string[] } }
+) {
+  const slug = params.slug?.[0];
+
+  if (slug && slug !== "today") {
+    return NextResponse.json({ error: `${slug} not found` }, { status: 404 });
+  }
+
   const { searchParams } = new URL(req.url);
-  const date = searchParams.get("date");
+  let date = searchParams.get("date");
   const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
   const isYear = date && /^\d{4}$/.test(date);
 
@@ -29,13 +38,15 @@ export async function GET(req: NextRequest) {
   const liturgicalYear = calendar.getLiturgicalYear();
 
   // If full date, return items
-  if (day && formattedDate && isFullDate) {
+  if (slug || (day && formattedDate && isFullDate)) {
+    const d = slug ? dayjs().tz(TIMEZONE).format("YYYY-MM-DD") : formattedDate!;
+
     const items = calendar
-      .getByDate(formattedDate)
+      .getByDate(d)
       .map((item) => ({ ...item, title: stripMarkdownLinks(item.title) }));
 
     const res = {
-      date: day.format("YYYY-MM-DD"),
+      date: d,
       liturgicalYear,
       items,
     };
