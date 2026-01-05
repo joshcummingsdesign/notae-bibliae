@@ -1,7 +1,6 @@
-import { Dayjs } from "dayjs";
 import { CollectCalendarItem, CollectRes } from "@/models/collects";
 import { Calendar, CalendarItem, CalendarRes } from "@/models/calendar";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { LessonRes, Office } from "@/models/lessons/types";
 
 interface TodayData {
@@ -17,50 +16,43 @@ export const useDailyOffice = (id: "morning" | "evening") => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const linksTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  const calendar = new Calendar();
+  const calendar = useMemo(() => new Calendar(), []);
 
-  const getDate = (): Dayjs => {
-    return calendar.getToday();
-  };
+  const dateString = useMemo(
+    () => calendar.getToday().format("YYYY-MM-DD"),
+    [calendar]
+  );
 
-  const getDateString = (): string => {
-    return calendar.getToday().format("YYYY-MM-DD");
-  };
-
-  const getToday = (): TodayData | null => {
+  const getToday = useCallback((): TodayData | null => {
     if (!today) return null;
 
     const season = Object.keys(today)[1];
-    const date = getDate();
-    const dateString = getDateString();
     const events = today[season][dateString] || [];
 
     return {
       season,
-      date: date.format("dddd, MMMM D"),
+      date: calendar.getToday().format("dddd, MMMM D"),
       events,
     };
-  };
+  }, [today, dateString, calendar]);
 
-  const getLessons = (): Office | null => {
+  const getLessons = useCallback((): Office | null => {
     if (!lessons) return null;
-    const dateString = getDateString();
     return lessons[dateString][id];
-  };
+  }, [lessons, dateString, id]);
 
-  const getCollects = (): CollectCalendarItem[] | null => {
+  const getCollects = useCallback((): CollectCalendarItem[] | null => {
     if (!collects) return null;
-    const dateString = getDateString();
     return collects[dateString];
-  };
+  }, [collects, dateString]);
 
   useEffect(() => {
     // Get cached data
     const retrieved = localStorage.getItem(`${id}-prayer`);
     if (retrieved) {
       const cached = JSON.parse(retrieved);
-      if (cached[getDateString()]) {
-        const { today, lessons, collects } = cached[getDateString()];
+      if (cached[dateString]) {
+        const { today, lessons, collects } = cached[dateString];
         setToday(today);
         setLessons(lessons);
         setCollects(collects);
@@ -68,18 +60,20 @@ export const useDailyOffice = (id: "morning" | "evening") => {
       }
     }
 
-    // Otherwise, fetch new data
-    fetch("/api/calendar/today")
-      .then((res) => res.json())
-      .then((data) => setToday(data));
-
-    fetch("/api/lectionary/today")
-      .then((res) => res.json())
-      .then((data) => setLessons(data));
-
-    fetch("/api/collects/today")
-      .then((res) => res.json())
-      .then((data) => setCollects(data));
+    // Otherwise, fetch new data in parallel
+    Promise.all([
+      fetch("/api/calendar/today").then((res) => res.json()),
+      fetch("/api/lectionary/today").then((res) => res.json()),
+      fetch("/api/collects/today").then((res) => res.json()),
+    ])
+      .then(([todayData, lessonsData, collectsData]) => {
+        setToday(todayData);
+        setLessons(lessonsData);
+        setCollects(collectsData);
+      })
+      .catch((error) => {
+        console.error("Error fetching daily office data:", error);
+      });
   }, []);
 
   useEffect(() => {
@@ -88,10 +82,10 @@ export const useDailyOffice = (id: "morning" | "evening") => {
       // Cache responses
       localStorage.setItem(
         `${id}-prayer`,
-        JSON.stringify({ [getDateString()]: { today, lessons, collects } })
+        JSON.stringify({ [dateString]: { today, lessons, collects } })
       );
     }
-  }, [today, lessons, collects]);
+  }, [today, lessons, collects, dateString, id]);
 
   useEffect(() => {
     if (!isLoading) {
@@ -106,78 +100,130 @@ export const useDailyOffice = (id: "morning" | "evening") => {
     }
   }, [isLoading]);
 
-  const isSolemn = calendar.isSolemn();
-  const isOctaveOfEaster = calendar.isOctaveOfEaster();
-  const isEaster = calendar.isEaster();
-  const isPentecost = calendar.isPentecost();
-  const isChristmas = calendar.isChristmas();
-  const isWhitsuntide = calendar.isWhitsuntide();
-  const isAdvent = calendar.isAdvent();
-  const isChristmastide = calendar.isChristmastide();
-  const isEastertide = calendar.isEastertide();
-  const isLordsDay = calendar.isLordsDay();
-  const isFeastDay = calendar.isFeastDay();
-  const isFestal = isFeastDay || isLordsDay;
-  const isFerial = isSolemn || !isFestal;
-  const oAntiphons = calendar.getOAntiphons();
-  const currentAntiphon = oAntiphons[getDateString()];
+  const calendarData = useMemo(() => {
+    const isSolemn = calendar.isSolemn();
+    const isOctaveOfEaster = calendar.isOctaveOfEaster();
+    const isEaster = calendar.isEaster();
+    const isPentecost = calendar.isPentecost();
+    const isChristmas = calendar.isChristmas();
+    const isWhitsuntide = calendar.isWhitsuntide();
+    const isAdvent = calendar.isAdvent();
+    const isChristmastide = calendar.isChristmastide();
+    const isEastertide = calendar.isEastertide();
+    const isLordsDay = calendar.isLordsDay();
+    const isFeastDay = calendar.isFeastDay();
+    const isFestal = isFeastDay || isLordsDay;
+    const isFerial = isSolemn || !isFestal;
+    const oAntiphons = calendar.getOAntiphons();
+    const currentAntiphon = oAntiphons[dateString];
+    const isFeastOfASaint = calendar.isFeastOfASaint();
+    const isTransfiguration = calendar.isTransfiguration();
+    const isAnnunciation = calendar.isAnnunciation();
+    const isPurification = calendar.isPurification();
+    const isAscensiontide = calendar.isAscensiontide();
+    const isEpiphanytide = calendar.isEpiphanytide();
+    const isLent = calendar.isLent();
+    const isTrinitytide = calendar.isTrinitytide();
+    const isOctaveOfEpiphany = calendar.isOctaveOfEpiphany();
+    const isHolyInnocents = calendar.isHolyInnocents();
+    const isSeptuagesimaToPassion = calendar.isSeptuagesimaToPassion();
+    const isRogationDay = calendar.isRogationDay();
 
-  let invitatoryPage = 306; // Default: Advent
-  if (calendar.isFeastOfASaint()) {
-    invitatoryPage = 324;
-  } else if (calendar.isTransfiguration()) {
-    invitatoryPage = 310;
-  } else if (calendar.isAnnunciation()) {
-    invitatoryPage = 322;
-  } else if (calendar.isPurification()) {
-    invitatoryPage = 322;
-  } else if (calendar.isAscensiontide()) {
-    invitatoryPage = 316;
-  } else if (isAdvent) {
-    invitatoryPage = 306;
-  } else if (isChristmastide) {
-    invitatoryPage = 308;
-  } else if (calendar.isEpiphanytide()) {
-    invitatoryPage = 310;
-  } else if (calendar.isLent()) {
-    invitatoryPage = 312;
-  } else if (isEastertide) {
-    invitatoryPage = 314;
-  } else if (isWhitsuntide) {
-    invitatoryPage = 318;
-  } else if (calendar.isTrinitytide()) {
-    invitatoryPage = 320;
-  }
+    return {
+      isSolemn,
+      isOctaveOfEaster,
+      isEaster,
+      isPentecost,
+      isChristmas,
+      isWhitsuntide,
+      isAdvent,
+      isChristmastide,
+      isEastertide,
+      isLordsDay,
+      isFeastDay,
+      isFestal,
+      isFerial,
+      currentAntiphon,
+      isFeastOfASaint,
+      isTransfiguration,
+      isAnnunciation,
+      isPurification,
+      isAscensiontide,
+      isEpiphanytide,
+      isLent,
+      isTrinitytide,
+      isOctaveOfEpiphany,
+      isHolyInnocents,
+      isSeptuagesimaToPassion,
+      isRogationDay,
+    };
+  }, [calendar, dateString]);
 
-  const shouldSingTeDeum =
-    isFeastDay ||
-    isLordsDay ||
-    isChristmastide ||
-    calendar.isOctaveOfEpiphany() ||
-    isEastertide ||
-    isWhitsuntide;
+  const invitatoryPage = useMemo(() => {
+    let page = 306; // Default: Advent
+    if (calendarData.isFeastOfASaint) {
+      page = 324;
+    } else if (calendarData.isTransfiguration) {
+      page = 310;
+    } else if (calendarData.isAnnunciation) {
+      page = 322;
+    } else if (calendarData.isPurification) {
+      page = 322;
+    } else if (calendarData.isAscensiontide) {
+      page = 316;
+    } else if (calendarData.isAdvent) {
+      page = 306;
+    } else if (calendarData.isChristmastide) {
+      page = 308;
+    } else if (calendarData.isEpiphanytide) {
+      page = 310;
+    } else if (calendarData.isLent) {
+      page = 312;
+    } else if (calendarData.isEastertide) {
+      page = 314;
+    } else if (calendarData.isWhitsuntide) {
+      page = 318;
+    } else if (calendarData.isTrinitytide) {
+      page = 320;
+    }
+    return page;
+  }, [calendarData]);
 
-  const shouldOmitTeDeum =
-    isAdvent ||
-    (calendar.isHolyInnocents() && !isLordsDay) ||
-    calendar.isSeptuagesimaToPassion() ||
-    calendar.isRogationDay() ||
-    isSolemn;
+  const shouldSingTeDeum = useMemo(
+    () =>
+      calendarData.isFeastDay ||
+      calendarData.isLordsDay ||
+      calendarData.isChristmastide ||
+      calendarData.isOctaveOfEpiphany ||
+      calendarData.isEastertide ||
+      calendarData.isWhitsuntide,
+    [calendarData]
+  );
+
+  const shouldOmitTeDeum = useMemo(
+    () =>
+      calendarData.isAdvent ||
+      (calendarData.isHolyInnocents && !calendarData.isLordsDay) ||
+      calendarData.isSeptuagesimaToPassion ||
+      calendarData.isRogationDay ||
+      calendarData.isSolemn,
+    [calendarData]
+  );
 
   return {
     isLoading,
-    isLordsDay,
-    isFerial,
-    isSolemn,
-    isChristmas,
-    isEaster,
-    isOctaveOfEaster,
-    isPentecost,
+    isLordsDay: calendarData.isLordsDay,
+    isFerial: calendarData.isFerial,
+    isSolemn: calendarData.isSolemn,
+    isChristmas: calendarData.isChristmas,
+    isEaster: calendarData.isEaster,
+    isOctaveOfEaster: calendarData.isOctaveOfEaster,
+    isPentecost: calendarData.isPentecost,
     invitatoryPage,
     shouldSingTeDeum,
     shouldOmitTeDeum,
-    currentAntiphon,
-    dateString: getDateString(),
+    currentAntiphon: calendarData.currentAntiphon,
+    dateString,
     today: getToday(),
     lessons: getLessons(),
     collects: getCollects(),
