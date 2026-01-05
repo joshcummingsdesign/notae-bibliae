@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { BiblePassage } from "@/types/BiblePassage";
 import openingSentences from "./opening-sentences.json";
+import DOMPurify from "isomorphic-dompurify";
 
 type SentenceCategory = keyof typeof openingSentences;
 
@@ -162,7 +163,11 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
               <CircularProgress color="inherit" thickness={2.5} size={25} />
             );
           }
-          return <Passage dangerouslySetInnerHTML={{ __html: content }} />;
+          return (
+            <Passage
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
+            />
+          );
         })()}
       </PassageWrapper>
     </>

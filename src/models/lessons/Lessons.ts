@@ -4,23 +4,9 @@ import { Calendar } from "../calendar";
 import lessonData from "./lessons.json";
 import { stripMarkdownLinks } from "@/utils/markdown";
 import { TIMEZONE } from "@/constants";
+import { LessonDateMap, OfficeDay } from "./types";
 
 dayjs.extend(isSameOrBefore);
-
-interface Office {
-  first: string[];
-  second: string[];
-}
-
-interface OfficeDay {
-  title: string;
-  morning: Office;
-  evening: Office;
-}
-
-interface LessonDateMap {
-  [date: string]: OfficeDay;
-}
 
 export class Lessons {
   private calendar: Calendar;

@@ -559,12 +559,10 @@ export const menuItems: MenuNode[] = [
           {
             title: "Morning Prayer",
             link: "/liturgy/daily-office/morning-prayer",
-            inPageNav: true,
           },
           {
             title: "Evening Prayer",
             link: "/liturgy/daily-office/evening-prayer",
-            inPageNav: true,
           },
         ],
       },

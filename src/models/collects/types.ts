@@ -15,6 +15,10 @@ export interface CollectDateMap {
   [date: string]: CollectCalendarItem[];
 }
 
+export type CollectRes = {
+  liturgicalYear: number;
+} & CollectDateMap;
+
 export interface CurrentCollects {
   primary: CollectCalendarItem | null;
   secondary: CollectCalendarItem[];

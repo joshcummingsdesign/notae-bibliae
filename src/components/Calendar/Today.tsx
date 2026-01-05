@@ -1,21 +1,18 @@
 "use client";
-import { Dayjs } from "dayjs";
 import { styled } from "@mui/system";
 import Markdown from "react-markdown";
 import remarkSmartypants from "remark-smartypants";
+import { CalendarItem } from "@/models/calendar";
 
 interface Props {
-  today: Dayjs;
-  currentDay: string;
+  season: string;
+  date: string;
+  events: CalendarItem[];
 }
 
-export const Today: React.FC<Props> = ({ today, currentDay }) => {
-  const str = currentDay.split(" — ");
-  const season = str[0];
-  const date = today.format("dddd, MMMM D");
-  const feast = str[2] || "";
-  const rest = str.slice(3);
-  const commemoration = rest.length ? `[ *${rest.join(" — ")}* ]` : "";
+export const Today: React.FC<Props> = ({ season, date, events }) => {
+  const feast = events.length > 0 ? events[0].title : "";
+  const commemoration = events.length > 1 ? `[ *${events[1].title}* ]` : "";
 
   return (
     <Wrapper>

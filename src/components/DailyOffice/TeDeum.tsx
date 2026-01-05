@@ -1,9 +1,8 @@
-import { Dayjs } from "dayjs";
 import { OtCanticle } from "./OtCanticle";
 import Link from "next/link";
 
 interface Props {
-  today: Dayjs;
+  today: string;
   shouldSing: boolean;
   shouldOmit: boolean;
   isChristmas: boolean;

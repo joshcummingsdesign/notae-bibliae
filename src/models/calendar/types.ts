@@ -28,6 +28,14 @@ export interface DateMap {
   [date: string]: CalendarItem[];
 }
 
+export interface SeasonMap {
+  [season: string]: DateMap;
+}
+
+export type CalendarRes = {
+  liturgicalYear: number;
+} & SeasonMap;
+
 export type SeasonItems = Record<SeasonName, DateMap>;
 
 export type FormattedSeasonItems = Record<SeasonName, string[]>;

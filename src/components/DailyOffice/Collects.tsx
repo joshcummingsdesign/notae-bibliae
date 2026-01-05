@@ -4,14 +4,14 @@ import { styled } from "@mui/material";
 import { CollectCalendarItem } from "@/models/collects";
 import Link from "next/link";
 import { Definition } from "../Definition";
+import DOMPurify from "isomorphic-dompurify";
 
 interface Props {
-  primary: CollectCalendarItem | null;
-  secondary: CollectCalendarItem[];
+  collects: CollectCalendarItem[];
   isFerial: boolean;
 }
 
-export const Collects: React.FC<Props> = ({ primary, secondary, isFerial }) => {
+export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
   let header = (
     <p>
       <em>
@@ -36,20 +36,12 @@ export const Collects: React.FC<Props> = ({ primary, secondary, isFerial }) => {
   return (
     <>
       {header}
-      {primary && (
-        <>
+      {collects.map((collect) => (
+        <Fragment key={collect.title}>
           <p>
-            <strong>Collect for {primary.title}</strong>
+            <strong>Collect for {collect.title}</strong>
           </p>
-          <CollectText text={primary.collect} />
-        </>
-      )}
-      {secondary.map((secondaryCollect) => (
-        <Fragment key={secondaryCollect.title}>
-          <p>
-            <strong>Collect for {secondaryCollect.title}</strong>
-          </p>
-          <CollectText text={secondaryCollect.collect} />
+          <CollectText text={collect.collect} />
         </Fragment>
       ))}
     </>
@@ -59,7 +51,9 @@ export const Collects: React.FC<Props> = ({ primary, secondary, isFerial }) => {
 const CollectText: React.FC<{ text: string }> = ({ text }) => (
   <StyledText
     dangerouslySetInnerHTML={{
-      __html: text.replaceAll("·", '<span class="dot"></span>'),
+      __html: DOMPurify.sanitize(
+        text.replaceAll("·", '<span class="dot"></span>')
+      ),
     }}
   />
 );

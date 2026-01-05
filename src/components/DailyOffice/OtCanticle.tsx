@@ -1,12 +1,12 @@
-import { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import Link from "next/link";
 
 interface Props {
-  today: Dayjs;
+  today: string;
 }
 
 export const OtCanticle: React.FC<Props> = ({ today }) => {
-  const day = today.day();
+  const day = dayjs(today).day();
   const monday = 1;
   const tuesday = 2;
   const wednesday = 3;
