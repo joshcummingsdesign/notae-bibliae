@@ -14,7 +14,6 @@ export const useDailyOffice = (id: "morning" | "evening") => {
   const [collects, setCollects] = useState<CollectRes | null>(null);
   const [lessons, setLessons] = useState<LessonRes | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const linksTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const calendar = useMemo(() => new Calendar(), []);
 
@@ -62,7 +61,7 @@ export const useDailyOffice = (id: "morning" | "evening") => {
 
     // Otherwise, fetch new data in parallel
     Promise.all([
-      fetch("/api/calendar/today").then((res) => res.json()),
+      fetch("/api/calendar/today?withLinks=true").then((res) => res.json()),
       fetch("/api/lectionary/today").then((res) => res.json()),
       fetch("/api/collects/today").then((res) => res.json()),
     ])
@@ -90,13 +89,10 @@ export const useDailyOffice = (id: "morning" | "evening") => {
   useEffect(() => {
     if (!isLoading) {
       // Re-render biblegateway links after content has loaded
-      linksTimeout.current && clearTimeout(linksTimeout.current);
-      linksTimeout.current = setTimeout(() => {
-        if (window.BGLinks) {
-          window.BGLinks.version = "ESV";
-          window.BGLinks.linkVerses();
-        }
-      }, 300);
+      if (window.BGLinks) {
+        window.BGLinks.version = "ESV";
+        window.BGLinks.linkVerses();
+      }
     }
   }, [isLoading]);
 

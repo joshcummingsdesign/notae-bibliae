@@ -34,12 +34,20 @@ export async function GET(
     return NextResponse.json({ error: "Invalid date" }, { status: 400 });
   }
 
-  const day =
-    slug && slug.length && slug[0] === "tomorrow"
-      ? dayjs(date).tz(TIMEZONE).add(1, "day")
-      : dayjs(date).tz(TIMEZONE);
-  const dateString = day.format("YYYY-MM-DD");
-  const calendar = new Calendar(day);
+  let day = date && isFullDate ? dayjs(date).tz(TIMEZONE) : undefined;
+  day = date && isYear ? dayjs(`${date}-01-01`).tz(TIMEZONE) : undefined;
+
+  let calendar = new Calendar(day);
+  let dateString = day
+    ? day.format("YYYY-MM-DD")
+    : calendar.getToday().format("YYYY-MM-DD");
+
+  if (slug && slug.length && slug[0] === "tomorrow") {
+    const tomorrowDate = calendar.getToday().add(1, "day");
+    calendar = new Calendar(tomorrowDate);
+    dateString = tomorrowDate.format("YYYY-MM-DD");
+  }
+
   const liturgicalYear = calendar.getLiturgicalYear();
 
   const lessons = new Lessons(calendar);
@@ -51,6 +59,7 @@ export async function GET(
   }
 
   const daily = lessonData[dateString] as any;
+
   const title = daily.title;
   delete daily.title;
 
