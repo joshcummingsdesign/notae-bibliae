@@ -110,6 +110,7 @@ const Wrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isLoading",
 })<{ isLoading: boolean }>(({ isLoading }) => ({
   opacity: isLoading ? 0 : 1,
+  visibility: isLoading ? "hidden" : "visible",
   lineHeight: isLoading ? 0 : undefined,
   height: isLoading ? 0 : undefined,
   overflow: isLoading ? "hidden" : undefined,
