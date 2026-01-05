@@ -20,23 +20,17 @@ export async function GET(
   const { slug } = await params;
   const { searchParams } = new URL(req.url);
   const date = searchParams.get("date") || undefined;
+  const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
+  const isYear = date && /^\d{4}$/.test(date);
 
-  if (slug && slug.length && slug[0] !== "today" && slug[0] !== "tomorrow") {
-    return NextResponse.json({ error: `${slug} not found` }, { status: 404 });
-  }
-
-  if (!slug && !date) {
-    return NextResponse.json({ error: "Date is required" }, { status: 400 });
-  }
-
-  if (date && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+  if (date && !isFullDate && !isYear) {
     return NextResponse.json(
-      { error: "Date is not formatted as YYYY-MM-DD" },
+      { error: "Date is not formatted as YYYY or YYYY-MM-DD" },
       { status: 400 }
     );
   }
 
-  if (date && !dayjs(date, "YYYY-MM-DD", true).isValid()) {
+  if (date && isFullDate && !dayjs(date, "YYYY-MM-DD", true).isValid()) {
     return NextResponse.json({ error: "Invalid date" }, { status: 400 });
   }
 
@@ -44,10 +38,19 @@ export async function GET(
     slug && slug.length && slug[0] === "tomorrow"
       ? dayjs(date).tz(TIMEZONE).add(1, "day")
       : dayjs(date).tz(TIMEZONE);
+  const dateString = day.format("YYYY-MM-DD");
   const calendar = new Calendar(day);
+  const liturgicalYear = calendar.getLiturgicalYear();
+
   const lessons = new Lessons(calendar);
   const lessonData = lessons.getAll();
-  const daily = lessonData[day.format("YYYY-MM-DD")] as any;
+
+  if (!slug && !isFullDate) {
+    const res = { liturgicalYear, ...lessonData };
+    return NextResponse.json(res);
+  }
+
+  const daily = lessonData[dateString] as any;
   const title = daily.title;
   delete daily.title;
 
@@ -58,7 +61,13 @@ export async function GET(
     );
   }
 
-  const res = { date, title, daily: { source: "BCP 1928", ...daily } };
+  const res = {
+    liturgicalYear,
+    [dateString]: {
+      title,
+      ...daily,
+    },
+  };
 
   return NextResponse.json(res);
 }

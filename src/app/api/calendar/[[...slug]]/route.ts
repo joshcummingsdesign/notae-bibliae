@@ -18,49 +18,49 @@ export async function GET(
   { params }: { params: Promise<{ slug?: string[] }> }
 ) {
   const { slug } = await params;
-
-  if (slug && slug.length && slug[0] !== "today" && slug[0] !== "tomorrow") {
-    return NextResponse.json({ error: `${slug} not found` }, { status: 404 });
-  }
-
   const { searchParams } = new URL(req.url);
-  let date = searchParams.get("date");
+  const date = searchParams.get("date") || undefined;
   const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
   const isYear = date && /^\d{4}$/.test(date);
 
   if (date && !isFullDate && !isYear) {
+    return NextResponse.json(
+      { error: "Date is not formatted as YYYY or YYYY-MM-DD" },
+      { status: 400 }
+    );
+  }
+
+  if (date && isFullDate && !dayjs(date, "YYYY-MM-DD", true).isValid()) {
     return NextResponse.json({ error: "Invalid date" }, { status: 400 });
   }
 
-  const formattedDate = date && isYear ? `${date}-01-01` : date;
-  const day = formattedDate ? dayjs(formattedDate).tz(TIMEZONE) : undefined;
+  const day =
+    slug && slug.length && slug[0] === "tomorrow"
+      ? dayjs(date).tz(TIMEZONE).add(1, "day")
+      : dayjs(date).tz(TIMEZONE);
+  const dateString = day.format("YYYY-MM-DD");
   const calendar = new Calendar(day);
   const liturgicalYear = calendar.getLiturgicalYear();
 
-  // If full date, return items
-  if (slug || (day && formattedDate && isFullDate)) {
-    const t =
-      slug && slug.length && slug[0] === "tomorrow"
-        ? dayjs().tz(TIMEZONE).add(1, "day")
-        : dayjs().tz(TIMEZONE);
-    const d = slug ? t.format("YYYY-MM-DD") : formattedDate!;
-
-    const items = calendar
-      .getByDate(d)
-      .map((item) => ({ ...item, title: stripMarkdownLinks(item.title) }));
-
-    const res = {
-      date: d,
-      liturgicalYear,
-      items,
-    };
+  if (!slug && !isFullDate) {
+    const calendarData = calendar.getSeasonItems(true);
+    const res = { liturgicalYear, ...calendarData };
 
     return NextResponse.json(res);
   }
 
-  // Otherwise return the season items
-  const calendarData = calendar.getSeasonItems(true);
-  const res = { liturgicalYear, ...calendarData };
+  const items = calendar
+    .getByDate(dateString)
+    .map((item) => ({ ...item, title: stripMarkdownLinks(item.title) }));
+
+  const season = calendar.getCurrentSeason();
+
+  const res = {
+    liturgicalYear,
+    [season]: {
+      [dateString]: items,
+    },
+  };
 
   return NextResponse.json(res);
 }

@@ -20,23 +20,17 @@ export async function GET(
   const { slug } = await params;
   const { searchParams } = new URL(req.url);
   const date = searchParams.get("date") || undefined;
+  const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
+  const isYear = date && /^\d{4}$/.test(date);
 
-  if (slug && slug.length && slug[0] !== "today" && slug[0] !== "tomorrow") {
-    return NextResponse.json({ error: `${slug} not found` }, { status: 404 });
-  }
-
-  if (!slug && !date) {
-    return NextResponse.json({ error: "Date is required" }, { status: 400 });
-  }
-
-  if (date && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+  if (date && !isFullDate && !isYear) {
     return NextResponse.json(
-      { error: "Date is not formatted as YYYY-MM-DD" },
+      { error: "Date is not formatted as YYYY or YYYY-MM-DD" },
       { status: 400 }
     );
   }
 
-  if (date && !dayjs(date, "YYYY-MM-DD", true).isValid()) {
+  if (date && isFullDate && !dayjs(date, "YYYY-MM-DD", true).isValid()) {
     return NextResponse.json({ error: "Invalid date" }, { status: 400 });
   }
 
@@ -44,17 +38,28 @@ export async function GET(
     slug && slug.length && slug[0] === "tomorrow"
       ? dayjs(date).tz(TIMEZONE).add(1, "day")
       : dayjs(date).tz(TIMEZONE);
+  const dateString = day.format("YYYY-MM-DD");
   const calendar = new Calendar(day);
+  const liturgicalYear = calendar.getLiturgicalYear();
+
   const collects = new Collects(calendar);
+
+  if (!slug && !isFullDate) {
+    const collectData = collects.getAll();
+    const res = { liturgicalYear, ...collectData };
+    return NextResponse.json(res);
+  }
+
   const { primary, secondary } = collects.getByDay();
+
   const items = [];
   if (primary) {
     items.push(primary);
   }
 
   const res = {
-    date: day.format("YYYY-MM-DD"),
-    items: [...items, ...secondary],
+    liturgicalYear,
+    [dateString]: [...items, ...secondary],
   };
 
   return NextResponse.json(res);
