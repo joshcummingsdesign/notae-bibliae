@@ -13,9 +13,21 @@ dayjs.extend(isBetween);
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-export async function GET(req: NextRequest) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: Promise<{ slug?: string[] }> }
+) {
+  const { slug } = await params;
   const { searchParams } = new URL(req.url);
   const date = searchParams.get("date") || undefined;
+
+  if (slug && slug.length && slug[0] !== "today" && slug[0] !== "tomorrow") {
+    return NextResponse.json({ error: `${slug} not found` }, { status: 404 });
+  }
+
+  if (!slug && !date) {
+    return NextResponse.json({ error: "Date is required" }, { status: 400 });
+  }
 
   if (date && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
     return NextResponse.json(
@@ -28,7 +40,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Invalid date" }, { status: 400 });
   }
 
-  const day = dayjs(date).tz(TIMEZONE);
+  const day =
+    slug && slug.length && slug[0] === "tomorrow"
+      ? dayjs(date).tz(TIMEZONE).add(1, "day")
+      : dayjs(date).tz(TIMEZONE);
   const calendar = new Calendar(day);
   const collects = new Collects(calendar);
   const { primary, secondary } = collects.getByDay();

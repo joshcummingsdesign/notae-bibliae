@@ -15,11 +15,11 @@ dayjs.extend(timezone);
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug?: string[] } }
+  { params }: { params: Promise<{ slug?: string[] }> }
 ) {
-  const slug = params.slug?.[0];
+  const { slug } = await params;
 
-  if (slug && slug !== "today") {
+  if (slug && slug.length && slug[0] !== "today" && slug[0] !== "tomorrow") {
     return NextResponse.json({ error: `${slug} not found` }, { status: 404 });
   }
 
@@ -39,7 +39,11 @@ export async function GET(
 
   // If full date, return items
   if (slug || (day && formattedDate && isFullDate)) {
-    const d = slug ? dayjs().tz(TIMEZONE).format("YYYY-MM-DD") : formattedDate!;
+    const t =
+      slug && slug.length && slug[0] === "tomorrow"
+        ? dayjs().tz(TIMEZONE).add(1, "day")
+        : dayjs().tz(TIMEZONE);
+    const d = slug ? t.format("YYYY-MM-DD") : formattedDate!;
 
     const items = calendar
       .getByDate(d)
