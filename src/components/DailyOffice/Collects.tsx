@@ -39,7 +39,10 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
     <p>
       <em>
         ❡ Chanted using the{" "}
-        <Link href="/liturgy/daily-office/chant-rubrics#chanting-the-collects">
+        <Link
+          href="/liturgy/daily-office/chant-rubrics#the-collects"
+          target="_blank"
+        >
           festal tone
         </Link>
       </em>

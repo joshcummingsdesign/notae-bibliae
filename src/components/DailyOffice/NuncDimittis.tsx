@@ -20,7 +20,9 @@ export const NuncDimittis: React.FC<Props> = ({ isLordsDay }) => {
     <>
       <p>
         <strong>
-          <Link href="/liturgy/music/chants/nunc-dimittis">Nunc dimittis</Link>
+          <Link href="/liturgy/music/chants/nunc-dimittis" target="blank">
+            Nunc dimittis
+          </Link>
         </strong>{" "}
         (SDP 478, Tone III B 5)
       </p>

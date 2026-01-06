@@ -33,7 +33,9 @@ export const Magnificat: React.FC<Props> = ({
       {antiphon}
       <p>
         <strong>
-          <Link href="/liturgy/music/chants/magnificat">Magnificat</Link>
+          <Link href="/liturgy/music/chants/magnificat" target="_blank">
+            Magnificat
+          </Link>
         </strong>{" "}
         (SDP 447, {tone})
       </p>

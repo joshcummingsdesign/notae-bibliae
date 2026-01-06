@@ -26,7 +26,7 @@ export const TeDeum: React.FC<Props> = ({
     <p>
       <em>
         Optionally add the{" "}
-        <Link href="/liturgy/music/chants/facta-est-cum-angelo">
+        <Link href="/liturgy/music/chants/facta-est-cum-angelo" target="_blank">
           Facta est cum Angelo
         </Link>
       </em>
@@ -40,7 +40,9 @@ export const TeDeum: React.FC<Props> = ({
       </p>
       <p>
         <strong>
-          <Link href="/liturgy/music/chants/benedicite">Benedicite</Link>
+          <Link href="/liturgy/music/chants/benedicite" target="_blank">
+            Benedicite
+          </Link>
         </strong>{" "}
         (SDP 367, Tone VII 4)
       </p>
@@ -52,7 +54,10 @@ export const TeDeum: React.FC<Props> = ({
     <p>
       <em>
         Optionally replace with the{" "}
-        <Link href="/liturgy/music/chants/victimae-paschali-laudes">
+        <Link
+          href="/liturgy/music/chants/victimae-paschali-laudes"
+          target="_blank"
+        >
           Victimae paschali laudes
         </Link>
       </em>
@@ -63,7 +68,7 @@ export const TeDeum: React.FC<Props> = ({
     <p>
       <em>
         Optionally replace with the{" "}
-        <Link href="/liturgy/music/chants/veni-sancte-spiritus">
+        <Link href="/liturgy/music/chants/veni-sancte-spiritus" target="_blank">
           Veni Sancte Spiritus
         </Link>
       </em>
@@ -78,7 +83,9 @@ export const TeDeum: React.FC<Props> = ({
       </p>
       <p>
         <strong>
-          <Link href="/liturgy/music/chants/te-deum">Te Deum</Link>
+          <Link href="/liturgy/music/chants/te-deum" target="_blank">
+            Te Deum
+          </Link>
         </strong>{" "}
         (SDP 357)
       </p>
