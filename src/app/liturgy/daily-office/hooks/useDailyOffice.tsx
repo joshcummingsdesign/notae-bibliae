@@ -9,7 +9,7 @@ interface TodayData {
   events: CalendarItem[];
 }
 
-export const useDailyOffice = (id: "morning" | "evening") => {
+export const useDailyOffice = (office: "morning" | "evening") => {
   const [today, setToday] = useState<CalendarRes | null>(null);
   const [collects, setCollects] = useState<CollectRes | null>(null);
   const [lessons, setLessons] = useState<LessonRes | null>(null);
@@ -37,8 +37,8 @@ export const useDailyOffice = (id: "morning" | "evening") => {
 
   const getLessons = useCallback((): Office | null => {
     if (!lessons) return null;
-    return lessons[dateString][id];
-  }, [lessons, dateString, id]);
+    return lessons[dateString][office];
+  }, [lessons, dateString, office]);
 
   const getCollects = useCallback((): CollectCalendarItem[] | null => {
     if (!collects) return null;
@@ -47,7 +47,7 @@ export const useDailyOffice = (id: "morning" | "evening") => {
 
   useEffect(() => {
     // Get cached data
-    const retrieved = localStorage.getItem(`${id}-prayer`);
+    const retrieved = localStorage.getItem(`${office}-prayer`);
     if (retrieved) {
       const cached = JSON.parse(retrieved);
       if (cached[dateString]) {
@@ -80,11 +80,11 @@ export const useDailyOffice = (id: "morning" | "evening") => {
       setIsLoading(false);
       // Cache responses
       localStorage.setItem(
-        `${id}-prayer`,
+        `${office}-prayer`,
         JSON.stringify({ [dateString]: { today, lessons, collects } })
       );
     }
-  }, [today, lessons, collects, dateString, id]);
+  }, [today, lessons, collects, dateString, office]);
 
   useEffect(() => {
     if (!isLoading) {
@@ -108,7 +108,8 @@ export const useDailyOffice = (id: "morning" | "evening") => {
     const isEastertide = calendar.isEastertide();
     const isLordsDay = calendar.isLordsDay();
     const isFeastDay = calendar.isFeastDay();
-    const isFestal = isFeastDay || isLordsDay;
+    const isEve = office === "evening" && calendar.isEve();
+    const isFestal = isEve || isFeastDay || isLordsDay;
     const isFerial = isSolemn || !isFestal;
     const oAntiphons = calendar.getOAntiphons();
     const currentAntiphon = oAntiphons[dateString];

@@ -614,12 +614,19 @@ export class Calendar {
       },
       ...lentSundays,
       {
+        date: annunciation.subtract(1, "day").format("YYYY-MM-DD"),
+        title: "Eve of the Annunciation",
+        rank: 4,
+        class: 5,
+      },
+      {
         date: annunciation.format("YYYY-MM-DD"),
         title:
           "[Annunciation of the Lord](/liturgy/seasons/eastertide/annunciation)",
-        rank: 4,
+        rank: 5,
         class: 5,
         isFeast: true,
+        isPrincipalFeast: true,
       },
       ...holyWeekDays,
     ];
@@ -647,6 +654,7 @@ export class Calendar {
         rank: 1,
         class: 2,
         isFeast: true,
+        isPrincipalFeast: true,
         isSunday: true,
       },
       {
@@ -742,12 +750,19 @@ export class Calendar {
         class: 11,
       },
       {
+        date: ascension.subtract(1, "day").format("YYYY-MM-DD"),
+        title: "Eve of the Ascension",
+        rank: 4,
+        class: 2,
+      },
+      {
         date: ascension.format("YYYY-MM-DD"),
         title:
           "[Ascension Day](/liturgy/seasons/eastertide/ascensiontide/ascension-day)",
         rank: 1,
         class: 2,
         isFeast: true,
+        isPrincipalFeast: true,
       },
       {
         date: easter.add(42, "day").format("YYYY-MM-DD"),
@@ -775,12 +790,19 @@ export class Calendar {
     const pentecost = this.getPentecost();
     return [
       {
+        date: pentecost.subtract(1, "day").format("YYYY-MM-DD"),
+        title: "Pentecost Eve",
+        rank: 4,
+        class: 2,
+      },
+      {
         date: pentecost.format("YYYY-MM-DD"),
         title:
           "[Pentecost (Whitsunday)](/liturgy/seasons/whitsuntide/pentecost)",
         rank: 1,
         class: 2,
         isFeast: true,
+        isPrincipalFeast: true,
         isSunday: true,
       },
       {
@@ -878,6 +900,7 @@ export class Calendar {
       const rank = i === 0 ? 2 : 3;
       const cls = i === 0 ? 4 : 7;
       const isFeast = i === 0;
+      const isPrincipalFeast = i === 0;
 
       days.push({
         date: sunday.format("YYYY-MM-DD"),
@@ -885,14 +908,22 @@ export class Calendar {
         rank,
         class: cls,
         isFeast,
+        isPrincipalFeast,
         isSunday: true,
       });
     }
 
     days.push({
+      date: trinitySunday.subtract(1, "day").format("YYYY-MM-DD"),
+      title: "Trinity Eve",
+      rank: 4,
+      class: 4,
+    });
+
+    days.push({
       date: corpusChristi.format("YYYY-MM-DD"),
       title: "[Corpus Christi](/liturgy/seasons/trinitytide/corpus-christi)",
-      rank: 4,
+      rank: 5,
       class: 4,
       isFeast: true,
     });
@@ -1474,6 +1505,16 @@ export class Calendar {
   isFeastDay(): boolean {
     const items = this.getByDate();
     return items.some((item) => item.isFeast);
+  }
+
+  /**
+   * Check to see if it's an Eve (First Vespers of a feast day).
+   */
+  isEve(): boolean {
+    const items = this.getByDate();
+    return items.some(
+      (item) => item.title.includes("Eve") || item.title.includes("Vigil")
+    );
   }
 
   /**

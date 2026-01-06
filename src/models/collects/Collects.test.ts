@@ -18,7 +18,7 @@ vi.mock("../calendar", () => ({
         {
           date: "2025-11-30",
           title: "Saint Andrew, Apostle",
-          rank: 5,
+          rank: 6,
           class: 6,
           isFeast: true,
           isSaint: true,
@@ -35,14 +35,14 @@ vi.mock("../calendar", () => ({
         {
           date: "2026-04-04",
           title: "Easter Vigil",
-          rank: 4,
+          rank: 5,
           class: 5,
           isFeast: true,
         },
         {
           date: "2026-04-04",
           title: "Saint Isidore, Bishop and Doctor of the Church",
-          rank: 5,
+          rank: 6,
           class: 10,
           isSaint: true,
         },
@@ -57,7 +57,7 @@ describe("Collects", () => {
     const c = new Collects(mockCalendar);
     const items = c.queryCollects();
 
-    expect(items.length).toBe(187);
+    expect(items.length).toBe(192);
     expect(items[0].title).toBe("First Sunday of Advent");
     expect(items[0].text).toBeTruthy();
     expect(items[items.length - 1].title).toBe("Saint Jacob of Serugh, Bishop");

@@ -97,7 +97,9 @@ export const Content = () => {
         <Salutation />
         <Suffrages />
         <h2>Collects</h2>
-        {!isLoading && <Collects collects={collects!} isFerial={isFerial} />}
+        {!isLoading && (
+          <Collects office="morning" collects={collects!} isFerial={isFerial} />
+        )}
         <OrdinaryCollects />
         <Grace />
         <Footer />

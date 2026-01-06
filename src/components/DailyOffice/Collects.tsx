@@ -7,11 +7,34 @@ import { Definition } from "../Definition";
 import DOMPurify from "isomorphic-dompurify";
 
 interface Props {
+  office: "morning" | "evening";
   collects: CollectCalendarItem[];
   isFerial: boolean;
 }
 
-export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
+export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
+  const filterList = [
+    "Septuagesima",
+    "Sexagesima",
+    "Quinquagesima",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const hasPrincipalFeast = collects.some(
+    (collect) => collect.isPrincipalFeast
+  );
+
+  const hasEve = collects.some(
+    (collect) =>
+      collect.title.includes("Eve") || collect.title.includes("Vigil")
+  );
+
   let header = (
     <p>
       <em>
@@ -36,14 +59,40 @@ export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
   return (
     <>
       {header}
-      {collects.map((collect) => (
-        <Fragment key={collect.title}>
-          <p>
-            <strong>Collect for {collect.title}</strong>
-          </p>
-          <CollectText text={collect.collect} />
-        </Fragment>
-      ))}
+      {collects.map((collect) => {
+        if (
+          office === "morning" &&
+          (collect.title.includes("Eve") || collect.title.includes("Vigil"))
+        ) {
+          return null;
+        }
+
+        if (
+          office === "evening" &&
+          hasEve &&
+          filterList.some((day) => collect.title.includes(day))
+        ) {
+          return null;
+        }
+
+        if (
+          hasPrincipalFeast &&
+          filterList.some(
+            (day) => collect.title.includes(day) && !collect.isPrincipalFeast
+          )
+        ) {
+          return null;
+        }
+
+        return (
+          <Fragment key={collect.title}>
+            <p>
+              <strong>Collect for {collect.title}</strong>
+            </p>
+            <CollectText text={collect.collect} />
+          </Fragment>
+        );
+      })}
     </>
   );
 };
