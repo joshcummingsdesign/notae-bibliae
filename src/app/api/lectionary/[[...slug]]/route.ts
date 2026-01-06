@@ -19,9 +19,12 @@ export async function GET(
 ) {
   const { slug } = await params;
   const { searchParams } = new URL(req.url);
-  const date = searchParams.get("date") || undefined;
+  const isToday = slug && slug.length && slug[0] === "today";
+  const isTomorrow = slug && slug.length && slug[0] === "tomorrow";
+  const date = searchParams.get("date");
   const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
   const isYear = date && /^\d{4}$/.test(date);
+  const isAll = !isToday && !isTomorrow && !isFullDate;
 
   if (date && !isFullDate && !isYear) {
     return NextResponse.json(
@@ -34,18 +37,15 @@ export async function GET(
     return NextResponse.json({ error: "Invalid date" }, { status: 400 });
   }
 
-  let day = date && isFullDate ? dayjs(date).tz(TIMEZONE) : undefined;
-  day = date && isYear ? dayjs(`${date}-01-01`).tz(TIMEZONE) : undefined;
+  let calendar = new Calendar();
 
-  let calendar = new Calendar(day);
-  let dateString = day
-    ? day.format("YYYY-MM-DD")
-    : calendar.getToday().format("YYYY-MM-DD");
-
-  if (slug && slug.length && slug[0] === "tomorrow") {
+  if (isTomorrow) {
     const tomorrowDate = calendar.getToday().add(1, "day");
     calendar = new Calendar(tomorrowDate);
-    dateString = tomorrowDate.format("YYYY-MM-DD");
+  } else if (isFullDate) {
+    calendar = new Calendar(dayjs(date).tz(TIMEZONE));
+  } else if (isYear) {
+    calendar = new Calendar(dayjs(`${date}-01-01`).tz(TIMEZONE));
   }
 
   const liturgicalYear = calendar.getLiturgicalYear();
@@ -53,10 +53,12 @@ export async function GET(
   const lessons = new Lessons(calendar);
   const lessonData = lessons.getAll();
 
-  if (!slug && !isFullDate) {
+  if (isAll) {
     const res = { liturgicalYear, ...lessonData };
     return NextResponse.json(res);
   }
+
+  const dateString = calendar.getToday().format("YYYY-MM-DD");
 
   const daily = lessonData[dateString] as any;
 
