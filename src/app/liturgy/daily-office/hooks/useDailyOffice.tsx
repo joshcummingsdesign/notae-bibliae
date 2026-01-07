@@ -98,7 +98,10 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
   const calendarData = useMemo(() => {
     const isSolemn = calendar.isSolemn();
+    const isOctaveOfChristmas = calendar.isOctaveOfChristmas();
+    const isOctaveOfEpiphany = calendar.isOctaveOfEpiphany();
     const isOctaveOfEaster = calendar.isOctaveOfEaster();
+    const isOctaveOfPentecost = calendar.isOctaveOfPentecost();
     const isEaster = calendar.isEaster();
     const isPentecost = calendar.isPentecost();
     const isChristmas = calendar.isChristmas();
@@ -106,29 +109,46 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     const isAdvent = calendar.isAdvent();
     const isChristmastide = calendar.isChristmastide();
     const isEastertide = calendar.isEastertide();
-    const isLordsDay = calendar.isLordsDay();
-    const isFeastDay = calendar.isFeastDay();
-    const isEve = office === "evening" && calendar.isEve();
-    const isFestal = isEve || isFeastDay || isLordsDay;
-    const isFerial = isSolemn || !isFestal;
     const oAntiphons = calendar.getOAntiphons();
     const currentAntiphon = oAntiphons[dateString];
     const isFeastOfASaint = calendar.isFeastOfASaint();
     const isTransfiguration = calendar.isTransfiguration();
     const isAnnunciation = calendar.isAnnunciation();
+    const isEmberDayInWhitsuntide = calendar.isEmberDayInWhitsuntide();
     const isPurification = calendar.isPurification();
     const isAscensiontide = calendar.isAscensiontide();
     const isEpiphanytide = calendar.isEpiphanytide();
     const isLent = calendar.isLent();
     const isTrinitytide = calendar.isTrinitytide();
-    const isOctaveOfEpiphany = calendar.isOctaveOfEpiphany();
     const isHolyInnocents = calendar.isHolyInnocents();
     const isSeptuagesimaToPassion = calendar.isSeptuagesimaToPassion();
     const isRogationDay = calendar.isRogationDay();
+    const isLordsDay = calendar.isLordsDay();
+    const isFeastDay = calendar.isFeastDay();
+    const isOctave =
+      isOctaveOfChristmas ||
+      isOctaveOfEpiphany ||
+      isOctaveOfEaster ||
+      isOctaveOfPentecost;
+    const isEve = office === "evening" && calendar.isEve();
+    const isFestal = isEve || isFeastDay || isLordsDay;
+    let isFerial = isSolemn || !isFestal;
+
+    // Octaves are not ferial unless Holy Innocents, and Ember Days
+    if (isOctave && !isEve) {
+      if ((isHolyInnocents && !isLordsDay) || isEmberDayInWhitsuntide) {
+        isFerial = true;
+      } else {
+        isFerial = false;
+      }
+    }
 
     return {
       isSolemn,
+      isOctaveOfChristmas,
+      isOctaveOfEpiphany,
       isOctaveOfEaster,
+      isOctaveOfPentecost,
       isEaster,
       isPentecost,
       isChristmas,
@@ -149,7 +169,6 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isEpiphanytide,
       isLent,
       isTrinitytide,
-      isOctaveOfEpiphany,
       isHolyInnocents,
       isSeptuagesimaToPassion,
       isRogationDay,

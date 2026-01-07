@@ -1625,4 +1625,78 @@ describe("Calendar", () => {
     expect(oa["2025-12-22"].title).toBe("O Rex gentium");
     expect(oa["2025-12-23"].title).toBe("O Emmanuel");
   });
+
+  test("should check if we're in the octave of christmas", () => {
+    // Test during Christmas Day (start of octave)
+    const christmasDay = new Calendar(dayjs("2025-12-25"));
+    expect(christmasDay.isOctaveOfChristmas()).toBe(true);
+
+    // Test during the octave (Dec 26-31)
+    const boxingDay = new Calendar(dayjs("2025-12-26"));
+    expect(boxingDay.isOctaveOfChristmas()).toBe(true);
+
+    const newYearsEve = new Calendar(dayjs("2025-12-31"));
+    expect(newYearsEve.isOctaveOfChristmas()).toBe(true);
+
+    // Test on New Year's Day (last day of octave)
+    const newYearsDay = new Calendar(dayjs("2026-01-01"));
+    expect(newYearsDay.isOctaveOfChristmas()).toBe(true);
+
+    // Test before Christmas
+    const christmasEve = new Calendar(dayjs("2025-12-24"));
+    expect(christmasEve.isOctaveOfChristmas()).toBe(false);
+
+    // Test after the octave
+    const afterOctave = new Calendar(dayjs("2026-01-02"));
+    expect(afterOctave.isOctaveOfChristmas()).toBe(false);
+  });
+
+  test("should check if we're in the octave of pentecost", () => {
+    // Test on Pentecost (start of octave)
+    const pentecost = new Calendar(dayjs("2026-05-24"));
+    expect(pentecost.isOctaveOfPentecost()).toBe(true);
+
+    // Test during the octave (May 25-30)
+    const whitsunMonday = new Calendar(dayjs("2026-05-25"));
+    expect(whitsunMonday.isOctaveOfPentecost()).toBe(true);
+
+    const midOctave = new Calendar(dayjs("2026-05-28"));
+    expect(midOctave.isOctaveOfPentecost()).toBe(true);
+
+    // Test on last day of octave (May 31)
+    const lastDay = new Calendar(dayjs("2026-05-31"));
+    expect(lastDay.isOctaveOfPentecost()).toBe(true);
+
+    // Test before Pentecost
+    const beforePentecost = new Calendar(dayjs("2026-05-23"));
+    expect(beforePentecost.isOctaveOfPentecost()).toBe(false);
+
+    // Test after the octave
+    const afterOctave = new Calendar(dayjs("2026-06-01"));
+    expect(afterOctave.isOctaveOfPentecost()).toBe(false);
+  });
+
+  test("should check if it's an ember day in whitsuntide", () => {
+    // Test Ember Wednesday (3 days after Pentecost)
+    const emberWednesday = new Calendar(dayjs("2026-05-27"));
+    expect(emberWednesday.isEmberDayInWhitsuntide()).toBe(true);
+
+    // Test Ember Friday (5 days after Pentecost)
+    const emberFriday = new Calendar(dayjs("2026-05-29"));
+    expect(emberFriday.isEmberDayInWhitsuntide()).toBe(true);
+
+    // Test Ember Saturday (6 days after Pentecost)
+    const emberSaturday = new Calendar(dayjs("2026-05-30"));
+    expect(emberSaturday.isEmberDayInWhitsuntide()).toBe(true);
+
+    // Test non-ember days
+    const pentecost = new Calendar(dayjs("2026-05-24"));
+    expect(pentecost.isEmberDayInWhitsuntide()).toBe(false);
+
+    const whitsunMonday = new Calendar(dayjs("2026-05-25"));
+    expect(whitsunMonday.isEmberDayInWhitsuntide()).toBe(false);
+
+    const afterEmberDays = new Calendar(dayjs("2026-05-31"));
+    expect(afterEmberDays.isEmberDayInWhitsuntide()).toBe(false);
+  });
 });

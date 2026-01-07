@@ -1442,6 +1442,19 @@ export class Calendar {
   }
 
   /**
+   * Check to see if it's an Ember Day in Whitsuntide.
+   */
+  isEmberDayInWhitsuntide(): boolean {
+    const pentecost = this.getPentecost();
+    const wednesdayAfter = pentecost.add(3, "day");
+    return (
+      this.today.isSame(wednesdayAfter, "day") ||
+      this.today.isSame(wednesdayAfter.add(2, "day"), "day") ||
+      this.today.isSame(wednesdayAfter.add(3, "day"), "day")
+    );
+  }
+
+  /**
    * Check to see if we're in Ascensiontide.
    */
   isAscensiontide(): boolean {
@@ -1453,6 +1466,28 @@ export class Calendar {
   }
 
   /**
+   * Check to see if we're in the Octave of Christmas.
+   */
+  isOctaveOfChristmas(): boolean {
+    const christmas = this.createDate(`${this.getLiturgicalYear() - 1}-12-25`);
+    return (
+      this.today.isSameOrAfter(christmas, "day") &&
+      this.today.isSameOrBefore(christmas.add(7, "day"), "day")
+    );
+  }
+
+  /**
+   * Check to see if we're in the Octave of Epiphany.
+   */
+  isOctaveOfEpiphany(): boolean {
+    const epiphany = this.getEpiphany();
+    return (
+      this.today.isSameOrAfter(epiphany, "day") &&
+      this.today.isSameOrBefore(epiphany.add(7, "day"), "day")
+    );
+  }
+
+  /**
    * Check to see if we're in the Octave of Easter.
    */
   isOctaveOfEaster(): boolean {
@@ -1460,6 +1495,17 @@ export class Calendar {
     return (
       this.today.isSameOrAfter(easter, "day") &&
       this.today.isSameOrBefore(easter.add(7, "day"), "day")
+    );
+  }
+
+  /**
+   * Check to see if we're in the Octave of Pentecost.
+   */
+  isOctaveOfPentecost(): boolean {
+    const pentecost = this.getPentecost();
+    return (
+      this.today.isSameOrAfter(pentecost, "day") &&
+      this.today.isSameOrBefore(pentecost.add(7, "day"), "day")
     );
   }
 
@@ -1485,17 +1531,6 @@ export class Calendar {
     return (
       this.today.isSameOrAfter(septuagesima, "day") &&
       this.today.isSameOrBefore(passionSunday, "day")
-    );
-  }
-
-  /**
-   * Check to see if we're in the Octave of Epiphany.
-   */
-  isOctaveOfEpiphany(): boolean {
-    const epiphany = this.getEpiphany();
-    return (
-      this.today.isSameOrAfter(epiphany, "day") &&
-      this.today.isSameOrBefore(epiphany.add(7, "day"), "day")
     );
   }
 
