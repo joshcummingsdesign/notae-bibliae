@@ -45,9 +45,9 @@ export async function GET(
     const tomorrowDate = calendar.getToday().add(1, "day");
     calendar = new Calendar(tomorrowDate);
   } else if (isFullDate) {
-    calendar = new Calendar(dayjs(date).tz(TIMEZONE));
+    calendar = new Calendar(dayjs.tz(date, TIMEZONE));
   } else if (isYear) {
-    calendar = new Calendar(dayjs(`${date}-01-01`).tz(TIMEZONE));
+    calendar = new Calendar(dayjs.tz(`${date}-01-01`, TIMEZONE));
   }
 
   const liturgicalYear = calendar.getLiturgicalYear();
