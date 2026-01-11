@@ -121,7 +121,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     const isLent = calendar.isLent();
     const isTrinitytide = calendar.isTrinitytide();
     const isHolyInnocents = calendar.isHolyInnocents();
-    const isSeptuagesimaToPassion = calendar.isSeptuagesimaToPassion();
+    const isSeptuagesimaToEaster = calendar.isSeptuagesimaToEaster();
     const isRogationDay = calendar.isRogationDay();
     const isLordsDay = calendar.isLordsDay();
     const isFeastDay = calendar.isFeastDay();
@@ -164,13 +164,14 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isFeastOfASaint,
       isTransfiguration,
       isAnnunciation,
+      isEmberDayInWhitsuntide,
       isPurification,
       isAscensiontide,
       isEpiphanytide,
       isLent,
       isTrinitytide,
       isHolyInnocents,
-      isSeptuagesimaToPassion,
+      isSeptuagesimaToEaster,
       isRogationDay,
     };
   }, [calendar, dateString]);
@@ -218,10 +219,11 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
   const shouldOmitTeDeum = useMemo(
     () =>
+      calendarData.isRogationDay ||
+      calendarData.isEmberDayInWhitsuntide ||
       calendarData.isAdvent ||
       (calendarData.isHolyInnocents && !calendarData.isLordsDay) ||
-      calendarData.isSeptuagesimaToPassion ||
-      calendarData.isRogationDay ||
+      calendarData.isSeptuagesimaToEaster ||
       calendarData.isSolemn,
     [calendarData]
   );

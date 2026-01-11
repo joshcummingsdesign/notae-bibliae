@@ -1535,6 +1535,18 @@ export class Calendar {
   }
 
   /**
+   * Check to see if we're in the time between Septuagesima and Easter (exclusive).
+   */
+  isSeptuagesimaToEaster(): boolean {
+    const septuagesima = this.getSeptuagesima();
+    const easter = this.getEasterSunday();
+    return (
+      this.today.isSameOrAfter(septuagesima, "day") &&
+      this.today.isBefore(easter, "day")
+    );
+  }
+
+  /**
    * Check to see if it's a feast day.
    */
   isFeastDay(): boolean {

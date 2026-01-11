@@ -1589,6 +1589,17 @@ describe("Calendar", () => {
     expect(c.isSeptuagesimaToPassion()).toBeFalsy();
   });
 
+  test("should check to see if we're in septuagesima to easter (exclusive)", () => {
+    const a = new Calendar(dayjs("2026-02-01"));
+    expect(a.isSeptuagesimaToEaster()).toBeTruthy();
+
+    const b = new Calendar(dayjs("2026-04-04"));
+    expect(b.isSeptuagesimaToEaster()).toBeTruthy();
+
+    const c = new Calendar(dayjs("2026-04-05"));
+    expect(c.isSeptuagesimaToEaster()).toBeFalsy();
+  });
+
   test("should check to see if it's holy innocents day", () => {
     const a = new Calendar(dayjs("2025-12-28"));
     expect(a.isHolyInnocents()).toBeTruthy();
