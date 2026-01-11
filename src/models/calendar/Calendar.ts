@@ -211,13 +211,16 @@ export class Calendar {
     const liturgicalYear = this.getLiturgicalYear();
     const calendarYear = liturgicalYear - 1;
     const christmas = this.createDate(`${calendarYear}-12-25`);
+    const epiphany = this.createDate(`${liturgicalYear}-01-06`);
 
     const sundayAfterChristmas =
       christmas.day() === 0
         ? christmas.add(7, "day")
         : christmas.add(7 - christmas.day(), "day");
 
-    return [
+    const secondSundayAfterChristmas = sundayAfterChristmas.add(7, "day");
+
+    const sundays: CalendarItem[] = [
       {
         date: sundayAfterChristmas.format("YYYY-MM-DD"),
         title: "First Sunday After Christmas",
@@ -225,14 +228,20 @@ export class Calendar {
         class: 7,
         isSunday: true,
       },
-      {
-        date: sundayAfterChristmas.add(7, "day").format("YYYY-MM-DD"),
+    ];
+
+    // Only include Second Sunday After Christmas if it falls before Epiphany
+    if (secondSundayAfterChristmas.isBefore(epiphany, "day")) {
+      sundays.push({
+        date: secondSundayAfterChristmas.format("YYYY-MM-DD"),
         title: "Second Sunday After Christmas",
         rank: 3,
         class: 7,
         isSunday: true,
-      },
-    ];
+      });
+    }
+
+    return sundays;
   }
 
   /**

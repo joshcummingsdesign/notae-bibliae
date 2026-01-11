@@ -9,7 +9,7 @@ describe("Lessons", () => {
     const l = new Lessons(c);
     const a = l.getAll();
     const entries = Object.entries(a);
-    expect(entries.length).toBe(364);
+    expect(entries.length).toBe(363);
     expect(entries[0]).toEqual([
       "2025-11-30",
       {
@@ -25,21 +25,41 @@ describe("Lessons", () => {
       },
     ]);
     expect(entries[entries.length - 1]).toEqual([
-      "2026-11-29",
+      "2026-11-28",
       {
         evening: {
-          first: [
-            "Ecclesiastes 11:9-10, Ecclesiastes 12:1-8, Ecclesiastes 12:13-14",
-          ],
-          second: ["Heb. 13:1-21"],
+          first: ["Wisdom 13:1-9"],
+          second: ["Rev. 3:7-13"],
         },
         morning: {
-          first: ["Jer. 4:23-31"],
-          second: ["Matt. 25:31-46"],
+          first: ["Joel 3:9-17"],
+          second: ["2 Pet. 3:11-18"],
         },
-        title: "Christ the King - Sunday",
+        title: "Christ the King - Saturday",
       },
     ]);
+  });
+
+  test("should handle 2028-2029 with no Second Sunday After Christmas", () => {
+    // In 2028-2029: Dec 31 is First Sunday After Christmas, Jan 6 is Epiphany (Sat), Jan 7 is First Sunday of Epiphany
+    const c = new Calendar(dayjs("2028-12-03"));
+    const l = new Lessons(c);
+    const all = l.getAll();
+
+    // Dec 31, 2028 - First Sunday After Christmas
+    expect(all["2028-12-31"]?.title).toBe("First Sunday After Christmas");
+    // Jan 1, 2029 - Circumcision of the Lord (feast day)
+    expect(all["2029-01-01"]?.title).toBe("Circumcision of the Lord");
+    // Jan 2-4, 2029 - Should use explicit date lessons since First Sunday After Christmas has no weekday lessons
+    expect(all["2029-01-02"]?.title).toBe("January 2");
+    expect(all["2029-01-03"]?.title).toBe("January 3");
+    expect(all["2029-01-04"]?.title).toBe("January 4");
+    // Jan 5, 2029 - Epiphany Eve
+    expect(all["2029-01-05"]?.title).toBe("Epiphany Eve");
+    // Jan 6, 2029 - Epiphany
+    expect(all["2029-01-06"]?.title).toBe("The Epiphany");
+    // Jan 7, 2029 - First Sunday of Epiphany
+    expect(all["2029-01-07"]?.title).toBe("First Sunday of Epiphany: Baptism of the Lord");
   });
 
   test("should get today's lessons", () => {

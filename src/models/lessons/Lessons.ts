@@ -28,9 +28,8 @@ export class Lessons {
   getAll(): LessonDateMap {
     const calendarData = this.calendar.getAll();
     const sundays = this.calendar.getAllSundays();
-    const eventKeys = Object.keys(calendarData);
-    const startDate = this.createDate(eventKeys[0]);
-    const endDate = this.createDate(eventKeys[eventKeys.length - 1]);
+    const startDate = this.calendar.getFirstSundayOfAdvent();
+    const endDate = this.calendar.getNextFirstSundayOfAdvent().subtract(1, "day");
     let currentDay = startDate;
     let lastSunday = "";
 
@@ -47,31 +46,35 @@ export class Lessons {
       const lessons = lessonData[lookupKey as keyof typeof lessonData];
       const hasEvent = !!event && !!lookupKey && !!lessons;
 
-      // If there's an event, add it
+      // If there's a feast day (calendar event with lessons), use it
       if (hasEvent) {
         output[date] = {
           title: lookupKey,
           ...lessons[0]!, // there should always be a 0 index
         };
-      } else if (dateLessons) {
-        // If there is an explicit date, add it
-        output[date] = {
-          title: dateStr,
-          ...dateLessons[0]!, // there should always be a 0 index
-        };
-        // If there's an event, add it
-      } else if (hasEvent) {
-      } else {
-        // Otherwise, add the weekday
-        const lessons = lessonData[lastSunday as keyof typeof lessonData];
-        const lesson = lessons[index];
-        const title = `${lastSunday} - ${dayjs().day(index).format("dddd")}`;
-        if (lesson) {
+      } else if (index !== 0 && lastSunday) {
+        // For weekdays (Mon-Sat), Sunday cycle takes precedence over explicit dates
+        const sundayLessons = lessonData[lastSunday as keyof typeof lessonData];
+        const weekdayLesson = sundayLessons?.[index];
+        if (weekdayLesson) {
+          const title = `${lastSunday} - ${dayjs().day(index).format("dddd")}`;
           output[date] = {
             title,
-            ...lesson,
+            ...weekdayLesson,
+          };
+        } else if (dateLessons) {
+          // Fall back to explicit date if no weekday lesson
+          output[date] = {
+            title: dateStr,
+            ...dateLessons[0]!,
           };
         }
+      } else if (dateLessons) {
+        // For Sundays or before first Sunday, use explicit date lessons
+        output[date] = {
+          title: dateStr,
+          ...dateLessons[0]!,
+        };
       }
 
       // If it's a Sunday, get its name and set it as lastSunday
