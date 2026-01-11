@@ -220,7 +220,6 @@ export const useDailyOffice = (office: "morning" | "evening") => {
   const shouldOmitTeDeum = useMemo(
     () =>
       calendarData.isRogationDay ||
-      calendarData.isEmberDayInWhitsuntide ||
       calendarData.isAdvent ||
       (calendarData.isHolyInnocents && !calendarData.isLordsDay) ||
       calendarData.isSeptuagesimaToEaster ||
