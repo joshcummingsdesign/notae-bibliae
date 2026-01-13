@@ -92,7 +92,9 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
             <p>
               <strong>Collect for {collect.title}</strong>
             </p>
-            <CollectText text={collect.collect} />
+            <CollectText
+              text={collect.collect.replace("Amen", "<em>Amen</em>")}
+            />
           </Fragment>
         );
       })}
