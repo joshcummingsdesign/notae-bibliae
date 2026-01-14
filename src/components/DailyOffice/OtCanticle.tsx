@@ -98,7 +98,9 @@ const Canticle: React.FC<{ link: string; text: string; notes: string }> = ({
     </p>
     <p>
       <strong>
-        <Link href={link}>{text}</Link>
+        <Link href={link} target="_blank">
+          {text}
+        </Link>
       </strong>{" "}
       ({notes})
     </p>
