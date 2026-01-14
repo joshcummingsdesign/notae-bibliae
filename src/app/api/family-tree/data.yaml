@@ -54,7 +54,7 @@ nodes:
     category: gentile
     type: person
     notes: |
-      - Lamech is a descendant of Cain who famously said,
+      - Lamech is a descendant of Cain who famously lamented,
         "If Cain's revenge is sevenfold, then Lamech's is seventy-sevenfold" (Gen. 4:24).
   - id: 8
     parentId: 5
