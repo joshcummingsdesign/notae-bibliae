@@ -66,7 +66,7 @@ export class Calendar {
    */
   getLiturgicalYear(): number {
     const firstSundayOfAdvent = this.calculateFirstSundayOfAdvent(
-      this.today.year()
+      this.today.year(),
     );
     // If we're after the First Sunday of Advent,
     // then the liturgical year has started,
@@ -92,7 +92,7 @@ export class Calendar {
     // If we are already in the liturgical year, we need last year's advent dates
     if (calendarYear === liturgicalYear) {
       firstSundayOfAdvent = this.calculateFirstSundayOfAdvent(
-        liturgicalYear - 1
+        liturgicalYear - 1,
       );
     }
     return firstSundayOfAdvent;
@@ -116,7 +116,7 @@ export class Calendar {
         const [mm, dd] = item.date.split("-");
         // Initial attempt: same year as start
         let fullDate = this.createDate(
-          `${firstSundayOfAdvent.year()}-${mm}-${dd}`
+          `${firstSundayOfAdvent.year()}-${mm}-${dd}`,
         );
 
         // If the date is before the starting date, bump to next year
@@ -156,7 +156,7 @@ export class Calendar {
       {
         date: firstSundayOfAdvent.add(2, "week").format("YYYY-MM-DD"),
         title:
-          "Third Sunday of Advent: [Gaudete Sunday](/liturgy/seasons/advent/gaudete-sunday)",
+          "Third Sunday of Advent: [Gaudete Sunday](/liturgy/liturgical-year/seasons/advent/gaudete-sunday)",
         rank: 3,
         class: 3,
         isSunday: true,
@@ -328,7 +328,7 @@ export class Calendar {
       {
         date: firstSunday.format("YYYY-MM-DD"),
         title:
-          "First Sunday of Epiphany: [Baptism of the Lord](/liturgy/seasons/epiphanytide/baptism-of-the-lord)",
+          "First Sunday of Epiphany: [Baptism of the Lord](/liturgy/liturgical-year/seasons/epiphanytide/baptism-of-the-lord)",
         rank: 3,
         class: 2,
         isSunday: true,
@@ -382,28 +382,32 @@ export class Calendar {
     return [
       {
         date: septuagesima.format("YYYY-MM-DD"),
-        title: "[Septuagesima](/liturgy/seasons/pre-lent/septuagesima)",
+        title:
+          "[Septuagesima](/liturgy/liturgical-year/seasons/pre-lent/septuagesima)",
         rank: 2,
         class: 3,
         isSunday: true,
       },
       {
         date: sexagesima.format("YYYY-MM-DD"),
-        title: "[Sexagesima](/liturgy/seasons/pre-lent/sexagesima)",
+        title:
+          "[Sexagesima](/liturgy/liturgical-year/seasons/pre-lent/sexagesima)",
         rank: 2,
         class: 3,
         isSunday: true,
       },
       {
         date: quinquagesima.format("YYYY-MM-DD"),
-        title: "[Quinquagesima](/liturgy/seasons/pre-lent/quinquagesima)",
+        title:
+          "[Quinquagesima](/liturgy/liturgical-year/seasons/pre-lent/quinquagesima)",
         rank: 2,
         class: 3,
         isSunday: true,
       },
       {
         date: shroveTuesday.format("YYYY-MM-DD"),
-        title: "[Shrove Tuesday](/liturgy/seasons/pre-lent/shrove-tuesday)",
+        title:
+          "[Shrove Tuesday](/liturgy/liturgical-year/seasons/pre-lent/shrove-tuesday)",
         rank: 1,
         class: 5,
       },
@@ -475,7 +479,7 @@ export class Calendar {
       {
         date: passionSunday.subtract(1, "week").format("YYYY-MM-DD"),
         title:
-          "Fourth Sunday of Lent: [Laetare Sunday](/liturgy/seasons/lent/laetare-sunday)",
+          "Fourth Sunday of Lent: [Laetare Sunday](/liturgy/liturgical-year/seasons/lent/laetare-sunday)",
         rank: 3,
         class: 3,
         isSunday: true,
@@ -483,7 +487,7 @@ export class Calendar {
       {
         date: passionSunday.format("YYYY-MM-DD"),
         title:
-          "Fifth Sunday of Lent: [Passion Sunday](/liturgy/seasons/lent/passiontide/passion-sunday)",
+          "Fifth Sunday of Lent: [Passion Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday)",
         rank: 3,
         class: 1,
         isSunday: true,
@@ -532,7 +536,7 @@ export class Calendar {
       {
         date: holyWeekStart.format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Palm Sunday](/liturgy/seasons/lent/passiontide/palm-sunday)",
+          "Holy Week: [Palm Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday)",
         rank: 1,
         class: 1,
         isSunday: true,
@@ -540,48 +544,49 @@ export class Calendar {
       {
         date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Holy Monday](/liturgy/seasons/lent/passiontide/holy-monday)",
+          "Holy Week: [Holy Monday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
         rank: 1,
         class: 2,
       },
       {
         date: holyWeekStart.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Holy Tuesday](/liturgy/seasons/lent/passiontide/holy-tuesday)",
+          "Holy Week: [Holy Tuesday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
         rank: 1,
         class: 2,
       },
       {
         date: holyWeekStart.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Spy Wednesday](/liturgy/seasons/lent/passiontide/spy-wednesday)",
+          "Holy Week: [Spy Wednesday](/liturgy/liturgical-year/seasons/lent/passiontide/spy-wednesday)",
         rank: 1,
         class: 2,
       },
       {
         date: holyWeekStart.add(4, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Maundy Thursday](/liturgy/seasons/lent/passiontide/maundy-thursday)",
+          "Holy Week: [Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
         rank: 1,
         class: 2,
       },
       {
         date: holyWeekStart.add(5, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/seasons/lent/passiontide/good-friday)",
+          "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
         rank: 1,
         class: 2,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Holy Saturday](/liturgy/seasons/lent/passiontide/holy-saturday)",
+          "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
         rank: 1,
         class: 2,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
-        title: "[Easter Vigil](/liturgy/seasons/eastertide/easter-vigil)",
+        title:
+          "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
         rank: 4,
         class: 5,
       },
@@ -599,7 +604,8 @@ export class Calendar {
     return [
       {
         date: ashWednesday.format("YYYY-MM-DD"),
-        title: "[Ash Wednesday](/liturgy/seasons/lent/ash-wednesday)",
+        title:
+          "[Ash Wednesday](/liturgy/liturgical-year/seasons/lent/ash-wednesday)",
         rank: 1,
         class: 2,
       },
@@ -631,7 +637,7 @@ export class Calendar {
       {
         date: annunciation.format("YYYY-MM-DD"),
         title:
-          "[Annunciation of the Lord](/liturgy/seasons/eastertide/annunciation)",
+          "[Annunciation of the Lord](/liturgy/liturgical-year/seasons/eastertide/annunciation)",
         rank: 5,
         class: 5,
         isFeast: true,
@@ -659,7 +665,7 @@ export class Calendar {
       {
         date: easter.format("YYYY-MM-DD"),
         title:
-          "[Easter (Resurrection of the Lord)](/liturgy/seasons/eastertide/easter)",
+          "[Easter (Resurrection of the Lord)](/liturgy/liturgical-year/seasons/eastertide/easter)",
         rank: 1,
         class: 2,
         isFeast: true,
@@ -705,7 +711,7 @@ export class Calendar {
       {
         date: easter.add(7, "day").format("YYYY-MM-DD"),
         title:
-          "[Second Sunday of Easter](/liturgy/seasons/eastertide/second-sunday-of-easter)",
+          "[Second Sunday of Easter](/liturgy/liturgical-year/seasons/eastertide/second-sunday-of-easter)",
         rank: 3,
         class: 8,
         isFeast: true,
@@ -767,7 +773,7 @@ export class Calendar {
       {
         date: ascension.format("YYYY-MM-DD"),
         title:
-          "[Ascension Day](/liturgy/seasons/eastertide/ascensiontide/ascension-day)",
+          "[Ascension Day](/liturgy/liturgical-year/seasons/eastertide/ascensiontide/ascension-day)",
         rank: 1,
         class: 2,
         isFeast: true,
@@ -807,7 +813,7 @@ export class Calendar {
       {
         date: pentecost.format("YYYY-MM-DD"),
         title:
-          "[Pentecost (Whitsunday)](/liturgy/seasons/whitsuntide/pentecost)",
+          "[Pentecost (Whitsunday)](/liturgy/liturgical-year/seasons/whitsuntide/pentecost)",
         rank: 1,
         class: 2,
         isFeast: true,
@@ -904,7 +910,7 @@ export class Calendar {
       const sunday = trinitySunday.add(i * 7, "day");
       const title =
         i === 0
-          ? "[Trinity Sunday](/liturgy/seasons/trinitytide/trinity-sunday)"
+          ? "[Trinity Sunday](/liturgy/liturgical-year/seasons/trinitytide/trinity-sunday)"
           : `${numberToWords(i)} Sunday After Trinity`;
       const rank = i === 0 ? 2 : 3;
       const cls = i === 0 ? 4 : 7;
@@ -931,7 +937,8 @@ export class Calendar {
 
     days.push({
       date: corpusChristi.format("YYYY-MM-DD"),
-      title: "[Corpus Christi](/liturgy/seasons/trinitytide/corpus-christi)",
+      title:
+        "[Corpus Christi](/liturgy/liturgical-year/seasons/trinitytide/corpus-christi)",
       rank: 5,
       class: 4,
       isFeast: true,
@@ -939,7 +946,8 @@ export class Calendar {
 
     days.push({
       date: christTheKing.format("YYYY-MM-DD"),
-      title: "[Christ the King](/liturgy/seasons/trinitytide/christ-the-king)",
+      title:
+        "[Christ the King](/liturgy/liturgical-year/seasons/trinitytide/christ-the-king)",
       rank: 2,
       class: 2,
       isFeast: true,
@@ -1108,14 +1116,14 @@ export class Calendar {
           .reduce<CalendarItem | null>(
             (lowest, item) =>
               lowest === null || item.rank < lowest.rank ? item : lowest,
-            null
+            null,
           );
         if (sunday) {
           acc[date] = stripMarkdownLinks(sunday.title);
         }
         return acc;
       },
-      {}
+      {},
     );
   }
 
@@ -1124,7 +1132,7 @@ export class Calendar {
    */
   getByDate(
     date: string = this.today.format("YYYY-MM-DD"),
-    rank: boolean = true
+    rank: boolean = true,
   ): CalendarItem[] {
     const all = this.getAll(rank);
     return all[date] || [];
@@ -1137,10 +1145,10 @@ export class Calendar {
     seasonName: SeasonName,
     rank: boolean = true,
     items?: DateMap,
-    stripHtml?: boolean
+    stripHtml?: boolean,
   ): DateMap {
     const season = this.getSeasons().find(
-      (season) => season.name === seasonName
+      (season) => season.name === seasonName,
     )!;
     const all = items || this.getAll(rank);
     return Object.entries(all).reduce<DateMap>((acc, [date, items]) => {
@@ -1149,7 +1157,7 @@ export class Calendar {
           this.createDate(season.start),
           this.createDate(season.end),
           "day",
-          "[]"
+          "[]",
         )
       ) {
         acc[date] = stripHtml
@@ -1173,8 +1181,8 @@ export class Calendar {
         this.createDate(season.start),
         this.createDate(season.end),
         "day",
-        "[]"
-      )
+        "[]",
+      ),
     )!.name;
   }
 
@@ -1201,11 +1209,11 @@ export class Calendar {
           ([date, items]) =>
             `${this.createDate(date).format("MMMM D")} — ${items
               .map((i) => i.title)
-              .join(" — ")}`
+              .join(" — ")}`,
         );
         return acc;
       },
-      {} as FormattedSeasonItems
+      {} as FormattedSeasonItems,
     );
   }
 
@@ -1569,7 +1577,7 @@ export class Calendar {
   isEve(): boolean {
     const items = this.getByDate();
     return items.some(
-      (item) => item.title.includes("Eve") || item.title.includes("Vigil")
+      (item) => item.title.includes("Eve") || item.title.includes("Vigil"),
     );
   }
 
@@ -1642,7 +1650,7 @@ export class Calendar {
     if (hasSaint) {
       // Then, get the highest ranked item.
       const sorted = currentDay.sort(
-        (a, b) => (a.class || 99) - (b.class || 99)
+        (a, b) => (a.class || 99) - (b.class || 99),
       );
 
       // If the highest ranked item is a saint, then it's the feast of a saint

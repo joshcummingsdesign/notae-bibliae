@@ -31,7 +31,7 @@
   },
   {
     "date": "12-08",
-    "title": "[Conception of the Blessed Virgin Mary](/liturgy/seasons/advent/conception-of-the-blessed-virgin-mary)",
+    "title": "[Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/advent/conception-of-the-blessed-virgin-mary)",
     "rank": 6,
     "class": 5,
     "isFeast": true,
@@ -101,7 +101,7 @@
   },
   {
     "date": "12-25",
-    "title": "[Christmas Day (Nativity of the Lord)](/liturgy/seasons/christmastide/christmas-day)",
+    "title": "[Christmas Day (Nativity of the Lord)](/liturgy/liturgical-year/seasons/christmastide/christmas-day)",
     "rank": 1,
     "class": 2,
     "isFeast": true,
@@ -125,14 +125,14 @@
   },
   {
     "date": "12-28",
-    "title": "[Holy Innocents' Day](/liturgy/seasons/christmastide/holy-innocents-day)",
+    "title": "[Holy Innocents' Day](/liturgy/liturgical-year/seasons/christmastide/holy-innocents-day)",
     "rank": 5,
     "class": 5,
     "isFeast": true
   },
   {
     "date": "01-01",
-    "title": "[Circumcision of the Lord](/liturgy/seasons/christmastide/circumcision-of-the-lord)",
+    "title": "[Circumcision of the Lord](/liturgy/liturgical-year/seasons/christmastide/circumcision-of-the-lord)",
     "rank": 5,
     "class": 5,
     "isFeast": true
@@ -159,7 +159,7 @@
   },
   {
     "date": "01-06",
-    "title": "[The Epiphany](/liturgy/seasons/epiphanytide/epiphany)",
+    "title": "[The Epiphany](/liturgy/liturgical-year/seasons/epiphanytide/epiphany)",
     "rank": 2,
     "class": 2,
     "isFeast": true,
@@ -175,13 +175,6 @@
   {
     "date": "01-13",
     "title": "[Saint Hilary](/people/saints/latin-fathers/hilary-of-poitiers), Bishop and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "01-15",
-    "title": "[Saint Paul of Thebes](/people/saints/desert-fathers/paul-of-thebes), The First Hermit",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -217,20 +210,6 @@
     "isSaint": true
   },
   {
-    "date": "01-28",
-    "title": "Saint [Isaac of Nineveh](/people/saints/syriac-fathers/isaac-of-nineveh), Bishop",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "01-29",
-    "title": "[Saint Aphrahat](/people/saints/syriac-fathers/aphrahat-the-persian), Bishop",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "02-01",
     "title": "Eve of the Presentation",
     "rank": 4,
@@ -238,24 +217,11 @@
   },
   {
     "date": "02-02",
-    "title": "[Presentation of the Lord (Purification)](/liturgy/seasons/epiphanytide/presentation-of-the-lord)",
+    "title": "[Presentation of the Lord (Purification)](/liturgy/liturgical-year/seasons/epiphanytide/presentation-of-the-lord)",
     "rank": 5,
     "class": 4,
     "isFeast": true,
     "isPrincipalFeast": true
-  },
-  {
-    "date": "02-14",
-    "title": "[Saint Valentine](/people/saints/early/valentine-of-rome), Martyr",
-    "rank": 6,
-    "class": 10
-  },
-  {
-    "date": "02-22",
-    "title": "[Saint Papias](/people/saints/apostolic-fathers/papias-of-hierapolis), Bishop",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
   },
   {
     "date": "02-23",
@@ -331,20 +297,6 @@
     "isSaint": true
   },
   {
-    "date": "05-09",
-    "title": "[Saint Pachomius](/people/saints/desert-fathers/pachomius-the-great), Abbot",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "05-12",
-    "title": "[Saint Epiphanius](/people/saints/early/epiphanius-of-salamis), Bishop",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "05-14",
     "title": "[Saint Matthias](/people/saints/apostles/matthias), Apostle",
     "rank": 6,
@@ -360,15 +312,15 @@
     "isSaint": true
   },
   {
-    "date": "05-26",
-    "title": "[Saint Quadratus](/people/saints/apostolic-fathers/quadratus-of-athens), Bishop",
+    "date": "05-27",
+    "title": "[Saint Augustine of Canterbury](/people/saints/medieval/augustine-of-canterbury), Bishop",
     "rank": 6,
     "class": 10,
     "isSaint": true
   },
   {
     "date": "05-31",
-    "title": "[Visitation of the Blessed Virgin Mary](/liturgy/seasons/trinitytide/visitation)",
+    "title": "[Visitation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/visitation)",
     "rank": 3,
     "class": 4,
     "isFeast": true
@@ -441,13 +393,6 @@
     "isSaint": true
   },
   {
-    "date": "07-13",
-    "title": "[Saint Silas](/people/saints/biblical/silas), Companion of Saint Paul",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "07-15",
     "title": "[Saint Bonaventure](/people/saints/medieval/bonaventure-of-bagnoregio), Bishop and Doctor of the Church",
     "rank": 6,
@@ -463,25 +408,11 @@
     "isSaint": true
   },
   {
-    "date": "07-23",
-    "title": "[Saint John Cassian](/people/saints/early/john-cassian), Monk",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "07-25",
     "title": "Saint [James](/people/saints/apostles/james), Apostle",
     "rank": 6,
     "class": 6,
     "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "07-25",
-    "title": "Saint [Christopher](/people/saints/early/christopher-of-lycia), Martyr",
-    "rank": 6,
-    "class": 10,
     "isSaint": true
   },
   {
@@ -500,7 +431,7 @@
   },
   {
     "date": "08-06",
-    "title": "[Transfiguration of the Lord](/liturgy/seasons/trinitytide/transfiguration)",
+    "title": "[Transfiguration of the Lord](/liturgy/liturgical-year/seasons/trinitytide/transfiguration)",
     "rank": 5,
     "class": 5,
     "isFeast": true
@@ -515,13 +446,6 @@
   {
     "date": "08-13",
     "title": "Saint [Hippolytus](/people/saints/early/hippolytus-of-rome), Priest and Martyr",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "08-13",
-    "title": "Saint [Maximus](/people/saints/greek-fathers/maximus-the-confessor), Confessor",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -588,7 +512,7 @@
   },
   {
     "date": "09-14",
-    "title": "[Holy Cross Day](/liturgy/seasons/trinitytide/holy-cross-day)",
+    "title": "[Holy Cross Day](/liturgy/liturgical-year/seasons/trinitytide/holy-cross-day)",
     "rank": 5,
     "class": 5,
     "isFeast": true
@@ -632,13 +556,6 @@
     "isSaint": true
   },
   {
-    "date": "10-11",
-    "title": "[Saint Philip the Evangelist](/people/saints/biblical/philip-the-evangelist), Deacon",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "10-17",
     "title": "[Saint Ignatius of Antioch](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
     "rank": 6,
@@ -663,7 +580,7 @@
   },
   {
     "date": "10-31",
-    "title": "[All Hallows' Eve](/liturgy/seasons/trinitytide/allhallowtide/all-hallows-eve)",
+    "title": "[All Hallows' Eve](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-hallows-eve)",
     "rank": 4,
     "class": 4
   },
@@ -675,7 +592,7 @@
   },
   {
     "date": "11-01",
-    "title": "[All Saints' Day](/liturgy/seasons/trinitytide/allhallowtide/all-saints-day)",
+    "title": "[All Saints' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-saints-day)",
     "rank": 5,
     "class": 4,
     "isFeast": true,
@@ -684,7 +601,7 @@
   },
   {
     "date": "11-02",
-    "title": "[All Souls' Day](/liturgy/seasons/trinitytide/allhallowtide/all-souls-day)",
+    "title": "[All Souls' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day)",
     "rank": 5,
     "class": 5
   },
@@ -712,13 +629,6 @@
   {
     "date": "11-25",
     "title": "[Saint Catherine of Alexandria](/people/saints/early/catherine-of-alexandria), Virgin and Martyr",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "11-29",
-    "title": "[Saint Jacob of Serugh](/people/saints/syriac-fathers/jacob-of-serugh), Bishop",
     "rank": 6,
     "class": 10,
     "isSaint": true

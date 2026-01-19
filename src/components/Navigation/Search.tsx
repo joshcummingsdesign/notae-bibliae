@@ -140,7 +140,7 @@ export const Search: React.FC<Props> = ({
       if (item.title.includes("A Brief History of the Reformation")) {
         title = item.title.replace(
           /A Brief History of the Reformation, Part (\d): (.*)/,
-          "Reformation, Part $1: $2"
+          "Reformation, Part $1: $2",
         );
       }
 
@@ -158,6 +158,10 @@ export const Search: React.FC<Props> = ({
 
       if (item.link.includes("/liturgy/rites/book-of-common-prayer/")) {
         title = title + ": BCP";
+      }
+
+      if (item.link.includes("/liturgy/liturgical-year/")) {
+        title = "Liturgical Year: " + title;
       }
 
       if (item.link.includes("/liturgy/daily-office/")) {
