@@ -1981,6 +1981,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/early/martin-of-tours",
               },
               {
+                title: "Monica of Hippo",
+                link: "/people/saints/early/monica-of-hippo",
+              },
+              {
                 title: "Nicholas of Myra",
                 link: "/people/saints/early/nicholas-of-myra",
               },
