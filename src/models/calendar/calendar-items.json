@@ -38,13 +38,6 @@
     "isSaint": true
   },
   {
-    "date": "12-11",
-    "title": "[Saint Damasus I](/people/saints/latin-fathers/damasus-of-rome), Pope",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "12-13",
     "title": "[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr",
     "rank": 6,
@@ -131,6 +124,13 @@
     "isFeast": true
   },
   {
+    "date": "12-29",
+    "title": "[Saint Thomas Becket](/people/saints/medieval/thomas-becket), Bishop and Martyr",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
     "date": "01-01",
     "title": "[Circumcision of the Lord](/liturgy/liturgical-year/seasons/christmastide/circumcision-of-the-lord)",
     "rank": 5,
@@ -180,6 +180,20 @@
     "isSaint": true
   },
   {
+    "date": "01-21",
+    "title": "[Saint Agnes](/people/saints/early/agnes-of-rome), Virgin and Martyr",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "01-22",
+    "title": "[Saint Vincent](/people/saints/early/vincent-of-saragossa), Deacon and Martyr",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
     "date": "01-25",
     "title": "[Conversion of Saint Paul](/people/saints/apostles/paul), Apostle",
     "rank": 6,
@@ -217,8 +231,29 @@
     "isPrincipalFeast": true
   },
   {
+    "date": "02-10",
+    "title": "[Saint Scholastica](/people/saints/medieval/scholastica-of-nursia), Virgin",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "02-14",
+    "title": "Saints [Cyril](/people/saints/medieval/cyril-and-methodius), Monk, and [Methodius](/people/saints/medieval/cyril-and-methodius), Bishop",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
     "date": "02-23",
     "title": "[Saint Polycarp](/people/saints/apostolic-fathers/polycarp-of-smyrna), Bishop and Martyr",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "03-07",
+    "title": "[Saints Perpetua and Felicity](/people/saints/early/perpetua-and-felicity), Martyrs",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -246,21 +281,15 @@
     "isSaint": true
   },
   {
-    "date": "03-21",
-    "title": "[Thomas Cranmer](/meditations/a-brief-history-of-the-reformation-part-3#the-book-of-common-prayer), Archbishop of Canterbury, Reformation Martyr",
-    "rank": 6,
-    "class": 12
-  },
-  {
-    "date": "04-04",
-    "title": "[Saint Isidore](/people/saints/latin-fathers/isidore-of-seville), Bishop and Doctor of the Church",
+    "date": "04-21",
+    "title": "[Saint Anselm](/people/saints/medieval/anselm-of-canterbury), Bishop and Doctor of the Church",
     "rank": 6,
     "class": 10,
     "isSaint": true
   },
   {
-    "date": "04-21",
-    "title": "[Saint Anselm](/people/saints/medieval/anselm-of-canterbury), Bishop and Doctor of the Church",
+    "date": "04-23",
+    "title": "[Saint George](/people/saints/early/george-of-lydda), Martyr",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -271,6 +300,13 @@
     "rank": 6,
     "class": 6,
     "isFeast": true,
+    "isSaint": true
+  },
+  {
+    "date": "04-29",
+    "title": "[Saint Catherine of Siena](/people/saints/medieval/catherine-of-siena), Virgin and Doctor of the Church",
+    "rank": 6,
+    "class": 10,
     "isSaint": true
   },
   {
@@ -298,14 +334,14 @@
     "isSaint": true
   },
   {
-    "date": "05-19",
-    "title": "[Saint Dunstan](/people/saints/medieval/dunstan-of-canterbury), Bishop",
+    "date": "05-25",
+    "title": "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church",
     "rank": 6,
     "class": 10,
     "isSaint": true
   },
   {
-    "date": "05-27",
+    "date": "05-26",
     "title": "[Saint Augustine of Canterbury](/people/saints/medieval/augustine-of-canterbury), Bishop",
     "rank": 6,
     "class": 10,
@@ -321,6 +357,13 @@
   {
     "date": "06-01",
     "title": "[Saint Justin](/people/saints/greek-fathers/justin-martyr), Martyr",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "06-05",
+    "title": "[Saint Boniface](/people/saints/medieval/boniface), Bishop and Martyr",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -401,6 +444,13 @@
     "isSaint": true
   },
   {
+    "date": "07-23",
+    "title": "[Saint Bridget](/people/saints/medieval/bridget-of-sweden), Religious",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
     "date": "07-25",
     "title": "Saint [James](/people/saints/apostles/james), Apostle",
     "rank": 6,
@@ -437,8 +487,15 @@
     "isSaint": true
   },
   {
-    "date": "08-13",
-    "title": "Saint [Hippolytus](/people/saints/early/hippolytus-of-rome), Priest and Martyr",
+    "date": "08-10",
+    "title": "[Saint Lawrence](/people/saints/early/lawrence-of-rome), Deacon and Martyr",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "08-11",
+    "title": "[Saint Clare](/people/saints/medieval/clare-of-assisi), Virgin",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -519,7 +576,7 @@
     "isFeast": true
   },
   {
-    "date": "09-16",
+    "date": "09-15",
     "title": "[Saint Cyprian](/people/saints/latin-fathers/cyprian-of-carthage), Bishop and Martyr",
     "rank": 6,
     "class": 10,
@@ -557,6 +614,13 @@
     "isSaint": true
   },
   {
+    "date": "10-09",
+    "title": "[Saint Denis](/people/saints/early/denis-of-peris), Bishop, and Companions, Martyrs",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
     "date": "10-17",
     "title": "[Saint Ignatius of Antioch](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
     "rank": 6,
@@ -586,12 +650,6 @@
     "class": 4
   },
   {
-    "date": "10-31",
-    "title": "[Martin Luther](/meditations/a-brief-history-of-the-reformation-part-3#martin-luther), Reformer",
-    "rank": 6,
-    "class": 12
-  },
-  {
     "date": "11-01",
     "title": "[All Saints' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-saints-day)",
     "rank": 5,
@@ -616,6 +674,27 @@
   {
     "date": "11-11",
     "title": "[Saint Martin of Tours](/people/saints/early/martin-of-tours), Bishop",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "11-16",
+    "title": "[Saint Margaret of Scotland](/people/saints/medieval/margaret-of-scotland)",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "11-17",
+    "title": "[Saint Elizabeth of Hungary](/people/saints/medieval/elizabeth-of-hungary), Religious",
+    "rank": 6,
+    "class": 10,
+    "isSaint": true
+  },
+  {
+    "date": "11-22",
+    "title": "[Saint Cecilia](/people/saints/early/cecilia-of-rome), Virgin and Martyr",
     "rank": 6,
     "class": 10,
     "isSaint": true

@@ -1953,16 +1953,32 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Anges of Rome",
+                link: "/people/saints/early/agnes-of-rome",
+              },
+              {
                 title: "Catherine of Alexandria",
                 link: "/people/saints/early/catherine-of-alexandria",
+              },
+              {
+                title: "Cecilia of Rome",
+                link: "/people/saints/early/cecilia-of-rome",
               },
               {
                 title: "Christopher of Lycia",
                 link: "/people/saints/early/christopher-of-lycia",
               },
               {
+                title: "Denis of Peris",
+                link: "/people/saints/early/denis-of-peris",
+              },
+              {
                 title: "Epiphanius of Salamis",
                 link: "/people/saints/early/epiphanius-of-salamis",
+              },
+              {
+                title: "George of Lydda",
+                link: "/people/saints/early/george-of-lydda",
               },
               {
                 title: "Hippolytus of Rome",
@@ -1971,6 +1987,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "John Cassian",
                 link: "/people/saints/early/john-cassian",
+              },
+              {
+                title: "Lawrence of Rome",
+                link: "/people/saints/early/lawrence-of-rome",
               },
               {
                 title: "Lucy of Syracuse",
@@ -1993,8 +2013,16 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/early/patrick-of-ireland",
               },
               {
+                title: "Perpetua and Felicity",
+                link: "/people/saints/early/perpetua-and-felicity",
+              },
+              {
                 title: "Valentine of Rome",
                 link: "/people/saints/early/valentine-of-rome",
+              },
+              {
+                title: "Vincent of Saragossa",
+                link: "/people/saints/early/vincent-of-saragossa",
               },
             ],
           },
@@ -2012,6 +2040,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/augustine-of-canterbury",
               },
               {
+                title: "Bede the Venerable",
+                link: "/people/saints/medieval/bede-the-venerable",
+              },
+              {
                 title: "Benedict of Nursia",
                 link: "/people/saints/medieval/benedict-of-nursia",
               },
@@ -2024,6 +2056,26 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/bonaventure-of-bagnoregio",
               },
               {
+                title: "Boniface",
+                link: "/people/saints/medieval/boniface",
+              },
+              {
+                title: "Bridget of Sweden",
+                link: "/people/saints/medieval/bridget-of-sweden",
+              },
+              {
+                title: "Catherine of Siena",
+                link: "/people/saints/medieval/catherine-of-siena",
+              },
+              {
+                title: "Clare of Assisi",
+                link: "/people/saints/medieval/clare-of-assisi",
+              },
+              {
+                title: "Cyril and Methodius",
+                link: "/people/saints/medieval/cyril-and-methodius",
+              },
+              {
                 title: "Dominic of Guzmán",
                 link: "/people/saints/medieval/dominic-of-guzman",
               },
@@ -2032,12 +2084,28 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/dunstan-of-canterbury",
               },
               {
+                title: "Elizabeth of Hungary",
+                link: "/people/saints/medieval/elizabeth-of-hungary",
+              },
+              {
                 title: "Francis of Assisi",
                 link: "/people/saints/medieval/francis-of-assisi",
               },
               {
+                title: "Margaret of Scotland",
+                link: "/people/saints/medieval/margaret-of-scotland",
+              },
+              {
+                title: "Scholastica of Nursia",
+                link: "/people/saints/medieval/scholastica-of-nursia",
+              },
+              {
                 title: "Thomas Aquinas",
                 link: "/people/saints/medieval/thomas-aquinas",
+              },
+              {
+                title: "Thomas Becket",
+                link: "/people/saints/medieval/thomas-becket",
               },
             ],
           },
