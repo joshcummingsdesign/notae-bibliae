@@ -548,6 +548,11 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
           },
           {
+            title: "Commentary",
+            link: "/liturgy/liturgical-year/commentary",
+            priority: 0.6,
+          },
+          {
             title: "Calendar",
             link: "/liturgy/liturgical-year/calendar",
             priority: 0.6,
@@ -1760,8 +1765,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/silas",
               },
               {
-                title: "St. Joseph",
-                link: "/people/saints/biblical/joseph",
+                title: "Joseph of Nazareth",
+                link: "/people/saints/biblical/joseph-of-nazareth",
               },
               {
                 title: "Stephen",
@@ -1953,7 +1958,7 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
-                title: "Anges of Rome",
+                title: "Agnes of Rome",
                 link: "/people/saints/early/agnes-of-rome",
               },
               {
