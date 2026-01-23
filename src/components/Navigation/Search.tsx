@@ -226,6 +226,7 @@ const Modal = styled(ModalBase)(({ theme }) => ({
     boxShadow: "none",
     borderRadius: 0,
     background: "transparent",
+    textAlign: "left",
 
     ".MuiAutocomplete-listbox": {
       maxHeight: "80vh",
