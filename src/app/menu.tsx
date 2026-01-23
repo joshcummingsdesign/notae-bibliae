@@ -585,12 +585,12 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/christmastide/christmas-day",
                   },
                   {
-                    title: "Holy Innocents' Day",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/holy-innocents-day",
+                    title: "The Holy Innocents",
+                    link: "/liturgy/liturgical-year/seasons/christmastide/holy-innocents",
                   },
                   {
-                    title: "Circumcision of the Lord",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/circumcision-of-the-lord",
+                    title: "Circumcision and Holy Name of Jesus",
+                    link: "/liturgy/liturgical-year/seasons/christmastide/circumcision-and-holy-name-of-jesus",
                   },
                 ],
               },
@@ -773,10 +773,6 @@ export const menuItems: MenuNode[] = [
                         link: "/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day",
                       },
                     ],
-                  },
-                  {
-                    title: "Christ the King",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/christ-the-king",
                   },
                 ],
               },
@@ -2006,10 +2002,6 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/early/martin-of-tours",
               },
               {
-                title: "Monica of Hippo",
-                link: "/people/saints/early/monica-of-hippo",
-              },
-              {
                 title: "Nicholas of Myra",
                 link: "/people/saints/early/nicholas-of-myra",
               },
@@ -2065,20 +2057,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/boniface",
               },
               {
-                title: "Bridget of Sweden",
-                link: "/people/saints/medieval/bridget-of-sweden",
-              },
-              {
-                title: "Catherine of Siena",
-                link: "/people/saints/medieval/catherine-of-siena",
-              },
-              {
                 title: "Clare of Assisi",
                 link: "/people/saints/medieval/clare-of-assisi",
-              },
-              {
-                title: "Cyril and Methodius",
-                link: "/people/saints/medieval/cyril-and-methodius",
               },
               {
                 title: "Dominic of Guzmán",

@@ -57,10 +57,12 @@ describe("Collects", () => {
     const c = new Collects(mockCalendar);
     const items = c.queryCollects();
 
-    expect(items.length).toBe(192);
+    expect(items.length).toBe(175);
     expect(items[0].title).toBe("First Sunday of Advent");
     expect(items[0].text).toBeTruthy();
-    expect(items[items.length - 1].title).toBe("Saint Jacob of Serugh, Bishop");
+    expect(items[items.length - 1].title).toBe(
+      "Saint Catherine of Alexandria, Virgin and Martyr",
+    );
     expect(items[items.length - 1].text).toBeTruthy();
   });
 
@@ -72,7 +74,7 @@ describe("Collects", () => {
     expect(items["2025-11-30"].length).toBe(2);
     expect(items["2025-11-30"][0].title).toBe("First Sunday of Advent");
     expect(items["2025-11-30"][0].collect).toBeTruthy();
-    expect(items["2026-04-04"].length).toBe(3);
+    expect(items["2026-04-04"].length).toBe(2);
     expect(items["2026-04-04"][0].title).toBe("Holy Week: Holy Saturday");
     expect(items["2026-04-04"][0].collect).toBeTruthy();
   });
@@ -82,10 +84,7 @@ describe("Collects", () => {
     const c = new Collects(mockCalendar);
     const items = c.getByDay();
     expect(items.primary!.title).toBe("Holy Week: Holy Saturday");
-    expect(items.secondary.length).toBe(2);
+    expect(items.secondary.length).toBe(1);
     expect(items.secondary[0].title).toBe("Easter Vigil");
-    expect(items.secondary[1].title).toBe(
-      "Saint Isidore, Bishop and Doctor of the Church"
-    );
   });
 });

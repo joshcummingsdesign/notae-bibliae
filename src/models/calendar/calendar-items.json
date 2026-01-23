@@ -8,13 +8,6 @@
     "isSaint": true
   },
   {
-    "date": "12-04",
-    "title": "[Saint John of Damascus](/people/saints/greek-fathers/john-of-damascus), Priest and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "12-06",
     "title": "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop",
     "rank": 6,
@@ -118,7 +111,7 @@
   },
   {
     "date": "12-28",
-    "title": "[Holy Innocents' Day](/liturgy/liturgical-year/seasons/christmastide/holy-innocents-day)",
+    "title": "[The Holy Innocents](/liturgy/liturgical-year/seasons/christmastide/holy-innocents)",
     "rank": 5,
     "class": 5,
     "isFeast": true
@@ -132,21 +125,14 @@
   },
   {
     "date": "01-01",
-    "title": "[Circumcision of the Lord](/liturgy/liturgical-year/seasons/christmastide/circumcision-of-the-lord)",
+    "title": "[Circumcision and Holy Name of Jesus](/liturgy/liturgical-year/seasons/christmastide/circumcision-and-holy-name-of-jesus)",
     "rank": 5,
     "class": 5,
     "isFeast": true
   },
   {
     "date": "01-02",
-    "title": "Saint [Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "01-02",
-    "title": "Saint [Gregory of Nazianzus](/people/saints/cappadocian-fathers/gregory-of-nazianzus), Bishop and Doctor of the Church",
+    "title": "[Saint Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop and Doctor of the Church",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -202,13 +188,6 @@
     "isSaint": true
   },
   {
-    "date": "01-26",
-    "title": "Saints [Timothy](/people/saints/biblical/timothy) and [Titus](/people/saints/biblical/titus), Companions of Saint Paul",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "01-28",
     "title": "Saint [Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
     "rank": 6,
@@ -238,13 +217,6 @@
     "isSaint": true
   },
   {
-    "date": "02-14",
-    "title": "Saints [Cyril](/people/saints/medieval/cyril-and-methodius), Monk, and [Methodius](/people/saints/medieval/cyril-and-methodius), Bishop",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "02-23",
     "title": "[Saint Polycarp](/people/saints/apostolic-fathers/polycarp-of-smyrna), Bishop and Martyr",
     "rank": 6,
@@ -266,25 +238,11 @@
     "isSaint": true
   },
   {
-    "date": "03-18",
-    "title": "[Saint Cyril of Jerusalem](/people/saints/greek-fathers/cyril-of-jerusalem), Bishop and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "03-19",
     "title": "[Saint Joseph](/people/saints/biblical/joseph-of-nazareth), Spouse of the Blessed Virgin Mary",
     "rank": 6,
     "class": 5,
     "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "04-21",
-    "title": "[Saint Anselm](/people/saints/medieval/anselm-of-canterbury), Bishop and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
     "isSaint": true
   },
   {
@@ -303,23 +261,8 @@
     "isSaint": true
   },
   {
-    "date": "04-29",
-    "title": "[Saint Catherine of Siena](/people/saints/medieval/catherine-of-siena), Virgin and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "05-01",
     "title": "Saints [Philip](/people/saints/apostles/philip) and [James the Less](/people/saints/apostles/james-the-less), Apostles",
-    "rank": 6,
-    "class": 6,
-    "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "05-02",
-    "title": "[Saint Athanasius](/people/saints/greek-fathers/athanasius-of-alexandria), Bishop and Doctor of the Church",
     "rank": 6,
     "class": 6,
     "isFeast": true,
@@ -355,22 +298,8 @@
     "isFeast": true
   },
   {
-    "date": "06-01",
-    "title": "[Saint Justin](/people/saints/greek-fathers/justin-martyr), Martyr",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "06-05",
     "title": "[Saint Boniface](/people/saints/medieval/boniface), Bishop and Martyr",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "06-09",
-    "title": "[Saint Ephrem](/people/saints/syriac-fathers/ephrem-the-syrian), Deacon and Doctor of the Church",
     "rank": 6,
     "class": 10,
     "isSaint": true
@@ -389,20 +318,6 @@
     "rank": 6,
     "class": 5,
     "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "06-27",
-    "title": "[Saint Cyril of Alexandria](/people/saints/greek-fathers/cyril-of-alexandria), Bishop and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
-    "date": "06-28",
-    "title": "[Saint Irenaeus](/people/saints/greek-fathers/irenaeus-of-lyon), Bishop, Martyr, Doctor of the Church",
-    "rank": 6,
-    "class": 10,
     "isSaint": true
   },
   {
@@ -429,25 +344,11 @@
     "isSaint": true
   },
   {
-    "date": "07-15",
-    "title": "[Saint Bonaventure](/people/saints/medieval/bonaventure-of-bagnoregio), Bishop and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
-  },
-  {
     "date": "07-22",
     "title": "[Saint Mary Magdalene](/people/saints/biblical/mary-magdalene)",
     "rank": 6,
     "class": 10,
     "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "07-23",
-    "title": "[Saint Bridget](/people/saints/medieval/bridget-of-sweden), Religious",
-    "rank": 6,
-    "class": 10,
     "isSaint": true
   },
   {
@@ -518,14 +419,6 @@
   {
     "date": "08-24",
     "title": "[Saint Bartholomew](/people/saints/apostles/bartholomew), Apostle",
-    "rank": 6,
-    "class": 6,
-    "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "08-27",
-    "title": "[Saint Monica](/people/saints/early/monica-of-hippo)",
     "rank": 6,
     "class": 6,
     "isFeast": true,
@@ -663,13 +556,6 @@
     "title": "[All Souls' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day)",
     "rank": 5,
     "class": 5
-  },
-  {
-    "date": "11-10",
-    "title": "[Saint Leo the Great](/people/saints/latin-fathers/leo-the-great), Pope and Doctor of the Church",
-    "rank": 6,
-    "class": 10,
-    "isSaint": true
   },
   {
     "date": "11-11",

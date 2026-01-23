@@ -35,7 +35,7 @@ describe("Lessons", () => {
           first: ["Joel 3:9-17"],
           second: ["2 Pet. 3:11-18"],
         },
-        title: "Christ the King - Saturday",
+        title: "Sunday Before Advent - Saturday",
       },
     ]);
   });
@@ -49,7 +49,9 @@ describe("Lessons", () => {
     // Dec 31, 2028 - First Sunday After Christmas
     expect(all["2028-12-31"]?.title).toBe("First Sunday After Christmas");
     // Jan 1, 2029 - Circumcision of the Lord (feast day)
-    expect(all["2029-01-01"]?.title).toBe("Circumcision of the Lord");
+    expect(all["2029-01-01"]?.title).toBe(
+      "Circumcision and Holy Name of Jesus",
+    );
     // Jan 2-4, 2029 - Should use explicit date lessons since First Sunday After Christmas has no weekday lessons
     expect(all["2029-01-02"]?.title).toBe("January 2");
     expect(all["2029-01-03"]?.title).toBe("January 3");
@@ -59,7 +61,9 @@ describe("Lessons", () => {
     // Jan 6, 2029 - Epiphany
     expect(all["2029-01-06"]?.title).toBe("The Epiphany");
     // Jan 7, 2029 - First Sunday of Epiphany
-    expect(all["2029-01-07"]?.title).toBe("First Sunday of Epiphany: Baptism of the Lord");
+    expect(all["2029-01-07"]?.title).toBe(
+      "First Sunday of Epiphany: Baptism of the Lord",
+    );
   });
 
   test("should get today's lessons", () => {

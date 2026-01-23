@@ -946,11 +946,9 @@ export class Calendar {
 
     days.push({
       date: christTheKing.format("YYYY-MM-DD"),
-      title:
-        "[Christ the King](/liturgy/liturgical-year/seasons/trinitytide/christ-the-king)",
+      title: "Sunday Before Advent",
       rank: 2,
-      class: 2,
-      isFeast: true,
+      class: 7,
       isSunday: true,
     });
 
