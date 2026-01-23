@@ -665,7 +665,7 @@ export class Calendar {
       {
         date: easter.format("YYYY-MM-DD"),
         title:
-          "[Easter Day (Resurrection of the Lord)](/liturgy/liturgical-year/seasons/eastertide/easter)",
+          "[Easter Day (Resurrection of the Lord)](/liturgy/liturgical-year/seasons/eastertide/easter-day)",
         rank: 1,
         class: 2,
         isFeast: true,

@@ -695,8 +695,8 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/eastertide/easter-vigil",
                   },
                   {
-                    title: "Easter",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/easter",
+                    title: "Easter Day",
+                    link: "/liturgy/liturgical-year/seasons/eastertide/easter-day",
                   },
                   {
                     title: "Second Sunday of Easter",

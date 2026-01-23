@@ -599,7 +599,7 @@ describe("Calendar", () => {
     expect(items[0]).toEqual({
       date: "2026-04-05",
       title:
-        "[Easter Day (Resurrection of the Lord)](/liturgy/liturgical-year/seasons/eastertide/easter)",
+        "[Easter Day (Resurrection of the Lord)](/liturgy/liturgical-year/seasons/eastertide/easter-day)",
       rank: 1,
       class: 2,
       isFeast: true,
