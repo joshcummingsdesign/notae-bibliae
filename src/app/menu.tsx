@@ -548,6 +548,11 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
           },
           {
+            title: "Ranking",
+            link: "/liturgy/liturgical-year/ranking",
+            priority: 0.6,
+          },
+          {
             title: "Commentary",
             link: "/liturgy/liturgical-year/commentary",
             priority: 0.6,
