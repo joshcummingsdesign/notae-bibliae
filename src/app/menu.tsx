@@ -604,7 +604,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/seasons/epiphanytide",
                 children: [
                   {
-                    title: "Epiphany",
+                    title: "The Epiphany",
                     link: "/liturgy/liturgical-year/seasons/epiphanytide/epiphany",
                   },
                   {

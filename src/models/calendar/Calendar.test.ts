@@ -491,7 +491,7 @@ describe("Calendar", () => {
     });
     expect(items[9]).toEqual({
       date: "2026-03-24",
-      title: "Eve of the Annunciation",
+      title: "Vigil of the Annunciation",
       rank: 4,
       class: 5,
     });
@@ -700,7 +700,7 @@ describe("Calendar", () => {
     });
     expect(items[15]).toEqual({
       date: "2026-05-13",
-      title: "Eve of the Ascension",
+      title: "Vigil of the Ascension",
       rank: 4,
       class: 2,
     });
@@ -727,7 +727,7 @@ describe("Calendar", () => {
     const items = d.getWhitsuntideDays();
     expect(items[0]).toEqual({
       date: "2026-05-23",
-      title: "Pentecost Eve",
+      title: "Vigil of Pentecost (Whitsunday)",
       rank: 4,
       class: 2,
     });
@@ -830,7 +830,7 @@ describe("Calendar", () => {
     });
     expect(items[26]).toEqual({
       date: "2026-05-30",
-      title: "Trinity Eve",
+      title: "Vigil of Trinity Sunday",
       rank: 4,
       class: 4,
     });
@@ -1181,7 +1181,7 @@ describe("Calendar", () => {
         },
         {
           date: "2026-05-30",
-          title: "Trinity Eve",
+          title: "Vigil of Trinity Sunday",
           rank: 4,
           class: 4,
         },

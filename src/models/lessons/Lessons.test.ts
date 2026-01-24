@@ -56,8 +56,8 @@ describe("Lessons", () => {
     expect(all["2029-01-02"]?.title).toBe("January 2");
     expect(all["2029-01-03"]?.title).toBe("January 3");
     expect(all["2029-01-04"]?.title).toBe("January 4");
-    // Jan 5, 2029 - Epiphany Eve
-    expect(all["2029-01-05"]?.title).toBe("Epiphany Eve");
+    // Jan 5, 2029 - Vigil of the Epiphany
+    expect(all["2029-01-05"]?.title).toBe("Vigil of the Epiphany");
     // Jan 6, 2029 - Epiphany
     expect(all["2029-01-06"]?.title).toBe("The Epiphany");
     // Jan 7, 2029 - First Sunday of Epiphany
