@@ -37,9 +37,9 @@ export const FeastRankingTable = () => (
         <tr>
           <td>Special Observances</td>
           <td>
-            Special Observances are penitential days and seasonal devotions that
-            shape the liturgical year. They are observed with distinctive
-            liturgical practices but are not celebrated as feasts.
+            Penitential days and seasonal devotions that shape the liturgical
+            year. They are observed with distinctive liturgical practices, but
+            are not celebrated as feasts.
           </td>
         </tr>
       </tbody>
