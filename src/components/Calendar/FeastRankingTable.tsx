@@ -21,27 +21,25 @@ export const FeastRankingTable = () => (
         <tr>
           <td>Feasts</td>
           <td>
-            Feasts that celebrate key events in the life of Christ, the Blessed
-            Virgin Mary, and the apostles and evangelists of the early Church.
-            They are observed with a full liturgy and hold a prominent place in
-            the liturgical year.
+            Observances that celebrate key events in the life of Christ, the
+            Blessed Virgin Mary, and the Apostles and Evangelists of the early
+            church.
           </td>
         </tr>
         <tr>
           <td>Commemorations</td>
           <td>
-            Commemorations honor saints, martyrs, and other holy persons whose
-            lives witness to the faith. They are observed with a shorter,
-            simpler liturgy.
+            Memorials honoring Saints, Martyrs, Church Fathers, and other holy
+            persons or events that bear witness to the faith through their lives
+            and histories.
           </td>
         </tr>
         <tr>
           <td>Special Observances</td>
           <td>
-            Special Observances include penitential days, days of remembrance,
-            and seasonal devotions that shape the liturgical year. They are
-            observed with distinctive liturgical practices but are not
-            celebrated as feasts.
+            Special Observances are penitential days and seasonal devotions that
+            shape the liturgical year. They are observed with distinctive
+            liturgical practices but are not celebrated as feasts.
           </td>
         </tr>
       </tbody>
