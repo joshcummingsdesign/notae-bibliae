@@ -2548,7 +2548,7 @@
       "evening": { "first": ["Zech. 2:10-12"], "second": ["Matt. 1:18-25"] }
     }
   ],
-  "Christmas Day (Nativity of the Lord)": [
+  "Christmas Day": [
     {
       "morning": { "first": ["Isa. 9:2-7"], "second": ["Luke 2:8-20"] },
       "evening": {
@@ -2557,7 +2557,7 @@
       }
     }
   ],
-  "Saint Stephen, The First Martyr": [
+  "Saint Stephen, Deacon and Martyr": [
     {
       "morning": { "first": ["2 Chron. 24:17-22"], "second": ["Acts 6:1-15"] },
       "evening": {
@@ -2872,7 +2872,7 @@
       "evening": { "first": ["Job 19:21-27"], "second": ["Rom. 6:3-11"] }
     }
   ],
-  "Easter Day (Resurrection of the Lord)": [
+  "Easter Day": [
     {
       "morning": {
         "first": ["Exod. 12:1-14"],

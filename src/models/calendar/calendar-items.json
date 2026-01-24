@@ -87,7 +87,7 @@
   },
   {
     "date": "12-25",
-    "title": "[Christmas Day (Nativity of the Lord)](/liturgy/liturgical-year/seasons/christmastide/christmas-day)",
+    "title": "[Christmas Day](/liturgy/liturgical-year/seasons/christmastide/christmas-day)",
     "rank": 1,
     "class": 2,
     "isFeast": true,
@@ -95,7 +95,7 @@
   },
   {
     "date": "12-26",
-    "title": "[Saint Stephen](/people/saints/biblical/stephen), The First Martyr",
+    "title": "[Saint Stephen](/people/saints/biblical/stephen), Deacon and Martyr",
     "rank": 5,
     "class": 5,
     "isFeast": true,
@@ -189,7 +189,7 @@
   },
   {
     "date": "01-28",
-    "title": "Saint [Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
+    "title": "[Saint Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
     "rank": 6,
     "class": 6,
     "isFeast": true,
@@ -353,7 +353,7 @@
   },
   {
     "date": "07-25",
-    "title": "Saint [James](/people/saints/apostles/james), Apostle",
+    "title": "[Saint James](/people/saints/apostles/james), Apostle",
     "rank": 6,
     "class": 6,
     "isFeast": true,
@@ -403,7 +403,7 @@
   },
   {
     "date": "08-15",
-    "title": "[Blessed Virgin Mary](/people/saints/biblical/blessed-virgin-mary)",
+    "title": "[Repose of the Blessed Virgin Mary](/people/saints/biblical/blessed-virgin-mary)",
     "rank": 6,
     "class": 2,
     "isFeast": true,
@@ -515,7 +515,7 @@
   },
   {
     "date": "10-17",
-    "title": "[Saint Ignatius of Antioch](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
+    "title": "[Saint Ignatius](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
     "rank": 6,
     "class": 10,
     "isSaint": true
