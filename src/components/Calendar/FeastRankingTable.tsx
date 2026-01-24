@@ -6,60 +6,42 @@ export const FeastRankingTable = () => (
     <Table>
       <thead>
         <tr>
-          <th>Dignity</th>
+          <th>Type</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Principal Double</td>
+          <td>Principal Feasts</td>
           <td>
             The highest-ranking feasts of the liturgical year, celebrating the
-            central mysteries of salvation with the greatest liturgical dignity.
+            central mysteries of the faith with the greatest liturgical dignity.
           </td>
         </tr>
         <tr>
-          <td>Greater Double</td>
+          <td>Feasts</td>
           <td>
-            Major feasts with a full, elaborate liturgy and high liturgical
-            prominence, celebrating important events in Christ’s life or
-            principal Marian feasts.
+            Feasts that celebrate key events in the life of Christ, the Blessed
+            Virgin Mary, and the apostles and evangelists of the early Church.
+            They are observed with a full liturgy and hold a prominent place in
+            the liturgical year.
           </td>
         </tr>
         <tr>
-          <td>Lesser Double</td>
+          <td>Commemorations</td>
           <td>
-            Feasts with a full liturgy, generally commemorating important saints
-            or significant events, but with less liturgical dignity than the
-            major celebrations.
+            Commemorations honor saints, martyrs, and other holy persons whose
+            lives witness to the faith. They are observed with a shorter,
+            simpler liturgy.
           </td>
         </tr>
         <tr>
-          <td>Inferior Double</td>
+          <td>Special Observances</td>
           <td>
-            Feasts of notable saints celebrated with a full liturgy, but with
-            simpler ceremonial elements and lower liturgical dignity.
-          </td>
-        </tr>
-        <tr>
-          <td>Simple</td>
-          <td>
-            Commemorations with a shorter, simpler liturgy, often for saints or
-            lesser festivals.
-          </td>
-        </tr>
-        <tr>
-          <td>Greater Feria</td>
-          <td>
-            Special weekdays with prescribed liturgical observances and seasonal
-            importance.
-          </td>
-        </tr>
-        <tr>
-          <td>Feria</td>
-          <td>
-            Ordinary weekdays without special liturgical rank or prescribed
-            feast observance.
+            Special Observances include penitential days, days of remembrance,
+            and seasonal devotions that shape the liturgical year. They are
+            observed with distinctive liturgical practices but are not
+            celebrated as feasts.
           </td>
         </tr>
       </tbody>
