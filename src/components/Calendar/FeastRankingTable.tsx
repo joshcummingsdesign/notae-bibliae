@@ -21,8 +21,8 @@ export const FeastRankingTable = () => (
         <tr>
           <td>Feasts</td>
           <td>
-            Observances that celebrate key events in the life of Christ, the
-            Blessed Virgin Mary, and the Apostles and Evangelists of the early
+            Celebrations of key events in the life of Christ, the Blessed Virgin
+            Mary, and the Apostles, Evangelists, and Martyrs of the early
             church.
           </td>
         </tr>
@@ -37,9 +37,8 @@ export const FeastRankingTable = () => (
         <tr>
           <td>Special Observances</td>
           <td>
-            Penitential days and seasonal devotions that shape the liturgical
-            year. They are observed with distinctive liturgical practices, but
-            are not celebrated as feasts.
+            Penitential days and seasonal devotions that are observed with
+            distinctive liturgical practices, but are not celebrated as feasts.
           </td>
         </tr>
       </tbody>
