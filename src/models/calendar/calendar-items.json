@@ -19,7 +19,6 @@
     "title": "[Saint Ambrose](/people/saints/latin-fathers/ambrose-of-milan), Bishop and Doctor of the Church",
     "rank": 6,
     "class": 6,
-    "isFeast": true,
     "isSaint": true
   },
   {
@@ -82,7 +81,7 @@
   {
     "date": "12-24",
     "title": "Christmas Eve",
-    "rank": 4,
+    "rank": 5,
     "class": 2
   },
   {
@@ -192,22 +191,14 @@
     "title": "[Saint Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
     "rank": 6,
     "class": 6,
-    "isFeast": true,
     "isSaint": true
-  },
-  {
-    "date": "02-01",
-    "title": "Eve of the Presentation",
-    "rank": 4,
-    "class": 4
   },
   {
     "date": "02-02",
     "title": "[Presentation of the Lord (Purification)](/liturgy/liturgical-year/seasons/epiphanytide/presentation-of-the-lord)",
     "rank": 5,
     "class": 4,
-    "isFeast": true,
-    "isPrincipalFeast": true
+    "isFeast": true
   },
   {
     "date": "02-10",
@@ -348,7 +339,6 @@
     "title": "[Saint Mary Magdalene](/people/saints/biblical/mary-magdalene)",
     "rank": 6,
     "class": 10,
-    "isFeast": true,
     "isSaint": true
   },
   {
@@ -429,7 +419,6 @@
     "title": "[Saint Augustine](/people/saints/latin-fathers/augustine-of-hippo), Bishop and Doctor of the Church",
     "rank": 6,
     "class": 6,
-    "isFeast": true,
     "isSaint": true
   },
   {
@@ -444,7 +433,6 @@
     "title": "[Saint Gregory the Great](/people/saints/latin-fathers/gregory-the-great), Pope and Doctor of the Church",
     "rank": 6,
     "class": 6,
-    "isFeast": true,
     "isSaint": true
   },
   {
@@ -496,7 +484,6 @@
     "title": "[Saint Jerome](/people/saints/latin-fathers/jerome-of-stridon), Priest and Doctor of the Church",
     "rank": 6,
     "class": 6,
-    "isFeast": true,
     "isSaint": true
   },
   {
@@ -539,7 +526,7 @@
   {
     "date": "10-31",
     "title": "[All Hallows' Eve](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-hallows-eve)",
-    "rank": 4,
+    "rank": 5,
     "class": 4
   },
   {
@@ -555,7 +542,8 @@
     "date": "11-02",
     "title": "[All Souls' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day)",
     "rank": 5,
-    "class": 5
+    "class": 5,
+    "isSpecialObservance": true
   },
   {
     "date": "11-11",

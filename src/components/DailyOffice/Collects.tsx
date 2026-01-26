@@ -27,12 +27,16 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
   ];
 
   const hasPrincipalFeast = collects.some(
-    (collect) => collect.isPrincipalFeast
+    (collect) => collect.isPrincipalFeast,
+  );
+
+  const hasSpecialObservance = collects.some(
+    (collect) => collect.isSpecialObservance,
   );
 
   const hasEve = collects.some(
     (collect) =>
-      collect.title.includes("Eve") || collect.title.includes("Vigil")
+      collect.title.includes("Eve") || collect.title.includes("Vigil"),
   );
 
   let header = (
@@ -63,6 +67,7 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
     <>
       {header}
       {collects.map((collect) => {
+        // Omit Vigils from morning office.
         if (
           office === "morning" &&
           (collect.title.includes("Eve") || collect.title.includes("Vigil"))
@@ -70,18 +75,37 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
           return null;
         }
 
+        // Omit weekly collects from Vigils.
         if (
           office === "evening" &&
           hasEve &&
-          filterList.some((day) => collect.title.includes(day))
+          filterList.some((day) => collect.title.includes(day)) &&
+          collect.title !== "Vigil of Trinity Sunday"
         ) {
           return null;
         }
 
+        // Omit weekly collects from Principal Feasts.
         if (
           hasPrincipalFeast &&
           filterList.some(
-            (day) => collect.title.includes(day) && !collect.isPrincipalFeast
+            (day) =>
+              collect.title.includes(day) &&
+              !collect.isPrincipalFeast &&
+              collect.rank < 6,
+          )
+        ) {
+          return null;
+        }
+
+        // Omit weekly collects from Special Observances.
+        if (
+          hasSpecialObservance &&
+          filterList.some(
+            (day) =>
+              collect.title.includes(day) &&
+              !collect.isSpecialObservance &&
+              collect.rank < 6,
           )
         ) {
           return null;
@@ -106,7 +130,7 @@ const CollectText: React.FC<{ text: string }> = ({ text }) => (
   <StyledText
     dangerouslySetInnerHTML={{
       __html: DOMPurify.sanitize(
-        text.replaceAll("·", '<span class="dot"></span>')
+        text.replaceAll("·", '<span class="dot"></span>'),
       ),
     }}
   />

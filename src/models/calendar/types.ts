@@ -5,6 +5,7 @@ export interface CalendarItem {
   class: number; // Sarum Rank: PPS = 1, PD = 2, GPS = 3, GD = 4...L/IPS = 7...V = 12
   isFeast?: boolean;
   isPrincipalFeast?: boolean;
+  isSpecialObservance?: boolean;
   isSaint?: boolean;
   isSunday?: boolean;
 }

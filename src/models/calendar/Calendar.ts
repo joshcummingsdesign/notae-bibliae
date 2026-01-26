@@ -184,22 +184,25 @@ export class Calendar {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
           "[Ember Wednesday in Advent](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Friday in Advent](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Saturday in Advent](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
     ];
   }
@@ -507,21 +510,24 @@ export class Calendar {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
           "[Ember Wednesday in Lent](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title: "[Ember Friday in Lent](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Saturday in Lent](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
     ];
   }
@@ -540,6 +546,7 @@ export class Calendar {
         rank: 1,
         class: 1,
         isSunday: true,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
@@ -547,6 +554,7 @@ export class Calendar {
           "Holy Week: [Holy Monday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(2, "day").format("YYYY-MM-DD"),
@@ -554,6 +562,7 @@ export class Calendar {
           "Holy Week: [Holy Tuesday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(3, "day").format("YYYY-MM-DD"),
@@ -561,6 +570,7 @@ export class Calendar {
           "Holy Week: [Spy Wednesday](/liturgy/liturgical-year/seasons/lent/passiontide/spy-wednesday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(4, "day").format("YYYY-MM-DD"),
@@ -568,6 +578,7 @@ export class Calendar {
           "Holy Week: [Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(5, "day").format("YYYY-MM-DD"),
@@ -575,6 +586,7 @@ export class Calendar {
           "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
@@ -582,12 +594,13 @@ export class Calendar {
           "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
         title:
           "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
-        rank: 4,
+        rank: 5,
         class: 5,
       },
     ];
@@ -608,6 +621,7 @@ export class Calendar {
           "[Ash Wednesday](/liturgy/liturgical-year/seasons/lent/ash-wednesday)",
         rank: 1,
         class: 2,
+        isSpecialObservance: true,
       },
       {
         date: ashWednesday.add(1, "day").format("YYYY-MM-DD"),
@@ -631,7 +645,7 @@ export class Calendar {
       {
         date: annunciation.subtract(1, "day").format("YYYY-MM-DD"),
         title: "Vigil of the Annunciation",
-        rank: 4,
+        rank: 5,
         class: 5,
       },
       {
@@ -747,27 +761,30 @@ export class Calendar {
         isSunday: true,
       },
       {
-        date: easter.add(36, "day").format("YYYY-MM-DD"),
+        date: ascension.subtract(3, "day").format("YYYY-MM-DD"),
         title: "[Rogation Monday](/glossary/liturgical-terms#rogation-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
-        date: easter.add(37, "day").format("YYYY-MM-DD"),
+        date: ascension.subtract(2, "day").format("YYYY-MM-DD"),
         title: "[Rogation Tuesday](/glossary/liturgical-terms#rogation-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
-        date: easter.add(38, "day").format("YYYY-MM-DD"),
+        date: ascension.subtract(1, "day").format("YYYY-MM-DD"),
         title: "[Rogation Wednesday](/glossary/liturgical-terms#rogation-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: ascension.subtract(1, "day").format("YYYY-MM-DD"),
         title: "Vigil of the Ascension",
-        rank: 4,
+        rank: 5,
         class: 2,
       },
       {
@@ -807,7 +824,7 @@ export class Calendar {
       {
         date: pentecost.subtract(1, "day").format("YYYY-MM-DD"),
         title: "Vigil of Pentecost (Whitsunday)",
-        rank: 4,
+        rank: 5,
         class: 2,
       },
       {
@@ -852,22 +869,25 @@ export class Calendar {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
           "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
     ];
   }
@@ -931,7 +951,7 @@ export class Calendar {
     days.push({
       date: trinitySunday.subtract(1, "day").format("YYYY-MM-DD"),
       title: "Vigil of Trinity Sunday",
-      rank: 4,
+      rank: 5,
       class: 4,
     });
 
@@ -968,22 +988,25 @@ export class Calendar {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
           "[Ember Wednesday in Trinitytide](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Friday in Trinitytide](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
           "[Ember Saturday in Trinitytide](/glossary/liturgical-terms#ember-days)",
-        rank: 3,
+        rank: 4,
         class: 11,
+        isSpecialObservance: true,
       },
     ];
   }
