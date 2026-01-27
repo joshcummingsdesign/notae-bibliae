@@ -5,11 +5,11 @@
  * ```
  * Principal Sundays: 1
  * Principal Feast: 2
- * Major Observance: 3 // Ash Wed., Holy Week, All Souls
+ * Greater Observance: 3 // Ash Wednesday, Holy Week, All Souls' Day
  * Feast: 4
- * Minor Observance: 5 // Ember Days, Rogation Days
+ * Lesser Observance: 5 // Ember Days, Rogation Days
  * Saint: 6
- * Sunday: 7
+ * Ordinary Sunday: 7
  * Vigil: 8
  * Note: 9
  * ```
@@ -20,7 +20,7 @@ export interface CalendarItem {
   rank: number; // 1-9
   isPrincipalSunday?: boolean;
   isPrincipalFeast?: boolean;
-  isSpecialObservance?: boolean;
+  isSpecialObservance?: boolean; // Greater or Lesser Observance
   isFeast?: boolean;
   isSunday?: boolean;
   isVigil?: boolean;

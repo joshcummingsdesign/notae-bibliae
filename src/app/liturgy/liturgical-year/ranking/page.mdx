@@ -7,13 +7,25 @@ export const metadata = {
 
 <Initial text="Liturgical Year: Ranking" />
 
-A simplified ranking system for the liturgical year.
+This calendar uses the following ranking system, which is a simplified harmonization of the [Use of Sarum](/liturgy/rites/sarum-rite), the 1928 American *Book of Common Prayer*, the [General Roman Calendar](/glossary/liturgical-terms#general-roman-calendar) (1969), and the Church of England's [*Common Worship*](/glossary/liturgical-terms#common-worship) (2000). This system is used not only for simplicity and practicality, but because it attempts to reflect the broader Western tradition.
+
+## Ranks
 
 <FeastRankingTable />
 
 <br/>
 
 ---
+
+## Examples
+
+### Principal Sundays
+  - Sundays in Advent
+  - Septuagesima
+  - Sexagesima
+  - Quinquagesima
+  - Sundays in Lent
+  - Rogation Sunday
 
 ### Principal Feasts
   - Christmas Day
@@ -25,6 +37,11 @@ A simplified ranking system for the liturgical year.
   - Trinity Sunday
   - All Saints' Day
 
+### Greater Observances
+  - Ash Wednesday
+  - Holy Week
+  - All Souls' Day
+
 ### Feasts
   - Circumcision and Holy Name of Jesus
   - Presentation of the Lord (Purification)
@@ -35,24 +52,26 @@ A simplified ranking system for the liturgical year.
   - Apostles and Evangelists
   - Biblical Martyrs
 
+### Lesser Observances
+  - Ember Days
+  - Rogation Days
+
 ### Commemorations
   - Saints
   - Martyrs
   - Church Fathers
 
-### Special Observances
-  - Ash Wednesday
-  - Holy Week
-  - Ember Days
-  - Rogation Days
-  - All Souls' Day
+### Ordinary Sundays
+  - All other Sundays of the liturgical year
 
 ---
 
-### Precedence
+## Precedence
 
-- If a Feast falls on a higher-ranking day, the Feast is transferred to the next available date.
-- If a Feast falls on a Sunday, the Feast takes precedence, but the [collect](/glossary/liturgical-terms#collect) for the Sunday is said after the collect for the Feast.
-- If a Commemoration falls on a higher-ranking day, the Commemoration is omitted.
-- If a Commemoration falls on a Sunday, the collect for the Commemoration is said after the collect for the Sunday.
+- Principal Sundays have the highest level of precedence, all other observances are omitted.
+- If a Principal Feast falls on an Ordinary Sunday, the liturgy for the Ordinary Sunday is omitted.
 - Principal Feasts have Vigils that begin at Evening Prayer on the preceding day.
+- If a Feast falls on a higher-ranking day, the Feast is transferred to the next available date.
+- If a Feast falls on an Ordinary Sunday, the Feast takes precedence, but the [collect](/glossary/liturgical-terms#collect) for the Sunday is said after the collect for the Feast.
+- If a Commemoration falls on a higher-ranking day, the Commemoration is omitted.
+- If a Commemoration falls on an Ordinary Sunday, the collect for the Commemoration is said after the collect for the Sunday.

@@ -551,6 +551,7 @@ export const menuItems: MenuNode[] = [
             title: "Ranking",
             link: "/liturgy/liturgical-year/ranking",
             priority: 0.6,
+            inPageNav: true,
           },
           {
             title: "Commentary",

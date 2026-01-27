@@ -6,20 +6,34 @@ export const FeastRankingTable = () => (
     <Table>
       <thead>
         <tr>
-          <th>Type</th>
+          <th>Dignity</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Principal Feasts</td>
+          <td>Principal Sundays (1)</td>
+          <td>
+            Sundays of the highest rank, which take precedence over all other
+            feasts, observances, and commemorations.
+          </td>
+        </tr>
+        <tr>
+          <td>Principal Feasts (2)</td>
           <td>
             The highest-ranking feasts of the liturgical year, celebrating the
             central mysteries of the faith with the greatest liturgical dignity.
           </td>
         </tr>
         <tr>
-          <td>Feasts</td>
+          <td>Greater Observances (3)</td>
+          <td>
+            Penitential days and seasonal devotions, which take precedence over
+            feasts but are not themselves celebrated as feasts.
+          </td>
+        </tr>
+        <tr>
+          <td>Feasts (4)</td>
           <td>
             Celebrations of key events in the life of Christ, the Blessed Virgin
             Mary, and the Apostles, Evangelists, and Martyrs of the early
@@ -27,7 +41,13 @@ export const FeastRankingTable = () => (
           </td>
         </tr>
         <tr>
-          <td>Commemorations</td>
+          <td>Lesser Observances (5)</td>
+          <td>
+            Penitential days and seasonal devotions, which rank below feasts.
+          </td>
+        </tr>
+        <tr>
+          <td>Commemorations (6)</td>
           <td>
             Memorials honoring Saints, Martyrs, Church Fathers, and other holy
             persons or events that bear witness to the faith through their lives
@@ -35,11 +55,8 @@ export const FeastRankingTable = () => (
           </td>
         </tr>
         <tr>
-          <td>Special Observances</td>
-          <td>
-            Penitential days and seasonal devotions that are observed with
-            distinctive liturgical practices, but are not celebrated as feasts.
-          </td>
+          <td>Ordinary Sundays (7)</td>
+          <td>All other Sundays of the liturgical year.</td>
         </tr>
       </tbody>
     </Table>
