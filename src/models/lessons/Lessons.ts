@@ -1,9 +1,8 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import { Calendar } from "../calendar";
 import lessonData from "./lessons.json";
 import { stripMarkdownLinks } from "@/utils/markdown";
-import { TIMEZONE } from "@/constants";
 import { LessonDateMap, OfficeDay } from "./types";
 
 dayjs.extend(isSameOrBefore);
@@ -16,20 +15,15 @@ export class Lessons {
   }
 
   /**
-   * Create a date in the same timezone as this.today for consistent comparisons.
-   */
-  private createDate(dateString: string): Dayjs {
-    return dayjs.tz(dateString, TIMEZONE);
-  }
-
-  /**
    * Get all lessons.
    */
   getAll(): LessonDateMap {
     const calendarData = this.calendar.getAll();
     const sundays = this.calendar.getAllSundays();
     const startDate = this.calendar.getFirstSundayOfAdvent();
-    const endDate = this.calendar.getNextFirstSundayOfAdvent().subtract(1, "day");
+    const endDate = this.calendar
+      .getNextFirstSundayOfAdvent()
+      .subtract(1, "day");
     let currentDay = startDate;
     let lastSunday = "";
 
@@ -40,8 +34,14 @@ export class Lessons {
       const date = currentDay.format("YYYY-MM-DD");
       const dateStr = currentDay.format("MMMM D");
       const event = calendarData[date];
-      const lookupKey =
-        event && event.length > 0 ? stripMarkdownLinks(event[0].title) : "";
+      // Prefer feast days over Sundays
+      const preferredEvent =
+        event && event.length > 0
+          ? event.find((e) => e.isFeast) || event[0]
+          : undefined;
+      const lookupKey = preferredEvent
+        ? stripMarkdownLinks(preferredEvent.title)
+        : "";
       const dateLessons = lessonData[dateStr as keyof typeof lessonData];
       const lessons = lessonData[lookupKey as keyof typeof lessonData];
       const hasEvent = !!event && !!lookupKey && !!lessons;

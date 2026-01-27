@@ -18,8 +18,3 @@ export interface CollectDateMap {
 export type CollectRes = {
   liturgicalYear: number;
 } & CollectDateMap;
-
-export interface CurrentCollects {
-  primary: CollectCalendarItem | null;
-  secondary: CollectCalendarItem[];
-}

@@ -197,7 +197,7 @@
     null,
     null
   ],
-  "First Sunday of Epiphany: Baptism of the Lord": [
+  "First Sunday of Epiphany": [
     {
       "morning": {
         "first": ["Isa. 60:1-9"],
@@ -590,7 +590,13 @@
       "morning": { "first": ["Gen. 18:1-16"], "second": ["Mark 9:38-50"] },
       "evening": { "first": ["Hosea 5:10-6:6"], "second": ["Gal. 6:1-10"] }
     },
-    null,
+    {
+      "morning": { "first": ["Gen. 18:20-33"], "second": ["Mark 10:1-16"] },
+      "evening": {
+        "first": ["Hosea 11:1-4, Hosea 13:5-16"],
+        "second": ["Gal. 6:11-18"]
+      }
+    },
     null,
     null,
     null,
@@ -2722,15 +2728,6 @@
       "evening": {
         "first": ["Haggai 2:1-9"],
         "second": ["John 3:1-8"]
-      }
-    }
-  ],
-  "Shrove Tuesday": [
-    {
-      "morning": { "first": ["Gen. 18:20-33"], "second": ["Mark 10:1-16"] },
-      "evening": {
-        "first": ["Hosea 11:1-4, Hosea 13:5-16"],
-        "second": ["Gal. 6:11-18"]
       }
     }
   ],

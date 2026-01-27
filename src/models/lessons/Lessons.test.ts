@@ -9,7 +9,7 @@ describe("Lessons", () => {
     const l = new Lessons(c);
     const a = l.getAll();
     const entries = Object.entries(a);
-    expect(entries.length).toBe(363);
+    expect(entries.length).toBe(364);
     expect(entries[0]).toEqual([
       "2025-11-30",
       {
@@ -61,9 +61,7 @@ describe("Lessons", () => {
     // Jan 6, 2029 - Epiphany
     expect(all["2029-01-06"]?.title).toBe("The Epiphany");
     // Jan 7, 2029 - First Sunday of Epiphany
-    expect(all["2029-01-07"]?.title).toBe(
-      "First Sunday of Epiphany: Baptism of the Lord",
-    );
+    expect(all["2029-01-07"]?.title).toBe("First Sunday of Epiphany");
   });
 
   test("should get today's lessons", () => {

@@ -1,13 +1,31 @@
+/**
+ * The Calendar Item Interface
+ *
+ * **Ranking System**
+ * ```
+ * Principal Sundays: 1
+ * Principal Feast: 2
+ * Major Observance: 3 // Ash Wed., Holy Week, All Souls
+ * Feast: 4
+ * Minor Observance: 5 // Ember Days, Rogation Days
+ * Saint: 6
+ * Sunday: 7
+ * Vigil: 8
+ * Note: 9
+ * ```
+ */
 export interface CalendarItem {
-  date: string; // YYYY-MM-DD | liturgicalYear-MM-DD | calendarYear-MM-DD
+  date: string; // YYYY-MM-DD
   title: string; // Markdown
-  rank: number; // Arbitrary rank for view: 1-6
-  class: number; // Sarum Rank: PPS = 1, PD = 2, GPS = 3, GD = 4...L/IPS = 7...V = 12
-  isFeast?: boolean;
+  rank: number; // 1-9
+  isPrincipalSunday?: boolean;
   isPrincipalFeast?: boolean;
   isSpecialObservance?: boolean;
-  isSaint?: boolean;
+  isFeast?: boolean;
   isSunday?: boolean;
+  isVigil?: boolean;
+  isSaint?: boolean;
+  isNote?: boolean;
 }
 
 export type SeasonName =

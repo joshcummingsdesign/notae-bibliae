@@ -19,7 +19,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
   const dateString = useMemo(
     () => calendar.getToday().format("YYYY-MM-DD"),
-    [calendar]
+    [calendar],
   );
 
   const getToday = useCallback((): TodayData | null => {
@@ -81,7 +81,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       // Cache responses
       localStorage.setItem(
         `${office}-prayer`,
-        JSON.stringify({ [dateString]: { today, lessons, collects } })
+        JSON.stringify({ [dateString]: { today, lessons, collects } }),
       );
     }
   }, [today, lessons, collects, dateString, office]);
@@ -130,12 +130,12 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isOctaveOfEpiphany ||
       isOctaveOfEaster ||
       isOctaveOfPentecost;
-    const isEve = office === "evening" && calendar.isEve();
-    const isFestal = isEve || isFeastDay || isLordsDay;
+    const isVigil = office === "evening" && calendar.isVigil();
+    const isFestal = isVigil || isFeastDay || isLordsDay;
     let isFerial = isSolemn || !isFestal;
 
     // Octaves are not ferial unless Holy Innocents, and Ember Days
-    if (isOctave && !isEve) {
+    if (isOctave && !isVigil) {
       if ((isHolyInnocents && !isLordsDay) || isEmberDayInWhitsuntide) {
         isFerial = true;
       } else {
@@ -214,17 +214,18 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       calendarData.isOctaveOfEpiphany ||
       calendarData.isEastertide ||
       calendarData.isWhitsuntide,
-    [calendarData]
+    [calendarData],
   );
 
   const shouldOmitTeDeum = useMemo(
     () =>
       calendarData.isRogationDay ||
+      calendarData.isEmberDayInWhitsuntide ||
       calendarData.isAdvent ||
       (calendarData.isHolyInnocents && !calendarData.isLordsDay) ||
       calendarData.isSeptuagesimaToEaster ||
       calendarData.isSolemn,
-    [calendarData]
+    [calendarData],
   );
 
   return {

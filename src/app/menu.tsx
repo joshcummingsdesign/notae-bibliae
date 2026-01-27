@@ -608,10 +608,6 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/epiphanytide/epiphany",
                   },
                   {
-                    title: "Baptism of the Lord",
-                    link: "/liturgy/liturgical-year/seasons/epiphanytide/baptism-of-the-lord",
-                  },
-                  {
                     title: "Presentation of the Lord",
                     link: "/liturgy/liturgical-year/seasons/epiphanytide/presentation-of-the-lord",
                   },
@@ -632,10 +628,6 @@ export const menuItems: MenuNode[] = [
                   {
                     title: "Quinquagesima",
                     link: "/liturgy/liturgical-year/seasons/pre-lent/quinquagesima",
-                  },
-                  {
-                    title: "Shrove Tuesday",
-                    link: "/liturgy/liturgical-year/seasons/pre-lent/shrove-tuesday",
                   },
                 ],
               },

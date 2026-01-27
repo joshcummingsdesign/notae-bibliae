@@ -6,6 +6,8 @@ import dayjs from "dayjs";
 vi.mock("../calendar", () => ({
   Calendar: class {
     getToday = vi.fn().mockReturnValue(dayjs("2026-04-04"));
+    getFirstSundayOfAdvent = vi.fn().mockReturnValue(dayjs("2025-11-30"));
+    getNextFirstSundayOfAdvent = vi.fn().mockReturnValue(dayjs("2026-11-29"));
     getAll = vi.fn().mockReturnValue({
       "2025-11-30": [
         {
@@ -14,6 +16,7 @@ vi.mock("../calendar", () => ({
           rank: 3,
           class: 1,
           isFeast: true,
+          isSunday: true,
         },
         {
           date: "2025-11-30",
@@ -47,6 +50,17 @@ vi.mock("../calendar", () => ({
           isSaint: true,
         },
       ],
+      "2026-04-05": [
+        {
+          date: "2026-04-05",
+          title: "Easter Day",
+          rank: 1,
+          class: 1,
+          isFeast: true,
+          isPrincipalFeast: true,
+          isSunday: true,
+        },
+      ],
     });
   },
 }));
@@ -70,21 +84,27 @@ describe("Collects", () => {
     const mockCalendar = new Calendar(dayjs("2025-11-30"));
     const c = new Collects(mockCalendar);
     const items = c.getAll();
-    expect(Object.keys(items).length).toBe(2);
+    // Returns every day in the liturgical year (2025-11-30 to 2026-11-28 = 364 days)
+    expect(Object.keys(items).length).toBe(364);
+    // First Sunday of Advent has its own collects
     expect(items["2025-11-30"].length).toBe(2);
     expect(items["2025-11-30"][0].title).toBe("First Sunday of Advent");
     expect(items["2025-11-30"][0].collect).toBeTruthy();
+    // Holy Saturday has its own collects
     expect(items["2026-04-04"].length).toBe(2);
     expect(items["2026-04-04"][0].title).toBe("Holy Week: Holy Saturday");
     expect(items["2026-04-04"][0].collect).toBeTruthy();
+    // Days without calendar items fall back to last Sunday/principal feast
+    expect(items["2025-12-01"].length).toBe(1);
+    expect(items["2025-12-01"][0].title).toBe("First Sunday of Advent");
   });
 
   test("should get current day's collects", () => {
     const mockCalendar = new Calendar(dayjs("2025-11-30"));
     const c = new Collects(mockCalendar);
     const items = c.getByDay();
-    expect(items.primary!.title).toBe("Holy Week: Holy Saturday");
-    expect(items.secondary.length).toBe(1);
-    expect(items.secondary[0].title).toBe("Easter Vigil");
+    expect(items.length).toBe(2);
+    expect(items[0].title).toBe("Holy Week: Holy Saturday");
+    expect(items[1].title).toBe("Easter Vigil");
   });
 });

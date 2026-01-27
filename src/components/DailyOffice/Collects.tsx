@@ -13,31 +13,7 @@ interface Props {
 }
 
 export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
-  const filterList = [
-    "Septuagesima",
-    "Sexagesima",
-    "Quinquagesima",
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  const hasPrincipalFeast = collects.some(
-    (collect) => collect.isPrincipalFeast,
-  );
-
-  const hasSpecialObservance = collects.some(
-    (collect) => collect.isSpecialObservance,
-  );
-
-  const hasEve = collects.some(
-    (collect) =>
-      collect.title.includes("Eve") || collect.title.includes("Vigil"),
-  );
+  const hasVigil = collects.some((collect) => collect.isVigil);
 
   let header = (
     <p>
@@ -68,46 +44,12 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
       {header}
       {collects.map((collect) => {
         // Omit Vigils from morning office.
-        if (
-          office === "morning" &&
-          (collect.title.includes("Eve") || collect.title.includes("Vigil"))
-        ) {
+        if (office === "morning" && collect.isVigil) {
           return null;
         }
 
         // Omit weekly collects from Vigils.
-        if (
-          office === "evening" &&
-          hasEve &&
-          filterList.some((day) => collect.title.includes(day)) &&
-          collect.title !== "Vigil of Trinity Sunday"
-        ) {
-          return null;
-        }
-
-        // Omit weekly collects from Principal Feasts.
-        if (
-          hasPrincipalFeast &&
-          filterList.some(
-            (day) =>
-              collect.title.includes(day) &&
-              !collect.isPrincipalFeast &&
-              collect.rank < 6,
-          )
-        ) {
-          return null;
-        }
-
-        // Omit weekly collects from Special Observances.
-        if (
-          hasSpecialObservance &&
-          filterList.some(
-            (day) =>
-              collect.title.includes(day) &&
-              !collect.isSpecialObservance &&
-              collect.rank < 6,
-          )
-        ) {
+        if (office === "evening" && hasVigil && !collect.isVigil) {
           return null;
         }
 

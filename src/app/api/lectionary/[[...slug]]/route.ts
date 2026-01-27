@@ -15,7 +15,7 @@ dayjs.extend(timezone);
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ slug?: string[] }> }
+  { params }: { params: Promise<{ slug?: string[] }> },
 ) {
   const { slug } = await params;
   const { searchParams } = new URL(req.url);
@@ -29,7 +29,7 @@ export async function GET(
   if (date && !isFullDate && !isYear) {
     return NextResponse.json(
       { error: "Date is not formatted as YYYY or YYYY-MM-DD" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -68,7 +68,7 @@ export async function GET(
   if (!daily) {
     return NextResponse.json(
       { error: `Lesson not found for ${date}` },
-      { status: 404 }
+      { status: 404 },
     );
   }
 

@@ -54,12 +54,11 @@ describe("Calendar", () => {
   test("should get the fixed calendar items", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getFixedCalendarItems();
-    expect(items.length).toBe(83);
+    expect(items.length).toBe(82);
     expect(items[0]).toEqual({
       date: "2025-11-30",
       title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
-      rank: 6,
-      class: 6,
+      rank: 4,
       isFeast: true,
       isSaint: true,
     });
@@ -68,7 +67,6 @@ describe("Calendar", () => {
       title:
         "[Saint Catherine of Alexandria](/people/saints/early/catherine-of-alexandria), Virgin and Martyr",
       rank: 6,
-      class: 10,
       isSaint: true,
     });
   });
@@ -79,32 +77,31 @@ describe("Calendar", () => {
     expect(items[0]).toEqual({
       date: "2025-11-30",
       title: "First Sunday of Advent",
-      rank: 3,
-      class: 1,
-      isFeast: true,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[1]).toEqual({
       date: "2025-12-07",
       title: "Second Sunday of Advent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[2]).toEqual({
       date: "2025-12-14",
       title:
         "Third Sunday of Advent: [Gaudete Sunday](/liturgy/liturgical-year/seasons/advent/gaudete-sunday)",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[3]).toEqual({
       date: "2025-12-21",
       title: "Fourth Sunday of Advent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
   });
 
@@ -115,21 +112,21 @@ describe("Calendar", () => {
       date: "2025-12-17",
       title:
         "[Ember Wednesday in Advent](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[1]).toEqual({
       date: "2025-12-19",
       title: "[Ember Friday in Advent](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[2]).toEqual({
       date: "2025-12-20",
       title:
         "[Ember Saturday in Advent](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
   });
 
@@ -139,15 +136,13 @@ describe("Calendar", () => {
     expect(items[0]).toEqual({
       date: "2025-12-28",
       title: "First Sunday After Christmas",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
     expect(items[1]).toEqual({
       date: "2026-01-04",
       title: "Second Sunday After Christmas",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
   });
@@ -183,55 +178,25 @@ describe("Calendar", () => {
     expect(d.getQuinquagesima().format("YYYY-MM-DD")).toBe("2026-02-15");
   });
 
-  test("should get shrove tuesday", () => {
-    const d = new Calendar(dayjs("2025-11-30"));
-    expect(d.getShroveTuesday().format("YYYY-MM-DD")).toBe("2026-02-17");
-  });
-
   test("should get sundays in epiphanytide", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getEpiphanytideSundays();
     expect(items[0]).toEqual({
       date: "2026-01-11",
-      title:
-        "First Sunday of Epiphany: [Baptism of the Lord](/liturgy/liturgical-year/seasons/epiphanytide/baptism-of-the-lord)",
-      rank: 3,
-      class: 2,
+      title: "First Sunday of Epiphany",
+      rank: 7,
       isSunday: true,
     });
     expect(items[1]).toEqual({
       date: "2026-01-18",
       title: "Second Sunday of Epiphany",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
     expect(items[2]).toEqual({
       date: "2026-01-25",
       title: "Third Sunday of Epiphany",
-      rank: 3,
-      class: 7,
-      isSunday: true,
-    });
-    expect(items[3]).toEqual({
-      date: "2026-02-01",
-      title: "Fourth Sunday of Epiphany",
-      rank: 3,
-      class: 7,
-      isSunday: true,
-    });
-    expect(items[4]).toEqual({
-      date: "2026-02-08",
-      title: "Fifth Sunday of Epiphany",
-      rank: 3,
-      class: 7,
-      isSunday: true,
-    });
-    expect(items[5]).toEqual({
-      date: "2026-02-15",
-      title: "Sixth Sunday of Epiphany",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
   });
@@ -243,32 +208,25 @@ describe("Calendar", () => {
       date: "2026-02-01",
       title:
         "[Septuagesima](/liturgy/liturgical-year/seasons/pre-lent/septuagesima)",
-      rank: 2,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[1]).toEqual({
       date: "2026-02-08",
       title:
         "[Sexagesima](/liturgy/liturgical-year/seasons/pre-lent/sexagesima)",
-      rank: 2,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[2]).toEqual({
       date: "2026-02-15",
       title:
         "[Quinquagesima](/liturgy/liturgical-year/seasons/pre-lent/quinquagesima)",
-      rank: 2,
-      class: 3,
-      isSunday: true,
-    });
-    expect(items[3]).toEqual({
-      date: "2026-02-17",
-      title:
-        "[Shrove Tuesday](/liturgy/liturgical-year/seasons/pre-lent/shrove-tuesday)",
       rank: 1,
-      class: 5,
+      isSunday: true,
+      isPrincipalSunday: true,
     });
   });
 
@@ -303,39 +261,39 @@ describe("Calendar", () => {
     expect(items[0]).toEqual({
       date: "2026-02-22",
       title: "First Sunday of Lent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[1]).toEqual({
       date: "2026-03-01",
       title: "Second Sunday of Lent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[2]).toEqual({
       date: "2026-03-08",
       title: "Third Sunday of Lent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[3]).toEqual({
       date: "2026-03-15",
       title:
         "Fourth Sunday of Lent: [Laetare Sunday](/liturgy/liturgical-year/seasons/lent/laetare-sunday)",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[4]).toEqual({
       date: "2026-03-22",
       title:
         "Fifth Sunday of Lent: [Passion Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday)",
-      rank: 3,
-      class: 1,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
   });
 
@@ -345,20 +303,20 @@ describe("Calendar", () => {
     expect(items[0]).toEqual({
       date: "2026-02-25",
       title: "[Ember Wednesday in Lent](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[1]).toEqual({
       date: "2026-02-27",
       title: "[Ember Friday in Lent](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[2]).toEqual({
       date: "2026-02-28",
       title: "[Ember Saturday in Lent](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
   });
 
@@ -369,58 +327,58 @@ describe("Calendar", () => {
       date: "2026-03-29",
       title:
         "Holy Week: [Palm Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday)",
-      rank: 1,
-      class: 1,
+      rank: 3,
       isSunday: true,
+      isSpecialObservance: true,
     });
     expect(items[1]).toEqual({
       date: "2026-03-30",
       title:
         "Holy Week: [Holy Monday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[2]).toEqual({
       date: "2026-03-31",
       title:
         "Holy Week: [Holy Tuesday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[3]).toEqual({
       date: "2026-04-01",
       title:
         "Holy Week: [Spy Wednesday](/liturgy/liturgical-year/seasons/lent/passiontide/spy-wednesday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[4]).toEqual({
       date: "2026-04-02",
       title:
         "Holy Week: [Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[5]).toEqual({
       date: "2026-04-03",
       title:
-        "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
-      rank: 1,
-      class: 2,
+        "Holy Week: [Good Friday](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[6]).toEqual({
       date: "2026-04-04",
       title:
         "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[7]).toEqual({
       date: "2026-04-04",
       title:
         "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
-      rank: 4,
-      class: 5,
+      rank: 8,
+      isVigil: true,
     });
   });
 
@@ -431,76 +389,75 @@ describe("Calendar", () => {
       date: "2026-02-18",
       title:
         "[Ash Wednesday](/liturgy/liturgical-year/seasons/lent/ash-wednesday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[1]).toEqual({
       date: "2026-02-19",
       title: "Thursday in Lent",
-      rank: 1,
-      class: 9,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[2]).toEqual({
       date: "2026-02-20",
       title: "Friday in Lent",
-      rank: 1,
-      class: 9,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[3]).toEqual({
       date: "2026-02-21",
       title: "Saturday in Lent",
-      rank: 1,
-      class: 9,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[4]).toEqual({
       date: "2026-02-22",
       title: "First Sunday of Lent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[5]).toEqual({
       date: "2026-03-01",
       title: "Second Sunday of Lent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[6]).toEqual({
       date: "2026-03-08",
       title: "Third Sunday of Lent",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[7]).toEqual({
       date: "2026-03-15",
       title:
         "Fourth Sunday of Lent: [Laetare Sunday](/liturgy/liturgical-year/seasons/lent/laetare-sunday)",
-      rank: 3,
-      class: 3,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[8]).toEqual({
       date: "2026-03-22",
       title:
         "Fifth Sunday of Lent: [Passion Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday)",
-      rank: 3,
-      class: 1,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[9]).toEqual({
       date: "2026-03-24",
       title: "Vigil of the Annunciation",
-      rank: 4,
-      class: 5,
+      rank: 8,
+      isVigil: true,
     });
     expect(items[10]).toEqual({
       date: "2026-03-25",
       title:
         "[Annunciation of the Lord](/liturgy/liturgical-year/seasons/eastertide/annunciation)",
-      rank: 5,
-      class: 5,
+      rank: 2,
       isFeast: true,
       isPrincipalFeast: true,
     });
@@ -508,58 +465,58 @@ describe("Calendar", () => {
       date: "2026-03-29",
       title:
         "Holy Week: [Palm Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday)",
-      rank: 1,
-      class: 1,
+      rank: 3,
       isSunday: true,
+      isSpecialObservance: true,
     });
     expect(items[12]).toEqual({
       date: "2026-03-30",
       title:
         "Holy Week: [Holy Monday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[13]).toEqual({
       date: "2026-03-31",
       title:
         "Holy Week: [Holy Tuesday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[14]).toEqual({
       date: "2026-04-01",
       title:
         "Holy Week: [Spy Wednesday](/liturgy/liturgical-year/seasons/lent/passiontide/spy-wednesday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[15]).toEqual({
       date: "2026-04-02",
       title:
         "Holy Week: [Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[16]).toEqual({
       date: "2026-04-03",
       title:
-        "Holy Week: [Good Friday (Passion of the Lord)](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
-      rank: 1,
-      class: 2,
+        "Holy Week: [Good Friday](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[17]).toEqual({
       date: "2026-04-04",
       title:
         "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
-      rank: 1,
-      class: 2,
+      rank: 3,
+      isSpecialObservance: true,
     });
     expect(items[18]).toEqual({
       date: "2026-04-04",
       title:
         "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
-      rank: 4,
-      class: 5,
+      rank: 8,
+      isVigil: true,
     });
   });
 
@@ -600,8 +557,7 @@ describe("Calendar", () => {
       date: "2026-04-05",
       title:
         "[Easter Day](/liturgy/liturgical-year/seasons/eastertide/easter-day)",
-      rank: 1,
-      class: 2,
+      rank: 2,
       isFeast: true,
       isPrincipalFeast: true,
       isSunday: true,
@@ -609,116 +565,117 @@ describe("Calendar", () => {
     expect(items[1]).toEqual({
       date: "2026-04-06",
       title: "Monday of Easter Week",
-      rank: 1,
-      class: 5,
+      rank: 2,
+      isPrincipalFeast: true,
     });
     expect(items[2]).toEqual({
       date: "2026-04-07",
       title: "Tuesday of Easter Week",
-      rank: 1,
-      class: 5,
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
     });
     expect(items[3]).toEqual({
       date: "2026-04-08",
       title: "Wednesday of Easter Week",
-      rank: 1,
-      class: 5,
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
     });
     expect(items[4]).toEqual({
       date: "2026-04-09",
       title: "Thursday of Easter Week",
-      rank: 1,
-      class: 9,
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
     });
     expect(items[5]).toEqual({
       date: "2026-04-10",
       title: "Friday of Easter Week",
-      rank: 1,
-      class: 9,
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
     });
     expect(items[6]).toEqual({
       date: "2026-04-11",
       title: "Saturday of Easter Week",
-      rank: 1,
-      class: 9,
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
     });
     expect(items[7]).toEqual({
       date: "2026-04-12",
       title:
         "[Second Sunday of Easter](/liturgy/liturgical-year/seasons/eastertide/second-sunday-of-easter)",
-      rank: 3,
-      class: 8,
+      rank: 2,
       isFeast: true,
+      isPrincipalFeast: true,
       isSunday: true,
     });
     expect(items[8]).toEqual({
       date: "2026-04-19",
       title: "Third Sunday of Easter",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
     expect(items[9]).toEqual({
       date: "2026-04-26",
       title: "Fourth Sunday of Easter",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
     expect(items[10]).toEqual({
       date: "2026-05-03",
       title: "Fifth Sunday of Easter",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
     expect(items[11]).toEqual({
       date: "2026-05-10",
       title:
         "Sixth Sunday of Easter: [Rogation Sunday](/glossary/liturgical-terms#rogation-days)",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[12]).toEqual({
       date: "2026-05-11",
       title: "[Rogation Monday](/glossary/liturgical-terms#rogation-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[13]).toEqual({
       date: "2026-05-12",
       title: "[Rogation Tuesday](/glossary/liturgical-terms#rogation-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[14]).toEqual({
       date: "2026-05-13",
       title: "[Rogation Wednesday](/glossary/liturgical-terms#rogation-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[15]).toEqual({
       date: "2026-05-13",
       title: "Vigil of the Ascension",
-      rank: 4,
-      class: 2,
+      rank: 8,
+      isVigil: true,
     });
     expect(items[16]).toEqual({
       date: "2026-05-14",
       title:
         "[Ascension Day](/liturgy/liturgical-year/seasons/eastertide/ascensiontide/ascension-day)",
-      rank: 1,
-      class: 2,
+      rank: 2,
       isFeast: true,
       isPrincipalFeast: true,
     });
     expect(items[17]).toEqual({
       date: "2026-05-17",
       title: "Seventh Sunday of Easter (Sunday After Ascension Day)",
-      rank: 3,
-      class: 7,
+      rank: 1,
       isSunday: true,
+      isPrincipalSunday: true,
     });
   });
 
@@ -728,36 +685,38 @@ describe("Calendar", () => {
     expect(items[0]).toEqual({
       date: "2026-05-23",
       title: "Vigil of Pentecost (Whitsunday)",
-      rank: 4,
-      class: 2,
+      rank: 8,
+      isVigil: true,
     });
     expect(items[1]).toEqual({
       date: "2026-05-24",
       title:
         "[Pentecost (Whitsunday)](/liturgy/liturgical-year/seasons/whitsuntide/pentecost)",
-      rank: 1,
-      class: 2,
+      rank: 2,
       isFeast: true,
       isPrincipalFeast: true,
       isSunday: true,
     });
-    (expect(items[2]).toEqual({
+    expect(items[2]).toEqual({
       date: "2026-05-25",
       title: "Monday in Whitsuntide",
-      rank: 1,
-      class: 5,
-    }),
-      expect(items[3]).toEqual({
-        date: "2026-05-26",
-        title: "Tuesday in Whitsuntide",
-        rank: 1,
-        class: 5,
-      }));
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
+    });
+    expect(items[3]).toEqual({
+      date: "2026-05-26",
+      title: "Tuesday in Whitsuntide",
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
+    });
     expect(items[4]).toEqual({
       date: "2026-05-28",
       title: "Thursday in Whitsuntide",
-      rank: 1,
-      class: 9,
+      rank: 2,
+      isFeast: true,
+      isPrincipalFeast: true,
     });
   });
 
@@ -768,35 +727,34 @@ describe("Calendar", () => {
       date: "2026-05-27",
       title:
         "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[1]).toEqual({
       date: "2026-05-29",
       title:
         "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[2]).toEqual({
       date: "2026-05-30",
       title:
         "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
   });
 
   test("should get the days of trinitytide", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getTrinitytideDays();
-    expect(items.length).toBe(29);
+    expect(items.length).toBe(28);
     expect(items[0]).toEqual({
       date: "2026-05-31",
       title:
         "[Trinity Sunday](/liturgy/liturgical-year/seasons/trinitytide/trinity-sunday)",
       rank: 2,
-      class: 4,
       isFeast: true,
       isPrincipalFeast: true,
       isSunday: true,
@@ -804,8 +762,7 @@ describe("Calendar", () => {
     expect(items[1]).toEqual({
       date: "2026-06-07",
       title: "First Sunday After Trinity",
-      rank: 3,
-      class: 7,
+      rank: 7,
       isFeast: false,
       isPrincipalFeast: false,
       isSunday: true,
@@ -813,40 +770,36 @@ describe("Calendar", () => {
     expect(items[12]).toEqual({
       date: "2026-08-23",
       title: "Twelfth Sunday After Trinity",
-      rank: 3,
-      class: 7,
+      rank: 7,
+      isFeast: false,
+      isPrincipalFeast: false,
+      isSunday: true,
+    });
+    expect(items[24]).toEqual({
+      date: "2026-11-15",
+      title: "Twenty-Fourth Sunday After Trinity",
+      rank: 7,
       isFeast: false,
       isPrincipalFeast: false,
       isSunday: true,
     });
     expect(items[25]).toEqual({
-      date: "2026-11-22",
-      title: "Twenty-Fifth Sunday After Trinity",
-      rank: 3,
-      class: 7,
-      isFeast: false,
-      isPrincipalFeast: false,
-      isSunday: true,
-    });
-    expect(items[26]).toEqual({
       date: "2026-05-30",
       title: "Vigil of Trinity Sunday",
-      rank: 4,
-      class: 4,
+      rank: 8,
+      isVigil: true,
     });
-    expect(items[27]).toEqual({
+    expect(items[26]).toEqual({
       date: "2026-06-04",
       title:
         "[Corpus Christi](/liturgy/liturgical-year/seasons/trinitytide/corpus-christi)",
-      rank: 5,
-      class: 4,
+      rank: 4,
       isFeast: true,
     });
-    expect(items[28]).toEqual({
+    expect(items[27]).toEqual({
       date: "2026-11-22",
       title: "Sunday Before Advent",
-      rank: 2,
-      class: 7,
+      rank: 7,
       isSunday: true,
     });
   });
@@ -858,22 +811,22 @@ describe("Calendar", () => {
       date: "2026-09-16",
       title:
         "[Ember Wednesday in Trinitytide](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[1]).toEqual({
       date: "2026-09-18",
       title:
         "[Ember Friday in Trinitytide](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
     expect(items[2]).toEqual({
       date: "2026-09-19",
       title:
         "[Ember Saturday in Trinitytide](/glossary/liturgical-terms#ember-days)",
-      rank: 3,
-      class: 11,
+      rank: 5,
+      isSpecialObservance: true,
     });
   });
 
@@ -925,21 +878,19 @@ describe("Calendar", () => {
   test("should query the calendar items", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.queryCalendarItems();
-    expect(items.length).toBe(182);
+    expect(items.length).toBe(176);
     expect(items[0]).toEqual({
       date: "2025-11-30",
-      title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
-      rank: 6,
-      class: 6,
-      isFeast: true,
-      isSaint: true,
+      title: "First Sunday of Advent",
+      rank: 1,
+      isSunday: true,
+      isPrincipalSunday: true,
     });
     expect(items[items.length - 1]).toEqual({
       date: "2026-11-25",
       title:
         "[Saint Catherine of Alexandria](/people/saints/early/catherine-of-alexandria), Virgin and Martyr",
       rank: 6,
-      class: 10,
       isSaint: true,
     });
   });
@@ -948,26 +899,17 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll();
 
-    expect(Object.keys(items).length).toBe(156);
+    expect(Object.keys(items).length).toBe(158);
 
     const adventSun = items["2025-11-30"];
-    expect(adventSun.length).toBe(2);
+    expect(adventSun.length).toBe(1);
     expect(adventSun).toEqual([
       {
         date: "2025-11-30",
         title: "First Sunday of Advent",
-        rank: 3,
-        class: 1,
-        isFeast: true,
+        rank: 1,
         isSunday: true,
-      },
-      {
-        date: "2025-11-30",
-        title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
-        rank: 6,
-        class: 6,
-        isFeast: true,
-        isSaint: true,
+        isPrincipalSunday: true,
       },
     ]);
 
@@ -978,15 +920,15 @@ describe("Calendar", () => {
         date: "2026-04-04",
         title:
           "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
-        rank: 1,
-        class: 2,
+        rank: 3,
+        isSpecialObservance: true,
       },
       {
         date: "2026-04-04",
         title:
           "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
-        rank: 4,
-        class: 5,
+        rank: 8,
+        isVigil: true,
       },
     ]);
   });
@@ -995,26 +937,24 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getAll(false);
 
-    expect(Object.keys(items).length).toBe(156);
+    expect(Object.keys(items).length).toBe(155);
 
     const adventSun = items["2025-11-30"];
     expect(adventSun.length).toBe(2);
     expect(adventSun).toEqual([
       {
         date: "2025-11-30",
-        title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
-        rank: 6,
-        class: 6,
-        isFeast: true,
-        isSaint: true,
+        title: "First Sunday of Advent",
+        rank: 1,
+        isSunday: true,
+        isPrincipalSunday: true,
       },
       {
         date: "2025-11-30",
-        title: "First Sunday of Advent",
-        rank: 3,
-        class: 1,
+        title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
+        rank: 4,
         isFeast: true,
-        isSunday: true,
+        isSaint: true,
       },
     ]);
 
@@ -1025,15 +965,15 @@ describe("Calendar", () => {
         date: "2026-04-04",
         title:
           "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
-        rank: 1,
-        class: 2,
+        rank: 3,
+        isSpecialObservance: true,
       },
       {
         date: "2026-04-04",
         title:
           "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
-        rank: 4,
-        class: 5,
+        rank: 8,
+        isVigil: true,
       },
     ]);
   });
@@ -1054,23 +994,14 @@ describe("Calendar", () => {
   test("should get today's items with ranking", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getByDate(); // today
-    expect(items.length).toBe(2);
+    expect(items.length).toBe(1);
     expect(items).toEqual([
       {
         date: "2025-11-30",
         title: "First Sunday of Advent",
-        rank: 3,
-        class: 1,
-        isFeast: true,
+        rank: 1,
         isSunday: true,
-      },
-      {
-        date: "2025-11-30",
-        title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
-        rank: 6,
-        class: 6,
-        isFeast: true,
-        isSaint: true,
+        isPrincipalSunday: true,
       },
     ]);
   });
@@ -1084,15 +1015,15 @@ describe("Calendar", () => {
         date: "2026-04-04",
         title:
           "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
-        rank: 1,
-        class: 2,
+        rank: 3,
+        isSpecialObservance: true,
       },
       {
         date: "2026-04-04",
         title:
           "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
-        rank: 4,
-        class: 5,
+        rank: 8,
+        isVigil: true,
       },
     ]);
   });
@@ -1106,8 +1037,7 @@ describe("Calendar", () => {
           date: "2026-05-24",
           title:
             "[Pentecost (Whitsunday)](/liturgy/liturgical-year/seasons/whitsuntide/pentecost)",
-          rank: 1,
-          class: 2,
+          rank: 2,
           isFeast: true,
           isPrincipalFeast: true,
           isSunday: true,
@@ -1117,32 +1047,18 @@ describe("Calendar", () => {
         {
           date: "2026-05-25",
           title: "Monday in Whitsuntide",
-          rank: 1,
-          class: 5,
-        },
-        {
-          class: 10,
-          date: "2026-05-25",
-          isSaint: true,
-          rank: 6,
-          title:
-            "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church",
+          rank: 2,
+          isFeast: true,
+          isPrincipalFeast: true,
         },
       ],
       "2026-05-26": [
         {
           date: "2026-05-26",
           title: "Tuesday in Whitsuntide",
-          rank: 1,
-          class: 5,
-        },
-        {
-          date: "2026-05-26",
-          title:
-            "[Saint Augustine of Canterbury](/people/saints/medieval/augustine-of-canterbury), Bishop",
-          rank: 6,
-          class: 10,
-          isSaint: true,
+          rank: 2,
+          isFeast: true,
+          isPrincipalFeast: true,
         },
       ],
       "2026-05-27": [
@@ -1150,16 +1066,17 @@ describe("Calendar", () => {
           date: "2026-05-27",
           title:
             "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-          rank: 3,
-          class: 11,
+          rank: 5,
+          isSpecialObservance: true,
         },
       ],
       "2026-05-28": [
         {
           date: "2026-05-28",
           title: "Thursday in Whitsuntide",
-          rank: 1,
-          class: 9,
+          rank: 2,
+          isFeast: true,
+          isPrincipalFeast: true,
         },
       ],
       "2026-05-29": [
@@ -1167,8 +1084,8 @@ describe("Calendar", () => {
           date: "2026-05-29",
           title:
             "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-          rank: 3,
-          class: 11,
+          rank: 5,
+          isSpecialObservance: true,
         },
       ],
       "2026-05-30": [
@@ -1176,14 +1093,14 @@ describe("Calendar", () => {
           date: "2026-05-30",
           title:
             "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
-          rank: 3,
-          class: 11,
+          rank: 5,
+          isSpecialObservance: true,
         },
         {
           date: "2026-05-30",
           title: "Vigil of Trinity Sunday",
-          rank: 4,
-          class: 4,
+          rank: 8,
+          isVigil: true,
         },
       ],
     });
@@ -1211,18 +1128,9 @@ describe("Calendar", () => {
       {
         date: "2025-11-30",
         title: "First Sunday of Advent",
-        rank: 3,
-        class: 1,
-        isFeast: true,
+        rank: 1,
         isSunday: true,
-      },
-      {
-        date: "2025-11-30",
-        title: "[Saint Andrew](/people/saints/apostles/andrew), Apostle",
-        rank: 6,
-        class: 6,
-        isFeast: true,
-        isSaint: true,
+        isPrincipalSunday: true,
       },
     ]);
   });
@@ -1231,24 +1139,24 @@ describe("Calendar", () => {
     const d = new Calendar(dayjs("2025-11-30"));
     const items = d.getFormattedSeasonItems();
     expect(Object.keys(items).length).toBe(8);
-    expect(items["Advent"][0]).toBe(
-      "November 30 — First Sunday of Advent — [Saint Andrew](/people/saints/apostles/andrew), Apostle",
-    );
+    expect(items["Advent"][0]).toBe("November 30 — First Sunday of Advent");
     expect(items["Lent"][items["Lent"].length - 1]).toBe(
       "April 4 — Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday) — [Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
     );
   });
 
   test("should return the current day string", () => {
-    const a = new Calendar(dayjs("2025-11-30"));
+    const a = new Calendar(dayjs("2025-12-28"));
     const ad = a.getCurrentDayString();
     expect(ad).toBe(
-      "Advent — November 30 — First Sunday of Advent — [Saint Andrew](/people/saints/apostles/andrew), Apostle",
+      "Christmastide — December 28 — [The Holy Innocents](/liturgy/liturgical-year/seasons/christmastide/holy-innocents) — First Sunday After Christmas",
     );
 
     const b = new Calendar(dayjs("2025-12-01"));
     const ab = b.getCurrentDayString();
-    expect(ab).toBe("Advent — December 1");
+    expect(ab).toBe(
+      "Advent — December 1 — [Saint Andrew](/people/saints/apostles/andrew), Apostle",
+    );
 
     const c = new Calendar(dayjs("2025-12-06"));
     const ac = c.getCurrentDayString();
@@ -1416,10 +1324,10 @@ describe("Calendar", () => {
   });
 
   test("should check to see if it's a feast day", () => {
-    const a = new Calendar(dayjs("2025-11-30"));
+    const a = new Calendar(dayjs("2025-12-01"));
     expect(a.isFeastDay()).toBeTruthy();
 
-    const b = new Calendar(dayjs("2025-12-01"));
+    const b = new Calendar(dayjs("2025-12-02"));
     expect(b.isFeastDay()).toBeFalsy();
   });
 
@@ -1431,33 +1339,33 @@ describe("Calendar", () => {
     expect(b.isLordsDay()).toBeFalsy();
   });
 
-  test("should check to see if it's an eve", () => {
+  test("should check to see if it's a vigil", () => {
     const a = new Calendar(dayjs("2025-12-24"));
-    expect(a.isEve()).toBeTruthy();
+    expect(a.isVigil()).toBeTruthy();
 
     const b = new Calendar(dayjs("2026-01-05"));
-    expect(b.isEve()).toBeTruthy();
+    expect(b.isVigil()).toBeTruthy();
 
-    const c = new Calendar(dayjs("2026-02-01"));
-    expect(c.isEve()).toBeTruthy();
+    const c = new Calendar(dayjs("2026-03-24"));
+    expect(c.isVigil()).toBeTruthy();
 
-    const d = new Calendar(dayjs("2026-03-24"));
-    expect(d.isEve()).toBeTruthy();
+    const d = new Calendar(dayjs("2026-04-04"));
+    expect(d.isVigil()).toBeTruthy();
 
     const e = new Calendar(dayjs("2026-05-13"));
-    expect(e.isEve()).toBeTruthy();
+    expect(e.isVigil()).toBeTruthy();
 
     const f = new Calendar(dayjs("2026-05-23"));
-    expect(f.isEve()).toBeTruthy();
+    expect(f.isVigil()).toBeTruthy();
 
     const g = new Calendar(dayjs("2026-05-30"));
-    expect(g.isEve()).toBeTruthy();
+    expect(g.isVigil()).toBeTruthy();
 
     const h = new Calendar(dayjs("2026-10-31"));
-    expect(h.isEve()).toBeTruthy();
+    expect(h.isVigil()).toBeTruthy();
 
     const i = new Calendar(dayjs("2026-01-06"));
-    expect(i.isEve()).toBeFalsy();
+    expect(i.isVigil()).toBeFalsy();
   });
 
   test("should check to see if it's transfiguration", () => {
@@ -1511,10 +1419,10 @@ describe("Calendar", () => {
     const a = new Calendar(dayjs("2025-11-30"));
     expect(a.isFeastOfASaint()).toBeFalsy();
 
-    const b = new Calendar(dayjs("2025-12-06"));
+    const b = new Calendar(dayjs("2025-12-01"));
     expect(b.isFeastOfASaint()).toBeTruthy();
 
-    const c = new Calendar(dayjs("2025-12-13"));
+    const c = new Calendar(dayjs("2025-12-26"));
     expect(c.isFeastOfASaint()).toBeTruthy();
 
     const d = new Calendar(dayjs("2025-12-07"));

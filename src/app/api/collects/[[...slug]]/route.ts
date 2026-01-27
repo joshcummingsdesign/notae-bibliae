@@ -51,26 +51,15 @@ export async function GET(
   const liturgicalYear = calendar.getLiturgicalYear();
 
   const collects = new Collects(calendar);
+  const collectData = collects.getAll();
 
   if (isAll) {
-    const collectData = collects.getAll();
-    const res = { liturgicalYear, ...collectData };
-    return NextResponse.json(res);
+    return NextResponse.json({ liturgicalYear, ...collectData });
   }
 
   const dateString = calendar.getToday().format("YYYY-MM-DD");
-
-  const { primary, secondary } = collects.getByDay();
-
-  const items = [];
-  if (primary) {
-    items.push(primary);
-  }
-
-  const res = {
+  return NextResponse.json({
     liturgicalYear,
-    [dateString]: [...items, ...secondary],
-  };
-
-  return NextResponse.json(res);
+    [dateString]: collectData[dateString] || [],
+  });
 }
