@@ -27,18 +27,18 @@ export const FeastRankingTable = () => (
           </td>
         </tr>
         <tr>
-          <td>Special Observances</td>
-          <td>
-            Penitential days and seasonal devotions that are observed with
-            distinctive liturgical practices, but are not celebrated as feasts.
-          </td>
-        </tr>
-        <tr>
           <td>Commemorations</td>
           <td>
             Memorials honoring Saints, Martyrs, Church Fathers, and other holy
             persons or events that bear witness to the faith through their lives
             and histories.
+          </td>
+        </tr>
+        <tr>
+          <td>Special Observances</td>
+          <td>
+            Penitential days and seasonal devotions that are observed with
+            distinctive liturgical practices, but are not celebrated as feasts.
           </td>
         </tr>
       </tbody>
