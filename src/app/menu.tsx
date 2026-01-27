@@ -2194,6 +2194,10 @@ export const menuItems: MenuNode[] = [
             link: "/people/twelve-tribes-of-israel/issachar",
           },
           {
+            title: "Zebulun",
+            link: "/people/twelve-tribes-of-israel/zebulun",
+          },
+          {
             title: "Joseph",
             link: "/people/twelve-tribes-of-israel/joseph",
           },
