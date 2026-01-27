@@ -2803,7 +2803,7 @@
       "evening": { "first": ["1 Sam. 2:1-10"], "second": ["Matt. 1:18-23"] }
     }
   ],
-  "Holy Week: Palm Sunday": [
+  "Palm Sunday": [
     {
       "morning": {
         "first": ["Isa. 52:13-15, Isa. 53:1-12"],
@@ -2815,13 +2815,13 @@
       }
     }
   ],
-  "Holy Week: Holy Monday": [
+  "Monday of Holy Week": [
     {
       "morning": { "first": ["Isa. 42:1-7"], "second": ["John 14:1-14"] },
       "evening": { "first": ["Lam. 1:7-12"], "second": ["John 14:15-31"] }
     }
   ],
-  "Holy Week: Holy Tuesday": [
+  "Tuesday of Holy Week": [
     {
       "morning": { "first": ["Hosea 14:1-9"], "second": ["John 15:1-16"] },
       "evening": {
@@ -2830,7 +2830,7 @@
       }
     }
   ],
-  "Holy Week: Spy Wednesday": [
+  "Wednesday of Holy Week": [
     {
       "morning": {
         "first": ["Zech. 12:9-10, Zech. 13:1, Zech. 13:7-9"],
@@ -2842,13 +2842,13 @@
       }
     }
   ],
-  "Holy Week: Maundy Thursday": [
+  "Maundy Thursday": [
     {
       "morning": { "first": ["Jer. 31:31-34"], "second": ["John 13:18-38"] },
       "evening": { "first": ["Lam. 3:40-58"], "second": ["John 17:1-26"] }
     }
   ],
-  "Holy Week: Good Friday": [
+  "Good Friday": [
     {
       "morning": {
         "first": ["Gen. 22:1-18"],
@@ -2860,7 +2860,7 @@
       }
     }
   ],
-  "Holy Week: Holy Saturday": [
+  "Holy Saturday": [
     {
       "morning": {
         "first": ["Job 14:1-14"],

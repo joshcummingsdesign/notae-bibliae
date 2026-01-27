@@ -495,7 +495,7 @@ export class Calendar {
       {
         date: holyWeekStart.format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Palm Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday)",
+          "[Palm Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday)",
         rank: 3,
         isSunday: true,
         isSpecialObservance: true,
@@ -503,42 +503,42 @@ export class Calendar {
       {
         date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Holy Monday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
+          "[Monday of Holy Week](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
         rank: 3,
         isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Holy Tuesday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
+          "[Tuesday of Holy Week](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
         rank: 3,
         isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Spy Wednesday](/liturgy/liturgical-year/seasons/lent/passiontide/spy-wednesday)",
+          "[Wednesday of Holy Week](/liturgy/liturgical-year/seasons/lent/passiontide/holy-wednesday)",
         rank: 3,
         isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(4, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
+          "[Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
         rank: 3,
         isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(5, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Good Friday](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
+          "[Good Friday](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
         rank: 3,
         isSpecialObservance: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
         title:
-          "Holy Week: [Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
+          "[Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
         rank: 3,
         isSpecialObservance: true,
       },

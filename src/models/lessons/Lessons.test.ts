@@ -163,8 +163,12 @@ describe("Lessons", () => {
         const all = lessons.getAll();
 
         expect(all["2025-12-25"]?.title).toBe("Christmas Day");
-        expect(all["2025-12-26"]?.title).toBe("Saint Stephen, Deacon and Martyr");
-        expect(all["2025-12-27"]?.title).toBe("Saint John, Apostle and Evangelist");
+        expect(all["2025-12-26"]?.title).toBe(
+          "Saint Stephen, Deacon and Martyr",
+        );
+        expect(all["2025-12-27"]?.title).toBe(
+          "Saint John, Apostle and Evangelist",
+        );
         expect(all["2025-12-28"]?.title).toBe("The Holy Innocents");
       });
 
@@ -204,10 +208,10 @@ describe("Lessons", () => {
       test("Holy Week has lessons", () => {
         const all = lessons.getAll();
 
-        expect(all["2026-03-29"]?.title).toBe("Holy Week: Palm Sunday");
-        expect(all["2026-04-02"]?.title).toBe("Holy Week: Maundy Thursday");
-        expect(all["2026-04-03"]?.title).toBe("Holy Week: Good Friday");
-        expect(all["2026-04-04"]?.title).toBe("Holy Week: Holy Saturday");
+        expect(all["2026-03-29"]?.title).toBe("Palm Sunday");
+        expect(all["2026-04-02"]?.title).toBe("Maundy Thursday");
+        expect(all["2026-04-03"]?.title).toBe("Good Friday");
+        expect(all["2026-04-04"]?.title).toBe("Holy Saturday");
       });
     });
 

@@ -657,16 +657,16 @@ export const menuItems: MenuNode[] = [
                         link: "/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday",
                       },
                       {
-                        title: "Holy Monday",
+                        title: "Monday of Holy Week",
                         link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday",
                       },
                       {
-                        title: "Holy Tuesday",
+                        title: "Tuesday of Holy Week",
                         link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday",
                       },
                       {
-                        title: "Spy Wednesday",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/spy-wednesday",
+                        title: "Wednesday of Holy Week",
+                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-wednesday",
                       },
                       {
                         title: "Maundy Thursday",
