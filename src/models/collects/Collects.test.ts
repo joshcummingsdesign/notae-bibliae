@@ -384,6 +384,74 @@ describe("Collects", () => {
         expect(holySaturday[0].title).toContain("Holy Saturday");
       });
     });
+
+    describe("ranking precedence", () => {
+      test("commemorations (rank 6) are omitted on Principal Sundays (rank 1)", () => {
+        // Dec 7, 2025 is Second Sunday of Advent (rank 1) AND Saint Ambrose (rank 6)
+        // According to ranking rules, Saint Ambrose should be omitted entirely
+        const all = collects.getAll();
+        const dec7 = all["2025-12-07"];
+
+        expect(dec7).toBeDefined();
+        expect(dec7.length).toBe(1);
+        expect(dec7[0].title).toBe("Second Sunday of Advent");
+        // Saint Ambrose should NOT appear
+        expect(dec7.some((c) => c.title.includes("Ambrose"))).toBe(false);
+      });
+
+      test("on Ordinary Sundays, Sunday collect comes before commemoration", () => {
+        // Find a date where a Saint (rank 6) falls on an Ordinary Sunday (rank 7)
+        // The Calendar sorts to put Sunday before Saint in display order
+        const yearCollects = createCollects("2026-06-07"); // Jun 7, 2026 is a Sunday in Trinitytide
+        const all = yearCollects.getAll();
+
+        // Check any date that has both an Ordinary Sunday and a Saint
+        for (const [date, dayCollects] of Object.entries(all)) {
+          const hasSunday = dayCollects.some(
+            (c) => c.isSunday && c.rank === 7
+          );
+          const hasSaint = dayCollects.some((c) => c.rank === 6);
+
+          if (hasSunday && hasSaint) {
+            // Sunday (rank 7) should come before Saint (rank 6)
+            const sundayIndex = dayCollects.findIndex(
+              (c) => c.isSunday && c.rank === 7
+            );
+            const saintIndex = dayCollects.findIndex((c) => c.rank === 6);
+            expect(sundayIndex).toBeLessThan(saintIndex);
+            break;
+          }
+        }
+      });
+
+      test("feasts on Ordinary Sundays show feast collect first", () => {
+        // When a Feast (rank 4) falls on an Ordinary Sunday (rank 7),
+        // the Feast takes precedence (appears first), then Sunday collect after
+        const all = collects.getAll();
+
+        // Find any date with both a Feast and Ordinary Sunday
+        for (const [date, dayCollects] of Object.entries(all)) {
+          const hasFeast = dayCollects.some(
+            (c) => c.isFeast && c.rank === 4
+          );
+          const hasOrdinarySunday = dayCollects.some(
+            (c) => c.isSunday && c.rank === 7
+          );
+
+          if (hasFeast && hasOrdinarySunday) {
+            // Feast (rank 4) should come before Ordinary Sunday (rank 7)
+            const feastIndex = dayCollects.findIndex(
+              (c) => c.isFeast && c.rank === 4
+            );
+            const sundayIndex = dayCollects.findIndex(
+              (c) => c.isSunday && c.rank === 7
+            );
+            expect(feastIndex).toBeLessThan(sundayIndex);
+            break;
+          }
+        }
+      });
+    });
   });
 
   describe("consistency across years", () => {
