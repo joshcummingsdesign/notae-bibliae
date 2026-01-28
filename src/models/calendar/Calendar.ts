@@ -1640,6 +1640,14 @@ export class Calendar {
   }
 
   /**
+   * Check to see if it's the commemoration of a saint.
+   */
+  isSaintDay(): boolean {
+    const currentDay = this.getByDate();
+    return currentDay.length > 0 && !!currentDay[0].isSaint;
+  }
+
+  /**
    * Get the O Antiphons.
    */
   getOAntiphons(): AntiphonMap {

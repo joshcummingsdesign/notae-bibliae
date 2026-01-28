@@ -988,6 +988,31 @@ describe("Calendar", () => {
         expect(createCalendar("2025-11-30").isFeastOfASaint()).toBe(false); // Sunday takes precedence
         expect(createCalendar("2025-12-07").isFeastOfASaint()).toBe(false); // Just a Sunday
       });
+
+      test("isSaintDay returns true when highest ranked item is a saint", () => {
+        // Jan 25, 2025 - Conversion of St. Paul (rank 4) with Third Sunday of Epiphany (rank 7)
+        // Saint feast takes precedence over ordinary Sunday
+        expect(createCalendar("2025-01-25").isSaintDay()).toBe(true);
+        // Feb 23, 2026 - Polycarp commemoration (rank 6), no competing observance
+        expect(createCalendar("2026-02-23").isSaintDay()).toBe(true);
+        // Dec 26, 2025 - St. Stephen is the highest ranked
+        expect(createCalendar("2025-12-26").isSaintDay()).toBe(true);
+      });
+
+      test("isSaintDay returns false when higher ranked non-saint item exists", () => {
+        // Nov 30, 2025 - First Sunday of Advent (rank 1) takes precedence over St. Andrew (rank 4)
+        expect(createCalendar("2025-11-30").isSaintDay()).toBe(false);
+        // Dec 25 - Christmas Day (Principal Feast) is not a saint
+        expect(createCalendar("2025-12-25").isSaintDay()).toBe(false);
+        // July 26, 2026 - Eighth Sunday after Trinity (rank 7) with Joachim and Anne (rank 6)
+        // Ordinary Sunday takes precedence over commemoration in display order
+        expect(createCalendar("2026-07-26").isSaintDay()).toBe(false);
+      });
+
+      test("isSaintDay returns false when no items for the date", () => {
+        // A random date with no special observance
+        expect(createCalendar("2026-07-15").isSaintDay()).toBe(false);
+      });
     });
   });
 

@@ -25,6 +25,7 @@ const createMockCalendar = () => ({
   isEastertide: vi.fn(() => false),
   getOAntiphons: vi.fn(() => ({})),
   isFeastOfASaint: vi.fn(() => false),
+  isSaintDay: vi.fn(() => false),
   isTransfiguration: vi.fn(() => false),
   isAnnunciation: vi.fn(() => false),
   isEmberDayInWhitsuntide: vi.fn(() => false),
@@ -592,8 +593,8 @@ describe("useDailyOffice", () => {
       expect(result.current.invitatoryPage).toBe(322);
     });
 
-    it("returns page 324 for Feast of a Saint", async () => {
-      mockCalendar.isFeastOfASaint.mockReturnValue(true);
+    it("returns page 324 for Saint Day", async () => {
+      mockCalendar.isSaintDay.mockReturnValue(true);
 
       const { result } = renderHook(() => useDailyOffice("morning"));
 

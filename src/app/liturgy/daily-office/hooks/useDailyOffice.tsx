@@ -111,7 +111,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     const isEastertide = calendar.isEastertide();
     const oAntiphons = calendar.getOAntiphons();
     const currentAntiphon = oAntiphons[dateString];
-    const isFeastOfASaint = calendar.isFeastOfASaint();
+    const isSaintDay = calendar.isSaintDay();
     const isTransfiguration = calendar.isTransfiguration();
     const isAnnunciation = calendar.isAnnunciation();
     const isEmberDayInWhitsuntide = calendar.isEmberDayInWhitsuntide();
@@ -161,7 +161,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isFestal,
       isFerial,
       currentAntiphon,
-      isFeastOfASaint,
+      isSaintDay,
       isTransfiguration,
       isAnnunciation,
       isEmberDayInWhitsuntide,
@@ -178,7 +178,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
   const invitatoryPage = useMemo(() => {
     let page = 306; // Default: Advent
-    if (calendarData.isFeastOfASaint) {
+    if (calendarData.isSaintDay) {
       page = 324;
     } else if (calendarData.isTransfiguration) {
       page = 310;
