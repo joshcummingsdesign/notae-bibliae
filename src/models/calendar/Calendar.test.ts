@@ -45,16 +45,13 @@ describe("Calendar", () => {
         ["2025-12-25", "2025-11-30", "during Christmastide"],
         ["2026-01-01", "2025-11-30", "in new calendar year"],
         ["2025-11-29", "2024-12-01", "before First Sunday of Advent"],
-      ])(
-        "for date %s returns %s (%s)",
-        (inputDate, expectedAdvent) => {
-          expect(
-            createCalendar(inputDate)
-              .getFirstSundayOfAdvent()
-              .format("YYYY-MM-DD"),
-          ).toBe(expectedAdvent);
-        },
-      );
+      ])("for date %s returns %s (%s)", (inputDate, expectedAdvent) => {
+        expect(
+          createCalendar(inputDate)
+            .getFirstSundayOfAdvent()
+            .format("YYYY-MM-DD"),
+        ).toBe(expectedAdvent);
+      });
     });
 
     describe("getNextFirstSundayOfAdvent", () => {
@@ -79,9 +76,9 @@ describe("Calendar", () => {
         [2027, "2027-11-28"],
         [2028, "2028-12-03"],
       ])("for year %i returns %s", (year, expected) => {
-        expect(cal.calculateFirstSundayOfAdvent(year).format("YYYY-MM-DD")).toBe(
-          expected,
-        );
+        expect(
+          cal.calculateFirstSundayOfAdvent(year).format("YYYY-MM-DD"),
+        ).toBe(expected);
       });
     });
   });
@@ -292,11 +289,11 @@ describe("Calendar", () => {
         expect(days).toEqual([3, 5, 6]); // Wed, Fri, Sat
       });
 
-      test("all are rank 5 special observances", () => {
+      test("Ember Days are rank 5 lesser observances", () => {
         const emberDays = cal.getEmberDaysInAdvent();
         for (const day of emberDays) {
           expect(day.rank).toBe(5);
-          expect(day.isSpecialObservance).toBe(true);
+          expect(day.isLesserObservance).toBe(true);
         }
       });
     });
@@ -425,6 +422,13 @@ describe("Calendar", () => {
         expect(days[0].title).toContain("Ash Wednesday");
       });
 
+      test("Ash Wednesday is a rank 3 greater observance", () => {
+        const days = cal.getLentDays();
+        const ashWednesday = days[0];
+        expect(ashWednesday.rank).toBe(3);
+        expect(ashWednesday.isGreaterObservance).toBe(true);
+      });
+
       test("includes Annunciation when in Lent", () => {
         const days = cal.getLentDays();
         const hasAnnunciation = days.some((d) =>
@@ -454,9 +458,21 @@ describe("Calendar", () => {
 
       test("Holy Saturday and Easter Vigil share the same date", () => {
         const days = cal.getHolyWeekDays();
-        const holySaturday = days.find((d) => d.title.includes("Holy Saturday"));
+        const holySaturday = days.find((d) =>
+          d.title.includes("Holy Saturday"),
+        );
         const easterVigil = days.find((d) => d.title.includes("Easter Vigil"));
         expect(holySaturday?.date).toBe(easterVigil?.date);
+      });
+
+      test("Holy Week days are rank 3 greater observances", () => {
+        const days = cal.getHolyWeekDays();
+        // Filter out Easter Vigil which is a rank 8 vigil
+        const holyWeekDays = days.filter((d) => !d.isVigil);
+        for (const day of holyWeekDays) {
+          expect(day.rank).toBe(3);
+          expect(day.isGreaterObservance).toBe(true);
+        }
       });
     });
   });
@@ -483,6 +499,18 @@ describe("Calendar", () => {
         const days = cal.getEastertideDays();
         const rogationDays = days.filter((d) => d.title.includes("Rogation"));
         expect(rogationDays.length).toBeGreaterThanOrEqual(3);
+      });
+
+      test("Rogation Days are rank 5 lesser observances", () => {
+        const days = cal.getEastertideDays();
+        // Filter for actual Rogation Days (Mon/Tue/Wed), excluding Rogation Sunday
+        const rogationDays = days.filter(
+          (d) => d.title.includes("Rogation") && !d.title.includes("Sunday"),
+        );
+        for (const day of rogationDays) {
+          expect(day.rank).toBe(5);
+          expect(day.isLesserObservance).toBe(true);
+        }
       });
 
       test("includes Ascension Day", () => {
@@ -696,9 +724,9 @@ describe("Calendar", () => {
         const items = cal.getAll(true);
         // Nov 30 has both First Sunday of Advent (rank 1) and St. Andrew (rank 4)
         const nov30 = items["2025-11-30"];
-        expect(nov30.every((item) => !item.title.includes("Saint Andrew"))).toBe(
-          true,
-        );
+        expect(
+          nov30.every((item) => !item.title.includes("Saint Andrew")),
+        ).toBe(true);
       });
 
       test("without ranking, returns all items for each date", () => {
@@ -980,6 +1008,13 @@ describe("Calendar", () => {
         expect(createCalendar("2026-04-04").isSolemn()).toBe(true); // Holy Saturday
         expect(createCalendar("2026-11-02").isSolemn()).toBe(true); // All Souls
         expect(createCalendar("2025-12-25").isSolemn()).toBe(false);
+      });
+
+      test("All Souls is a rank 3 greater observance", () => {
+        const items = createCalendar("2026-11-02").getByDate();
+        const allSouls = items.find((item) => item.title.includes("All Souls"));
+        expect(allSouls?.rank).toBe(3);
+        expect(allSouls?.isGreaterObservance).toBe(true);
       });
 
       test("isFeastOfASaint returns true when saint feast is observed", () => {

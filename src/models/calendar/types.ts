@@ -20,11 +20,12 @@ export interface CalendarItem {
   rank: number; // 1-9
   isPrincipalSunday?: boolean;
   isPrincipalFeast?: boolean;
-  isSpecialObservance?: boolean; // Greater or Lesser Observance
+  isGreaterObservance?: boolean;
   isFeast?: boolean;
+  isLesserObservance?: boolean;
+  isSaint?: boolean;
   isSunday?: boolean;
   isVigil?: boolean;
-  isSaint?: boolean;
   isNote?: boolean;
 }
 
