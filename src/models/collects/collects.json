@@ -276,8 +276,8 @@
   },
   {
     "title": "Saint Joseph, Spouse of the Blessed Virgin Mary",
-    "text": "O God, who from the family of thy servant David didst raise up Joseph to be the guardian of thy incarnate Son and the spouse of his · Virgin Mother: Give us grace to imitate his uprightness of life and his obedience to thy com·mands; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for e·ver and ever. Amen.",
-    "source": "Lesser Feasts and Fasts (2024)"
+    "text": "O Lord, who didst appoint bless-ed Joseph to be the foster-father of thine only-begotten Son, and the guardian of his · Virgin Mother: keep us, we beseech thee, under thy perpetual · care; through the same · Jesus Christ our Lord. Amen.",
+    "source": "Breviary Offices (1874)"
   },
   {
     "title": "Fifth Sunday of Lent: Passion Sunday",
@@ -551,8 +551,8 @@
   },
   {
     "title": "Saints Peter and Paul, Apostles",
-    "text": "Almighty God, whose bless-ed Apostles Peter and Paul glorifi-ed thee · by their martyrdom: Grant that thy church, instructed by their teaching and example, and knit together in unity by thy Spirit, may ever stand firm upon the one foundation, which is Jesus Christ our · Lord; who liveth and reigneth with thee, in the unity of the same Spirit, one God, for e·ver and ever. Amen.",
-    "source": "Lesser Feasts and Fasts (2024)"
+    "text": "O God, who hast consecrated this day by the Martyrdom of thine Apostles Pe·ter and Paul; grant that thy Church may in all things follow their precepts, from whom it receiv-ed the first principles of the · faith; through · Jesus Christ our Lord. Amen.",
+    "source": "Breviary Offices (1874)"
   },
   {
     "title": "Saint Thomas, Apostle",
@@ -625,7 +625,7 @@
     "source": "Lesser Feasts and Fasts (2024)"
   },
   {
-    "title": "Stain Clare, Virgin",
+    "title": "Saint Clare, Virgin",
     "text": "O God, whose blessed Son became poor that we, through his poverty, might · become rich: Deliver us, we pray thee, from an inordinate love of this · world, that we, inspir-ed by the devotion of thy servant Clare, might serve thee with singleness of heart and attain to the riches of the age to · come; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Ghost, one God, now · and for ever. Amen.",
     "source": "Lesser Feasts and Fasts (2024)"
   },
@@ -636,8 +636,8 @@
   },
   {
     "title": "Repose of the Blessed Virgin Mary",
-    "text": "O God, who hast taken to thyself the blessed Virgin Mary, mother of thy in·carnate Son: Grant that we, who have been redeemed by his blood, may share with her the glory of thine eternal king·dom; through the same thy Son Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Ghost, one God, now · and for ever. Amen.",
-    "source": "Lesser Feasts and Fasts (2024)"
+    "text": "We beseech thee, Al·mighty God, grant that we, who commemorate the holy Repose of Bless-ed Mary, ever Virgin, may attain to participation in her eternal · joys; through · Jesus Christ our Lord. Amen.",
+    "source": "Breviary Offices (1874)"
   },
   {
     "title": "Eleventh Sunday After Trinity",
@@ -686,8 +686,8 @@
   },
   {
     "title": "Nativity of the Blessed Virgin Mary",
-    "text": "Father in heaven, by whose grace the Virgin Mother of thy incarnate Son was bless-ed in bearing him, but still more bless-ed in keep·ing thy word: Grant us who honor the exaltation of her lowliness to follow the example of her devotion to thy · will; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for e·ver and ever. Amen.",
-    "source": "Lesser Feasts and Fasts (2024)"
+    "text": "O God, who in thine own good pleasure wouldest reconcile the world un·to thyself; grant, we beseech thee, that we, who celebrate the birth of Blessed Ma·ry, may, assisted by her prayers, attain the salvation wrought out by her · Son, · our Lord Jesus Christ. Amen.",
+    "source": "Breviary Offices (1874)"
   },
   {
     "title": "Fifteenth Sunday After Trinity",
@@ -762,7 +762,8 @@
   {
     "title": "Saint Denis, Bishop, and Companions, Martyrs",
     "text": "Almighty, everlasting God, who kindlest the fire of thy love in the hearts · of thy Saints, give to our souls the same strength of faith and cha·rity; that, as we rejoice in the victories of thy Martyrs, Denis and his companions, so we may profit by their exam·ples; through · Jesus Christ our Lord. Amen.",
-    "source": "Breviary Offices (1874)"
+    "source": "Breviary Offices (1874)",
+    "notes": "Not contiained in Lesser Feasts and Fasts."
   },
   {
     "title": "Nineteenth Sunday After Trinity",
@@ -802,7 +803,8 @@
   {
     "title": "All Souls' Day",
     "text": "O eternal Lord God, who holdest all · souls in life; Vouchsafe, we beseech thee, to thy whole Church in paradise and on earth, thy light and thy · peace; and grant that we, following the good examples of those who have serv-ed thee here and are now at rest, may at the last enter with them into thine unending · joy; through · Jesus Christ our Lord. Amen.",
-    "source": "BCP 1928"
+    "source": "BCP 1928",
+    "notes": "Collect for the Burial of the Dead."
   },
   {
     "title": "Twenty-First Sunday After Trinity",
@@ -847,12 +849,14 @@
   {
     "title": "Twenty-Fifth Sunday After Trinity",
     "text": "O Lord Jesus Christ, who saidst unto thine Apostles, Peace I leave with you, my peace I give · unto you; Regard not our sins, but the faith of thy · Church; and grant to it that peace and unity which is according to thy · will, who livest and reignest with the Father and the Holy Ghost, one God, world · without end. Amen.",
-    "source": "BCP 1928"
+    "source": "BCP 1928",
+    "notes": "From the Collects to be used at the discretion of the Minister."
   },
   {
     "title": "Twenty-Sixth Sunday After Trinity",
     "text": "Assist us mercifully, O Lord, in these our supplica·tions and prayers, and dispose the way of thy servants towards the attainment of everlasting salva·tion; that, among all the changes and chances of this mortal life, they may be ever defended by thy most gracious and ready · help; through · Jesus Christ our Lord. Amen.",
-    "source": "BCP 1928"
+    "source": "BCP 1928",
+    "notes": "From the Collects to be used at the discretion of the Minister."
   },
   {
     "title": "Sunday Before Advent",

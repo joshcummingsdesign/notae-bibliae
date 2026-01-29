@@ -4,6 +4,7 @@ export interface CollectItem {
   title: string;
   text: string;
   source: string;
+  notes?: string;
 }
 
 export interface CollectCalendarItem extends CalendarItem {
