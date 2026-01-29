@@ -577,14 +577,14 @@ describe("Calendar", () => {
         expect(sundayBeforeAdvent).toBeDefined();
       });
 
-      test("has between 22 and 27 Sundays depending on Easter", () => {
+      test("has between 22 and 28 Sundays depending on Easter", () => {
         for (let year = 2000; year <= 2050; year++) {
           const calendar = createCalendar(`${year}-06-01`);
           const sundays = calendar
             .getTrinitytideDays()
             .filter((d) => d.isSunday);
           expect(sundays.length).toBeGreaterThanOrEqual(22);
-          expect(sundays.length).toBeLessThanOrEqual(27);
+          expect(sundays.length).toBeLessThanOrEqual(28);
         }
       });
 
@@ -600,6 +600,68 @@ describe("Calendar", () => {
           .filter((d) => d.isSunday).length;
 
         expect(earlyCount).toBeGreaterThan(lateCount);
+      });
+
+      describe("maximum Trinity Sundays edge case (28 Sundays)", () => {
+        // 2035 has Easter on March 25, giving maximum Trinitytide Sundays
+        const maxTrinityCal = createCalendar("2034-12-03"); // liturgical year 2035
+
+        test("2035 (early Easter March 25) has 28 Sundays in Trinitytide", () => {
+          const sundays = maxTrinityCal
+            .getTrinitytideDays()
+            .filter((d) => d.isSunday);
+          expect(sundays.length).toBe(28);
+        });
+
+        test("generates Trinity Sunday through Twenty-Sixth Sunday After Trinity", () => {
+          const sundays = maxTrinityCal
+            .getTrinitytideDays()
+            .filter((d) => d.isSunday);
+
+          // First should be Trinity Sunday
+          expect(sundays[0].title).toContain("Trinity Sunday");
+
+          // Should have all 26 numbered Sundays after Trinity
+          expect(sundays[1].title).toBe("First Sunday After Trinity");
+          expect(sundays[13].title).toBe("Thirteenth Sunday After Trinity");
+          expect(sundays[25].title).toBe("Twenty-Fifth Sunday After Trinity");
+          expect(sundays[26].title).toBe("Twenty-Sixth Sunday After Trinity");
+        });
+
+        test("Sunday Before Advent acts as the 28th Sunday", () => {
+          const sundays = maxTrinityCal
+            .getTrinitytideDays()
+            .filter((d) => d.isSunday);
+
+          // Last Sunday should be Sunday Before Advent (index 27 = 28th Sunday)
+          expect(sundays[27].title).toBe("Sunday Before Advent");
+          expect(sundays[27].isSunday).toBe(true);
+          expect(sundays[27].rank).toBe(7);
+        });
+
+        test("all Trinity Sunday titles use proper ordinal words (not numeric)", () => {
+          const sundays = maxTrinityCal
+            .getTrinitytideDays()
+            .filter((d) => d.isSunday && d.title.includes("Sunday After Trinity"));
+
+          // Verify none use numeric fallback (e.g., "27th")
+          for (const sunday of sundays) {
+            expect(sunday.title).not.toMatch(/\d+th Sunday After Trinity/);
+          }
+        });
+
+        test("no gaps between consecutive Trinity Sundays", () => {
+          const sundays = maxTrinityCal
+            .getTrinitytideDays()
+            .filter((d) => d.isSunday)
+            .sort((a, b) => a.date.localeCompare(b.date));
+
+          for (let i = 1; i < sundays.length; i++) {
+            const prev = dayjs(sundays[i - 1].date);
+            const curr = dayjs(sundays[i].date);
+            expect(curr.diff(prev, "day")).toBe(7);
+          }
+        });
       });
     });
 

@@ -28,16 +28,17 @@ describe("numberToWords", () => {
     expect(numberToWords(20)).toBe("Twentieth");
   });
 
-  test("should convert numbers 21-25 to ordinal words", () => {
+  test("should convert numbers 21-26 to ordinal words", () => {
     expect(numberToWords(21)).toBe("Twenty-First");
     expect(numberToWords(22)).toBe("Twenty-Second");
     expect(numberToWords(23)).toBe("Twenty-Third");
     expect(numberToWords(24)).toBe("Twenty-Fourth");
     expect(numberToWords(25)).toBe("Twenty-Fifth");
+    expect(numberToWords(26)).toBe("Twenty-Sixth");
   });
 
   test("should fall back to number + 'th' for unmapped numbers", () => {
-    expect(numberToWords(26)).toBe("26th");
+    expect(numberToWords(27)).toBe("27th");
     expect(numberToWords(30)).toBe("30th");
     expect(numberToWords(50)).toBe("50th");
     expect(numberToWords(100)).toBe("100th");

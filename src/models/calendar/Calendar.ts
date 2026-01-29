@@ -866,7 +866,8 @@ export class Calendar {
     const days: CalendarItem[] = [];
 
     // Generate Sundays after Trinity until Sunday Before Advent
-    for (let i = 0; i < 26; i++) {
+    // Loop up to 27 to handle years with early Easter that have 26 Sundays after Trinity
+    for (let i = 0; i < 27; i++) {
       const sunday = trinitySunday.add(i * 7, "day");
       if (sunday.isSameOrAfter(christTheKing, "day")) break;
       const title =

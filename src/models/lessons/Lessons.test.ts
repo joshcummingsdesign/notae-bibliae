@@ -464,6 +464,87 @@ describe("Lessons", () => {
           countTrinitySundays(lateAll),
         );
       });
+
+      describe("maximum Trinity Sundays edge case (28 Sundays)", () => {
+        // 2035 has Easter on March 25, giving maximum Trinitytide Sundays
+        const maxTrinityLessons = createLessons("2034-12-03");
+
+        test("most Sundays in Trinitytide have Trinity-themed lessons", () => {
+          const all = maxTrinityLessons.getAll();
+
+          // Count unique Sundays with Trinity-related lessons (not weekday entries)
+          // Some Sundays may be displaced by feast days (e.g., Nativity of St. John, Saints Simon and Jude)
+          const trinitySundays = Object.entries(all).filter(
+            ([_, lesson]) =>
+              (lesson.title.includes("Trinity Sunday") ||
+                lesson.title.includes("Sunday After Trinity") ||
+                lesson.title === "Sunday Before Advent") &&
+              !lesson.title.includes(" - "),
+          );
+
+          // At least 26 (allowing for 2 feast day displacements)
+          expect(trinitySundays.length).toBeGreaterThanOrEqual(26);
+        });
+
+        test("Sunday Before Advent has its own lessons", () => {
+          const all = maxTrinityLessons.getAll();
+
+          const sundayBeforeAdvent = Object.entries(all).find(
+            ([_, lesson]) => lesson.title === "Sunday Before Advent",
+          );
+
+          expect(sundayBeforeAdvent).toBeDefined();
+          const [_, lesson] = sundayBeforeAdvent!;
+          expect(lesson.morning.first.length).toBeGreaterThan(0);
+          expect(lesson.morning.second.length).toBeGreaterThan(0);
+          expect(lesson.evening.first.length).toBeGreaterThan(0);
+          expect(lesson.evening.second.length).toBeGreaterThan(0);
+        });
+
+        test("Twenty-Fifth Sunday After Trinity has lessons", () => {
+          const all = maxTrinityLessons.getAll();
+
+          const twentyFifth = Object.entries(all).find(
+            ([_, lesson]) =>
+              lesson.title === "Twenty-Fifth Sunday After Trinity",
+          );
+
+          expect(twentyFifth).toBeDefined();
+          const [_, lesson] = twentyFifth!;
+          expect(lesson.morning.first.length).toBeGreaterThan(0);
+          expect(lesson.morning.second.length).toBeGreaterThan(0);
+        });
+
+        test("Twenty-Sixth Sunday After Trinity has lessons", () => {
+          const all = maxTrinityLessons.getAll();
+
+          const twentySixth = Object.entries(all).find(
+            ([_, lesson]) =>
+              lesson.title === "Twenty-Sixth Sunday After Trinity",
+          );
+
+          expect(twentySixth).toBeDefined();
+          const [_, lesson] = twentySixth!;
+          expect(lesson.morning.first.length).toBeGreaterThan(0);
+          expect(lesson.morning.second.length).toBeGreaterThan(0);
+        });
+
+        test("weekdays following Sunday Before Advent inherit its cycle", () => {
+          const all = maxTrinityLessons.getAll();
+
+          // Find Sunday Before Advent date
+          const [sundayDate] = Object.entries(all).find(
+            ([_, lesson]) => lesson.title === "Sunday Before Advent",
+          )!;
+
+          // Monday after should reference Sunday Before Advent cycle
+          const mondayDate = dayjs(sundayDate).add(1, "day").format("YYYY-MM-DD");
+          const monday = all[mondayDate];
+
+          expect(monday).toBeDefined();
+          expect(monday.title).toContain("Sunday Before Advent");
+        });
+      });
     });
   });
 

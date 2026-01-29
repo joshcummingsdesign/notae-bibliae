@@ -268,6 +268,83 @@ describe("Collects", () => {
         expect(all["2026-06-07"][0].title).toBe("First Sunday After Trinity");
         expect(all["2026-06-14"][0].title).toBe("Second Sunday After Trinity");
       });
+
+      describe("maximum Trinity Sundays edge case (28 Sundays)", () => {
+        // 2035 has Easter on March 25, giving maximum Trinitytide Sundays
+        const maxTrinityCollects = createCollects("2034-12-03");
+
+        test("all 28 Sundays in Trinitytide have collects", () => {
+          const all = maxTrinityCollects.getAll();
+
+          // Count dates that are actual Sundays (day 0) with Trinity-related collects
+          const trinitySundayDates = new Set<string>();
+          for (const [date, items] of Object.entries(all)) {
+            // Only count actual Sundays (day of week = 0)
+            if (dayjs(date).day() !== 0) continue;
+
+            for (const item of items) {
+              if (
+                item.title.includes("Trinity Sunday") ||
+                item.title === "Sunday Before Advent" ||
+                item.title.includes("Sunday After Trinity")
+              ) {
+                trinitySundayDates.add(date);
+              }
+            }
+          }
+
+          expect(trinitySundayDates.size).toBe(28);
+        });
+
+        test("Sunday Before Advent has its own collect", () => {
+          const all = maxTrinityCollects.getAll();
+
+          const sundayBeforeAdvent = Object.entries(all).find(([_, items]) =>
+            items.some((item) => item.title === "Sunday Before Advent"),
+          );
+
+          expect(sundayBeforeAdvent).toBeDefined();
+          const [_, items] = sundayBeforeAdvent!;
+          const sundayCollect = items.find(
+            (item) => item.title === "Sunday Before Advent",
+          );
+          expect(sundayCollect?.collect).toContain("King of kings");
+        });
+
+        test("Twenty-Fifth Sunday After Trinity has collect", () => {
+          const all = maxTrinityCollects.getAll();
+
+          const twentyFifth = Object.entries(all).find(([_, items]) =>
+            items.some(
+              (item) => item.title === "Twenty-Fifth Sunday After Trinity",
+            ),
+          );
+
+          expect(twentyFifth).toBeDefined();
+          const [_, items] = twentyFifth!;
+          const collect = items.find(
+            (item) => item.title === "Twenty-Fifth Sunday After Trinity",
+          );
+          expect(collect?.collect).toContain("Stir up");
+        });
+
+        test("Twenty-Sixth Sunday After Trinity has collect", () => {
+          const all = maxTrinityCollects.getAll();
+
+          const twentySixth = Object.entries(all).find(([_, items]) =>
+            items.some(
+              (item) => item.title === "Twenty-Sixth Sunday After Trinity",
+            ),
+          );
+
+          expect(twentySixth).toBeDefined();
+          const [_, items] = twentySixth!;
+          const collect = items.find(
+            (item) => item.title === "Twenty-Sixth Sunday After Trinity",
+          );
+          expect(collect?.collect).toContain("Stir up");
+        });
+      });
     });
   });
 

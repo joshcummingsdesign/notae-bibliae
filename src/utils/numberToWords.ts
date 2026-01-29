@@ -25,6 +25,7 @@ export const numberToWords = (n: number): string => {
     23: "Twenty-Third",
     24: "Twenty-Fourth",
     25: "Twenty-Fifth",
+    26: "Twenty-Sixth",
   };
   return ordinalWords[n] || `${n}th`;
 };
