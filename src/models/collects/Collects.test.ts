@@ -308,7 +308,7 @@ describe("Collects", () => {
           const sundayCollect = items.find(
             (item) => item.title === "Sunday Before Advent",
           );
-          expect(sundayCollect?.collect).toContain("King of kings");
+          expect(sundayCollect?.collect).toContain("Stir up");
         });
 
         test("Twenty-Fifth Sunday After Trinity has collect", () => {
@@ -325,7 +325,7 @@ describe("Collects", () => {
           const collect = items.find(
             (item) => item.title === "Twenty-Fifth Sunday After Trinity",
           );
-          expect(collect?.collect).toContain("Stir up");
+          expect(collect?.collect).toContain("Peace I leave with you");
         });
 
         test("Twenty-Sixth Sunday After Trinity has collect", () => {
@@ -342,7 +342,7 @@ describe("Collects", () => {
           const collect = items.find(
             (item) => item.title === "Twenty-Sixth Sunday After Trinity",
           );
-          expect(collect?.collect).toContain("Stir up");
+          expect(collect?.collect).toContain("Assist us mercifully");
         });
       });
     });
