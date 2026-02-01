@@ -2545,6 +2545,12 @@
       }
     }
   ],
+  "Saint Thomas, Apostle": [
+    {
+      "morning": { "first": ["Job 42:1-6"], "second": ["John 14:1-7"] },
+      "evening": { "first": ["Isa. 43:8-13"], "second": ["1 Pet. 1:3-9"] }
+    }
+  ],
   "Christmas Eve": [
     {
       "morning": {
@@ -2770,6 +2776,12 @@
       "evening": { "first": ["Jer. 3:11-18"], "second": ["John 8:45-59"] }
     }
   ],
+  "Saint Matthias, Apostle": [
+    {
+      "morning": { "first": ["1 Sam. 2:27-35"], "second": ["Matt. 7:15-27"] },
+      "evening": { "first": ["1 Sam. 12:1-5"], "second": ["Acts 20:17-35"] }
+    }
+  ],
   "Ember Wednesday in Lent": [
     {
       "morning": { "first": ["Ezek. 2:1-10"], "second": ["Matt. 9:1-13"] },
@@ -2980,12 +2992,6 @@
       }
     }
   ],
-  "Saint Matthias, Apostle": [
-    {
-      "morning": { "first": ["1 Sam. 2:27-35"], "second": ["Matt. 7:15-27"] },
-      "evening": { "first": ["1 Sam. 12:1-5"], "second": ["Acts 20:17-35"] }
-    }
-  ],
   "Ember Wednesday in Whitsuntide": [
     {
       "morning": { "first": ["Ecclus. 39:1-8"], "second": ["1 Cor. 2:1-16"] },
@@ -3032,12 +3038,6 @@
     {
       "morning": { "first": ["Ezek. 2:1-7"], "second": ["Acts 11:1-18"] },
       "evening": { "first": ["Ezek. 34:11-16"], "second": ["John 21:15-22"] }
-    }
-  ],
-  "Saint Thomas, Apostle": [
-    {
-      "morning": { "first": ["Job 42:1-6"], "second": ["John 14:1-7"] },
-      "evening": { "first": ["Isa. 43:8-13"], "second": ["1 Pet. 1:3-9"] }
     }
   ],
   "Saint James, Apostle": [
