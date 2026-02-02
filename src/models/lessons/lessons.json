@@ -2,7 +2,7 @@
   "First Sunday of Advent": [
     {
       "morning": {
-        "first": ["Mal. 3:1-6, Mal. 4:4-6"],
+        "first": ["Mal. 3:1-6", "Mal. 4:4-6"],
         "second": ["Luke 1:5-25"]
       },
       "evening": {
@@ -21,7 +21,7 @@
     {
       "morning": { "first": ["Isa. 2:6-19"], "second": ["Mark 1:29-39"] },
       "evening": {
-        "first": ["Isa. 3:1-3, Isa. 3:8-15"],
+        "first": ["Isa. 3:1-3", "Isa. 3:8-15"],
         "second": ["Rev. 5:1-14"]
       }
     },
@@ -33,7 +33,7 @@
       "morning": { "first": ["Isa. 5:8-29"], "second": ["Mark 2:1-12"] },
       "evening": {
         "first": ["Isa. 6:1-11"],
-        "second": ["Rev. 7:1-4, Rev. 7:9-17"]
+        "second": ["Rev. 7:1-4", "Rev. 7:9-17"]
       }
     },
     {
@@ -55,17 +55,17 @@
     {
       "morning": {
         "first": ["Isa. 8:5-8, Isa. 8:11-20"],
-        "second": ["Mark 2:23-28, Mark 3:1-6"]
+        "second": ["Mark 2:23-28", "Mark 3:1-6"]
       },
       "evening": { "first": ["Isa. 9:8-17"], "second": ["Rev. 11:15-19"] }
     },
     {
       "morning": {
-        "first": ["Isa. 9:18-21, Isa. 10:1-4"],
+        "first": ["Isa. 9:18-21", "Isa. 10:1-4"],
         "second": ["Mark 3:7-19"]
       },
       "evening": {
-        "first": ["Isa. 10:5-7, Isa. 10:13-21"],
+        "first": ["Isa. 10:5-7", "Isa. 10:13-21"],
         "second": ["Rev. 12:1-12"]
       }
     },
@@ -75,7 +75,7 @@
     },
     {
       "morning": {
-        "first": ["Isa. 13:1-5, Isa. 13:17-22"],
+        "first": ["Isa. 13:1-5", "Isa. 13:17-22"],
         "second": ["Mark 4:1-20"]
       },
       "evening": { "first": ["Isa. 13:6-15"], "second": ["Rev. 14:1-13"] }
@@ -92,17 +92,17 @@
   "Third Sunday of Advent: Gaudete Sunday": [
     {
       "morning": {
-        "first": ["Jer. 1:4-10, Jer. 1:17-19"],
+        "first": ["Jer. 1:4-10", "Jer. 1:17-19"],
         "second": ["Luke 1:57-66"]
       },
       "evening": {
-        "first": ["Nahum 1:3-8, Nahum 1:15"],
+        "first": ["Nahum 1:3-8", "Nahum 1:15"],
         "second": ["1 Cor. 9:7-23"]
       }
     },
     {
       "morning": {
-        "first": ["Isa. 29:1-4, Isa. 29:9-14"],
+        "first": ["Isa. 29:1-4", "Isa. 29:9-14"],
         "second": ["Mark 5:1-20"]
       },
       "evening": { "first": ["Isa. 29:15-24"], "second": ["Rev. 18:11-24"] }
@@ -114,7 +114,7 @@
     null,
     {
       "morning": {
-        "first": ["Isa. 32:1-4, Isa. 32:15-20"],
+        "first": ["Isa. 32:1-4", "Isa. 32:15-20"],
         "second": ["Mark 6:1-6"]
       },
       "evening": { "first": ["Isa. 33:1-10"], "second": ["Rev. 20:1-6"] }
@@ -129,7 +129,7 @@
         "second": ["Luke 3:1-17"]
       },
       "evening": {
-        "first": ["Isa. 40:12-18, Isa. 40:21-31"],
+        "first": ["Isa. 40:12-18", "Isa. 40:21-31"],
         "second": ["1 Thess. 3:7-13"]
       }
     },
@@ -140,13 +140,13 @@
     {
       "morning": { "first": ["Isa. 25:1-9"], "second": ["Luke 1:26-38"] },
       "evening": {
-        "first": ["Gen. 49:1-2, Gen. 49:8-10"],
+        "first": ["Gen. 49:1-2", "Gen. 49:8-10"],
         "second": ["Rev. 21:1-8"]
       }
     },
     {
       "morning": {
-        "first": ["Zech. 8:1-8, Zech. 8:20-23"],
+        "first": ["Zech. 8:1-8", "Zech. 8:20-23"],
         "second": ["Luke 1:39-45"]
       },
       "evening": { "first": ["Haggai 2:1-9"], "second": ["Rev. 21:9-27"] }
@@ -182,11 +182,11 @@
   "Second Sunday After Christmas": [
     {
       "morning": {
-        "first": ["Isa. 44:1-8, Isa. 44:21-23"],
+        "first": ["Isa. 44:1-8", "Isa. 44:21-23"],
         "second": ["Luke 2:21-32"]
       },
       "evening": {
-        "first": ["Prov. 9:1-6, Prov. 9:10"],
+        "first": ["Prov. 9:1-6", "Prov. 9:10"],
         "second": ["2 Cor. 4:1-6"]
       }
     },
@@ -211,7 +211,7 @@
     {
       "morning": { "first": ["Prov. 1:7-19"], "second": ["Eph. 1:1-23"] },
       "evening": {
-        "first": ["Ezek. 1:2-6, Ezek. 1:24-28"],
+        "first": ["Ezek. 1:2-6", "Ezek. 1:24-28"],
         "second": ["John 1:1-18"]
       }
     },
@@ -221,7 +221,7 @@
     },
     {
       "morning": {
-        "first": ["Prov. 3:1-7, Prov. 3:11-12"],
+        "first": ["Prov. 3:1-7", "Prov. 3:11-12"],
         "second": ["Eph. 2:11-22"]
       },
       "evening": { "first": ["Ezek. 3:4-14"], "second": ["John 1:35-51"] }
@@ -233,7 +233,7 @@
     {
       "morning": { "first": ["Prov. 3:27-35"], "second": ["Eph. 3:14-21"] },
       "evening": {
-        "first": ["Ezek. 7:10-15, Ezek. 7:23-27"],
+        "first": ["Ezek. 7:10-15", "Ezek. 7:23-27"],
         "second": ["John 2:13-25"]
       }
     },
@@ -267,18 +267,18 @@
     },
     {
       "morning": { "first": ["Prov. 8:12-20"], "second": ["Eph. 6:1-24"] },
-      "evening": { "first": ["Ezek. 4:12-20"], "second": ["John 4:15-26"] }
+      "evening": { "first": ["Ezek. 14:12-20"], "second": ["John 4:15-26"] }
     },
     {
       "morning": { "first": ["Prov. 8:22-35"], "second": ["Phil. 1:1-11"] },
       "evening": {
-        "first": ["Ezek. 18:1-4, Ezek. 18:19-23"],
+        "first": ["Ezek. 18:1-4", "Ezek. 18:19-23"],
         "second": ["John 4:27-42"]
       }
     },
     {
       "morning": {
-        "first": ["Prov. 9:1-6, Prov. 9:13-18"],
+        "first": ["Prov. 9:1-6", "Prov. 9:13-18"],
         "second": ["Phil. 1:12-26"]
       },
       "evening": { "first": ["Ezek. 18:26-32"], "second": ["John 4:43-54"] }
@@ -287,7 +287,7 @@
   "Third Sunday of Epiphany": [
     {
       "morning": {
-        "first": ["Deut. 16:18-20, Deut. 17:8-11"],
+        "first": ["Deut. 16:18-20", "Deut. 17:8-11"],
         "second": ["John 4:1-14"]
       },
       "evening": {
@@ -297,11 +297,11 @@
     },
     {
       "morning": {
-        "first": ["Prov. 10:12-14, Prov. 10:18-21"],
-        "second": ["Phil. 1:27-30, Phil. 2:1-11"]
+        "first": ["Prov. 10:12-14", "Prov. 10:18-21"],
+        "second": ["Phil. 1:27-30", "Phil. 2:1-11"]
       },
       "evening": {
-        "first": ["Ezek. 27:1-5, Ezek. 27:26-36"],
+        "first": ["Ezek. 27:1-5", "Ezek. 27:26-36"],
         "second": ["John 5:1-15"]
       }
     },
@@ -311,7 +311,7 @@
     },
     {
       "morning": {
-        "first": ["Prov. 11:9-14, Prov. 11:24-30"],
+        "first": ["Prov. 11:9-14", "Prov. 11:24-30"],
         "second": ["Phil. 2:19-30"]
       },
       "evening": { "first": ["Ezek. 33:10-20"], "second": ["John 5:30-47"] }
@@ -322,8 +322,8 @@
     },
     {
       "morning": {
-        "first": ["Prov. 15:16-23, Prov. 15:27-29"],
-        "second": ["Phil. 3:17-21, Phil. 4:1-3"]
+        "first": ["Prov. 15:16-23", "Prov. 15:27-29"],
+        "second": ["Phil. 3:17-21", "Phil. 4:1-3"]
       },
       "evening": { "first": ["Ezek. 34:1-10"], "second": ["John 6:15-29"] }
     },
@@ -345,26 +345,29 @@
     },
     {
       "morning": {
-        "first": ["Prov. 20:9-12, Prov. 20:17-22"],
+        "first": ["Prov. 20:9-12", "Prov. 20:17-22"],
         "second": ["Col. 1:1-17"]
       },
       "evening": { "first": ["Ezek. 34:25-31"], "second": ["John 6:41-59"] }
     },
     {
-      "morning": { "first": ["Prov. 21:21-31"], "second": ["Col. 1:18-2:5"] },
+      "morning": {
+        "first": ["Prov. 21:21-31"],
+        "second": ["Col. 1:18-29", "Col. 2:1-5"]
+      },
       "evening": { "first": ["Ezek. 36:22-28"], "second": ["John 6:60-71"] }
     },
     {
       "morning": {
-        "first": ["Prov. 22:1-6, Prov. 22:17-25"],
+        "first": ["Prov. 22:1-6", "Prov. 22:17-25"],
         "second": ["Col. 2:6-19"]
       },
       "evening": { "first": ["Ezek. 37:1-14"], "second": ["John 7:1-13"] }
     },
     {
       "morning": {
-        "first": ["Prov. 23:20-21, Prov. 23:29-35"],
-        "second": ["Col. 2:20-23, Col. 3:1-11"]
+        "first": ["Prov. 23:20-21", "Prov. 23:29-35"],
+        "second": ["Col. 2:20-23", "Col. 3:1-11"]
       },
       "evening": { "first": ["Ezek. 37:21-28"], "second": ["John 7:14-24"] }
     },
@@ -374,8 +377,8 @@
     },
     {
       "morning": {
-        "first": ["Prov. 25:11-15, Prov. 25:17-22"],
-        "second": ["Col. 3:18-25, Col. 4:1-6"]
+        "first": ["Prov. 25:11-15", "Prov. 25:17-22"],
+        "second": ["Col. 3:18-25", "Col. 4:1-6"]
       },
       "evening": { "first": ["Ezek. 43:1-9"], "second": ["John 7:37-52"] }
     }
@@ -397,7 +400,7 @@
     },
     {
       "morning": {
-        "first": ["Prov. 27:1-6, Prov. 27:10-12"],
+        "first": ["Prov. 27:1-6", "Prov. 27:10-12"],
         "second": ["1 Pet. 1:13-25"]
       },
       "evening": { "first": ["Isa. 14:12-20"], "second": ["1 Thess. 2:1-13"] }
@@ -405,14 +408,14 @@
     {
       "morning": { "first": ["Prov. 28:1-13"], "second": ["1 Pet. 2:1-10"] },
       "evening": {
-        "first": ["Isa. 22:1-5, Isa. 22:12-14"],
-        "second": ["1 Thess. 2:17-20, 1 Thess. 3:1-13"]
+        "first": ["Isa. 22:1-5", "Isa. 22:12-14"],
+        "second": ["1 Thess. 2:17-20", "1 Thess. 3:1-13"]
       }
     },
     {
       "morning": { "first": ["Prov. 29:11-25"], "second": ["1 Pet. 2:11-17"] },
       "evening": {
-        "first": ["Isa. 24:1-6, Isa. 24:10-16"],
+        "first": ["Isa. 24:1-6", "Isa. 24:10-16"],
         "second": ["1 Thess. 4:1-12"]
       }
     },
@@ -423,7 +426,7 @@
     {
       "morning": { "first": ["Prov. 31:10-31"], "second": ["1 Pet. 3:1-12"] },
       "evening": {
-        "first": ["Isa. 47:1, Isa. 47:7-15"],
+        "first": ["Isa. 47:1", "Isa. 47:7-15"],
         "second": ["1 Thess. 5:1-11"]
       }
     }
@@ -435,7 +438,7 @@
         "second": ["Matt. 25:14-29"]
       },
       "evening": {
-        "first": ["Gen. 19:1-3, Gen. 19:12-17, Gen. 19:24-28"],
+        "first": ["Gen. 19:1-3", "Gen. 19:12-17", "Gen. 19:24-28"],
         "second": ["Luke 17:20-37"]
       }
     },
@@ -453,12 +456,12 @@
     },
     {
       "morning": {
-        "first": ["Lam. 4:1-6, Lam. 4:9"],
+        "first": ["Lam. 4:1-6", "Lam. 4:9"],
         "second": ["1 Pet. 4:12-19"]
       },
       "evening": {
         "first": ["Wisdom 7:7-14"],
-        "second": ["2 Thess. 2:13-17, 2 Thess. 3:1-5"]
+        "second": ["2 Thess. 2:13-17", "2 Thess. 3:1-5"]
       }
     },
     {
@@ -468,7 +471,7 @@
     {
       "morning": { "first": ["Lam. 5:1-22"], "second": ["1 Pet. 5:8-14"] },
       "evening": {
-        "first": ["Wisdom 7:22-30, Wisdom 8:1"],
+        "first": ["Wisdom 7:22-30", "Wisdom 8:1"],
         "second": ["Jude 1:1-25"]
       }
     }
@@ -487,23 +490,23 @@
     {
       "morning": { "first": ["Gen. 1:1-19"], "second": ["Mark 6:7-13"] },
       "evening": {
-        "first": ["Amos 7:1-8, Amos 8:1-3"],
+        "first": ["Amos 7:1-8", "Amos 8:1-3"],
         "second": ["Gal. 1:1-10"]
       }
     },
     {
       "morning": {
-        "first": ["Gen. 1:20-31, Gen. 2:1-3"],
+        "first": ["Gen. 1:20-31", "Gen. 2:1-3"],
         "second": ["Mark 6:14-29"]
       },
       "evening": {
-        "first": ["Amos 1:1-5, Amos 1:13-15, Amos 2:1-3"],
+        "first": ["Amos 1:1-5", "Amos 1:13-15", "Amos 2:1-3"],
         "second": ["Gal. 1:11-24"]
       }
     },
     {
       "morning": {
-        "first": ["Gen. 2:4-9, Gen. 2:16-25"],
+        "first": ["Gen. 2:4-9", "Gen. 2:16-25"],
         "second": ["Mark 6:30-44"]
       },
       "evening": { "first": ["Amos 2:6-16"], "second": ["Gal. 2:1-10"] }
@@ -518,7 +521,7 @@
     },
     {
       "morning": {
-        "first": ["Gen. 6:5-8, Gen. 6:13-22"],
+        "first": ["Gen. 6:5-8", "Gen. 6:13-22"],
         "second": ["Mark 7:14-23"]
       },
       "evening": { "first": ["Amos 5:1-13"], "second": ["Gal. 3:10-18"] }
@@ -2528,8 +2531,8 @@
     {
       "morning": { "first": ["Jer. 23:23-32"], "second": ["2 Cor. 5:5-21"] },
       "evening": {
-        "first": ["Jer. 26:1-7, Jer. 26:10-15"],
-        "second": ["2 Tim. 3:14-17, 2 Tim. 4:1-8"]
+        "first": ["Jer. 26:1-7", "Jer. 26:10-15"],
+        "second": ["2 Tim. 3:14-17", "2 Tim. 4:1-8"]
       }
     }
   ],
@@ -2537,11 +2540,11 @@
     {
       "morning": {
         "first": ["Mal. 2:1-9"],
-        "second": ["Matt. 9:35-38, Matt. 10:1-15"]
+        "second": ["Matt. 9:35-38", "Matt. 10:1-15"]
       },
       "evening": {
         "first": ["Mal. 3:1-6"],
-        "second": ["Heb. 4:14-16, Heb. 5:1-10"]
+        "second": ["Heb. 4:14-16", "Heb. 5:1-10"]
       }
     }
   ],
@@ -2554,17 +2557,17 @@
   "Christmas Eve": [
     {
       "morning": {
-        "first": ["Baruch 4:36-37, Baruch 5:1-9"],
-        "second": ["Luke 2:2-7"]
+        "first": ["Baruch 4:36-37", "Baruch 5:1-9"],
+        "second": ["Luke 2:1-7"]
       },
-      "evening": { "first": ["Zech. 2:10-12"], "second": ["Matt. 1:18-25"] }
+      "evening": { "first": ["Zech. 2:10-13"], "second": ["Matt. 1:18-25"] }
     }
   ],
   "Christmas Day": [
     {
       "morning": { "first": ["Isa. 9:2-7"], "second": ["Luke 2:8-20"] },
       "evening": {
-        "first": ["Micah 4:1-5, Micah 5:2-4"],
+        "first": ["Micah 4:1-5", "Micah 5:2-4"],
         "second": ["1 John 4:7-14"]
       }
     }
@@ -2574,7 +2577,7 @@
       "morning": { "first": ["2 Chron. 24:17-22"], "second": ["Acts 6:1-15"] },
       "evening": {
         "first": ["Wisdom 4:7-15"],
-        "second": ["Acts 7:59-60, Acts 8:1-8"]
+        "second": ["Acts 7:59-60", "Acts 8:1-8"]
       }
     }
   ],
@@ -2582,7 +2585,7 @@
     {
       "morning": {
         "first": ["Exod. 33:12-23"],
-        "second": ["John 13:20-26, John 13:31-35"]
+        "second": ["John 13:20-26", "John 13:31-35"]
       },
       "evening": { "first": ["Isa. 6:1-8"], "second": ["Rev. 1:1-20"] }
     }
@@ -2590,12 +2593,12 @@
   "The Holy Innocents": [
     {
       "morning": {
-        "first": ["Jer. 31:1-6, Jer. 31:15-16"],
+        "first": ["Jer. 31:1-6", "Jer. 31:15-16"],
         "second": ["Matt. 18:1-14"]
       },
       "evening": {
         "first": ["Isa. 54:1-13"],
-        "second": ["Mark 10:13-16, Mark 10:23-31"]
+        "second": ["Mark 10:13-16", "Mark 10:23-31"]
       }
     }
   ],
@@ -2608,7 +2611,7 @@
   "December 30": [
     {
       "morning": {
-        "first": ["Isa. 59:1-3, Isa. 59:15-21"],
+        "first": ["Isa. 59:1-3", "Isa. 59:15-21"],
         "second": ["1 John 2:1-17"]
       },
       "evening": { "first": ["Isa. 60:13-22"], "second": ["Heb. 2:1-18"] }
@@ -2618,7 +2621,7 @@
     {
       "morning": { "first": ["Isa. 62:1-12"], "second": ["1 John 2:18-29"] },
       "evening": {
-        "first": ["Deut. 10:12-22, Deut. 11:1"],
+        "first": ["Deut. 10:12-22", "Deut. 11:1"],
         "second": ["Heb. 3:1-19"]
       }
     }
@@ -2633,7 +2636,7 @@
     {
       "morning": { "first": ["Isa. 63:7-14"], "second": ["1 John 3:1-11"] },
       "evening": {
-        "first": ["Isa. 63:15-19, Isa. 64:1"],
+        "first": ["Isa. 63:15-19", "Isa. 64:1"],
         "second": ["Heb. 4:1-13"]
       }
     }
@@ -2643,7 +2646,7 @@
       "morning": { "first": ["Isa. 64:4-12"], "second": ["1 John 3:13-24"] },
       "evening": {
         "first": ["Isa. 65:8-16"],
-        "second": ["Heb. 4:14-16, Heb. 5:1-14"]
+        "second": ["Heb. 4:14-16", "Heb. 5:1-14"]
       }
     }
   ],
@@ -2651,7 +2654,7 @@
     {
       "morning": { "first": ["Isa. 65:17-25"], "second": ["1 John 4:1-21"] },
       "evening": {
-        "first": ["Isa. 66:1-2, Isa. 66:5-13"],
+        "first": ["Isa. 66:1-2", "Isa. 66:5-13"],
         "second": ["Heb. 6:1-12"]
       }
     }
@@ -2679,14 +2682,14 @@
       "morning": { "first": ["Isa. 45:20-25"], "second": ["Mark 9:2-13"] },
       "evening": {
         "first": ["Isa. 48:12-21"],
-        "second": ["Acts 26:1, Acts 26:13-23"]
+        "second": ["Acts 26:1", "Acts 26:13-23"]
       }
     }
   ],
   "January 9": [
     {
       "morning": {
-        "first": ["Isa. 49:8-13, Isa. 49:22-23"],
+        "first": ["Isa. 49:8-13", "Isa. 49:22-23"],
         "second": ["1 John 1:1-9"]
       },
       "evening": { "first": ["Isa. 54:1-10"], "second": ["Acts 28:23-31"] }
@@ -2696,7 +2699,7 @@
     {
       "morning": { "first": ["Isa. 19:19-25"], "second": ["Col. 2:6-17"] },
       "evening": {
-        "first": ["Zech. 8:11-13, Zech. 8:20-23"],
+        "first": ["Zech. 8:11-13", "Zech. 8:20-23"],
         "second": ["Rom. 10:1-20"]
       }
     }
@@ -2705,17 +2708,17 @@
     {
       "morning": { "first": ["Jonah 4:1-11"], "second": ["1 Pet. 1:1-9"] },
       "evening": {
-        "first": ["Tobit 13:1-5, Tobit 13:7-11"],
+        "first": ["Tobit 13:1-5", "Tobit 13:7-11"],
         "second": ["Rom. 11:13-27"]
       }
     }
   ],
   "January 12": [
     {
-      "morning": { "first": ["Mal. 1:11-14"], "second": ["2 Thess. 1:1-10"] },
+      "morning": { "first": ["Mal. 1:11-14"], "second": ["2 Thess. 1:1-12"] },
       "evening": {
         "first": ["Isa. 9:2-7"],
-        "second": ["Gal. 3:27-29, Gal. 4:1-7"]
+        "second": ["Gal. 3:27-29", "Gal. 4:1-7"]
       }
     }
   ],
@@ -2733,7 +2736,7 @@
       "morning": { "first": ["1 Sam. 1:21-28"], "second": ["Gal. 4:1-7"] },
       "evening": {
         "first": ["Haggai 2:1-9"],
-        "second": ["John 3:1-8"]
+        "second": ["1 John 3:1-8"]
       }
     }
   ],

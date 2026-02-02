@@ -1,4 +1,5 @@
 "use client";
+import { Fragment } from "react";
 import { Initial } from "@/components/text/Initial";
 import { Today } from "@/components/Calendar";
 import {
@@ -68,11 +69,7 @@ export const Content = () => {
         </p>
         <PsalmsOfTheDay id="psalm" />
         <h2>First Lesson</h2>
-        {!isLoading && (
-          <p>
-            <strong>{lessons!.first}</strong>
-          </p>
-        )}
+        {!isLoading && <Lesson lessons={lessons!.first} />}
         <TeDeum
           today={dateString}
           shouldSing={shouldSingTeDeum}
@@ -85,11 +82,7 @@ export const Content = () => {
         <p>
           [ <em>Sit</em> ]
         </p>
-        {!isLoading && (
-          <p>
-            <strong>{lessons!.second}</strong>
-          </p>
-        )}
+        {!isLoading && <Lesson lessons={lessons!.second} />}
         <Benedictus />
         <h2>Concluding Rites</h2>
         <hr />
@@ -107,6 +100,17 @@ export const Content = () => {
     </>
   );
 };
+
+const Lesson = ({ lessons }: { lessons: string[] }) => (
+  <p>
+    {lessons.map((lesson, i) => (
+      <Fragment key={lesson}>
+        <strong>{lesson}</strong>
+        {i !== lessons.length && <br />}
+      </Fragment>
+    ))}
+  </p>
+);
 
 const Wrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isLoading",

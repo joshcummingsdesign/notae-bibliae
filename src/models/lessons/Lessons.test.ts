@@ -92,7 +92,10 @@ describe("Lessons", () => {
         const adventSunday = all["2025-11-30"];
 
         expect(adventSunday.title).toBe("First Sunday of Advent");
-        expect(adventSunday.morning.first).toContain("Mal. 3:1-6, Mal. 4:4-6");
+        expect(adventSunday.morning.first).toEqual([
+          "Mal. 3:1-6",
+          "Mal. 4:4-6",
+        ]);
         expect(adventSunday.morning.second).toContain("Luke 1:5-25");
         expect(adventSunday.evening.first).toContain("Isa. 62:1-12");
         expect(adventSunday.evening.second).toContain("Matt. 25:1-13");
@@ -538,7 +541,9 @@ describe("Lessons", () => {
           )!;
 
           // Monday after should reference Sunday Before Advent cycle
-          const mondayDate = dayjs(sundayDate).add(1, "day").format("YYYY-MM-DD");
+          const mondayDate = dayjs(sundayDate)
+            .add(1, "day")
+            .format("YYYY-MM-DD");
           const monday = all[mondayDate];
 
           expect(monday).toBeDefined();

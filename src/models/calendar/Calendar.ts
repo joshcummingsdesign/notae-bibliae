@@ -1698,7 +1698,7 @@ export class Calendar {
       },
       [`${year}-12-23`]: {
         title: "O Virgo virginum",
-        text: "O Virgin of virgins, how shall this be?\nFor never was there one like unto thee.\nDaughters of Zion, why marvel at me?\nBehold ye now the divine mystery.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
+        text: "O Virgin of virgins, how shall this be?\nFor never was there one like unto thee.\nDaughters of Zion, why marvel ye at me?\nBehold ye now the divine mystery.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-virgo-virginum",
         verse: "Isaiah 7:14",
       },
