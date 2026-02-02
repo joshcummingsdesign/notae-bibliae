@@ -1,4 +1,5 @@
 "use client";
+import { Fragment } from "react";
 import { Today } from "@/components/Calendar";
 import { Loader } from "@/components/Loader";
 import { Initial } from "@/components/text/Initial";
@@ -17,25 +18,34 @@ export const Content = () => {
         {office && (
           <>
             <h2>Morning</h2>
-            <p>
-              <strong>First Lesson: {office.morning.first}</strong>
-            </p>
-            <p>
-              <strong>Second Lesson: {office.morning.second}</strong>
-            </p>
+            <hr />
+            <h3>First Lesson</h3>
+            <Lesson lessons={office.morning.first} />
+            <h3>Second Lesson</h3>
+            <Lesson lessons={office.morning.second} />
             <h2>Evening</h2>
-            <p>
-              <strong>First Lesson: {office.evening.first}</strong>
-            </p>
-            <p>
-              <strong>Second Lesson: {office.evening.second}</strong>
-            </p>
+            <hr />
+            <h3>First Lesson</h3>
+            <Lesson lessons={office.evening.first} />
+            <h3>Second Lesson</h3>
+            <Lesson lessons={office.evening.second} />
           </>
         )}
       </Wrapper>
     </>
   );
 };
+
+const Lesson = ({ lessons }: { lessons: string[] }) => (
+  <p>
+    {lessons.map((lesson, i) => (
+      <Fragment key={lesson}>
+        <strong>{lesson}</strong>
+        {i !== lessons.length && <br />}
+      </Fragment>
+    ))}
+  </p>
+);
 
 const Wrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isLoading",
