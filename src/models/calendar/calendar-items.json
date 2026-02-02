@@ -13,12 +13,6 @@
     "isSaint": true
   },
   {
-    "date": "12-07",
-    "title": "[Saint Ambrose](/people/saints/latin-fathers/ambrose-of-milan), Bishop and Doctor of the Church",
-    "rank": 6,
-    "isSaint": true
-  },
-  {
     "date": "12-08",
     "title": "[Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/advent/conception-of-the-blessed-virgin-mary)",
     "rank": 4,
@@ -170,14 +164,20 @@
     "isSaint": true
   },
   {
+    "date": "01-26",
+    "title": "[Saint Polycarp](/people/saints/apostolic-fathers/polycarp-of-smyrna), Bishop and Martyr",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
     "date": "01-27",
     "title": "[Saint John Chrysostom](/people/saints/greek-fathers/john-chrysostom), Bishop and Doctor of the Church",
     "rank": 6,
     "isSaint": true
   },
   {
-    "date": "01-28",
-    "title": "[Saint Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
+    "date": "02-01",
+    "title": "[Saint Ignatius](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
@@ -194,12 +194,6 @@
     "isSaint": true
   },
   {
-    "date": "02-23",
-    "title": "[Saint Polycarp](/people/saints/apostolic-fathers/polycarp-of-smyrna), Bishop and Martyr",
-    "rank": 6,
-    "isSaint": true
-  },
-  {
     "date": "02-24",
     "title": "[Saint Matthias](/people/saints/apostles/matthias), Apostle",
     "rank": 4,
@@ -209,6 +203,12 @@
   {
     "date": "03-07",
     "title": "[Saints Perpetua and Felicity](/people/saints/early/perpetua-and-felicity), Martyrs",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
+    "date": "03-08",
+    "title": "[Saint Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
     "rank": 6,
     "isSaint": true
   },
@@ -232,6 +232,18 @@
     "isSaint": true
   },
   {
+    "date": "03-21",
+    "title": "[Saint Benedict](/people/saints/medieval/benedict-of-nursia), Abbot",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
+    "date": "04-04",
+    "title": "[Saint Ambrose](/people/saints/latin-fathers/ambrose-of-milan), Bishop and Doctor of the Church",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
     "date": "04-23",
     "title": "[Saint George](/people/saints/early/george-of-lydda), Martyr",
     "rank": 6,
@@ -252,22 +264,15 @@
     "isSaint": true
   },
   {
-    "date": "05-25",
-    "title": "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church",
-    "rank": 6,
-    "isSaint": true
-  },
-  {
     "date": "05-26",
     "title": "[Saint Augustine of Canterbury](/people/saints/medieval/augustine-of-canterbury), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
-    "date": "05-31",
-    "title": "[Visitation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/visitation)",
-    "rank": 4,
-    "isFeast": true,
+    "date": "05-27",
+    "title": "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church",
+    "rank": 6,
     "isSaint": true
   },
   {
@@ -304,9 +309,10 @@
     "isSaint": true
   },
   {
-    "date": "07-11",
-    "title": "[Saint Benedict](/people/saints/medieval/benedict-of-nursia), Abbot",
-    "rank": 6,
+    "date": "07-02",
+    "title": "[Visitation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/visitation)",
+    "rank": 4,
+    "isFeast": true,
     "isSaint": true
   },
   {
@@ -335,16 +341,16 @@
     "isSaint": true
   },
   {
+    "date": "08-05",
+    "title": "[Saint Dominic](/people/saints/medieval/dominic-of-guzman), Priest",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
     "date": "08-06",
     "title": "[Transfiguration of the Lord](/liturgy/liturgical-year/seasons/trinitytide/transfiguration)",
     "rank": 4,
     "isFeast": true
-  },
-  {
-    "date": "08-08",
-    "title": "[Saint Dominic](/people/saints/medieval/dominic-of-guzman), Priest",
-    "rank": 6,
-    "isSaint": true
   },
   {
     "date": "08-10",
@@ -353,7 +359,7 @@
     "isSaint": true
   },
   {
-    "date": "08-11",
+    "date": "08-12",
     "title": "[Saint Clare](/people/saints/medieval/clare-of-assisi), Virgin",
     "rank": 6,
     "isSaint": true
@@ -438,12 +444,6 @@
   {
     "date": "10-09",
     "title": "[Saint Denis](/people/saints/early/denis-of-peris), Bishop, and Companions, Martyrs",
-    "rank": 6,
-    "isSaint": true
-  },
-  {
-    "date": "10-17",
-    "title": "[Saint Ignatius](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },

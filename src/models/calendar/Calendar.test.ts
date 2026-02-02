@@ -877,7 +877,9 @@ describe("Calendar", () => {
       test("respects ranking parameter", () => {
         const ranked = cal.getByDate("2026-04-04", true);
         const unranked = cal.getByDate("2026-04-04", false);
-        expect(ranked.length).toBe(unranked.length); // Both have Holy Saturday + Easter Vigil
+        // Unranked includes St. Ambrose (04-04) which gets filtered when ranked
+        expect(unranked.length).toBe(3); // Holy Saturday, Easter Vigil, St. Ambrose
+        expect(ranked.length).toBe(2); // Holy Saturday, Easter Vigil (Ambrose filtered)
       });
     });
   });
@@ -1090,8 +1092,8 @@ describe("Calendar", () => {
         // Jan 25, 2025 - Conversion of St. Paul (rank 4) with Third Sunday of Epiphany (rank 7)
         // Saint feast takes precedence over ordinary Sunday
         expect(createCalendar("2025-01-25").isSaintDay()).toBe(true);
-        // Feb 23, 2026 - Polycarp commemoration (rank 6), no competing observance
-        expect(createCalendar("2026-02-23").isSaintDay()).toBe(true);
+        // Jan 26, 2026 - Polycarp commemoration (rank 6), no competing observance
+        expect(createCalendar("2026-01-26").isSaintDay()).toBe(true);
         // Dec 26, 2025 - St. Stephen is the highest ranked
         expect(createCalendar("2025-12-26").isSaintDay()).toBe(true);
       });
