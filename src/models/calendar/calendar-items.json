@@ -26,31 +26,31 @@
     "isSaint": true
   },
   {
-    "date": "12-17",
+    "date": "12-16",
     "title": "O Antiphons: [O Sapientia](/liturgy/music/chants/o-sapientia)",
     "rank": 9,
     "isNote": true
   },
   {
-    "date": "12-18",
+    "date": "12-17",
     "title": "O Antiphons: [O Adonai](/liturgy/music/chants/o-adonai)",
     "rank": 9,
     "isNote": true
   },
   {
-    "date": "12-19",
+    "date": "12-18",
     "title": "O Antiphons: [O Radix Jesse](/liturgy/music/chants/o-radix-jesse)",
     "rank": 9,
     "isNote": true
   },
   {
-    "date": "12-20",
+    "date": "12-19",
     "title": "O Antiphons: [O Clavis David](/liturgy/music/chants/o-clavis-david)",
     "rank": 9,
     "isNote": true
   },
   {
-    "date": "12-21",
+    "date": "12-20",
     "title": "O Antiphons: [O Oriens](/liturgy/music/chants/o-oriens)",
     "rank": 9,
     "isNote": true
@@ -63,14 +63,20 @@
     "isSaint": true
   },
   {
-    "date": "12-22",
+    "date": "12-21",
     "title": "O Antiphons: [O Rex gentium](/liturgy/music/chants/o-rex-gentium)",
     "rank": 9,
     "isNote": true
   },
   {
-    "date": "12-23",
+    "date": "12-22",
     "title": "O Antiphons: [O Emmanuel](/liturgy/music/chants/o-emmanuel)",
+    "rank": 9,
+    "isNote": true
+  },
+  {
+    "date": "12-23",
+    "title": "O Antiphons: [O Virgo virginum](/liturgy/music/chants/o-virgo-virginum)",
     "rank": 9,
     "isNote": true
   },

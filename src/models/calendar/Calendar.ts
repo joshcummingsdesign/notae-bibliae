@@ -1654,46 +1654,52 @@ export class Calendar {
   getOAntiphons(): AntiphonMap {
     const year = this.getLiturgicalYear() - 1;
     return {
-      [`${year}-12-17`]: {
+      [`${year}-12-16`]: {
         title: "O Sapientia",
         text: "O come, thou Wisdom from on high,\nWho orderest all things mightily;\nTo us the path of knowledge show,\nAnd teach us in her ways to go.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-sapientia",
         verse: "Isaiah 11:2",
       },
-      [`${year}-12-18`]: {
+      [`${year}-12-17`]: {
         title: "O Adonai",
         text: "O come, O come, thou Lord of Might;\nWho to thy tribes, on Sinai's height,\nIn ancient times didst give the law,\nIn cloud, and majesty, and awe.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-adonai",
         verse: "Isaiah 33:22",
       },
-      [`${year}-12-19`]: {
+      [`${year}-12-18`]: {
         title: "O Radix Jesse",
         text: "O come, thou Rod of Jesse, free\nThine own from Satan's tyranny;\nFrom depths of hell thy people save,\nAnd give them victory o'er the grave.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-radix-jesse",
         verse: "Isaiah 11:10",
       },
-      [`${year}-12-20`]: {
+      [`${year}-12-19`]: {
         title: "O Clavis David",
         text: "O come, thou Key of David, come\nAnd open wide our heavenly home;\nMake safe the way that leads on high,\nAnd close the path to misery.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-clavis-david",
         verse: "Isaiah 22:22",
       },
-      [`${year}-12-21`]: {
+      [`${year}-12-20`]: {
         title: "O Oriens",
         text: "O come, thou Dayspring, come and cheer\nOur spirits by thine Advent here;\nDisperse the gloomy clouds of night,\nAnd death's dark shadows put to flight.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-oriens",
         verse: "Isaiah 60:1-3",
       },
-      [`${year}-12-22`]: {
+      [`${year}-12-21`]: {
         title: "O Rex gentium",
         text: "O come, Desire of Nations, bind\nIn one the hearts of all mankind;\nBid thou our sad divisions cease,\nAnd be thyself our King of Peace.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-rex-gentium",
         verse: "Isaiah 2:4",
       },
-      [`${year}-12-23`]: {
+      [`${year}-12-22`]: {
         title: "O Emmanuel",
         text: "O come, O come, Emmanuel,\nAnd ransom captive Israel;\nThat mourns in lonely exile here,\nUntil the Son of God appear.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
         link: "/liturgy/music/chants/o-emmanuel",
+        verse: "Isaiah 7:14",
+      },
+      [`${year}-12-23`]: {
+        title: "O Virgo virginum",
+        text: "O Virgin of virgins, how shall this be?\nFor never was there one like unto thee.\nDaughters of Zion, why marvel at me?\nBehold ye now the divine mystery.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
+        link: "/liturgy/music/chants/o-virgo-virginum",
         verse: "Isaiah 7:14",
       },
     };

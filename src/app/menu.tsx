@@ -1063,6 +1063,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/o-sapientia",
               },
               {
+                title: "O Virgo virginum",
+                link: "/liturgy/music/chants/o-virgo-virginum",
+              },
+              {
                 title: "Pascha nostrum",
                 link: "/liturgy/music/chants/pascha-nostrum",
               },

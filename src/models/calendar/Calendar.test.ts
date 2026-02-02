@@ -642,7 +642,9 @@ describe("Calendar", () => {
         test("all Trinity Sunday titles use proper ordinal words (not numeric)", () => {
           const sundays = maxTrinityCal
             .getTrinitytideDays()
-            .filter((d) => d.isSunday && d.title.includes("Sunday After Trinity"));
+            .filter(
+              (d) => d.isSunday && d.title.includes("Sunday After Trinity"),
+            );
 
           // Verify none use numeric fallback (e.g., "27th")
           for (const sunday of sundays) {
@@ -1116,9 +1118,9 @@ describe("Calendar", () => {
   });
 
   describe("O Antiphons", () => {
-    test("returns 7 antiphons for Dec 17-23", () => {
+    test("returns 8 antiphons for Dec 16-23", () => {
       const antiphons = cal.getOAntiphons();
-      expect(Object.keys(antiphons)).toHaveLength(7);
+      expect(Object.keys(antiphons)).toHaveLength(8);
     });
 
     test("antiphons are in correct order", () => {
@@ -1132,6 +1134,7 @@ describe("Calendar", () => {
         "O Oriens",
         "O Rex gentium",
         "O Emmanuel",
+        "O Virgo virginum",
       ]);
     });
 
