@@ -1044,19 +1044,48 @@ export class Calendar {
     // If filter not applied, return as-is
     if (!rank) return grouped;
 
-    // Transfer non-principal feasts that are displaced by rank 1-3 items
-    // (principal feasts like Annunciation handle their own displacement)
+    // Displacement rules:
+    // 1. Principal Feasts on Principal Sundays → transfer to next available date
+    // 2. Feasts on rank 1-3 days → transfer to next available date
     const sortedDates = Object.keys(grouped).sort();
     const hasHighRank = (dateItems: CalendarItem[]) =>
       dateItems.some((item) => item.rank <= 3);
-    const isDisplaceable = (item: CalendarItem) =>
+    const hasPrincipalSunday = (dateItems: CalendarItem[]) =>
+      dateItems.some((item) => item.isPrincipalSunday);
+    const isPrincipalFeastItem = (item: CalendarItem) =>
+      !!item.isPrincipalFeast;
+    const isDisplaceableFeast = (item: CalendarItem) =>
       item.isFeast && !item.isPrincipalFeast;
 
     for (const date of sortedDates) {
       const dateItems = grouped[date];
+
+      // Transfer Principal Feasts when falling on Principal Sundays
+      if (
+        hasPrincipalSunday(dateItems) &&
+        dateItems.some(isPrincipalFeastItem)
+      ) {
+        const displaced = dateItems.filter(isPrincipalFeastItem);
+        grouped[date] = dateItems.filter((item) => !isPrincipalFeastItem(item));
+
+        for (const item of displaced) {
+          let nextDate = this.createDate(date).add(1, "day");
+          while (true) {
+            const dateStr = nextDate.format("YYYY-MM-DD");
+            const nextDateItems = grouped[dateStr] || [];
+            if (!hasHighRank(nextDateItems)) {
+              (grouped[dateStr] ??= []).push(item);
+              break;
+            }
+            nextDate = nextDate.add(1, "day");
+          }
+        }
+      }
+
+      // Transfer non-principal feasts displaced by rank 1-3 items
       if (hasHighRank(dateItems)) {
-        const displaced = dateItems.filter(isDisplaceable);
-        grouped[date] = dateItems.filter((item) => !isDisplaceable(item));
+        const displaced = dateItems.filter(isDisplaceableFeast);
+        grouped[date] = dateItems.filter((item) => !isDisplaceableFeast(item));
 
         for (const item of displaced) {
           let nextDate = this.createDate(date).add(1, "day");

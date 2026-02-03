@@ -847,6 +847,40 @@ describe("Calendar", () => {
           expect(hasDisplaceableFeast).toBe(false);
         }
       });
+
+      describe("Principal Feast on Principal Sunday", () => {
+        test("Annunciation transferred when falling on Lenten Sunday", () => {
+          // 2091: Easter is April 8, so March 25 = 5th Sunday of Lent (Passion Sunday)
+          const cal2091 = createCalendar("2091-01-01"); // liturgical year 2091
+          const items = cal2091.getAll();
+
+          // March 25 should show Passion Sunday, not Annunciation
+          const march25 = items["2091-03-25"];
+          expect(march25.some((i) => i.title.includes("Passion Sunday"))).toBe(
+            true,
+          );
+          expect(march25.some((i) => i.title.includes("Annunciation"))).toBe(
+            false,
+          );
+
+          // Annunciation should be transferred to March 26
+          const march26 = items["2091-03-26"];
+          expect(march26.some((i) => i.title.includes("Annunciation"))).toBe(
+            true,
+          );
+        });
+
+        test("Annunciation not transferred when not on Principal Sunday", () => {
+          // 2026: Easter is April 5, so March 25 is a Wednesday in Lent (not a Sunday)
+          const items = cal.getAll();
+
+          // March 25 should show Annunciation
+          const march25 = items["2026-03-25"];
+          expect(march25.some((i) => i.title.includes("Annunciation"))).toBe(
+            true,
+          );
+        });
+      });
     });
 
     describe("getAllSundays", () => {

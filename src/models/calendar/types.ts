@@ -8,7 +8,7 @@
  * Greater Observance: 3 // Ash Wednesday, Holy Week, All Souls' Day
  * Feast: 4
  * Lesser Observance: 5 // Ember Days, Rogation Days
- * Saint: 6
+ * Commemoration: 6
  * Ordinary Sunday: 7
  * Vigil: 8
  * Note: 9
