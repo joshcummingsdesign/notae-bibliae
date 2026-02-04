@@ -33,6 +33,7 @@ const createMockCalendar = () => ({
   isAscensiontide: vi.fn(() => false),
   isEpiphanytide: vi.fn(() => false),
   isLent: vi.fn(() => false),
+  isPreLent: vi.fn(() => false),
   isTrinitytide: vi.fn(() => false),
   isHolyInnocents: vi.fn(() => false),
   isSeptuagesimaToEaster: vi.fn(() => false),
@@ -511,6 +512,18 @@ describe("useDailyOffice", () => {
 
     it("returns page 312 for Lent", async () => {
       mockCalendar.isLent.mockReturnValue(true);
+
+      const { result } = renderHook(() => useDailyOffice("morning"));
+
+      await waitFor(() => {
+        expect(result.current.isLoading).toBe(false);
+      });
+
+      expect(result.current.invitatoryPage).toBe(312);
+    });
+
+    it("returns page 312 for Pre-Lent", async () => {
+      mockCalendar.isPreLent.mockReturnValue(true);
 
       const { result } = renderHook(() => useDailyOffice("morning"));
 

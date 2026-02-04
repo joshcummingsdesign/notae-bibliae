@@ -119,6 +119,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     const isAscensiontide = calendar.isAscensiontide();
     const isEpiphanytide = calendar.isEpiphanytide();
     const isLent = calendar.isLent();
+    const isPreLent = calendar.isPreLent();
     const isTrinitytide = calendar.isTrinitytide();
     const isHolyInnocents = calendar.isHolyInnocents();
     const isSeptuagesimaToEaster = calendar.isSeptuagesimaToEaster();
@@ -169,6 +170,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isAscensiontide,
       isEpiphanytide,
       isLent,
+      isPreLent,
       isTrinitytide,
       isHolyInnocents,
       isSeptuagesimaToEaster,
@@ -194,7 +196,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       page = 308;
     } else if (calendarData.isEpiphanytide) {
       page = 310;
-    } else if (calendarData.isLent) {
+    } else if (calendarData.isLent || calendarData.isPreLent) {
       page = 312;
     } else if (calendarData.isEastertide) {
       page = 314;
