@@ -8,6 +8,7 @@ import {
   OpeningVersicles,
   PsalmsOfTheDay,
   TeDeum,
+  ThirdLesson,
   Collects,
 } from "@/components/DailyOffice";
 import GeneralConfession from "../shared-content/general-confession.mdx";
@@ -84,6 +85,7 @@ export const Content = () => {
         </p>
         {!isLoading && <Lesson lessons={lessons!.second} />}
         <Benedictus />
+        <ThirdLesson lesson={"Hilary of Poitier"} page={30} office="morning" />
         <h2>Concluding Rites</h2>
         <hr />
         <ApostlesCreed />

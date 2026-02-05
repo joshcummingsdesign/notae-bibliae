@@ -21,6 +21,11 @@ export async function GET(
   const { searchParams } = new URL(req.url);
   const isToday = slug && slug.length && slug[0] === "today";
   const isTomorrow = slug && slug.length && slug[0] === "tomorrow";
+
+  if (slug && slug.length && !isToday && !isTomorrow) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
   const date = searchParams.get("date");
   const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
   const isYear = date && /^\d{4}$/.test(date);

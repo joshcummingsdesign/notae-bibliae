@@ -4,9 +4,9 @@ import isBetween from "dayjs/plugin/isBetween";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { Calendar } from "@/models/calendar";
+import { Hagiography } from "@/models/hagiography";
 import { NextRequest, NextResponse } from "next/server";
 import { TIMEZONE } from "@/constants";
-import { Collects } from "@/models/collects";
 
 dayjs.extend(customParseFormat);
 dayjs.extend(isBetween);
@@ -15,7 +15,7 @@ dayjs.extend(timezone);
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ slug?: string[] }> }
+  { params }: { params: Promise<{ slug?: string[] }> },
 ) {
   const { slug } = await params;
   const { searchParams } = new URL(req.url);
@@ -34,7 +34,7 @@ export async function GET(
   if (date && !isFullDate && !isYear) {
     return NextResponse.json(
       { error: "Date is not formatted as YYYY or YYYY-MM-DD" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -54,17 +54,21 @@ export async function GET(
   }
 
   const liturgicalYear = calendar.getLiturgicalYear();
-
-  const collects = new Collects(calendar);
-  const collectData = collects.getAll();
+  const hagiography = new Hagiography(calendar);
+  const readingsData = hagiography.getAll();
 
   if (isAll) {
-    return NextResponse.json({ liturgicalYear, ...collectData });
+    const res = { liturgicalYear, ...readingsData };
+    return NextResponse.json(res);
   }
 
   const dateString = calendar.getToday().format("YYYY-MM-DD");
-  return NextResponse.json({
+  const reading = readingsData[dateString] || null;
+
+  const res = {
     liturgicalYear,
-    [dateString]: collectData[dateString] || [],
-  });
+    [dateString]: reading,
+  };
+
+  return NextResponse.json(res);
 }
