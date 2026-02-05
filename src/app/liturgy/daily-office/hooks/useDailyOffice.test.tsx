@@ -92,6 +92,11 @@ const mockCollectsResponse = {
   ],
 };
 
+const mockHagiographyResponse = {
+  liturgicalYear: 2026,
+  "2025-12-25": null, // Christmas is not a saint day
+};
+
 // Helper to setup fetch mock
 const mockFetch = () => {
   global.fetch = vi.fn((input: RequestInfo | URL) => {
@@ -112,6 +117,12 @@ const mockFetch = () => {
       return Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockCollectsResponse),
+      } as Response);
+    }
+    if (url.includes("hagiography")) {
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockHagiographyResponse),
       } as Response);
     }
     return Promise.reject(new Error("Unknown URL"));
@@ -150,11 +161,11 @@ describe("useDailyOffice", () => {
   });
 
   describe("data fetching", () => {
-    it("fetches from all three endpoints in parallel", async () => {
+    it("fetches from all four endpoints in parallel", async () => {
       renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
-        expect(global.fetch).toHaveBeenCalledTimes(3);
+        expect(global.fetch).toHaveBeenCalledTimes(4);
       });
 
       expect(global.fetch).toHaveBeenCalledWith(
@@ -162,9 +173,10 @@ describe("useDailyOffice", () => {
       );
       expect(global.fetch).toHaveBeenCalledWith("/api/lectionary/today");
       expect(global.fetch).toHaveBeenCalledWith("/api/collects/today");
+      expect(global.fetch).toHaveBeenCalledWith("/api/hagiography/today");
     });
 
-    it("sets today, lessons, collects state from responses", async () => {
+    it("sets today, lessons, collects, hagiography state from responses", async () => {
       const { result } = renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
@@ -174,6 +186,8 @@ describe("useDailyOffice", () => {
       expect(result.current.today).not.toBeNull();
       expect(result.current.lessons).not.toBeNull();
       expect(result.current.collects).not.toBeNull();
+      // hagiography is null for Christmas (not a saint day)
+      expect(result.current.hagiography).toBeNull();
     });
 
     it("handles fetch errors gracefully", async () => {
@@ -204,6 +218,7 @@ describe("useDailyOffice", () => {
           today: mockCalendarResponse,
           lessons: mockLectionaryResponse,
           collects: mockCollectsResponse,
+          hagiography: mockHagiographyResponse,
         },
       };
       localStorage.setItem("morning-prayer", JSON.stringify(cachedData));
@@ -224,6 +239,7 @@ describe("useDailyOffice", () => {
           today: mockCalendarResponse,
           lessons: mockLectionaryResponse,
           collects: mockCollectsResponse,
+          hagiography: mockHagiographyResponse,
         },
       };
       localStorage.setItem("morning-prayer", JSON.stringify(cachedData));
@@ -231,7 +247,7 @@ describe("useDailyOffice", () => {
       renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
-        expect(global.fetch).toHaveBeenCalledTimes(3);
+        expect(global.fetch).toHaveBeenCalledTimes(4);
       });
     });
 

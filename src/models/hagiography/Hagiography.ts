@@ -17,8 +17,6 @@ export class Hagiography {
   /**
    * Get all hagiography readings for the liturgical year.
    */
-  // TODO: Test
-  // TODO: Add supplementary lessons to lectionary for feasts
   getAll(): HagiographyDateMap {
     const calendarData = this.calendar.getAll();
     const startDate = this.calendar.getFirstSundayOfAdvent();

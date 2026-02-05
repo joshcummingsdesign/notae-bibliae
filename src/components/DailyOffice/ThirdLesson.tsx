@@ -1,18 +1,26 @@
+import { HagiographyResponse } from "@/models/hagiography";
+import Link from "next/link";
+
 interface Props {
-  lesson?: string;
-  page: number;
+  hagiography: HagiographyResponse | null;
   office: "morning" | "evening";
 }
 
-export const ThirdLesson: React.FC<Props> = ({ lesson, page, office }) => {
-  return lesson ? (
+export const ThirdLesson: React.FC<Props> = ({ hagiography, office }) => {
+  return hagiography ? (
     <>
       <h2>Third Lesson</h2>
       <p>
         [ <em>Sit</em> ]
       </p>
-      <strong>{lesson}</strong>{" "}
-      {`(LFF ${page}, ${office === "morning" ? "First" : "Second"} Half)`}
+      {hagiography.link ? (
+        <Link href={hagiography.link} target="_blank">
+          <strong>{hagiography.title}</strong>
+        </Link>
+      ) : (
+        <strong>{hagiography.title}</strong>
+      )}
+      {hagiography[office] && ` (${hagiography[office]})`}
     </>
   ) : null;
 };

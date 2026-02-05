@@ -1,7 +1,8 @@
 import { CollectCalendarItem, CollectRes } from "@/models/collects";
 import { Calendar, CalendarItem, CalendarRes } from "@/models/calendar";
-import { useEffect, useRef, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { LessonRes, Office } from "@/models/lessons/types";
+import { HagiographyDateMap, HagiographyResponse } from "@/models/hagiography";
 
 interface TodayData {
   season: string;
@@ -13,6 +14,9 @@ export const useDailyOffice = (office: "morning" | "evening") => {
   const [today, setToday] = useState<CalendarRes | null>(null);
   const [collects, setCollects] = useState<CollectRes | null>(null);
   const [lessons, setLessons] = useState<LessonRes | null>(null);
+  const [hagiography, setHagiography] = useState<HagiographyDateMap | null>(
+    null,
+  );
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const calendar = useMemo(() => new Calendar(), []);
@@ -45,16 +49,22 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     return collects[dateString];
   }, [collects, dateString]);
 
+  const getHagiography = useCallback((): HagiographyResponse | null => {
+    if (!hagiography) return null;
+    return hagiography[dateString];
+  }, [hagiography, dateString]);
+
   useEffect(() => {
     // Get cached data
     const retrieved = localStorage.getItem(`${office}-prayer`);
     if (retrieved) {
       const cached = JSON.parse(retrieved);
       if (cached[dateString]) {
-        const { today, lessons, collects } = cached[dateString];
+        const { today, lessons, collects, hagiography } = cached[dateString];
         setToday(today);
         setLessons(lessons);
         setCollects(collects);
+        setHagiography(hagiography);
         return;
       }
     }
@@ -64,11 +74,13 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       fetch("/api/calendar/today?withLinks=true").then((res) => res.json()),
       fetch("/api/lectionary/today").then((res) => res.json()),
       fetch("/api/collects/today").then((res) => res.json()),
+      fetch("/api/hagiography/today").then((res) => res.json()),
     ])
-      .then(([todayData, lessonsData, collectsData]) => {
+      .then(([todayData, lessonsData, collectsData, hagiographyData]) => {
         setToday(todayData);
         setLessons(lessonsData);
         setCollects(collectsData);
+        setHagiography(hagiographyData);
       })
       .catch((error) => {
         console.error("Error fetching daily office data:", error);
@@ -76,12 +88,14 @@ export const useDailyOffice = (office: "morning" | "evening") => {
   }, []);
 
   useEffect(() => {
-    if (today && lessons && collects) {
+    if (today && lessons && collects && hagiography) {
       setIsLoading(false);
       // Cache responses
       localStorage.setItem(
         `${office}-prayer`,
-        JSON.stringify({ [dateString]: { today, lessons, collects } }),
+        JSON.stringify({
+          [dateString]: { today, lessons, collects, hagiography },
+        }),
       );
     }
   }, [today, lessons, collects, dateString, office]);
@@ -247,5 +261,6 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     today: getToday(),
     lessons: getLessons(),
     collects: getCollects(),
+    hagiography: getHagiography(),
   };
 };

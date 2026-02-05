@@ -33,6 +33,7 @@ export const Content = () => {
     today,
     lessons,
     collects,
+    hagiography,
   } = useDailyOffice("evening");
 
   return (
@@ -77,7 +78,7 @@ export const Content = () => {
           [ <em>Stand</em> ]
         </p>
         <NuncDimittis isLordsDay={isLordsDay} />
-        <ThirdLesson lesson={"Hilary of Poitier"} page={30} office="evening" />
+        <ThirdLesson hagiography={hagiography} office="evening" />
         <h2>Concluding Rites</h2>
         <hr />
         <ApostlesCreed />
