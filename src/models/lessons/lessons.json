@@ -54,7 +54,7 @@
     },
     {
       "morning": {
-        "first": ["Isa. 8:5-8, Isa. 8:11-20"],
+        "first": ["Isa. 8:5-8", "Isa. 8:11-20"],
         "second": ["Mark 2:23-28", "Mark 3:1-6"]
       },
       "evening": { "first": ["Isa. 9:8-17"], "second": ["Rev. 11:15-19"] }
@@ -1173,11 +1173,11 @@
     },
     null,
     {
-      "morning": { "first": ["Num. 20:14-29"], "second": ["Luke 2:1-7"] },
+      "morning": { "first": ["Num. 20:14-29"], "second": ["Luke 1:67-80"] },
       "evening": { "first": ["Zech. 1:7-17"], "second": ["Acts 8:5-25"] }
     },
     {
-      "morning": { "first": ["Num. 21:4-9"], "second": ["Luke 2:8-20"] },
+      "morning": { "first": ["Num. 21:4-9"], "second": ["Luke 2:1-20"] },
       "evening": { "first": ["Zech. 2:1-13"], "second": ["Acts 8:26-40"] }
     }
   ],
@@ -2558,14 +2558,14 @@
     {
       "morning": {
         "first": ["Baruch 4:36-37", "Baruch 5:1-9"],
-        "second": ["Luke 2:1-7"]
+        "second": ["Luke 1:67-80"]
       },
       "evening": { "first": ["Zech. 2:10-13"], "second": ["Matt. 1:18-25"] }
     }
   ],
   "Christmas Day": [
     {
-      "morning": { "first": ["Isa. 9:2-7"], "second": ["Luke 2:8-20"] },
+      "morning": { "first": ["Isa. 9:2-7"], "second": ["Luke 2:1-20"] },
       "evening": {
         "first": ["Micah 4:1-5", "Micah 5:2-4"],
         "second": ["1 John 4:7-14"]
