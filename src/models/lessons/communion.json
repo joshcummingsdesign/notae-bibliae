@@ -1,0 +1,162 @@
+{
+  "First Sunday of Advent": {
+    "epistle": ["Rom. 13:8-14"],
+    "gospel": ["Matt. 21:1-13"],
+    "source": "BCP 1928"
+  },
+  "Second Sunday of Advent": {
+    "epistle": ["Rom. 15:4-13"],
+    "gospel": ["Luke 21:25-33"],
+    "source": "BCP 1928"
+  },
+  "Third Sunday of Advent: Gaudete Sunday": {
+    "epistle": ["1 Cor. 4:1-5"],
+    "gospel": ["Matt. 11:2-10"],
+    "source": "BCP 1928"
+  },
+  "Fourth Sunday of Advent": {
+    "epistle": ["Phil. 4:4-7"],
+    "gospel": ["John 1:19-28"],
+    "source": "BCP 1928"
+  },
+  "First Sunday After Christmas": {
+    "epistle": ["Gal. 4:1-7"],
+    "gospel": ["Matt. 1:18-25"],
+    "source": "BCP 1928"
+  },
+  "Second Sunday After Christmas": {
+    "epistle": ["Isa. 61:1-3"],
+    "gospel": ["Matt. 2:19-23"],
+    "source": "BCP 1928"
+  },
+  "First Sunday of Epiphany": {
+    "epistle": ["Rom. 12:1-5"],
+    "gospel": ["Luke 2:41-52"],
+    "source": "BCP 1928"
+  },
+  "Second Sunday of Epiphany": {
+    "epistle": ["Rom. 12:6-16"],
+    "gospel": ["Mark 1:1-11"],
+    "source": "BCP 1928"
+  },
+  "Third Sunday of Epiphany": {
+    "epistle": ["Rom. 12:16-21"],
+    "gospel": ["John 2:1-11"],
+    "source": "BCP 1928"
+  },
+  "Fourth Sunday of Epiphany": {
+    "epistle": ["Rom. 13:1-7"],
+    "gospel": ["Matt. 8:1-13"],
+    "source": "BCP 1928"
+  },
+  "Fifth Sunday of Epiphany": {
+    "epistle": ["Col. 3:12-17"],
+    "gospel": ["Matt. 13:24-30"],
+    "source": "BCP 1928"
+  },
+  "Sixth Sunday of Epiphany": {
+    "epistle": ["1 John 3:1-8"],
+    "gospel": ["Matt. 24:23-31"],
+    "source": "BCP 1928"
+  },
+  "Septuagesima": {
+    "epistle": ["1 Cor. 9:24-27"],
+    "gospel": ["Matt. 20:1-16"],
+    "source": "BCP 1928"
+  },
+  "Sexagesima": {
+    "epistle": ["2 Cor. 11:19-31"],
+    "gospel": ["Luke 8:4-15"],
+    "source": "BCP 1928"
+  },
+  "Quinquagesima": {
+    "epistle": ["1 Cor. 13:1-13"],
+    "gospel": ["Luke 18:31-43"],
+    "source": "BCP 1928"
+  },
+  "Saint Andrew, Apostle": {
+    "epistle": ["Rom. 10:9-21"],
+    "gospel": ["Matt. 4:18-22"],
+    "source": "BCP 1928"
+  },
+  "Conception of the Blessed Virgin Mary": {
+    "epistle": ["Ecclus. 24:17-21"],
+    "gospel": ["Matt. 1:1-16"],
+    "source": "Sarum Missal"
+  },
+  "Ember Wednesday in Advent": {
+    "epistle": ["Acts 13:44-49"],
+    "gospel": ["Luke 4:16-21"],
+    "source": "BCP 1928"
+  },
+  "Ember Friday in Advent": {
+    "epistle": ["Acts 13:44-49"],
+    "gospel": ["Luke 4:16-21"],
+    "source": "BCP 1928"
+  },
+  "Ember Saturday in Advent": {
+    "epistle": ["Acts 13:44-49"],
+    "gospel": ["Luke 4:16-21"],
+    "source": "BCP 1928"
+  },
+  "Saint Thomas, Apostle": {
+    "epistle": ["Heb. 10:35-39", "Heb. 11:1"],
+    "gospel": ["John 20:24-31"],
+    "source": "BCP 1928"
+  },
+  "Christmas Eve": {
+    "epistle": ["Rom. 1:1-6"],
+    "gospel": ["Matt. 1:18-21"],
+    "source": "Sarum Missal"
+  },
+  "Christmas Day": {
+    "epistle": ["Heb. 1:1-12"],
+    "gospel": ["John 1:1-14"],
+    "source": "BCP 1928"
+  },
+  "Saint Stephen, Deacon and Martyr": {
+    "epistle": ["Acts 7:55-60"],
+    "gospel": ["Matt. 23:34-39"],
+    "source": "BCP 1928"
+  },
+  "Saint John, Apostle and Evangelist": {
+    "epistle": ["1 John 1:1-10"],
+    "gospel": ["John 21:19-25"],
+    "source": "BCP 1928"
+  },
+  "The Holy Innocents": {
+    "epistle": ["Rev. 14:1-5"],
+    "gospel": ["Matt. 2:13-18"],
+    "source": "BCP 1928"
+  },
+  "Circumcision and Holy Name of Jesus": {
+    "epistle": ["Phil. 2:9-13"],
+    "gospel": ["Luke 2:15-21"],
+    "source": "BCP 1928"
+  },
+  "Vigil of the Epiphany": {
+    "epistle": ["Titus 3:4-7"],
+    "gospel": ["Matt. 2:19-23"],
+    "source": "Sarum Missal"
+  },
+  "The Epiphany": {
+    "epistle": ["Eph. 3:1-12"],
+    "gospel": ["Matt. 2:1-12"],
+    "source": "BCP 1928"
+  },
+  "Conversion of Saint Paul, Apostle": {
+    "epistle": ["Acts 9:1-22"],
+    "gospel": ["Matt. 19:27-30"],
+    "source": "BCP 1928"
+  },
+  "Presentation of the Lord (Purification)": {
+    "epistle": ["Mal. 3:1-5"],
+    "gospel": ["Luke 2:22-40"],
+    "source": "BCP 1928"
+  },
+  "Ash Wednesday": {
+    "epistle": ["Joel 2:12-17"],
+    "gospel": ["Matt. 6:16-21"],
+    "source": "BCP 1928"
+  }
+}
