@@ -32,7 +32,7 @@ export class Collects {
         const title = stripMarkdownLinks(item.title);
         const collect = this.collects.find((c) => title.startsWith(c.title));
         if (!collect) return null;
-        return { ...item, title, collect: collect.text, source: collect.source };
+        return { ...item, title, collect: collect.text, source: collect.source, notes: collect.notes };
       })
       .filter((item): item is CollectCalendarItem => item !== null);
   }
