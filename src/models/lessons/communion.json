@@ -139,6 +139,51 @@
     "gospel": ["John 3:1-15"],
     "source": "BCP 1928"
   },
+  "First Sunday After Trinity": {
+    "epistle": ["1 John 4:7-21"],
+    "gospel": ["Luke 16:19-31"],
+    "source": "BCP 1928"
+  },
+  "Second Sunday After Trinity": {
+    "epistle": ["1 John 3:13-24"],
+    "gospel": ["Luke 14:16-24"],
+    "source": "BCP 1928"
+  },
+  "Third Sunday After Trinity": {
+    "epistle": ["1 Peter 5:5-11"],
+    "gospel": ["Luke 15:1-10"],
+    "source": "BCP 1928"
+  },
+  "Fourth Sunday After Trinity": {
+    "epistle": ["Rom. 8:18-23"],
+    "gospel": ["Luke 6:36-42"],
+    "source": "BCP 1928"
+  },
+  "Fifth Sunday After Trinity": {
+    "epistle": ["1 Pet. 3:8-15"],
+    "gospel": ["Luke 5:1-11"],
+    "source": "BCP 1928"
+  },
+  "Sixth Sunday After Trinity": {
+    "epistle": ["Rom. 6:3-11"],
+    "gospel": ["Matt. 5:20-26"],
+    "source": "BCP 1928"
+  },
+  "Seventh Sunday After Trinity": {
+    "epistle": ["Rom. 6:19-23"],
+    "gospel": ["Mark 8:1-9"],
+    "source": "BCP 1928"
+  },
+  "Eighth Sunday After Trinity": {
+    "epistle": ["Rom. 8:12-17"],
+    "gospel": ["Matt. 7:15-21"],
+    "source": "BCP 1928"
+  },
+  "Ninth Sunday After Trinity": {
+    "epistle": ["1 Cor. 10:1-13"],
+    "gospel": ["Luke 15:11-32"],
+    "source": "BCP 1928"
+  },
   "Saint Andrew, Apostle": {
     "epistle": ["Rom. 10:9-21"],
     "gospel": ["Matt. 4:18-22"],
@@ -398,5 +443,35 @@
     "epistle": ["1 Cor. 11:23-29"],
     "gospel": ["John 6:55-58"],
     "source": "Sarum Missal"
+  },
+  "Saint Barnabas, Apostle": {
+    "epistle": ["Acts 11:22-30"],
+    "gospel": ["John 15:12-16"],
+    "source": "BCP 1928"
+  },
+  "Nativity of Saint John the Baptist": {
+    "epistle": ["Isa. 40:1-11"],
+    "gospel": ["Luke 1:57-80"],
+    "source": "BCP 1928"
+  },
+  "Saints Peter and Paul, Apostles": {
+    "epistle": ["Acts 12:1-11"],
+    "gospel": ["Matt. 16:13-19"],
+    "source": "BCP 1928"
+  },
+  "Visitation of the Blessed Virgin Mary": {
+    "epistle": ["Song 2:1-14"],
+    "gospel": ["Luke 1:39-47"],
+    "source": "Sarum Missal"
+  },
+  "Saint James, Apostle": {
+    "epistle": ["Acts 11:27-30", "Acts 12:1-3"],
+    "gospel": ["Matt. 20:20-28"],
+    "source": "BCP 1928"
+  },
+  "Transfiguration of the Lord": {
+    "epistle": ["2 Pet. 1:13-18"],
+    "gospel": ["Luke 9:28-36"],
+    "source": "BCP 1928"
   }
 }
