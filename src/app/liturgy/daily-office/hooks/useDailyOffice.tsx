@@ -72,7 +72,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     // Otherwise, fetch new data in parallel
     Promise.all([
       fetch("/api/calendar/today?withLinks=true").then((res) => res.json()),
-      fetch("/api/lectionary/today").then((res) => res.json()),
+      fetch("/api/lessons/today").then((res) => res.json()),
       fetch("/api/collects/today").then((res) => res.json()),
       fetch("/api/hagiography/today").then((res) => res.json()),
     ])

@@ -54,7 +54,7 @@ export const useTomorrowOffice = () => {
     // Otherwise, fetch new data in parallel
     Promise.all([
       fetch("/api/calendar/tomorrow?withLinks=true").then((res) => res.json()),
-      fetch("/api/lectionary/tomorrow").then((res) => res.json()),
+      fetch("/api/lessons/tomorrow").then((res) => res.json()),
     ])
       .then(([tomorrowData, lessonsData]) => {
         setTomorrow(tomorrowData);

@@ -17,14 +17,14 @@ const getJsonResponse = async (response: Response) => {
   return response.json();
 };
 
-describe("GET /api/lectionary", () => {
+describe("GET /api/lessons", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
   });
 
   describe("base endpoint (all lessons)", () => {
     it("returns all lessons with liturgicalYear", async () => {
-      const [req, params] = createRequest("/api/lectionary");
+      const [req, params] = createRequest("/api/lessons");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -34,7 +34,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns lessons for entire liturgical year", async () => {
-      const [req, params] = createRequest("/api/lectionary");
+      const [req, params] = createRequest("/api/lessons");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -45,7 +45,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("entries are sorted chronologically", async () => {
-      const [req, params] = createRequest("/api/lectionary");
+      const [req, params] = createRequest("/api/lessons");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -56,9 +56,9 @@ describe("GET /api/lectionary", () => {
     });
   });
 
-  describe("/api/lectionary/today", () => {
+  describe("/api/lessons/today", () => {
     it("returns lessons for today", async () => {
-      const [req, params] = createRequest("/api/lectionary/today", ["today"]);
+      const [req, params] = createRequest("/api/lessons/today", ["today"]);
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -71,7 +71,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns lesson with title and readings", async () => {
-      const [req, params] = createRequest("/api/lectionary/today", ["today"]);
+      const [req, params] = createRequest("/api/lessons/today", ["today"]);
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -84,9 +84,9 @@ describe("GET /api/lectionary", () => {
     });
   });
 
-  describe("/api/lectionary/tomorrow", () => {
+  describe("/api/lessons/tomorrow", () => {
     it("returns lessons for tomorrow", async () => {
-      const [req, params] = createRequest("/api/lectionary/tomorrow", [
+      const [req, params] = createRequest("/api/lessons/tomorrow", [
         "tomorrow",
       ]);
       const response = await GET(req, params);
@@ -101,7 +101,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns lesson with proper structure", async () => {
-      const [req, params] = createRequest("/api/lectionary/tomorrow", [
+      const [req, params] = createRequest("/api/lessons/tomorrow", [
         "tomorrow",
       ]);
       const response = await GET(req, params);
@@ -116,9 +116,9 @@ describe("GET /api/lectionary", () => {
     });
   });
 
-  describe("/api/lectionary?date=YYYY-MM-DD", () => {
+  describe("/api/lessons?date=YYYY-MM-DD", () => {
     it("returns lessons for a specific date", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -129,7 +129,7 @@ describe("GET /api/lectionary", () => {
 
     it("returns correct liturgical year for date", async () => {
       // December 25, 2025 is in liturgical year 2026
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -137,7 +137,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns Christmas Day lessons", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -146,7 +146,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns First Sunday of Advent lessons", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-11-30");
+      const [req, params] = createRequest("/api/lessons?date=2025-11-30");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -155,7 +155,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns Easter Sunday lessons", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2026-04-05");
+      const [req, params] = createRequest("/api/lessons?date=2026-04-05");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -167,9 +167,9 @@ describe("GET /api/lectionary", () => {
     });
   });
 
-  describe("/api/lectionary?date=YYYY", () => {
+  describe("/api/lessons?date=YYYY", () => {
     it("returns all lessons for a liturgical year", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2026");
+      const [req, params] = createRequest("/api/lessons?date=2026");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -182,7 +182,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("starts from January 1 of the specified year", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2026");
+      const [req, params] = createRequest("/api/lessons?date=2026");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -196,7 +196,7 @@ describe("GET /api/lectionary", () => {
 
   describe("lesson structure", () => {
     it("each lesson has title, morning, and evening", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -208,7 +208,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("morning has first and second readings", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -218,7 +218,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("evening has first and second readings", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -228,7 +228,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("readings are arrays of strings", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12-25");
+      const [req, params] = createRequest("/api/lessons?date=2025-12-25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -248,7 +248,7 @@ describe("GET /api/lectionary", () => {
 
   describe("error handling", () => {
     it("returns 400 for invalid date format", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=12-25-2025");
+      const [req, params] = createRequest("/api/lessons?date=12-25-2025");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -258,7 +258,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns 400 for invalid date format with slashes", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025/12/25");
+      const [req, params] = createRequest("/api/lessons?date=2025/12/25");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -267,7 +267,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns 400 for partial date format", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-12");
+      const [req, params] = createRequest("/api/lessons?date=2025-12");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -276,7 +276,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns 400 for invalid date value", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-13-45");
+      const [req, params] = createRequest("/api/lessons?date=2025-13-45");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -285,7 +285,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns 400 for February 30", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-02-30");
+      const [req, params] = createRequest("/api/lessons?date=2025-02-30");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -294,7 +294,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("returns 400 for non-leap year February 29", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2025-02-29");
+      const [req, params] = createRequest("/api/lessons?date=2025-02-29");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -303,7 +303,7 @@ describe("GET /api/lectionary", () => {
     });
 
     it("accepts leap year February 29", async () => {
-      const [req, params] = createRequest("/api/lectionary?date=2024-02-29");
+      const [req, params] = createRequest("/api/lessons?date=2024-02-29");
       const response = await GET(req, params);
 
       expect(response.status).toBe(200);
@@ -313,7 +313,7 @@ describe("GET /api/lectionary", () => {
   describe("specific liturgical dates", () => {
     it("returns Ash Wednesday lessons", async () => {
       // Ash Wednesday 2026 is February 18
-      const [req, params] = createRequest("/api/lectionary?date=2026-02-18");
+      const [req, params] = createRequest("/api/lessons?date=2026-02-18");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -324,7 +324,7 @@ describe("GET /api/lectionary", () => {
 
     it("returns Good Friday lessons", async () => {
       // Good Friday 2026 is April 3
-      const [req, params] = createRequest("/api/lectionary?date=2026-04-03");
+      const [req, params] = createRequest("/api/lessons?date=2026-04-03");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 
@@ -335,7 +335,7 @@ describe("GET /api/lectionary", () => {
 
     it("returns Pentecost lessons", async () => {
       // Pentecost 2026 is May 24
-      const [req, params] = createRequest("/api/lectionary?date=2026-05-24");
+      const [req, params] = createRequest("/api/lessons?date=2026-05-24");
       const response = await GET(req, params);
       const data = await getJsonResponse(response);
 

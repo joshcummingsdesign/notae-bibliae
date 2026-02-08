@@ -107,7 +107,7 @@ const mockFetch = () => {
         json: () => Promise.resolve(mockCalendarResponse),
       } as Response);
     }
-    if (url.includes("lectionary")) {
+    if (url.includes("lessons")) {
       return Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockLectionaryResponse),
@@ -171,7 +171,7 @@ describe("useDailyOffice", () => {
       expect(global.fetch).toHaveBeenCalledWith(
         "/api/calendar/today?withLinks=true"
       );
-      expect(global.fetch).toHaveBeenCalledWith("/api/lectionary/today");
+      expect(global.fetch).toHaveBeenCalledWith("/api/lessons/today");
       expect(global.fetch).toHaveBeenCalledWith("/api/collects/today");
       expect(global.fetch).toHaveBeenCalledWith("/api/hagiography/today");
     });
