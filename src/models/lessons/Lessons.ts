@@ -1,11 +1,13 @@
 import dayjs from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
+import isBetween from "dayjs/plugin/isBetween";
 import { Calendar } from "../calendar";
 import lessonData from "./lessons.json";
 import { stripMarkdownLinks } from "@/utils/markdown";
 import { LessonDateMap, OfficeDay } from "./types";
 
 dayjs.extend(isSameOrBefore);
+dayjs.extend(isBetween);
 
 export class Lessons {
   private calendar: Calendar;
@@ -20,6 +22,7 @@ export class Lessons {
   getAll(): LessonDateMap {
     const calendarData = this.calendar.getAll();
     const sundays = this.calendar.getAllSundays();
+    const seasons = this.calendar.getSeasons();
     const startDate = this.calendar.getFirstSundayOfAdvent();
     const endDate = this.calendar
       .getNextFirstSundayOfAdvent()
@@ -57,22 +60,30 @@ export class Lessons {
         const sundayLessons = lessonData[lastSunday as keyof typeof lessonData];
         const weekdayLesson = sundayLessons?.[index];
         if (weekdayLesson) {
-          const title = `${lastSunday} - ${dayjs().day(index).format("dddd")}`;
+          const title = `${dayjs().day(index).format("dddd")} After the ${lastSunday}`;
           output[date] = {
             title,
             ...weekdayLesson,
           };
         } else if (dateLessons) {
           // Fall back to explicit date if no weekday lesson
+          const weekday = currentDay.format("dddd");
+          const season = seasons.find(s =>
+            currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]")
+          )?.name || "";
           output[date] = {
-            title: dateStr,
+            title: `${weekday} in ${season}`,
             ...dateLessons[0]!,
           };
         }
       } else if (dateLessons) {
         // For Sundays or before first Sunday, use explicit date lessons
+        const weekday = currentDay.format("dddd");
+        const season = seasons.find(s =>
+          currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]")
+        )?.name || "";
         output[date] = {
-          title: dateStr,
+          title: `${weekday} in ${season}`,
           ...dateLessons[0]!,
         };
       }

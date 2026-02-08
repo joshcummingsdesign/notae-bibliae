@@ -16,8 +16,9 @@ export class Hagiography {
 
   /**
    * Get all hagiography readings for the liturgical year.
+   * @param withLinks - If true, keep markdown links in titles. If false (default), strip them.
    */
-  getAll(): HagiographyDateMap {
+  getAll(withLinks: boolean = false): HagiographyDateMap {
     const calendarData = this.calendar.getAll();
     const startDate = this.calendar.getFirstSundayOfAdvent();
     const endDate = this.calendar
@@ -34,11 +35,11 @@ export class Hagiography {
       if (events && events.length > 0) {
         // Check ALL calendar items for the date, not just the highest-ranked
         for (const event of events) {
-          const lookupKey = stripMarkdownLinks(event.title);
+          const lookupKey = event.title;
           const reading = readingsData[lookupKey as keyof typeof readingsData];
           if (reading) {
             output[date] = {
-              title: lookupKey,
+              title: withLinks ? lookupKey : stripMarkdownLinks(lookupKey),
               ...reading,
             } as HagiographyResponse;
             break; // Use first match
@@ -54,10 +55,11 @@ export class Hagiography {
 
   /**
    * Get today's hagiography reading, if any.
+   * @param withLinks - If true, keep markdown links in title. If false (default), strip them.
    */
-  getToday(): HagiographyResponse | null {
+  getToday(withLinks: boolean = false): HagiographyResponse | null {
     const today = this.calendar.getToday();
-    const readings = this.getAll();
+    const readings = this.getAll(withLinks);
     return readings[today.format("YYYY-MM-DD")] || null;
   }
 }

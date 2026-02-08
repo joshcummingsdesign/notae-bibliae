@@ -4,7 +4,7 @@ import isBetween from "dayjs/plugin/isBetween";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { Calendar } from "@/models/calendar";
-import { Hagiography } from "@/models/hagiography";
+import { Lectionary } from "@/models/lectionary";
 import { NextRequest, NextResponse } from "next/server";
 import { TIMEZONE } from "@/constants";
 
@@ -27,6 +27,7 @@ export async function GET(
   }
 
   const date = searchParams.get("date");
+  const withLinks = searchParams.get("withLinks") === "true";
   const isFullDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date);
   const isYear = date && /^\d{4}$/.test(date);
   const isAll = !isToday && !isTomorrow && !isFullDate;
@@ -54,21 +55,26 @@ export async function GET(
   }
 
   const liturgicalYear = calendar.getLiturgicalYear();
-  const hagiography = new Hagiography(calendar);
-  const readingsData = hagiography.getAll();
+
+  const lectionary = new Lectionary(calendar);
+  const lectionaryData = lectionary.getAll(withLinks);
 
   if (isAll) {
-    const res = { liturgicalYear, ...readingsData };
-    return NextResponse.json(res);
+    return NextResponse.json({ liturgicalYear, ...lectionaryData });
   }
 
   const dateString = calendar.getToday().format("YYYY-MM-DD");
-  const reading = readingsData[dateString] || null;
+  const daily = lectionaryData[dateString];
 
-  const res = {
+  if (!daily) {
+    return NextResponse.json(
+      { error: `Lectionary data not found for ${dateString}` },
+      { status: 404 },
+    );
+  }
+
+  return NextResponse.json({
     liturgicalYear,
-    [dateString]: reading,
-  };
-
-  return NextResponse.json(res);
+    [dateString]: daily,
+  });
 }

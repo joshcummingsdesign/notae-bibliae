@@ -364,13 +364,15 @@ describe("Communion", () => {
       }
     });
 
-    test("all sources are non-empty strings", () => {
+    test("all sources (if present) are non-empty strings", () => {
       const all = communion.getAll();
 
       for (const dayReadings of Object.values(all)) {
         for (const reading of dayReadings) {
-          expect(typeof reading.source).toBe("string");
-          expect(reading.source.length).toBeGreaterThan(0);
+          if (reading.source !== undefined) {
+            expect(typeof reading.source).toBe("string");
+            expect(reading.source.length).toBeGreaterThan(0);
+          }
         }
       }
     });

@@ -81,6 +81,15 @@ describe("Hagiography", () => {
       expect(reading?.title).toBe("Saint Nicholas, Bishop");
     });
 
+    test("withLinks=true preserves markdown links in getToday result", () => {
+      // Dec 6 is Saint Nicholas
+      const hag = createHagiography("2025-12-06");
+      const reading = hag.getToday(true);
+
+      expect(reading).not.toBeNull();
+      expect(reading?.title).toBe("[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop");
+    });
+
     test("returns null when today has no matching saint", () => {
       // July 15 is an ordinary day with no saint in readings.json
       const hag = createHagiography("2026-07-15");
@@ -122,14 +131,22 @@ describe("Hagiography", () => {
       expect(typeof dec6.evening).toBe("string");
     });
 
-    test("link field is string when present", () => {
-      const all = hagiography.getAll();
-      // Saint Lucy has a link field
-      const dec13 = all["2025-12-13"];
+    test("withLinks=false strips markdown links from title", () => {
+      const all = hagiography.getAll(false);
+      const dec6 = all["2025-12-06"];
 
-      expect(dec13.link).toBeDefined();
-      expect(typeof dec13.link).toBe("string");
-      expect(dec13.link).toContain("/people/saints/");
+      expect(dec6.title).toBe("Saint Nicholas, Bishop");
+      expect(dec6.title).not.toContain("[");
+      expect(dec6.title).not.toContain("](/");
+    });
+
+    test("withLinks=true preserves markdown links in title", () => {
+      const all = hagiography.getAll(true);
+      const dec6 = all["2025-12-06"];
+
+      expect(dec6.title).toBe("[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop");
+      expect(dec6.title).toContain("[");
+      expect(dec6.title).toContain("](/");
     });
   });
 
@@ -175,13 +192,12 @@ describe("Hagiography", () => {
       expect(reading.morning).toContain("LFF");
     });
 
-    test("Saint Lucy (Dec 13) has link field", () => {
-      const all = hagiography.getAll();
+    test("Saint Lucy (Dec 13) has link in title when withLinks=true", () => {
+      const all = hagiography.getAll(true);
       const reading = all["2025-12-13"];
 
       expect(reading).toBeDefined();
-      expect(reading.title).toBe("Saint Lucy, Virgin and Martyr");
-      expect(reading.link).toBe("/people/saints/early/lucy-of-syracuse#readings");
+      expect(reading.title).toBe("[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr");
     });
 
     test("Saint Patrick (Mar 17) returns reading", () => {
