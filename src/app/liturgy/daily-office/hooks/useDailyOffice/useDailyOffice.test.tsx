@@ -5,7 +5,7 @@ import { vi, beforeEach, afterEach, describe, it, expect } from "vitest";
 const createMockCalendar = () => ({
   getToday: vi.fn(() => ({
     format: vi.fn((fmt: string) =>
-      fmt === "YYYY-MM-DD" ? "2025-12-25" : "Thursday, December 25"
+      fmt === "YYYY-MM-DD" ? "2025-12-25" : "Thursday, December 25",
     ),
     add: vi.fn(() => ({
       format: vi.fn(() => "2025-12-26"),
@@ -130,7 +130,7 @@ describe("useDailyOffice", () => {
       });
 
       expect(global.fetch).toHaveBeenCalledWith(
-        "/api/lectionary/today?withLinks=true"
+        "/api/lectionary/today?withLinks=true",
       );
     });
 
@@ -143,7 +143,7 @@ describe("useDailyOffice", () => {
 
       expect(result.current.lectionaryData).not.toBeNull();
       expect(result.current.lectionaryData?.primaryObservance).toBe(
-        "Christmas Day"
+        "Christmas Day",
       );
     });
 
@@ -158,7 +158,7 @@ describe("useDailyOffice", () => {
       await waitFor(() => {
         expect(consoleSpy).toHaveBeenCalledWith(
           "Error fetching daily office data:",
-          expect.any(Error)
+          expect.any(Error),
         );
       });
 
@@ -684,7 +684,11 @@ describe("useDailyOffice", () => {
   describe("window.BGLinks integration", () => {
     it("calls BGLinks.linkVerses when loading completes", async () => {
       const mockLinkVerses = vi.fn();
-      (window as unknown as { BGLinks: { version: string; linkVerses: () => void } }).BGLinks = {
+      (
+        window as unknown as {
+          BGLinks: { version: string; linkVerses: () => void };
+        }
+      ).BGLinks = {
         version: "",
         linkVerses: mockLinkVerses,
       };
@@ -695,7 +699,9 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect((window as unknown as { BGLinks: { version: string } }).BGLinks.version).toBe("ESV");
+      expect(
+        (window as unknown as { BGLinks: { version: string } }).BGLinks.version,
+      ).toBe("ESV");
       expect(mockLinkVerses).toHaveBeenCalled();
     });
 
