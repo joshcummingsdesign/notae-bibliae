@@ -548,17 +548,6 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
           },
           {
-            title: "Ranking",
-            link: "/liturgy/liturgical-year/ranking",
-            priority: 0.6,
-            inPageNav: true,
-          },
-          {
-            title: "Commentary",
-            link: "/liturgy/liturgical-year/commentary",
-            priority: 0.6,
-          },
-          {
             title: "Calendar",
             link: "/liturgy/liturgical-year/calendar",
             priority: 0.6,
@@ -776,6 +765,17 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
+          {
+            title: "Ranking",
+            link: "/liturgy/liturgical-year/ranking",
+            priority: 0.6,
+            inPageNav: true,
+          },
+          {
+            title: "Commentary",
+            link: "/liturgy/liturgical-year/commentary",
+            priority: 0.6,
+          },
         ],
       },
       {
@@ -793,15 +793,6 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
           },
           {
-            title: "Chant Rubrics",
-            link: "/liturgy/daily-office/chant-rubrics",
-            inPageNav: true,
-          },
-          {
-            title: "Lectionary",
-            link: "/liturgy/daily-office/lectionary",
-          },
-          {
             title: "Morning Prayer",
             link: "/liturgy/daily-office/morning-prayer",
           },
@@ -809,13 +800,21 @@ export const menuItems: MenuNode[] = [
             title: "Evening Prayer",
             link: "/liturgy/daily-office/evening-prayer",
           },
+          {
+            title: "Lectionary",
+            link: "/liturgy/daily-office/lectionary",
+          },
+          {
+            title: "Chant Rubrics",
+            link: "/liturgy/daily-office/chant-rubrics",
+            inPageNav: true,
+          },
+          {
+            title: "Psalter",
+            link: "/liturgy/daily-office/psalter",
+            inPageNav: true,
+          },
         ],
-      },
-      {
-        title: "Psalter",
-        link: "/liturgy/psalter",
-        priority: 0.7,
-        inPageNav: true,
       },
       {
         title: "Rites",
