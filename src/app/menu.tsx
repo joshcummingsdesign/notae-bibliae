@@ -798,6 +798,10 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
           },
           {
+            title: "Lectionary",
+            link: "/liturgy/daily-office/lectionary",
+          },
+          {
             title: "Morning Prayer",
             link: "/liturgy/daily-office/morning-prayer",
           },
