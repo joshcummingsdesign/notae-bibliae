@@ -5,6 +5,7 @@ import { Button, styled } from "@mui/material";
 import { Loader } from "@/components/Loader";
 import { typography } from "@/assets/styles";
 import Markdown from "react-markdown";
+import DOMPurify from "isomorphic-dompurify";
 import remarkSmartypants from "remark-smartypants";
 import { useLectionary } from "../hooks/useLectionary";
 import { Lessons } from "@/models/lectionary";
@@ -103,18 +104,18 @@ const PrayerCard = ({
     <CardHeader>{title}</CardHeader>
     <CardContent>
       <ReadingSection>
-        <ReadingTitle>First Reading</ReadingTitle>
+        <ReadingTitle>First Lesson</ReadingTitle>
         <Reading readings={lessons.first} />
       </ReadingSection>
 
       <ReadingSection>
-        <ReadingTitle>Second Reading</ReadingTitle>
+        <ReadingTitle>Second Lesson</ReadingTitle>
         <Reading readings={lessons.second} />
       </ReadingSection>
 
       {lessons.third && (
         <ReadingSection>
-          <ReadingTitle>Third Reading</ReadingTitle>
+          <ReadingTitle>Third Lesson</ReadingTitle>
           <MarkdownText>
             <Markdown remarkPlugins={[remarkSmartypants]}>
               {`${lessons.third.title}${lessons.third.reading ? ` (${lessons.third.reading})` : ""}`}
@@ -146,11 +147,23 @@ const PrayerCard = ({
       {lessons.collects.map((collect) => (
         <CollectSection key={collect.title}>
           <ReadingTitle>{`Collect for ${collect.title}`}</ReadingTitle>
-          <CollectText>{collect.text}</CollectText>
+          <CollectText text={collect.text} />
         </CollectSection>
       ))}
     </CardContent>
   </Card>
+);
+
+const CollectText: React.FC<{ text: string }> = ({ text }) => (
+  <StyledCollectText
+    dangerouslySetInnerHTML={{
+      __html: DOMPurify.sanitize(
+        text
+          .replaceAll("·", '<span class="dot"></span>')
+          .replace("Amen", "<em>Amen</em>"),
+      ),
+    }}
+  />
 );
 
 const Wrapper = styled("div", {
@@ -201,7 +214,9 @@ const Tab = styled(Button, {
   textTransform: "none",
   boxShadow: isActive ? "0 1px 2px rgba(0, 0, 0, 0.05)" : "none",
   "&:hover": {
-    backgroundColor: isActive ? theme.palette.brand.white : theme.palette.brand.hover,
+    backgroundColor: isActive
+      ? theme.palette.brand.white
+      : theme.palette.brand.hover,
   },
   "& .MuiTouchRipple-ripple": {
     color: theme.palette.brand.ripple,
@@ -320,8 +335,18 @@ const CollectSection = styled("div")({
   gap: "0.5rem",
 });
 
-const CollectText = styled("p")({
+const StyledCollectText = styled("p")(({ theme }) => ({
   margin: 0,
   fontSize: "1rem",
   lineHeight: 1.6,
-});
+  ".dot": {
+    color: theme.palette.brand.red,
+    position: "relative",
+    top: "2px",
+    "&:before": {
+      content: "'·'",
+      lineHeight: "1.5rem",
+      fontSize: "1.75rem",
+    },
+  },
+}));
