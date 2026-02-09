@@ -1,20 +1,9 @@
-import { CollectCalendarItem, CollectRes } from "@/models/collects";
-import { Calendar, CalendarItem, CalendarRes } from "@/models/calendar";
+import { Calendar } from "@/models/calendar";
 import { useEffect, useState, useMemo, useCallback } from "react";
-import { LessonRes, Office } from "@/models/lessons/types";
-import { HagiographyDateMap, HagiographyResponse } from "@/models/hagiography";
-
-interface TodayData {
-  season: string;
-  date: string;
-  events: CalendarItem[];
-}
+import { LectionaryItem, LectionaryRes } from "@/models/lectionary";
 
 export const useDailyOffice = (office: "morning" | "evening") => {
-  const [today, setToday] = useState<CalendarRes | null>(null);
-  const [collects, setCollects] = useState<CollectRes | null>(null);
-  const [lessons, setLessons] = useState<LessonRes | null>(null);
-  const [hagiography, setHagiography] = useState<HagiographyDateMap | null>(
+  const [lectionaryData, setLectionaryData] = useState<LectionaryRes | null>(
     null,
   );
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -26,79 +15,51 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     [calendar],
   );
 
-  const getToday = useCallback((): TodayData | null => {
-    if (!today) return null;
+  const fullDateString = useMemo(
+    () => calendar.getToday().format("dddd, MMMM D"),
+    [calendar],
+  );
 
-    const season = Object.keys(today)[1];
-    const events = today[season][dateString] || [];
-
-    return {
-      season,
-      date: calendar.getToday().format("dddd, MMMM D"),
-      events,
-    };
-  }, [today, dateString, calendar]);
-
-  const getLessons = useCallback((): Office | null => {
-    if (!lessons) return null;
-    return lessons[dateString][office];
-  }, [lessons, dateString, office]);
-
-  const getCollects = useCallback((): CollectCalendarItem[] | null => {
-    if (!collects) return null;
-    return collects[dateString];
-  }, [collects, dateString]);
-
-  const getHagiography = useCallback((): HagiographyResponse | null => {
-    if (!hagiography) return null;
-    return hagiography[dateString];
-  }, [hagiography, dateString]);
+  const getLectionaryData = useCallback((): LectionaryItem | null => {
+    if (!lectionaryData) return null;
+    return lectionaryData[dateString];
+  }, [lectionaryData, dateString]);
 
   useEffect(() => {
     // Get cached data
-    const retrieved = localStorage.getItem(`${office}-prayer`);
+    const retrieved = localStorage.getItem("daily-office");
     if (retrieved) {
       const cached = JSON.parse(retrieved);
       if (cached[dateString]) {
-        const { today, lessons, collects, hagiography } = cached[dateString];
-        setToday(today);
-        setLessons(lessons);
-        setCollects(collects);
-        setHagiography(hagiography);
+        const { lectionaryData } = cached[dateString];
+        setLectionaryData(lectionaryData);
         return;
       }
     }
 
-    // Otherwise, fetch new data in parallel
-    Promise.all([
-      fetch("/api/calendar/today?withLinks=true").then((res) => res.json()),
-      fetch("/api/lessons/today").then((res) => res.json()),
-      fetch("/api/collects/today").then((res) => res.json()),
-      fetch("/api/hagiography/today").then((res) => res.json()),
-    ])
-      .then(([todayData, lessonsData, collectsData, hagiographyData]) => {
-        setToday(todayData);
-        setLessons(lessonsData);
-        setCollects(collectsData);
-        setHagiography(hagiographyData);
+    // Otherwise, fetch new data
+    fetch("/api/lectionary/today?withLinks=true")
+      .then((res) => res.json())
+      .then((lectionaryData) => {
+        setLectionaryData(lectionaryData);
       })
       .catch((error) => {
         console.error("Error fetching daily office data:", error);
       });
   }, []);
 
+  // Cache responses
   useEffect(() => {
-    if (today && lessons && collects && hagiography) {
+    if (lectionaryData) {
       setIsLoading(false);
-      // Cache responses
       localStorage.setItem(
-        `${office}-prayer`,
+        "daily-office",
         JSON.stringify({
-          [dateString]: { today, lessons, collects, hagiography },
+          [dateString]: { lectionaryData },
         }),
       );
     }
-  }, [today, lessons, collects, dateString, office]);
+  }, [lectionaryData, dateString]);
 
   useEffect(() => {
     if (!isLoading) {
@@ -258,9 +219,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     shouldOmitTeDeum,
     currentAntiphon: calendarData.currentAntiphon,
     dateString,
-    today: getToday(),
-    lessons: getLessons(),
-    collects: getCollects(),
-    hagiography: getHagiography(),
+    today: fullDateString,
+    lectionaryData: getLectionaryData(),
   };
 };

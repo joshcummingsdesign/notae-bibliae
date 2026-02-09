@@ -106,7 +106,7 @@ describe("Lessons", () => {
         // Tuesday after First Sunday of Advent (Monday Dec 1 is St. Andrew feast)
         const tuesday = all["2025-12-02"];
 
-        expect(tuesday.title).toMatch(/First Sunday of Advent - \w+day/);
+        expect(tuesday.title).toMatch(/\w+day After the First Sunday of Advent/);
       });
     });
 
@@ -277,7 +277,7 @@ describe("Lessons", () => {
       const saturdayLessons = createLessons("2026-01-24");
       const today = saturdayLessons.getToday();
 
-      expect(today.title).toBe("Second Sunday of Epiphany - Saturday");
+      expect(today.title).toBe("Saturday After the Second Sunday of Epiphany");
       expect(today.morning).toHaveProperty("first");
       expect(today.morning).toHaveProperty("second");
       expect(today.evening).toHaveProperty("first");
@@ -331,10 +331,10 @@ describe("Lessons", () => {
         const all = lessons2028.getAll();
 
         // These days fall back to date-based lessons since First Sunday After Christmas
-        // has no weekday lessons defined
-        expect(all["2029-01-02"]?.title).toBe("January 2");
-        expect(all["2029-01-03"]?.title).toBe("January 3");
-        expect(all["2029-01-04"]?.title).toBe("January 4");
+        // has no weekday lessons defined - they now use "Weekday in Season" format
+        expect(all["2029-01-02"]?.title).toBe("Tuesday in Christmastide");
+        expect(all["2029-01-03"]?.title).toBe("Wednesday in Christmastide");
+        expect(all["2029-01-04"]?.title).toBe("Thursday in Christmastide");
       });
 
       test("Vigil of Epiphany on Jan 5", () => {
@@ -417,18 +417,22 @@ describe("Lessons", () => {
     });
 
     describe("variable Trinity Sundays", () => {
+      // Matches actual Sunday titles (e.g., "First Sunday After Trinity")
+      // but not weekday titles (e.g., "Monday After the First Sunday After Trinity")
+      const isSundayTitle = (title: string) =>
+        /^(First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh|Twelfth|Thirteenth|Fourteenth|Fifteenth|Sixteenth|Seventeenth|Eighteenth|Nineteenth|Twentieth|Twenty-\w+) Sunday After Trinity$/.test(
+          title,
+        );
+
       test("early Easter has more potential Trinity Sundays", () => {
         // Early Easter = more time between Pentecost and Advent
         const earlyEaster = createLessons("2008-01-01");
         const all = earlyEaster.getAll();
 
         // Filter only the actual Sunday entries (titles like "First Sunday After Trinity")
-        // Exclude weekday entries (titles like "First Sunday After Trinity - Monday")
         // Note: Some Sundays may be displaced by feast days
-        const trinitySundays = Object.entries(all).filter(
-          ([_, lesson]) =>
-            lesson.title.includes("Sunday After Trinity") &&
-            !lesson.title.includes(" - "),
+        const trinitySundays = Object.entries(all).filter(([_, lesson]) =>
+          isSundayTitle(lesson.title),
         );
         // Should have at least 18 Trinity Sundays (some displaced by feasts)
         expect(trinitySundays.length).toBeGreaterThanOrEqual(18);
@@ -439,11 +443,9 @@ describe("Lessons", () => {
         const lateEaster = createLessons("2038-01-01");
         const all = lateEaster.getAll();
 
-        // Filter only the actual Sunday entries (not weekday lessons)
-        const trinitySundays = Object.entries(all).filter(
-          ([_, lesson]) =>
-            lesson.title.includes("Sunday After Trinity") &&
-            !lesson.title.includes(" - "),
+        // Filter only the actual Sunday entries
+        const trinitySundays = Object.entries(all).filter(([_, lesson]) =>
+          isSundayTitle(lesson.title),
         );
         expect(trinitySundays.length).toBeLessThanOrEqual(25);
       });
@@ -457,10 +459,8 @@ describe("Lessons", () => {
         const lateAll = lateEaster.getAll();
 
         const countTrinitySundays = (all: Record<string, { title: string }>) =>
-          Object.entries(all).filter(
-            ([_, lesson]) =>
-              lesson.title.includes("Sunday After Trinity") &&
-              !lesson.title.includes(" - "),
+          Object.entries(all).filter(([_, lesson]) =>
+            isSundayTitle(lesson.title),
           ).length;
 
         expect(countTrinitySundays(earlyAll)).toBeGreaterThan(
@@ -479,10 +479,9 @@ describe("Lessons", () => {
           // Some Sundays may be displaced by feast days (e.g., Nativity of St. John, Saints Simon and Jude)
           const trinitySundays = Object.entries(all).filter(
             ([_, lesson]) =>
-              (lesson.title.includes("Trinity Sunday") ||
-                lesson.title.includes("Sunday After Trinity") ||
-                lesson.title === "Sunday Before Advent") &&
-              !lesson.title.includes(" - "),
+              isSundayTitle(lesson.title) ||
+              lesson.title === "Trinity Sunday" ||
+              lesson.title === "Sunday Before Advent",
           );
 
           // At least 26 (allowing for 2 feast day displacements)

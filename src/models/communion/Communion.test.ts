@@ -64,8 +64,11 @@ describe("Communion", () => {
             expect(reading).toHaveProperty("title");
             expect(reading).toHaveProperty("epistle");
             expect(reading).toHaveProperty("gospel");
-            expect(reading).toHaveProperty("source");
             expect(reading).toHaveProperty("date");
+            // source is optional
+            if (reading.source !== undefined) {
+              expect(typeof reading.source).toBe("string");
+            }
           }
         }
       });

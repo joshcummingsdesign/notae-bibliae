@@ -1,20 +1,17 @@
 "use client";
 import { Fragment } from "react";
 import { styled } from "@mui/material";
-import { CollectCalendarItem } from "@/models/collects";
+import { CollectItem } from "@/models/collects";
 import Link from "next/link";
 import { Definition } from "../Definition";
 import DOMPurify from "isomorphic-dompurify";
 
 interface Props {
-  office: "morning" | "evening";
-  collects: CollectCalendarItem[];
+  collects: CollectItem[];
   isFerial: boolean;
 }
 
-export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
-  const hasVigil = collects.some((collect) => collect.isVigil);
-
+export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
   let header = (
     <p>
       <em>
@@ -42,28 +39,14 @@ export const Collects: React.FC<Props> = ({ office, collects, isFerial }) => {
   return (
     <>
       {header}
-      {collects.map((collect) => {
-        // Omit Vigils from morning office.
-        if (office === "morning" && collect.isVigil) {
-          return null;
-        }
-
-        // Omit weekly collects from Vigils.
-        if (office === "evening" && hasVigil && !collect.isVigil) {
-          return null;
-        }
-
-        return (
-          <Fragment key={collect.title}>
-            <p>
-              <strong>Collect for {collect.title}</strong>
-            </p>
-            <CollectText
-              text={collect.collect.replace("Amen", "<em>Amen</em>")}
-            />
-          </Fragment>
-        );
-      })}
+      {collects.map((collect) => (
+        <Fragment key={collect.title}>
+          <p>
+            <strong>Collect for {collect.title}</strong>
+          </p>
+          <CollectText text={collect.text.replace("Amen", "<em>Amen</em>")} />
+        </Fragment>
+      ))}
     </>
   );
 };

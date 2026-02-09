@@ -40,10 +40,12 @@ describe("Collects", () => {
       for (const item of items) {
         expect(item).toHaveProperty("title");
         expect(item).toHaveProperty("text");
-        expect(item).toHaveProperty("source");
         expect(typeof item.title).toBe("string");
         expect(typeof item.text).toBe("string");
-        expect(typeof item.source).toBe("string");
+        // source is optional
+        if (item.source !== undefined) {
+          expect(typeof item.source).toBe("string");
+        }
       }
     });
 

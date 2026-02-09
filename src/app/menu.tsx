@@ -805,10 +805,6 @@ export const menuItems: MenuNode[] = [
             title: "Evening Prayer",
             link: "/liturgy/daily-office/evening-prayer",
           },
-          {
-            title: "Tomorrow",
-            link: "/liturgy/daily-office/tomorrow",
-          },
         ],
       },
       {

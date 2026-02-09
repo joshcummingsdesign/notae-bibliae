@@ -8,8 +8,8 @@ import {
   PsalmsOfTheDay,
   Magnificat,
   NuncDimittis,
-  ThirdLesson,
   Collects,
+  ThirdLesson,
 } from "@/components/DailyOffice";
 import GeneralConfession from "../shared-content/general-confession.mdx";
 import OurFather from "../shared-content/our-father.mdx";
@@ -31,9 +31,7 @@ export const Content = () => {
     isSolemn,
     currentAntiphon,
     today,
-    lessons,
-    collects,
-    hagiography,
+    lectionaryData,
   } = useDailyOffice("evening");
 
   return (
@@ -41,7 +39,14 @@ export const Content = () => {
       {isLoading && <Loader />}
       <Wrapper isLoading={isLoading}>
         <Initial text="Daily Office: Evening Prayer" />
-        {!isLoading && <Today {...today!} />}
+        {!isLoading && (
+          <Today
+            season={lectionaryData!.season}
+            date={today}
+            primaryObservance={lectionaryData!.primaryObservance}
+            secondaryObservance={lectionaryData!.secondaryObservance}
+          />
+        )}
         <h2>Introductory Rites</h2>
         <hr />
         <h2>Opening Sentence</h2>
@@ -58,7 +63,7 @@ export const Content = () => {
         </p>
         <PsalmsOfTheDay id="psalm" />
         <h2>First Lesson</h2>
-        {!isLoading && <Lesson lessons={lessons!.first} />}
+        {!isLoading && <Lesson lessons={lectionaryData!.evening.first} />}
         <h2>Magnificat</h2>
         <p>
           [ <em>Stand</em> ]
@@ -72,13 +77,13 @@ export const Content = () => {
         <p>
           [ <em>Sit</em> ]
         </p>
-        {!isLoading && <Lesson lessons={lessons!.second} />}
+        {!isLoading && <Lesson lessons={lectionaryData!.evening.second} />}
         <h2>Nunc dimittis</h2>
         <p>
           [ <em>Stand</em> ]
         </p>
         <NuncDimittis isLordsDay={isLordsDay} />
-        <ThirdLesson hagiography={hagiography} office="evening" />
+        {!isLoading && <ThirdLesson lesson={lectionaryData!.evening.third} />}
         <h2>Concluding Rites</h2>
         <hr />
         <ApostlesCreed />
@@ -86,7 +91,10 @@ export const Content = () => {
         <Suffrages />
         <h2>Collects</h2>
         {!isLoading && (
-          <Collects office="evening" collects={collects!} isFerial={isFerial} />
+          <Collects
+            collects={lectionaryData!.evening.collects}
+            isFerial={isFerial}
+          />
         )}
         <OrdinaryCollects />
         <Grace />

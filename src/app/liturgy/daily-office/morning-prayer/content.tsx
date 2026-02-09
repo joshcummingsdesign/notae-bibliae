@@ -38,19 +38,22 @@ export const Content = () => {
     shouldSingTeDeum,
     shouldOmitTeDeum,
     today,
-    lessons,
-    collects,
-    hagiography,
+    lectionaryData,
   } = useDailyOffice("morning");
-
-  console.log(hagiography);
 
   return (
     <>
       {isLoading && <Loader />}
       <Wrapper isLoading={isLoading}>
         <Initial text="Daily Office: Morning Prayer" />
-        {!isLoading && <Today {...today!} />}
+        {!isLoading && (
+          <Today
+            season={lectionaryData!.season}
+            date={today}
+            primaryObservance={lectionaryData!.primaryObservance}
+            secondaryObservance={lectionaryData!.secondaryObservance}
+          />
+        )}
         <h2>Introductory Rites</h2>
         <hr />
         <h2>Opening Sentence</h2>
@@ -73,7 +76,7 @@ export const Content = () => {
         </p>
         <PsalmsOfTheDay id="psalm" />
         <h2>First Lesson</h2>
-        {!isLoading && <Lesson lessons={lessons!.first} />}
+        {!isLoading && <Lesson lessons={lectionaryData!.morning.first} />}
         <TeDeum
           today={dateString}
           shouldSing={shouldSingTeDeum}
@@ -86,9 +89,9 @@ export const Content = () => {
         <p>
           [ <em>Sit</em> ]
         </p>
-        {!isLoading && <Lesson lessons={lessons!.second} />}
+        {!isLoading && <Lesson lessons={lectionaryData!.morning.second} />}
         <Benedictus />
-        <ThirdLesson hagiography={hagiography} office="morning" />
+        {!isLoading && <ThirdLesson lesson={lectionaryData!.morning.third} />}
         <h2>Concluding Rites</h2>
         <hr />
         <ApostlesCreed />
@@ -96,7 +99,10 @@ export const Content = () => {
         <Suffrages />
         <h2>Collects</h2>
         {!isLoading && (
-          <Collects office="morning" collects={collects!} isFerial={isFerial} />
+          <Collects
+            collects={lectionaryData!.morning.collects}
+            isFerial={isFerial}
+          />
         )}
         <OrdinaryCollects />
         <Grace />

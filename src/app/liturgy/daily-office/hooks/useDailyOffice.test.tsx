@@ -57,72 +57,33 @@ vi.mock("@/models/calendar", () => {
 // Import after mocking
 import { useDailyOffice } from "./useDailyOffice";
 
-// Mock API responses
-const mockCalendarResponse = {
-  liturgicalYear: 2026,
-  Christmastide: {
-    "2025-12-25": [{ title: "Christmas Day", ranking: 1 }],
-  },
-};
-
+// Mock API response matching LectionaryRes structure
 const mockLectionaryResponse = {
   liturgicalYear: 2026,
   "2025-12-25": {
-    title: "Christmas Day",
+    season: "Christmastide",
+    primaryObservance: "Christmas Day",
     morning: {
       first: ["Isaiah 9:2-7"],
       second: ["Luke 2:1-14"],
+      collects: [{ title: "Christmas Day", collect: "Almighty God..." }],
     },
     evening: {
       first: ["Isaiah 62:1-5"],
       second: ["Matthew 1:18-25"],
+      collects: [{ title: "Christmas Day", collect: "Almighty God..." }],
     },
   },
-};
-
-const mockCollectsResponse = {
-  liturgicalYear: 2026,
-  "2025-12-25": [
-    {
-      title: "Christmas Day",
-      collect: "Almighty God, who hast given...",
-      source: "BCP 1928",
-      date: "2025-12-25",
-    },
-  ],
-};
-
-const mockHagiographyResponse = {
-  liturgicalYear: 2026,
-  "2025-12-25": null, // Christmas is not a saint day
 };
 
 // Helper to setup fetch mock
 const mockFetch = () => {
   global.fetch = vi.fn((input: RequestInfo | URL) => {
     const url = typeof input === "string" ? input : input.toString();
-    if (url.includes("calendar")) {
-      return Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(mockCalendarResponse),
-      } as Response);
-    }
-    if (url.includes("lessons")) {
+    if (url.includes("lectionary")) {
       return Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockLectionaryResponse),
-      } as Response);
-    }
-    if (url.includes("collects")) {
-      return Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(mockCollectsResponse),
-      } as Response);
-    }
-    if (url.includes("hagiography")) {
-      return Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(mockHagiographyResponse),
       } as Response);
     }
     return Promise.reject(new Error("Unknown URL"));
@@ -138,7 +99,7 @@ describe("useDailyOffice", () => {
     mockFetch();
 
     // Mock window.BGLinks
-    (window as any).BGLinks = undefined;
+    (window as unknown as { BGLinks: unknown }).BGLinks = undefined;
   });
 
   afterEach(() => {
@@ -161,33 +122,29 @@ describe("useDailyOffice", () => {
   });
 
   describe("data fetching", () => {
-    it("fetches from all four endpoints in parallel", async () => {
+    it("fetches from lectionary endpoint", async () => {
       renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
-        expect(global.fetch).toHaveBeenCalledTimes(4);
+        expect(global.fetch).toHaveBeenCalledTimes(1);
       });
 
       expect(global.fetch).toHaveBeenCalledWith(
-        "/api/calendar/today?withLinks=true"
+        "/api/lectionary/today?withLinks=true"
       );
-      expect(global.fetch).toHaveBeenCalledWith("/api/lessons/today");
-      expect(global.fetch).toHaveBeenCalledWith("/api/collects/today");
-      expect(global.fetch).toHaveBeenCalledWith("/api/hagiography/today");
     });
 
-    it("sets today, lessons, collects, hagiography state from responses", async () => {
+    it("sets lectionaryData state from response", async () => {
       const { result } = renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.today).not.toBeNull();
-      expect(result.current.lessons).not.toBeNull();
-      expect(result.current.collects).not.toBeNull();
-      // hagiography is null for Christmas (not a saint day)
-      expect(result.current.hagiography).toBeNull();
+      expect(result.current.lectionaryData).not.toBeNull();
+      expect(result.current.lectionaryData?.primaryObservance).toBe(
+        "Christmas Day"
+      );
     });
 
     it("handles fetch errors gracefully", async () => {
@@ -215,13 +172,10 @@ describe("useDailyOffice", () => {
     it("reads from localStorage on mount", async () => {
       const cachedData = {
         "2025-12-25": {
-          today: mockCalendarResponse,
-          lessons: mockLectionaryResponse,
-          collects: mockCollectsResponse,
-          hagiography: mockHagiographyResponse,
+          lectionaryData: mockLectionaryResponse,
         },
       };
-      localStorage.setItem("morning-prayer", JSON.stringify(cachedData));
+      localStorage.setItem("daily-office", JSON.stringify(cachedData));
 
       const { result } = renderHook(() => useDailyOffice("morning"));
 
@@ -236,18 +190,15 @@ describe("useDailyOffice", () => {
     it("fetches fresh data if cache is for different date", async () => {
       const cachedData = {
         "2025-12-24": {
-          today: mockCalendarResponse,
-          lessons: mockLectionaryResponse,
-          collects: mockCollectsResponse,
-          hagiography: mockHagiographyResponse,
+          lectionaryData: mockLectionaryResponse,
         },
       };
-      localStorage.setItem("morning-prayer", JSON.stringify(cachedData));
+      localStorage.setItem("daily-office", JSON.stringify(cachedData));
 
       renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
-        expect(global.fetch).toHaveBeenCalledTimes(4);
+        expect(global.fetch).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -258,60 +209,12 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      const cached = localStorage.getItem("morning-prayer");
+      const cached = localStorage.getItem("daily-office");
       expect(cached).not.toBeNull();
 
       const parsed = JSON.parse(cached!);
       expect(parsed["2025-12-25"]).toBeDefined();
-    });
-
-    it("uses separate cache keys for morning and evening", async () => {
-      const { result: morningResult } = renderHook(() =>
-        useDailyOffice("morning")
-      );
-
-      await waitFor(() => {
-        expect(morningResult.current.isLoading).toBe(false);
-      });
-
-      const { result: eveningResult } = renderHook(() =>
-        useDailyOffice("evening")
-      );
-
-      await waitFor(() => {
-        expect(eveningResult.current.isLoading).toBe(false);
-      });
-
-      expect(localStorage.getItem("morning-prayer")).not.toBeNull();
-      expect(localStorage.getItem("evening-prayer")).not.toBeNull();
-    });
-  });
-
-  describe("morning vs evening office", () => {
-    it("returns morning lessons when office='morning'", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.lessons).toEqual({
-        first: ["Isaiah 9:2-7"],
-        second: ["Luke 2:1-14"],
-      });
-    });
-
-    it("returns evening lessons when office='evening'", async () => {
-      const { result } = renderHook(() => useDailyOffice("evening"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.lessons).toEqual({
-        first: ["Isaiah 62:1-5"],
-        second: ["Matthew 1:18-25"],
-      });
+      expect(parsed["2025-12-25"].lectionaryData).toBeDefined();
     });
   });
 
@@ -756,19 +659,15 @@ describe("useDailyOffice", () => {
     });
   });
 
-  describe("today data structure", () => {
-    it("returns today with season, date, and events", async () => {
+  describe("today data", () => {
+    it("returns today as formatted date string", async () => {
       const { result } = renderHook(() => useDailyOffice("morning"));
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.today).toEqual({
-        season: "Christmastide",
-        date: "Thursday, December 25",
-        events: [{ title: "Christmas Day", ranking: 1 }],
-      });
+      expect(result.current.today).toBe("Thursday, December 25");
     });
 
     it("returns dateString in YYYY-MM-DD format", async () => {
@@ -782,29 +681,10 @@ describe("useDailyOffice", () => {
     });
   });
 
-  describe("collects data", () => {
-    it("returns collects array for the date", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.collects).toEqual([
-        {
-          title: "Christmas Day",
-          collect: "Almighty God, who hast given...",
-          source: "BCP 1928",
-          date: "2025-12-25",
-        },
-      ]);
-    });
-  });
-
   describe("window.BGLinks integration", () => {
     it("calls BGLinks.linkVerses when loading completes", async () => {
       const mockLinkVerses = vi.fn();
-      (window as any).BGLinks = {
+      (window as unknown as { BGLinks: { version: string; linkVerses: () => void } }).BGLinks = {
         version: "",
         linkVerses: mockLinkVerses,
       };
@@ -815,12 +695,12 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect((window as any).BGLinks.version).toBe("ESV");
+      expect((window as unknown as { BGLinks: { version: string } }).BGLinks.version).toBe("ESV");
       expect(mockLinkVerses).toHaveBeenCalled();
     });
 
     it("does not error when BGLinks is undefined", async () => {
-      (window as any).BGLinks = undefined;
+      (window as unknown as { BGLinks: unknown }).BGLinks = undefined;
 
       const { result } = renderHook(() => useDailyOffice("morning"));
 

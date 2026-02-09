@@ -1,5 +1,5 @@
 import { Calendar, CalendarItem, CalendarRes } from "@/models/calendar";
-import { useEffect, useRef, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { LessonRes, OfficeDay } from "@/models/lessons/types";
 
 interface TomorrowData {
@@ -17,7 +17,7 @@ export const useTomorrowOffice = () => {
 
   const dateString = useMemo(
     () => calendar.getToday().add(1, "day").format("YYYY-MM-DD"),
-    [calendar]
+    [calendar],
   );
 
   const getTomorrow = useCallback((): TomorrowData | null => {
@@ -71,7 +71,7 @@ export const useTomorrowOffice = () => {
       // Cache responses
       localStorage.setItem(
         "tomorrow-office",
-        JSON.stringify({ [dateString]: { tomorrow, lessons } })
+        JSON.stringify({ [dateString]: { tomorrow, lessons } }),
       );
     }
   }, [tomorrow, lessons, dateString]);

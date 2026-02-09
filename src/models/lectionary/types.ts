@@ -2,7 +2,7 @@ import { SeasonName } from "../calendar";
 import { CollectItem } from "../collects";
 import { CommunionItem } from "../communion";
 
-export interface ThirdLesson {
+export interface ThirdLessonData {
   title: string;
   reading?: string;
 }
@@ -10,7 +10,7 @@ export interface ThirdLesson {
 export interface Lessons {
   first: string[];
   second: string[];
-  third?: ThirdLesson;
+  third?: ThirdLessonData;
   communion?: CommunionItem;
   collects: CollectItem[];
 }
