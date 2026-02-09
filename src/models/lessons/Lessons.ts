@@ -60,7 +60,13 @@ export class Lessons {
         const sundayLessons = lessonData[lastSunday as keyof typeof lessonData];
         const weekdayLesson = sundayLessons?.[index];
         if (weekdayLesson) {
-          const title = `${dayjs().day(index).format("dddd")} After the ${lastSunday}`;
+          // Use "the" before ordinal names (First Sunday, etc.) or "Sunday Before", but not proper names (Sexagesima, Trinity Sunday, etc.)
+          const needsArticle =
+            /^(First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh|Twelfth|Thirteenth|Fourteenth|Fifteenth|Sixteenth|Seventeenth|Eighteenth|Nineteenth|Twentieth|Twenty-|Sunday)/i.test(
+              lastSunday,
+            );
+          const article = needsArticle ? "the " : "";
+          const title = `${dayjs().day(index).format("dddd")} After ${article}${lastSunday}`;
           output[date] = {
             title,
             ...weekdayLesson,

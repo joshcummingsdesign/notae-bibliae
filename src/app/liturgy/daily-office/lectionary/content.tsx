@@ -1,12 +1,13 @@
 "use client";
 import { Fragment, useEffect, useState } from "react";
 import { Initial } from "@/components/text/Initial";
-import { styled } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import { Loader } from "@/components/Loader";
 import { typography } from "@/assets/styles";
 import Markdown from "react-markdown";
 import remarkSmartypants from "remark-smartypants";
 import { useLectionary } from "../hooks/useLectionary";
+import { Lessons } from "@/models/lectionary";
 
 export const Content = () => {
   const { isLoading, today, tomorrow, refreshBibleGatewayLinks } =
@@ -28,12 +29,14 @@ export const Content = () => {
         <TabContainer>
           <TabList>
             <Tab
+              variant="text"
               isActive={activeTab === "today"}
               onClick={() => setActiveTab("today")}
             >
               Today
             </Tab>
             <Tab
+              variant="text"
               isActive={activeTab === "tomorrow"}
               onClick={() => setActiveTab("tomorrow")}
             >
@@ -62,101 +65,14 @@ export const Content = () => {
             </DayHeader>
 
             <ContentWrap>
-              <Card>
-                <CardHeader>Morning Prayer</CardHeader>
-                <CardContent>
-                  <ReadingSection>
-                    <ReadingTitle>First Reading</ReadingTitle>
-                    <Reading readings={activeDay.data.morning.first} />
-                  </ReadingSection>
-
-                  <ReadingSection>
-                    <ReadingTitle>Second Reading</ReadingTitle>
-                    <Reading readings={activeDay.data.morning.second} />
-                  </ReadingSection>
-
-                  {activeDay.data.morning.communion && (
-                    <>
-                      <Divider />
-                      <CommunionSection>
-                        <ReadingTitle>Holy Communion</ReadingTitle>
-                        <CommunionReadings>
-                          <CommunionReading>
-                            <CommunionLabel>Epistle</CommunionLabel>
-                            <Reading
-                              readings={
-                                activeDay.data.morning.communion.epistle
-                              }
-                            />
-                          </CommunionReading>
-                          <CommunionReading>
-                            <CommunionLabel>Gospel</CommunionLabel>
-                            <Reading
-                              readings={activeDay.data.morning.communion.gospel}
-                            />
-                          </CommunionReading>
-                        </CommunionReadings>
-                      </CommunionSection>
-                    </>
-                  )}
-
-                  <Divider />
-                  {activeDay.data.morning.collects.map((collect) => (
-                    <CollectSection key={collect.title}>
-                      <ReadingTitle>{`Collect for ${collect.title}`}</ReadingTitle>
-                      <CollectText>{collect.text}</CollectText>
-                    </CollectSection>
-                  ))}
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>Evening Prayer</CardHeader>
-                <CardContent>
-                  <ReadingSection>
-                    <ReadingTitle>First Reading</ReadingTitle>
-                    <Reading readings={activeDay.data.evening.first} />
-                  </ReadingSection>
-
-                  <ReadingSection>
-                    <ReadingTitle>Second Reading</ReadingTitle>
-                    <Reading readings={activeDay.data.evening.second} />
-                  </ReadingSection>
-
-                  {activeDay.data.evening.communion && (
-                    <>
-                      <Divider />
-                      <CommunionSection>
-                        <ReadingTitle>Holy Communion</ReadingTitle>
-                        <CommunionReadings>
-                          <CommunionReading>
-                            <CommunionLabel>Epistle</CommunionLabel>
-                            <Reading
-                              readings={
-                                activeDay.data.evening.communion.epistle
-                              }
-                            />
-                          </CommunionReading>
-                          <CommunionReading>
-                            <CommunionLabel>Gospel</CommunionLabel>
-                            <Reading
-                              readings={activeDay.data.evening.communion.gospel}
-                            />
-                          </CommunionReading>
-                        </CommunionReadings>
-                      </CommunionSection>
-                    </>
-                  )}
-
-                  <Divider />
-                  {activeDay.data.evening.collects.map((collect) => (
-                    <CollectSection key={collect.title}>
-                      <ReadingTitle>{`Collect for ${collect.title}`}</ReadingTitle>
-                      <CollectText>{collect.text}</CollectText>
-                    </CollectSection>
-                  ))}
-                </CardContent>
-              </Card>
+              <PrayerCard
+                title="Morning Prayer"
+                lessons={activeDay.data.morning}
+              />
+              <PrayerCard
+                title="Evening Prayer"
+                lessons={activeDay.data.evening}
+              />
             </ContentWrap>
           </div>
         )}
@@ -174,6 +90,67 @@ const Reading = ({ readings }: { readings: string[] }) => (
       </Fragment>
     ))}
   </ReadingReference>
+);
+
+const PrayerCard = ({
+  title,
+  lessons,
+}: {
+  title: string;
+  lessons: Lessons;
+}) => (
+  <Card>
+    <CardHeader>{title}</CardHeader>
+    <CardContent>
+      <ReadingSection>
+        <ReadingTitle>First Reading</ReadingTitle>
+        <Reading readings={lessons.first} />
+      </ReadingSection>
+
+      <ReadingSection>
+        <ReadingTitle>Second Reading</ReadingTitle>
+        <Reading readings={lessons.second} />
+      </ReadingSection>
+
+      {lessons.third && (
+        <ReadingSection>
+          <ReadingTitle>Third Reading</ReadingTitle>
+          <MarkdownText>
+            <Markdown remarkPlugins={[remarkSmartypants]}>
+              {`${lessons.third.title}${lessons.third.reading ? ` (${lessons.third.reading})` : ""}`}
+            </Markdown>
+          </MarkdownText>
+        </ReadingSection>
+      )}
+
+      {lessons.communion && (
+        <>
+          <Divider />
+          <CommunionSection>
+            <ReadingTitle>Holy Communion</ReadingTitle>
+            <CommunionReadings>
+              <CommunionReading>
+                <CommunionLabel>Epistle</CommunionLabel>
+                <Reading readings={lessons.communion.epistle} />
+              </CommunionReading>
+              <CommunionReading>
+                <CommunionLabel>Gospel</CommunionLabel>
+                <Reading readings={lessons.communion.gospel} />
+              </CommunionReading>
+            </CommunionReadings>
+          </CommunionSection>
+        </>
+      )}
+
+      <Divider />
+      {lessons.collects.map((collect) => (
+        <CollectSection key={collect.title}>
+          <ReadingTitle>{`Collect for ${collect.title}`}</ReadingTitle>
+          <CollectText>{collect.text}</CollectText>
+        </CollectSection>
+      ))}
+    </CardContent>
+  </Card>
 );
 
 const Wrapper = styled("div", {
@@ -207,24 +184,28 @@ const TabList = styled("div")(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
   backgroundColor: theme.palette.brand.xLightGrey,
-  borderRadius: "14px",
+  borderRadius: "8px",
   padding: "3px",
   width: "100%",
   maxWidth: "400px",
 }));
 
-const Tab = styled("button", {
+const Tab = styled(Button, {
   shouldForwardProp: (prop) => prop !== "isActive",
 })<{ isActive: boolean }>(({ theme, isActive }) => ({
-  padding: "0.5rem 1rem",
-  border: "none",
-  borderRadius: "14px",
+  borderRadius: "8px",
   backgroundColor: isActive ? theme.palette.brand.white : "transparent",
+  color: theme.palette.brand.black,
   fontSize: "0.875rem",
   fontWeight: 500,
-  cursor: "pointer",
-  transition: "background-color 0.2s ease",
+  textTransform: "none",
   boxShadow: isActive ? "0 1px 2px rgba(0, 0, 0, 0.05)" : "none",
+  "&:hover": {
+    backgroundColor: isActive ? theme.palette.brand.white : theme.palette.brand.hover,
+  },
+  "& .MuiTouchRipple-ripple": {
+    color: theme.palette.brand.ripple,
+  },
 }));
 
 const DayHeader = styled("div")({
@@ -295,6 +276,13 @@ const ReadingTitle = styled("h4")({
 const ReadingReference = styled("p")({
   margin: 0,
   fontSize: "1rem",
+});
+
+const MarkdownText = styled("div")({
+  p: {
+    margin: 0,
+    fontSize: "1rem",
+  },
 });
 
 const Divider = styled("hr")(({ theme }) => ({
