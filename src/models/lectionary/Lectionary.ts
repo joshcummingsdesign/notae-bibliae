@@ -8,6 +8,7 @@ import { Hagiography } from "../hagiography";
 import { Lessons as LessonsModel } from "../lessons";
 import { stripMarkdownLinks } from "@/utils/markdown";
 import { LectionaryDateMap, LectionaryItem, Lessons } from "./types";
+import { getCachedLectionary, setCachedLectionary } from "./cache";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isBetween);
@@ -28,6 +29,12 @@ export class Lectionary {
   }
 
   getAll(withLinks: boolean = false): LectionaryDateMap {
+    const liturgicalYear = this.calendar.getLiturgicalYear();
+    const cached = getCachedLectionary(liturgicalYear, withLinks);
+    if (cached) {
+      return cached;
+    }
+
     const calendarData = this.calendar.getAll();
     const seasons = this.calendar.getSeasons();
     const collectData = this.collects.getAll();
@@ -123,6 +130,7 @@ export class Lectionary {
       currentDay = currentDay.add(1, "day");
     }
 
+    setCachedLectionary(liturgicalYear, withLinks, output);
     return output;
   }
 
