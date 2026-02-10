@@ -2078,6 +2078,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/francis-of-assisi",
               },
               {
+                title: "Gregory of Tours",
+                link: "/people/saints/medieval/gregory-of-tours",
+              },
+              {
                 title: "Margaret of Scotland",
                 link: "/people/saints/medieval/margaret-of-scotland",
               },
@@ -2686,6 +2690,11 @@ export const menuItems: MenuNode[] = [
       {
         title: "Liturgical Terms",
         link: "/glossary/liturgical-terms",
+        inPageNav: true,
+      },
+      {
+        title: "Historical Terms",
+        link: "/glossary/historical-terms",
         inPageNav: true,
       },
     ],
