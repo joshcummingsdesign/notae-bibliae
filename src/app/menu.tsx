@@ -2086,6 +2086,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/margaret-of-scotland",
               },
               {
+                title: "Osmund",
+                link: "/people/saints/medieval/osmund",
+              },
+              {
                 title: "Scholastica of Nursia",
                 link: "/people/saints/medieval/scholastica-of-nursia",
               },
