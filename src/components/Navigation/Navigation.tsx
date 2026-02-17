@@ -8,13 +8,22 @@ import { MainMenu } from "./MainMenu";
 import { InPageNav } from "./InPageNav";
 import { Post } from "@/app/meditations/actions";
 import { Terms } from "@/app/glossary/liturgical-terms/actions";
+import { Names } from "@/app/glossary/names/actions";
+import { HistoricalTerms } from "@/app/glossary/historical-terms/actions";
 
 interface Props {
   posts: Post[];
+  names: Names[];
   terms: Terms[];
+  historicalTerms: HistoricalTerms[];
 }
 
-export const Navigation: React.FC<Props> = ({ posts, terms }) => {
+export const Navigation: React.FC<Props> = ({
+  posts,
+  names,
+  terms,
+  historicalTerms,
+}) => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const pathname = usePathname();
@@ -41,7 +50,13 @@ export const Navigation: React.FC<Props> = ({ posts, terms }) => {
 
   return (
     <>
-      <Header posts={posts} terms={terms} onMenuClick={toggleSidebar(true)} />
+      <Header
+        posts={posts}
+        names={names}
+        terms={terms}
+        historicalTerms={historicalTerms}
+        onMenuClick={toggleSidebar(true)}
+      />
       <Sidebar open={sidebarOpen} onClose={toggleSidebar(false)}>
         <InPageNav
           style={{ display: inPageNavOpen ? "block" : "none" }}

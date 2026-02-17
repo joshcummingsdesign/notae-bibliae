@@ -11,10 +11,14 @@ import {
   TextField,
   IconButton,
 } from "@mui/material";
+import { Names } from "@/app/glossary/names/actions";
+import { HistoricalTerms } from "@/app/glossary/historical-terms/actions";
 
 interface Props {
   posts: Post[];
+  names: Names[];
   terms: Terms[];
+  historicalTerms: HistoricalTerms[];
   open: boolean;
   onChange: (link: string) => void;
   onClose: () => void;
@@ -53,7 +57,9 @@ const flattenMenu = (nodes: MenuNode[]): MenuItem[] => {
 
 export const Search: React.FC<Props> = ({
   posts,
+  names,
   terms,
+  historicalTerms,
   open,
   onChange,
   onClose,
@@ -99,10 +105,6 @@ export const Search: React.FC<Props> = ({
       link: "/meditations/a-brief-history-of-the-reformation-part-3#john-calvin",
     },
     {
-      title: "Thomas Cranmer",
-      link: "/meditations/a-brief-history-of-the-reformation-part-3#the-book-of-common-prayer",
-    },
-    {
       title: "Jacobus Arminius",
       link: "/meditations/a-brief-history-of-the-reformation-part-3#jacobus-arminius",
     },
@@ -130,7 +132,9 @@ export const Search: React.FC<Props> = ({
 
   const options = [
     ...postItems,
+    ...names,
     ...terms,
+    ...historicalTerms,
     ...additionalItems,
     ...flattenMenu(menuItems),
   ]

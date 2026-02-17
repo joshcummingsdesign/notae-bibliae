@@ -10,6 +10,8 @@ import { MermaidLoader } from "@/components/Mermaid";
 import { getAllPosts } from "./meditations/actions";
 import "@/assets/styles/global.scss";
 import { getAllLiturgicalTerms } from "./glossary/liturgical-terms/actions";
+import { getAllNames } from "./glossary/names/actions";
+import { getAllHistoricalTerms } from "./glossary/historical-terms/actions";
 
 interface Props {
   children: React.ReactNode;
@@ -52,13 +54,20 @@ const fontVariables = `${rediviva.variable} ${canterbury.variable} ${ebGaramond.
 
 export default function RootLayout({ children }: Props) {
   const posts = use(getAllPosts());
+  const names = use(getAllNames());
   const terms = use(getAllLiturgicalTerms());
+  const historicalTerms = use(getAllHistoricalTerms());
   return (
     <Providers>
       <html lang="en" className={fontVariables}>
         <body>
           <Suspense>
-            <Navigation posts={posts} terms={terms} />
+            <Navigation
+              posts={posts}
+              names={names}
+              terms={terms}
+              historicalTerms={historicalTerms}
+            />
           </Suspense>
           <Main>{children}</Main>
           <BibleGatewayLoader />

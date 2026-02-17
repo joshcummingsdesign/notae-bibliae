@@ -1325,6 +1325,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/o-for-a-thousand-tongues-to-sing",
               },
               {
+                title: "Onward Christian Soldiers",
+                link: "/liturgy/music/hymns/onward-chrisitan-soldiers",
+              },
+              {
                 title: "Praise God, from Whom All Blessings Flow",
                 link: "/liturgy/music/hymns/praise-god-from-whom-all-blessings-flow",
               },
@@ -1495,10 +1499,6 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/composers/george-kitchin",
               },
               {
-                title: "Henry Francis Lyte",
-                link: "/liturgy/music/composers/henry-francis-lyte",
-              },
-              {
                 title: "Horatio Spafford",
                 link: "/liturgy/music/composers/horatio-spafford",
               },
@@ -1537,10 +1537,6 @@ export const menuItems: MenuNode[] = [
               {
                 title: "John Henry Hopkins Jr.",
                 link: "/liturgy/music/composers/john-henry-hopkins-jr",
-              },
-              {
-                title: "John Mason Neale",
-                link: "/liturgy/music/composers/john-mason-neale",
               },
               {
                 title: "John Newton",
@@ -1587,6 +1583,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/composers/placide-cappeau",
               },
               {
+                title: "Sabine Baring-Gould",
+                link: "/liturgy/music/composers/sabine-baring-gould",
+              },
+              {
                 title: "Sy Miller",
                 link: "/liturgy/music/composers/sy-miller",
               },
@@ -1597,10 +1597,6 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Thomas Helmore",
                 link: "/liturgy/music/composers/thomas-helmore",
-              },
-              {
-                title: "Thomas Ken",
-                link: "/liturgy/music/composers/thomas-ken",
               },
               {
                 title: "Will L. Thompson",
@@ -2141,6 +2137,37 @@ export const menuItems: MenuNode[] = [
           {
             title: "William of Ockham",
             link: "/people/scholars/william-of-ockham",
+          },
+        ],
+      },
+      {
+        title: "Divines",
+        link: "/people/divines",
+        priority: 0.7,
+        children: [
+          {
+            title: "Henry Francis Lyte",
+            link: "/people/divines/henry-francis-lyte",
+          },
+          {
+            title: "John Henry Blunt",
+            link: "/people/divines/john-henry-blunt",
+          },
+          {
+            title: "John Mason Neale",
+            link: "/people/divines/john-mason-neale",
+          },
+          {
+            title: "Lancelot Andrewes",
+            link: "/people/divines/lancelot-andrewes",
+          },
+          {
+            title: "Thomas Cranmer",
+            link: "/people/divines/thomas-cranmer",
+          },
+          {
+            title: "Thomas Ken",
+            link: "/people/divines/thomas-ken",
           },
         ],
       },

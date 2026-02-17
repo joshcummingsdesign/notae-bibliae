@@ -188,7 +188,7 @@
       {
         "id": "author",
         "content": "Thomas Ken",
-        "link": "/liturgy/music/composers/thomas-ken"
+        "link": "/people/divines/thomas-ken"
       },
       { "id": "year", "content": "1674" }
     ],
@@ -404,7 +404,7 @@
       {
         "id": "author",
         "content": "Henry Francis Lyte",
-        "link": "/liturgy/music/composers/henry-francis-lyte"
+        "link": "/people/divines/henry-francis-lyte"
       },
       { "id": "year", "content": "1834" }
     ],
@@ -561,6 +561,20 @@
         "link": "/liturgy/music/composers/folliott-sandford-pierpoint"
       },
       { "id": "year", "content": "1864" }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Onward Christian Soldiers",
+        "link": "/liturgy/music/hymns/onward-christian-soldiers"
+      },
+      { "id": "occasion", "content": "Ordinary Time" },
+      {
+        "id": "author",
+        "content": "Sabine Baring-Gould",
+        "link": "/liturgy/music/composers/sabine-baring-gould"
+      },
+      { "id": "year", "content": "1865" }
     ],
     [
       {
