@@ -1325,8 +1325,8 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/o-for-a-thousand-tongues-to-sing",
               },
               {
-                title: "Onward Christian Soldiers",
-                link: "/liturgy/music/hymns/onward-chrisitan-soldiers",
+                title: "Onward, Christian Soldiers",
+                link: "/liturgy/music/hymns/onward-christian-soldiers",
               },
               {
                 title: "Praise God, from Whom All Blessings Flow",
