@@ -4,7 +4,7 @@ import { keyframes, styled } from "@mui/material";
 export const Loader = () => (
   <Wrapper role="status">
     <SpinningCircle aria-hidden="true" />
-    <SrOnly>Loading…</SrOnly>
+    <SrOnly>Loading...</SrOnly>
   </Wrapper>
 );
 
