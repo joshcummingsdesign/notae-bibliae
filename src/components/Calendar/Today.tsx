@@ -19,10 +19,18 @@ export const Today: React.FC<Props> = ({
   <Wrapper>
     <p>{season}</p>
     <p>{date}</p>
-    <Markdown remarkPlugins={[remarkSmartypants]}>{primaryObservance}</Markdown>
+    <Markdown
+      remarkPlugins={[remarkSmartypants]}
+      components={{ a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> }}
+    >
+      {primaryObservance}
+    </Markdown>
     {secondaryObservance && (
       <SmallText>
-        <Markdown remarkPlugins={[remarkSmartypants]}>
+        <Markdown
+          remarkPlugins={[remarkSmartypants]}
+          components={{ a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> }}
+        >
           {`[ *${secondaryObservance}* ]`}
         </Markdown>
       </SmallText>
