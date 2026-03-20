@@ -128,6 +128,10 @@ export const Search: React.FC<Props> = ({
       title: "The Augsburg Confession",
       link: "/meditations/a-brief-history-of-the-reformation-part-3#the-augsburg-confession",
     },
+    {
+      title: "The Filioque",
+      link: "/meditations/a-brief-history-of-the-reformation-part-1#the-filioque",
+    },
   ];
 
   const options = [
