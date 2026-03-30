@@ -1,4 +1,4 @@
-import { renderHook, waitFor, act } from "@testing-library/react";
+import { renderHook, waitFor, act, cleanup } from "@testing-library/react";
 import { vi, beforeEach, afterEach, describe, it, expect } from "vitest";
 
 // Create mock calendar instance that will be returned by Calendar constructor
@@ -116,6 +116,8 @@ describe("useLectionary", () => {
   });
 
   afterEach(() => {
+    cleanup();
+    localStorage.clear();
     vi.restoreAllMocks();
   });
 
