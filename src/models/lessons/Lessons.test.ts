@@ -599,4 +599,32 @@ describe("Lessons", () => {
       }
     });
   });
+
+  describe("conditional readings", () => {
+    describe("Presentation of the Lord (Purification)", () => {
+      test("uses Gal. 4:1-7 before Septuagesima", () => {
+        // 2025: Presentation is Feb 2, Easter is April 20, Septuagesima is ~Feb 16 -> before
+        const lessons = createLessons("2025-02-02");
+        const all = lessons.getAll();
+        const presentation = all["2025-02-02"];
+
+        expect(presentation.title).toBe(
+          "Presentation of the Lord (Purification)",
+        );
+        expect(presentation.morning.second).toContain("Gal. 4:1-7");
+      });
+
+      test("uses Rom. 8:14-21 on/after Septuagesima", () => {
+        // 2026: Presentation is Feb 2, Septuagesima is Feb 1 -> after
+        const lessons = createLessons("2026-02-02");
+        const all = lessons.getAll();
+        const presentation = all["2026-02-02"];
+
+        expect(presentation.title).toBe(
+          "Presentation of the Lord (Purification)",
+        );
+        expect(presentation.morning.second).toContain("Rom. 8:14-21");
+      });
+    });
+  });
 });

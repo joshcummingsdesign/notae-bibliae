@@ -87,7 +87,9 @@ describe("Hagiography", () => {
       const reading = hag.getToday(true);
 
       expect(reading).not.toBeNull();
-      expect(reading?.title).toBe("[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop");
+      expect(reading?.title).toBe(
+        "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop",
+      );
     });
 
     test("returns null when today has no matching saint", () => {
@@ -144,7 +146,9 @@ describe("Hagiography", () => {
       const all = hagiography.getAll(true);
       const dec6 = all["2025-12-06"];
 
-      expect(dec6.title).toBe("[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop");
+      expect(dec6.title).toBe(
+        "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop",
+      );
       expect(dec6.title).toContain("[");
       expect(dec6.title).toContain("](/");
     });
@@ -188,8 +192,10 @@ describe("Hagiography", () => {
       const reading = all["2026-01-13"];
 
       expect(reading).toBeDefined();
-      expect(reading.title).toBe("Saint Hilary, Bishop and Doctor of the Church");
-      expect(reading.morning).toContain("LFF");
+      expect(reading.title).toBe(
+        "Saint Hilary, Bishop and Doctor of the Church",
+      );
+      expect(reading.morning).toContain("First Part");
     });
 
     test("Saint Lucy (Dec 13) has link in title when withLinks=true", () => {
@@ -197,7 +203,9 @@ describe("Hagiography", () => {
       const reading = all["2025-12-13"];
 
       expect(reading).toBeDefined();
-      expect(reading.title).toBe("[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr");
+      expect(reading.title).toBe(
+        "[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr",
+      );
     });
 
     test("Saint Patrick (Mar 17) returns reading", () => {
@@ -242,7 +250,7 @@ describe("Hagiography", () => {
           expect(all[date]).toHaveProperty("title");
           expect(all[date]).toHaveProperty("morning");
         }
-      }
+      },
     );
   });
 });

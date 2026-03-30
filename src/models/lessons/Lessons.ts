@@ -1,12 +1,14 @@
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
+import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 import isBetween from "dayjs/plugin/isBetween";
 import { Calendar } from "../calendar";
 import lessonData from "./lessons.json";
 import { stripMarkdownLinks } from "@/utils/markdown";
-import { LessonDateMap, OfficeDay } from "./types";
+import { LessonDateMap, LessonEntry, Office, OfficeDay } from "./types";
 
 dayjs.extend(isSameOrBefore);
+dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 
 export class Lessons {
@@ -14,6 +16,36 @@ export class Lessons {
 
   constructor(calendar: Calendar) {
     this.calendar = calendar;
+  }
+
+  /**
+   * Apply alternate readings based on liturgical conditions.
+   */
+  private applyAlternates(
+    lesson: LessonEntry,
+    currentDay: Dayjs,
+  ): { morning: Office; evening: Office } {
+    if (!lesson.alternates) {
+      return { morning: lesson.morning, evening: lesson.evening };
+    }
+
+    let morning = { ...lesson.morning };
+    let evening = { ...lesson.evening };
+    const alt = lesson.alternates;
+
+    if (alt.afterSeptuagesima) {
+      const septuagesima = this.calendar.getSeptuagesima();
+      if (currentDay.isSameOrAfter(septuagesima, "day")) {
+        if (alt.afterSeptuagesima.morning) {
+          morning = { ...morning, ...alt.afterSeptuagesima.morning };
+        }
+        if (alt.afterSeptuagesima.evening) {
+          evening = { ...evening, ...alt.afterSeptuagesima.evening };
+        }
+      }
+    }
+
+    return { morning, evening };
   }
 
   /**
@@ -51,9 +83,15 @@ export class Lessons {
 
       // If there's a feast day (calendar event with lessons), use it
       if (hasEvent) {
+        const lessonEntry = lessons[0]!;
+        const { morning, evening } = this.applyAlternates(
+          lessonEntry,
+          currentDay,
+        );
         output[date] = {
           title: lookupKey,
-          ...lessons[0]!, // there should always be a 0 index
+          morning,
+          evening,
         };
       } else if (index !== 0 && lastSunday) {
         // For weekdays (Mon-Sat), Sunday cycle takes precedence over explicit dates
@@ -74,9 +112,10 @@ export class Lessons {
         } else if (dateLessons) {
           // Fall back to explicit date if no weekday lesson
           const weekday = currentDay.format("dddd");
-          const season = seasons.find(s =>
-            currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]")
-          )?.name || "";
+          const season =
+            seasons.find((s) =>
+              currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]"),
+            )?.name || "";
           output[date] = {
             title: `${weekday} in ${season}`,
             ...dateLessons[0]!,
@@ -85,9 +124,10 @@ export class Lessons {
       } else if (dateLessons) {
         // For Sundays or before first Sunday, use explicit date lessons
         const weekday = currentDay.format("dddd");
-        const season = seasons.find(s =>
-          currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]")
-        )?.name || "";
+        const season =
+          seasons.find((s) =>
+            currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]"),
+          )?.name || "";
         output[date] = {
           title: `${weekday} in ${season}`,
           ...dateLessons[0]!,

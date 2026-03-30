@@ -16,3 +16,18 @@ export interface LessonDateMap {
 export type LessonRes = {
   liturgicalYear: number;
 } & LessonDateMap;
+
+export interface AlternateReadings {
+  morning?: Partial<Office>;
+  evening?: Partial<Office>;
+}
+
+export interface Alternates {
+  afterSeptuagesima?: AlternateReadings;
+}
+
+export interface LessonEntry {
+  morning: Office;
+  evening: Office;
+  alternates?: Alternates;
+}

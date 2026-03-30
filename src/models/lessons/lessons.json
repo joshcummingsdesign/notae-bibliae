@@ -4015,6 +4015,13 @@
       "evening": {
         "first": ["Haggai 2:1-9"],
         "second": ["1 John 3:1-8"]
+      },
+      "alternates": {
+        "afterSeptuagesima": {
+          "morning": {
+            "second": ["Rom. 8:14-21"]
+          }
+        }
       }
     }
   ],
