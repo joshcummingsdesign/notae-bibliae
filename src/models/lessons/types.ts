@@ -24,6 +24,10 @@ export interface AlternateReadings {
 
 export interface Alternates {
   afterSeptuagesima?: AlternateReadings;
+  afterEaster?: AlternateReadings;
+  inFirstSundayAfterTrinity?: AlternateReadings;
+  afterThirdSundayAfterTrinity?: AlternateReadings;
+  inOrAfterThirdSundayAfterTrinity?: AlternateReadings;
 }
 
 export interface LessonEntry {

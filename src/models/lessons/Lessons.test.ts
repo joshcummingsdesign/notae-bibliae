@@ -626,5 +626,97 @@ describe("Lessons", () => {
         expect(presentation.morning.second).toContain("Rom. 8:14-21");
       });
     });
+
+    describe("Annunciation of the Lord", () => {
+      test("uses Heb. 2:5-18 before Easter", () => {
+        // 2025: Annunciation is March 25, Easter is April 20 -> before
+        const lessons = createLessons("2025-03-25");
+        const all = lessons.getAll();
+        const annunciation = all["2025-03-25"];
+
+        expect(annunciation.title).toBe("Annunciation of the Lord");
+        expect(annunciation.morning.second).toContain("Heb. 2:5-18");
+      });
+
+      test("uses 1 John 4:7-14 on/after Easter", () => {
+        // 2008: Annunciation is March 25, Easter is March 23 -> after
+        const lessons = createLessons("2008-03-25");
+        const all = lessons.getAll();
+        const annunciation = all["2008-03-25"];
+
+        expect(annunciation.title).toBe("Annunciation of the Lord");
+        expect(annunciation.morning.second).toContain("1 John 4:7-14");
+      });
+    });
+
+    describe("Saint Barnabas, Apostle", () => {
+      test("uses Luke 14:25-35 in morning when in First Sunday After Trinity week", () => {
+        // 2023: Easter April 9, Trinity June 4, First Sunday After Trinity is June 11
+        // June 11 IS First Sunday After Trinity, so it's in that week
+        const lessons = createLessons("2023-06-11");
+        const all = lessons.getAll();
+        const barnabas = all["2023-06-11"];
+
+        expect(barnabas.title).toBe("Saint Barnabas, Apostle");
+        expect(barnabas.morning.second).toContain("Luke 14:25-35");
+      });
+
+      test("uses Acts 9:26-31 in morning outside First Sunday After Trinity week", () => {
+        // 2025: Easter April 20, Trinity June 15, First Sunday After Trinity is June 22
+        // June 11 is before First Sunday After Trinity
+        const lessons = createLessons("2025-06-11");
+        const all = lessons.getAll();
+        const barnabas = all["2025-06-11"];
+
+        expect(barnabas.title).toBe("Saint Barnabas, Apostle");
+        expect(barnabas.morning.second).toContain("Acts 9:26-31");
+      });
+
+      test("uses Rom. 10:1-15 in evening after Third Sunday After Trinity", () => {
+        // 2035: Easter March 25, Third Sunday After Trinity is June 10
+        // June 11 is Monday after Third Sunday
+        const lessons = createLessons("2035-06-11");
+        const all = lessons.getAll();
+        const barnabas = all["2035-06-11"];
+
+        expect(barnabas.title).toBe("Saint Barnabas, Apostle");
+        expect(barnabas.evening.second).toContain("Rom. 10:1-15");
+      });
+
+      test("uses Acts 14:8-28 in evening on or before Third Sunday After Trinity", () => {
+        // 2025: Easter April 20, Third Sunday After Trinity is July 6
+        // June 11 is before Third Sunday After Trinity
+        const lessons = createLessons("2025-06-11");
+        const all = lessons.getAll();
+        const barnabas = all["2025-06-11"];
+
+        expect(barnabas.title).toBe("Saint Barnabas, Apostle");
+        expect(barnabas.evening.second).toContain("Acts 14:8-28");
+      });
+    });
+
+    describe("Saints Peter and Paul, Apostles", () => {
+      test("uses Acts 3:1-26 in morning before Third Sunday After Trinity", () => {
+        // 2038: Easter April 25 (late), Third Sunday After Trinity is July 11
+        // June 29 is before Third Sunday After Trinity
+        const lessons = createLessons("2038-06-29");
+        const all = lessons.getAll();
+        const peterPaul = all["2038-06-29"];
+
+        expect(peterPaul.title).toBe("Saints Peter and Paul, Apostles");
+        expect(peterPaul.morning.second).toContain("Acts 3:1-26");
+      });
+
+      test("uses Acts 11:1-18 in morning in or after Third Sunday After Trinity", () => {
+        // 2008: Easter March 23 (early), Third Sunday After Trinity is June 8
+        // June 29 is after Third Sunday After Trinity
+        const lessons = createLessons("2008-06-29");
+        const all = lessons.getAll();
+        const peterPaul = all["2008-06-29"];
+
+        expect(peterPaul.title).toBe("Saints Peter and Paul, Apostles");
+        expect(peterPaul.morning.second).toContain("Acts 11:1-18");
+      });
+    });
   });
 });

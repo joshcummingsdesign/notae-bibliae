@@ -45,6 +45,67 @@ export class Lessons {
       }
     }
 
+    if (alt.afterEaster) {
+      const easter = this.calendar.getEasterSunday();
+      if (currentDay.isSameOrAfter(easter, "day")) {
+        if (alt.afterEaster.morning) {
+          morning = { ...morning, ...alt.afterEaster.morning };
+        }
+        if (alt.afterEaster.evening) {
+          evening = { ...evening, ...alt.afterEaster.evening };
+        }
+      }
+    }
+
+    if (alt.inFirstSundayAfterTrinity) {
+      const trinity = this.calendar.getTrinitySunday();
+      const firstSundayAfterTrinity = trinity.add(1, "week");
+      const secondSundayAfterTrinity = trinity.add(2, "week");
+      if (
+        currentDay.isSameOrAfter(firstSundayAfterTrinity, "day") &&
+        currentDay.isBefore(secondSundayAfterTrinity, "day")
+      ) {
+        if (alt.inFirstSundayAfterTrinity.morning) {
+          morning = { ...morning, ...alt.inFirstSundayAfterTrinity.morning };
+        }
+        if (alt.inFirstSundayAfterTrinity.evening) {
+          evening = { ...evening, ...alt.inFirstSundayAfterTrinity.evening };
+        }
+      }
+    }
+
+    if (alt.afterThirdSundayAfterTrinity) {
+      const trinity = this.calendar.getTrinitySunday();
+      const thirdSundayAfterTrinity = trinity.add(3, "week");
+      if (currentDay.isAfter(thirdSundayAfterTrinity, "day")) {
+        if (alt.afterThirdSundayAfterTrinity.morning) {
+          morning = { ...morning, ...alt.afterThirdSundayAfterTrinity.morning };
+        }
+        if (alt.afterThirdSundayAfterTrinity.evening) {
+          evening = { ...evening, ...alt.afterThirdSundayAfterTrinity.evening };
+        }
+      }
+    }
+
+    if (alt.inOrAfterThirdSundayAfterTrinity) {
+      const trinity = this.calendar.getTrinitySunday();
+      const thirdSundayAfterTrinity = trinity.add(3, "week");
+      if (currentDay.isSameOrAfter(thirdSundayAfterTrinity, "day")) {
+        if (alt.inOrAfterThirdSundayAfterTrinity.morning) {
+          morning = {
+            ...morning,
+            ...alt.inOrAfterThirdSundayAfterTrinity.morning,
+          };
+        }
+        if (alt.inOrAfterThirdSundayAfterTrinity.evening) {
+          evening = {
+            ...evening,
+            ...alt.inOrAfterThirdSundayAfterTrinity.evening,
+          };
+        }
+      }
+    }
+
     return { morning, evening };
   }
 

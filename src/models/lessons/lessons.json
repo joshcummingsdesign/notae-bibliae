@@ -4130,6 +4130,13 @@
       "evening": {
         "first": ["1 Sam. 2:1-10"],
         "second": ["Matt. 1:18-23"]
+      },
+      "alternates": {
+        "afterEaster": {
+          "morning": {
+            "second": ["1 John 4:7-14"]
+          }
+        }
       }
     }
   ],
@@ -4429,7 +4436,19 @@
       },
       "evening": {
         "first": ["Isa. 42:5-12"],
-        "second": ["Acts 14:8-27"]
+        "second": ["Acts 14:8-28"]
+      },
+      "alternates": {
+        "inFirstSundayAfterTrinity": {
+          "morning": {
+            "second": ["Luke 14:25-35"]
+          }
+        },
+        "afterThirdSundayAfterTrinity": {
+          "evening": {
+            "second": ["Rom. 10:1-15"]
+          }
+        }
       }
     }
   ],
@@ -4449,11 +4468,18 @@
     {
       "morning": {
         "first": ["Ezek. 2:1-7"],
-        "second": ["Acts 11:1-18"]
+        "second": ["Acts 3:1-26"]
       },
       "evening": {
         "first": ["Ezek. 34:11-16"],
         "second": ["John 21:15-22"]
+      },
+      "alternates": {
+        "inOrAfterThirdSundayAfterTrinity": {
+          "morning": {
+            "second": ["Acts 11:1-18"]
+          }
+        }
       }
     }
   ],
