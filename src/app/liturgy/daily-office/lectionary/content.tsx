@@ -9,6 +9,8 @@ import DOMPurify from "isomorphic-dompurify";
 import remarkSmartypants from "remark-smartypants";
 import { useLectionary } from "../hooks/useLectionary";
 import { Lessons } from "@/models/lectionary";
+import { InfoOutlined } from "@mui/icons-material";
+import { Tooltip } from "@/components/Tooltip";
 
 export const Content = () => {
   const { isLoading, today, tomorrow, refreshBibleGatewayLinks } =
@@ -128,7 +130,16 @@ const PrayerCard = ({
         <>
           <Divider />
           <CommunionSection>
-            <ReadingTitle>Holy Communion</ReadingTitle>
+            <ReadingTitle>
+              <TitleWithTooltip>
+                Holy Communion
+                {lessons.communion.source && (
+                  <Tooltip title={<><strong>Source:</strong> {lessons.communion.source}</>}>
+                    <TooltipIcon />
+                  </Tooltip>
+                )}
+              </TitleWithTooltip>
+            </ReadingTitle>
             <CommunionReadings>
               <CommunionReading>
                 <CommunionLabel>Epistle</CommunionLabel>
@@ -146,7 +157,31 @@ const PrayerCard = ({
       <Divider />
       {lessons.collects.map((collect) => (
         <CollectSection key={collect.title}>
-          <ReadingTitle>{`Collect for ${collect.title}`}</ReadingTitle>
+          <ReadingTitle>
+            <TitleWithTooltip>
+              {`Collect for ${collect.title}`}
+              {(collect.source || collect.notes) && (
+                <Tooltip
+                  title={
+                    <>
+                      {collect.source && (
+                        <div>
+                          <strong>Source:</strong> {collect.source}
+                        </div>
+                      )}
+                      {collect.notes && (
+                        <div style={{ marginTop: collect.source ? "0.25rem" : 0 }}>
+                          <strong>Notes:</strong> {collect.notes}
+                        </div>
+                      )}
+                    </>
+                  }
+                >
+                  <TooltipIcon />
+                </Tooltip>
+              )}
+            </TitleWithTooltip>
+          </ReadingTitle>
           <CollectText text={collect.text} />
         </CollectSection>
       ))}
@@ -348,5 +383,22 @@ const StyledCollectText = styled("p")(({ theme }) => ({
       lineHeight: "1.5rem",
       fontSize: "1.75rem",
     },
+  },
+}));
+
+const TitleWithTooltip = styled("span")({
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "0.375rem",
+});
+
+const TooltipIcon = styled(InfoOutlined)(({ theme }) => ({
+  fontSize: "1rem",
+  color: theme.palette.brand.grey,
+  cursor: "help",
+  verticalAlign: "middle",
+  marginTop: "-2px",
+  "&:hover": {
+    color: theme.palette.brand.darkGrey,
   },
 }));
