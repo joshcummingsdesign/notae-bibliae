@@ -863,13 +863,13 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
-                title: "Matins",
-                link: "/liturgy/rites/book-of-common-prayer/matins",
+                title: "Morning Prayer",
+                link: "/liturgy/rites/book-of-common-prayer/morning-prayer",
                 inPageNav: true,
               },
               {
-                title: "Evensong",
-                link: "/liturgy/rites/book-of-common-prayer/evensong",
+                title: "Evening Prayer",
+                link: "/liturgy/rites/book-of-common-prayer/evening-prayer",
                 inPageNav: true,
               },
             ],

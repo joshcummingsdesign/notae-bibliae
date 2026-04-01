@@ -165,7 +165,7 @@ export const Search: React.FC<Props> = ({
       }
 
       if (item.link.includes("/liturgy/rites/book-of-common-prayer/")) {
-        title = title + ": BCP";
+        title = title + ": Book of Common Prayer";
       }
 
       if (item.link.includes("/liturgy/liturgical-year/")) {
