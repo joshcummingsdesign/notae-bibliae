@@ -1114,6 +1114,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/te-deum",
               },
               {
+                title: "Veni redemptor gentium",
+                link: "/liturgy/music/chants/veni-redemptor-gentium",
+              },
+              {
                 title: "Veni Sancte Spiritus",
                 link: "/liturgy/music/chants/veni-sancte-spiritus",
               },
@@ -1377,6 +1381,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/what-a-friend-we-have-in-jesus",
               },
               {
+                title: "Where Charity and Love Prevail",
+                link: "/liturgy/music/hymns/where-charity-and-love-prevail",
+              },
+              {
                 title: "Where He Leads Me",
                 link: "/liturgy/music/hymns/where-he-leads-me",
               },
@@ -1573,6 +1581,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Matthew Bridges",
                 link: "/liturgy/music/composers/matthew-bridges",
+              },
+              {
+                title: "Paulinus of Aquileia",
+                link: "/liturgy/music/composers/paulinus-of-aquileia",
               },
               {
                 title: "Phillips Brooks",

@@ -837,6 +837,20 @@
         "link": "/liturgy/music/composers/william-w-how"
       },
       { "id": "year", "content": "1864" }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Where Charity and Love Prevail",
+        "link": "/liturgy/music/hymns/where-charity-and-love-prevail"
+      },
+      { "id": "occasion", "content": "Maundy Thursday" },
+      {
+        "id": "author",
+        "content": "St. Paulinus of Aquileia",
+        "link": "/liturgy/music/composers/paulinus-of-aquileia"
+      },
+      { "id": "year", "content": "8th Century" }
     ]
   ]
 }

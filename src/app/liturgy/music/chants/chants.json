@@ -440,6 +440,21 @@
     [
       {
         "id": "title",
+        "content": "Veni redemptor gentium",
+        "link": "/liturgy/music/chants/veni-redemptor-gentium"
+      },
+      {
+        "id": "type",
+        "content": "Hymn"
+      },
+      {
+        "id": "occasion",
+        "content": "Advent — Matins"
+      }
+    ],
+    [
+      {
+        "id": "title",
         "content": "Veni Sancte Spiritus",
         "link": "/liturgy/music/chants/veni-sancte-spiritus"
       },
