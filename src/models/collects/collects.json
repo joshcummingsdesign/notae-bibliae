@@ -306,11 +306,13 @@
   },
   {
     "title": "Easter Vigil",
-    "text": "Almighty God, who through thine only-begotten Son Jesus Christ hast overcome death, and open-ed unto us the gate of ever·lasting life; We humbly beseech thee that, as by thy special grace preventing us thou dost put into our minds good de·sires, so by thy continual help we may bring the same to good e·ffect; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost ever, one God, world · without end. Amen."
+    "text": "Almighty God, who through thine only-begotten Son Jesus Christ hast overcome death, and open-ed unto us the gate of ever·lasting life; We humbly beseech thee that, as by thy special grace preventing us thou dost put into our minds good de·sires, so by thy continual help we may bring the same to good e·ffect; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost ever, one God, world · without end. Amen.",
+    "notes": "Although the Prayer Book gives a collect for Easter Vigil, the pattern of this Office is to use the feast day collect at the vigil."
   },
   {
     "title": "Easter Day",
-    "text": "Almighty God, who through thine only-begotten Son Jesus Christ hast overcome death, and open-ed unto us the gate of ever·lasting life; We humbly beseech thee that, as by thy special grace preventing us thou dost put into our minds good de·sires, so by thy continual help we may bring the same to good e·ffect; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost ever, one God, world · without end. Amen."
+    "text": "Almighty God, who through thine only-begotten Son Jesus Christ hast overcome death, and open-ed unto us the gate of ever·lasting life; We humbly beseech thee that, as by thy special grace preventing us thou dost put into our minds good de·sires, so by thy continual help we may bring the same to good e·ffect; through the same Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost ever, one God, world · without end. Amen.",
+    "notes": "According to the BCP 1662, this collect is to also be recited on Easter Monday and Tuesday. The BCP 1928 provides collects for Easter Monday and Tuesday, and adds a rubric to recite this collect daily during Easter Week. This Office, following the Use of Sarum, does not repeat the collect for Easter Day."
   },
   {
     "title": "Monday of Easter Week",
