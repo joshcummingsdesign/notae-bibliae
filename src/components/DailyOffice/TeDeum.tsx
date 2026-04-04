@@ -6,8 +6,6 @@ interface Props {
   shouldSing: boolean;
   shouldOmit: boolean;
   isChristmas: boolean;
-  isEaster: boolean;
-  isPentecost: boolean;
 }
 
 export const TeDeum: React.FC<Props> = ({
@@ -15,8 +13,6 @@ export const TeDeum: React.FC<Props> = ({
   shouldSing,
   shouldOmit,
   isChristmas,
-  isEaster,
-  isPentecost,
 }) => {
   if (shouldOmit || !shouldSing) {
     return <OtCanticle today={today} />;
@@ -50,31 +46,6 @@ export const TeDeum: React.FC<Props> = ({
     </>
   );
 
-  const victimae = (
-    <p>
-      <em>
-        Optionally replace with the{" "}
-        <Link
-          href="/liturgy/music/chants/victimae-paschali-laudes"
-          target="_blank"
-        >
-          Victimae paschali laudes
-        </Link>
-      </em>
-    </p>
-  );
-
-  const spiritus = (
-    <p>
-      <em>
-        Optionally replace with the{" "}
-        <Link href="/liturgy/music/chants/veni-sancte-spiritus" target="_blank">
-          Veni Sancte Spiritus
-        </Link>
-      </em>
-    </p>
-  );
-
   return (
     <>
       <h2 id="te-deum">Te Deum</h2>
@@ -90,8 +61,6 @@ export const TeDeum: React.FC<Props> = ({
         (SDP 357)
       </p>
       {isChristmas && benedicite}
-      {isEaster && victimae}
-      {isPentecost && spiritus}
     </>
   );
 };
