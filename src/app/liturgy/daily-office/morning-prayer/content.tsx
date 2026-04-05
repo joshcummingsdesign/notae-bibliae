@@ -7,7 +7,6 @@ import {
   OpeningSentence,
   OpeningVersicles,
   PsalmsOfTheDay,
-  Hymn,
   TeDeum,
   ThirdLesson,
   Collects,
@@ -30,11 +29,10 @@ export const Content = () => {
     isLoading,
     dateString,
     isFerial,
+    isVigil,
     isSolemn,
     isChristmas,
-    isEaster,
     isOctaveOfEaster,
-    isPentecost,
     invitatoryPage,
     shouldSingTeDeum,
     shouldOmitTeDeum,
@@ -64,14 +62,13 @@ export const Content = () => {
         <h2>Office Proper</h2>
         <hr />
         <h2>Opening Versicles</h2>
-        <OpeningVersicles isSolemn={isSolemn} />
+        <OpeningVersicles isSolemn={isSolemn} isVigil={isVigil} />
         <h2>Invitatory</h2>
         <Invitatory
           page={invitatoryPage}
           isSolemn={isSolemn}
           isOctaveOfEaster={isOctaveOfEaster}
         />
-        <Hymn isEaster={isEaster} isPentecost={isPentecost} />
         <h2>Psalms of the Day</h2>
         <p>
           [ <em>Sit</em> ]

@@ -28,6 +28,7 @@ export const Content = () => {
     isLoading,
     isLordsDay,
     isFerial,
+    isVigil,
     isSolemn,
     currentAntiphon,
     today,
@@ -56,7 +57,7 @@ export const Content = () => {
         <h2>Office Proper</h2>
         <hr />
         <h2>Opening Versicles</h2>
-        <OpeningVersicles isSolemn={isSolemn} />
+        <OpeningVersicles isSolemn={isSolemn} isVigil={isVigil} />
         <h2>Psalms of the Day</h2>
         <p>
           [ <em>Sit</em> ]

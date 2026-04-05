@@ -7,4 +7,3 @@ export * from "./Collects";
 export * from "./PsalmsOfTheDay";
 export * from "./OpeningSentence";
 export * from "./ThirdLesson";
-export * from "./Hymn";

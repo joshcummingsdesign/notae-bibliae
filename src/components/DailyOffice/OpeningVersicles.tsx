@@ -2,10 +2,11 @@ import Image from "next/image";
 
 interface Props {
   isSolemn: boolean;
+  isVigil: boolean;
 }
 
-export const OpeningVersicles: React.FC<Props> = ({ isSolemn }) => {
-  if (isSolemn) {
+export const OpeningVersicles: React.FC<Props> = ({ isSolemn, isVigil }) => {
+  if (isSolemn && !isVigil) {
     return (
       <p>
         [ <em>Omit Opening Versicles</em> ]
