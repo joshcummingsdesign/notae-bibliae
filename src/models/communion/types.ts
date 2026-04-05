@@ -4,12 +4,14 @@ export interface CommunionItem {
   epistle: string[];
   gospel: string[];
   source?: string;
+  isAnteCommunion?: boolean;
 }
 
 export interface CommunionCalendarItem extends CalendarItem {
   epistle: string[];
   gospel: string[];
   source?: string;
+  isAnteCommunion?: boolean;
 }
 
 export interface CommunionDateMap {

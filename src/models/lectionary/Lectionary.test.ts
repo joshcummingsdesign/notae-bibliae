@@ -298,6 +298,15 @@ describe("Lectionary", () => {
             expect(Array.isArray(advent1.morning.communion.gospel)).toBe(true);
           }
         });
+
+        test("Good Friday and Holy Saturday morning have isAnteCommunion flag", () => {
+          const goodFriday = allData["2026-04-03"];
+          const holySaturday = allData["2026-04-04"];
+
+          expect(goodFriday.morning.communion?.isAnteCommunion).toBe(true);
+          expect(holySaturday.morning.communion?.isAnteCommunion).toBe(true);
+          expect(holySaturday.evening.communion?.isAnteCommunion).toBeFalsy(); // Easter Vigil
+        });
       });
     });
 

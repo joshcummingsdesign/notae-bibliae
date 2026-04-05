@@ -334,11 +334,13 @@
   },
   "Good Friday": {
     "epistle": ["Heb. 10:1-25"],
-    "gospel": ["John 19:1-37"]
+    "gospel": ["John 19:1-37"],
+    "isAnteCommunion": true
   },
   "Holy Saturday": {
     "epistle": ["1 Pet. 3:17-22"],
-    "gospel": ["Matt. 27:57-66"]
+    "gospel": ["Matt. 27:57-66"],
+    "isAnteCommunion": true
   },
   "Easter Vigil": {
     "epistle": ["1 Cor. 5:6-8"],

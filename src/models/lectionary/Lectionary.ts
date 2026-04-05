@@ -89,10 +89,10 @@ export class Lectionary {
       const eveningCommunion = dayCommunions.find(c => c.isVigil);
 
       const morningCommunionItem: CommunionItem | undefined = morningCommunion
-        ? { epistle: morningCommunion.epistle, gospel: morningCommunion.gospel, source: morningCommunion.source }
+        ? { epistle: morningCommunion.epistle, gospel: morningCommunion.gospel, source: morningCommunion.source, isAnteCommunion: morningCommunion.isAnteCommunion }
         : undefined;
       const eveningCommunionItem: CommunionItem | undefined = eveningCommunion
-        ? { epistle: eveningCommunion.epistle, gospel: eveningCommunion.gospel, source: eveningCommunion.source }
+        ? { epistle: eveningCommunion.epistle, gospel: eveningCommunion.gospel, source: eveningCommunion.source, isAnteCommunion: eveningCommunion.isAnteCommunion }
         : undefined;
 
       // Get hagiography for this day

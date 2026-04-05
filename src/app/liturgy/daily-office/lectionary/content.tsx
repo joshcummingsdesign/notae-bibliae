@@ -132,7 +132,7 @@ const PrayerCard = ({
           <CommunionSection>
             <ReadingTitle>
               <TitleWithTooltip>
-                Holy Communion
+                {lessons.communion.isAnteCommunion ? "Ante-Communion" : "Holy Communion"}
                 {lessons.communion.source && (
                   <Tooltip title={<><strong>Source:</strong> {lessons.communion.source}</>}>
                     <TooltipIcon />
