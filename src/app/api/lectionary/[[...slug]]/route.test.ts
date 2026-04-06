@@ -361,5 +361,20 @@ describe("GET /api/lectionary", () => {
       expect(collects[0]).toHaveProperty("title");
       expect(collects[0]).toHaveProperty("text");
     });
+
+    it("Maundy Thursday communion is in evening section", async () => {
+      const [req, params] = createRequest("/api/lectionary?date=2026-04-02");
+      const response = await GET(req, params);
+      const data = await response.json();
+
+      const item = data["2026-04-02"] as Record<string, unknown>;
+      const morning = item.morning as Record<string, unknown>;
+      const evening = item.evening as Record<string, unknown>;
+      const eveningCommunion = evening.communion as Record<string, unknown>;
+
+      expect(morning.communion).toBeUndefined();
+      expect(evening.communion).toBeDefined();
+      expect(eveningCommunion.epistle).toContain("1 Cor. 11:23-26");
+    });
   });
 });

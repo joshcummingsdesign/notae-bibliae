@@ -307,6 +307,14 @@ describe("Lectionary", () => {
           expect(holySaturday.morning.communion?.isAnteCommunion).toBe(true);
           expect(holySaturday.evening.communion?.isAnteCommunion).toBeFalsy(); // Easter Vigil
         });
+
+        test("Maundy Thursday communion appears in evening, not morning", () => {
+          const maundyThursday = allData["2026-04-02"];
+
+          expect(maundyThursday.morning.communion).toBeUndefined();
+          expect(maundyThursday.evening.communion).toBeDefined();
+          expect(maundyThursday.evening.communion?.epistle).toContain("1 Cor. 11:23-26");
+        });
       });
     });
 

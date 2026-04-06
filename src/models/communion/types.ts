@@ -5,6 +5,7 @@ export interface CommunionItem {
   gospel: string[];
   source?: string;
   isAnteCommunion?: boolean;
+  isEvening?: boolean;
 }
 
 export interface CommunionCalendarItem extends CalendarItem {
@@ -12,6 +13,7 @@ export interface CommunionCalendarItem extends CalendarItem {
   gospel: string[];
   source?: string;
   isAnteCommunion?: boolean;
+  isEvening?: boolean;
 }
 
 export interface CommunionDateMap {

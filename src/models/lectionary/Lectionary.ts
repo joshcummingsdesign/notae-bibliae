@@ -83,10 +83,10 @@ export class Lectionary {
         ? allCollectItems.filter((_, i) => dayCollects[i].isVigil)
         : allCollectItems;
 
-      // Get communion for this day - morning uses non-vigil, evening uses vigil
+      // Get communion for this day - morning uses non-vigil/non-evening, evening uses vigil or isEvening
       const dayCommunions = communionData[date] || [];
-      const morningCommunion = dayCommunions.find(c => !c.isVigil);
-      const eveningCommunion = dayCommunions.find(c => c.isVigil);
+      const morningCommunion = dayCommunions.find(c => !c.isVigil && !c.isEvening);
+      const eveningCommunion = dayCommunions.find(c => c.isVigil || c.isEvening);
 
       const morningCommunionItem: CommunionItem | undefined = morningCommunion
         ? { epistle: morningCommunion.epistle, gospel: morningCommunion.gospel, source: morningCommunion.source, isAnteCommunion: morningCommunion.isAnteCommunion }

@@ -330,7 +330,8 @@
   },
   "Maundy Thursday": {
     "epistle": ["1 Cor. 11:23-26"],
-    "gospel": ["Luke 23:1-49"]
+    "gospel": ["Luke 23:1-49"],
+    "isEvening": true
   },
   "Good Friday": {
     "epistle": ["Heb. 10:1-25"],

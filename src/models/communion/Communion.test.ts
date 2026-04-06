@@ -164,6 +164,11 @@ describe("Communion", () => {
         const all = communion.getAll();
         expect(all["2026-04-03"][0].title).toContain("Good Friday");
       });
+
+      test("Maundy Thursday has isEvening flag", () => {
+        const all = communion.getAll();
+        expect(all["2026-04-02"][0].isEvening).toBe(true);
+      });
     });
 
     describe("one communion per day filtering", () => {
