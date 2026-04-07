@@ -1173,6 +1173,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/away-in-a-manger",
               },
               {
+                title: "Baruch Haba",
+                link: "/liturgy/music/hymns/baruch-haba",
+              },
+              {
                 title: "Be Still My Soul",
                 link: "/liturgy/music/hymns/be-still-my-soul",
               },

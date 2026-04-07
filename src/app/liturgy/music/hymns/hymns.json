@@ -19,6 +19,16 @@
     [
       {
         "id": "title",
+        "content": "Baruch Haba",
+        "link": "/liturgy/music/hymns/baruch-haba"
+      },
+      { "id": "occasion", "content": "Ordinary Time" },
+      { "id": "author", "content": "Unknown" },
+      { "id": "year", "content": "Biblical" }
+    ],
+    [
+      {
+        "id": "title",
         "content": "Come, Thou Redeemer of the Earth",
         "link": "/liturgy/music/hymns/come-thou-redeemer-of-the-earth"
       },
