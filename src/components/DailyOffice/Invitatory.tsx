@@ -27,7 +27,7 @@ export const Invitatory: React.FC<Props> = ({
             Pascha nostrum
           </Link>
         </strong>{" "}
-        (SDP 342)
+        (SDP 344)
       </p>
     );
   }
