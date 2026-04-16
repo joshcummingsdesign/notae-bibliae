@@ -35,21 +35,6 @@
     [
       {
         "id": "title",
-        "content": "Alleluia confitemini",
-        "link": "/liturgy/music/chants/alleluia-confitemini"
-      },
-      {
-        "id": "type",
-        "content": "Antiphon"
-      },
-      {
-        "id": "occasion",
-        "content": "Eastertide"
-      }
-    ],
-    [
-      {
-        "id": "title",
         "content": "Domine labia mea",
         "link": "/liturgy/music/chants/domine-labia-mea"
       },

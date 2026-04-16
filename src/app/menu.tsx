@@ -974,10 +974,6 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/alleluia",
               },
               {
-                title: "Alleluia confitemini",
-                link: "/liturgy/music/chants/alleluia-confitemini",
-              },
-              {
                 title: "Benedicamus",
                 link: "/liturgy/music/chants/benedicamus",
               },
@@ -1173,10 +1169,6 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/away-in-a-manger",
               },
               {
-                title: "Baruch Haba",
-                link: "/liturgy/music/hymns/baruch-haba",
-              },
-              {
                 title: "Be Still My Soul",
                 link: "/liturgy/music/hymns/be-still-my-soul",
               },
@@ -1279,6 +1271,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Just as I Am",
                 link: "/liturgy/music/hymns/just-as-i-am",
+              },
+              {
+                title: "Ki L'olam Hasdo",
+                link: "/liturgy/music/hymns/ki-lolam-hasdo",
               },
               {
                 title: "Let There Be Peace On Earth",

@@ -132,6 +132,10 @@ export const Search: React.FC<Props> = ({
       title: "The Filioque",
       link: "/meditations/a-brief-history-of-the-reformation-part-1#the-filioque",
     },
+    {
+      title: "Hallelujah",
+      link: "/liturgy/music/chants/alleluia",
+    },
   ];
 
   const options = [
