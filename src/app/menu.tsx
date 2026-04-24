@@ -2098,6 +2098,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/osmund",
               },
               {
+                title: "Peter Damian",
+                link: "/people/saints/medieval/peter-damian",
+              },
+              {
                 title: "Scholastica of Nursia",
                 link: "/people/saints/medieval/scholastica-of-nursia",
               },
