@@ -576,11 +576,11 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/christmastide/christmas-day",
                   },
                   {
-                    title: "Feast of Saint Stephen",
+                    title: "Saint Stephen",
                     link: "/liturgy/liturgical-year/seasons/christmastide/stephen",
                   },
                   {
-                    title: "Feast of Saint John",
+                    title: "Saint John",
                     link: "/liturgy/liturgical-year/seasons/christmastide/john",
                   },
                   {
@@ -772,8 +772,40 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
             children: [
               {
+                title: "Conversion of Saint Paul",
+                link: "/liturgy/liturgical-year/saints/conversion-of-saint-paul",
+              },
+              {
+                title: "Saints Philip and James the Less",
+                link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
+              },
+              {
+                title: "Nativity of Saint John the Baptist",
+                link: "/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist",
+              },
+              {
+                title: "Saints Peter and Paul",
+                link: "/liturgy/liturgical-year/saints/saints-peter-and-paul",
+              },
+              {
+                title: "Repose of the Blessed Virgin Mary",
+                link: "/liturgy/liturgical-year/saints/repose-of-the-blessed-virgin-mary",
+              },
+              {
+                title: "Beheading of Saint John the Baptist",
+                link: "/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist",
+              },
+              {
                 title: "Nativity of the Blessed Virgin Mary",
                 link: "/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary",
+              },
+              {
+                title: "Saint Michael and All Angels",
+                link: "/liturgy/liturgical-year/saints/saint-michael-and-all-angels",
+              },
+              {
+                title: "Saints Simon and Jude",
+                link: "/liturgy/liturgical-year/saints/saints-simon-and-jude",
               },
               {
                 title: "Conception of the Blessed Virgin Mary",

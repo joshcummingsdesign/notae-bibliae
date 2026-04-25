@@ -14,7 +14,7 @@
   },
   {
     "date": "12-08",
-    "title": "[Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/advent/conception-of-the-blessed-virgin-mary)",
+    "title": "[Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -95,14 +95,14 @@
   },
   {
     "date": "12-26",
-    "title": "[Saint Stephen](/people/saints/biblical/stephen), Deacon and Martyr",
+    "title": "[Saint Stephen](/liturgy/liturgical-year/seasons/christmastide/stephen), Deacon and Martyr",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "12-27",
-    "title": "[Saint John](/people/saints/apostles/john), Apostle and Evangelist",
+    "title": "[Saint John](/liturgy/liturgical-year/seasons/christmastide/john), Apostle and Evangelist",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -164,7 +164,7 @@
   },
   {
     "date": "01-25",
-    "title": "[Conversion of Saint Paul](/people/saints/apostles/paul), Apostle",
+    "title": "[Conversion of Saint Paul](/liturgy/liturgical-year/saints/conversion-of-saint-paul), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -263,7 +263,7 @@
   },
   {
     "date": "05-01",
-    "title": "Saints [Philip](/people/saints/apostles/philip) and [James the Less](/people/saints/apostles/james-the-less), Apostles",
+    "title": "[Saints Philip and James the Less](/liturgy/liturgical-year/saints/saints-philip-and-james-the-less), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -301,14 +301,14 @@
   },
   {
     "date": "06-24",
-    "title": "[Nativity of Saint John the Baptist](/people/saints/biblical/john-the-baptist#nativity)",
+    "title": "[Nativity of Saint John the Baptist](/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "06-29",
-    "title": "Saints [Peter](/people/saints/apostles/peter) and [Paul](/people/saints/apostles/paul), Apostles",
+    "title": "[Saints Peter and Paul](/liturgy/liturgical-year/saints/saints-peter-and-paul), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -371,7 +371,7 @@
   },
   {
     "date": "08-15",
-    "title": "[Repose of the Blessed Virgin Mary](/people/saints/biblical/blessed-virgin-mary)",
+    "title": "[Repose of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/repose-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -397,13 +397,13 @@
   },
   {
     "date": "08-29",
-    "title": "[Beheading of Saint John the Baptist](/people/saints/biblical/john-the-baptist#beheading)",
+    "title": "[Beheading of Saint John the Baptist](/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist)",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "09-08",
-    "title": "[Nativity of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/nativity-of-the-blessed-virgin-mary)",
+    "title": "[Nativity of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -429,7 +429,7 @@
   },
   {
     "date": "09-29",
-    "title": "[Saint Michael and All Angels](/people/saints/angels)",
+    "title": "[Saint Michael and All Angels](/liturgy/liturgical-year/saints/saint-michael-and-all-angels)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -461,7 +461,7 @@
   },
   {
     "date": "10-28",
-    "title": "Saints [Simon](/people/saints/apostles/simon) and [Jude](/people/saints/apostles/jude), Apostles",
+    "title": "[Saints Simon and Jude](/liturgy/liturgical-year/saints/saints-simon-and-jude), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true

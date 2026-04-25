@@ -596,7 +596,7 @@ export class Calendar {
       {
         date: annunciation.format("YYYY-MM-DD"),
         title:
-          "[Annunciation of the Lord](/liturgy/liturgical-year/seasons/eastertide/annunciation)",
+          "[Annunciation of the Lord](/liturgy/liturgical-year/seasons/lent/annunciation)",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
