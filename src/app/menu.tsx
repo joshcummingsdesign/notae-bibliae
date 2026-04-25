@@ -553,7 +553,7 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
           },
           {
-            title: "Seasons",
+            title: "Proper of Seasons",
             link: "/liturgy/liturgical-year/seasons",
             priority: 0.6,
             children: [
@@ -561,10 +561,6 @@ export const menuItems: MenuNode[] = [
                 title: "Advent",
                 link: "/liturgy/liturgical-year/seasons/advent",
                 children: [
-                  {
-                    title: "Conception of the Blessed Virgin Mary",
-                    link: "/liturgy/liturgical-year/seasons/advent/conception-of-the-blessed-virgin-mary",
-                  },
                   {
                     title: "Gaudete Sunday",
                     link: "/liturgy/liturgical-year/seasons/advent/gaudete-sunday",
@@ -578,6 +574,14 @@ export const menuItems: MenuNode[] = [
                   {
                     title: "Christmas Day",
                     link: "/liturgy/liturgical-year/seasons/christmastide/christmas-day",
+                  },
+                  {
+                    title: "Feast of Saint Stephen",
+                    link: "/liturgy/liturgical-year/seasons/christmastide/stephen",
+                  },
+                  {
+                    title: "Feast of Saint John",
+                    link: "/liturgy/liturgical-year/seasons/christmastide/john",
                   },
                   {
                     title: "The Holy Innocents",
@@ -598,7 +602,7 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/epiphanytide/epiphany",
                   },
                   {
-                    title: "Presentation of the Lord",
+                    title: "Presentation of the Lord (Purification)",
                     link: "/liturgy/liturgical-year/seasons/epiphanytide/presentation-of-the-lord",
                   },
                 ],
@@ -632,6 +636,10 @@ export const menuItems: MenuNode[] = [
                   {
                     title: "Laetare Sunday",
                     link: "/liturgy/liturgical-year/seasons/lent/laetare-sunday",
+                  },
+                  {
+                    title: "Annunciation of the Lord",
+                    link: "/liturgy/liturgical-year/seasons/lent/annunciation",
                   },
                   {
                     title: "Passiontide",
@@ -690,10 +698,6 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/eastertide/second-sunday-of-easter",
                   },
                   {
-                    title: "Annunciation of the Lord",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/annunciation",
-                  },
-                  {
                     title: "Ascensiontide",
                     link: "/liturgy/liturgical-year/seasons/eastertide/ascensiontide",
                     children: [
@@ -736,10 +740,6 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/trinitytide/transfiguration",
                   },
                   {
-                    title: "Nativity of the Blessed Virgin Mary",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/nativity-of-the-blessed-virgin-mary",
-                  },
-                  {
                     title: "Holy Cross Day",
                     link: "/liturgy/liturgical-year/seasons/trinitytide/holy-cross-day",
                   },
@@ -762,6 +762,22 @@ export const menuItems: MenuNode[] = [
                     ],
                   },
                 ],
+              },
+            ],
+          },
+          {
+            title: "Proper of Saints",
+            link: "/liturgy/liturgical-year/saints",
+            priority: 0.6,
+            inPageNav: true,
+            children: [
+              {
+                title: "Nativity of the Blessed Virgin Mary",
+                link: "/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary",
+              },
+              {
+                title: "Conception of the Blessed Virgin Mary",
+                link: "/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary",
               },
             ],
           },
