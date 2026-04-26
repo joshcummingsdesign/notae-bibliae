@@ -820,6 +820,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-matthias",
               },
               {
+                title: "Saints Perpetua and Felicity",
+                link: "/liturgy/liturgical-year/saints/saints-perpetua-and-felicity",
+              },
+              {
                 title: "Saints Philip and James the Less",
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
               },
