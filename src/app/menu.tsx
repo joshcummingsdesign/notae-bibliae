@@ -562,8 +562,16 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/seasons/advent",
                 children: [
                   {
+                    title: "Advent Wreath",
+                    link: "/liturgy/liturgical-year/seasons/advent/advent-wreath",
+                  },
+                  {
                     title: "Gaudete Sunday",
                     link: "/liturgy/liturgical-year/seasons/advent/gaudete-sunday",
+                  },
+                  {
+                    title: "O Antiphons",
+                    link: "/liturgy/liturgical-year/seasons/advent/o-antiphons",
                   },
                 ],
               },
@@ -772,8 +780,32 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
             children: [
               {
+                title: "Saint Hilary",
+                link: "/liturgy/liturgical-year/saints/saint-hilary",
+              },
+              {
+                title: "Saint Anthony",
+                link: "/liturgy/liturgical-year/saints/saint-anthony",
+              },
+              {
+                title: "Saint Agnes",
+                link: "/liturgy/liturgical-year/saints/saint-agnes",
+              },
+              {
+                title: "Saint Vincent",
+                link: "/liturgy/liturgical-year/saints/saint-vincent",
+              },
+              {
                 title: "Conversion of Saint Paul",
                 link: "/liturgy/liturgical-year/saints/conversion-of-saint-paul",
+              },
+              {
+                title: "Saint Polycarp",
+                link: "/liturgy/liturgical-year/saints/saint-polycarp",
+              },
+              {
+                title: "Saint John Chrysostom",
+                link: "/liturgy/liturgical-year/saints/saint-john-chrysostom",
               },
               {
                 title: "Saints Philip and James the Less",
