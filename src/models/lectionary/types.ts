@@ -4,7 +4,6 @@ import { CommunionItem } from "../communion";
 
 export interface ThirdLessonData {
   title: string;
-  reading?: string;
 }
 
 export interface Lessons {

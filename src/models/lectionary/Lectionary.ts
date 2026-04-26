@@ -6,7 +6,7 @@ import { Collects, CollectItem } from "../collects";
 import { Communion, CommunionItem } from "../communion";
 import { Hagiography } from "../hagiography";
 import { Lessons as LessonsModel } from "../lessons";
-import { stripMarkdownLinks } from "@/utils/markdown";
+import { stripMarkdownLinks, appendAnchorToMarkdownLink } from "@/utils/markdown";
 import { LectionaryDateMap, LectionaryItem, Lessons } from "./types";
 import { getCachedLectionary, setCachedLectionary } from "./cache";
 
@@ -102,8 +102,8 @@ export class Lectionary {
       const morning: Lessons = {
         first: dayLessons?.morning?.first || [],
         second: dayLessons?.morning?.second || [],
-        third: dayHagiography?.morning
-          ? { title: dayHagiography.title, reading: dayHagiography.morning }
+        third: dayHagiography
+          ? { title: appendAnchorToMarkdownLink(dayHagiography.title, "#morning-prayer") }
           : undefined,
         communion: morningCommunionItem,
         collects: morningCollects,
@@ -112,8 +112,8 @@ export class Lectionary {
       const evening: Lessons = {
         first: dayLessons?.evening?.first || [],
         second: dayLessons?.evening?.second || [],
-        third: dayHagiography?.evening
-          ? { title: dayHagiography.title, reading: dayHagiography.evening }
+        third: dayHagiography
+          ? { title: appendAnchorToMarkdownLink(dayHagiography.title, "#evening-prayer") }
           : undefined,
         communion: eveningCommunionItem,
         collects: eveningCollects,

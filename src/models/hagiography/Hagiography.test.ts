@@ -39,15 +39,13 @@ describe("Hagiography", () => {
       expect(dates.length).toBeGreaterThan(20);
     });
 
-    test("each entry has title and morning", () => {
+    test("each entry has title", () => {
       const all = hagiography.getAll();
 
       for (const date of Object.keys(all)) {
         const reading = all[date];
         expect(reading).toHaveProperty("title");
-        expect(reading).toHaveProperty("morning");
         expect(typeof reading.title).toBe("string");
-        expect(typeof reading.morning).toBe("string");
       }
     });
 
@@ -110,27 +108,11 @@ describe("Hagiography", () => {
   });
 
   describe("reading structure", () => {
-    test("title is populated from readings.json key", () => {
+    test("title is populated from readings.json entry", () => {
       const all = hagiography.getAll();
       const dec6 = all["2025-12-06"];
 
       expect(dec6.title).toBe("Saint Nicholas, Bishop");
-    });
-
-    test("morning field is string", () => {
-      const all = hagiography.getAll();
-      const dec6 = all["2025-12-06"];
-
-      expect(typeof dec6.morning).toBe("string");
-      expect(dec6.morning).toContain("LFF");
-    });
-
-    test("evening field is string when present", () => {
-      const all = hagiography.getAll();
-      const dec6 = all["2025-12-06"];
-
-      expect(dec6.evening).toBeDefined();
-      expect(typeof dec6.evening).toBe("string");
     });
 
     test("withLinks=false strips markdown links from title", () => {
@@ -183,8 +165,6 @@ describe("Hagiography", () => {
 
       expect(reading).toBeDefined();
       expect(reading.title).toBe("Saint Nicholas, Bishop");
-      expect(reading.morning).toBe("LFF 554, pars. 1-2");
-      expect(reading.evening).toBe("LFF 554, pars. 3-4");
     });
 
     test("Saint Hilary (Jan 13) returns reading", () => {
@@ -195,7 +175,6 @@ describe("Hagiography", () => {
       expect(reading.title).toBe(
         "Saint Hilary, Bishop and Doctor of the Church",
       );
-      expect(reading.morning).toContain("First Part");
     });
 
     test("Saint Lucy (Dec 13) has link in title when withLinks=true", () => {
@@ -248,7 +227,6 @@ describe("Hagiography", () => {
         // Every reading should have required fields
         for (const date of dates) {
           expect(all[date]).toHaveProperty("title");
-          expect(all[date]).toHaveProperty("morning");
         }
       },
     );

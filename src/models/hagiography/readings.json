@@ -1,168 +1,44 @@
-{
-  "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop": {
-    "morning": "LFF 554, pars. 1-2",
-    "evening": "LFF 554, pars. 3-4"
-  },
-  "[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr": {
-    "morning": "LFF 564, pars. 1-2"
-  },
-  "[Saint Thomas Becket](/people/saints/medieval/thomas-becket), Bishop and Martyr": {
-    "morning": "LFF 586, pars. 1-2",
-    "evening": "LFF 586, par. 3"
-  },
-  "[Saint Hilary](/people/saints/latin-fathers/hilary-of-poitiers), Bishop and Doctor of the Church": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Anthony](/people/saints/desert-fathers/anthony-the-great), Abbot": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Agnes](/people/saints/early/agnes-of-rome), Virgin and Martyr": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Vincent](/people/saints/early/vincent-of-saragossa), Deacon and Martyr": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Polycarp](/people/saints/apostolic-fathers/polycarp-of-smyrna), Bishop and Martyr": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom), Bishop and Doctor of the Church": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Ignatius](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Scholastica](/people/saints/medieval/scholastica-of-nursia), Virgin": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saints Perpetua and Felicity](/people/saints/early/perpetua-and-felicity), Martyrs": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Gregory the Great](/people/saints/latin-fathers/gregory-the-great), Pope and Doctor of the Church": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Patrick](/people/saints/early/patrick-of-ireland), Bishop": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Joseph](/people/saints/biblical/joseph-of-nazareth), Spouse of the Blessed Virgin Mary": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Benedict](/people/saints/medieval/benedict-of-nursia), Abbot": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Ambrose](/people/saints/latin-fathers/ambrose-of-milan), Bishop and Doctor of the Church": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint George](/people/saints/early/george-of-lydda), Martyr": {
-    "morning": "First Part",
-    "evening": "Second Part"
-  },
-  "[Saint Augustine of Canterbury](/people/saints/medieval/augustine-of-canterbury), Bishop": {
-    "morning": "LFF 248, pars. 1-3",
-    "evening": "LFF 248, pars. 4-5"
-  },
-  "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church": {
-    "morning": "LFF 246, pars. 1-2",
-    "evening": "LFF 246, pars. 3-4"
-  },
-  "[Saint Boniface](/people/saints/medieval/boniface), Bishop and Martyr": {
-    "morning": "LFF 262, pars. 1-2",
-    "evening": "LFF 262, pars. 3-5"
-  },
-  "[Saint Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop and Doctor of the Church": {
-    "morning": "LFF 276, pars. 1-2",
-    "evening": "LFF 276, pars. 3-5"
-  },
-  "[Saint Mary Magdalene](/people/saints/biblical/mary-magdalene)": {
-    "morning": "LFF 322, par. 1",
-    "evening": "LFF 322, pars. 2-3"
-  },
-  "Saints [Joachim and Anne](/people/saints/biblical/joachim-and-anne), Parents of the Blessed Virgin Mary": {
-    "morning": "par. 1",
-    "evening": "par. 2"
-  },
-  "[Saint Martha](/people/saints/biblical/martha)": {
-    "morning": "LFF 338, pars. 1-4",
-    "evening": "LFF 338, pars. 5-8"
-  },
-  "[Saint Dominic](/people/saints/medieval/dominic-of-guzman), Priest": {
-    "morning": "LFF 352, pars. 1-2",
-    "evening": "LFF 352, pars. 3-4"
-  },
-  "[Saint Lawrence](/people/saints/early/lawrence-of-rome), Deacon and Martyr": {
-    "morning": "LFF 356, pars. 1-2",
-    "evening": "LFF 356, pars. 3-4"
-  },
-  "[Saint Clare](/people/saints/medieval/clare-of-assisi), Virgin": {
-    "morning": "LFF 358, pars. 1-3",
-    "evening": "LFF 358, pars. 4-5"
-  },
-  "[Saint Bernard](/people/saints/medieval/bernard-of-clairvaux), Abbot and Doctor of the Church": {
-    "morning": "LFF 368, pars. 1-2",
-    "evening": "LFF 368, pars. 3-4"
-  },
-  "[Saint Augustine](/people/saints/latin-fathers/augustine-of-hippo), Bishop and Doctor of the Church": {
-    "morning": "LFF 378, pars. 1-2",
-    "evening": "LFF 378, pars. 3-5"
-  },
-  "[Beheading of Saint John the Baptist](/people/saints/biblical/john-the-baptist#beheading)": {
-    "morning": "LFF 380, pars. 1-2",
-    "evening": "LFF 380, pars. 3-5"
-  },
-  "[Saint Cyprian](/people/saints/latin-fathers/cyprian-of-carthage), Bishop and Martyr": {
-    "morning": "LFF 410, par. 1",
-    "evening": "LFF 410, pars. 2-4"
-  },
-  "[Saint Jerome](/people/saints/latin-fathers/jerome-of-stridon), Priest and Doctor of the Church": {
-    "morning": "LFF 444, pars. 1-2",
-    "evening": "LFF 444, pars. 3-4"
-  },
-  "[Saint Francis of Assisi](/people/saints/medieval/francis-of-assisi)": {
-    "morning": "LFF 444, pars. 1-3",
-    "evening": "LFF 444, pars. 4-5"
-  },
-  "[Saint Denis](/people/saints/early/denis-of-peris), Bishop, and Companions, Martyrs": {
-    "morning": "par. 1",
-    "evening": "par. 2"
-  },
-  "[Saint Martin of Tours](/people/saints/early/martin-of-tours), Bishop": {
-    "morning": "LFF 510, pars. 1-3",
-    "evening": "LFF 510, pars. 4-5"
-  },
-  "[Saint Margaret of Scotland](/people/saints/medieval/margaret-of-scotland)": {
-    "morning": "LFF 518, pars. 1-3",
-    "evening": "LFF 518, pars. 4-5"
-  },
-  "[Saint Elizabeth of Hungary](/people/saints/medieval/elizabeth-of-hungary), Religious": {
-    "morning": "LFF 518, pars. 1-2",
-    "evening": "LFF 518, par. 3"
-  },
-  "[Saint Cecilia](/people/saints/early/cecilia-of-rome), Virgin and Martyr": {
-    "morning": "LFF 50, pars. 1, 4",
-    "evening": "LFF 50, par. 5"
-  },
-  "[Saint Clement I](/people/saints/apostolic-fathers/clement-of-rome), Pope and Martyr": {
-    "morning": "LFF 532, pars. 1-4",
-    "evening": "LFF 532, par. 5"
-  },
-  "[Saint Catherine of Alexandria](/people/saints/early/catherine-of-alexandria), Virgin and Martyr": {
-    "morning": "LFF 534, par. 2"
-  }
-}
+[
+  "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop",
+  "[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr",
+  "[Saint Thomas Becket](/people/saints/medieval/thomas-becket), Bishop and Martyr",
+  "[Saint Hilary](/people/saints/latin-fathers/hilary-of-poitiers), Bishop and Doctor of the Church",
+  "[Saint Anthony](/people/saints/desert-fathers/anthony-the-great), Abbot",
+  "[Saint Agnes](/people/saints/early/agnes-of-rome), Virgin and Martyr",
+  "[Saint Vincent](/people/saints/early/vincent-of-saragossa), Deacon and Martyr",
+  "[Saint Polycarp](/people/saints/apostolic-fathers/polycarp-of-smyrna), Bishop and Martyr",
+  "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom), Bishop and Doctor of the Church",
+  "[Saint Ignatius](/people/saints/apostolic-fathers/ignatius-of-antioch), Bishop and Martyr",
+  "[Saint Scholastica](/people/saints/medieval/scholastica-of-nursia), Virgin",
+  "[Saints Perpetua and Felicity](/people/saints/early/perpetua-and-felicity), Martyrs",
+  "[Saint Thomas Aquinas](/people/saints/medieval/thomas-aquinas), Priest and Doctor of the Church",
+  "[Saint Gregory the Great](/people/saints/latin-fathers/gregory-the-great), Pope and Doctor of the Church",
+  "[Saint Patrick](/people/saints/early/patrick-of-ireland), Bishop",
+  "[Saint Joseph](/people/saints/biblical/joseph-of-nazareth), Spouse of the Blessed Virgin Mary",
+  "[Saint Benedict](/people/saints/medieval/benedict-of-nursia), Abbot",
+  "[Saint Ambrose](/people/saints/latin-fathers/ambrose-of-milan), Bishop and Doctor of the Church",
+  "[Saint George](/people/saints/early/george-of-lydda), Martyr",
+  "[Saint Augustine of Canterbury](/people/saints/medieval/augustine-of-canterbury), Bishop",
+  "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church",
+  "[Saint Boniface](/people/saints/medieval/boniface), Bishop and Martyr",
+  "[Saint Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop and Doctor of the Church",
+  "[Saint Mary Magdalene](/people/saints/biblical/mary-magdalene)",
+  "Saints [Joachim and Anne](/people/saints/biblical/joachim-and-anne), Parents of the Blessed Virgin Mary",
+  "[Saint Martha](/people/saints/biblical/martha)",
+  "[Saint Dominic](/people/saints/medieval/dominic-of-guzman), Priest",
+  "[Saint Lawrence](/people/saints/early/lawrence-of-rome), Deacon and Martyr",
+  "[Saint Clare](/people/saints/medieval/clare-of-assisi), Virgin",
+  "[Saint Bernard](/people/saints/medieval/bernard-of-clairvaux), Abbot and Doctor of the Church",
+  "[Saint Augustine](/people/saints/latin-fathers/augustine-of-hippo), Bishop and Doctor of the Church",
+  "[Beheading of Saint John the Baptist](/people/saints/biblical/john-the-baptist#beheading)",
+  "[Saint Cyprian](/people/saints/latin-fathers/cyprian-of-carthage), Bishop and Martyr",
+  "[Saint Jerome](/people/saints/latin-fathers/jerome-of-stridon), Priest and Doctor of the Church",
+  "[Saint Francis of Assisi](/people/saints/medieval/francis-of-assisi)",
+  "[Saint Denis](/people/saints/early/denis-of-peris), Bishop, and Companions, Martyrs",
+  "[Saint Martin of Tours](/people/saints/early/martin-of-tours), Bishop",
+  "[Saint Margaret of Scotland](/people/saints/medieval/margaret-of-scotland)",
+  "[Saint Elizabeth of Hungary](/people/saints/medieval/elizabeth-of-hungary), Religious",
+  "[Saint Cecilia](/people/saints/early/cecilia-of-rome), Virgin and Martyr",
+  "[Saint Clement I](/people/saints/apostolic-fathers/clement-of-rome), Pope and Martyr",
+  "[Saint Catherine of Alexandria](/people/saints/early/catherine-of-alexandria), Virgin and Martyr"
+]

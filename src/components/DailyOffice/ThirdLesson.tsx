@@ -21,7 +21,7 @@ export const ThirdLesson: React.FC<Props> = ({ lesson }) => {
           remarkPlugins={[remarkSmartypants]}
           components={{ a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> }}
         >
-          {`${lesson.title} ${lesson.reading ? ` (${lesson.reading})` : ""}`}
+          {lesson.title}
         </Markdown>
       </TextWrap>
     </>

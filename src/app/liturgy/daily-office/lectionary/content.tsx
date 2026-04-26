@@ -120,7 +120,7 @@ const PrayerCard = ({
           <ReadingTitle>Third Lesson</ReadingTitle>
           <MarkdownText>
             <Markdown remarkPlugins={[remarkSmartypants]}>
-              {`${lessons.third.title}${lessons.third.reading ? ` (${lessons.third.reading})` : ""}`}
+              {lessons.third.title}
             </Markdown>
           </MarkdownText>
         </ReadingSection>

@@ -253,13 +253,23 @@ describe("Lectionary", () => {
           expect(nov30.morning.third).toBeUndefined();
         });
 
-        test("third lesson has title and optional reading", () => {
+        test("third lesson has title", () => {
           const dec6 = allData["2025-12-06"];
 
           if (dec6.morning.third) {
             expect(dec6.morning.third.title).toBeDefined();
             expect(typeof dec6.morning.third.title).toBe("string");
           }
+        });
+
+        test("morning third lesson includes #morning-prayer anchor in link", () => {
+          const dec6 = allDataWithLinks["2025-12-06"];
+          expect(dec6.morning.third?.title).toContain("#morning-prayer");
+        });
+
+        test("evening third lesson includes #evening-prayer anchor in link", () => {
+          const dec6 = allDataWithLinks["2025-12-06"];
+          expect(dec6.evening.third?.title).toContain("#evening-prayer");
         });
       });
 
