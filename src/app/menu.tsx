@@ -812,6 +812,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-ignatius",
               },
               {
+                title: "Saint Scholastica",
+                link: "/liturgy/liturgical-year/saints/saint-scholastica",
+              },
+              {
                 title: "Saints Philip and James the Less",
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
               },
