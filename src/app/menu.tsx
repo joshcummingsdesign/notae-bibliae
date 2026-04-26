@@ -824,6 +824,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saints-perpetua-and-felicity",
               },
               {
+                title: "Saint Thomas Aquinas",
+                link: "/liturgy/liturgical-year/saints/saint-thomas-aquinas",
+              },
+              {
                 title: "Saints Philip and James the Less",
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
               },
