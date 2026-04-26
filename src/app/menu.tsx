@@ -828,6 +828,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-thomas-aquinas",
               },
               {
+                title: "Saint Gregory the Great",
+                link: "/liturgy/liturgical-year/saints/saint-gregory-the-great",
+              },
+              {
                 title: "Saints Philip and James the Less",
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
               },
