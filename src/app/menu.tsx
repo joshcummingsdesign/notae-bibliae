@@ -848,6 +848,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-ambrose",
               },
               {
+                title: "Saint Anselm",
+                link: "/liturgy/liturgical-year/saints/saint-anselm",
+              },
+              {
                 title: "Saint George",
                 link: "/liturgy/liturgical-year/saints/saint-george",
               },
