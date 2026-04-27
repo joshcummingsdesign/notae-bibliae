@@ -848,6 +848,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-ambrose",
               },
               {
+                title: "Saint George",
+                link: "/liturgy/liturgical-year/saints/saint-george",
+              },
+              {
                 title: "Saints Philip and James the Less",
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
               },
