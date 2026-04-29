@@ -596,8 +596,8 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/christmastide/holy-innocents",
                   },
                   {
-                    title: "Circumcision and Holy Name of Jesus",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/circumcision-and-holy-name-of-jesus",
+                    title: "The Circumcision of Christ",
+                    link: "/liturgy/liturgical-year/seasons/christmastide/circumcision-of-christ",
                   },
                 ],
               },
@@ -610,8 +610,8 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/epiphanytide/epiphany",
                   },
                   {
-                    title: "Presentation of the Lord (Purification)",
-                    link: "/liturgy/liturgical-year/seasons/epiphanytide/presentation-of-the-lord",
+                    title: "The Purification",
+                    link: "/liturgy/liturgical-year/seasons/epiphanytide/the-purification",
                   },
                 ],
               },
@@ -646,7 +646,7 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/lent/laetare-sunday",
                   },
                   {
-                    title: "Annunciation of the Lord",
+                    title: "The Annunciation",
                     link: "/liturgy/liturgical-year/seasons/lent/annunciation",
                   },
                   {
