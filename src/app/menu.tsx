@@ -748,6 +748,10 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/trinitytide/transfiguration",
                   },
                   {
+                    title: "The Holy Name of Jesus",
+                    link: "/liturgy/liturgical-year/seasons/trinitytide/holy-name",
+                  },
+                  {
                     title: "Holy Cross Day",
                     link: "/liturgy/liturgical-year/seasons/trinitytide/holy-cross-day",
                   },
@@ -900,8 +904,8 @@ export const menuItems: MenuNode[] = [
             inPageNav: true,
           },
           {
-            title: "Commentary",
-            link: "/liturgy/liturgical-year/commentary",
+            title: "Notes",
+            link: "/liturgy/liturgical-year/notes",
             priority: 0.6,
           },
         ],
