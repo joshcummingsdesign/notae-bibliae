@@ -447,7 +447,7 @@
     "epistle": ["Acts 11:22-30"],
     "gospel": ["John 15:12-16"]
   },
-  "Nativity of Saint John the Baptist": {
+  "The Nativity of Saint John the Baptist": {
     "epistle": ["Isa. 40:1-11"],
     "gospel": ["Luke 1:57-80"]
   },
@@ -455,20 +455,25 @@
     "epistle": ["Acts 12:1-11"],
     "gospel": ["Matt. 16:13-19"]
   },
-  "Visitation of the Blessed Virgin Mary": {
+  "The Visitation of the Blessed Virgin Mary": {
     "epistle": ["Song 2:1-14"],
     "gospel": ["Luke 1:39-47"],
+    "source": "Sarum Missal"
+  },
+  "The Holy Name of Jesus": {
+    "epistle": ["Acts 4:8-12"],
+    "gospel": ["Matt. 1:20-23"],
     "source": "Sarum Missal"
   },
   "Saint James, Apostle": {
     "epistle": ["Acts 11:27-30", "Acts 12:1-3"],
     "gospel": ["Matt. 20:20-28"]
   },
-  "Transfiguration of the Lord": {
+  "The Transfiguration of Christ": {
     "epistle": ["2 Pet. 1:13-18"],
     "gospel": ["Luke 9:28-36"]
   },
-  "Repose of the Blessed Virgin Mary": {
+  "The Blessed Virgin Mary": {
     "epistle": ["Ecclus. 24:7-15"],
     "gospel": ["Luke 10:38-42"],
     "source": "Sarum Missal"
@@ -477,7 +482,7 @@
     "epistle": ["Acts 5:12-16"],
     "gospel": ["Luke 22:24-30"]
   },
-  "Nativity of the Blessed Virgin Mary": {
+  "The Nativity of the Blessed Virgin Mary": {
     "epistle": ["Ecclus. 24:17-22"],
     "gospel": ["Matt. 1:1-16"],
     "source": "Sarum Missal"
@@ -503,7 +508,7 @@
     "epistle": ["2 Cor. 4:1-6"],
     "gospel": ["Matt. 9:9-13"]
   },
-  "Saint Michael and All Angels": {
+  "Saint Michael and all Angels": {
     "epistle": ["Rev. 12:7-12"],
     "gospel": ["Matt. 18:1-10"]
   },

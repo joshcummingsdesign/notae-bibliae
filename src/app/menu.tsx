@@ -892,7 +892,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james",
               },
               {
-                title: "Nativity of Saint John the Baptist",
+                title: "The Nativity of Saint John the Baptist",
                 link: "/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist",
               },
               {
@@ -900,19 +900,19 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saints-peter-and-paul",
               },
               {
-                title: "Repose of the Blessed Virgin Mary",
-                link: "/liturgy/liturgical-year/saints/repose-of-the-blessed-virgin-mary",
+                title: "The Blessed Virgin Mary",
+                link: "/liturgy/liturgical-year/saints/blessed-virgin-mary",
               },
               {
-                title: "Beheading of Saint John the Baptist",
+                title: "The Beheading of Saint John the Baptist",
                 link: "/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist",
               },
               {
-                title: "Nativity of the Blessed Virgin Mary",
+                title: "The Nativity of the Blessed Virgin Mary",
                 link: "/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary",
               },
               {
-                title: "Saint Michael and All Angels",
+                title: "Saint Michael and all Angels",
                 link: "/liturgy/liturgical-year/saints/saint-michael-and-all-angels",
               },
               {
@@ -2248,10 +2248,6 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Gregory of Tours",
                 link: "/people/saints/medieval/gregory-of-tours",
-              },
-              {
-                title: "Margaret of Scotland",
-                link: "/people/saints/medieval/margaret-of-scotland",
               },
               {
                 title: "Osmund",

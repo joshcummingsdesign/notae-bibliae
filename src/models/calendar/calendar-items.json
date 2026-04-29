@@ -327,7 +327,7 @@
   },
   {
     "date": "07-02",
-    "title": "[Visitation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/visitation)",
+    "title": "[The Visitation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/visitation)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -347,7 +347,7 @@
   },
   {
     "date": "07-26",
-    "title": "Saints [Joachim and Anne](/people/saints/biblical/joachim-and-anne), Parents of the Blessed Virgin Mary",
+    "title": "[Saint Anne](/people/saints/biblical/joachim-and-anne), Mother of the Blessed Virgin Mary",
     "rank": 6,
     "isSaint": true
   },
@@ -365,7 +365,13 @@
   },
   {
     "date": "08-06",
-    "title": "[Transfiguration of the Lord](/liturgy/liturgical-year/seasons/trinitytide/transfiguration)",
+    "title": "[The Transfiguration of Christ](/liturgy/liturgical-year/seasons/trinitytide/transfiguration)",
+    "rank": 4,
+    "isFeast": true
+  },
+  {
+    "date": "08-07",
+    "title": "[The Holy Name of Jesus](/liturgy/liturgical-year/seasons/trinitytide/holy-name)",
     "rank": 4,
     "isFeast": true
   },
@@ -383,7 +389,7 @@
   },
   {
     "date": "08-15",
-    "title": "[Repose of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/repose-of-the-blessed-virgin-mary)",
+    "title": "[The Blessed Virgin Mary](/liturgy/liturgical-year/saints/blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -409,21 +415,15 @@
   },
   {
     "date": "08-29",
-    "title": "[Beheading of Saint John the Baptist](/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist)",
+    "title": "[The Beheading of Saint John the Baptist](/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist)",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "09-08",
-    "title": "[Nativity of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary)",
+    "title": "[The Nativity of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
-    "isSaint": true
-  },
-  {
-    "date": "09-13",
-    "title": "[Saint Cyprian](/people/saints/latin-fathers/cyprian-of-carthage), Bishop and Martyr",
-    "rank": 6,
     "isSaint": true
   },
   {
@@ -431,6 +431,12 @@
     "title": "[The Exaltation of the Holy Cross](/liturgy/liturgical-year/seasons/trinitytide/holy-cross)",
     "rank": 4,
     "isFeast": true
+  },
+  {
+    "date": "09-15",
+    "title": "[Saint Cyprian](/people/saints/latin-fathers/cyprian-of-carthage), Bishop and Martyr",
+    "rank": 6,
+    "isSaint": true
   },
   {
     "date": "09-21",
@@ -441,7 +447,7 @@
   },
   {
     "date": "09-29",
-    "title": "[Saint Michael and All Angels](/liturgy/liturgical-year/saints/saint-michael-and-all-angels)",
+    "title": "[Saint Michael and all Angels](/liturgy/liturgical-year/saints/saint-michael-and-all-angels)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -460,7 +466,7 @@
   },
   {
     "date": "10-09",
-    "title": "[Saint Denis](/people/saints/early/denis-of-peris), Bishop, and Companions, Martyrs",
+    "title": "[Saint Denis and Companions](/people/saints/early/denis-of-peris), Martyrs",
     "rank": 6,
     "isSaint": true
   },
@@ -505,12 +511,6 @@
     "isSaint": true
   },
   {
-    "date": "11-16",
-    "title": "[Saint Margaret of Scotland](/people/saints/medieval/margaret-of-scotland)",
-    "rank": 6,
-    "isSaint": true
-  },
-  {
     "date": "11-19",
     "title": "[Saint Elizabeth of Hungary](/people/saints/medieval/elizabeth-of-hungary), Religious",
     "rank": 6,
@@ -524,7 +524,7 @@
   },
   {
     "date": "11-23",
-    "title": "[Saint Clement I](/people/saints/apostolic-fathers/clement-of-rome), Pope and Martyr",
+    "title": "[Saint Clement](/people/saints/apostolic-fathers/clement-of-rome), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },

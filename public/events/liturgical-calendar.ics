@@ -784,7 +784,7 @@ DURATION:P1DT
 END:VEVENT
 BEGIN:VEVENT
 UID:Qw86S3R-BSFE8Jtgy4Mc6
-SUMMARY:Eighth Sunday After Trinity — Saints Joachim and Anne\, Parents of 
+SUMMARY:Eighth Sunday After Trinity — Saints Joachim and Anne\, Parents of
 	the Blessed Virgin Mary
 DTSTAMP:20260427T221413Z
 DTSTART;VALUE=DATE:20260726
@@ -967,7 +967,7 @@ DURATION:P1DT
 END:VEVENT
 BEGIN:VEVENT
 UID:IXywhuqrrRrsHeS6vOfd8
-SUMMARY:Saint Michael and All Angels
+SUMMARY:Saint Michael and all Angels
 DTSTAMP:20260427T221413Z
 DTSTART;VALUE=DATE:20260929
 DURATION:P1DT
