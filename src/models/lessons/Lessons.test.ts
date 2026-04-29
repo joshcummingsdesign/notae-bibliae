@@ -106,7 +106,9 @@ describe("Lessons", () => {
         // Tuesday after First Sunday of Advent (Monday Dec 1 is St. Andrew feast)
         const tuesday = all["2025-12-02"];
 
-        expect(tuesday.title).toMatch(/\w+day After the First Sunday of Advent/);
+        expect(tuesday.title).toMatch(
+          /\w+day After the First Sunday of Advent/,
+        );
       });
     });
 
@@ -125,7 +127,7 @@ describe("Lessons", () => {
         const all = lessons.getAll();
         const circumcision = all["2026-01-01"];
 
-        expect(circumcision.title).toBe("Circumcision and Holy Name of Jesus");
+        expect(circumcision.title).toBe("The Circumcision of Christ");
         expect(circumcision).toHaveProperty("morning");
         expect(circumcision).toHaveProperty("evening");
       });
@@ -322,9 +324,7 @@ describe("Lessons", () => {
 
       test("Circumcision on Jan 1", () => {
         const all = lessons2028.getAll();
-        expect(all["2029-01-01"]?.title).toBe(
-          "Circumcision and Holy Name of Jesus",
-        );
+        expect(all["2029-01-01"]?.title).toBe("The Circumcision of Christ");
       });
 
       test("uses explicit date lessons for Jan 2-4", () => {
@@ -601,7 +601,7 @@ describe("Lessons", () => {
   });
 
   describe("conditional readings", () => {
-    describe("Presentation of the Lord (Purification)", () => {
+    describe("The Purification of the Blessed Virgin Mary", () => {
       test("uses Gal. 4:1-7 before Septuagesima", () => {
         // 2025: Presentation is Feb 2, Easter is April 20, Septuagesima is ~Feb 16 -> before
         const lessons = createLessons("2025-02-02");
@@ -609,7 +609,7 @@ describe("Lessons", () => {
         const presentation = all["2025-02-02"];
 
         expect(presentation.title).toBe(
-          "Presentation of the Lord (Purification)",
+          "The Purification of the Blessed Virgin Mary",
         );
         expect(presentation.morning.second).toContain("Gal. 4:1-7");
       });
@@ -621,20 +621,22 @@ describe("Lessons", () => {
         const presentation = all["2026-02-02"];
 
         expect(presentation.title).toBe(
-          "Presentation of the Lord (Purification)",
+          "The Purification of the Blessed Virgin Mary",
         );
         expect(presentation.morning.second).toContain("Rom. 8:14-21");
       });
     });
 
-    describe("Annunciation of the Lord", () => {
+    describe("The Annunciation of the Blessed Virgin Mary", () => {
       test("uses Heb. 2:5-18 before Easter", () => {
         // 2025: Annunciation is March 25, Easter is April 20 -> before
         const lessons = createLessons("2025-03-25");
         const all = lessons.getAll();
         const annunciation = all["2025-03-25"];
 
-        expect(annunciation.title).toBe("Annunciation of the Lord");
+        expect(annunciation.title).toBe(
+          "The Annunciation of the Blessed Virgin Mary",
+        );
         expect(annunciation.morning.second).toContain("Heb. 2:5-18");
       });
 
@@ -644,7 +646,9 @@ describe("Lessons", () => {
         const all = lessons.getAll();
         const annunciation = all["2008-03-25"];
 
-        expect(annunciation.title).toBe("Annunciation of the Lord");
+        expect(annunciation.title).toBe(
+          "The Annunciation of the Blessed Virgin Mary",
+        );
         expect(annunciation.morning.second).toContain("1 John 4:7-14");
       });
     });

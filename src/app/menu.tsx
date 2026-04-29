@@ -820,7 +820,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-vincent",
               },
               {
-                title: "Conversion of Saint Paul",
+                title: "The Conversion of Saint Paul",
                 link: "/liturgy/liturgical-year/saints/conversion-of-saint-paul",
               },
               {
@@ -860,8 +860,16 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-patrick",
               },
               {
+                title: "Saint Anselm",
+                link: "/liturgy/liturgical-year/saints/saint-anselm",
+              },
+              {
                 title: "Saint Joseph",
                 link: "/liturgy/liturgical-year/saints/saint-joseph",
+              },
+              {
+                title: "Saint Joachim",
+                link: "/liturgy/liturgical-year/saints/saint-joachim",
               },
               {
                 title: "Saint Benedict",
@@ -872,16 +880,16 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saint-ambrose",
               },
               {
-                title: "Saint Anselm",
-                link: "/liturgy/liturgical-year/saints/saint-anselm",
-              },
-              {
                 title: "Saint George",
                 link: "/liturgy/liturgical-year/saints/saint-george",
               },
               {
-                title: "Saints Philip and James the Less",
-                link: "/liturgy/liturgical-year/saints/saints-philip-and-james-the-less",
+                title: "Saint Mark",
+                link: "/liturgy/liturgical-year/saints/saint-mark",
+              },
+              {
+                title: "Saints Philip and James",
+                link: "/liturgy/liturgical-year/saints/saints-philip-and-james",
               },
               {
                 title: "Nativity of Saint John the Baptist",
@@ -2262,8 +2270,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/thomas-aquinas",
               },
               {
-                title: "Thomas Becket",
-                link: "/people/saints/medieval/thomas-becket",
+                title: "Thomas of Canterbury",
+                link: "/people/saints/medieval/thomas-of-canterbury",
               },
             ],
           },

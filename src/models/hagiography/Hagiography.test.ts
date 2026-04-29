@@ -172,9 +172,7 @@ describe("Hagiography", () => {
       const reading = all["2026-01-13"];
 
       expect(reading).toBeDefined();
-      expect(reading.title).toBe(
-        "Saint Hilary, Bishop and Doctor of the Church",
-      );
+      expect(reading.title).toBe("Saint Hilary, Bishop");
     });
 
     test("Saint Lucy (Dec 13) has link in title when withLinks=true", () => {

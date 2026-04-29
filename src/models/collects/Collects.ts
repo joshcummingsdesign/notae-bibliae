@@ -31,7 +31,15 @@ export class Collects {
       const title = stripMarkdownLinks(item.title);
       const collect = this.collects.find((c) => title.startsWith(c.title));
       if (!collect) return [];
-      return [{ ...item, title, collect: collect.text, source: collect.source, notes: collect.notes }];
+      return [
+        {
+          ...item,
+          title,
+          collect: collect.text,
+          source: collect.source,
+          notes: collect.notes,
+        },
+      ];
     });
   }
 
@@ -39,8 +47,12 @@ export class Collects {
    * Check if a collect is a primary (Sunday or principal feast, excluding some).
    */
   private isPrimary(c: CollectCalendarItem): boolean {
-    const excludedFeasts = ["Annunciation of the Lord", "All Saints' Day"];
-    const isPrincipal = c.isPrincipalFeast && !excludedFeasts.some((f) => c.title.includes(f));
+    const excludedFeasts = [
+      "The Annunciation of the Blessed Virgin Mary",
+      "All Saints' Day",
+    ];
+    const isPrincipal =
+      c.isPrincipalFeast && !excludedFeasts.some((f) => c.title.includes(f));
     return isPrincipal || !!c.isSunday;
   }
 
@@ -50,7 +62,9 @@ export class Collects {
   getAll(): CollectDateMap {
     const calendarData = this.calendar.getAll();
     const startDate = this.calendar.getFirstSundayOfAdvent();
-    const endDate = this.calendar.getNextFirstSundayOfAdvent().subtract(1, "day");
+    const endDate = this.calendar
+      .getNextFirstSundayOfAdvent()
+      .subtract(1, "day");
 
     const output: CollectDateMap = {};
     let lastPrimary: CollectCalendarItem | null = null;

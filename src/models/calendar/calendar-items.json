@@ -14,7 +14,7 @@
   },
   {
     "date": "12-08",
-    "title": "[Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary)",
+    "title": "[The Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -115,13 +115,13 @@
   },
   {
     "date": "12-29",
-    "title": "[Saint Thomas Becket](/people/saints/medieval/thomas-becket), Bishop and Martyr",
+    "title": "[Saint Thomas of Canterbury](/people/saints/medieval/thomas-of-canterbury), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-01",
-    "title": "[Circumcision and Holy Name of Jesus](/liturgy/liturgical-year/seasons/christmastide/circumcision-and-holy-name-of-jesus)",
+    "title": "[The Circumcision of Christ](/liturgy/liturgical-year/seasons/christmastide/circumcision-of-christ)",
     "rank": 4,
     "isFeast": true
   },
@@ -140,7 +140,7 @@
   },
   {
     "date": "01-13",
-    "title": "[Saint Hilary](/liturgy/liturgical-year/saints/saint-hilary), Bishop and Doctor of the Church",
+    "title": "[Saint Hilary](/liturgy/liturgical-year/saints/saint-hilary), Bishop",
     "rank": 6,
     "isSaint": true
   },
@@ -164,7 +164,7 @@
   },
   {
     "date": "01-25",
-    "title": "[Conversion of Saint Paul](/liturgy/liturgical-year/saints/conversion-of-saint-paul), Apostle",
+    "title": "[The Conversion of Saint Paul](/liturgy/liturgical-year/saints/conversion-of-saint-paul)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -177,7 +177,7 @@
   },
   {
     "date": "01-27",
-    "title": "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom), Bishop and Doctor of the Church",
+    "title": "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom), Bishop",
     "rank": 6,
     "isSaint": true
   },
@@ -189,13 +189,13 @@
   },
   {
     "date": "02-02",
-    "title": "[Presentation of the Lord (Purification)](/liturgy/liturgical-year/seasons/epiphanytide/presentation-of-the-lord)",
+    "title": "[The Purification of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/epiphanytide/purification)",
     "rank": 4,
     "isFeast": true
   },
   {
     "date": "02-10",
-    "title": "[Saint Scholastica](/people/saints/medieval/scholastica-of-nursia), Virgin",
+    "title": "[Saint Scholastica](/liturgy/liturgical-year/saints/saint-scholastica), Virgin",
     "rank": 6,
     "isSaint": true
   },
@@ -214,13 +214,13 @@
   },
   {
     "date": "03-08",
-    "title": "[Saint Thomas Aquinas](/liturgy/liturgical-year/saints/saint-thomas-aquinas), Priest and Doctor of the Church",
+    "title": "[Saint Thomas Aquinas](/liturgy/liturgical-year/saints/saint-thomas-aquinas), Priest",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-12",
-    "title": "[Saint Gregory the Great](/liturgy/liturgical-year/saints/saint-gregory-the-great), Pope and Doctor of the Church",
+    "title": "[Saint Gregory the Great](/liturgy/liturgical-year/saints/saint-gregory-the-great), Bishop",
     "rank": 6,
     "isSaint": true
   },
@@ -231,8 +231,20 @@
     "isSaint": true
   },
   {
+    "date": "03-18",
+    "title": "[Saint Anselm](/liturgy/liturgical-year/saints/saint-anselm), Bishop",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
     "date": "03-19",
     "title": "[Saint Joseph](/liturgy/liturgical-year/saints/saint-joseph), Spouse of the Blessed Virgin Mary",
+    "rank": 6,
+    "isSaint": true
+  },
+  {
+    "date": "03-20",
+    "title": "[Saint Joachim](/liturgy/liturgical-year/saints/saint-joachim), Father of the Blessed Virgin Mary",
     "rank": 6,
     "isSaint": true
   },
@@ -244,13 +256,7 @@
   },
   {
     "date": "04-04",
-    "title": "[Saint Ambrose](/liturgy/liturgical-year/saints/saint-ambrose), Bishop and Doctor of the Church",
-    "rank": 6,
-    "isSaint": true
-  },
-  {
-    "date": "04-21",
-    "title": "[Saint Anselm](/liturgy/liturgical-year/saints/saint-anselm), Bishop and Doctor of the Church",
+    "title": "[Saint Ambrose](/liturgy/liturgical-year/saints/saint-ambrose), Bishop",
     "rank": 6,
     "isSaint": true
   },
@@ -262,14 +268,14 @@
   },
   {
     "date": "04-25",
-    "title": "[Saint Mark](/people/saints/evangelists/mark), Evangelist",
+    "title": "[Saint Mark](/liturgy/liturgical-year/saints/saint-mark), Evangelist",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "05-01",
-    "title": "[Saints Philip and James the Less](/liturgy/liturgical-year/saints/saints-philip-and-james-the-less), Apostles",
+    "title": "[Saints Philip and James](/liturgy/liturgical-year/saints/saints-philip-and-james), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
@@ -282,7 +288,7 @@
   },
   {
     "date": "05-27",
-    "title": "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest and Doctor of the Church",
+    "title": "[Saint Bede the Venerable](/people/saints/medieval/bede-the-venerable), Priest",
     "rank": 6,
     "isSaint": true
   },
@@ -301,13 +307,13 @@
   },
   {
     "date": "06-14",
-    "title": "[Saint Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop and Doctor of the Church",
+    "title": "[Saint Basil the Great](/people/saints/cappadocian-fathers/basil-the-great), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "06-24",
-    "title": "[Nativity of Saint John the Baptist](/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist)",
+    "title": "[The Nativity of Saint John the Baptist](/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
