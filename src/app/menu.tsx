@@ -570,6 +570,10 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/advent/gaudete-sunday",
                   },
                   {
+                    title: "Ember Days in Advent",
+                    link: "/liturgy/liturgical-year/seasons/advent/ember-days-in-advent",
+                  },
+                  {
                     title: "O Antiphons",
                     link: "/liturgy/liturgical-year/seasons/advent/o-antiphons",
                   },
@@ -611,7 +615,7 @@ export const menuItems: MenuNode[] = [
                   },
                   {
                     title: "The Purification",
-                    link: "/liturgy/liturgical-year/seasons/epiphanytide/the-purification",
+                    link: "/liturgy/liturgical-year/seasons/epiphanytide/purification",
                   },
                 ],
               },
@@ -640,6 +644,10 @@ export const menuItems: MenuNode[] = [
                   {
                     title: "Ash Wednesday",
                     link: "/liturgy/liturgical-year/seasons/lent/ash-wednesday",
+                  },
+                  {
+                    title: "Ember Days in Lent",
+                    link: "/liturgy/liturgical-year/seasons/lent/ember-days-in-lent",
                   },
                   {
                     title: "Laetare Sunday",
@@ -706,6 +714,10 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/eastertide/second-sunday-of-easter",
                   },
                   {
+                    title: "Rogation Days",
+                    link: "/liturgy/liturgical-year/seasons/eastertide/rogation-days",
+                  },
+                  {
                     title: "Ascensiontide",
                     link: "/liturgy/liturgical-year/seasons/eastertide/ascensiontide",
                     children: [
@@ -725,6 +737,10 @@ export const menuItems: MenuNode[] = [
                     title: "Pentecost (Whitsunday)",
                     link: "/liturgy/liturgical-year/seasons/whitsuntide/pentecost",
                   },
+                  {
+                    title: "Ember Days in Whitsuntide",
+                    link: "/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide",
+                  },
                 ],
               },
               {
@@ -740,11 +756,11 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/trinitytide/corpus-christi",
                   },
                   {
-                    title: "Visitation of the Blessed Virgin Mary",
+                    title: "The Visitation",
                     link: "/liturgy/liturgical-year/seasons/trinitytide/visitation",
                   },
                   {
-                    title: "Transfiguration of the Lord",
+                    title: "The Transfiguration of Christ",
                     link: "/liturgy/liturgical-year/seasons/trinitytide/transfiguration",
                   },
                   {
@@ -752,8 +768,12 @@ export const menuItems: MenuNode[] = [
                     link: "/liturgy/liturgical-year/seasons/trinitytide/holy-name",
                   },
                   {
-                    title: "Holy Cross Day",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/holy-cross-day",
+                    title: "The Exaltation of the Holy Cross",
+                    link: "/liturgy/liturgical-year/seasons/trinitytide/holy-cross",
+                  },
+                  {
+                    title: "Ember Days in Trinitytide",
+                    link: "/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide",
                   },
                   {
                     title: "Allhallowtide",

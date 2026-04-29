@@ -182,21 +182,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Advent](/glossary/liturgical-terms#ember-days)",
+          "[Ember Wednesday in Advent](/liturgy/liturgical-year/seasons/advent/ember-days-in-advent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Advent](/glossary/liturgical-terms#ember-days)",
+          "[Ember Friday in Advent](/liturgy/liturgical-year/seasons/advent/ember-days-in-advent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Advent](/glossary/liturgical-terms#ember-days)",
+          "[Ember Saturday in Advent](/liturgy/liturgical-year/seasons/advent/ember-days-in-advent)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -465,20 +465,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Lent](/glossary/liturgical-terms#ember-days)",
+          "[Ember Wednesday in Lent](/liturgy/liturgical-year/seasons/lent/ember-days-in-lent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
-        title: "[Ember Friday in Lent](/glossary/liturgical-terms#ember-days)",
+        title:
+          "[Ember Friday in Lent](/liturgy/liturgical-year/seasons/lent/ember-days-in-lent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Lent](/glossary/liturgical-terms#ember-days)",
+          "[Ember Saturday in Lent](/liturgy/liturgical-year/seasons/lent/ember-days-in-lent)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -700,26 +701,29 @@ export class Calendar {
       {
         date: easter.add(35, "day").format("YYYY-MM-DD"),
         title:
-          "Sixth Sunday of Easter: [Rogation Sunday](/glossary/liturgical-terms#rogation-days)",
+          "Sixth Sunday of Easter: [Rogation Sunday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 7,
         isSunday: true,
         isPrincipalSunday: true,
       },
       {
         date: ascension.subtract(3, "day").format("YYYY-MM-DD"),
-        title: "[Rogation Monday](/glossary/liturgical-terms#rogation-days)",
+        title:
+          "[Rogation Monday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: ascension.subtract(2, "day").format("YYYY-MM-DD"),
-        title: "[Rogation Tuesday](/glossary/liturgical-terms#rogation-days)",
+        title:
+          "[Rogation Tuesday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: ascension.subtract(1, "day").format("YYYY-MM-DD"),
-        title: "[Rogation Wednesday](/glossary/liturgical-terms#rogation-days)",
+        title:
+          "[Rogation Wednesday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -811,21 +815,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+          "[Ember Wednesday in Whitsuntide](/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+          "[Ember Friday in Whitsuntide](/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Whitsuntide](/glossary/liturgical-terms#ember-days)",
+          "[Ember Saturday in Whitsuntide](/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -925,21 +929,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+          "[Ember Wednesday in Trinitytide](/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+          "[Ember Friday in Trinitytide](/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Trinitytide](/glossary/liturgical-terms#ember-days)",
+          "[Ember Saturday in Trinitytide](/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
         rank: 5,
         isLesserObservance: true,
       },
