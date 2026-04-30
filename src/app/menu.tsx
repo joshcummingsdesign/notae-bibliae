@@ -2018,16 +2018,16 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Anne",
+                link: "/people/saints/biblical/anne",
+              },
+              {
                 title: "Blessed Virgin Mary",
                 link: "/people/saints/biblical/blessed-virgin-mary",
               },
               {
                 title: "Joachim",
                 link: "/people/saints/biblical/joachim",
-              },
-              {
-                title: "Anne",
-                link: "/people/saints/biblical/anne",
               },
               {
                 title: "John the Baptist",
