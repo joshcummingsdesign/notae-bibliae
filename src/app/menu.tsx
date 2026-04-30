@@ -892,6 +892,26 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saints-philip-and-james",
               },
               {
+                title: "Saint Augustine of Canterbury",
+                link: "/liturgy/liturgical-year/saints/saint-augustine-of-canterbury",
+              },
+              {
+                title: "Saint Bede the Venerable",
+                link: "/liturgy/liturgical-year/saints/saint-bede-the-venerable",
+              },
+              {
+                title: "Saint Boniface",
+                link: "/liturgy/liturgical-year/saints/saint-boniface",
+              },
+              {
+                title: "Saint Barnabas",
+                link: "/liturgy/liturgical-year/saints/saint-barnabas",
+              },
+              {
+                title: "Saint Basil the Great",
+                link: "/liturgy/liturgical-year/saints/saint-basil-the-great",
+              },
+              {
                 title: "The Nativity of Saint John the Baptist",
                 link: "/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist",
               },
@@ -900,8 +920,48 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/saints-peter-and-paul",
               },
               {
+                title: "Saint Mary Magdalene",
+                link: "/liturgy/liturgical-year/saints/saint-mary-magdalene",
+              },
+              {
+                title: "Saint James",
+                link: "/liturgy/liturgical-year/saints/saint-james",
+              },
+              {
+                title: "Saint Anne",
+                link: "/liturgy/liturgical-year/saints/saint-anne",
+              },
+              {
+                title: "Saint Martha",
+                link: "/liturgy/liturgical-year/saints/saint-martha",
+              },
+              {
+                title: "Saint Dominic",
+                link: "/liturgy/liturgical-year/saints/saint-dominic",
+              },
+              {
+                title: "Saint Lawrence",
+                link: "/liturgy/liturgical-year/saints/saint-lawrence",
+              },
+              {
+                title: "Saint Clare",
+                link: "/liturgy/liturgical-year/saints/saint-clare",
+              },
+              {
                 title: "The Blessed Virgin Mary",
                 link: "/liturgy/liturgical-year/saints/blessed-virgin-mary",
+              },
+              {
+                title: "Saint Bernard",
+                link: "/liturgy/liturgical-year/saints/saint-bernard",
+              },
+              {
+                title: "Saint Bartholomew",
+                link: "/liturgy/liturgical-year/saints/saint-bartholomew",
+              },
+              {
+                title: "Saint Augustine",
+                link: "/liturgy/liturgical-year/saints/saint-augustine",
               },
               {
                 title: "The Beheading of Saint John the Baptist",
@@ -912,16 +972,80 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary",
               },
               {
+                title: "Saint Cyprian",
+                link: "/liturgy/liturgical-year/saints/saint-cyprian",
+              },
+              {
+                title: "Saint Matthew",
+                link: "/liturgy/liturgical-year/saints/saint-matthew",
+              },
+              {
                 title: "Saint Michael and all Angels",
                 link: "/liturgy/liturgical-year/saints/saint-michael-and-all-angels",
+              },
+              {
+                title: "Saint Jerome",
+                link: "/liturgy/liturgical-year/saints/saint-jerome",
+              },
+              {
+                title: "Saint Francis of Assisi",
+                link: "/liturgy/liturgical-year/saints/saint-francis-of-assisi",
+              },
+              {
+                title: "Saint Denis and Companions",
+                link: "/liturgy/liturgical-year/saints/saint-denis-and-companions",
+              },
+              {
+                title: "Saint Luke",
+                link: "/liturgy/liturgical-year/saints/saint-luke",
               },
               {
                 title: "Saints Simon and Jude",
                 link: "/liturgy/liturgical-year/saints/saints-simon-and-jude",
               },
               {
-                title: "Conception of the Blessed Virgin Mary",
+                title: "Saint Martin of Tours",
+                link: "/liturgy/liturgical-year/saints/saint-martin-of-tours",
+              },
+              {
+                title: "Saint Elizabeth of Hungary",
+                link: "/liturgy/liturgical-year/saints/saint-elizabeth-of-hungary",
+              },
+              {
+                title: "Saint Cecilia",
+                link: "/liturgy/liturgical-year/saints/saint-cecilia",
+              },
+              {
+                title: "Saint Clement",
+                link: "/liturgy/liturgical-year/saints/saint-clement",
+              },
+              {
+                title: "Saint Catherine of Alexandria",
+                link: "/liturgy/liturgical-year/saints/saint-catherine-of-alexandria",
+              },
+              {
+                title: "Saint Andrew",
+                link: "/liturgy/liturgical-year/saints/saint-andrew",
+              },
+              {
+                title: "Saint Nicholas",
+                link: "/liturgy/liturgical-year/saints/saint-nicholas",
+              },
+              {
+                title: "The Conception of the Blessed Virgin Mary",
                 link: "/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary",
+              },
+              {
+                title: "Saint Lucy",
+                link: "/liturgy/liturgical-year/saints/saint-lucy",
+              },
+              {
+                title: "Saint Thomas",
+                link: "/liturgy/liturgical-year/saints/saint-thomas",
+              },
+              {
+                title: "Saint Thomas of Canterbury",
+                link: "/liturgy/liturgical-year/saints/saint-thomas-of-canterbury",
               },
             ],
           },

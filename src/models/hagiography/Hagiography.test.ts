@@ -86,7 +86,7 @@ describe("Hagiography", () => {
 
       expect(reading).not.toBeNull();
       expect(reading?.title).toBe(
-        "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop",
+        "[Saint Nicholas](/liturgy/liturgical-year/saints/saint-nicholas), Bishop",
       );
     });
 
@@ -129,7 +129,7 @@ describe("Hagiography", () => {
       const dec6 = all["2025-12-06"];
 
       expect(dec6.title).toBe(
-        "[Saint Nicholas](/people/saints/early/nicholas-of-myra), Bishop",
+        "[Saint Nicholas](/liturgy/liturgical-year/saints/saint-nicholas), Bishop",
       );
       expect(dec6.title).toContain("[");
       expect(dec6.title).toContain("](/");
@@ -181,7 +181,7 @@ describe("Hagiography", () => {
 
       expect(reading).toBeDefined();
       expect(reading.title).toBe(
-        "[Saint Lucy](/people/saints/early/lucy-of-syracuse), Virgin and Martyr",
+        "[Saint Lucy](/liturgy/liturgical-year/saints/saint-lucy), Virgin and Martyr",
       );
     });
 
