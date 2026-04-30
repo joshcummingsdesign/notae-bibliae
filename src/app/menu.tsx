@@ -2022,8 +2022,12 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/blessed-virgin-mary",
               },
               {
-                title: "Joachim and Anne",
-                link: "/people/saints/biblical/joachim-and-anne",
+                title: "Joachim",
+                link: "/people/saints/biblical/joachim",
+              },
+              {
+                title: "Anne",
+                link: "/people/saints/biblical/anne",
               },
               {
                 title: "John the Baptist",
