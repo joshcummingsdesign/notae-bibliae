@@ -701,7 +701,7 @@ describe("useDailyOffice", () => {
 
       expect(
         (window as unknown as { BGLinks: { version: string } }).BGLinks.version,
-      ).toBe("ESV");
+      ).toBe("NKJV");
       expect(mockLinkVerses).toHaveBeenCalled();
     });
 

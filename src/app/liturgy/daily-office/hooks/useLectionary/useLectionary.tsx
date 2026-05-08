@@ -92,7 +92,7 @@ export const useLectionary = () => {
 
   const refreshBibleGatewayLinks = useCallback(() => {
     if (window.BGLinks) {
-      window.BGLinks.version = "ESV";
+      window.BGLinks.version = "NKJV";
       window.BGLinks.linkVerses();
     }
   }, []);

@@ -65,7 +65,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     if (!isLoading) {
       // Re-render biblegateway links after content has loaded
       if (window.BGLinks) {
-        window.BGLinks.version = "ESV";
+        window.BGLinks.version = "NKJV";
         window.BGLinks.linkVerses();
       }
     }

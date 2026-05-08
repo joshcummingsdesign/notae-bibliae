@@ -5,11 +5,11 @@ import { vi, beforeEach, afterEach, describe, it, expect } from "vitest";
 const createMockCalendar = (dateString: string, formattedDate: string) => ({
   getToday: vi.fn(() => ({
     format: vi.fn((fmt: string) =>
-      fmt === "YYYY-MM-DD" ? dateString : formattedDate
+      fmt === "YYYY-MM-DD" ? dateString : formattedDate,
     ),
     add: vi.fn(() => ({
       format: vi.fn((fmt: string) =>
-        fmt === "YYYY-MM-DD" ? "2025-12-26" : "Friday, December 26, 2025"
+        fmt === "YYYY-MM-DD" ? "2025-12-26" : "Friday, December 26, 2025",
       ),
     })),
   })),
@@ -17,11 +17,11 @@ const createMockCalendar = (dateString: string, formattedDate: string) => ({
 
 let mockTodayCalendar = createMockCalendar(
   "2025-12-25",
-  "Thursday, December 25, 2025"
+  "Thursday, December 25, 2025",
 );
 let mockTomorrowCalendar = createMockCalendar(
   "2025-12-26",
-  "Friday, December 26, 2025"
+  "Friday, December 26, 2025",
 );
 
 // Mock the Calendar class before importing the hook
@@ -101,11 +101,11 @@ describe("useLectionary", () => {
   beforeEach(() => {
     mockTodayCalendar = createMockCalendar(
       "2025-12-25",
-      "Thursday, December 25, 2025"
+      "Thursday, December 25, 2025",
     );
     mockTomorrowCalendar = createMockCalendar(
       "2025-12-26",
-      "Friday, December 26, 2025"
+      "Friday, December 26, 2025",
     );
 
     localStorage.clear();
@@ -145,10 +145,10 @@ describe("useLectionary", () => {
       });
 
       expect(global.fetch).toHaveBeenCalledWith(
-        "/api/lectionary/today?withLinks=true"
+        "/api/lectionary/today?withLinks=true",
       );
       expect(global.fetch).toHaveBeenCalledWith(
-        "/api/lectionary/tomorrow?withLinks=true"
+        "/api/lectionary/tomorrow?withLinks=true",
       );
     });
 
@@ -160,7 +160,9 @@ describe("useLectionary", () => {
       });
 
       expect(result.current.today.data).not.toBeNull();
-      expect(result.current.today.data?.primaryObservance).toBe("Christmas Day");
+      expect(result.current.today.data?.primaryObservance).toBe(
+        "Christmas Day",
+      );
       expect(result.current.today.date).toBe("Thursday, December 25, 2025");
     });
 
@@ -173,7 +175,7 @@ describe("useLectionary", () => {
 
       expect(result.current.tomorrow.data).not.toBeNull();
       expect(result.current.tomorrow.data?.primaryObservance).toBe(
-        "St. Stephen"
+        "St. Stephen",
       );
       expect(result.current.tomorrow.date).toBe("Friday, December 26, 2025");
     });
@@ -189,7 +191,7 @@ describe("useLectionary", () => {
       await waitFor(() => {
         expect(consoleSpy).toHaveBeenCalledWith(
           "Error fetching lectionary data:",
-          expect.any(Error)
+          expect.any(Error),
         );
       });
 
@@ -282,8 +284,8 @@ describe("useLectionary", () => {
       });
 
       expect(
-        (window as unknown as { BGLinks: { version: string } }).BGLinks.version
-      ).toBe("ESV");
+        (window as unknown as { BGLinks: { version: string } }).BGLinks.version,
+      ).toBe("NKJV");
       expect(mockLinkVerses).toHaveBeenCalled();
     });
 

@@ -8,7 +8,7 @@ export const BibleGatewayLoader = () => {
 
   const load = () => {
     if (window.BGLinks) {
-      window.BGLinks.version = "ESV";
+      window.BGLinks.version = "NKJV";
       window.BGLinks.linkVerses();
     }
   };

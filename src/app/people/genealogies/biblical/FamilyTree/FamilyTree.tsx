@@ -54,7 +54,7 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
   const [searchSelectedNode, setSearchSelectedNode] =
     useState<FamilyNode | null>(null);
   const [highlightedNode, setHighlightedNode] = useState<FamilyNode | null>(
-    null
+    null,
   );
   const [filtersAnchorEl, setFiltersAnchorEl] =
     useState<HTMLButtonElement | null>(null);
@@ -182,7 +182,7 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
         linksTimeout.current && clearTimeout(linksTimeout.current);
         linksTimeout.current = setTimeout(() => {
           if (window.BGLinks) {
-            window.BGLinks.version = "ESV";
+            window.BGLinks.version = "NKJV";
             window.BGLinks.linkVerses();
           }
         }, 300);
@@ -231,7 +231,7 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
         return;
       }
     },
-    [chart, linksTimeout.current]
+    [chart, linksTimeout.current],
   );
 
   const handleDrawerClose = () => {
@@ -262,12 +262,12 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
         }
         return acc;
       },
-      { add: [], remove: [] }
+      { add: [], remove: [] },
     );
 
     // Dedupe and remove unselected
     const newFilters = Array.from(new Set([...filters, ...options.add])).filter(
-      (f) => !options.remove.includes(f)
+      (f) => !options.remove.includes(f),
     );
 
     // Set the state
@@ -281,7 +281,7 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
       (d) =>
         !newFilters.includes(d.gender) ||
         !newFilters.includes(d.category) ||
-        !newFilters.includes(d.type)
+        !newFilters.includes(d.type),
     );
 
     // Show all previously dimmed nodes
@@ -340,10 +340,10 @@ export const FamilyTree: FC<Props> = ({ data, isLoading }) => {
         .linkUpdate(function (this: SVGPathElement, d) {
           d3.select(this)
             .attr("stroke", (d: any) =>
-              d.data._upToTheRootHighlighted ? colors.black : colors.lightGrey
+              d.data._upToTheRootHighlighted ? colors.black : colors.lightGrey,
             )
             .attr("stroke-width", (d: any) =>
-              d.data._upToTheRootHighlighted ? 5 : 1
+              d.data._upToTheRootHighlighted ? 5 : 1,
             );
 
           if (d.data._upToTheRootHighlighted) {
