@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Close } from "@mui/icons-material";
 import { menuItems, MenuNode } from "@/app/menu";
 import { Post } from "@/app/meditations/actions";
-import { Terms } from "@/app/glossary/liturgical-terms/actions";
+import { Terms } from "@/app/glossary/actions/getTerms";
 import {
   Modal as ModalBase,
   Autocomplete,
@@ -12,13 +12,11 @@ import {
   IconButton,
 } from "@mui/material";
 import { Names } from "@/app/glossary/names/actions";
-import { HistoricalTerms } from "@/app/glossary/historical-terms/actions";
 
 interface Props {
   posts: Post[];
   names: Names[];
   terms: Terms[];
-  historicalTerms: HistoricalTerms[];
   open: boolean;
   onChange: (link: string) => void;
   onClose: () => void;
@@ -59,7 +57,6 @@ export const Search: React.FC<Props> = ({
   posts,
   names,
   terms,
-  historicalTerms,
   open,
   onChange,
   onClose,
@@ -142,7 +139,6 @@ export const Search: React.FC<Props> = ({
     ...postItems,
     ...names,
     ...terms,
-    ...historicalTerms,
     ...additionalItems,
     ...flattenMenu(menuItems),
   ]

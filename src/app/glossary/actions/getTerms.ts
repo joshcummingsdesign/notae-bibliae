@@ -1,13 +1,12 @@
 import path from "path";
 import { promises as fs } from "fs";
 
-export interface HistoricalTerms {
+export interface Terms {
   title: string;
   link: string;
 }
 
-export const getAllHistoricalTerms = async (): Promise<HistoricalTerms[]> => {
-  const pathname = "/glossary/historical-terms";
+export const getTerms = async (pathname: string): Promise<Terms[]> => {
   const filePath = path.join(process.cwd(), `src/app${pathname}/page.mdx`);
   const content = await fs.readFile(filePath, "utf-8");
   const matches = [...content.matchAll(/^##\s+(.*)$/gm)].map((m) => m[1]);

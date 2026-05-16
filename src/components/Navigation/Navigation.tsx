@@ -7,23 +7,16 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { MainMenu } from "./MainMenu";
 import { InPageNav } from "./InPageNav";
 import { Post } from "@/app/meditations/actions";
-import { Terms } from "@/app/glossary/liturgical-terms/actions";
+import { Terms } from "@/app/glossary/actions/getTerms";
 import { Names } from "@/app/glossary/names/actions";
-import { HistoricalTerms } from "@/app/glossary/historical-terms/actions";
 
 interface Props {
   posts: Post[];
   names: Names[];
   terms: Terms[];
-  historicalTerms: HistoricalTerms[];
 }
 
-export const Navigation: React.FC<Props> = ({
-  posts,
-  names,
-  terms,
-  historicalTerms,
-}) => {
+export const Navigation: React.FC<Props> = ({ posts, names, terms }) => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const pathname = usePathname();
@@ -54,7 +47,6 @@ export const Navigation: React.FC<Props> = ({
         posts={posts}
         names={names}
         terms={terms}
-        historicalTerms={historicalTerms}
         onMenuClick={toggleSidebar(true)}
       />
       <Sidebar open={sidebarOpen} onClose={toggleSidebar(false)}>

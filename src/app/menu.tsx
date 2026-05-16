@@ -3028,6 +3028,11 @@ export const menuItems: MenuNode[] = [
         link: "/glossary/historical-terms",
         inPageNav: true,
       },
+      {
+        title: "Theological Terms",
+        link: "/glossary/theological-terms",
+        inPageNav: true,
+      },
     ],
   },
 ];

@@ -6,15 +6,13 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLoading } from "../Providers";
 import { Post } from "@/app/meditations/actions";
-import { Terms } from "@/app/glossary/liturgical-terms/actions";
+import { Terms } from "@/app/glossary/actions/getTerms";
 import { Names } from "@/app/glossary/names/actions";
-import { HistoricalTerms } from "@/app/glossary/historical-terms/actions";
 
 interface Props {
   posts: Post[];
   names: Names[];
   terms: Terms[];
-  historicalTerms: HistoricalTerms[];
   onMenuClick: () => void;
 }
 
@@ -24,7 +22,6 @@ export const Header: React.FC<Props> = ({
   posts,
   names,
   terms,
-  historicalTerms,
   onMenuClick,
 }) => {
   const router = useRouter();
@@ -63,7 +60,6 @@ export const Header: React.FC<Props> = ({
         posts={posts}
         names={names}
         terms={terms}
-        historicalTerms={historicalTerms}
         open={open}
         onChange={(link) => {
           const linkPathname = link.split("?")[0].split("#")[0];
