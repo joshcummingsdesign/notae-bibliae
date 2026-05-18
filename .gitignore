@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# Generated at build time
+src/app/glossary/actions/terms.json
+
 # production
 /build
 

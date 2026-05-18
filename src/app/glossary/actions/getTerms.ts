@@ -6,12 +6,13 @@ export interface Terms {
   link: string;
 }
 
-const parseTerms = async (
-  filename: string,
-  pathname: string
-): Promise<Terms[]> => {
-  const filePath = path.join(process.cwd(), filename);
-  const content = await fs.readFile(filePath, "utf-8");
+export const TERMS_SOURCES = [
+  { file: "src/app/glossary/liturgical-terms/page.mdx", path: "/glossary/liturgical-terms" },
+  { file: "src/app/glossary/historical-terms/page.mdx", path: "/glossary/historical-terms" },
+  { file: "src/app/glossary/theological-terms/page.mdx", path: "/glossary/theological-terms" },
+] as const;
+
+export const parseTermsFromContent = (content: string, pathname: string): Terms[] => {
   const matches = [...content.matchAll(/^##\s+(.*)$/gm)].map((m) => m[1]);
 
   return matches.map((text) => ({
@@ -28,21 +29,21 @@ const parseTerms = async (
   }));
 };
 
-export const getTerms = async (): Promise<Terms[]> => {
-  const [liturgical, historical, theological] = await Promise.all([
-    parseTerms(
-      "src/app/glossary/liturgical-terms/page.mdx",
-      "/glossary/liturgical-terms"
-    ),
-    parseTerms(
-      "src/app/glossary/historical-terms/page.mdx",
-      "/glossary/historical-terms"
-    ),
-    parseTerms(
-      "src/app/glossary/theological-terms/page.mdx",
-      "/glossary/theological-terms"
-    ),
-  ]);
+export const generateAllTerms = async (): Promise<Terms[]> => {
+  const results = await Promise.all(
+    TERMS_SOURCES.map(async ({ file, path: pathname }) => {
+      const filePath = path.join(process.cwd(), file);
+      const content = await fs.readFile(filePath, "utf-8");
+      return parseTermsFromContent(content, pathname);
+    })
+  );
+  return results.flat();
+};
 
-  return [...liturgical, ...historical, ...theological];
+export const getTerms = async (): Promise<Terms[]> => {
+  if (process.env.NODE_ENV === "production") {
+    const terms = await import("./terms.json");
+    return terms.default;
+  }
+  return generateAllTerms();
 };
