@@ -54,7 +54,7 @@ const fontVariables = `${rediviva.variable} ${canterbury.variable} ${ebGaramond.
 export default function RootLayout({ children }: Props) {
   const posts = use(getAllPosts());
   const names = use(getAllNames());
-  const terms = use(getTerms());
+  const terms = getTerms();
   return (
     <Providers>
       <html lang="en" className={fontVariables}>
