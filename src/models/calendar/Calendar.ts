@@ -743,7 +743,7 @@ export class Calendar {
       },
       {
         date: easter.add(42, "day").format("YYYY-MM-DD"),
-        title: "Seventh Sunday of Easter (Sunday After Ascension Day)",
+        title: "Sunday After Ascension Day",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
