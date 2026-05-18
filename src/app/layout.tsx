@@ -54,10 +54,7 @@ const fontVariables = `${rediviva.variable} ${canterbury.variable} ${ebGaramond.
 export default function RootLayout({ children }: Props) {
   const posts = use(getAllPosts());
   const names = use(getAllNames());
-  const liturgicalTerms = use(getTerms("/glossary/liturgical-terms"));
-  const historicalTerms = use(getTerms("/glossary/historical-terms"));
-  const theologicalTerms = use(getTerms("/glossary/theological-terms"));
-  const terms = [...liturgicalTerms, ...historicalTerms, ...theologicalTerms];
+  const terms = use(getTerms());
   return (
     <Providers>
       <html lang="en" className={fontVariables}>

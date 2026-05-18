@@ -6,8 +6,11 @@ export interface Terms {
   link: string;
 }
 
-export const getTerms = async (pathname: string): Promise<Terms[]> => {
-  const filePath = path.join(process.cwd(), `src/app${pathname}/page.mdx`);
+const parseTerms = async (
+  filename: string,
+  pathname: string
+): Promise<Terms[]> => {
+  const filePath = path.join(process.cwd(), filename);
   const content = await fs.readFile(filePath, "utf-8");
   const matches = [...content.matchAll(/^##\s+(.*)$/gm)].map((m) => m[1]);
 
@@ -23,4 +26,23 @@ export const getTerms = async (pathname: string): Promise<Terms[]> => {
         .trim()
         .replace(/\s+/g, "-"),
   }));
+};
+
+export const getTerms = async (): Promise<Terms[]> => {
+  const [liturgical, historical, theological] = await Promise.all([
+    parseTerms(
+      "src/app/glossary/liturgical-terms/page.mdx",
+      "/glossary/liturgical-terms"
+    ),
+    parseTerms(
+      "src/app/glossary/historical-terms/page.mdx",
+      "/glossary/historical-terms"
+    ),
+    parseTerms(
+      "src/app/glossary/theological-terms/page.mdx",
+      "/glossary/theological-terms"
+    ),
+  ]);
+
+  return [...liturgical, ...historical, ...theological];
 };
