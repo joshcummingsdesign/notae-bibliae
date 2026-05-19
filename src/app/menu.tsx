@@ -1437,6 +1437,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/all-creatures-of-our-god-and-king",
               },
               {
+                title: "All Hail the Power of Jesus' Name",
+                link: "/liturgy/music/hymns/all-hail-the-power-of-jesus-name",
+              },
+              {
                 title: "Amazing Grace",
                 link: "/liturgy/music/hymns/amazing-grace",
               },
@@ -1757,6 +1761,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Edmond Louis Budry",
                 link: "/liturgy/music/composers/edmond-louis-budry",
+              },
+              {
+                title: "Edward Perronet",
+                link: "/liturgy/music/composers/edward-perronet",
               },
               {
                 title: "Eleanor Farjeon",

@@ -861,6 +861,20 @@
         "link": "/liturgy/music/composers/paulinus-of-aquileia"
       },
       { "id": "year", "content": "8th Century" }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "All Hail the Power of Jesus' Name",
+        "link": "/liturgy/music/hymns/all-hail-the-power-of-jesus-name"
+      },
+      { "id": "occasion", "content": "Ordinary Time" },
+      {
+        "id": "author",
+        "content": "Edward Perronet",
+        "link": "/liturgy/music/composers/edward-perronet"
+      },
+      { "id": "year", "content": "1779" }
     ]
   ]
 }
