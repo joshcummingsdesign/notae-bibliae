@@ -1,6 +1,8 @@
 import dayjs, { Dayjs } from "dayjs";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import isBetween from "dayjs/plugin/isBetween";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 import { Calendar, SeasonName } from "../calendar";
 import { Collects, CollectItem } from "../collects";
 import { Communion, CommunionItem } from "../communion";
@@ -9,9 +11,12 @@ import { Lessons as LessonsModel } from "../lessons";
 import { stripMarkdownLinks, appendAnchorToMarkdownLink } from "@/utils/markdown";
 import { LectionaryDateMap, LectionaryItem, Lessons } from "./types";
 import { getCachedLectionary, setCachedLectionary } from "./cache";
+import { TIMEZONE } from "@/constants";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isBetween);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export class Lectionary {
   private calendar: Calendar;
@@ -53,7 +58,7 @@ export class Lectionary {
 
       // Get season for this date
       const season = seasons.find(s =>
-        currentDay.isBetween(dayjs(s.start), dayjs(s.end), "day", "[]")
+        currentDay.isBetween(dayjs.tz(s.start, TIMEZONE), dayjs.tz(s.end, TIMEZONE), "day", "[]")
       )?.name || "" as SeasonName | "";
 
       // Get observances from calendar or lessons
