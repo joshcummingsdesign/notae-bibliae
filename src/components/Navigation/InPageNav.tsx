@@ -31,7 +31,7 @@ export const InPageNav: React.FC<Props> = ({
 
   const pathname = usePathname();
 
-  const [activeId, setActiveId] = useState("");
+  const [activeId, setActiveId] = useState("title");
 
   const headings = useRef<HTMLElement[]>([]);
 
@@ -48,11 +48,23 @@ export const InPageNav: React.FC<Props> = ({
   useEffect(() => {
     if (!shouldInit) return;
 
+    const isAtBottom = () => {
+      const scrollHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+      return window.innerHeight + window.scrollY >= scrollHeight - 50;
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
+            if (isAtBottom() && headings.current.length > 0) {
+              setActiveId(headings.current[headings.current.length - 1].id);
+            } else {
+              setActiveId(entry.target.id);
+            }
           }
         });
       },
@@ -63,9 +75,22 @@ export const InPageNav: React.FC<Props> = ({
       }
     );
 
+    const titleEl = document.getElementById("title");
+    if (titleEl) observer.observe(titleEl);
     headings.current.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (isAtBottom() && headings.current.length > 0) {
+        setActiveId(headings.current[headings.current.length - 1].id);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [pathname, headings.current, shouldInit]);
 
   return (
@@ -89,7 +114,7 @@ export const InPageNav: React.FC<Props> = ({
             href="#title"
             onClick={!isDesktop ? onClose : undefined}
           >
-            <ListItemText primary="Title" selected={true} />
+            <ListItemText primary="Title" selected={activeId === "title"} />
           </ListItemButton>
         </ListItem>
 
