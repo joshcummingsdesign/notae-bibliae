@@ -2358,8 +2358,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/bonaventure-of-bagnoregio",
               },
               {
-                title: "Boniface",
-                link: "/people/saints/medieval/boniface",
+                title: "Boniface of Mainz",
+                link: "/people/saints/medieval/boniface-of-mainz",
               },
               {
                 title: "Clare of Assisi",
