@@ -87,6 +87,12 @@ export const Content = () => {
         {!isLoading && <ThirdLesson lesson={lectionaryData!.evening.third} />}
         <h2>Concluding Rites</h2>
         <hr />
+        <h2>Apostles' Creed</h2>
+        {!isLoading && lectionaryData!.evening.third && (
+          <p>
+            [ <em>Stand</em> ]
+          </p>
+        )}
         <ApostlesCreed />
         <Salutation />
         <Suffrages />
