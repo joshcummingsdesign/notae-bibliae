@@ -1425,10 +1425,6 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/a-mighty-fortress-Is-our-god",
               },
               {
-                title: "Abendlied",
-                link: "/liturgy/music/hymns/abendlied",
-              },
-              {
                 title: "Again We Keep This Solemn Fast",
                 link: "/liturgy/music/hymns/again-we-keep-this-solemn-fast",
               },
@@ -1841,10 +1837,6 @@ export const menuItems: MenuNode[] = [
               {
                 title: "John Newton",
                 link: "/liturgy/music/composers/john-newton",
-              },
-              {
-                title: "Josef Rheinberger",
-                link: "/liturgy/music/composers/josef-rheinberger",
               },
               {
                 title: "Joseph M. Scriven",

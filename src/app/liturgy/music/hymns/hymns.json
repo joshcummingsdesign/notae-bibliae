@@ -463,20 +463,6 @@
     [
       {
         "id": "title",
-        "content": "Abendlied",
-        "link": "/liturgy/music/hymns/abendlied"
-      },
-      { "id": "occasion", "content": "Easter – Vespers" },
-      {
-        "id": "author",
-        "content": "Josef Rheinberger",
-        "link": "/liturgy/music/composers/josef-rheinberger"
-      },
-      { "id": "year", "content": "1855" }
-    ],
-    [
-      {
-        "id": "title",
         "content": "O How I Love Jesus",
         "link": "/liturgy/music/hymns/o-how-i-love-jesus"
       },
