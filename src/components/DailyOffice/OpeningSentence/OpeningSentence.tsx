@@ -9,6 +9,7 @@ import {
 import { BiblePassage } from "@/types/BiblePassage";
 import openingSentences from "./opening-sentences.json";
 import DOMPurify from "isomorphic-dompurify";
+import { Red } from "@/components/text/Red";
 
 type SentenceCategory = keyof typeof openingSentences;
 
@@ -58,11 +59,11 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
   const storeValues = (
     category: SentenceCategory,
     passage: string,
-    content: string
+    content: string,
   ) => {
     localStorage.setItem(
       `${id}-opening-sentence`,
-      JSON.stringify({ category, passage, content })
+      JSON.stringify({ category, passage, content }),
     );
   };
 
@@ -164,9 +165,14 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
             );
           }
           return (
-            <Passage
-              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
-            />
+            <div>
+              <Passage
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(content),
+                }}
+              />
+              <Red text="✠" />
+            </div>
           );
         })()}
       </PassageWrapper>
@@ -215,7 +221,7 @@ const ErrorText = styled("p")(({ theme }) => ({
   color: theme.palette.brand.red,
 }));
 
-const Passage = styled("div")({
+const Passage = styled("span")({
   ".nd": {
     fontVariantCaps: "small-caps",
   },
