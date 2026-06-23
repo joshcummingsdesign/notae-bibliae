@@ -861,6 +861,20 @@
         "link": "/liturgy/music/composers/edward-perronet"
       },
       { "id": "year", "content": "1779" }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Take My Life, and Let It Be",
+        "link": "/liturgy/music/hymns/take-my-life-and-let-it-be"
+      },
+      { "id": "occasion", "content": "Ordinary Time" },
+      {
+        "id": "author",
+        "content": "Frances Ridley Havergal",
+        "link": "/liturgy/music/composers/frances-ridley-havergal"
+      },
+      { "id": "year", "content": "1874" }
     ]
   ]
 }

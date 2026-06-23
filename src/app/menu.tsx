@@ -1641,6 +1641,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/hymns/spirit-of-the-living-god",
               },
               {
+                title: "Take My Life, and Let It Be",
+                link: "/liturgy/music/hymns/take-my-life-and-let-it-be",
+              },
+              {
                 title: "Take up Thy Cross, the Savior Said",
                 link: "/liturgy/music/hymns/take-up-thy-cross-the-savior-said",
               },
@@ -1777,6 +1781,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Folliott Sandford Pierpoint",
                 link: "/liturgy/music/composers/folliott-sandford-pierpoint",
+              },
+              {
+                title: "Frances Ridley Havergal",
+                link: "/liturgy/music/composers/frances-ridley-havergal",
               },
               {
                 title: "Frederick Whitfield",
