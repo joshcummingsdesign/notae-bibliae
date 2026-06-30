@@ -39,14 +39,6 @@ export const Magnificat: React.FC<Props> = ({
         </strong>{" "}
         (SDP 447, {tone})
       </p>
-      {currentAntiphon && (
-        <p>
-          <strong>
-            <Red text="Ant." />
-          </strong>{" "}
-          Same as above.
-        </p>
-      )}
     </>
   );
 };
