@@ -1,3 +1,5 @@
+"use client";
+import { styled } from "@mui/material";
 import { AntiphonData } from "@/models/calendar";
 import Link from "next/link";
 import { Fragment } from "react";
@@ -39,9 +41,26 @@ export const Antiphon: React.FC<Props> = ({
     <br />
     {antiphon.text.split("\n").map((line, i) => (
       <Fragment key={i}>
-        {line}
+        {line.split("*").map((text, j, parts) => (
+          <Fragment key={j}>
+            {text}
+            {j < parts.length - 1 && <StarText />}
+          </Fragment>
+        ))}
         <br />
       </Fragment>
     ))}
   </p>
 );
+
+const StarText = styled("span")(({ theme }) => ({
+  color: theme.palette.brand.red,
+  position: "relative",
+  paddingLeft: "0.25rem",
+
+  "&:before": {
+    content: "'*'",
+    position: "absolute",
+    fontSize: "1.5rem",
+  },
+}));
