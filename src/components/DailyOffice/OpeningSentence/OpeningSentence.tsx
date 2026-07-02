@@ -9,7 +9,6 @@ import {
 import { BiblePassage } from "@/types/BiblePassage";
 import openingSentences from "./opening-sentences.json";
 import DOMPurify from "isomorphic-dompurify";
-import { Red } from "@/components/text/Red";
 
 type SentenceCategory = keyof typeof openingSentences;
 
@@ -165,14 +164,11 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
             );
           }
           return (
-            <div>
-              <Passage
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(content),
-                }}
-              />
-              <Red text="✠" />
-            </div>
+            <Passage
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(content),
+              }}
+            />
           );
         })()}
       </PassageWrapper>
