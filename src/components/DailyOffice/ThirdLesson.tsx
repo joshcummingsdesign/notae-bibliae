@@ -12,14 +12,20 @@ interface Props {
 export const ThirdLesson: React.FC<Props> = ({ lesson }) => {
   return lesson ? (
     <>
-      <h2>Third Lesson</h2>
+      <h2>Optional Third Lesson</h2>
       <p>
         [ <em>Sit</em> ]
       </p>
       <TextWrap>
         <Markdown
           remarkPlugins={[remarkSmartypants]}
-          components={{ a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> }}
+          components={{
+            a: ({ href, children }) => (
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
+            ),
+          }}
         >
           {lesson.title}
         </Markdown>

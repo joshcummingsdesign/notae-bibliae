@@ -1,4 +1,8 @@
-import { OtCanticle } from "./OtCanticle";
+import {
+  BENEDICITE_CANTICLE,
+  CanticleLink,
+  getOtCanticle,
+} from "./OtCanticle";
 import Link from "next/link";
 
 interface Props {
@@ -15,7 +19,26 @@ export const TeDeum: React.FC<Props> = ({
   isChristmas,
 }) => {
   if (shouldOmit || !shouldSing) {
-    return <OtCanticle today={today} />;
+    const otCanticle = getOtCanticle(today);
+    const shouldShowAlternative = otCanticle.link !== BENEDICITE_CANTICLE.link;
+
+    return (
+      <>
+        <h2 id="old-testament-canticle">Old Testament Canticle</h2>
+        <p>
+          [ <em>Stand</em> ]
+        </p>
+        <CanticleLink canticle={BENEDICITE_CANTICLE} />
+        {shouldShowAlternative && (
+          <>
+            <p>
+              <strong>— or —</strong>
+            </p>
+            <CanticleLink canticle={otCanticle} />
+          </>
+        )}
+      </>
+    );
   }
 
   const facta = (

@@ -5,7 +5,19 @@ interface Props {
   today: string;
 }
 
-export const OtCanticle: React.FC<Props> = ({ today }) => {
+export interface OtCanticleDefinition {
+  link: string;
+  text: string;
+  notes: string;
+}
+
+export const BENEDICITE_CANTICLE: OtCanticleDefinition = {
+  link: "/liturgy/music/chants/benedicite",
+  text: "Benedicite",
+  notes: "SDP 367, Tone VII 4",
+};
+
+export const getOtCanticle = (today: string): OtCanticleDefinition => {
   const day = dayjs(today).day();
   const monday = 1;
   const tuesday = 2;
@@ -14,95 +26,69 @@ export const OtCanticle: React.FC<Props> = ({ today }) => {
   const friday = 5;
   const saturday = 6;
 
-  let canticle;
-
   switch (day) {
     case monday:
-      canticle = (
-        <Canticle
-          link="/liturgy/music/chants/song-of-isaiah"
-          text="Song of Isaiah"
-          notes="SDP 380"
-        />
-      );
-      break;
+      return {
+        link: "/liturgy/music/chants/song-of-isaiah",
+        text: "Song of Isaiah",
+        notes: "SDP 380",
+      };
     case tuesday:
-      canticle = (
-        <Canticle
-          link="/liturgy/music/chants/song-of-hezekiah"
-          text="Song of Hezekiah"
-          notes="SDP 381"
-        />
-      );
-      break;
+      return {
+        link: "/liturgy/music/chants/song-of-hezekiah",
+        text: "Song of Hezekiah",
+        notes: "SDP 381",
+      };
     case wednesday:
-      canticle = (
-        <Canticle
-          link="/liturgy/music/chants/song-of-hannah"
-          text="Song of Hannah"
-          notes="SDP 383"
-        />
-      );
-      break;
+      return {
+        link: "/liturgy/music/chants/song-of-hannah",
+        text: "Song of Hannah",
+        notes: "SDP 383",
+      };
     case thursday:
-      canticle = (
-        <Canticle
-          link="/liturgy/music/chants/song-of-moses-exod"
-          text="Song of Moses from Exod."
-          notes="SDP 386"
-        />
-      );
-      break;
+      return {
+        link: "/liturgy/music/chants/song-of-moses-exod",
+        text: "Song of Moses from Exod.",
+        notes: "SDP 386",
+      };
     case friday:
-      canticle = (
-        <Canticle
-          link="/liturgy/music/chants/song-of-habakkuk"
-          text="Song of Habakkuk"
-          notes="SDP 389"
-        />
-      );
-      break;
+      return {
+        link: "/liturgy/music/chants/song-of-habakkuk",
+        text: "Song of Habakkuk",
+        notes: "SDP 389",
+      };
     case saturday:
-      canticle = (
-        <Canticle
-          link="/liturgy/music/chants/song-of-moses-deut-pt-1"
-          text="Song of Moses from Deut."
-          notes="SDP 392"
-        />
-      );
-      break;
+      return {
+        link: "/liturgy/music/chants/song-of-moses-deut-pt-1",
+        text: "Song of Moses from Deut.",
+        notes: "SDP 392",
+      };
+    default:
+      return BENEDICITE_CANTICLE;
   }
-
-  if (!canticle) {
-    canticle = (
-      <Canticle
-        link="/liturgy/music/chants/benedicite"
-        text="Benedicite"
-        notes="SDP 367, Tone VII 4"
-      />
-    );
-  }
-
-  return canticle;
 };
 
-const Canticle: React.FC<{ link: string; text: string; notes: string }> = ({
-  text,
-  link,
-  notes,
+export const OtCanticle: React.FC<Props> = ({ today }) => {
+  return (
+    <>
+      <h2 id="old-testament-canticle">Old Testament Canticle</h2>
+      <p>
+        [ <em>Stand</em> ]
+      </p>
+      <CanticleLink canticle={getOtCanticle(today)} />
+    </>
+  );
+};
+
+export const CanticleLink: React.FC<{ canticle: OtCanticleDefinition }> = ({
+  canticle,
 }) => (
-  <>
-    <h2 id="old-testament-canticle">Old Testament Canticle</h2>
-    <p>
-      [ <em>Stand</em> ]
-    </p>
-    <p>
-      <strong>
-        <Link href={link} target="_blank">
-          {text}
-        </Link>
-      </strong>{" "}
-      ({notes})
-    </p>
-  </>
+  <p>
+    <strong>
+      <Link href={canticle.link} target="_blank">
+        {canticle.text}
+      </Link>
+    </strong>{" "}
+    ({canticle.notes})
+  </p>
 );

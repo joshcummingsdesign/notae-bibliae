@@ -117,7 +117,7 @@ const PrayerCard = ({
 
       {lessons.third && (
         <ReadingSection>
-          <ReadingTitle>Third Lesson</ReadingTitle>
+          <ReadingTitle>Optional Third Lesson</ReadingTitle>
           <MarkdownText>
             <Markdown remarkPlugins={[remarkSmartypants]}>
               {lessons.third.title}
@@ -132,9 +132,17 @@ const PrayerCard = ({
           <CommunionSection>
             <ReadingTitle>
               <TitleWithTooltip>
-                {lessons.communion.isAnteCommunion ? "Ante-Communion" : "Holy Communion"}
+                {lessons.communion.isAnteCommunion
+                  ? "Ante-Communion"
+                  : "Holy Communion"}
                 {lessons.communion.source && (
-                  <Tooltip title={<><strong>Source:</strong> {lessons.communion.source}</>}>
+                  <Tooltip
+                    title={
+                      <>
+                        <strong>Source:</strong> {lessons.communion.source}
+                      </>
+                    }
+                  >
                     <TooltipIcon />
                   </Tooltip>
                 )}
@@ -170,7 +178,9 @@ const PrayerCard = ({
                         </div>
                       )}
                       {collect.notes && (
-                        <div style={{ marginTop: collect.source ? "0.25rem" : 0 }}>
+                        <div
+                          style={{ marginTop: collect.source ? "0.25rem" : 0 }}
+                        >
                           <strong>Notes:</strong> {collect.notes}
                         </div>
                       )}
