@@ -1,259 +1,308 @@
 {
   "General": [
-    "1 Chron. 16:8,31",
-    "1 Chron. 23:28,30,32",
-    "Neh. 9:6",
-    "Ps. 19:14",
-    "Ps. 26:8",
-    "Ps. 43:3",
-    "Ps. 61:5,8",
-    "Ps. 74:16-17",
-    "Ps. 88:9",
-    "Ps. 96:9",
-    "Ps. 99:9",
-    "Ps. 122:1",
-    "Isa. 57:15",
-    "Amos 5:8",
-    "Hab. 2:20",
-    "Luke 10:22",
-    "John 4:23",
-    "John 8:12",
-    "Rom. 8:28",
-    "Rom. 11:33",
-    "Rom. 12:1",
-    "1 Cor. 6:20",
-    "1 Cor. 14:8",
-    "Gal. 5:22-23",
-    "Phil. 1:2",
-    "James 2:26",
-    "2 Peter 1:5-7",
-    "1 John 1:2-4",
-    "Jude 1:20-21"
-  ],
-  "Morning": [
-    "Ps. 5:3",
-    "Ps. 59:16-17",
-    "Ps. 119:145,147",
-    "Ps. 143:1,8",
-    "Isa. 33:2",
-    "Lam. 3:22-23",
-    "2 Thess. 3:5"
-  ],
-  "Evening": [
-    "Ps. 16:7,8",
-    "Ps. 104:23-24",
-    "Ps. 139:11-12",
-    "Ps. 141:2",
-    "Dan. 9:21",
-    "Luke 24:29",
-    "1 Peter 5:8-9"
+    {
+      "passage": "Hab. 2:20",
+      "text": "The Lord is in his holy temple: let all the earth keep silence before him."
+    },
+    {
+      "passage": "Isa. 57:15",
+      "text": "Thus saith the high and lofty One that inhabiteth eternity, whose name is Holy; I dwell in the high and holy place, with him also that is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones."
+    },
+    {
+      "passage": "John 4:23",
+      "text": "The hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him."
+    },
+    {
+      "passage": "Phil. 1:2",
+      "text": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ."
+    },
+    {
+      "passage": "Ps. 122:1",
+      "text": "I was glad when they said unto me, We will go into the house of the Lord."
+    },
+    {
+      "passage": "Ps. 141:2",
+      "text": "Let my prayer be set forth in thy sight as the incense; and let the lifting up of my hands be an evening sacrifice."
+    },
+    {
+      "passage": "Ps. 19:14",
+      "text": "Let the words of my mouth, and the meditation of my heart, be alway acceptable in thy sight, O Lord, my strength and my redeemer."
+    },
+    {
+      "passage": "Ps. 26:8",
+      "text": "Lord, I have loved the habitation of thy house, and the place where thine honour dwelleth."
+    },
+    {
+      "passage": "Ps. 43:3",
+      "text": "O send out thy light and thy truth, that they may lead me, and bring me unto thy holy hill, and to thy dwelling."
+    },
+    {
+      "passage": "Ps. 96:9",
+      "text": "O worship the Lord in the beauty of holiness; let the whole earth stand in awe of him."
+    }
   ],
   "Advent": [
-    "Num. 24:17",
-    "1 Sam. 2:10",
-    "Isa. 2:3",
-    "Isa. 40:3",
-    "Isa. 40:5",
-    "Jer. 23:5",
-    "Mal. 4:5,6",
-    "Matt. 3:2",
-    "Mark 1:14-15",
-    "Mark 13:25-26,32",
-    "Mark 13:35-36",
-    "Rom. 13:12",
-    "Heb. 12:25",
-    "Rev. 3:3",
-    "Rev. 3:11",
-    "Rev. 5:5",
-    "Rev. 16:15",
-    "Rev. 18:10",
-    "Rev. 19:1,2",
-    "Rev. 22:12",
-    "Rev. 22:16"
+    {
+      "passage": "Isa. 40:3",
+      "text": "Prepare ye the way of the Lord, make straight in the desert a highway for our God."
+    },
+    {
+      "passage": "Mark 13:35-36",
+      "text": "Watch ye, for ye know not when the master of the house cometh, at even, or at midnight, or at the cock-crowing, or in the morning: lest coming suddenly he find you sleeping."
+    },
+    {
+      "passage": "Matt. 3:2",
+      "text": "Repent ye; for the Kingdom of heaven is at hand."
+    }
   ],
   "Christmastide": [
-    "Matt. 1:15-16",
-    "Matt. 1:20-21",
-    "Luke 2:7",
-    "Luke 2:10-11",
-    "Luke 2:21",
-    "John 1:14",
-    "Rev. 21:3"
+    {
+      "passage": "Luke 2:10-11",
+      "text": "Behold, I bring you good tidings of great joy, which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord."
+    },
+    {
+      "passage": "Rev. 21:3",
+      "text": "Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God."
+    }
   ],
   "Epiphanytide": [
-    "Isa. 60:1",
-    "Isa. 60:6",
-    "Isa. 52:1",
-    "Isa. 49:6",
-    "Isa. 60:3",
-    "Mal. 1:11",
-    "Matt. 2:9",
-    "Matt. 2:10",
-    "Matt. 3:14-15",
-    "Matt. 2:11",
-    "Mark 1:9-11",
-    "John 1:31",
-    "John 1:33-34"
+    {
+      "passage": "Isa. 52:1",
+      "text": "Awake, awake; put on thy strength, O Zion; put on thy beautiful garments, O Jerusalem."
+    },
+    {
+      "passage": "Isa. 60:3",
+      "text": "The Gentiles shall come to thy light, and kings to the brightness of thy rising."
+    },
+    {
+      "passage": "Mal. 1:11",
+      "text": "From the rising of the sun even unto the going down of the same my Name shall be great among the Gentiles; and in every place incense shall be offered unto my Name, and a pure offering: for my Name shall be great among the heathen, saith the Lord of hosts."
+    }
   ],
   "Lent": [
-    "Ex. 20:20",
-    "Ps. 51:3",
-    "Ps. 51:17",
-    "Isa. 55:7",
-    "Isa. 58:1",
-    "Dan. 9:9-10",
-    "Joel 2:13",
-    "Joel 2:17",
-    "Mark 2:18-20",
-    "Mark 8:34",
-    "Luke 15:18-19",
-    "Titus 3:3-5",
-    "Heb. 12:1,2",
-    "James 1:21",
-    "James 1:27",
-    "1 Peter 2:11",
-    "1 John 1:8-9",
-    "Rev. 3:2",
-    "Rev. 3:3",
-    "Rev. 12:17",
-    "Rev. 18:2,4-5",
-    "Rev. 21:8",
-    "Rev. 21:22,27"
+    {
+      "passage": "1 John 1:8-9",
+      "text": "If we say that we have no sin, we deceive ourselves, and the truth is not in us; but if we confess our sins, God is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
+    },
+    {
+      "passage": "Dan. 9:9-10",
+      "text": "To the Lord our God belong mercies and forgivenesses, though we have rebelled against him; neither have we obeyed the voice of the Lord our God, to walk in his laws which he set before us."
+    },
+    {
+      "passage": "Joel 2:13",
+      "text": "Rend your heart, and not your garments; and turn unto the Lord your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil."
+    },
+    {
+      "passage": "Luke 15:18-19",
+      "text": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee, and am no more worthy to be called thy son."
+    },
+    {
+      "passage": "Ps. 51:17",
+      "text": "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."
+    },
+    {
+      "passage": "Ps. 51:3",
+      "text": "I acknowledge my transgressions, and my sin is ever before me."
+    }
   ],
   "Passiontide": [
-    "Isa. 50:6",
-    "Isa. 53:3-4",
-    "Isa. 53:5",
-    "Isa. 53:6",
-    "Isa. 53:12",
-    "Jer. 17:13",
-    "Lam. 1:12",
-    "Eph. 1:7",
-    "Phil. 2:8",
-    "Heb. 12:1-2",
-    "Rev. 5:12"
+    {
+      "passage": "Eph. 1:7",
+      "text": "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace."
+    },
+    {
+      "passage": "Isa. 53:6",
+      "text": "All we like sheep have gone astray; we have turned every one to his own way; and the Lord hath laid on him the iniquity of us all."
+    },
+    {
+      "passage": "Lam. 1:12",
+      "text": "Is it nothing to you, all ye that pass by? behold, and see if there be any sorrow like unto my sorrow which is done unto me, wherewith the Lord hath afflicted me."
+    }
   ],
   "Eastertide": [
-    "Ps. 118:24",
-    "Isa. 25:8",
-    "Mark 16:6",
-    "Luke 24:34",
-    "John 11:24",
-    "John 20:27-28",
-    "Acts 10:39-40",
-    "Rom. 6:9",
-    "1 Cor. 15:19-20",
-    "1 Cor. 15:21-22",
-    "1 Cor. 15:52",
-    "1 Cor. 15:57",
-    "1 Peter 1:3,4",
-    "1 Peter 3:18",
-    "1 Peter 3:21",
-    "1 John 5:4",
-    "Rev. 1:17"
+    {
+      "passage": "1 Cor. 15:57",
+      "text": "Thanks be to God, which giveth us the victory through our Lord Jesus Christ."
+    },
+    {
+      "passage": "Col. 3:1",
+      "text": "If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God."
+    },
+    {
+      "passage": "Mark 16:6; Luke 24:34",
+      "text": "He is risen. The Lord is risen indeed."
+    },
+    {
+      "passage": "Ps. 118:24",
+      "text": "This is the day which the Lord hath made; we will rejoice and be glad in it."
+    }
   ],
   "Ascensiontide": [
-    "Acts 1:11",
-    "Col. 3:1",
-    "Heb. 4:14,16",
-    "Heb. 9:24",
-    "1 Peter 3:22",
-    "Rev. 4:2-3",
-    "Rev. 3:21",
-    "Rev. 4:10"
+    {
+      "passage": "Heb. 4:14,16",
+      "text": "Seeing that we have a great High Priest, that is passed into the heavens, Jesus the Son of God, let us come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need."
+    },
+    {
+      "passage": "Heb. 9:24",
+      "text": "Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself, now to appear in the presence of God for us."
+    }
   ],
   "Whitsuntide": [
-    "Ps. 46:4",
-    "John 14:15-16",
-    "John 16:7",
-    "John 16:13-14",
-    "Acts 2:1",
-    "Acts 1:8",
-    "Gal. 4:6",
-    "Rev. 22:17"
+    {
+      "passage": "Acts 1:8",
+      "text": "Ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth."
+    },
+    {
+      "passage": "Gal. 4:6",
+      "text": "Because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father."
+    },
+    {
+      "passage": "Ps. 46:4",
+      "text": "There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the Most High."
+    },
+    {
+      "passage": "Rev. 22:17",
+      "text": "The Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And whosoever will, let him take the water of life freely."
+    }
   ],
-  "Trinity Sunday": [
-    "Isa. 6:3",
-    "Matt. 28:19",
-    "Rom. 11:33",
-    "1 John 5:7",
-    "Rev. 4:8"
+  "Trinitytide": [
+    {
+      "passage": "Isa. 6:3",
+      "text": "Holy, holy, holy, is the Lord of hosts: the whole earth is full of his glory."
+    },
+    {
+      "passage": "Rev. 4:8",
+      "text": "Holy, holy, holy, Lord God Almighty, which was, and is, and is to come."
+    }
   ],
-  "Corpus Christi": ["John 6:51", "John 6:54", "1 Cor. 10:16"],
-  "Transfiguration": ["Isa. 60:1", "Matt. 17:1", "1 John 3:2"],
-  "Holy Name of Jesus": ["Luke 2:21", "Col. 3:17", "Phil. 2:8"],
+  "Blessed Virgin Mary": [
+    {
+      "passage": "Gal. 4:4",
+      "text": "When the fullness of the time was come, God sent forth his Son made of a Woman, made under the Law, to redeem them that were under the Law, that we might receive the adoption of sons."
+    },
+    {
+      "passage": "Isa. 7:14",
+      "text": "Behold, a Virgin shall conceive and bear a Son, and shall call his Name Immanuel."
+    },
+    {
+      "passage": "John 19:25-26",
+      "text": "Now there stood by the Cross of Jesus, his Mother, and his Mother’s sister, Mary the wife of Cleopas, and Mary Magdalene. When Jesus therefore saw his Mother, and the disciple standing by, whom he loved, he saith unto his Mother, Woman, behold thy son."
+    },
+    {
+      "passage": "Luke 1:28",
+      "text": "The Angel Gabriel came unto Mary, and said, Hail thou that art highly favoured, the Lord is with thee: Blessed art thou among women."
+    },
+    {
+      "passage": "Luke 1:41-42",
+      "text": "When Elizabeth heard the salutation of Mary, the babe leaped in her womb, and Elizabeth was filled with the Holy Ghost. And she spake out with a loud voice, and said, Blessed art thou among women, and blessed is the Fruit of thy womb."
+    }
+  ],
   "Angels": [
-    "Ps. 103:20",
-    "Matt. 13:47-49",
-    "Heb. 1:6",
-    "Rev. 12:7",
-    "Rev. 18:1"
-  ],
-  "Virgin Mary": [
-    "Isa. 7:14",
-    "Prov. 31:25-26",
-    "Luke 1:28",
-    "Luke 1:41-42",
-    "Luke 1:46-48",
-    "Luke 11:17-19",
-    "John 2:5-6",
-    "Gal. 4:4",
-    "Rev. 12:1"
+    {
+      "passage": "Ps. 103:20",
+      "text": "O praise the Lord, ye Angels of his, ye that excel in strength; ye that fulfil his commandment, and hearken unto the voice of his word."
+    }
   ],
   "Apostles": [
-    "Matt. 19:28",
-    "Luke 6:12-13",
-    "Luke 11:49",
-    "Acts 2:42",
-    "Acts 5:12",
-    "Eph. 2:19-20",
-    "Jude 17",
-    "Rev. 21:10,14"
+    {
+      "passage": "Acts 2:42",
+      "text": "And they continued stedfastly in the Apostles’ doctrine and fellowship, and in the breaking of bread, and in prayers."
+    },
+    {
+      "passage": "Acts 5:12",
+      "text": "By the hands of the Apostles were many signs and wonders wrought among the people."
+    },
+    {
+      "passage": "Eph. 2:19-20",
+      "text": "Now therefore ye are no more strangers and foreigners, but fellow-citizens with the Saints, and of the household of God; and are built upon the foundation of the Apostles and Prophets, Jesus Christ himself being the chief corner-stone."
+    },
+    {
+      "passage": "Jude 17",
+      "text": "Beloved, remember ye the words which were spoken before of the Apostles of our Lord Jesus Christ."
+    },
+    {
+      "passage": "Luke 6:12-13",
+      "text": "And it came to pass in those days, that Jesus went out into a mountain to pray, and continued all night in prayer to God. And when it was day, he called unto him his disciples: and of them he chose twelve; whom also he named Apostles."
+    },
+    {
+      "passage": "Matt. 19:28",
+      "text": "Jesus said to his Apostles, Verily I say unto you, in the regeneration when the Son of man shall sit in the throne of his glory, ye also shall sit upon twelve thrones, judging the twelve tribes of Israel."
+    },
+    {
+      "passage": "Rev. 21:10,14",
+      "text": "The Angel carried me away in the Spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of Heaven from God. And the wall of the city had twelve foundations, and in them the names of the twelve Apostles of the Lamb."
+    }
   ],
   "Martyrs": [
-    "Matt. 10:22",
-    "Luke 12:8",
-    "Heb. 11:37-38",
-    "James 1:12",
-    "Rev. 6:9-10",
-    "Rev. 7:14"
+    {
+      "passage": "James 1:12",
+      "text": "Blessed is the man that endureth temptation; for, when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him."
+    },
+    {
+      "passage": "Luke 12:8",
+      "text": "Jesus said, I say unto you, Whosoever shall confess me before men, him shall the Son of man also confess before the Angels of God."
+    },
+    {
+      "passage": "Matt. 10:22",
+      "text": "Jesus said, Ye shall be hated of all men for my Name’s sake: but he that endureth to the end shall be saved."
+    },
+    {
+      "passage": "Rev. 7:14",
+      "text": "These are they which have come out of great tribulation, and have washed their robes, and made them white in the blood of the Lamb."
+    }
   ],
-  "Holy Women": [
-    "Prov. 31:10",
-    "Prov. 31:29-30",
-    "Matt. 25:4,10",
-    "2 Cor. 11:2"
-  ],
-  "Bishops and Priests": ["2 Tim. 4:1"],
   "Saints": [
-    "Eph. 2:19",
-    "Col. 1:12",
-    "Phil. 3:20",
-    "Heb. 11:10",
-    "Jude 14-15",
-    "Rev. 7:15",
-    "Rev. 7:16",
-    "Rev. 6:17",
-    "Rev. 17:14",
-    "Rev. 19:7-8"
+    {
+      "passage": "Col. 1:12",
+      "text": "Give thanks to the Father, which hath made us meet to be partakers of the inheritance of the Saints in light."
+    },
+    {
+      "passage": "Eph. 2:19",
+      "text": "Ye are no more strangers and foreigners; but fellow citizens with the Saints, and of the household of God."
+    },
+    {
+      "passage": "Rev. 19:7-8",
+      "text": "The marriage of the Lamb is come, and his wife hath made herself ready. And to her was granted, that she should be arrayed in fine linen, clean and white: for the fine linen is the righteousness of the Saints."
+    },
+    {
+      "passage": "Rev. 7:15",
+      "text": "They are before the throne of God, and serve him day and night in his temple: and he that sitteth on the throne shall dwell among them."
+    },
+    {
+      "passage": "Rev. 7:16",
+      "text": "They shall hunger no more, neither thirst any more, neither shall the sun light on them, nor any heat."
+    },
+    {
+      "passage": "Rev. 7:17",
+      "text": "The Lamb, which is in the midst of the throne, shall feed them, and shall lead them unto living fountains of waters: and God shall wipe away all tears from their eyes."
+    }
   ],
   "Faithful Departed": [
-    "Job 19:25-26",
-    "Isa. 25:7-8",
-    "Isa. 51:11",
-    "John 14:2-3",
-    "1 Cor. 15:21-22",
-    "1 Cor. 15:51-52",
-    "1 Thess. 4:16",
-    "Rev. 14:13",
-    "Rev. 20:12",
-    "Rev. 20:13"
+    {
+      "passage": "1 Cor. 15:21-22",
+      "text": "For since by man came death, by Man came also the resurrection of the dead. For as in Adam all die, even so in Christ shall all be made alive."
+    },
+    {
+      "passage": "Isa. 51:11",
+      "text": "The redeemed of the Lord shall return, and come with singing unto Sion; and everlasting joy shall be upon their head: they shall obtain gladness and joy; and sorrow and mourning shall flee away."
+    },
+    {
+      "passage": "Job 19:25-26",
+      "text": "I know that my Redeemer liveth, and that he shall stand at the latter day upon the earth; and though this body be destroyed, yet in my flesh shall I see God: whom I shall see for myself, and mine eyes shall behold, and not as a stranger."
+    },
+    {
+      "passage": "John 14:2-3",
+      "text": "Jesus said, In my Father's house are many mansions: if it were not so, I would have told you. I go to prepare a place for you. And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also."
+    }
   ],
   "Thanksgiving": [
-    "Ps. 105:1",
-    "Ps. 136:1",
-    "Ps. 147:7-8",
-    "Prov. 3:9-10",
-    "Prov. 3:19-20"
+    {
+      "passage": "Prov. 3:19-20",
+      "text": "The Lord by wisdom hath founded the earth; by understanding hath he established the heavens. By his knowledge the depths are broken up, and the clouds drop down the dew."
+    },
+    {
+      "passage": "Prov. 3:9-10",
+      "text": "Honour the Lord with thy substance, and with the firstfruits of all thine increase: so shall thy barns be filled with plenty, and thy presses shall burst out with new wine."
+    }
   ]
 }
