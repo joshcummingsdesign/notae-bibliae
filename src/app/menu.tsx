@@ -1170,6 +1170,10 @@ export const menuItems: MenuNode[] = [
             link: "/liturgy/prayers/sign-of-the-cross",
           },
           {
+            title: "Eastern Cross",
+            link: "/liturgy/prayers/eastern-cross",
+          },
+          {
             title: "Our Father",
             link: "/liturgy/prayers/our-father",
           },
