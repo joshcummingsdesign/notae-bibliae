@@ -1242,7 +1242,6 @@ export const menuItems: MenuNode[] = [
           },
         ],
       },
-
       {
         title: "Music",
         link: "/liturgy/music",
@@ -1915,6 +1914,29 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/composers/william-w-how",
               },
             ],
+          },
+        ],
+      },
+      {
+        title: "Vesture",
+        link: "/liturgy/vesture",
+        priority: 0.7,
+        children: [
+          {
+            title: "Vestments",
+            link: "/liturgy/vesture/vestments",
+          },
+          {
+            title: "Clerical Dress",
+            link: "/liturgy/vesture/clerical-dress",
+          },
+          {
+            title: "Monastic Habit",
+            link: "/liturgy/vesture/monastic-habit",
+          },
+          {
+            title: "Liturgical Colors",
+            link: "/liturgy/vesture/liturgical-colors",
           },
         ],
       },
