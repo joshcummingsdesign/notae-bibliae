@@ -812,7 +812,7 @@ describe("Calendar", () => {
         );
       });
 
-      test("rank 7 Sundays suppressed on Principal Feasts", () => {
+      test("rank 7 Sundays suppressed on rank 1-3 observances", () => {
         const testYears = ["2025-11-30", "2024-01-01", "2027-01-01"];
 
         for (const startDate of testYears) {
@@ -820,10 +820,10 @@ describe("Calendar", () => {
           const items = calendar.getAll();
 
           for (const dayItems of Object.values(items)) {
-            const hasPrincipalFeast = dayItems.some(
-              (item) => item.isPrincipalFeast,
+            const hasHighRankObservance = dayItems.some(
+              (item) => item.rank <= 3,
             );
-            if (hasPrincipalFeast) {
+            if (hasHighRankObservance) {
               const hasRank7Sunday = dayItems.some(
                 (item) => item.rank === 7 && item.isSunday,
               );
@@ -831,6 +831,28 @@ describe("Calendar", () => {
             }
           }
         }
+      });
+
+      test("All Souls' Day omits the Ordinary Sunday when they collide", () => {
+        const calendar = createCalendar("2025-11-02");
+        const ranked = calendar.getByDate("2025-11-02", true);
+        const unranked = calendar.getByDate("2025-11-02", false);
+
+        expect(
+          ranked.some((item) => item.title.includes("All Souls' Day")),
+        ).toBe(true);
+        expect(ranked.some((item) => item.title.includes("Sunday"))).toBe(
+          false,
+        );
+
+        expect(
+          unranked.some((item) => item.title.includes("All Souls' Day")),
+        ).toBe(true);
+        expect(
+          unranked.some((item) =>
+            item.title.includes("Twentieth Sunday After Trinity"),
+          ),
+        ).toBe(true);
       });
 
       test("no displaceable feasts appear on Holy Week days", () => {

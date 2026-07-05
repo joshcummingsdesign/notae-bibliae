@@ -1111,12 +1111,14 @@ export class Calendar {
     return Object.entries(grouped)
       .sort(([a], [b]) => a.localeCompare(b))
       .reduce<DateMap>((acc, [date, items]) => {
-        const hasPrincipalFeast = items.some((a) => a.rank === 2);
+        const hasHighRankObservance = items.some((a) => a.rank <= 3);
 
         // Ranks 7-9 always show (Sunday, Vigil, Note)
-        // But Sundays (rank 7) don't show on Principal Feasts
+        // But Ordinary Sundays (rank 7) don't show on rank 1-3 observances
         const alwaysShow = items.filter((a) => {
-          if (a.rank === 7 && a.isSunday && hasPrincipalFeast) return false;
+          if (a.rank === 7 && a.isSunday && hasHighRankObservance) {
+            return false;
+          }
           return a.rank >= 7;
         });
 
