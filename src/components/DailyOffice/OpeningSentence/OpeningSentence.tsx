@@ -10,6 +10,21 @@ interface Props {
   id: string;
 }
 
+const quoteEntities: Record<string, string> = {
+  "&quot;": '"',
+  "&#34;": '"',
+  "&apos;": "'",
+  "&#39;": "'",
+};
+
+const smartQuotes = (text: string) => {
+  return text
+    .replace(/&quot;|&#34;|&apos;|&#39;/g, (entity) => quoteEntities[entity])
+    .replace(/"([^"]*)"/g, "“$1”")
+    .replace(/(\w)'(\w)/g, "$1’$2")
+    .replace(/(\w)'(?=\s|[.,;:!?)]|$)/g, "$1’");
+};
+
 export const OpeningSentence: React.FC<Props> = ({ id }) => {
   const categories = Object.keys(openingSentences) as SentenceCategory[];
   const [category, setCategory] = useState<SentenceCategory>("General");
@@ -95,7 +110,7 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
         />
       </Wrapper>
       <PassageWrapper>
-        <span>{passage.text}</span>
+        <span>{smartQuotes(passage.text)}</span>
       </PassageWrapper>
     </>
   );
