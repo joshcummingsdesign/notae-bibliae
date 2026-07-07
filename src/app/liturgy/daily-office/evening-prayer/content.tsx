@@ -51,7 +51,7 @@ export const Content = () => {
         <h2>Introductory Rites</h2>
         <hr />
         <h2>Opening Sentences</h2>
-        <OpeningSentence id="daily-office" />
+        <OpeningSentence id="daily-office" office="evening" />
         <GeneralConfession />
         <OurFather />
         <h2>Office Proper</h2>

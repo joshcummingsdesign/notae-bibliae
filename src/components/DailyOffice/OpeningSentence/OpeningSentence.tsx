@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import openingSentences from "./opening-sentences.json";
 
-type SentenceCategory = keyof typeof openingSentences;
-type OpeningSentenceEntry = (typeof openingSentences)[SentenceCategory][number];
+type Office = keyof typeof openingSentences;
+type SentenceCategory = keyof (typeof openingSentences)[Office];
+type OpeningSentenceEntry = (typeof openingSentences)[Office][SentenceCategory][number];
 
 interface Props {
   id: string;
+  office: Office;
 }
 
 const quoteEntities: Record<string, string> = {
@@ -25,17 +27,18 @@ const smartQuotes = (text: string) => {
     .replace(/(\w)'(?=\s|[.,;:!?)]|$)/g, "$1’");
 };
 
-export const OpeningSentence: React.FC<Props> = ({ id }) => {
-  const categories = Object.keys(openingSentences) as SentenceCategory[];
+export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
+  const sentences = openingSentences[office];
+  const categories = Object.keys(sentences) as SentenceCategory[];
   const [category, setCategory] = useState<SentenceCategory>("General");
-  const [passages, setPassages] = useState(openingSentences[category]);
+  const [passages, setPassages] = useState(sentences[category]);
   const [passage, setPassage] = useState(passages[0]);
   const [hasLoadedStoredValues, setHasLoadedStoredValues] = useState(false);
 
   const handleCategoryChange = (value: SentenceCategory) => {
     setCategory(value);
     setPassages(() => {
-      const p = openingSentences[value];
+      const p = sentences[value];
       setPassage(p[0]);
       return p;
     });
@@ -47,7 +50,7 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
 
   const storeValues = (category: SentenceCategory, passage: string) => {
     localStorage.setItem(
-      `${id}-opening-sentence`,
+      `${id}-${office}-opening-sentence`,
       JSON.stringify({ category, passage }),
     );
   };
@@ -56,7 +59,7 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
     category: SentenceCategory;
     passage: string;
   } | null => {
-    const v = localStorage.getItem(`${id}-opening-sentence`);
+    const v = localStorage.getItem(`${id}-${office}-opening-sentence`);
     if (v) {
       return JSON.parse(v);
     }
@@ -67,7 +70,7 @@ export const OpeningSentence: React.FC<Props> = ({ id }) => {
     const storedValues = getStoredValues();
     if (storedValues) {
       setCategory(storedValues.category);
-      const storedPassages = openingSentences[storedValues.category];
+      const storedPassages = sentences[storedValues.category];
       setPassages(storedPassages);
       setPassage(
         storedPassages.find((p) => p.passage === storedValues.passage)!,
