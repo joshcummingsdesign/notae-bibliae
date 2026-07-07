@@ -66,6 +66,7 @@ Poetry with indentation and symbols.
 \R = ℟
 \L = All:
 \B = [Bow]
+\H = [Bow Head]
 \G = [Genuflect]
 \U = [Rise]
 _ = ·

@@ -16,6 +16,8 @@ const symbols = {
   "\\R": '<span class="symbol r"></span>',
   "\\B":
     '<span class="brackets">[ <span class="symbol bow">Bow</span> ]</span>',
+  "\\H":
+    '<span class="brackets">[ <span class="symbol bow">Bow Head</span> ]</span>',
   "\\G":
     '<span class="brackets">[ <span class="symbol bow">Genuflect</span> ]</span>',
   "\\U":
@@ -69,7 +71,7 @@ export const Poetry: React.FC<Props> = ({ children }) => {
       return (
         <React.Fragment key={i}>
           {parse(
-            replaceSymbols(child.replaceAll("|  ", "").replaceAll("|", ""))
+            replaceSymbols(child.replaceAll("|  ", "").replaceAll("|", "")),
           )}
         </React.Fragment>
       );
