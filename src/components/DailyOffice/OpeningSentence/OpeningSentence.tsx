@@ -4,8 +4,10 @@ import { Autocomplete, styled, TextField } from "@mui/material";
 import openingSentences from "./opening-sentences.json";
 
 type Office = keyof typeof openingSentences;
-type SentenceCategory = keyof (typeof openingSentences)[Office];
-type OpeningSentenceEntry = (typeof openingSentences)[Office][SentenceCategory][number];
+type OpeningSentenceEntry = {
+  passage: string;
+  text: string;
+};
 
 interface Props {
   id: string;
@@ -28,41 +30,44 @@ const smartQuotes = (text: string) => {
 };
 
 export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
-  const sentences = openingSentences[office];
-  const categories = Object.keys(sentences) as SentenceCategory[];
-  const [category, setCategory] = useState<SentenceCategory>("General");
-  const [passages, setPassages] = useState(sentences[category]);
-  const [passage, setPassage] = useState(passages[0]);
+  const sentences = openingSentences[office] as Record<
+    string,
+    OpeningSentenceEntry[]
+  >;
+  const categories = Object.keys(sentences);
+  const [category, setCategory] = useState("General");
   const [hasLoadedStoredValues, setHasLoadedStoredValues] = useState(false);
+  const storageKey = `${id}-${office}-opening-sentence`;
+  const passages = sentences[category];
 
-  const handleCategoryChange = (value: SentenceCategory) => {
+  const handleCategoryChange = (value: string) => {
     setCategory(value);
-    setPassages(() => {
-      const p = sentences[value];
-      setPassage(p[0]);
-      return p;
-    });
   };
 
-  const handlePassageChange = (value: OpeningSentenceEntry) => {
-    setPassage(value);
+  const isSentenceCategory = (value: unknown): value is string => {
+    return typeof value === "string" && categories.includes(value);
   };
 
-  const storeValues = (category: SentenceCategory, passage: string) => {
-    localStorage.setItem(
-      `${id}-${office}-opening-sentence`,
-      JSON.stringify({ category, passage }),
-    );
+  const storeValues = (category: string) => {
+    localStorage.setItem(storageKey, JSON.stringify({ category }));
   };
 
-  const getStoredValues = (): {
-    category: SentenceCategory;
-    passage: string;
-  } | null => {
-    const v = localStorage.getItem(`${id}-${office}-opening-sentence`);
-    if (v) {
-      return JSON.parse(v);
+  const getStoredValues = (): { category: string } | null => {
+    const v = localStorage.getItem(storageKey);
+    if (!v) {
+      return null;
     }
+
+    try {
+      const storedValues = JSON.parse(v) as { category?: unknown };
+
+      if (isSentenceCategory(storedValues.category)) {
+        return { category: storedValues.category };
+      }
+    } catch {
+      return null;
+    }
+
     return null;
   };
 
@@ -70,11 +75,6 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
     const storedValues = getStoredValues();
     if (storedValues) {
       setCategory(storedValues.category);
-      const storedPassages = sentences[storedValues.category];
-      setPassages(storedPassages);
-      setPassage(
-        storedPassages.find((p) => p.passage === storedValues.passage)!,
-      );
     }
 
     setHasLoadedStoredValues(true);
@@ -85,13 +85,13 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
       return;
     }
 
-    storeValues(category, passage.passage);
-  }, [category, hasLoadedStoredValues, passage]);
+    storeValues(category);
+  }, [category, hasLoadedStoredValues]);
 
   return (
     <>
       <Wrapper>
-        <Autocomplete<SentenceCategory, false, true>
+        <Autocomplete<string, false, true>
           disablePortal
           value={category}
           disableClearable={true}
@@ -99,21 +99,14 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
           onChange={(_, value) => handleCategoryChange(value)}
           renderInput={(params) => <TextInput {...params} label="Category" />}
         />
-        <Autocomplete<OpeningSentenceEntry, false, true>
-          disablePortal
-          value={passage}
-          disableClearable={true}
-          options={passages}
-          getOptionLabel={(option) => option.passage}
-          isOptionEqualToValue={(option, value) =>
-            option.passage === value.passage
-          }
-          onChange={(_, value) => handlePassageChange(value)}
-          renderInput={(params) => <TextInput {...params} label="Passage" />}
-        />
       </Wrapper>
       <PassageWrapper>
-        <span>{smartQuotes(passage.text)}</span>
+        {passages.map((passage) => (
+          <p key={passage.passage}>
+            <span>{smartQuotes(passage.text)} </span>
+            <em>{passage.passage}</em>.
+          </p>
+        ))}
       </PassageWrapper>
     </>
   );
@@ -121,12 +114,10 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
 
 const Wrapper = styled("div")({
   display: "flex",
-  flexDirection: "row",
 
   ".MuiAutocomplete-root": {
     width: "100%",
   },
-  gap: 16,
 });
 
 const TextInput = styled(TextField)(({ theme }) => ({
@@ -152,6 +143,11 @@ const TextInput = styled(TextField)(({ theme }) => ({
   },
 }));
 
-const PassageWrapper = styled("div")({
+const PassageWrapper = styled("div")(({ theme }) => ({
   marginTop: 25,
-});
+
+  em: {
+    color: theme.palette.brand.grey,
+    whiteSpace: "nowrap",
+  },
+}));
