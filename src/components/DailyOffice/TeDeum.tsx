@@ -1,8 +1,4 @@
-import {
-  BENEDICITE_CANTICLE,
-  CanticleLink,
-  getOtCanticle,
-} from "./OtCanticle";
+import { BENEDICITE_CANTICLE, CanticleLink, getOtCanticle } from "./OtCanticle";
 import Link from "next/link";
 
 interface Props {
@@ -24,18 +20,13 @@ export const TeDeum: React.FC<Props> = ({
 
     return (
       <>
-        <h2 id="old-testament-canticle">Old Testament Canticle</h2>
+        <h2 id="old-testament-canticle">Benedicite</h2>
         <p>
           [ <em>Stand</em> ]
         </p>
         <CanticleLink canticle={BENEDICITE_CANTICLE} />
         {shouldShowAlternative && (
-          <>
-            <p>
-              <strong>— or —</strong>
-            </p>
-            <CanticleLink canticle={otCanticle} />
-          </>
+          <CanticleLink canticle={otCanticle} isOptional={true} />
         )}
       </>
     );

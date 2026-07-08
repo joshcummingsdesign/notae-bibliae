@@ -68,27 +68,27 @@ export const getOtCanticle = (today: string): OtCanticleDefinition => {
   }
 };
 
-export const OtCanticle: React.FC<Props> = ({ today }) => {
-  return (
-    <>
-      <h2 id="old-testament-canticle">Old Testament Canticle</h2>
-      <p>
-        [ <em>Stand</em> ]
-      </p>
-      <CanticleLink canticle={getOtCanticle(today)} />
-    </>
+export const CanticleLink: React.FC<{
+  canticle: OtCanticleDefinition;
+  isOptional?: boolean;
+}> = ({ canticle, isOptional }) =>
+  isOptional ? (
+    <p>
+      <em>
+        Or optionally,{" "}
+        <Link href={canticle.link} target="_blank">
+          {canticle.text}
+        </Link>{" "}
+        ({canticle.notes})
+      </em>
+    </p>
+  ) : (
+    <p>
+      <strong>
+        <Link href={canticle.link} target="_blank">
+          {canticle.text}
+        </Link>
+      </strong>{" "}
+      ({canticle.notes})
+    </p>
   );
-};
-
-export const CanticleLink: React.FC<{ canticle: OtCanticleDefinition }> = ({
-  canticle,
-}) => (
-  <p>
-    <strong>
-      <Link href={canticle.link} target="_blank">
-        {canticle.text}
-      </Link>
-    </strong>{" "}
-    ({canticle.notes})
-  </p>
-);
