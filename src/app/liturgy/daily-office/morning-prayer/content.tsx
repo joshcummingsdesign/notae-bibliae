@@ -76,12 +76,7 @@ export const Content = () => {
         <PsalmsOfTheDay id="psalm" />
         <h2>First Lesson</h2>
         {!isLoading && <Lesson lessons={lectionaryData!.morning.first} />}
-        <TeDeum
-          today={dateString}
-          shouldSing={shouldSingTeDeum}
-          shouldOmit={shouldOmitTeDeum}
-          isChristmas={isChristmas}
-        />
+        <TeDeum shouldSing={shouldSingTeDeum} shouldOmit={shouldOmitTeDeum} />
         <h2>Second Lesson</h2>
         <p>
           [ <em>Sit</em> ]

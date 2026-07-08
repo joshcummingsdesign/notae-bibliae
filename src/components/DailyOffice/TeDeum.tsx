@@ -1,64 +1,29 @@
-import { BENEDICITE_CANTICLE, CanticleLink, getOtCanticle } from "./OtCanticle";
 import Link from "next/link";
 
 interface Props {
-  today: string;
   shouldSing: boolean;
   shouldOmit: boolean;
-  isChristmas: boolean;
 }
 
-export const TeDeum: React.FC<Props> = ({
-  today,
-  shouldSing,
-  shouldOmit,
-  isChristmas,
-}) => {
+export const TeDeum: React.FC<Props> = ({ shouldSing, shouldOmit }) => {
   if (shouldOmit || !shouldSing) {
-    const otCanticle = getOtCanticle(today);
-    const shouldShowAlternative = otCanticle.link !== BENEDICITE_CANTICLE.link;
-
     return (
       <>
-        <h2 id="old-testament-canticle">Benedicite</h2>
+        <h2 id="benedicite">Benedicite</h2>
         <p>
           [ <em>Stand</em> ]
         </p>
-        <CanticleLink canticle={BENEDICITE_CANTICLE} />
-        {shouldShowAlternative && (
-          <CanticleLink canticle={otCanticle} isOptional={true} />
-        )}
+        <p>
+          <strong>
+            <Link href="/liturgy/music/chants/benedicite" target="_blank">
+              Benedicite
+            </Link>
+          </strong>{" "}
+          (SDP 367, Tone VII 4)
+        </p>
       </>
     );
   }
-
-  const facta = (
-    <p>
-      <em>
-        Optionally add the{" "}
-        <Link href="/liturgy/music/chants/facta-est-cum-angelo" target="_blank">
-          Facta est cum Angelo
-        </Link>
-      </em>
-    </p>
-  );
-
-  const benedicite = (
-    <>
-      <p>
-        <strong>— or —</strong>
-      </p>
-      <p>
-        <strong>
-          <Link href="/liturgy/music/chants/benedicite" target="_blank">
-            Benedicite
-          </Link>
-        </strong>{" "}
-        (SDP 367, Tone VII 4)
-      </p>
-      {facta}
-    </>
-  );
 
   return (
     <>
@@ -74,7 +39,6 @@ export const TeDeum: React.FC<Props> = ({
         </strong>{" "}
         (SDP 357)
       </p>
-      {isChristmas && benedicite}
     </>
   );
 };
