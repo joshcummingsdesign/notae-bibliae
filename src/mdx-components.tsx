@@ -6,6 +6,7 @@ import { Initial } from "@/components/text/Initial";
 import { Mermaid } from "@/components/Mermaid";
 import { Poetry } from "@/components/text/Poetry";
 import { Red } from "@/components/text/Red";
+import { Rubric } from "@/components/text/Rubric";
 import { Table } from "@/components/Table";
 
 // Global mdx components
@@ -17,6 +18,7 @@ const components: MDXComponents = {
   Mermaid,
   Poetry,
   Red,
+  Rubric,
   Table,
 };
 
