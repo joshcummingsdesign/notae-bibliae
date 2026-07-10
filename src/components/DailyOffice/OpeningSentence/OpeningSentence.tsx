@@ -24,7 +24,7 @@ const quoteEntities: Record<string, string> = {
 const smartQuotes = (text: string) => {
   return text
     .replace(/&quot;|&#34;|&apos;|&#39;/g, (entity) => quoteEntities[entity])
-    .replace(/"([^"]*)"/g, ""$1"")
+    .replace(/"([^"]*)"/g, "“$1”")
     .replace(/(\w)'(\w)/g, "$1'$2")
     .replace(/(\w)'(?=\s|[.,;:!?)]|$)/g, "$1'");
 };
