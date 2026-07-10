@@ -37,6 +37,9 @@
     "remark-gfm": "^4.0.1",
     "remark-smartypants": "^3.0.2"
   },
+  "overrides": {
+    "postcss": "^8.5.10"
+  },
   "devDependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
