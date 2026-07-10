@@ -9,7 +9,11 @@ interface Props {
  * Rubric text.
  */
 export const Rubric: React.FC<Props> = ({ text }) => {
-  return <Text>{renderSuperscripts(text)}</Text>;
+  return <Text>{renderSuperscripts(smartQuotes(text))}</Text>;
+};
+
+const smartQuotes = (text: string) => {
+  return text.replace(/"([^"]*)"/g, "“$1”");
 };
 
 const renderSuperscripts = (text: string) => {
