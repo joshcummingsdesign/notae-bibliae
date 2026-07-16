@@ -31,11 +31,16 @@ const symbols = {
   "#": '<span class="symbol cross"></span>',
 };
 
-const replaceSymbols = (text: string) => {
-  let newText = text;
+export const formatPoetryText = (text: string) => {
+  let newText = text
+    .replaceAll("|  ", "")
+    .replaceAll("|", "")
+    .replaceAll(/\\large\[([^\]]+)\]/g, '<span class="poetry-large">$1</span>');
+
   Object.entries(symbols).forEach(([key, value]) => {
     newText = newText.replaceAll(key, value);
   });
+
   newText = newText.replaceAll(/\\b (.*)/g, "<strong>$1</strong>");
   newText = newText.replaceAll(/\\p (.*)/g, '<em class="pilcrow">❡ $1</em>');
   newText = newText.replaceAll(/^(\d+\.)/gm, '<span class="red">$1</span>');
@@ -70,9 +75,7 @@ export const Poetry: React.FC<Props> = ({ children }) => {
     if (typeof child === "string") {
       return (
         <React.Fragment key={i}>
-          {parse(
-            replaceSymbols(child.replaceAll("|  ", "").replaceAll("|", "")),
-          )}
+          {parse(formatPoetryText(child))}
         </React.Fragment>
       );
     }
@@ -101,6 +104,12 @@ const Wrapper = styled("pre")(({ theme }) => ({
 
   ".symbol": {
     color: theme.palette.brand.red,
+  },
+
+  ".poetry-large": {
+    fontSize: "1.75rem",
+    fontVariantCaps: "small-caps",
+    lineHeight: 0,
   },
 
   ".pilcrow": {

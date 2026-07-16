@@ -19,7 +19,7 @@ export const OpeningVersicles: React.FC<Props> = ({ isSolemn, isVigil }) => {
       src="/chants/daily-office-opening-versicles.svg"
       alt="Daily Office Opening Versicles"
       width="600"
-      height="342"
+      height="368"
     />
   );
 };

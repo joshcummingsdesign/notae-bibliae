@@ -50,7 +50,7 @@ Poetry with indentation and symbols.
 
 ```md
 <Poetry>
-|  \V O Lord, open thou my _ lips, *
+|  \V \large[O Lord,] open thou my _ lips, *
 |    \R and my mouth shall _ show forth thy praise.
 </Poetry>
 ```
@@ -69,6 +69,7 @@ Poetry with indentation and symbols.
 \H = [Bow Head]
 \G = [Genuflect]
 \U = [Rise]
+\large[...] = large text
 _ = ·
 * = *
 + = †

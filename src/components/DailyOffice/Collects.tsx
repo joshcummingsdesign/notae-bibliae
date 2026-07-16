@@ -50,13 +50,13 @@ export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
         const { largeText, rest } = splitCollectOpening(content);
         return (
           <Fragment key={collect.title}>
-            <p style={{ marginBottom: "-10px" }}>
-              <small>
-                <em>
+            <Title>
+              <em>
+                <small>
                   <Grey text={`For ${collect.title}`} />
-                </em>
-              </small>
-            </p>
+                </small>
+              </em>
+            </Title>
             <StyledText>
               <Large text={largeText} />
               <CollectText text={rest} />
@@ -131,6 +131,10 @@ const CollectText: React.FC<{ text: string }> = ({ text }) => (
 
 const Wrapper = styled("div")({
   marginBottom: "1.5rem",
+});
+
+const Title = styled("p")({
+  marginBottom: "-11px",
 });
 
 const Text = styled("p")(({ theme }) => ({

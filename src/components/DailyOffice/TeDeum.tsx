@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Large } from "../text/Large";
 
 interface Props {
   shouldSing: boolean;
