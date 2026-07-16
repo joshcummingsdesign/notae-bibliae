@@ -4,6 +4,7 @@ import { Link } from "@/components/Link";
 import { Definition } from "@/components/Definition";
 import { Grey } from "@/components/text/Grey";
 import { Initial } from "@/components/text/Initial";
+import { Large } from "@/components/text/Large";
 import { Mermaid } from "@/components/Mermaid";
 import { Poetry } from "@/components/text/Poetry";
 import { Red } from "@/components/text/Red";
@@ -17,6 +18,7 @@ const components: MDXComponents = {
   Grey,
   Image,
   Initial,
+  Large,
   Mermaid,
   Poetry,
   Red,
