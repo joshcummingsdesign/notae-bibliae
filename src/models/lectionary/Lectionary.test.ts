@@ -239,40 +239,6 @@ describe("Lectionary", () => {
         });
       });
 
-      describe("hagiography integration (third lesson)", () => {
-        test("third lesson is included for saint days", () => {
-          // Saint Nicholas (Dec 6) should have hagiography
-          const dec6 = allData["2025-12-06"];
-          expect(dec6.morning.third).toBeDefined();
-          expect(dec6.morning.third?.title).toContain("Nicholas");
-        });
-
-        test("third lesson is undefined for non-saint days", () => {
-          // First Sunday of Advent should not have saint reading
-          const nov30 = allData["2025-11-30"];
-          expect(nov30.morning.third).toBeUndefined();
-        });
-
-        test("third lesson has title", () => {
-          const dec6 = allData["2025-12-06"];
-
-          if (dec6.morning.third) {
-            expect(dec6.morning.third.title).toBeDefined();
-            expect(typeof dec6.morning.third.title).toBe("string");
-          }
-        });
-
-        test("morning third lesson includes #morning-prayer anchor in link", () => {
-          const dec6 = allDataWithLinks["2025-12-06"];
-          expect(dec6.morning.third?.title).toContain("#morning-prayer");
-        });
-
-        test("evening third lesson includes #evening-prayer anchor in link", () => {
-          const dec6 = allDataWithLinks["2025-12-06"];
-          expect(dec6.evening.third?.title).toContain("#evening-prayer");
-        });
-      });
-
       describe("collects integration", () => {
         test("each day has at least one collect", () => {
           for (const [, item] of Object.entries(allData)) {
@@ -501,13 +467,6 @@ describe("Lectionary", () => {
     });
 
     describe("missing data handling", () => {
-      test("days without hagiography have undefined third lesson", () => {
-        // Most ordinary days should not have hagiography
-        const dec3 = allData["2025-12-03"];
-        expect(dec3.morning.third).toBeUndefined();
-        expect(dec3.evening.third).toBeUndefined();
-      });
-
       test("lesson readings default to empty arrays when missing", () => {
         for (const [, item] of Object.entries(allData)) {
           expect(Array.isArray(item.morning.first)).toBe(true);

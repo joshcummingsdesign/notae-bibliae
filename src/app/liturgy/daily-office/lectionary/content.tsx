@@ -115,17 +115,6 @@ const PrayerCard = ({
         <Reading readings={lessons.second} />
       </ReadingSection>
 
-      {lessons.third && (
-        <ReadingSection>
-          <ReadingTitle>Optional Third Lesson</ReadingTitle>
-          <MarkdownText>
-            <Markdown remarkPlugins={[remarkSmartypants]}>
-              {lessons.third.title}
-            </Markdown>
-          </MarkdownText>
-        </ReadingSection>
-      )}
-
       {lessons.communion && (
         <>
           <Divider />
@@ -336,13 +325,6 @@ const ReadingTitle = styled("h4")({
 const ReadingReference = styled("p")({
   margin: 0,
   fontSize: "1rem",
-});
-
-const MarkdownText = styled("div")({
-  p: {
-    margin: 0,
-    fontSize: "1rem",
-  },
 });
 
 const Divider = styled("hr")(({ theme }) => ({

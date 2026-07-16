@@ -6,9 +6,8 @@ import timezone from "dayjs/plugin/timezone";
 import { Calendar, SeasonName } from "../calendar";
 import { Collects, CollectItem } from "../collects";
 import { Communion, CommunionItem } from "../communion";
-import { Hagiography } from "../hagiography";
 import { Lessons as LessonsModel } from "../lessons";
-import { stripMarkdownLinks, appendAnchorToMarkdownLink } from "@/utils/markdown";
+import { stripMarkdownLinks } from "@/utils/markdown";
 import { LectionaryDateMap, LectionaryItem, Lessons } from "./types";
 import { getCachedLectionary, setCachedLectionary } from "./cache";
 import { TIMEZONE } from "@/constants";
@@ -22,14 +21,12 @@ export class Lectionary {
   private calendar: Calendar;
   private collects: Collects;
   private communion: Communion;
-  private hagiography: Hagiography;
   private lessons: LessonsModel;
 
   constructor(calendar: Calendar) {
     this.calendar = calendar;
     this.collects = new Collects(calendar);
     this.communion = new Communion(calendar);
-    this.hagiography = new Hagiography(calendar);
     this.lessons = new LessonsModel(calendar);
   }
 
@@ -44,7 +41,6 @@ export class Lectionary {
     const seasons = this.calendar.getSeasons();
     const collectData = this.collects.getAll();
     const communionData = this.communion.getAll();
-    const hagiographyData = this.hagiography.getAll(withLinks);
     const lessonData = this.lessons.getAll();
 
     const startDate = this.calendar.getFirstSundayOfAdvent();
@@ -100,16 +96,10 @@ export class Lectionary {
         ? { epistle: eveningCommunion.epistle, gospel: eveningCommunion.gospel, source: eveningCommunion.source, isAnteCommunion: eveningCommunion.isAnteCommunion }
         : undefined;
 
-      // Get hagiography for this day
-      const dayHagiography = hagiographyData[date];
-
       // Build morning and evening lessons
       const morning: Lessons = {
         first: dayLessons?.morning?.first || [],
         second: dayLessons?.morning?.second || [],
-        third: dayHagiography
-          ? { title: appendAnchorToMarkdownLink(dayHagiography.title, "#morning-prayer") }
-          : undefined,
         communion: morningCommunionItem,
         collects: morningCollects,
       };
@@ -117,9 +107,6 @@ export class Lectionary {
       const evening: Lessons = {
         first: dayLessons?.evening?.first || [],
         second: dayLessons?.evening?.second || [],
-        third: dayHagiography
-          ? { title: appendAnchorToMarkdownLink(dayHagiography.title, "#evening-prayer") }
-          : undefined,
         communion: eveningCommunionItem,
         collects: eveningCollects,
       };

@@ -2,14 +2,9 @@ import { SeasonName } from "../calendar";
 import { CollectItem } from "../collects";
 import { CommunionItem } from "../communion";
 
-export interface ThirdLessonData {
-  title: string;
-}
-
 export interface Lessons {
   first: string[];
   second: string[];
-  third?: ThirdLessonData;
   communion?: CommunionItem;
   collects: CollectItem[];
 }

@@ -28,7 +28,7 @@ export class Calendar {
   today: Dayjs;
 
   constructor(today?: Dayjs) {
-    this.today = today || dayjs().tz(TIMEZONE);
+    this.today = today || dayjs("2026-06-29").tz(TIMEZONE);
   }
 
   /**

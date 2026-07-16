@@ -5,7 +5,7 @@ import { GET } from "./route";
 // Helper to create mock NextRequest
 const createRequest = (
   url: string,
-  slug?: string[]
+  slug?: string[],
 ): [NextRequest, { params: Promise<{ slug?: string[] }> }] => {
   const request = new NextRequest(new URL(url, "http://localhost:3000"));
   const params = { params: Promise.resolve({ slug }) };
@@ -48,31 +48,31 @@ describe("GET /api/lectionary", () => {
 
     const [tomorrowReq, tomorrowParams] = createRequest(
       "/api/lectionary/tomorrow",
-      ["tomorrow"]
+      ["tomorrow"],
     );
     tomorrowResponse = await GET(tomorrowReq, tomorrowParams);
     tomorrowData = await tomorrowResponse.clone().json();
 
     const [christmasReq, christmasParams] = createRequest(
-      "/api/lectionary?date=2025-12-25"
+      "/api/lectionary?date=2025-12-25",
     );
     christmasResponse = await GET(christmasReq, christmasParams);
     christmasData = await christmasResponse.clone().json();
 
     const [advent1Req, advent1Params] = createRequest(
-      "/api/lectionary?date=2025-11-30"
+      "/api/lectionary?date=2025-11-30",
     );
     advent1Response = await GET(advent1Req, advent1Params);
     advent1Data = await advent1Response.clone().json();
 
     const [stNicholasReq, stNicholasParams] = createRequest(
-      "/api/lectionary?date=2025-12-06"
+      "/api/lectionary?date=2025-12-06",
     );
     stNicholasResponse = await GET(stNicholasReq, stNicholasParams);
     stNicholasData = await stNicholasResponse.clone().json();
 
     const [easterReq, easterParams] = createRequest(
-      "/api/lectionary?date=2026-04-05"
+      "/api/lectionary?date=2026-04-05",
     );
     easterResponse = await GET(easterReq, easterParams);
     easterData = await easterResponse.clone().json();
@@ -82,13 +82,13 @@ describe("GET /api/lectionary", () => {
     yearData = await yearResponse.clone().json();
 
     const [withLinksReq, withLinksParams] = createRequest(
-      "/api/lectionary?withLinks=true"
+      "/api/lectionary?withLinks=true",
     );
     withLinksResponse = await GET(withLinksReq, withLinksParams);
     withLinksData = await withLinksResponse.clone().json();
 
     const [leapYearReq, leapYearParams] = createRequest(
-      "/api/lectionary?date=2024-02-29"
+      "/api/lectionary?date=2024-02-29",
     );
     leapYearResponse = await GET(leapYearReq, leapYearParams);
   });
@@ -102,7 +102,7 @@ describe("GET /api/lectionary", () => {
 
     it("returns date keys in YYYY-MM-DD format", () => {
       const dateKeys = Object.keys(baseData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       expect(dateKeys.length).toBeGreaterThan(0);
 
@@ -113,7 +113,7 @@ describe("GET /api/lectionary", () => {
 
     it("strips markdown links by default", () => {
       const dateKeys = Object.keys(baseData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       for (const key of dateKeys.slice(0, 10)) {
         const item = baseData[key] as Record<string, unknown>;
@@ -136,14 +136,14 @@ describe("GET /api/lectionary", () => {
       expect(todayData).toHaveProperty("liturgicalYear");
 
       const dateKeys = Object.keys(todayData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       expect(dateKeys.length).toBe(1);
     });
 
     it("returns LectionaryItem with correct structure", () => {
       const dateKeys = Object.keys(todayData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       const item = todayData[dateKeys[0]] as Record<string, unknown>;
 
@@ -168,7 +168,7 @@ describe("GET /api/lectionary", () => {
 
     it("returns items with stripped links by default", () => {
       const dateKeys = Object.keys(todayData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       const item = todayData[dateKeys[0]] as Record<string, unknown>;
 
@@ -182,7 +182,7 @@ describe("GET /api/lectionary", () => {
       expect(tomorrowData).toHaveProperty("liturgicalYear");
 
       const dateKeys = Object.keys(tomorrowData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       expect(dateKeys.length).toBe(1);
     });
@@ -220,7 +220,7 @@ describe("GET /api/lectionary", () => {
       expect(yearData).toHaveProperty("liturgicalYear");
 
       const dateKeys = Object.keys(yearData).filter(
-        (k) => k !== "liturgicalYear"
+        (k) => k !== "liturgicalYear",
       );
       expect(dateKeys.length).toBeGreaterThan(360);
     });
@@ -341,15 +341,6 @@ describe("GET /api/lectionary", () => {
       expect(communion).toBeDefined();
       expect(communion.epistle).toBeDefined();
       expect(communion.gospel).toBeDefined();
-    });
-
-    it("saint day has third lesson (hagiography)", () => {
-      const item = stNicholasData["2025-12-06"] as Record<string, unknown>;
-      const morning = item.morning as Record<string, unknown>;
-      const third = morning.third as Record<string, unknown>;
-
-      expect(third).toBeDefined();
-      expect(third.title).toContain("Nicholas");
     });
 
     it("collect items have title and text", () => {
