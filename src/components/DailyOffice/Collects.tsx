@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Definition } from "../Definition";
 import DOMPurify from "isomorphic-dompurify";
 import { Large } from "../text/Large";
+import { smartQuotes } from "@/utils/smartQuotes";
+import { Grey } from "../text/Grey";
 
 interface Props {
   collects: CollectItem[];
@@ -40,14 +42,24 @@ export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
   return (
     <>
       {header}
-      {collects.map((collect, i) => {
-        let content = collect.text.replace("Amen", "<em>Amen</em>");
-        const [firstWord, ...restWords] = content.split(" ");
-        const rest = restWords.join(" ");
+      {collects.map((collect) => {
+        const content = smartQuotes(collect.text).replace(
+          "Amen",
+          "<em>Amen</em>",
+        );
+        const { largeText, rest } = splitCollectOpening(content);
         return (
           <Fragment key={collect.title}>
+            <p style={{ marginBottom: "-10px" }}>
+              <small>
+                <em>
+                  <Grey text={`For ${collect.title}`} />
+                </em>
+              </small>
+            </p>
             <StyledText>
-              <Large text={firstWord} /> <CollectText text={rest} />
+              <Large text={largeText} />
+              <CollectText text={rest} />
             </StyledText>
           </Fragment>
         );
@@ -56,11 +68,62 @@ export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
   );
 };
 
+export function splitCollectOpening(text: string): {
+  largeText: string;
+  rest: string;
+} {
+  const firstCommaIndex = text.indexOf(",");
+  if (firstCommaIndex === -1) {
+    const [firstWord, ...restWords] = text.split(" ");
+
+    return {
+      largeText: firstWord,
+      rest: restWords.length ? ` ${restWords.join(" ")}` : "",
+    };
+  }
+
+  const opening = text.slice(0, firstCommaIndex + 1);
+  const openingWords = opening.replace(/,$/, "").trim().split(/\s+/);
+
+  if (shouldUseFullOpening(openingWords)) {
+    return {
+      largeText: opening,
+      rest: text.slice(opening.length),
+    };
+  }
+
+  const largeWordCount = openingWords[0].toLowerCase() === "o" ? 2 : 1;
+  const largeText = openingWords.slice(0, largeWordCount).join(" ");
+
+  return {
+    largeText,
+    rest: text.slice(largeText.length),
+  };
+}
+
+function shouldUseFullOpening(words: string[]): boolean {
+  if (words.length === 1) {
+    return true;
+  }
+
+  const firstWord = words[0].toLowerCase();
+  const lastWord = words[words.length - 1].toLowerCase();
+  const isDivineAddress = ["god", "lord", "father", "christ"].includes(
+    lastWord,
+  );
+
+  if (firstWord === "o") {
+    return words.length <= 3;
+  }
+
+  return words.length <= 3 && isDivineAddress;
+}
+
 const CollectText: React.FC<{ text: string }> = ({ text }) => (
   <span
     dangerouslySetInnerHTML={{
       __html: DOMPurify.sanitize(
-        text.replaceAll("·", '<span class="dot"></span>'),
+        smartQuotes(text).replaceAll("·", '<span class="dot"></span>'),
       ),
     }}
   />

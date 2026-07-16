@@ -11,6 +11,7 @@ import { useLectionary } from "../hooks/useLectionary";
 import { Lessons } from "@/models/lectionary";
 import { InfoOutlined } from "@mui/icons-material";
 import { Tooltip } from "@/components/Tooltip";
+import { smartQuotes } from "@/utils/smartQuotes";
 
 export const Content = () => {
   const { isLoading, today, tomorrow, refreshBibleGatewayLinks } =
@@ -192,7 +193,7 @@ const CollectText: React.FC<{ text: string }> = ({ text }) => (
   <StyledCollectText
     dangerouslySetInnerHTML={{
       __html: DOMPurify.sanitize(
-        text
+        smartQuotes(text)
           .replaceAll("·", '<span class="dot"></span>')
           .replace("Amen", "<em>Amen</em>"),
       ),

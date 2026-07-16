@@ -1,5 +1,6 @@
 "use client";
 import { styled } from "@mui/material";
+import { smartQuotes } from "@/utils/smartQuotes";
 
 interface Props {
   text: string[];
@@ -16,10 +17,6 @@ export const Rubric: React.FC<Props> = ({ text }) => {
       ))}
     </Wrapper>
   );
-};
-
-const smartQuotes = (text: string) => {
-  return text.replace(/"([^"]*)"/g, "“$1”");
 };
 
 const renderSuperscripts = (text: string) => {

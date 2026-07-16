@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import openingSentences from "./opening-sentences.json";
 import { Large } from "@/components/text/Large";
+import { smartQuotes } from "@/utils/smartQuotes";
 
 type Office = keyof typeof openingSentences;
 type OpeningSentenceEntry = {
@@ -14,21 +15,6 @@ interface Props {
   id: string;
   office: Office;
 }
-
-const quoteEntities: Record<string, string> = {
-  "&quot;": '"',
-  "&#34;": '"',
-  "&apos;": "'",
-  "&#39;": "'",
-};
-
-const smartQuotes = (text: string) => {
-  return text
-    .replace(/&quot;|&#34;|&apos;|&#39;/g, (entity) => quoteEntities[entity])
-    .replace(/"([^"]*)"/g, "“$1”")
-    .replace(/(\w)'(\w)/g, "$1'$2")
-    .replace(/(\w)'(?=\s|[.,;:!?)]|$)/g, "$1'");
-};
 
 export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
   const sentences = openingSentences[office] as Record<

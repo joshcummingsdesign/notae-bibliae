@@ -124,6 +124,7 @@ export const Content = () => {
           <Large size="xl" text="The Grace" />
         </h2>
         <Grace />
+
         <Footer />
       </Wrapper>
     </>

@@ -3,16 +3,13 @@ import { styled } from "@mui/material";
 import { useDefinition } from "./DefinitionProvider";
 import { Glossary } from "@/app/api/glossary/route";
 import { Tooltip } from "../Tooltip";
+import { smartQuotes } from "@/utils/smartQuotes";
 
 interface Props {
   lang: keyof Glossary;
   anchor: string;
   text: string;
 }
-
-const smartQuotes = (text: string) => {
-  return text.replace(/"([^"]*)"/g, "“$1”");
-};
 
 export const Definition: React.FC<Props> = ({ lang, anchor, text }) => {
   const definition = useDefinition();
