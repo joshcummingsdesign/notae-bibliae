@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import { Initial } from "@/components/text/Initial";
 import { Today } from "@/components/Calendar";
+import { Large } from "@/components/text/Large";
 import {
   Invitatory,
   OpeningSentence,
@@ -22,6 +23,7 @@ import Footer from "./footer.mdx";
 import { styled } from "@mui/material";
 import { Loader } from "@/components/Loader";
 import { useDailyOffice } from "../hooks/useDailyOffice";
+import { Rubric } from "@/components/text/Rubric";
 
 export const Content = () => {
   const {
@@ -42,6 +44,7 @@ export const Content = () => {
       {isLoading && <Loader />}
       <Wrapper isLoading={isLoading}>
         <Initial text="Daily Office: Morning Prayer" />
+
         {!isLoading && (
           <Today
             season={lectionaryData!.season}
@@ -50,43 +53,64 @@ export const Content = () => {
             secondaryObservance={lectionaryData!.secondaryObservance}
           />
         )}
-        <h2>Introductory Rites</h2>
-        <hr />
-        <h2>Sentences</h2>
+
+        <h2>
+          <Large size="xl" text="Sentences" />
+        </h2>
         <OpeningSentence id="daily-office" office="morning" />
-        <GeneralConfession />
-        <OurFather />
-        <h2>Office Proper</h2>
         <hr />
-        <h2>Opening Versicles</h2>
+
+        <h2>
+          <Large size="xl" text="Confession and Absolution" />
+        </h2>
+        <GeneralConfession />
+        <hr />
+
+        <h2>
+          <Large size="xl" text="Opening" />
+        </h2>
+        <OurFather />
         <OpeningVersicles isSolemn={isSolemn} isVigil={isVigil} />
-        <h2>Invitatory</h2>
+        <hr />
+
+        <h2>
+          <Large size="xl" text="Psalmody" />
+        </h2>
         <Invitatory
           page={invitatoryPage}
           isSolemn={isSolemn}
           isOctaveOfEaster={isOctaveOfEaster}
         />
-        <h2>Psalms of the Day</h2>
-        <p>
-          [ <em>Sit</em> ]
-        </p>
         <PsalmsOfTheDay id="psalm" />
-        <h2>First Lesson</h2>
+        <br />
+        <hr />
+
+        <h2>
+          <Large size="xl" text="Lessons and Canticles" />
+        </h2>
+        <Rubric text={["❡ Sit for the Lessons; stand for the Canticles."]} />
         {!isLoading && <Lesson lessons={lectionaryData!.morning.first} />}
         <TeDeum shouldSing={shouldSingTeDeum} shouldOmit={shouldOmitTeDeum} />
-        <h2>Second Lesson</h2>
-        <p>
-          [ <em>Sit</em> ]
-        </p>
         {!isLoading && <Lesson lessons={lectionaryData!.morning.second} />}
         <Benedictus />
-        <h2>Concluding Rites</h2>
         <hr />
-        <h2>Apostles' Creed</h2>
+
+        <h2>
+          <Large size="xl" text="Apostles' Creed" />
+        </h2>
         <ApostlesCreed />
+        <hr />
+
+        <h2>
+          <Large size="xl" text="Prayers" />
+        </h2>
         <Salutation />
         <Suffrages />
-        <h2>Collects</h2>
+        <hr />
+
+        <h2>
+          <Large size="xl" text="Collects" />
+        </h2>
         {!isLoading && (
           <Collects
             collects={lectionaryData!.morning.collects}
@@ -94,6 +118,11 @@ export const Content = () => {
           />
         )}
         <OrdinaryCollects />
+        <hr />
+
+        <h2>
+          <Large size="xl" text="The Grace" />
+        </h2>
         <Grace />
         <Footer />
       </Wrapper>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Large } from "../text/Large";
 
 interface Props {
   shouldSing: boolean;
@@ -8,37 +9,25 @@ interface Props {
 export const TeDeum: React.FC<Props> = ({ shouldSing, shouldOmit }) => {
   if (shouldOmit || !shouldSing) {
     return (
-      <>
-        <h2 id="benedicite">Benedicite</h2>
-        <p>
-          [ <em>Stand</em> ]
-        </p>
-        <p>
-          <strong>
-            <Link href="/liturgy/music/chants/benedicite" target="_blank">
-              Benedicite
-            </Link>
-          </strong>{" "}
-          (SDP 367, Tone VII 4)
-        </p>
-      </>
+      <p>
+        <strong>
+          <Link href="/liturgy/music/chants/benedicite" target="_blank">
+            Benedicite
+          </Link>
+        </strong>{" "}
+        (SDP 367, Tone VII 4)
+      </p>
     );
   }
 
   return (
-    <>
-      <h2 id="te-deum">Te Deum</h2>
-      <p>
-        [ <em>Stand</em> ]
-      </p>
-      <p>
-        <strong>
-          <Link href="/liturgy/music/chants/te-deum" target="_blank">
-            Te Deum
-          </Link>
-        </strong>{" "}
-        (SDP 357)
-      </p>
-    </>
+    <p>
+      <strong>
+        <Link href="/liturgy/music/chants/te-deum" target="_blank">
+          Te Deum
+        </Link>
+      </strong>{" "}
+      (SDP 357)
+    </p>
   );
 };

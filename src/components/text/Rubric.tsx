@@ -2,14 +2,20 @@
 import { styled } from "@mui/material";
 
 interface Props {
-  text: string;
+  text: string[];
 }
 
 /**
  * Rubric text.
  */
 export const Rubric: React.FC<Props> = ({ text }) => {
-  return <Text>{renderSuperscripts(smartQuotes(text))}</Text>;
+  return (
+    <Wrapper>
+      {text.map((t) => (
+        <Text key={t}>{renderSuperscripts(smartQuotes(t))}</Text>
+      ))}
+    </Wrapper>
+  );
 };
 
 const smartQuotes = (text: string) => {
@@ -23,6 +29,10 @@ const renderSuperscripts = (text: string) => {
     return match ? <sup key={i}>[{match[1]}]</sup> : part;
   });
 };
+
+const Wrapper = styled("div")({
+  marginBottom: "1.5rem",
+});
 
 const Text = styled("p")(({ theme }) => ({
   fontSize: "1rem",

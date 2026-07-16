@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Autocomplete, styled, TextField } from "@mui/material";
 import openingSentences from "./opening-sentences.json";
+import { Large } from "@/components/text/Large";
 
 type Office = keyof typeof openingSentences;
 type OpeningSentenceEntry = {
@@ -101,12 +102,26 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
         />
       </Wrapper>
       <PassageWrapper>
-        {passages.map((passage) => (
-          <p key={passage.passage}>
-            <span>{smartQuotes(passage.text)} </span>
-            <em>{passage.passage}</em>.
-          </p>
-        ))}
+        {passages.map((passage, i) => {
+          let content = smartQuotes(passage.text);
+
+          if (i === 0) {
+            const [firstWord, ...restWords] = content.split(" ");
+            const rest = restWords.join(" ");
+            return (
+              <p key={passage.passage}>
+                <Large text={firstWord} /> <span>{rest}</span>
+                <em>{passage.passage}</em>.
+              </p>
+            );
+          }
+          return (
+            <p key={passage.passage}>
+              <span>{content}</span>
+              <em>{passage.passage}</em>.
+            </p>
+          );
+        })}
       </PassageWrapper>
     </>
   );

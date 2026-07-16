@@ -5,6 +5,7 @@ import { CollectItem } from "@/models/collects";
 import Link from "next/link";
 import { Definition } from "../Definition";
 import DOMPurify from "isomorphic-dompurify";
+import { Large } from "../text/Large";
 
 interface Props {
   collects: CollectItem[];
@@ -13,46 +14,50 @@ interface Props {
 
 export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
   let header = (
-    <p>
-      <em>
+    <Wrapper>
+      <Text>
         ❡ Chanted using the{" "}
         <Link
           href="/liturgy/daily-office/chant-rubrics#the-collects"
           target="_blank"
         >
-          festal tone
+          festal tone.
         </Link>
-      </em>
-    </p>
+      </Text>
+    </Wrapper>
   );
   if (isFerial) {
     header = (
-      <p>
-        <em>
+      <Wrapper>
+        <Text>
           ❡ Chanted{" "}
-          <Definition lang="latin" anchor="recto-tono" text="recto tono" />
-        </em>
-      </p>
+          <Definition lang="latin" anchor="recto-tono" text="recto tono" />.
+        </Text>
+      </Wrapper>
     );
   }
 
   return (
     <>
       {header}
-      {collects.map((collect) => (
-        <Fragment key={collect.title}>
-          <p>
-            <strong>Collect for {collect.title}</strong>
-          </p>
-          <CollectText text={collect.text.replace("Amen", "<em>Amen</em>")} />
-        </Fragment>
-      ))}
+      {collects.map((collect, i) => {
+        let content = collect.text.replace("Amen", "<em>Amen</em>");
+        const [firstWord, ...restWords] = content.split(" ");
+        const rest = restWords.join(" ");
+        return (
+          <Fragment key={collect.title}>
+            <StyledText>
+              <Large text={firstWord} /> <CollectText text={rest} />
+            </StyledText>
+          </Fragment>
+        );
+      })}
     </>
   );
 };
 
 const CollectText: React.FC<{ text: string }> = ({ text }) => (
-  <StyledText
+  <span
     dangerouslySetInnerHTML={{
       __html: DOMPurify.sanitize(
         text.replaceAll("·", '<span class="dot"></span>'),
@@ -60,6 +65,16 @@ const CollectText: React.FC<{ text: string }> = ({ text }) => (
     }}
   />
 );
+
+const Wrapper = styled("div")({
+  marginBottom: "1.5rem",
+});
+
+const Text = styled("p")(({ theme }) => ({
+  fontSize: "1rem",
+  fontStyle: "italic",
+  color: theme.palette.brand.darkGrey,
+}));
 
 const StyledText = styled("p")(({ theme }) => ({
   ".dot": {

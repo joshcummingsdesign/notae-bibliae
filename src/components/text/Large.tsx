@@ -23,7 +23,7 @@ const Text = styled("span", {
       fs = "1.75rem";
       break;
     case "xl":
-      fs = "2.8rem";
+      fs = "2.5rem";
       break;
   }
   return {
