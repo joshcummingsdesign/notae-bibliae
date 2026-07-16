@@ -27,11 +27,9 @@ import { useDailyOffice } from "../hooks/useDailyOffice";
 export const Content = () => {
   const {
     isLoading,
-    dateString,
     isFerial,
     isVigil,
     isSolemn,
-    isChristmas,
     isOctaveOfEaster,
     invitatoryPage,
     shouldSingTeDeum,
