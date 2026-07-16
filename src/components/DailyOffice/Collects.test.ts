@@ -9,6 +9,8 @@ describe("smartQuotes", () => {
     ["Christ&apos;s mercy", "Christ’s mercy"],
     ["Christ&#39;s mercy", "Christ’s mercy"],
     ["man's understanding", "man’s understanding"],
+    ["Apostles' Creed", "Apostles’ Creed"],
+    ["Jesus' Name", "Jesus’ Name"],
   ])("formats %s", (text, expected) => {
     expect(smartQuotes(text)).toBe(expected);
   });
