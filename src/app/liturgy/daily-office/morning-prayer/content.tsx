@@ -81,7 +81,7 @@ export const Content = () => {
           isSolemn={isSolemn}
           isOctaveOfEaster={isOctaveOfEaster}
         />
-        <Rubric text={["❡ The people sit."]} />
+        <Rubric text={["❡ The people sit. Stand at each Glory Be."]} />
         <PsalmsOfTheDay id="psalm" />
         <br />
         <hr />

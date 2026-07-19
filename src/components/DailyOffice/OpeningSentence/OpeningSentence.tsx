@@ -96,15 +96,14 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
             const rest = restWords.join(" ");
             return (
               <p key={passage.passage}>
-                <Large text={firstWord} /> <span>{rest}</span>
+                <Large text={firstWord} /> <span>{rest}</span>{" "}
                 <em>{passage.passage}</em>.
               </p>
             );
           }
           return (
             <p key={passage.passage}>
-              <span>{content}</span>
-              <em>{passage.passage}</em>.
+              <span>{content}</span> <em>{passage.passage}</em>.
             </p>
           );
         })}
