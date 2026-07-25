@@ -73,7 +73,7 @@ export const Content = () => {
         <h2>
           <Large size="xl" text="Psalmody" />
         </h2>
-        <Rubric text={["❡ The people sit. Stand at each Glory Be."]} />
+        <Rubric text={["❡ The people sit, standing at each Glory Be."]} />
         <PsalmsOfTheDay id="psalm" />
         <br />
         <hr />
