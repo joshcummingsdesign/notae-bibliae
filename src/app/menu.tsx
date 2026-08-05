@@ -2436,41 +2436,52 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "Scholars",
-        link: "/people/scholars",
+        title: "Early Christian Writers",
+        link: "/people/early-christian-writers",
+        priority: 0.7,
+        children: [
+          {
+            title: "Clement of Alexandria",
+            link: "/people/early-christian-writers/clement-of-alexandria",
+          },
+          {
+            title: "Tertullian",
+            link: "/people/early-christian-writers/tertullian",
+          },
+          {
+            title: "Julius Africanus",
+            link: "/people/early-christian-writers/julius-africanus",
+          },
+          {
+            title: "Origen of Alexandria",
+            link: "/people/early-christian-writers/origen",
+          },
+          {
+            title: "Eusebius",
+            link: "/people/early-christian-writers/eusebius",
+          },
+        ],
+      },
+      {
+        title: "Medieval Theologians",
+        link: "/people/medieval-theologians",
         priority: 0.7,
         children: [
           {
             title: "Boethius",
-            link: "/people/scholars/boethius",
-          },
-          {
-            title: "Clement of Alexandria",
-            link: "/people/scholars/clement-of-alexandria",
-          },
-          {
-            title: "Duns Scotus",
-            link: "/people/scholars/duns-scotus",
-          },
-          {
-            title: "Eusebius",
-            link: "/people/scholars/eusebius",
-          },
-          {
-            title: "Origen",
-            link: "/people/scholars/origen",
+            link: "/people/medieval-theologians/boethius",
           },
           {
             title: "Peter Lombard",
-            link: "/people/scholars/peter-lombard",
+            link: "/people/medieval-theologians/peter-lombard",
           },
           {
-            title: "Tertullian",
-            link: "/people/scholars/tertullian",
+            title: "Duns Scotus",
+            link: "/people/medieval-theologians/duns-scotus",
           },
           {
             title: "William of Ockham",
-            link: "/people/scholars/william-of-ockham",
+            link: "/people/medieval-theologians/william-of-ockham",
           },
         ],
       },
