@@ -1731,11 +1731,15 @@ export const menuItems: MenuNode[] = [
             title: "Monastic Habit",
             link: "/liturgy/vesture/monastic-habit",
           },
-          {
-            title: "Liturgical Colors",
-            link: "/liturgy/vesture/liturgical-colors",
-          },
         ],
+      },
+      {
+        title: "Liturgical Colors",
+        link: "/liturgy/liturgical-colors",
+      },
+      {
+        title: "Church Ornaments",
+        link: "/liturgy/church-ornaments",
       },
     ],
   },
