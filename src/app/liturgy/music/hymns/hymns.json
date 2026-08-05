@@ -198,7 +198,7 @@
       {
         "id": "author",
         "content": "Thomas Ken",
-        "link": "/people/divines/thomas-ken"
+        "link": "/people/anglican-divines/thomas-ken"
       },
       { "id": "year", "content": "1674" }
     ],
@@ -414,7 +414,7 @@
       {
         "id": "author",
         "content": "Henry Francis Lyte",
-        "link": "/people/divines/henry-francis-lyte"
+        "link": "/liturgy/music/composers/henry-francis-lyte"
       },
       { "id": "year", "content": "1834" }
     ],
@@ -568,7 +568,7 @@
       {
         "id": "author",
         "content": "Sabine Baring-Gould",
-        "link": "/liturgy/music/composers/sabine-baring-gould"
+        "link": "/people/anglican-writers/sabine-baring-gould"
       },
       { "id": "year", "content": "1865" }
     ],

@@ -1806,6 +1806,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/composers/george-kitchin",
               },
               {
+                title: "Henry Francis Lyte",
+                link: "/liturgy/music/composers/henry-francis-lyte",
+              },
+              {
                 title: "Horatio Spafford",
                 link: "/liturgy/music/composers/horatio-spafford",
               },
@@ -1888,10 +1892,6 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Placide Cappeau",
                 link: "/liturgy/music/composers/placide-cappeau",
-              },
-              {
-                title: "Sabine Baring-Gould",
-                link: "/liturgy/music/composers/sabine-baring-gould",
               },
               {
                 title: "Sy Miller",
@@ -2445,8 +2445,8 @@ export const menuItems: MenuNode[] = [
             link: "/people/early-christian-writers/clement-of-alexandria",
           },
           {
-            title: "Tertullian",
-            link: "/people/early-christian-writers/tertullian",
+            title: "Eusebius",
+            link: "/people/early-christian-writers/eusebius",
           },
           {
             title: "Julius Africanus",
@@ -2457,8 +2457,8 @@ export const menuItems: MenuNode[] = [
             link: "/people/early-christian-writers/origen",
           },
           {
-            title: "Eusebius",
-            link: "/people/early-christian-writers/eusebius",
+            title: "Tertullian",
+            link: "/people/early-christian-writers/tertullian",
           },
         ],
       },
@@ -2472,12 +2472,12 @@ export const menuItems: MenuNode[] = [
             link: "/people/medieval-theologians/boethius",
           },
           {
-            title: "Peter Lombard",
-            link: "/people/medieval-theologians/peter-lombard",
-          },
-          {
             title: "Duns Scotus",
             link: "/people/medieval-theologians/duns-scotus",
+          },
+          {
+            title: "Peter Lombard",
+            link: "/people/medieval-theologians/peter-lombard",
           },
           {
             title: "William of Ockham",
@@ -2486,33 +2486,44 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "Divines",
-        link: "/people/divines",
+        title: "Anglican Divines",
+        link: "/people/anglican-divines",
         priority: 0.7,
         children: [
           {
-            title: "Henry Francis Lyte",
-            link: "/people/divines/henry-francis-lyte",
-          },
-          {
-            title: "John Henry Blunt",
-            link: "/people/divines/john-henry-blunt",
-          },
-          {
-            title: "John Mason Neale",
-            link: "/people/divines/john-mason-neale",
-          },
-          {
             title: "Lancelot Andrewes",
-            link: "/people/divines/lancelot-andrewes",
+            link: "/people/anglican-divines/lancelot-andrewes",
+          },
+          {
+            title: "Richard Hooker",
+            link: "/people/anglican-divines/richard-hooker",
           },
           {
             title: "Thomas Cranmer",
-            link: "/people/divines/thomas-cranmer",
+            link: "/people/anglican-divines/thomas-cranmer",
           },
           {
             title: "Thomas Ken",
-            link: "/people/divines/thomas-ken",
+            link: "/people/anglican-divines/thomas-ken",
+          },
+        ],
+      },
+      {
+        title: "Anglican Writers",
+        link: "/people/anglican-writers",
+        priority: 0.7,
+        children: [
+          {
+            title: "John Henry Blunt",
+            link: "/people/anglican-writers/john-henry-blunt",
+          },
+          {
+            title: "John Mason Neale",
+            link: "/people/anglican-writers/john-mason-neale",
+          },
+          {
+            title: "Sabine Baring-Gould",
+            link: "/people/anglican-writers/sabine-baring-gould",
           },
         ],
       },
