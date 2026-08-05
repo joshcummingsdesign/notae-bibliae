@@ -1712,209 +1712,6 @@ export const menuItems: MenuNode[] = [
               },
             ],
           },
-          {
-            title: "Composers",
-            link: "/liturgy/music/composers",
-            priority: 0.6,
-            children: [
-              {
-                title: "Anna Bartlett Warner",
-                link: "/liturgy/music/composers/anna-bartlett-warner",
-              },
-              {
-                title: "Charles Austin Miles",
-                link: "/liturgy/music/composers/charles-austin-miles",
-              },
-              {
-                title: "Charles Jennens",
-                link: "/liturgy/music/composers/charles-jennens",
-              },
-              {
-                title: "Charles W. Everest",
-                link: "/liturgy/music/composers/charles-w-everest",
-              },
-              {
-                title: "Charles Wesley",
-                link: "/liturgy/music/composers/charles-wesley",
-              },
-              {
-                title: "Charlotte Elliott",
-                link: "/liturgy/music/composers/charlotte-elliott",
-              },
-              {
-                title: "Christina Rossetti",
-                link: "/liturgy/music/composers/christina-rosetti",
-              },
-              {
-                title: "Claudia Frances Hernaman",
-                link: "/liturgy/music/composers/claudia-frances-hernaman",
-              },
-              {
-                title: "Dallán Forgaill",
-                link: "/liturgy/music/composers/dallan-forgaill",
-              },
-              {
-                title: "Dan Schutte",
-                link: "/liturgy/music/composers/dan-schutte",
-              },
-              {
-                title: "Daniel Iverson",
-                link: "/liturgy/music/composers/daniel-iverson",
-              },
-              {
-                title: "Edmond Louis Budry",
-                link: "/liturgy/music/composers/edmond-louis-budry",
-              },
-              {
-                title: "Edward Perronet",
-                link: "/liturgy/music/composers/edward-perronet",
-              },
-              {
-                title: "Eleanor Farjeon",
-                link: "/liturgy/music/composers/eleanor-farjeon",
-              },
-              {
-                title: "Ernest W. Blandy",
-                link: "/liturgy/music/composers/ernest-w-blandy",
-              },
-              {
-                title: "Fanny Crosby",
-                link: "/liturgy/music/composers/fanny-crosby",
-              },
-              {
-                title: "Folliott Sandford Pierpoint",
-                link: "/liturgy/music/composers/folliott-sandford-pierpoint",
-              },
-              {
-                title: "Frances Ridley Havergal",
-                link: "/liturgy/music/composers/frances-ridley-havergal",
-              },
-              {
-                title: "Frederick Whitfield",
-                link: "/liturgy/music/composers/frederick-whitfield",
-              },
-              {
-                title: "George Frideric Handel",
-                link: "/liturgy/music/composers/george-frideric-handel",
-              },
-              {
-                title: "George Hunt Smyttan",
-                link: "/liturgy/music/composers/george-hunt-smyttan",
-              },
-              {
-                title: "George Kitchin",
-                link: "/liturgy/music/composers/george-kitchin",
-              },
-              {
-                title: "Henry Francis Lyte",
-                link: "/liturgy/music/composers/henry-francis-lyte",
-              },
-              {
-                title: "Horatio Spafford",
-                link: "/liturgy/music/composers/horatio-spafford",
-              },
-              {
-                title: "Isaac Watts",
-                link: "/liturgy/music/composers/isaac-watts",
-              },
-              {
-                title: "James Chadwick",
-                link: "/liturgy/music/composers/james-chadwick",
-              },
-              {
-                title: "James Montgomery",
-                link: "/liturgy/music/composers/james-montgomery",
-              },
-              {
-                title: "Jeanette Threlfall",
-                link: "/liturgy/music/composers/jeanette-threlfall",
-              },
-              {
-                title: "Jill Jackson-Miller",
-                link: "/liturgy/music/composers/jill-jackson-miller",
-              },
-              {
-                title: "Joachim Neander",
-                link: "/liturgy/music/composers/joachim-neander",
-              },
-              {
-                title: "Johann Sebastian Bach's",
-                link: "/liturgy/music/composers/johann-sebastian-bach",
-              },
-              {
-                title: "John Francis Wade",
-                link: "/liturgy/music/composers/john-francis-wade",
-              },
-              {
-                title: "John Henry Hopkins Jr.",
-                link: "/liturgy/music/composers/john-henry-hopkins-jr",
-              },
-              {
-                title: "John Newton",
-                link: "/liturgy/music/composers/john-newton",
-              },
-              {
-                title: "Joseph M. Scriven",
-                link: "/liturgy/music/composers/joseph-m-scriven",
-              },
-              {
-                title: "Joseph Mohr",
-                link: "/liturgy/music/composers/joseph-mohr",
-              },
-              {
-                title: "Judson W. Van DeVenter",
-                link: "/liturgy/music/composers/judson-w-van-deventer",
-              },
-              {
-                title: "Kathleen Thomerson",
-                link: "/liturgy/music/composers/kathleen-thomerson",
-              },
-              {
-                title: "Katharina von Schlegel",
-                link: "/liturgy/music/composers/katharina-von-schlegel",
-              },
-              {
-                title: "Martin Rinkart",
-                link: "/liturgy/music/composers/martin-rinkart",
-              },
-              {
-                title: "Matthew Bridges",
-                link: "/liturgy/music/composers/matthew-bridges",
-              },
-              {
-                title: "Paulinus of Aquileia",
-                link: "/liturgy/music/composers/paulinus-of-aquileia",
-              },
-              {
-                title: "Phillips Brooks",
-                link: "/liturgy/music/composers/phillips-brooks",
-              },
-              {
-                title: "Placide Cappeau",
-                link: "/liturgy/music/composers/placide-cappeau",
-              },
-              {
-                title: "Sy Miller",
-                link: "/liturgy/music/composers/sy-miller",
-              },
-              {
-                title: "Synesius of Cyrene",
-                link: "/liturgy/music/composers/synesius-of-cyrene",
-              },
-              {
-                title: "Thomas Helmore",
-                link: "/liturgy/music/composers/thomas-helmore",
-              },
-              {
-                title: "Will L. Thompson",
-                link: "/liturgy/music/composers/will-l-thompson",
-              },
-              {
-                title: "William W. How",
-                link: "/liturgy/music/composers/william-w-how",
-              },
-            ],
-          },
         ],
       },
       {
@@ -2524,6 +2321,209 @@ export const menuItems: MenuNode[] = [
           {
             title: "Sabine Baring-Gould",
             link: "/people/anglican-writers/sabine-baring-gould",
+          },
+        ],
+      },
+      {
+        title: "Hymnwriters",
+        link: "/people/hymnwriters",
+        priority: 0.7,
+        children: [
+          {
+            title: "Anna Bartlett Warner",
+            link: "/people/hymnwriters/anna-bartlett-warner",
+          },
+          {
+            title: "Charles Austin Miles",
+            link: "/people/hymnwriters/charles-austin-miles",
+          },
+          {
+            title: "Charles Jennens",
+            link: "/people/hymnwriters/charles-jennens",
+          },
+          {
+            title: "Charles W. Everest",
+            link: "/people/hymnwriters/charles-w-everest",
+          },
+          {
+            title: "Charles Wesley",
+            link: "/people/hymnwriters/charles-wesley",
+          },
+          {
+            title: "Charlotte Elliott",
+            link: "/people/hymnwriters/charlotte-elliott",
+          },
+          {
+            title: "Christina Rossetti",
+            link: "/people/hymnwriters/christina-rosetti",
+          },
+          {
+            title: "Claudia Frances Hernaman",
+            link: "/people/hymnwriters/claudia-frances-hernaman",
+          },
+          {
+            title: "Dallán Forgaill",
+            link: "/people/hymnwriters/dallan-forgaill",
+          },
+          {
+            title: "Dan Schutte",
+            link: "/people/hymnwriters/dan-schutte",
+          },
+          {
+            title: "Daniel Iverson",
+            link: "/people/hymnwriters/daniel-iverson",
+          },
+          {
+            title: "Edmond Louis Budry",
+            link: "/people/hymnwriters/edmond-louis-budry",
+          },
+          {
+            title: "Edward Perronet",
+            link: "/people/hymnwriters/edward-perronet",
+          },
+          {
+            title: "Eleanor Farjeon",
+            link: "/people/hymnwriters/eleanor-farjeon",
+          },
+          {
+            title: "Ernest W. Blandy",
+            link: "/people/hymnwriters/ernest-w-blandy",
+          },
+          {
+            title: "Fanny Crosby",
+            link: "/people/hymnwriters/fanny-crosby",
+          },
+          {
+            title: "Folliott Sandford Pierpoint",
+            link: "/people/hymnwriters/folliott-sandford-pierpoint",
+          },
+          {
+            title: "Frances Ridley Havergal",
+            link: "/people/hymnwriters/frances-ridley-havergal",
+          },
+          {
+            title: "Frederick Whitfield",
+            link: "/people/hymnwriters/frederick-whitfield",
+          },
+          {
+            title: "George Frideric Handel",
+            link: "/people/hymnwriters/george-frideric-handel",
+          },
+          {
+            title: "George Hunt Smyttan",
+            link: "/people/hymnwriters/george-hunt-smyttan",
+          },
+          {
+            title: "George Kitchin",
+            link: "/people/hymnwriters/george-kitchin",
+          },
+          {
+            title: "Henry Francis Lyte",
+            link: "/people/hymnwriters/henry-francis-lyte",
+          },
+          {
+            title: "Horatio Spafford",
+            link: "/people/hymnwriters/horatio-spafford",
+          },
+          {
+            title: "Isaac Watts",
+            link: "/people/hymnwriters/isaac-watts",
+          },
+          {
+            title: "James Chadwick",
+            link: "/people/hymnwriters/james-chadwick",
+          },
+          {
+            title: "James Montgomery",
+            link: "/people/hymnwriters/james-montgomery",
+          },
+          {
+            title: "Jeanette Threlfall",
+            link: "/people/hymnwriters/jeanette-threlfall",
+          },
+          {
+            title: "Jill Jackson-Miller",
+            link: "/people/hymnwriters/jill-jackson-miller",
+          },
+          {
+            title: "Joachim Neander",
+            link: "/people/hymnwriters/joachim-neander",
+          },
+          {
+            title: "Johann Sebastian Bach's",
+            link: "/people/hymnwriters/johann-sebastian-bach",
+          },
+          {
+            title: "John Francis Wade",
+            link: "/people/hymnwriters/john-francis-wade",
+          },
+          {
+            title: "John Henry Hopkins Jr.",
+            link: "/people/hymnwriters/john-henry-hopkins-jr",
+          },
+          {
+            title: "John Newton",
+            link: "/people/hymnwriters/john-newton",
+          },
+          {
+            title: "Joseph M. Scriven",
+            link: "/people/hymnwriters/joseph-m-scriven",
+          },
+          {
+            title: "Joseph Mohr",
+            link: "/people/hymnwriters/joseph-mohr",
+          },
+          {
+            title: "Judson W. Van DeVenter",
+            link: "/people/hymnwriters/judson-w-van-deventer",
+          },
+          {
+            title: "Kathleen Thomerson",
+            link: "/people/hymnwriters/kathleen-thomerson",
+          },
+          {
+            title: "Katharina von Schlegel",
+            link: "/people/hymnwriters/katharina-von-schlegel",
+          },
+          {
+            title: "Martin Rinkart",
+            link: "/people/hymnwriters/martin-rinkart",
+          },
+          {
+            title: "Matthew Bridges",
+            link: "/people/hymnwriters/matthew-bridges",
+          },
+          {
+            title: "Paulinus of Aquileia",
+            link: "/people/hymnwriters/paulinus-of-aquileia",
+          },
+          {
+            title: "Phillips Brooks",
+            link: "/people/hymnwriters/phillips-brooks",
+          },
+          {
+            title: "Placide Cappeau",
+            link: "/people/hymnwriters/placide-cappeau",
+          },
+          {
+            title: "Sy Miller",
+            link: "/people/hymnwriters/sy-miller",
+          },
+          {
+            title: "Synesius of Cyrene",
+            link: "/people/hymnwriters/synesius-of-cyrene",
+          },
+          {
+            title: "Thomas Helmore",
+            link: "/people/hymnwriters/thomas-helmore",
+          },
+          {
+            title: "Will L. Thompson",
+            link: "/people/hymnwriters/will-l-thompson",
+          },
+          {
+            title: "William W. How",
+            link: "/people/hymnwriters/william-w-how",
           },
         ],
       },
