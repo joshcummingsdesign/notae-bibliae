@@ -8,6 +8,7 @@ import dayjs from "dayjs";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getPaginationRange, paginatePosts } from "./pagination";
+import { smartQuotes } from "@/utils/smartQuotes";
 
 interface Props {
   allPosts: Post[];
@@ -96,7 +97,7 @@ export const Meditations: React.FC<Props> = ({ allPosts, perPage = 8 }) => {
             >
               <PostHeading>{post.title}</PostHeading>
               <PostDate>{dayjs(post.date).format("MMM D, YYYY")}</PostDate>
-              <PostDescription>{post.description}</PostDescription>
+              <PostDescription>{smartQuotes(post.description)}</PostDescription>
               <PostLink>Read</PostLink>
             </PostWrap>
           );
