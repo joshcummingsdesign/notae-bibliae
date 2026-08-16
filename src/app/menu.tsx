@@ -1857,8 +1857,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/anne",
               },
               {
-                title: "Blessed Virgin Mary",
-                link: "/people/saints/biblical/blessed-virgin-mary",
+                title: "The Blessed Virgin Mary",
+                link: "/people/saints/biblical/the-blessed-virgin-mary",
               },
               {
                 title: "Joachim",
