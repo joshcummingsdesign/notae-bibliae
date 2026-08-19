@@ -1869,6 +1869,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/john-the-baptist",
               },
               {
+                title: "Joseph of Nazareth",
+                link: "/people/saints/biblical/joseph-of-nazareth",
+              },
+              {
                 title: "Lazarus",
                 link: "/people/saints/biblical/lazarus",
               },
@@ -1893,8 +1897,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/silas",
               },
               {
-                title: "Joseph of Nazareth",
-                link: "/people/saints/biblical/joseph-of-nazareth",
+                title: "Simeon the Prophet",
+                link: "/people/saints/biblical/simeon-the-prophet",
               },
               {
                 title: "Stephen",
