@@ -1943,6 +1943,10 @@ export const menuItems: MenuNode[] = [
             priority: 0.6,
             children: [
               {
+                title: "Andrew of Crete",
+                link: "/people/saints/greek-fathers/andrew-of-crete",
+              },
+              {
                 title: "Athanasius of Alexandria",
                 link: "/people/saints/greek-fathers/athanasius-of-alexandria",
               },
