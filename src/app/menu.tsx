@@ -1974,6 +1974,10 @@ export const menuItems: MenuNode[] = [
                 title: "Maximus the Confessor",
                 link: "/people/saints/greek-fathers/maximus-the-confessor",
               },
+              {
+                title: "Sophronius of Jerusalem",
+                link: "/people/saints/greek-fathers/sophronius-of-jerusalem",
+              },
             ],
           },
           {
