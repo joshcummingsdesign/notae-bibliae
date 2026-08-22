@@ -2225,8 +2225,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/medieval/gregory-of-tours",
               },
               {
-                title: "Osmund",
-                link: "/people/saints/medieval/osmund",
+                title: "Osmund of Salisbury",
+                link: "/people/saints/medieval/osmund-of-salisbury",
               },
               {
                 title: "Peter Damian",
