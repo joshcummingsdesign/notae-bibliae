@@ -2289,6 +2289,10 @@ export const menuItems: MenuNode[] = [
             link: "/people/medieval-theologians/duns-scotus",
           },
           {
+            title: "Lanfranc of Pavia",
+            link: "/people/medieval-theologians/lanfranc-of-pavia",
+          },
+          {
             title: "Peter Lombard",
             link: "/people/medieval-theologians/peter-lombard",
           },
