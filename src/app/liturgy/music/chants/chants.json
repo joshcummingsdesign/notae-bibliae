@@ -496,6 +496,21 @@
         "id": "occasion",
         "content": "Easter – Matins"
       }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Deus Creator omnium",
+        "link": "/liturgy/music/chants/deus-creator-omnium"
+      },
+      {
+        "id": "type",
+        "content": "Hymn"
+      },
+      {
+        "id": "occasion",
+        "content": "Ordinary Time – Vespers"
+      }
     ]
   ]
 }

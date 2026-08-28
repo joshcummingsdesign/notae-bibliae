@@ -1277,6 +1277,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/credo",
               },
               {
+                title: "Deus Creator omnium",
+                link: "/liturgy/music/chants/deus-creator-omnium",
+              },
+              {
                 title: "Deus in adjutorium",
                 link: "/liturgy/music/chants/deus-in-adjutorium",
               },
