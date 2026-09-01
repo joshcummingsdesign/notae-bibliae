@@ -1865,6 +1865,10 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/biblical/the-blessed-virgin-mary",
               },
               {
+                title: "Elizabeth",
+                link: "/people/saints/biblical/elizabeth",
+              },
+              {
                 title: "Joachim",
                 link: "/people/saints/biblical/joachim",
               },
@@ -1915,6 +1919,10 @@ export const menuItems: MenuNode[] = [
               {
                 title: "Titus",
                 link: "/people/saints/biblical/titus",
+              },
+              {
+                title: "Zechariah the Priest",
+                link: "/people/saints/biblical/zechariah-the-priest",
               },
             ],
           },
