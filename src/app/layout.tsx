@@ -35,6 +35,7 @@ const canterbury = localFont({
 const ebGaramond = EB_Garamond({
   weight: ["400", "700"],
   subsets: ["latin"],
+  style: ["normal", "italic"],
   display: "swap",
   variable: "--font-eb-garamond",
 });
