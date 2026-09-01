@@ -97,8 +97,6 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     const isPreLent = calendar.isPreLent();
     const isTrinitytide = calendar.isTrinitytide();
     const isHolyInnocents = calendar.isHolyInnocents();
-    const isSeptuagesimaToEaster = calendar.isSeptuagesimaToEaster();
-    const isRogationDay = calendar.isRogationDay();
     const isLordsDay = calendar.isLordsDay();
     const isFeastDay = calendar.isFeastDay();
     const isOctave =
@@ -149,8 +147,6 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isPreLent,
       isTrinitytide,
       isHolyInnocents,
-      isSeptuagesimaToEaster,
-      isRogationDay,
     };
   }, [calendar, dateString]);
 
@@ -184,25 +180,8 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     return page;
   }, [calendarData]);
 
-  const shouldSingTeDeum = useMemo(
-    () =>
-      calendarData.isFeastDay ||
-      calendarData.isLordsDay ||
-      calendarData.isChristmastide ||
-      calendarData.isOctaveOfEpiphany ||
-      calendarData.isEastertide ||
-      calendarData.isWhitsuntide,
-    [calendarData],
-  );
-
   const shouldOmitTeDeum = useMemo(
-    () =>
-      calendarData.isRogationDay ||
-      calendarData.isEmberDayInWhitsuntide ||
-      calendarData.isAdvent ||
-      (calendarData.isHolyInnocents && !calendarData.isLordsDay) ||
-      calendarData.isSeptuagesimaToEaster ||
-      calendarData.isSolemn,
+    () => calendarData.isLent || calendarData.isSolemn,
     [calendarData],
   );
 
@@ -217,7 +196,6 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     isOctaveOfEaster: calendarData.isOctaveOfEaster,
     isPentecost: calendarData.isPentecost,
     invitatoryPage,
-    shouldSingTeDeum,
     shouldOmitTeDeum,
     currentAntiphon: calendarData.currentAntiphon,
     dateString,

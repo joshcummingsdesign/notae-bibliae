@@ -33,7 +33,6 @@ export const Content = () => {
     isSolemn,
     isOctaveOfEaster,
     invitatoryPage,
-    shouldSingTeDeum,
     shouldOmitTeDeum,
     today,
     lectionaryData,
@@ -91,7 +90,7 @@ export const Content = () => {
         </h2>
         <Rubric text={["❡ Sit for the Lessons; stand for the Canticles."]} />
         {!isLoading && <Lesson lessons={lectionaryData!.morning.first} />}
-        <TeDeum shouldSing={shouldSingTeDeum} shouldOmit={shouldOmitTeDeum} />
+        <TeDeum shouldOmit={shouldOmitTeDeum} />
         {!isLoading && <Lesson lessons={lectionaryData!.morning.second} />}
         <Benedictus />
         <hr />
