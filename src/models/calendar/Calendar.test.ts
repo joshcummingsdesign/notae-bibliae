@@ -1017,6 +1017,31 @@ describe("Calendar", () => {
       });
     });
 
+    describe("Morning Prayer canticle dates", () => {
+      test("identifies Friday after Trinity Sunday", () => {
+        expect(createCalendar("2026-06-05").isFridayAfterTrinitySunday()).toBe(
+          true,
+        );
+        expect(createCalendar("2026-06-06").isFridayAfterTrinitySunday()).toBe(
+          false,
+        );
+      });
+
+      test("identifies Christmas Eve", () => {
+        expect(createCalendar("2025-12-24").isChristmasEve()).toBe(true);
+        expect(createCalendar("2025-12-25").isChristmasEve()).toBe(false);
+      });
+
+      test("identifies the Nativity of Saint John the Baptist", () => {
+        expect(
+          createCalendar("2026-06-24").isNativityOfSaintJohnTheBaptist(),
+        ).toBe(true);
+        expect(
+          createCalendar("2026-06-25").isNativityOfSaintJohnTheBaptist(),
+        ).toBe(false);
+      });
+    });
+
     describe("season checks", () => {
       test.each([
         ["isAdvent", "2025-11-30", true],

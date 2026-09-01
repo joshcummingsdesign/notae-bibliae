@@ -97,6 +97,10 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     const isPreLent = calendar.isPreLent();
     const isTrinitytide = calendar.isTrinitytide();
     const isHolyInnocents = calendar.isHolyInnocents();
+    const shouldUseJubilate =
+      calendar.isFridayAfterTrinitySunday() ||
+      calendar.isChristmasEve() ||
+      calendar.isNativityOfSaintJohnTheBaptist();
     const isLordsDay = calendar.isLordsDay();
     const isFeastDay = calendar.isFeastDay();
     const isOctave =
@@ -147,6 +151,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isPreLent,
       isTrinitytide,
       isHolyInnocents,
+      shouldUseJubilate,
     };
   }, [calendar, dateString]);
 
@@ -197,6 +202,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     isPentecost: calendarData.isPentecost,
     invitatoryPage,
     shouldOmitTeDeum,
+    shouldUseJubilate: calendarData.shouldUseJubilate,
     currentAntiphon: calendarData.currentAntiphon,
     dateString,
     today: fullDateString,

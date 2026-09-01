@@ -9,11 +9,11 @@ import {
   OpeningVersicles,
   PsalmsOfTheDay,
   TeDeum,
+  Benedictus,
   Collects,
 } from "@/components/DailyOffice";
 import GeneralConfession from "../shared-content/general-confession.mdx";
 import OurFather from "../shared-content/our-father.mdx";
-import Benedictus from "./benedictus.mdx";
 import ApostlesCreed from "../shared-content/apostles-creed.mdx";
 import Salutation from "../shared-content/salutation.mdx";
 import Suffrages from "./suffrages.mdx";
@@ -34,6 +34,7 @@ export const Content = () => {
     isOctaveOfEaster,
     invitatoryPage,
     shouldOmitTeDeum,
+    shouldUseJubilate,
     today,
     lectionaryData,
   } = useDailyOffice("morning");
@@ -92,7 +93,7 @@ export const Content = () => {
         {!isLoading && <Lesson lessons={lectionaryData!.morning.first} />}
         <TeDeum shouldOmit={shouldOmitTeDeum} />
         {!isLoading && <Lesson lessons={lectionaryData!.morning.second} />}
-        <Benedictus />
+        <Benedictus shouldOmit={shouldUseJubilate} />
         <hr />
 
         <h2>

@@ -1358,6 +1358,24 @@ export class Calendar {
     return this.today.isSame(trinitySunday, "day");
   }
 
+  isFridayAfterTrinitySunday(): boolean {
+    return this.today.isSame(this.getTrinitySunday().add(5, "day"), "day");
+  }
+
+  isChristmasEve(): boolean {
+    return this.today.isSame(
+      this.createDate(`${this.today.year()}-12-24`),
+      "day",
+    );
+  }
+
+  isNativityOfSaintJohnTheBaptist(): boolean {
+    return this.getByDate().some(
+      ({ title }) =>
+        stripMarkdownLinks(title) === "The Nativity of Saint John the Baptist",
+    );
+  }
+
   /**
    * Check to see if we're in Eastertide.
    */
