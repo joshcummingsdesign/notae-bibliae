@@ -41,9 +41,6 @@ const createMockCalendar = () => ({
   isLordsDay: vi.fn(() => false),
   isFeastDay: vi.fn(() => false),
   isVigil: vi.fn(() => false),
-  isFridayAfterTrinitySunday: vi.fn(() => false),
-  isChristmasEve: vi.fn(() => false),
-  isNativityOfSaintJohnTheBaptist: vi.fn(() => false),
 });
 
 let mockCalendar = createMockCalendar();
@@ -260,28 +257,6 @@ describe("useDailyOffice", () => {
       });
 
       expect(result.current.shouldOmitTeDeum).toBe(false);
-    });
-  });
-
-  describe("Benedictus rules (shouldUseJubilate)", () => {
-    it.each([
-      "isFridayAfterTrinitySunday",
-      "isChristmasEve",
-      "isNativityOfSaintJohnTheBaptist",
-    ] as const)("is true when %s is true", async (predicate) => {
-      mockCalendar[predicate].mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => expect(result.current.isLoading).toBe(false));
-      expect(result.current.shouldUseJubilate).toBe(true);
-    });
-
-    it("is false otherwise", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => expect(result.current.isLoading).toBe(false));
-      expect(result.current.shouldUseJubilate).toBe(false);
     });
   });
 

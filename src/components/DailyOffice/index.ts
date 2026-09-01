@@ -1,7 +1,6 @@
 export * from "./OpeningVersicles";
 export * from "./Invitatory";
 export * from "./TeDeum";
-export * from "./Benedictus";
 export * from "./Magnificat";
 export * from "./NuncDimittis";
 export * from "./Collects";

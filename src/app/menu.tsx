@@ -1305,10 +1305,6 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/iste-pauper",
               },
               {
-                title: "Jubilate Deo",
-                link: "/liturgy/music/chants/jubilate-deo",
-              },
-              {
                 title: "Kyrie",
                 link: "/liturgy/music/chants/kyrie",
               },
