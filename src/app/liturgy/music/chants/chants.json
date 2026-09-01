@@ -631,6 +631,21 @@
         "id": "occasion",
         "content": "Lauds"
       }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Jubliate Deo",
+        "link": "/liturgy/music/chants/jubilate-deo"
+      },
+      {
+        "id": "type",
+        "content": "Psalm"
+      },
+      {
+        "id": "occasion",
+        "content": "Ordinary Time"
+      }
     ]
   ]
 }
