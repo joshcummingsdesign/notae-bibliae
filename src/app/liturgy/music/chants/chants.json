@@ -365,6 +365,21 @@
     [
       {
         "id": "title",
+        "content": "O Virgo virginum",
+        "link": "/liturgy/music/chants/o-virgo-virginum"
+      },
+      {
+        "id": "type",
+        "content": "Antiphon"
+      },
+      {
+        "id": "occasion",
+        "content": "Advent – Vespers"
+      }
+    ],
+    [
+      {
+        "id": "title",
         "content": "Agnus Dei",
         "link": "/liturgy/music/chants/agnus-dei"
       },
@@ -510,6 +525,111 @@
       {
         "id": "occasion",
         "content": "Ordinary Time – Vespers"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Habakkuk",
+        "link": "/liturgy/music/chants/song-of-habakkuk"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Hannah",
+        "link": "/liturgy/music/chants/song-of-hannah"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Hezekiah",
+        "link": "/liturgy/music/chants/song-of-hezekiah"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Isaiah",
+        "link": "/liturgy/music/chants/song-of-isaiah"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Moses from Deut., Pt. 1",
+        "link": "/liturgy/music/chants/song-of-moses-deut-pt-1"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Moses from Deut., Pt. 2",
+        "link": "/liturgy/music/chants/song-of-moses-deut-pt-2"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
+      }
+    ],
+    [
+      {
+        "id": "title",
+        "content": "Song of Moses from Exod.",
+        "link": "/liturgy/music/chants/song-of-moses-exod"
+      },
+      {
+        "id": "type",
+        "content": "Canticle"
+      },
+      {
+        "id": "occasion",
+        "content": "Lauds"
       }
     ]
   ]
