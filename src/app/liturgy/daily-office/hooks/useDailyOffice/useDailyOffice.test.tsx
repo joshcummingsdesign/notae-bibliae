@@ -343,7 +343,7 @@ describe("useDailyOffice", () => {
       expect(result.current.invitatoryPage).toBe(312);
     });
 
-    it("returns page 312 for Pre-Lent", async () => {
+    it("returns page 310 for Pre-Lent", async () => {
       mockCalendar.isPreLent.mockReturnValue(true);
 
       const { result } = renderHook(() => useDailyOffice("morning"));
@@ -352,7 +352,7 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.invitatoryPage).toBe(312);
+      expect(result.current.invitatoryPage).toBe(310);
     });
 
     it("returns page 314 for Eastertide", async () => {

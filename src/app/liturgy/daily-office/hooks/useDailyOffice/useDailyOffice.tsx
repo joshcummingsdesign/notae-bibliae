@@ -168,9 +168,9 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       page = 306;
     } else if (calendarData.isChristmastide) {
       page = 308;
-    } else if (calendarData.isEpiphanytide) {
+    } else if (calendarData.isEpiphanytide || calendarData.isPreLent) {
       page = 310;
-    } else if (calendarData.isLent || calendarData.isPreLent) {
+    } else if (calendarData.isLent) {
       page = 312;
     } else if (calendarData.isEastertide) {
       page = 314;

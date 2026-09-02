@@ -23,8 +23,9 @@ export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
           href="/liturgy/daily-office/chant-rubrics#the-collects"
           target="_blank"
         >
-          festal tone.
+          festal tone
         </Link>
+        .
       </Text>
     </Wrapper>
   );
