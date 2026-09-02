@@ -1572,6 +1572,17 @@ export class Calendar {
   }
 
   /**
+   * Check to see if we're in the Paschal Triduum.
+   */
+  isTriduum(): boolean {
+    const easter = this.getEasterSunday();
+    return (
+      this.today.isSameOrAfter(easter.subtract(3, "day"), "day") &&
+      this.today.isBefore(easter, "day")
+    );
+  }
+
+  /**
    * Check to see if we're in the time between Septuagesima and Passion Sunday.
    */
   isSeptuagesimaToPassion(): boolean {

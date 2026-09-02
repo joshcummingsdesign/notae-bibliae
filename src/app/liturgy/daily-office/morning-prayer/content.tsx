@@ -29,11 +29,10 @@ export const Content = () => {
   const {
     isLoading,
     isFerial,
-    isVigil,
-    isSolemn,
+    isTriduum,
     isOctaveOfEaster,
     invitatoryPage,
-    shouldOmitTeDeum,
+    isLent,
     today,
     lectionaryData,
   } = useDailyOffice("morning");
@@ -69,7 +68,7 @@ export const Content = () => {
           <Large size="xl" text="Opening" />
         </h2>
         <OurFather />
-        <OpeningVersicles isSolemn={isSolemn} isVigil={isVigil} />
+        <OpeningVersicles />
         <hr />
 
         <h2>
@@ -77,7 +76,7 @@ export const Content = () => {
         </h2>
         <Invitatory
           page={invitatoryPage}
-          isSolemn={isSolemn}
+          isTriduum={isTriduum}
           isOctaveOfEaster={isOctaveOfEaster}
         />
         <Rubric text={["❡ The people sit, standing at each Glory Be."]} />
@@ -90,7 +89,7 @@ export const Content = () => {
         </h2>
         <Rubric text={["❡ Sit for the Lessons; stand for the Canticles."]} />
         {!isLoading && <Lesson lessons={lectionaryData!.morning.first} />}
-        <TeDeum shouldOmit={shouldOmitTeDeum} />
+        <TeDeum isLent={isLent} />
         {!isLoading && <Lesson lessons={lectionaryData!.morning.second} />}
         <Benedictus />
         <hr />

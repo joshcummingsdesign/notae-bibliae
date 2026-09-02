@@ -12,6 +12,7 @@ const createMockCalendar = () => ({
     })),
   })),
   isSolemn: vi.fn(() => false),
+  isTriduum: vi.fn(() => false),
   isOctaveOfChristmas: vi.fn(() => false),
   isOctaveOfEpiphany: vi.fn(() => false),
   isOctaveOfEaster: vi.fn(() => false),
@@ -218,7 +219,7 @@ describe("useDailyOffice", () => {
     });
   });
 
-  describe("Te Deum rules (shouldOmitTeDeum)", () => {
+  describe("Lent", () => {
     it("is true during Lent", async () => {
       mockCalendar.isLent.mockReturnValue(true);
 
@@ -228,10 +229,10 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.shouldOmitTeDeum).toBe(true);
+      expect(result.current.isLent).toBe(true);
     });
 
-    it("is true on solemn days", async () => {
+    it("is false on non-Lenten solemn days", async () => {
       mockCalendar.isSolemn.mockReturnValue(true);
 
       const { result } = renderHook(() => useDailyOffice("morning"));
@@ -240,7 +241,7 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.shouldOmitTeDeum).toBe(true);
+      expect(result.current.isLent).toBe(false);
     });
 
     it("is false otherwise", async () => {
@@ -256,7 +257,28 @@ describe("useDailyOffice", () => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.shouldOmitTeDeum).toBe(false);
+      expect(result.current.isLent).toBe(false);
+    });
+  });
+
+  describe("Triduum rules", () => {
+    it("is true outside the Easter Vigil", async () => {
+      mockCalendar.isTriduum.mockReturnValue(true);
+
+      const { result } = renderHook(() => useDailyOffice("morning"));
+
+      await waitFor(() => expect(result.current.isLoading).toBe(false));
+      expect(result.current.isTriduum).toBe(true);
+    });
+
+    it("is false at the Easter Vigil", async () => {
+      mockCalendar.isTriduum.mockReturnValue(true);
+      mockCalendar.isVigil.mockReturnValue(true);
+
+      const { result } = renderHook(() => useDailyOffice("evening"));
+
+      await waitFor(() => expect(result.current.isLoading).toBe(false));
+      expect(result.current.isTriduum).toBe(false);
     });
   });
 

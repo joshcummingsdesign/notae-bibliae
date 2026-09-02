@@ -73,6 +73,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
   const calendarData = useMemo(() => {
     const isSolemn = calendar.isSolemn();
+    const isTriduum = calendar.isTriduum();
     const isOctaveOfChristmas = calendar.isOctaveOfChristmas();
     const isOctaveOfEpiphany = calendar.isOctaveOfEpiphany();
     const isOctaveOfEaster = calendar.isOctaveOfEaster();
@@ -119,6 +120,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
     return {
       isSolemn,
+      isTriduum,
       isOctaveOfChristmas,
       isOctaveOfEpiphany,
       isOctaveOfEaster,
@@ -180,23 +182,17 @@ export const useDailyOffice = (office: "morning" | "evening") => {
     return page;
   }, [calendarData]);
 
-  const shouldOmitTeDeum = useMemo(
-    () => calendarData.isLent || calendarData.isSolemn,
-    [calendarData],
-  );
-
   return {
     isLoading,
     isLordsDay: calendarData.isLordsDay,
     isFerial: calendarData.isFerial,
-    isVigil: calendarData.isVigil,
-    isSolemn: calendarData.isSolemn,
+    isTriduum: calendarData.isTriduum && !calendarData.isVigil,
     isChristmas: calendarData.isChristmas,
     isEaster: calendarData.isEaster,
     isOctaveOfEaster: calendarData.isOctaveOfEaster,
     isPentecost: calendarData.isPentecost,
+    isLent: calendarData.isLent,
     invitatoryPage,
-    shouldOmitTeDeum,
     currentAntiphon: calendarData.currentAntiphon,
     dateString,
     today: fullDateString,

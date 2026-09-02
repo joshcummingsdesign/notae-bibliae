@@ -2,16 +2,16 @@ import Link from "next/link";
 
 interface Props {
   page: number;
-  isSolemn: boolean;
+  isTriduum: boolean;
   isOctaveOfEaster: boolean;
 }
 
 export const Invitatory: React.FC<Props> = ({
   page,
-  isSolemn,
+  isTriduum,
   isOctaveOfEaster,
 }) => {
-  if (isSolemn) {
+  if (isTriduum) {
     return (
       <p>
         [ <em>Omit Invitatory</em> ]

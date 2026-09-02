@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 interface Props {
-  shouldOmit: boolean;
+  isLent: boolean;
 }
 
-export const TeDeum: React.FC<Props> = ({ shouldOmit }) => {
-  if (shouldOmit) {
+export const TeDeum: React.FC<Props> = ({ isLent }) => {
+  if (isLent) {
     return (
       <p>
         <strong>

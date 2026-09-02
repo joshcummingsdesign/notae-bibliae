@@ -29,8 +29,6 @@ export const Content = () => {
     isLoading,
     isLordsDay,
     isFerial,
-    isVigil,
-    isSolemn,
     currentAntiphon,
     today,
     lectionaryData,
@@ -67,7 +65,7 @@ export const Content = () => {
           <Large size="xl" text="Opening" />
         </h2>
         <OurFather />
-        <OpeningVersicles isSolemn={isSolemn} isVigil={isVigil} />
+        <OpeningVersicles />
         <hr />
 
         <h2>
