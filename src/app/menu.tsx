@@ -1273,6 +1273,10 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/benedictus",
               },
               {
+                title: "Benedictus es, Domine",
+                link: "/liturgy/music/chants/benedictus-es-domine",
+              },
+              {
                 title: "Credo",
                 link: "/liturgy/music/chants/credo",
               },
