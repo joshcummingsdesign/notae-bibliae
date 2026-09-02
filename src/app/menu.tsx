@@ -1281,7 +1281,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/credo",
               },
               {
-                title: "Deus Creator omnium",
+                title: "Deus, Creator omnium",
                 link: "/liturgy/music/chants/deus-creator-omnium",
               },
               {
@@ -1289,7 +1289,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/deus-in-adjutorium",
               },
               {
-                title: "Domine labia mea",
+                title: "Domine, labia mea",
                 link: "/liturgy/music/chants/domine-labia-mea",
               },
               {
@@ -1361,7 +1361,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/pascha-nostrum",
               },
               {
-                title: "Salva nos Domine",
+                title: "Salva nos, Domine",
                 link: "/liturgy/music/chants/salva-nos-domine",
               },
               {
@@ -1405,7 +1405,7 @@ export const menuItems: MenuNode[] = [
                 link: "/liturgy/music/chants/te-deum",
               },
               {
-                title: "Veni redemptor gentium",
+                title: "Veni, redemptor gentium",
                 link: "/liturgy/music/chants/veni-redemptor-gentium",
               },
               {
