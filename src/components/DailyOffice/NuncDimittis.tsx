@@ -1,10 +1,6 @@
 import Link from "next/link";
 
-interface Props {
-  isLordsDay: boolean;
-}
-
-export const NuncDimittis: React.FC<Props> = ({ isLordsDay }) => {
+export const NuncDimittis = () => {
   return (
     <p>
       <strong>

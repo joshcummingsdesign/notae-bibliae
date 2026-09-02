@@ -27,7 +27,6 @@ import { Rubric } from "@/components/text/Rubric";
 export const Content = () => {
   const {
     isLoading,
-    isLordsDay,
     isFerial,
     currentAntiphon,
     today,
@@ -87,7 +86,7 @@ export const Content = () => {
           showAntiphonVerse={true}
         />
         {!isLoading && <Lesson lessons={lectionaryData!.evening.second} />}
-        <NuncDimittis isLordsDay={isLordsDay} />
+        <NuncDimittis />
         <hr />
 
         <h2>
