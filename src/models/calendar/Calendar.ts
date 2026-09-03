@@ -1572,14 +1572,24 @@ export class Calendar {
   }
 
   /**
-   * Check to see if we're in the Paschal Triduum.
+   * Check to see if today is Maundy Thursday.
    */
-  isTriduum(): boolean {
-    const easter = this.getEasterSunday();
-    return (
-      this.today.isSameOrAfter(easter.subtract(3, "day"), "day") &&
-      this.today.isBefore(easter, "day")
-    );
+  isMaundyThursday(): boolean {
+    return this.today.isSame(this.getEasterSunday().subtract(3, "day"), "day");
+  }
+
+  /**
+   * Check to see if today is Good Friday.
+   */
+  isGoodFriday(): boolean {
+    return this.today.isSame(this.getEasterSunday().subtract(2, "day"), "day");
+  }
+
+  /**
+   * Check to see if today is Holy Saturday.
+   */
+  isHolySaturday(): boolean {
+    return this.today.isSame(this.getEasterSunday().subtract(1, "day"), "day");
   }
 
   /**

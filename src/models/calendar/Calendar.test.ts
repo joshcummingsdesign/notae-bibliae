@@ -1076,13 +1076,12 @@ describe("Calendar", () => {
         ["isHolyWeek", "2026-03-29", true], // Palm Sunday
         ["isHolyWeek", "2026-04-04", true], // Holy Saturday
         ["isHolyWeek", "2026-04-05", false], // Easter
-        // Paschal Triduum
-        ["isTriduum", "2026-04-01", false],
-        ["isTriduum", "2026-04-02", true], // Maundy Thursday
-        ["isTriduum", "2026-04-03", true], // Good Friday
-        ["isTriduum", "2026-04-04", true], // Holy Saturday
-        ["isTriduum", "2026-04-05", false], // Easter
-        ["isTriduum", "2026-11-02", false], // All Souls
+        ["isMaundyThursday", "2026-04-02", true],
+        ["isMaundyThursday", "2026-04-03", false],
+        ["isGoodFriday", "2026-04-03", true],
+        ["isGoodFriday", "2026-04-04", false],
+        ["isHolySaturday", "2026-04-04", true],
+        ["isHolySaturday", "2026-04-05", false],
         // Ascensiontide
         ["isAscensiontide", "2026-05-14", true], // Ascension
         ["isAscensiontide", "2026-05-23", true], // Eve of Pentecost

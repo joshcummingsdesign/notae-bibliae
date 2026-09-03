@@ -2,13 +2,19 @@ import { Calendar } from "@/models/calendar";
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { LectionaryItem, LectionaryRes } from "@/models/lectionary";
 
-export const useDailyOffice = (office: "morning" | "evening") => {
+export const useDailyOffice = (
+  office: "morning" | "evening",
+  calendarOverride?: Calendar,
+) => {
   const [lectionaryData, setLectionaryData] = useState<LectionaryRes | null>(
     null,
   );
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const calendar = useMemo(() => new Calendar(), []);
+  const calendar = useMemo(
+    () => calendarOverride ?? new Calendar(),
+    [calendarOverride],
+  );
 
   const dateString = useMemo(
     () => calendar.getToday().format("YYYY-MM-DD"),
@@ -73,7 +79,10 @@ export const useDailyOffice = (office: "morning" | "evening") => {
 
   const calendarData = useMemo(() => {
     const isSolemn = calendar.isSolemn();
-    const isTriduum = calendar.isTriduum();
+    const isTriduum =
+      (office === "evening" && calendar.isMaundyThursday()) ||
+      calendar.isGoodFriday() ||
+      calendar.isHolySaturday();
     const isOctaveOfChristmas = calendar.isOctaveOfChristmas();
     const isOctaveOfEpiphany = calendar.isOctaveOfEpiphany();
     const isOctaveOfEaster = calendar.isOctaveOfEaster();
@@ -150,7 +159,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
       isTrinitytide,
       isHolyInnocents,
     };
-  }, [calendar, dateString]);
+  }, [calendar, dateString, office]);
 
   const invitatoryPage = useMemo(() => {
     let page = 306; // Default: Advent

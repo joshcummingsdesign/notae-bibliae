@@ -1,62 +1,16 @@
 import { renderHook, waitFor } from "@testing-library/react";
 import { vi, beforeEach, afterEach, describe, it, expect } from "vitest";
-
-// Create mock calendar instance that will be returned by Calendar constructor
-const createMockCalendar = () => ({
-  getToday: vi.fn(() => ({
-    format: vi.fn((fmt: string) =>
-      fmt === "YYYY-MM-DD" ? "2025-12-25" : "Thursday, December 25",
-    ),
-    add: vi.fn(() => ({
-      format: vi.fn(() => "2025-12-26"),
-    })),
-  })),
-  isSolemn: vi.fn(() => false),
-  isTriduum: vi.fn(() => false),
-  isOctaveOfChristmas: vi.fn(() => false),
-  isOctaveOfEpiphany: vi.fn(() => false),
-  isOctaveOfEaster: vi.fn(() => false),
-  isOctaveOfPentecost: vi.fn(() => false),
-  isEaster: vi.fn(() => false),
-  isPentecost: vi.fn(() => false),
-  isChristmas: vi.fn(() => false),
-  isWhitsuntide: vi.fn(() => false),
-  isAdvent: vi.fn(() => false),
-  isChristmastide: vi.fn(() => false),
-  isEastertide: vi.fn(() => false),
-  getOAntiphons: vi.fn(() => ({})),
-  isFeastOfASaint: vi.fn(() => false),
-  isSaintDay: vi.fn(() => false),
-  isTransfiguration: vi.fn(() => false),
-  isAnnunciation: vi.fn(() => false),
-  isEmberDayInWhitsuntide: vi.fn(() => false),
-  isPurification: vi.fn(() => false),
-  isAscensiontide: vi.fn(() => false),
-  isEpiphanytide: vi.fn(() => false),
-  isLent: vi.fn(() => false),
-  isPreLent: vi.fn(() => false),
-  isTrinitytide: vi.fn(() => false),
-  isHolyInnocents: vi.fn(() => false),
-  isSeptuagesimaToEaster: vi.fn(() => false),
-  isRogationDay: vi.fn(() => false),
-  isLordsDay: vi.fn(() => false),
-  isFeastDay: vi.fn(() => false),
-  isVigil: vi.fn(() => false),
-});
-
-let mockCalendar = createMockCalendar();
-
-// Mock the Calendar class before importing the hook
-vi.mock("@/models/calendar", () => {
-  return {
-    Calendar: function () {
-      return mockCalendar;
-    },
-  };
-});
-
-// Import after mocking
+import dayjs from "dayjs";
+import { Calendar } from "@/models/calendar";
 import { useDailyOffice } from "./useDailyOffice";
+
+const renderDailyOffice = (
+  date = "2025-12-25",
+  office: "morning" | "evening" = "morning",
+) => {
+  const calendar = new Calendar(dayjs(date));
+  return renderHook(() => useDailyOffice(office, calendar));
+};
 
 // Mock API response matching LectionaryRes structure
 const mockLectionaryResponse = {
@@ -93,9 +47,6 @@ const mockFetch = () => {
 
 describe("useDailyOffice", () => {
   beforeEach(() => {
-    // Create fresh mock calendar for each test
-    mockCalendar = createMockCalendar();
-
     localStorage.clear();
     mockFetch();
 
@@ -109,12 +60,12 @@ describe("useDailyOffice", () => {
 
   describe("loading state", () => {
     it("starts with isLoading=true", () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
       expect(result.current.isLoading).toBe(true);
     });
 
     it("sets isLoading=false after data loads", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -124,7 +75,7 @@ describe("useDailyOffice", () => {
 
   describe("data fetching", () => {
     it("fetches from lectionary endpoint", async () => {
-      renderHook(() => useDailyOffice("morning"));
+      renderDailyOffice();
 
       await waitFor(() => {
         expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -136,7 +87,7 @@ describe("useDailyOffice", () => {
     });
 
     it("sets lectionaryData state from response", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -154,7 +105,7 @@ describe("useDailyOffice", () => {
         .mockImplementation(() => {});
       global.fetch = vi.fn(() => Promise.reject(new Error("Network error")));
 
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(consoleSpy).toHaveBeenCalledWith(
@@ -178,7 +129,7 @@ describe("useDailyOffice", () => {
       };
       localStorage.setItem("daily-office", JSON.stringify(cachedData));
 
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -196,7 +147,7 @@ describe("useDailyOffice", () => {
       };
       localStorage.setItem("daily-office", JSON.stringify(cachedData));
 
-      renderHook(() => useDailyOffice("morning"));
+      renderDailyOffice();
 
       await waitFor(() => {
         expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -204,7 +155,7 @@ describe("useDailyOffice", () => {
     });
 
     it("stores data in localStorage after successful fetch", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -221,9 +172,7 @@ describe("useDailyOffice", () => {
 
   describe("Lent", () => {
     it("is true during Lent", async () => {
-      mockCalendar.isLent.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-02-18");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -233,9 +182,7 @@ describe("useDailyOffice", () => {
     });
 
     it("is false on non-Lenten solemn days", async () => {
-      mockCalendar.isSolemn.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-11-02");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -245,13 +192,7 @@ describe("useDailyOffice", () => {
     });
 
     it("is false otherwise", async () => {
-      mockCalendar.isAdvent.mockReturnValue(true);
-      mockCalendar.isPreLent.mockReturnValue(true);
-      mockCalendar.isHolyInnocents.mockReturnValue(true);
-      mockCalendar.isRogationDay.mockReturnValue(true);
-      mockCalendar.isEmberDayInWhitsuntide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-07-15");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -262,208 +203,61 @@ describe("useDailyOffice", () => {
   });
 
   describe("Triduum rules", () => {
-    it("is true outside the Easter Vigil", async () => {
-      mockCalendar.isTriduum.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => expect(result.current.isLoading).toBe(false));
-      expect(result.current.isTriduum).toBe(true);
-    });
-
-    it("is false at the Easter Vigil", async () => {
-      mockCalendar.isTriduum.mockReturnValue(true);
-      mockCalendar.isVigil.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("evening"));
+    it.each([
+      ["2026-04-01", "morning", false],
+      ["2026-04-02", "morning", false],
+      ["2026-04-02", "evening", true],
+      ["2026-04-03", "morning", true],
+      ["2026-04-03", "evening", true],
+      ["2026-04-04", "morning", true],
+      ["2026-04-04", "evening", true],
+      ["2026-04-05", "morning", false],
+    ] as const)("is %s for %s prayer: %s", async (date, office, expected) => {
+      const { result } = renderDailyOffice(date, office);
 
       await waitFor(() => expect(result.current.isLoading).toBe(false));
-      expect(result.current.isTriduum).toBe(false);
+      expect(result.current.isTriduum).toBe(expected);
     });
   });
 
   describe("invitatory page by season", () => {
-    it("returns page 306 for Advent", async () => {
-      mockCalendar.isAdvent.mockReturnValue(true);
+    it.each([
+      ["Advent", "2025-11-30", 306],
+      ["Christmastide", "2025-12-25", 308],
+      ["Epiphanytide", "2026-01-06", 310],
+      ["Transfiguration", "2026-08-06", 310],
+      ["Lent", "2026-02-18", 312],
+      ["Pre-Lent", "2026-02-01", 310],
+      ["Eastertide", "2026-04-05", 314],
+      ["Ascensiontide", "2026-05-14", 316],
+      ["Whitsuntide", "2026-05-24", 318],
+      ["Trinitytide", "2026-06-01", 320],
+      ["Annunciation", "2026-03-25", 322],
+      ["Purification", "2026-02-02", 322],
+      ["Saint Day", "2026-01-26", 324],
+    ] as const)("returns the %s page on %s (%i)", async (_season, date, page) => {
+      const { result } = renderDailyOffice(date);
 
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(306);
-    });
-
-    it("returns page 308 for Christmastide", async () => {
-      mockCalendar.isChristmastide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(308);
-    });
-
-    it("returns page 310 for Epiphanytide", async () => {
-      mockCalendar.isEpiphanytide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(310);
-    });
-
-    it("returns page 310 for Transfiguration", async () => {
-      mockCalendar.isTransfiguration.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(310);
-    });
-
-    it("returns page 312 for Lent", async () => {
-      mockCalendar.isLent.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(312);
-    });
-
-    it("returns page 310 for Pre-Lent", async () => {
-      mockCalendar.isPreLent.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(310);
-    });
-
-    it("returns page 314 for Eastertide", async () => {
-      mockCalendar.isEastertide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(314);
-    });
-
-    it("returns page 316 for Ascensiontide", async () => {
-      mockCalendar.isAscensiontide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(316);
-    });
-
-    it("returns page 318 for Whitsuntide", async () => {
-      mockCalendar.isWhitsuntide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(318);
-    });
-
-    it("returns page 320 for Trinitytide", async () => {
-      mockCalendar.isTrinitytide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(320);
-    });
-
-    it("returns page 322 for Annunciation", async () => {
-      mockCalendar.isAnnunciation.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(322);
-    });
-
-    it("returns page 322 for Purification", async () => {
-      mockCalendar.isPurification.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(322);
-    });
-
-    it("returns page 324 for Saint Day", async () => {
-      mockCalendar.isSaintDay.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.invitatoryPage).toBe(324);
+      await waitFor(() => expect(result.current.isLoading).toBe(false));
+      expect(result.current.invitatoryPage).toBe(page);
     });
   });
 
   describe("O Antiphons (evening prayer)", () => {
     it("returns currentAntiphon during O Antiphon period", async () => {
-      const oAntiphonData = {
-        title: "O Sapientia",
-        latin: "O Sapientia...",
-        english: "O Wisdom...",
-      };
-      mockCalendar.getOAntiphons.mockReturnValue({
-        "2025-12-25": oAntiphonData,
-      });
-
-      const { result } = renderHook(() => useDailyOffice("evening"));
+      const { result } = renderDailyOffice("2025-12-16", "evening");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
       });
 
-      expect(result.current.currentAntiphon).toEqual(oAntiphonData);
+      expect(result.current.currentAntiphon).toMatchObject({
+        title: "O Sapientia",
+      });
     });
 
     it("returns undefined outside O Antiphon period", async () => {
-      mockCalendar.getOAntiphons.mockReturnValue({});
-
-      const { result } = renderHook(() => useDailyOffice("evening"));
+      const { result } = renderDailyOffice("2025-12-25", "evening");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -475,9 +269,7 @@ describe("useDailyOffice", () => {
 
   describe("ferial vs festal determination", () => {
     it("isFerial=false for Lord's Days", async () => {
-      mockCalendar.isLordsDay.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2025-12-07");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -487,9 +279,7 @@ describe("useDailyOffice", () => {
     });
 
     it("isFerial=false for Feast Days", async () => {
-      mockCalendar.isFeastDay.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2025-12-01");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -499,9 +289,7 @@ describe("useDailyOffice", () => {
     });
 
     it("isFerial=false during Octaves (non-special days)", async () => {
-      mockCalendar.isOctaveOfChristmas.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2025-12-27");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -511,11 +299,7 @@ describe("useDailyOffice", () => {
     });
 
     it("isFerial=true for Holy Innocents on weekday during octave", async () => {
-      mockCalendar.isOctaveOfChristmas.mockReturnValue(true);
-      mockCalendar.isHolyInnocents.mockReturnValue(true);
-      mockCalendar.isLordsDay.mockReturnValue(false);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-12-28");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -525,10 +309,7 @@ describe("useDailyOffice", () => {
     });
 
     it("isFerial=true for Ember Days in Whitsuntide during octave", async () => {
-      mockCalendar.isOctaveOfPentecost.mockReturnValue(true);
-      mockCalendar.isEmberDayInWhitsuntide.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-05-27");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -538,9 +319,7 @@ describe("useDailyOffice", () => {
     });
 
     it("isFerial=true for solemn days", async () => {
-      mockCalendar.isSolemn.mockReturnValue(true);
-
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-11-02");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -550,8 +329,7 @@ describe("useDailyOffice", () => {
     });
 
     it("isFerial=true for regular weekdays (not festal)", async () => {
-      // All flags false = ferial day
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice("2026-07-15");
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -563,7 +341,7 @@ describe("useDailyOffice", () => {
 
   describe("today data", () => {
     it("returns today as formatted date string", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -573,7 +351,7 @@ describe("useDailyOffice", () => {
     });
 
     it("returns dateString in YYYY-MM-DD format", async () => {
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -595,7 +373,7 @@ describe("useDailyOffice", () => {
         linkVerses: mockLinkVerses,
       };
 
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -610,7 +388,7 @@ describe("useDailyOffice", () => {
     it("does not error when BGLinks is undefined", async () => {
       (window as unknown as { BGLinks: unknown }).BGLinks = undefined;
 
-      const { result } = renderHook(() => useDailyOffice("morning"));
+      const { result } = renderDailyOffice();
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
