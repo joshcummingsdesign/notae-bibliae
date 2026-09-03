@@ -185,7 +185,7 @@ export const useDailyOffice = (office: "morning" | "evening") => {
   return {
     isLoading,
     isFerial: calendarData.isFerial,
-    isTriduum: calendarData.isTriduum && !calendarData.isVigil,
+    isTriduum: calendarData.isTriduum,
     isChristmas: calendarData.isChristmas,
     isEaster: calendarData.isEaster,
     isOctaveOfEaster: calendarData.isOctaveOfEaster,
