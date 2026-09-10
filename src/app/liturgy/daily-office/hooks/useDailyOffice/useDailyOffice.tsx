@@ -87,9 +87,6 @@ export const useDailyOffice = (
     const isOctaveOfEpiphany = calendar.isOctaveOfEpiphany();
     const isOctaveOfEaster = calendar.isOctaveOfEaster();
     const isOctaveOfPentecost = calendar.isOctaveOfPentecost();
-    const isEaster = calendar.isEaster();
-    const isPentecost = calendar.isPentecost();
-    const isChristmas = calendar.isChristmas();
     const isWhitsuntide = calendar.isWhitsuntide();
     const isAdvent = calendar.isAdvent();
     const isChristmastide = calendar.isChristmastide();
@@ -134,9 +131,6 @@ export const useDailyOffice = (
       isOctaveOfEpiphany,
       isOctaveOfEaster,
       isOctaveOfPentecost,
-      isEaster,
-      isPentecost,
-      isChristmas,
       isWhitsuntide,
       isAdvent,
       isChristmastide,
@@ -195,14 +189,10 @@ export const useDailyOffice = (
     isLoading,
     isFerial: calendarData.isFerial,
     isTriduum: calendarData.isTriduum,
-    isChristmas: calendarData.isChristmas,
-    isEaster: calendarData.isEaster,
     isOctaveOfEaster: calendarData.isOctaveOfEaster,
-    isPentecost: calendarData.isPentecost,
     isLent: calendarData.isLent,
     invitatoryPage,
     currentAntiphon: calendarData.currentAntiphon,
-    dateString,
     today: fullDateString,
     lectionaryData: getLectionaryData(),
   };

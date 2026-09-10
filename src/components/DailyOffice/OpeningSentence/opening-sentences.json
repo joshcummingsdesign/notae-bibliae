@@ -2,6 +2,30 @@
   "morning": {
     "General": [
       {
+        "passage": "Matt. iii. 2",
+        "text": "Repent ye; for the Kingdom of heaven is at hand."
+      },
+      {
+        "passage": "Joel ii. 13",
+        "text": "Rend your heart, and not your garments, and turn unto the Lord your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil."
+      },
+      {
+        "passage": "Ps. li. 17",
+        "text": "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."
+      },
+      {
+        "passage": "Luke xv. 18-19",
+        "text": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee, and am no more worthy to be called thy son."
+      }
+    ],
+    "Contrition": [
+      {
+        "passage": "Isa. lvii. 15",
+        "text": "Thus saith the high and lofty One that inhabiteth eternity, whose name is Holy; I dwell in the high and holy place, with him also that is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones."
+      }
+    ],
+    "Adoration": [
+      {
         "passage": "Hab. ii. 20",
         "text": "The Lord is in his holy temple: let all the earth keep silence before him."
       },
@@ -18,23 +42,21 @@
         "text": "O send out thy light and thy truth, that they may lead me, and bring me unto thy holy hill, and to thy dwelling."
       },
       {
-        "passage": "Isa. lvii. 15",
-        "text": "Thus saith the high and lofty One that inhabiteth eternity, whose name is Holy; I dwell in the high and holy place, with him also that is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones."
-      },
-      {
         "passage": "John iv. 23",
         "text": "The hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him."
       },
+      {
+        "passage": "Ps. cxviii. 24",
+        "text": "This is the day which the Lord hath made; we will rejoice and be glad in it."
+      }
+    ],
+    "Salutation": [
       {
         "passage": "Phil. i. 2",
         "text": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ."
       }
     ],
     "Advent": [
-      {
-        "passage": "Matt. iii. 2",
-        "text": "Repent ye; for the Kingdom of heaven is at hand."
-      },
       {
         "passage": "Isa. xl. 3",
         "text": "Prepare ye the way of the Lord, make straight in the desert a highway for our God."
@@ -56,20 +78,6 @@
         "text": "Awake, awake; put on thy strength, O Zion; put on thy beautiful garments, O Jerusalem."
       }
     ],
-    "Lent": [
-      {
-        "passage": "Joel ii. 13",
-        "text": "Rend your heart, and not your garments, and turn unto the Lord your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil."
-      },
-      {
-        "passage": "Ps. li. 17",
-        "text": "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."
-      },
-      {
-        "passage": "Luke xv. 18-19",
-        "text": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee, and am no more worthy to be called thy son."
-      }
-    ],
     "Good Friday": [
       {
         "passage": "Lam. i. 12",
@@ -84,10 +92,6 @@
       {
         "passage": "Mark xvi. 6; Luke xxiv. 34",
         "text": "He is risen. The Lord is risen indeed."
-      },
-      {
-        "passage": "Ps. cxviii. 24",
-        "text": "This is the day which the Lord hath made; we will rejoice and be glad in it."
       }
     ],
     "Ascension": [
@@ -126,6 +130,20 @@
   "evening": {
     "General": [
       {
+        "passage": "Ps. li. 3",
+        "text": "I acknowledge my transgressions, and my sin is ever before me."
+      },
+      {
+        "passage": "Dan. ix. 9-10",
+        "text": "To the Lord our God belong mercies and forgivenesses, though we have rebelled against him; neither have we obeyed the voice of the Lord our God, to walk in his laws which he set before us."
+      },
+      {
+        "passage": "1 John i. 8-9",
+        "text": "If we say that we have no sin, we deceive ourselves, and the truth is not in us; but if we confess our sins, God is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
+      }
+    ],
+    "Adoration": [
+      {
         "passage": "Hab. ii. 20",
         "text": "The Lord is in his holy temple: let all the earth keep silence before him."
       },
@@ -144,6 +162,14 @@
       {
         "passage": "Ps. xix. 14",
         "text": "Let the words of my mouth, and the meditation of my heart, be alway acceptable in thy sight, O Lord, my strength and my redeemer."
+      },
+      {
+        "passage": "1 Cor. xv. 57",
+        "text": "Thanks be to God, which giveth us the victory through our Lord Jesus Christ."
+      },
+      {
+        "passage": "Ps. xlvi. 4",
+        "text": "There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the Most High."
       }
     ],
     "Advent": [
@@ -164,20 +190,6 @@
         "text": "The Gentiles shall come to thy light, and kings to the brightness of thy rising."
       }
     ],
-    "Lent": [
-      {
-        "passage": "Ps. li. 3",
-        "text": "I acknowledge my transgressions, and my sin is ever before me."
-      },
-      {
-        "passage": "Dan. ix. 9-10",
-        "text": "To the Lord our God belong mercies and forgivenesses, though we have rebelled against him; neither have we obeyed the voice of the Lord our God, to walk in his laws which he set before us."
-      },
-      {
-        "passage": "1 John i. 8-9",
-        "text": "If we say that we have no sin, we deceive ourselves, and the truth is not in us; but if we confess our sins, God is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
-      }
-    ],
     "Good Friday": [
       {
         "passage": "Isa. liii. 6",
@@ -185,10 +197,6 @@
       }
     ],
     "Easter": [
-      {
-        "passage": "1 Cor. xv. 57",
-        "text": "Thanks be to God, which giveth us the victory through our Lord Jesus Christ."
-      },
       {
         "passage": "Col. iii. 1",
         "text": "If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God."
@@ -201,10 +209,6 @@
       }
     ],
     "Whitsunday": [
-      {
-        "passage": "Ps. xlvi. 4",
-        "text": "There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the Most High."
-      },
       {
         "passage": "Rev. xxii. 17",
         "text": "The Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And whosoever will, let him take the water of life freely."

@@ -235,12 +235,15 @@ describe("useDailyOffice", () => {
       ["Annunciation", "2026-03-25", 322],
       ["Purification", "2026-02-02", 322],
       ["Saint Day", "2026-01-26", 324],
-    ] as const)("returns the %s page on %s (%i)", async (_season, date, page) => {
-      const { result } = renderDailyOffice(date);
+    ] as const)(
+      "returns the %s page on %s (%i)",
+      async (_season, date, page) => {
+        const { result } = renderDailyOffice(date);
 
-      await waitFor(() => expect(result.current.isLoading).toBe(false));
-      expect(result.current.invitatoryPage).toBe(page);
-    });
+        await waitFor(() => expect(result.current.isLoading).toBe(false));
+        expect(result.current.invitatoryPage).toBe(page);
+      },
+    );
   });
 
   describe("O Antiphons (evening prayer)", () => {
@@ -348,16 +351,6 @@ describe("useDailyOffice", () => {
       });
 
       expect(result.current.today).toBe("Thursday, December 25");
-    });
-
-    it("returns dateString in YYYY-MM-DD format", async () => {
-      const { result } = renderDailyOffice();
-
-      await waitFor(() => {
-        expect(result.current.isLoading).toBe(false);
-      });
-
-      expect(result.current.dateString).toBe("2025-12-25");
     });
   });
 

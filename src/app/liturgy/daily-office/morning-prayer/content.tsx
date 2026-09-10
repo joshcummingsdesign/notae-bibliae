@@ -28,7 +28,6 @@ import { Rubric } from "@/components/text/Rubric";
 export const Content = () => {
   const {
     isLoading,
-    isFerial,
     isTriduum,
     isOctaveOfEaster,
     invitatoryPage,
@@ -110,12 +109,7 @@ export const Content = () => {
         <h2>
           <Large size="xl" text="Collects" />
         </h2>
-        {!isLoading && (
-          <Collects
-            collects={lectionaryData!.morning.collects}
-            isFerial={isFerial}
-          />
-        )}
+        {!isLoading && <Collects collects={lectionaryData!.morning.collects} />}
         <OrdinaryCollects />
         <hr />
 

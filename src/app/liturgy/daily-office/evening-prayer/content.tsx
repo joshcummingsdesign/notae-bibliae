@@ -25,13 +25,8 @@ import { Large } from "@/components/text/Large";
 import { Rubric } from "@/components/text/Rubric";
 
 export const Content = () => {
-  const {
-    isLoading,
-    isFerial,
-    currentAntiphon,
-    today,
-    lectionaryData,
-  } = useDailyOffice("evening");
+  const { isLoading, currentAntiphon, today, lectionaryData } =
+    useDailyOffice("evening");
 
   return (
     <>
@@ -105,12 +100,7 @@ export const Content = () => {
         <h2>
           <Large size="xl" text="Collects" />
         </h2>
-        {!isLoading && (
-          <Collects
-            collects={lectionaryData!.evening.collects}
-            isFerial={isFerial}
-          />
-        )}
+        {!isLoading && <Collects collects={lectionaryData!.evening.collects} />}
         <OrdinaryCollects />
         <hr />
 

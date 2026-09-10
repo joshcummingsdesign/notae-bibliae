@@ -2,8 +2,6 @@
 import { Fragment } from "react";
 import { styled } from "@mui/material";
 import { CollectItem } from "@/models/collects";
-import Link from "next/link";
-import { Definition } from "../Definition";
 import DOMPurify from "isomorphic-dompurify";
 import { Large } from "../text/Large";
 import { smartQuotes } from "@/utils/smartQuotes";
@@ -11,63 +9,34 @@ import { Grey } from "../text/Grey";
 
 interface Props {
   collects: CollectItem[];
-  isFerial: boolean;
 }
 
-export const Collects: React.FC<Props> = ({ collects, isFerial }) => {
-  let header = (
-    <Wrapper>
-      <Text>
-        ❡ Chanted using the{" "}
-        <Link
-          href="/liturgy/daily-office/chant-rubrics#the-collects"
-          target="_blank"
-        >
-          festal tone
-        </Link>
-        .
-      </Text>
-    </Wrapper>
-  );
-  if (isFerial) {
-    header = (
-      <Wrapper>
-        <Text>
-          ❡ Chanted{" "}
-          <Definition lang="latin" anchor="recto-tono" text="recto tono" />.
-        </Text>
-      </Wrapper>
-    );
-  }
-
-  return (
-    <>
-      {header}
-      {collects.map((collect) => {
-        const content = smartQuotes(collect.text).replace(
-          "Amen",
-          "<em>Amen</em>",
-        );
-        const { largeText, rest } = splitCollectOpening(content);
-        return (
-          <Fragment key={collect.title}>
-            <Title>
-              <em>
-                <small>
-                  <Grey text={`For ${collect.title}`} />
-                </small>
-              </em>
-            </Title>
-            <StyledText>
-              <Large text={largeText} />
-              <CollectText text={rest} />
-            </StyledText>
-          </Fragment>
-        );
-      })}
-    </>
-  );
-};
+export const Collects: React.FC<Props> = ({ collects }) => (
+  <Wrapper>
+    {collects.map((collect) => {
+      const content = smartQuotes(collect.text).replace(
+        "Amen",
+        "<em>Amen</em>",
+      );
+      const { largeText, rest } = splitCollectOpening(content);
+      return (
+        <Fragment key={collect.title}>
+          <Title>
+            <em>
+              <small>
+                <Grey text={`For ${collect.title}`} />
+              </small>
+            </em>
+          </Title>
+          <StyledText>
+            <Large text={largeText} />
+            <CollectText text={rest} />
+          </StyledText>
+        </Fragment>
+      );
+    })}
+  </Wrapper>
+);
 
 export function splitCollectOpening(text: string): {
   largeText: string;
@@ -131,18 +100,12 @@ const CollectText: React.FC<{ text: string }> = ({ text }) => (
 );
 
 const Wrapper = styled("div")({
-  marginBottom: "1.5rem",
+  marginTop: "-10px",
 });
 
 const Title = styled("p")({
   marginBottom: "-11px",
 });
-
-const Text = styled("p")(({ theme }) => ({
-  fontSize: "1rem",
-  fontStyle: "italic",
-  color: theme.palette.brand.darkGrey,
-}));
 
 const StyledText = styled("p")(({ theme }) => ({
   ".dot": {
