@@ -22,7 +22,7 @@ export const OpeningSentence: React.FC<Props> = ({ id, office }) => {
     OpeningSentenceEntry[]
   >;
   const categories = Object.keys(sentences);
-  const [category, setCategory] = useState("General");
+  const [category, setCategory] = useState("Penitential");
   const [hasLoadedStoredValues, setHasLoadedStoredValues] = useState(false);
   const storageKey = `${id}-${office}-opening-sentence`;
   const passages = sentences[category];

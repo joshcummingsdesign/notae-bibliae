@@ -1,30 +1,28 @@
 {
   "morning": {
-    "General": [
+    "Penitential": [
       {
-        "passage": "Matt. iii. 2",
-        "text": "Repent ye; for the Kingdom of heaven is at hand."
+        "passage": "Ps. li. 17",
+        "text": "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."
       },
       {
         "passage": "Joel ii. 13",
         "text": "Rend your heart, and not your garments, and turn unto the Lord your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil."
       },
       {
-        "passage": "Ps. li. 17",
-        "text": "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."
+        "passage": "Matt. iii. 2",
+        "text": "Repent ye; for the Kingdom of heaven is at hand."
       },
       {
         "passage": "Luke xv. 18-19",
         "text": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee, and am no more worthy to be called thy son."
-      }
-    ],
-    "Contrition": [
+      },
       {
         "passage": "Isa. lvii. 15",
         "text": "Thus saith the high and lofty One that inhabiteth eternity, whose name is Holy; I dwell in the high and holy place, with him also that is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones."
       }
     ],
-    "Adoration": [
+    "General": [
       {
         "passage": "Hab. ii. 20",
         "text": "The Lord is in his holy temple: let all the earth keep silence before him."
@@ -46,14 +44,12 @@
         "text": "The hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him."
       },
       {
-        "passage": "Ps. cxviii. 24",
-        "text": "This is the day which the Lord hath made; we will rejoice and be glad in it."
-      }
-    ],
-    "Salutation": [
-      {
         "passage": "Phil. i. 2",
         "text": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ."
+      },
+      {
+        "passage": "Ps. cxviii. 24",
+        "text": "This is the day which the Lord hath made; we will rejoice and be glad in it."
       }
     ],
     "Advent": [
@@ -128,7 +124,7 @@
     ]
   },
   "evening": {
-    "General": [
+    "Penitential": [
       {
         "passage": "Ps. li. 3",
         "text": "I acknowledge my transgressions, and my sin is ever before me."
@@ -142,7 +138,7 @@
         "text": "If we say that we have no sin, we deceive ourselves, and the truth is not in us; but if we confess our sins, God is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
       }
     ],
-    "Adoration": [
+    "General": [
       {
         "passage": "Hab. ii. 20",
         "text": "The Lord is in his holy temple: let all the earth keep silence before him."
