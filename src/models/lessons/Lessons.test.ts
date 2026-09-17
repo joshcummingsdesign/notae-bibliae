@@ -136,7 +136,7 @@ describe("Lessons", () => {
         const all = lessons.getAll();
         const vigilOfEpiphany = all["2026-01-05"];
 
-        expect(vigilOfEpiphany.title).toBe("Vigil of the Epiphany");
+        expect(vigilOfEpiphany.title).toBe("Epiphany Eve");
       });
     });
 
@@ -337,9 +337,9 @@ describe("Lessons", () => {
         expect(all["2029-01-04"]?.title).toBe("Thursday in Christmastide");
       });
 
-      test("Vigil of Epiphany on Jan 5", () => {
+      test("Epiphany Eve on Jan 5", () => {
         const all = lessons2028.getAll();
-        expect(all["2029-01-05"]?.title).toBe("Vigil of the Epiphany");
+        expect(all["2029-01-05"]?.title).toBe("Epiphany Eve");
       });
 
       test("Epiphany on Jan 6", () => {

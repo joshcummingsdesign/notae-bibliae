@@ -590,7 +590,7 @@ export class Calendar {
       ...lentSundays,
       {
         date: annunciation.subtract(1, "day").format("YYYY-MM-DD"),
-        title: "Vigil of the Annunciation",
+        title: "Annunciation Eve",
         rank: 8,
         isVigil: true,
       },
@@ -729,7 +729,7 @@ export class Calendar {
       },
       {
         date: ascension.subtract(1, "day").format("YYYY-MM-DD"),
-        title: "Vigil of the Ascension",
+        title: "Ascension Eve",
         rank: 8,
         isVigil: true,
       },
@@ -768,7 +768,7 @@ export class Calendar {
     return [
       {
         date: pentecost.subtract(1, "day").format("YYYY-MM-DD"),
-        title: "Vigil of Pentecost (Whitsunday)",
+        title: "Whitsun Eve",
         rank: 8,
         isVigil: true,
       },
@@ -894,7 +894,7 @@ export class Calendar {
 
     days.push({
       date: trinitySunday.subtract(1, "day").format("YYYY-MM-DD"),
-      title: "Vigil of Trinity Sunday",
+      title: "Trinity Eve",
       rank: 8,
       isVigil: true,
     });

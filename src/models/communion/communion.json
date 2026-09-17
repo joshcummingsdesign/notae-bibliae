@@ -267,7 +267,7 @@
     "epistle": ["Phil. 2:9-13"],
     "gospel": ["Luke 2:15-21"]
   },
-  "Vigil of the Epiphany": {
+  "Epiphany Eve": {
     "epistle": ["Titus 3:4-7"],
     "gospel": ["Matt. 2:19-23"],
     "source": "Sarum Missal"
@@ -395,7 +395,7 @@
     "epistle": ["Ezek. 34:25-31"],
     "gospel": ["Luke 11:5-13"]
   },
-  "Vigil of the Ascension": {
+  "Ascension Eve": {
     "epistle": ["Acts 4:32-35"],
     "gospel": ["John 17:1-11"],
     "source": "Sarum Missal"
@@ -404,7 +404,7 @@
     "epistle": ["Acts 1:1-11"],
     "gospel": ["Luke 24:49-53"]
   },
-  "Vigil of Pentecost (Whitsunday)": {
+  "Whitsun Eve": {
     "epistle": ["Acts 19:1-8"],
     "gospel": ["John 14:15-21"],
     "source": "Sarum Missal"

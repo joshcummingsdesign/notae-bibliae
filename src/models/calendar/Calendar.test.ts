@@ -524,9 +524,9 @@ describe("Calendar", () => {
 
   describe("Whitsuntide", () => {
     describe("getWhitsuntideDays", () => {
-      test("starts with Vigil of Pentecost", () => {
+      test("starts with Whitsun Eve", () => {
         const days = cal.getWhitsuntideDays();
-        expect(days[0].title).toContain("Vigil of Pentecost");
+        expect(days[0].title).toBe("Whitsun Eve");
         expect(days[0].isVigil).toBe(true);
       });
 
