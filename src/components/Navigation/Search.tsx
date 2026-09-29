@@ -133,6 +133,18 @@ export const Search: React.FC<Props> = ({
       title: "Hallelujah",
       link: "/liturgy/music/chants/alleluia",
     },
+    {
+      title: "Candlemas",
+      link: "/liturgy/liturgical-year/seasons/epiphanytide/purification",
+    },
+    {
+      title: "The Presentation of Jesus",
+      link: "/liturgy/liturgical-year/seasons/epiphanytide/purification",
+    },
+    {
+      title: "Michaelmas",
+      link: "/liturgy/liturgical-year/saints/saint-michael-and-all-angels",
+    },
   ];
 
   const options = [
