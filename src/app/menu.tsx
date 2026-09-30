@@ -2283,7 +2283,7 @@ export const menuItems: MenuNode[] = [
           },
           {
             title: "Origen of Alexandria",
-            link: "/people/early-christian-writers/origen",
+            link: "/people/early-christian-writers/origen-of-alexandria",
           },
           {
             title: "Tertullian",
