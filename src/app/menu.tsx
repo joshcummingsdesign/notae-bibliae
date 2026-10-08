@@ -2130,8 +2130,8 @@ export const menuItems: MenuNode[] = [
                 link: "/people/saints/early/christopher-of-lycia",
               },
               {
-                title: "Denis of Peris",
-                link: "/people/saints/early/denis-of-peris",
+                title: "Denis of Paris",
+                link: "/people/saints/early/denis-of-paris",
               },
               {
                 title: "Epiphanius of Salamis",
