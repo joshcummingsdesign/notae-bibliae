@@ -35,3 +35,8 @@ export interface LessonEntry {
   evening: Office;
   alternates?: Alternates;
 }
+
+export interface VigilLessonEntry {
+  evening: Office;
+  morning?: never;
+}

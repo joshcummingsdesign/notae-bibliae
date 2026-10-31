@@ -5,7 +5,7 @@ import isBetween from "dayjs/plugin/isBetween";
 import { Calendar } from "../calendar";
 import lessonData from "./lessons.json";
 import { stripMarkdownLinks } from "@/utils/markdown";
-import { LessonDateMap, LessonEntry, Office, OfficeDay } from "./types";
+import { LessonDateMap, LessonEntry, Office, OfficeDay, VigilLessonEntry } from "./types";
 
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
@@ -113,6 +113,7 @@ export class Lessons {
    * Get all lessons.
    */
   getAll(): LessonDateMap {
+    const data: Record<string, (LessonEntry | VigilLessonEntry | null)[]> = lessonData;
     const calendarData = this.calendar.getAll();
     const sundays = this.calendar.getAllSundays();
     const seasons = this.calendar.getSeasons();
@@ -138,13 +139,12 @@ export class Lessons {
       const lookupKey = preferredEvent
         ? stripMarkdownLinks(preferredEvent.title)
         : "";
-      const dateLessons = lessonData[dateStr as keyof typeof lessonData];
-      const lessons = lessonData[lookupKey as keyof typeof lessonData];
-      const hasEvent = !!event && !!lookupKey && !!lessons;
+      const dateLessons = data[dateStr];
+      const lessons = data[lookupKey];
+      const lessonEntry = lessons?.[0];
 
       // If there's a feast day (calendar event with lessons), use it
-      if (hasEvent) {
-        const lessonEntry = lessons[0]!;
+      if (lessonEntry?.morning) {
         const { morning, evening } = this.applyAlternates(
           lessonEntry,
           currentDay,
@@ -156,9 +156,9 @@ export class Lessons {
         };
       } else if (index !== 0 && lastSunday) {
         // For weekdays (Mon-Sat), Sunday cycle takes precedence over explicit dates
-        const sundayLessons = lessonData[lastSunday as keyof typeof lessonData];
+        const sundayLessons = data[lastSunday];
         const weekdayLesson = sundayLessons?.[index];
-        if (weekdayLesson) {
+        if (weekdayLesson?.morning) {
           // Use "the" before ordinal names (First Sunday, etc.) or "Sunday Before", but not proper names (Sexagesima, Trinity Sunday, etc.)
           const needsArticle =
             /^(First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh|Twelfth|Thirteenth|Fourteenth|Fifteenth|Sixteenth|Seventeenth|Eighteenth|Nineteenth|Twentieth|Twenty-|Sunday)/i.test(
@@ -170,7 +170,7 @@ export class Lessons {
             title,
             ...weekdayLesson,
           };
-        } else if (dateLessons) {
+        } else if (dateLessons?.[0]?.morning) {
           // Fall back to explicit date if no weekday lesson
           const weekday = currentDay.format("dddd");
           const season =
@@ -182,7 +182,7 @@ export class Lessons {
             ...dateLessons[0]!,
           };
         }
-      } else if (dateLessons) {
+      } else if (dateLessons?.[0]?.morning) {
         // For Sundays or before first Sunday, use explicit date lessons
         const weekday = currentDay.format("dddd");
         const season =
@@ -193,6 +193,15 @@ export class Lessons {
           title: `${weekday} in ${season}`,
           ...dateLessons[0]!,
         };
+      }
+
+      // Evening-only vigils overlay the normal day; full-day entries retain their precedence.
+      const vigil = event?.find((e) => {
+        const entry = data[stripMarkdownLinks(e.title)]?.[0];
+        return e.isVigil && entry && !entry.morning;
+      });
+      if (vigil && output[date]) {
+        output[date].evening = data[stripMarkdownLinks(vigil.title)][0]!.evening;
       }
 
       // If it's a Sunday, get its name and set it as lastSunday

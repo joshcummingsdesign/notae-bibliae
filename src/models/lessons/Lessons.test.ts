@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { describe, test, expect, beforeEach } from "vitest";
 import { Lessons } from "./Lessons";
 import { Calendar } from "../calendar";
+import lessonData from "./lessons.json";
 
 // Helper to create Lessons instances
 const createLessons = (date: string) => new Lessons(new Calendar(dayjs(date)));
@@ -721,6 +722,54 @@ describe("Lessons", () => {
         expect(peterPaul.title).toBe("Saints Peter and Paul, Apostles");
         expect(peterPaul.morning.second).toContain("Acts 11:1-18");
       });
+    });
+  });
+  describe("evening-only vigils", () => {
+    test.each(["2026-10-31", "2021-10-31"])("All Hallows' Eve changes only evening readings on %s", (date) => {
+      const calendar = new Calendar(dayjs(date));
+      const data = lessonData as Record<string, unknown>;
+      const original = data["All Hallows' Eve"];
+      const actual = new Lessons(calendar).getAll()[date];
+      try {
+        delete data["All Hallows' Eve"];
+        const normal = new Lessons(calendar).getAll()[date];
+        expect(actual.morning).toEqual(normal.morning);
+        expect(actual.title).toBe(normal.title);
+        expect(actual.evening).toEqual({
+          first: ["Ecclus. 44:1-15"],
+          second: ["Heb. 11:32-40", "Heb. 12:1-2"],
+        });
+      } finally {
+        if (original === undefined) delete data["All Hallows' Eve"];
+        else data["All Hallows' Eve"] = original;
+      }
+    });
+
+    const readings = { first: ["Gen. 3:1-15"], second: ["Rom. 5:12-21"] };
+
+    test.each(["2026-03-24", "2024-04-07"])("Annunciation Eve has its appointed readings on %s", (date) => {
+      const calendar = new Calendar(dayjs(date));
+      expect(calendar.getAll()[date].some(e => e.title === "Annunciation Eve" && e.isVigil)).toBe(true);
+      expect(new Lessons(calendar).getAll()[date].evening).toEqual(readings);
+    });
+
+    test.each(["Annunciation Eve", "Ascension Eve"])("%s overrides only evening readings", (title) => {
+      const calendar = new Calendar(dayjs("2026-01-15"));
+      const date = Object.entries(calendar.getAll()).find(([, events]) => events.some(e => e.isVigil && e.title === title))![0];
+      const data = lessonData as Record<string, unknown>;
+      const original = data[title];
+      delete data[title];
+      const normal = new Lessons(calendar).getAll()[date];
+      try {
+        data[title] = [{ evening: readings }];
+        const actual = new Lessons(calendar).getAll()[date];
+        expect(actual.morning).toEqual(normal.morning);
+        expect(actual.title).toBe(normal.title);
+        expect(actual.evening).toEqual(readings);
+      } finally {
+        if (original === undefined) delete data[title];
+        else data[title] = original;
+      }
     });
   });
 });

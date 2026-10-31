@@ -4121,6 +4121,14 @@
       }
     }
   ],
+  "Annunciation Eve": [
+    {
+      "evening": {
+        "first": ["Gen. 3:1-15"],
+        "second": ["Rom. 5:12-21"]
+      }
+    }
+  ],
   "The Annunciation of the Blessed Virgin Mary": [
     {
       "morning": {
@@ -4600,6 +4608,14 @@
       "evening": {
         "first": ["Deut. 32:1-4"],
         "second": ["John 14:15-31"]
+      }
+    }
+  ],
+  "All Hallows' Eve": [
+    {
+      "evening": {
+        "first": ["Ecclus. 44:1-15"],
+        "second": ["Heb. 11:32-40", "Heb. 12:1-2"]
       }
     }
   ],
