@@ -68,6 +68,7 @@ export class Collects {
 
     const output: CollectDateMap = {};
     let lastPrimary: CollectCalendarItem | null = null;
+    let sundayItems: CalendarItem[] | undefined;
     let currentDay = startDate;
 
     while (currentDay.isSameOrBefore(endDate, "day")) {
@@ -81,7 +82,14 @@ export class Collects {
       }
 
       // Update primary tracking
-      const primary = todayCollects.find((c) => this.isPrimary(c));
+      let primary = todayCollects.find((c) => this.isPrimary(c));
+      if (!primary && currentDay.day() === 0) {
+        // Remember a hidden Sunday without replacing the feast's displayed collect.
+        sundayItems ??= this.calendar.getTrinitytideDays().filter((item) => item.isSunday);
+        primary = this.matchCollects(
+          sundayItems.filter((item) => item.date === date),
+        ).find((c) => this.isPrimary(c));
+      }
       if (primary) {
         lastPrimary = primary;
       }

@@ -259,6 +259,30 @@ describe("Collects", () => {
     });
 
     describe("Trinitytide", () => {
+      test.each([
+        ["2026-11-03", "Twenty-Second Sunday After Trinity", "2026-11-01", "All Saints' Day"],
+        ["2025-11-03", "Twentieth Sunday After Trinity", "2025-11-02", "All Souls' Day"],
+      ])("%s uses the Sunday collect hidden by a feast", (date, sundayTitle, feastDate, feastTitle) => {
+        const instance = createCollects(date);
+        const all = instance.getAll();
+        expect(all[feastDate][0].title).toBe(feastTitle);
+        expect(all[date][0].title).toBe(sundayTitle);
+        expect(all[date][0].collect).toBe(
+          instance.queryCollects().find((c) => c.title === sundayTitle)!.text,
+        );
+      });
+
+      test("Christmas on Sunday retains its collect through ordinary octave weekdays", () => {
+        const all = createCollects("2022-12-25").getAll();
+        for (const date of ["2022-12-25", "2022-12-30", "2022-12-31"]) {
+          expect(all[date][0].title).toBe("Christmas Day");
+        }
+        expect(all["2022-12-26"][0].title).toContain("Stephen");
+        expect(all["2022-12-27"][0].title).toContain("John");
+        expect(all["2022-12-28"][0].title).toContain("Innocents");
+        expect(all["2022-12-29"][0].title).toBe("Saint Thomas of Canterbury, Bishop and Martyr");
+      });
+
       test("Trinity Sunday has collect", () => {
         const all = collects.getAll();
         expect(all["2026-05-31"][0].title).toBe("Trinity Sunday");
