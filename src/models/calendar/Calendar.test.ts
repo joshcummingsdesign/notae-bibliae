@@ -569,12 +569,16 @@ describe("Calendar", () => {
         expect(corpusChristi?.isFeast).toBe(true);
       });
 
-      test("ends with Sunday Before Advent", () => {
-        const days = cal.getTrinitytideDays();
-        const sundayBeforeAdvent = days.find((d) =>
-          d.title.includes("Sunday Before Advent"),
-        );
-        expect(sundayBeforeAdvent).toBeDefined();
+      test("does not add the renamed 25th and 26th Sundays in a shorter year", () => {
+        const sundays = createCalendar("2026-01-01")
+          .getTrinitytideDays()
+          .filter((d) => d.isSunday);
+        expect(sundays.map((d) => d.title)).not.toContain("Third Sunday Before Advent");
+        expect(sundays.map((d) => d.title)).not.toContain("Second Sunday Before Advent");
+        expect(sundays.at(-1)).toMatchObject({
+          date: "2026-11-22",
+          title: "Sunday Next Before Advent",
+        });
       });
 
       test("has between 22 and 28 Sundays depending on Easter", () => {
@@ -613,7 +617,7 @@ describe("Calendar", () => {
           expect(sundays.length).toBe(28);
         });
 
-        test("generates Trinity Sunday through Twenty-Sixth Sunday After Trinity", () => {
+        test("generates Trinity Sunday through Second Sunday Before Advent", () => {
           const sundays = maxTrinityCal
             .getTrinitytideDays()
             .filter((d) => d.isSunday);
@@ -624,17 +628,17 @@ describe("Calendar", () => {
           // Should have all 26 numbered Sundays after Trinity
           expect(sundays[1].title).toBe("First Sunday After Trinity");
           expect(sundays[13].title).toBe("Thirteenth Sunday After Trinity");
-          expect(sundays[25].title).toBe("Twenty-Fifth Sunday After Trinity");
-          expect(sundays[26].title).toBe("Twenty-Sixth Sunday After Trinity");
+          expect(sundays[25].title).toBe("Third Sunday Before Advent");
+          expect(sundays[26].title).toBe("Second Sunday Before Advent");
         });
 
-        test("Sunday Before Advent acts as the 28th Sunday", () => {
+        test("Sunday Next Before Advent acts as the 28th Sunday", () => {
           const sundays = maxTrinityCal
             .getTrinitytideDays()
             .filter((d) => d.isSunday);
 
-          // Last Sunday should be Sunday Before Advent (index 27 = 28th Sunday)
-          expect(sundays[27].title).toBe("Sunday Before Advent");
+          // Last Sunday should be Sunday Next Before Advent (index 27 = 28th Sunday)
+          expect(sundays[27].title).toBe("Sunday Next Before Advent");
           expect(sundays[27].isSunday).toBe(true);
           expect(sundays[27].rank).toBe(7);
         });

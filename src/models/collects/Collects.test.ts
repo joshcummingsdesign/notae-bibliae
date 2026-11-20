@@ -311,7 +311,9 @@ describe("Collects", () => {
             for (const item of items) {
               if (
                 item.title.includes("Trinity Sunday") ||
-                item.title === "Sunday Before Advent" ||
+                item.title === "Third Sunday Before Advent" ||
+                item.title === "Second Sunday Before Advent" ||
+                item.title === "Sunday Next Before Advent" ||
                 item.title.includes("Sunday After Trinity")
               ) {
                 trinitySundayDates.add(date);
@@ -322,51 +324,51 @@ describe("Collects", () => {
           expect(trinitySundayDates.size).toBe(28);
         });
 
-        test("Sunday Before Advent has its own collect", () => {
+        test("Sunday Next Before Advent has its own collect", () => {
           const all = maxTrinityCollects.getAll();
 
           const sundayBeforeAdvent = Object.entries(all).find(([_, items]) =>
-            items.some((item) => item.title === "Sunday Before Advent"),
+            items.some((item) => item.title === "Sunday Next Before Advent"),
           );
 
           expect(sundayBeforeAdvent).toBeDefined();
           const [_, items] = sundayBeforeAdvent!;
           const sundayCollect = items.find(
-            (item) => item.title === "Sunday Before Advent",
+            (item) => item.title === "Sunday Next Before Advent",
           );
           expect(sundayCollect?.collect).toContain("Stir up");
         });
 
-        test("Twenty-Fifth Sunday After Trinity has collect", () => {
+        test("Third Sunday Before Advent has collect", () => {
           const all = maxTrinityCollects.getAll();
 
           const twentyFifth = Object.entries(all).find(([_, items]) =>
             items.some(
-              (item) => item.title === "Twenty-Fifth Sunday After Trinity",
+              (item) => item.title === "Third Sunday Before Advent",
             ),
           );
 
           expect(twentyFifth).toBeDefined();
           const [_, items] = twentyFifth!;
           const collect = items.find(
-            (item) => item.title === "Twenty-Fifth Sunday After Trinity",
+            (item) => item.title === "Third Sunday Before Advent",
           );
           expect(collect?.collect).toContain("Peace I leave with you");
         });
 
-        test("Twenty-Sixth Sunday After Trinity has collect", () => {
+        test("Second Sunday Before Advent has collect", () => {
           const all = maxTrinityCollects.getAll();
 
           const twentySixth = Object.entries(all).find(([_, items]) =>
             items.some(
-              (item) => item.title === "Twenty-Sixth Sunday After Trinity",
+              (item) => item.title === "Second Sunday Before Advent",
             ),
           );
 
           expect(twentySixth).toBeDefined();
           const [_, items] = twentySixth!;
           const collect = items.find(
-            (item) => item.title === "Twenty-Sixth Sunday After Trinity",
+            (item) => item.title === "Second Sunday Before Advent",
           );
           expect(collect?.collect).toContain("Assist us mercifully");
         });

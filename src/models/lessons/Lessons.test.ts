@@ -47,7 +47,7 @@ describe("Lessons", () => {
         const [date, lesson] = entries[entries.length - 1];
 
         expect(date).toBe("2026-11-28");
-        expect(lesson.title).toContain("Sunday Before Advent");
+        expect(lesson.title).toContain("Sunday Next Before Advent");
       });
 
       test("entries are sorted chronologically", () => {
@@ -421,6 +421,8 @@ describe("Lessons", () => {
       // Matches actual Sunday titles (e.g., "First Sunday After Trinity")
       // but not weekday titles (e.g., "Monday After the First Sunday After Trinity")
       const isSundayTitle = (title: string) =>
+        title === "Third Sunday Before Advent" ||
+        title === "Second Sunday Before Advent" ||
         /^(First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh|Twelfth|Thirteenth|Fourteenth|Fifteenth|Sixteenth|Seventeenth|Eighteenth|Nineteenth|Twentieth|Twenty-\w+) Sunday After Trinity$/.test(
           title,
         );
@@ -482,18 +484,18 @@ describe("Lessons", () => {
             ([_, lesson]) =>
               isSundayTitle(lesson.title) ||
               lesson.title === "Trinity Sunday" ||
-              lesson.title === "Sunday Before Advent",
+              lesson.title === "Sunday Next Before Advent",
           );
 
           // At least 26 (allowing for 2 feast day displacements)
           expect(trinitySundays.length).toBeGreaterThanOrEqual(26);
         });
 
-        test("Sunday Before Advent has its own lessons", () => {
+        test("Sunday Next Before Advent has its own lessons", () => {
           const all = maxTrinityLessons.getAll();
 
           const sundayBeforeAdvent = Object.entries(all).find(
-            ([_, lesson]) => lesson.title === "Sunday Before Advent",
+            ([_, lesson]) => lesson.title === "Sunday Next Before Advent",
           );
 
           expect(sundayBeforeAdvent).toBeDefined();
@@ -504,12 +506,12 @@ describe("Lessons", () => {
           expect(lesson.evening.second.length).toBeGreaterThan(0);
         });
 
-        test("Twenty-Fifth Sunday After Trinity has lessons", () => {
+        test("Third Sunday Before Advent has lessons", () => {
           const all = maxTrinityLessons.getAll();
 
           const twentyFifth = Object.entries(all).find(
             ([_, lesson]) =>
-              lesson.title === "Twenty-Fifth Sunday After Trinity",
+              lesson.title === "Third Sunday Before Advent",
           );
 
           expect(twentyFifth).toBeDefined();
@@ -518,12 +520,12 @@ describe("Lessons", () => {
           expect(lesson.morning.second.length).toBeGreaterThan(0);
         });
 
-        test("Twenty-Sixth Sunday After Trinity has lessons", () => {
+        test("Second Sunday Before Advent has lessons", () => {
           const all = maxTrinityLessons.getAll();
 
           const twentySixth = Object.entries(all).find(
             ([_, lesson]) =>
-              lesson.title === "Twenty-Sixth Sunday After Trinity",
+              lesson.title === "Second Sunday Before Advent",
           );
 
           expect(twentySixth).toBeDefined();
@@ -532,22 +534,22 @@ describe("Lessons", () => {
           expect(lesson.morning.second.length).toBeGreaterThan(0);
         });
 
-        test("weekdays following Sunday Before Advent inherit its cycle", () => {
+        test("weekdays following Sunday Next Before Advent inherit its cycle", () => {
           const all = maxTrinityLessons.getAll();
 
-          // Find Sunday Before Advent date
+          // Find Sunday Next Before Advent date
           const [sundayDate] = Object.entries(all).find(
-            ([_, lesson]) => lesson.title === "Sunday Before Advent",
+            ([_, lesson]) => lesson.title === "Sunday Next Before Advent",
           )!;
 
-          // Monday after should reference Sunday Before Advent cycle
+          // Monday after should reference Sunday Next Before Advent cycle
           const mondayDate = dayjs(sundayDate)
             .add(1, "day")
             .format("YYYY-MM-DD");
           const monday = all[mondayDate];
 
           expect(monday).toBeDefined();
-          expect(monday.title).toContain("Sunday Before Advent");
+          expect(monday.title).toContain("Sunday Next Before Advent");
         });
       });
     });

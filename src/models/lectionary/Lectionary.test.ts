@@ -492,7 +492,9 @@ describe("Lectionary", () => {
         const trinitySundays = Object.entries(maxTrinityData).filter(
           ([, item]) =>
             item.primaryObservance.includes("Trinity Sunday") ||
-            item.primaryObservance === "Sunday Before Advent" ||
+            item.primaryObservance === "Third Sunday Before Advent" ||
+            item.primaryObservance === "Second Sunday Before Advent" ||
+            item.primaryObservance === "Sunday Next Before Advent" ||
             item.primaryObservance.includes("Sunday After Trinity")
         );
 

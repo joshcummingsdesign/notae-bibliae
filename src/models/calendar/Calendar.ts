@@ -869,7 +869,7 @@ export class Calendar {
     const christTheKing = this.getChristTheKing();
     const days: CalendarItem[] = [];
 
-    // Generate Sundays after Trinity until Sunday Before Advent
+    // Generate Sundays after Trinity until Sunday Next Before Advent
     // Loop up to 27 to handle years with early Easter that have 26 Sundays after Trinity
     for (let i = 0; i < 27; i++) {
       const sunday = trinitySunday.add(i * 7, "day");
@@ -877,7 +877,11 @@ export class Calendar {
       const title =
         i === 0
           ? "[Trinity Sunday](/liturgy/liturgical-year/seasons/trinitytide/trinity-sunday)"
-          : `${numberToWords(i)} Sunday After Trinity`;
+          : i === 25
+            ? "Third Sunday Before Advent"
+            : i === 26
+              ? "Second Sunday Before Advent"
+              : `${numberToWords(i)} Sunday After Trinity`;
       const rank = i === 0 ? 2 : 7;
       const isFeast = i === 0;
       const isPrincipalFeast = i === 0;
@@ -909,7 +913,7 @@ export class Calendar {
 
     days.push({
       date: christTheKing.format("YYYY-MM-DD"),
-      title: "Sunday Before Advent",
+      title: "Sunday Next Before Advent",
       rank: 7,
       isSunday: true,
     });

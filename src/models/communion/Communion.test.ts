@@ -27,6 +27,15 @@ describe("Communion", () => {
   });
 
   describe("getAll", () => {
+    test.each([
+      ["2035-11-11", "Third Sunday Before Advent"],
+      ["2035-11-18", "Second Sunday Before Advent"],
+      ["2035-11-25", "Sunday Next Before Advent"],
+    ])("includes Communion readings for %s", (date, title) => {
+      const lateTrinitytide = createCommunion("2035-01-01");
+      expect(lateTrinitytide.getAll()[date]?.some((item) => item.title === title)).toBe(true);
+    });
+
     describe("basic functionality", () => {
       test("returns communion readings for liturgical year", () => {
         const all = communion.getAll();
