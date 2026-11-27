@@ -3,6 +3,9 @@ import { describe, test, expect, beforeAll } from "vitest";
 import { Lectionary } from "./Lectionary";
 import { Calendar } from "../calendar";
 import { LectionaryDateMap } from "./types";
+import lessonData from "../lessons/lessons.json";
+import collectData from "../collects/collects.json";
+import communionData from "../communion/communion.json";
 
 // Helper to create Lectionary instances with real Calendar
 const createLectionary = (date: string) =>
@@ -42,7 +45,7 @@ describe("Lectionary", () => {
         expect(dates.length).toBeLessThanOrEqual(366);
       });
 
-      test("first date is First Sunday of Advent", () => {
+      test("first date is First Sunday in Advent", () => {
         const dates = Object.keys(allData).sort();
 
         expect(dates[0]).toBe("2025-11-30");
@@ -128,9 +131,9 @@ describe("Lectionary", () => {
 
     describe("observance priority", () => {
       test("calendar event title takes precedence over lessons title", () => {
-        // First Sunday of Advent should show Advent title, not weekday title
+        // First Sunday in Advent should show Advent title, not weekday title
         expect(allData["2025-11-30"].primaryObservance).toBe(
-          "First Sunday of Advent"
+          "First Sunday in Advent"
         );
       });
 
@@ -143,7 +146,7 @@ describe("Lectionary", () => {
         // A weekday should have a title from lessons
         const dec2 = allData["2025-12-02"];
         expect(dec2.primaryObservance).toContain(
-          "After the First Sunday of Advent"
+          "After the First Sunday in Advent"
         );
       });
     });
@@ -199,7 +202,7 @@ describe("Lectionary", () => {
 
       describe("communion vigil separation", () => {
         test("morning communion uses non-vigil reading", () => {
-          // First Sunday of Advent should have morning communion
+          // First Sunday in Advent should have morning communion
           const advent1 = allData["2025-11-30"];
           expect(advent1.morning.communion).toBeDefined();
         });
@@ -259,7 +262,7 @@ describe("Lectionary", () => {
 
       describe("communion integration", () => {
         test("Sunday communion readings are present", () => {
-          // First Sunday of Advent should have communion
+          // First Sunday in Advent should have communion
           const advent1 = allData["2025-11-30"];
           expect(advent1.morning.communion).toBeDefined();
           expect(advent1.morning.communion?.epistle).toBeDefined();
@@ -295,20 +298,102 @@ describe("Lectionary", () => {
     });
 
     describe("Advent season", () => {
+      test.each([
+        ["2025-11-30", "First Sunday in Advent"],
+        ["2025-12-07", "Second Sunday in Advent"],
+        ["2025-12-14", "Third Sunday in Advent: Gaudete Sunday"],
+        ["2025-12-21", "Fourth Sunday in Advent"],
+      ] as const)("%s retains its lessons, collect, and communion", (date, title) => {
+        const day = allData[date];
+        const lessons = lessonData[title][0];
+        for (const office of ["morning", "evening"] as const) {
+          expect(day[office].first).toEqual(lessons[office].first);
+          expect(day[office].second).toEqual(lessons[office].second);
+          expect(day[office].collects).toContainEqual(
+            expect.objectContaining(collectData.find((collect) => collect.title === title)!),
+          );
+        }
+        expect(day.morning.communion).toEqual(expect.objectContaining(communionData[title]));
+      });
+
       test("all four Advent Sundays have complete data", () => {
         expect(allData["2025-11-30"].primaryObservance).toBe(
-          "First Sunday of Advent"
+          "First Sunday in Advent"
         );
         expect(allData["2025-12-07"].primaryObservance).toBe(
-          "Second Sunday of Advent"
+          "Second Sunday in Advent"
         );
         expect(allData["2025-12-14"].primaryObservance).toContain(
-          "Third Sunday of Advent"
+          "Third Sunday in Advent"
         );
         expect(allData["2025-12-21"].primaryObservance).toBe(
-          "Fourth Sunday of Advent"
+          "Fourth Sunday in Advent"
         );
       });
+    });
+
+    test("all six Sundays after Epiphany retain their liturgical data", () => {
+      const calendar = new Calendar(dayjs("2038-01-15"));
+      const data = new Lectionary(calendar).getAll();
+      const sundays = calendar.getEpiphanytideSundays();
+      expect(sundays).toHaveLength(6);
+      for (const { date, title } of sundays) {
+        expect(title).toMatch(/^(First|Second|Third|Fourth|Fifth|Sixth) Sunday After Epiphany$/);
+        const day = data[date];
+        expect(day.primaryObservance).toBe(title);
+        const lessons = lessonData[title as keyof typeof lessonData][0];
+        for (const office of ["morning", "evening"] as const) {
+          expect(day[office].first).toEqual(lessons[office].first);
+          expect(day[office].second).toEqual(lessons[office].second);
+          expect(day[office].collects).toContainEqual(
+            expect.objectContaining(collectData.find((collect) => collect.title === title)!),
+          );
+        }
+        expect(day.morning.communion).toEqual(
+          expect.objectContaining(communionData[title as keyof typeof communionData]),
+        );
+      }
+    });
+
+    test.each([
+      ["2026-02-22", "First Sunday in Lent"],
+      ["2026-03-01", "Second Sunday in Lent"],
+      ["2026-03-08", "Third Sunday in Lent"],
+      ["2026-03-15", "Fourth Sunday in Lent: Laetare Sunday"],
+      ["2026-03-22", "Fifth Sunday in Lent: Passion Sunday"],
+    ] as const)("%s retains its Lenten lessons, collect, and communion", (date, title) => {
+      const day = allData[date];
+      expect(day.primaryObservance).toBe(title);
+      const lessons = lessonData[title][0];
+      for (const office of ["morning", "evening"] as const) {
+        expect(day[office].first).toEqual(lessons[office].first);
+        expect(day[office].second).toEqual(lessons[office].second);
+        expect(day[office].collects).toContainEqual(
+          expect.objectContaining(collectData.find((collect) => collect.title === title)!),
+        );
+      }
+      expect(day.morning.communion).toEqual(expect.objectContaining(communionData[title]));
+    });
+
+    test.each([
+      ["2026-04-06", "Monday in Easter Week"],
+      ["2026-04-07", "Tuesday in Easter Week"],
+      ["2026-04-08", "Wednesday in Easter Week"],
+      ["2026-04-09", "Thursday in Easter Week"],
+      ["2026-04-10", "Friday in Easter Week"],
+      ["2026-04-11", "Saturday in Easter Week"],
+    ] as const)("%s retains its Easter Week lessons, collect, and communion", (date, title) => {
+      const day = allData[date];
+      expect(day.primaryObservance).toBe(title);
+      const lessons = lessonData[title][0];
+      for (const office of ["morning", "evening"] as const) {
+        expect(day[office].first).toEqual(lessons[office].first);
+        expect(day[office].second).toEqual(lessons[office].second);
+        expect(day[office].collects).toContainEqual(
+          expect.objectContaining(collectData.find((collect) => collect.title === title)!),
+        );
+      }
+      expect(day.morning.communion).toEqual(expect.objectContaining(communionData[title]));
     });
 
     describe("Christmastide", () => {
@@ -388,7 +473,7 @@ describe("Lectionary", () => {
 
       expect(today).toBeDefined();
       expect(today?.season).toBe("Advent");
-      expect(today?.primaryObservance).toBe("First Sunday of Advent");
+      expect(today?.primaryObservance).toBe("First Sunday in Advent");
     });
 
     test("returns lectionary for specified date", () => {
@@ -411,7 +496,7 @@ describe("Lectionary", () => {
     });
 
     test.each([
-      ["2025-11-30", "First Sunday of Advent", "Advent"],
+      ["2025-11-30", "First Sunday in Advent", "Advent"],
       ["2025-12-25", "Christmas Day", "Christmastide"],
       ["2026-01-06", "The Epiphany", "Epiphanytide"],
       ["2026-02-18", "Ash Wednesday", "Lent"],

@@ -46,12 +46,12 @@ describe("Communion", () => {
         expect(dates.length).toBeLessThan(200);
       });
 
-      test("first date is First Sunday of Advent", () => {
+      test("first date is First Sunday in Advent", () => {
         const all = communion.getAll();
         const dates = Object.keys(all).sort();
 
         expect(dates[0]).toBe("2025-11-30");
-        expect(all["2025-11-30"][0].title).toBe("First Sunday of Advent");
+        expect(all["2025-11-30"][0].title).toBe("First Sunday in Advent");
       });
 
       test("entries are sorted chronologically by date key", () => {
@@ -103,10 +103,10 @@ describe("Communion", () => {
       test("Advent Sundays have communion readings", () => {
         const all = communion.getAll();
 
-        expect(all["2025-11-30"][0].title).toBe("First Sunday of Advent");
-        expect(all["2025-12-07"][0].title).toBe("Second Sunday of Advent");
-        expect(all["2025-12-14"][0].title).toContain("Third Sunday of Advent");
-        expect(all["2025-12-21"][0].title).toBe("Fourth Sunday of Advent");
+        expect(all["2025-11-30"][0].title).toBe("First Sunday in Advent");
+        expect(all["2025-12-07"][0].title).toBe("Second Sunday in Advent");
+        expect(all["2025-12-14"][0].title).toContain("Third Sunday in Advent");
+        expect(all["2025-12-21"][0].title).toBe("Fourth Sunday in Advent");
       });
 
       test("Easter season Sundays have communion readings", () => {
@@ -251,7 +251,7 @@ describe("Communion", () => {
     });
 
     test.each([
-      ["2025-11-30", "First Sunday of Advent"],
+      ["2025-11-30", "First Sunday in Advent"],
       ["2025-12-25", "Christmas Day"],
       ["2026-01-06", "The Epiphany"],
       ["2026-02-18", "Ash Wednesday"],

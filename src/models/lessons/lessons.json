@@ -1,5 +1,5 @@
 {
-  "First Sunday of Advent": [
+  "First Sunday in Advent": [
     {
       "morning": {
         "first": ["Mal. 3:1-6", "Mal. 4:4-6"],
@@ -71,7 +71,7 @@
       }
     }
   ],
-  "Second Sunday of Advent": [
+  "Second Sunday in Advent": [
     {
       "morning": {
         "first": ["Isa. 52:1-10"],
@@ -143,7 +143,7 @@
       }
     }
   ],
-  "Third Sunday of Advent: Gaudete Sunday": [
+  "Third Sunday in Advent: Gaudete Sunday": [
     {
       "morning": {
         "first": ["Jer. 1:4-10", "Jer. 1:17-19"],
@@ -188,7 +188,7 @@
     null,
     null
   ],
-  "Fourth Sunday of Advent": [
+  "Fourth Sunday in Advent": [
     {
       "morning": {
         "first": ["Jer. 33:7-16"],
@@ -287,7 +287,7 @@
     null,
     null
   ],
-  "First Sunday of Epiphany": [
+  "First Sunday After Epiphany": [
     {
       "morning": {
         "first": ["Isa. 60:1-9"],
@@ -359,7 +359,7 @@
       }
     }
   ],
-  "Second Sunday of Epiphany": [
+  "Second Sunday After Epiphany": [
     {
       "morning": {
         "first": ["Exod. 34:29-35"],
@@ -431,7 +431,7 @@
       }
     }
   ],
-  "Third Sunday of Epiphany": [
+  "Third Sunday After Epiphany": [
     {
       "morning": {
         "first": ["Deut. 16:18-20", "Deut. 17:8-11"],
@@ -503,7 +503,7 @@
       }
     }
   ],
-  "Fourth Sunday of Epiphany": [
+  "Fourth Sunday After Epiphany": [
     {
       "morning": {
         "first": ["Isa. 61:1-11"],
@@ -575,7 +575,7 @@
       }
     }
   ],
-  "Fifth Sunday of Epiphany": [
+  "Fifth Sunday After Epiphany": [
     {
       "morning": {
         "first": ["Ruth 1:1-17"],
@@ -647,7 +647,7 @@
       }
     }
   ],
-  "Sixth Sunday of Epiphany": [
+  "Sixth Sunday After Epiphany": [
     {
       "morning": {
         "first": ["Isa. 2:6-19"],
@@ -899,7 +899,7 @@
     null,
     null
   ],
-  "First Sunday of Lent": [
+  "First Sunday in Lent": [
     {
       "morning": {
         "first": ["Isa 58:1-14"],
@@ -944,7 +944,7 @@
     null,
     null
   ],
-  "Second Sunday of Lent": [
+  "Second Sunday in Lent": [
     {
       "morning": {
         "first": ["Ezek. 18:1-4", "Ezek. 18:25-32"],
@@ -1016,7 +1016,7 @@
       }
     }
   ],
-  "Third Sunday of Lent": [
+  "Third Sunday in Lent": [
     {
       "morning": {
         "first": ["Zech. 1:1-6", "Zech. 1:12-17"],
@@ -1088,7 +1088,7 @@
       }
     }
   ],
-  "Fourth Sunday of Lent: Laetare Sunday": [
+  "Fourth Sunday in Lent: Laetare Sunday": [
     {
       "morning": {
         "first": ["Exod. 16:4-15"],
@@ -1160,7 +1160,7 @@
       }
     }
   ],
-  "Fifth Sunday of Lent: Passion Sunday": [
+  "Fifth Sunday in Lent: Passion Sunday": [
     {
       "morning": {
         "first": ["Deut. 18:15-22"],
@@ -4244,7 +4244,7 @@
       }
     }
   ],
-  "Monday of Easter Week": [
+  "Monday in Easter Week": [
     {
       "morning": {
         "first": ["Isa. 61:1-3", "Isa. 61:10-11"],
@@ -4256,7 +4256,7 @@
       }
     }
   ],
-  "Tuesday of Easter Week": [
+  "Tuesday in Easter Week": [
     {
       "morning": {
         "first": ["Dan. 12:1-4", "Dan. 12:13"],
@@ -4268,7 +4268,7 @@
       }
     }
   ],
-  "Wednesday of Easter Week": [
+  "Wednesday in Easter Week": [
     {
       "morning": {
         "first": ["Micah 7:7-9", "Micah 7:18-20"],
@@ -4280,7 +4280,7 @@
       }
     }
   ],
-  "Thursday of Easter Week": [
+  "Thursday in Easter Week": [
     {
       "morning": {
         "first": ["Ezek. 37:1-14"],
@@ -4292,7 +4292,7 @@
       }
     }
   ],
-  "Friday of Easter Week": [
+  "Friday in Easter Week": [
     {
       "morning": {
         "first": ["Isa. 65:17-25"],
@@ -4304,7 +4304,7 @@
       }
     }
   ],
-  "Saturday of Easter Week": [
+  "Saturday in Easter Week": [
     {
       "morning": {
         "first": ["Isa. 25:1-9"],

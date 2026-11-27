@@ -46,7 +46,7 @@ export class Calendar {
   }
 
   /**
-   * Calculate the First Sunday of Advent for a given year.
+   * Calculate the First Sunday in Advent for a given year.
    */
   calculateFirstSundayOfAdvent(year: number): Dayjs {
     // Start at December 1
@@ -68,7 +68,7 @@ export class Calendar {
     const firstSundayOfAdvent = this.calculateFirstSundayOfAdvent(
       this.today.year(),
     );
-    // If we're after the First Sunday of Advent,
+    // If we're after the First Sunday in Advent,
     // then the liturgical year has started,
     // and the next calendar year is about to begin.
     // Add 1 year.
@@ -81,7 +81,7 @@ export class Calendar {
   }
 
   /**
-   * Get the first Sunday of Advent.
+   * Get the first Sunday in Advent.
    */
   getFirstSundayOfAdvent(): Dayjs {
     const calendarYear = this.today.year();
@@ -99,7 +99,7 @@ export class Calendar {
   }
 
   /**
-   * Get next year's First Sunday of Advent.
+   * Get next year's First Sunday in Advent.
    */
   getNextFirstSundayOfAdvent(): Dayjs {
     const liturgicalYear = this.getLiturgicalYear();
@@ -140,14 +140,14 @@ export class Calendar {
     return [
       {
         date: firstSundayOfAdvent.format("YYYY-MM-DD"),
-        title: "First Sunday of Advent",
+        title: "First Sunday in Advent",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
       },
       {
         date: firstSundayOfAdvent.add(1, "week").format("YYYY-MM-DD"),
-        title: "Second Sunday of Advent",
+        title: "Second Sunday in Advent",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -155,14 +155,14 @@ export class Calendar {
       {
         date: firstSundayOfAdvent.add(2, "week").format("YYYY-MM-DD"),
         title:
-          "Third Sunday of Advent: [Gaudete Sunday](/liturgy/liturgical-year/seasons/advent/gaudete-sunday)",
+          "Third Sunday in Advent: [Gaudete Sunday](/liturgy/liturgical-year/seasons/advent/gaudete-sunday)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
       },
       {
         date: firstSundayOfAdvent.add(3, "week").format("YYYY-MM-DD"),
-        title: "Fourth Sunday of Advent",
+        title: "Fourth Sunday in Advent",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -315,12 +315,12 @@ export class Calendar {
         : epiphany.add(7 - epiphany.day(), "day");
 
     const titles = [
-      "First Sunday of Epiphany",
-      "Second Sunday of Epiphany",
-      "Third Sunday of Epiphany",
-      "Fourth Sunday of Epiphany",
-      "Fifth Sunday of Epiphany",
-      "Sixth Sunday of Epiphany",
+      "First Sunday After Epiphany",
+      "Second Sunday After Epiphany",
+      "Third Sunday After Epiphany",
+      "Fourth Sunday After Epiphany",
+      "Fifth Sunday After Epiphany",
+      "Sixth Sunday After Epiphany",
     ];
 
     const sundays: CalendarItem[] = [];
@@ -383,7 +383,7 @@ export class Calendar {
         ? ashWednesday.add(7, "day")
         : ashWednesday.add(7 - ashWednesday.day(), "day");
 
-    // Passion Sunday is the Fifth Sunday of Lent
+    // Passion Sunday is the Fifth Sunday in Lent
     return firstSundayOfLent.add(4, "week");
   }
 
@@ -416,21 +416,21 @@ export class Calendar {
     return [
       {
         date: passionSunday.subtract(4, "week").format("YYYY-MM-DD"),
-        title: "First Sunday of Lent",
+        title: "First Sunday in Lent",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
       },
       {
         date: passionSunday.subtract(3, "week").format("YYYY-MM-DD"),
-        title: "Second Sunday of Lent",
+        title: "Second Sunday in Lent",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
       },
       {
         date: passionSunday.subtract(2, "week").format("YYYY-MM-DD"),
-        title: "Third Sunday of Lent",
+        title: "Third Sunday in Lent",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -438,7 +438,7 @@ export class Calendar {
       {
         date: passionSunday.subtract(1, "week").format("YYYY-MM-DD"),
         title:
-          "Fourth Sunday of Lent: [Laetare Sunday](/liturgy/liturgical-year/seasons/lent/laetare-sunday)",
+          "Fourth Sunday in Lent: [Laetare Sunday](/liturgy/liturgical-year/seasons/lent/laetare-sunday)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -446,7 +446,7 @@ export class Calendar {
       {
         date: passionSunday.format("YYYY-MM-DD"),
         title:
-          "Fifth Sunday of Lent: [Passion Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday)",
+          "Fifth Sunday in Lent: [Passion Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -632,41 +632,41 @@ export class Calendar {
       },
       {
         date: easter.add(1, "day").format("YYYY-MM-DD"),
-        title: "Monday of Easter Week",
+        title: "Monday in Easter Week",
         rank: 2,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(2, "day").format("YYYY-MM-DD"),
-        title: "Tuesday of Easter Week",
+        title: "Tuesday in Easter Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(3, "day").format("YYYY-MM-DD"),
-        title: "Wednesday of Easter Week",
+        title: "Wednesday in Easter Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(4, "day").format("YYYY-MM-DD"),
-        title: "Thursday of Easter Week",
+        title: "Thursday in Easter Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(5, "day").format("YYYY-MM-DD"),
-        title: "Friday of Easter Week",
+        title: "Friday in Easter Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(6, "day").format("YYYY-MM-DD"),
-        title: "Saturday of Easter Week",
+        title: "Saturday in Easter Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
@@ -783,21 +783,21 @@ export class Calendar {
       },
       {
         date: easter.add(50, "day").format("YYYY-MM-DD"),
-        title: "Monday in Whitsuntide",
+        title: "Monday in Whitsun Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(51, "day").format("YYYY-MM-DD"),
-        title: "Tuesday in Whitsuntide",
+        title: "Tuesday in Whitsun Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
       },
       {
         date: easter.add(53, "day").format("YYYY-MM-DD"),
-        title: "Thursday in Whitsuntide",
+        title: "Thursday in Whitsun Week",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,

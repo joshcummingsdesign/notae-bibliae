@@ -1,17 +1,17 @@
 {
-  "First Sunday of Advent": {
+  "First Sunday in Advent": {
     "epistle": ["Rom. 13:8-14"],
     "gospel": ["Matt. 21:1-13"]
   },
-  "Second Sunday of Advent": {
+  "Second Sunday in Advent": {
     "epistle": ["Rom. 15:4-13"],
     "gospel": ["Luke 21:25-33"]
   },
-  "Third Sunday of Advent: Gaudete Sunday": {
+  "Third Sunday in Advent: Gaudete Sunday": {
     "epistle": ["1 Cor. 4:1-5"],
     "gospel": ["Matt. 11:2-10"]
   },
-  "Fourth Sunday of Advent": {
+  "Fourth Sunday in Advent": {
     "epistle": ["Phil. 4:4-7"],
     "gospel": ["John 1:19-28"]
   },
@@ -23,27 +23,27 @@
     "epistle": ["Isa. 61:1-3"],
     "gospel": ["Matt. 2:19-23"]
   },
-  "First Sunday of Epiphany": {
+  "First Sunday After Epiphany": {
     "epistle": ["Rom. 12:1-5"],
     "gospel": ["Luke 2:41-52"]
   },
-  "Second Sunday of Epiphany": {
+  "Second Sunday After Epiphany": {
     "epistle": ["Rom. 12:6-16"],
     "gospel": ["Mark 1:1-11"]
   },
-  "Third Sunday of Epiphany": {
+  "Third Sunday After Epiphany": {
     "epistle": ["Rom. 12:16-21"],
     "gospel": ["John 2:1-11"]
   },
-  "Fourth Sunday of Epiphany": {
+  "Fourth Sunday After Epiphany": {
     "epistle": ["Rom. 13:1-7"],
     "gospel": ["Matt. 8:1-13"]
   },
-  "Fifth Sunday of Epiphany": {
+  "Fifth Sunday After Epiphany": {
     "epistle": ["Col. 3:12-17"],
     "gospel": ["Matt. 13:24-30"]
   },
-  "Sixth Sunday of Epiphany": {
+  "Sixth Sunday After Epiphany": {
     "epistle": ["1 John 3:1-8"],
     "gospel": ["Matt. 24:23-31"]
   },
@@ -59,23 +59,23 @@
     "epistle": ["1 Cor. 13:1-13"],
     "gospel": ["Luke 18:31-43"]
   },
-  "First Sunday of Lent": {
+  "First Sunday in Lent": {
     "epistle": ["2 Cor. 6:1-10"],
     "gospel": ["Matt 4:1-11"]
   },
-  "Second Sunday of Lent": {
+  "Second Sunday in Lent": {
     "epistle": ["1 Thess. 4:1-8"],
     "gospel": ["Matt. 15:21-28"]
   },
-  "Third Sunday of Lent": {
+  "Third Sunday in Lent": {
     "epistle": ["Eph. 5:1-14"],
     "gospel": ["Luke 11:14-28"]
   },
-  "Fourth Sunday of Lent: Laetare Sunday": {
+  "Fourth Sunday in Lent: Laetare Sunday": {
     "epistle": ["Gal. 4:21-31"],
     "gospel": ["John 6:1-14"]
   },
-  "Fifth Sunday of Lent: Passion Sunday": {
+  "Fifth Sunday in Lent: Passion Sunday": {
     "epistle": ["Heb. 9:11-15"],
     "gospel": ["John 8:46-59"]
   },
@@ -347,30 +347,30 @@
     "epistle": ["Col. 3:1-4"],
     "gospel": ["John 20:1-10"]
   },
-  "Monday of Easter Week": {
+  "Monday in Easter Week": {
     "epistle": ["Acts 10:34-43"],
     "gospel": ["Luke 24:13-35"]
   },
-  "Tuesday of Easter Week": {
+  "Tuesday in Easter Week": {
     "epistle": ["Acts 13:26-41"],
     "gospel": ["Luke 24:36-48"]
   },
-  "Wednesday of Easter Week": {
+  "Wednesday in Easter Week": {
     "epistle": ["Acts 3:12-19"],
     "gospel": ["John 21:1-14"],
     "source": "Sarum Missal"
   },
-  "Thursday of Easter Week": {
+  "Thursday in Easter Week": {
     "epistle": ["Acts 8:26-40"],
     "gospel": ["John 20:11-18"],
     "source": "Sarum Missal"
   },
-  "Friday of Easter Week": {
+  "Friday in Easter Week": {
     "epistle": ["1 Pet. 3:18-22"],
     "gospel": ["Matt. 28:16-20"],
     "source": "Sarum Missal"
   },
-  "Saturday of Easter Week": {
+  "Saturday in Easter Week": {
     "epistle": ["1 Pet. 2:1-10"],
     "gospel": ["John 20:1-9"],
     "source": "Sarum Missal"
@@ -413,11 +413,11 @@
     "epistle": ["Acts 2:1-11"],
     "gospel": ["John 14:15-31"]
   },
-  "Monday in Whitsuntide": {
+  "Monday in Whitsun Week": {
     "epistle": ["Acts 10:34-48"],
     "gospel": ["John 3:16-21"]
   },
-  "Tuesday in Whitsuntide": {
+  "Tuesday in Whitsun Week": {
     "epistle": ["Acts 8:14-17"],
     "gospel": ["John 10:1-10"]
   },
@@ -425,7 +425,7 @@
     "epistle": ["Acts 13:44-49"],
     "gospel": ["Luke 4:16-21"]
   },
-  "Thursday in Whitsuntide": {
+  "Thursday in Whitsun Week": {
     "epistle": ["Acts 8:5-8"],
     "gospel": ["Luke 9:1-6"],
     "source": "Sarum Missal"

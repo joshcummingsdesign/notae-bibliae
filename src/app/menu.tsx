@@ -1101,59 +1101,96 @@ export const menuItems: MenuNode[] = [
         ],
       },
       {
-        title: "Rites",
-        link: "/liturgy/rites",
+        title: "Traditions",
+        link: "/liturgy/traditions",
         priority: 0.7,
         children: [
           {
-            title: "Roman Rite",
-            link: "/liturgy/rites/roman-rite",
+            title: "Roman",
+            link: "/liturgy/traditions/roman",
             priority: 0.6,
             children: [
               {
                 title: "Mass",
-                link: "/liturgy/rites/roman-rite/mass",
+                link: "/liturgy/traditions/roman/mass",
                 inPageNav: true,
               },
             ],
           },
           {
-            title: "Benedictine Rite",
-            link: "/liturgy/rites/benedictine-rite",
+            title: "Augustinian",
+            link: "/liturgy/traditions/augustinian",
             priority: 0.6,
             children: [
               {
+                title: "The Rule of Saint Augustine",
+                link: "/liturgy/traditions/augustinian/the-rule-of-saint-augustine",
+              },
+            ],
+          },
+          {
+            title: "Benedictine",
+            link: "/liturgy/traditions/benedictine",
+            priority: 0.6,
+            children: [
+              {
+                title: "The Rule of Saint Benedict",
+                link: "/liturgy/traditions/benedictine/the-rule-of-saint-benedict",
+              },
+              {
                 title: "Liturgy of the Hours",
-                link: "/liturgy/rites/benedictine-rite/liturgy-of-the-hours",
+                link: "/liturgy/traditions/benedictine/liturgy-of-the-hours",
                 inPageNav: true,
               },
             ],
           },
           {
-            title: "Sarum Rite",
-            link: "/liturgy/rites/sarum-rite",
+            title: "Sarum",
+            link: "/liturgy/traditions/sarum",
             priority: 0.6,
             children: [
               {
                 title: "Liturgy of the Hours",
-                link: "/liturgy/rites/sarum-rite/liturgy-of-the-hours",
+                link: "/liturgy/traditions/sarum/liturgy-of-the-hours",
                 inPageNav: true,
+              },
+            ],
+          },
+          {
+            title: "Franciscan",
+            link: "/liturgy/traditions/franciscan",
+            priority: 0.6,
+            children: [
+              {
+                title: "The Rule of Saint Francis",
+                link: "/liturgy/traditions/franciscan/the-rule-of-saint-francis",
+              },
+            ],
+          },
+          {
+            title: "Dominican",
+            link: "/liturgy/traditions/dominican",
+            priority: 0.6,
+            children: [
+              {
+                title: "Primitive Constitutions",
+                link: "/liturgy/traditions/dominican/primitive-constitutions",
               },
             ],
           },
           {
             title: "Book of Common Prayer",
-            link: "/liturgy/rites/book-of-common-prayer",
+            link: "/liturgy/traditions/book-of-common-prayer",
             priority: 0.6,
             children: [
               {
                 title: "Morning Prayer",
-                link: "/liturgy/rites/book-of-common-prayer/morning-prayer",
+                link: "/liturgy/traditions/book-of-common-prayer/morning-prayer",
                 inPageNav: true,
               },
               {
                 title: "Evening Prayer",
-                link: "/liturgy/rites/book-of-common-prayer/evening-prayer",
+                link: "/liturgy/traditions/book-of-common-prayer/evening-prayer",
                 inPageNav: true,
               },
             ],

@@ -27,24 +27,24 @@ describe("Calendar", () => {
   describe("liturgical year calculation", () => {
     test.each([
       // [date, expected liturgical year, description]
-      ["2025-11-29", 2025, "day before First Sunday of Advent"],
-      ["2025-11-30", 2026, "First Sunday of Advent"],
+      ["2025-11-29", 2025, "day before First Sunday in Advent"],
+      ["2025-11-30", 2026, "First Sunday in Advent"],
       ["2025-12-25", 2026, "Christmas Day"],
       ["2026-04-05", 2026, "Easter Sunday"],
       ["2026-11-28", 2026, "day before next Advent"],
-      ["2026-11-29", 2027, "next First Sunday of Advent"],
+      ["2026-11-29", 2027, "next First Sunday in Advent"],
     ])("getLiturgicalYear(%s) returns %i (%s)", (date, expected) => {
       expect(createCalendar(date).getLiturgicalYear()).toBe(expected);
     });
   });
 
-  describe("First Sunday of Advent calculation", () => {
+  describe("First Sunday in Advent calculation", () => {
     describe("getFirstSundayOfAdvent", () => {
       test.each([
-        ["2025-11-30", "2025-11-30", "on First Sunday of Advent"],
+        ["2025-11-30", "2025-11-30", "on First Sunday in Advent"],
         ["2025-12-25", "2025-11-30", "during Christmastide"],
         ["2026-01-01", "2025-11-30", "in new calendar year"],
-        ["2025-11-29", "2024-12-01", "before First Sunday of Advent"],
+        ["2025-11-29", "2024-12-01", "before First Sunday in Advent"],
       ])("for date %s returns %s (%s)", (inputDate, expectedAdvent) => {
         expect(
           createCalendar(inputDate)
@@ -140,7 +140,7 @@ describe("Calendar", () => {
       expect(cal.getQuinquagesima().format("YYYY-MM-DD")).toBe("2026-02-15");
     });
 
-    test("getPassionSunday returns 5th Sunday of Lent", () => {
+    test("getPassionSunday returns 5th Sunday in Lent", () => {
       expect(cal.getPassionSunday().format("YYYY-MM-DD")).toBe("2026-03-22");
     });
 
@@ -217,7 +217,7 @@ describe("Calendar", () => {
   });
 
   describe("fixed calendar items", () => {
-    test("returns items sorted by date starting from First Sunday of Advent", () => {
+    test("returns items sorted by date starting from First Sunday in Advent", () => {
       const items = cal.getFixedCalendarItems();
 
       expect(items.length).toBeGreaterThan(0);
@@ -790,7 +790,7 @@ describe("Calendar", () => {
     describe("getAll", () => {
       test("with ranking, returns highest-ranked item for dates with conflicts", () => {
         const items = cal.getAll(true);
-        // Nov 30 has both First Sunday of Advent (rank 1) and St. Andrew (rank 4)
+        // Nov 30 has both First Sunday in Advent (rank 1) and St. Andrew (rank 4)
         const nov30 = items["2025-11-30"];
         expect(
           nov30.every((item) => !item.title.includes("Saint Andrew")),
@@ -876,7 +876,7 @@ describe("Calendar", () => {
 
       describe("Principal Feast on Principal Sunday", () => {
         test("Annunciation transferred when falling on Lenten Sunday", () => {
-          // 2091: Easter is April 8, so March 25 = 5th Sunday of Lent (Passion Sunday)
+          // 2091: Easter is April 8, so March 25 = 5th Sunday in Lent (Passion Sunday)
           const cal2091 = createCalendar("2091-01-01"); // liturgical year 2091
           const items = cal2091.getAll();
 
@@ -1157,7 +1157,7 @@ describe("Calendar", () => {
       });
 
       test("isSaintDay returns true when highest ranked item is a saint", () => {
-        // Jan 25, 2025 - Conversion of St. Paul (rank 4) with Third Sunday of Epiphany (rank 7)
+        // Jan 25, 2025 - Conversion of St. Paul (rank 4) with Third Sunday After Epiphany (rank 7)
         // Saint feast takes precedence over ordinary Sunday
         expect(createCalendar("2025-01-25").isSaintDay()).toBe(true);
         // Jan 26, 2026 - Polycarp commemoration (rank 6), no competing observance
@@ -1167,7 +1167,7 @@ describe("Calendar", () => {
       });
 
       test("isSaintDay returns false when higher ranked non-saint item exists", () => {
-        // Nov 30, 2025 - First Sunday of Advent (rank 1) takes precedence over St. Andrew (rank 4)
+        // Nov 30, 2025 - First Sunday in Advent (rank 1) takes precedence over St. Andrew (rank 4)
         expect(createCalendar("2025-11-30").isSaintDay()).toBe(false);
         // Dec 25 - Christmas Day (Principal Feast) is not a saint
         expect(createCalendar("2025-12-25").isSaintDay()).toBe(false);

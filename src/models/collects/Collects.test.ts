@@ -49,9 +49,9 @@ describe("Collects", () => {
       }
     });
 
-    test("first collect is First Sunday of Advent", () => {
+    test("first collect is First Sunday in Advent", () => {
       const items = collects.queryCollects();
-      expect(items[0].title).toBe("First Sunday of Advent");
+      expect(items[0].title).toBe("First Sunday in Advent");
       expect(items[0].text).toBeTruthy();
     });
 
@@ -87,12 +87,12 @@ describe("Collects", () => {
         expect(dates.length).toBeLessThanOrEqual(366);
       });
 
-      test("first date is First Sunday of Advent", () => {
+      test("first date is First Sunday in Advent", () => {
         const all = collects.getAll();
         const dates = Object.keys(all).sort();
 
         expect(dates[0]).toBe("2025-11-30");
-        expect(all["2025-11-30"][0].title).toBe("First Sunday of Advent");
+        expect(all["2025-11-30"][0].title).toBe("First Sunday in Advent");
       });
 
       test("last date is day before next Advent", () => {
@@ -153,11 +153,11 @@ describe("Collects", () => {
       test("Sundays have their own collect", () => {
         const all = collects.getAll();
 
-        // First Sunday of Advent
-        expect(all["2025-11-30"][0].title).toBe("First Sunday of Advent");
+        // First Sunday in Advent
+        expect(all["2025-11-30"][0].title).toBe("First Sunday in Advent");
 
-        // Second Sunday of Advent
-        expect(all["2025-12-07"][0].title).toBe("Second Sunday of Advent");
+        // Second Sunday in Advent
+        expect(all["2025-12-07"][0].title).toBe("Second Sunday in Advent");
       });
 
       test("major feasts have their own collect", () => {
@@ -171,10 +171,10 @@ describe("Collects", () => {
       test("weekdays without feasts fall back to previous Sunday", () => {
         const all = collects.getAll();
 
-        // Dec 2, 2025 is a Tuesday after First Sunday of Advent (Dec 1 is St. Andrew)
+        // Dec 2, 2025 is a Tuesday after First Sunday in Advent (Dec 1 is St. Andrew)
         const dec2 = all["2025-12-02"];
         expect(dec2).toBeDefined();
-        expect(dec2[0].title).toBe("First Sunday of Advent");
+        expect(dec2[0].title).toBe("First Sunday in Advent");
       });
     });
 
@@ -194,10 +194,10 @@ describe("Collects", () => {
       test("all four Advent Sundays have collects", () => {
         const all = collects.getAll();
 
-        expect(all["2025-11-30"][0].title).toBe("First Sunday of Advent");
-        expect(all["2025-12-07"][0].title).toBe("Second Sunday of Advent");
-        expect(all["2025-12-14"][0].title).toContain("Third Sunday of Advent");
-        expect(all["2025-12-21"][0].title).toBe("Fourth Sunday of Advent");
+        expect(all["2025-11-30"][0].title).toBe("First Sunday in Advent");
+        expect(all["2025-12-07"][0].title).toBe("Second Sunday in Advent");
+        expect(all["2025-12-14"][0].title).toContain("Third Sunday in Advent");
+        expect(all["2025-12-21"][0].title).toBe("Fourth Sunday in Advent");
       });
     });
 
@@ -226,8 +226,8 @@ describe("Collects", () => {
       test("Lenten Sundays have collects", () => {
         const all = collects.getAll();
 
-        expect(all["2026-02-22"][0].title).toBe("First Sunday of Lent");
-        expect(all["2026-03-01"][0].title).toBe("Second Sunday of Lent");
+        expect(all["2026-02-22"][0].title).toBe("First Sunday in Lent");
+        expect(all["2026-03-01"][0].title).toBe("Second Sunday in Lent");
       });
 
       test("Holy Week has collects", () => {
@@ -398,7 +398,7 @@ describe("Collects", () => {
     });
 
     test.each([
-      ["2025-11-30", "First Sunday of Advent"],
+      ["2025-11-30", "First Sunday in Advent"],
       ["2025-12-25", "Christmas Day"],
       ["2026-01-06", "The Epiphany"],
       ["2026-02-18", "Ash Wednesday"],
@@ -457,8 +457,8 @@ describe("Collects", () => {
         expect(multiCollectDays.length).toBeGreaterThan(0);
       });
 
-      test("Saint Andrew on First Sunday of Advent has two collects", () => {
-        // In 2025, Nov 30 is both First Sunday of Advent and St. Andrew
+      test("Saint Andrew on First Sunday in Advent has two collects", () => {
+        // In 2025, Nov 30 is both First Sunday in Advent and St. Andrew
         // But St. Andrew is displaced, so check Dec 1
         const all = collects.getAll();
         const dec1 = all["2025-12-01"];
@@ -492,14 +492,14 @@ describe("Collects", () => {
 
     describe("ranking precedence", () => {
       test("commemorations (rank 6) are omitted on Principal Sundays (rank 1)", () => {
-        // Dec 7, 2025 is Second Sunday of Advent (rank 1) AND Saint Ambrose (rank 6)
+        // Dec 7, 2025 is Second Sunday in Advent (rank 1) AND Saint Ambrose (rank 6)
         // According to ranking rules, Saint Ambrose should be omitted entirely
         const all = collects.getAll();
         const dec7 = all["2025-12-07"];
 
         expect(dec7).toBeDefined();
         expect(dec7.length).toBe(1);
-        expect(dec7[0].title).toBe("Second Sunday of Advent");
+        expect(dec7[0].title).toBe("Second Sunday in Advent");
         // Saint Ambrose should NOT appear
         expect(dec7.some((c) => c.title.includes("Ambrose"))).toBe(false);
       });

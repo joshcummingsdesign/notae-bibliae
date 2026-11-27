@@ -32,13 +32,13 @@ describe("Lessons", () => {
         expect(entries.length).toBeLessThanOrEqual(366);
       });
 
-      test("first entry is First Sunday of Advent", () => {
+      test("first entry is First Sunday in Advent", () => {
         const all = lessons.getAll();
         const entries = Object.entries(all);
         const [date, lesson] = entries[0];
 
         expect(date).toBe("2025-11-30");
-        expect(lesson.title).toBe("First Sunday of Advent");
+        expect(lesson.title).toBe("First Sunday in Advent");
       });
 
       test("last entry is day before next Advent", () => {
@@ -92,7 +92,7 @@ describe("Lessons", () => {
         const all = lessons.getAll();
         const adventSunday = all["2025-11-30"];
 
-        expect(adventSunday.title).toBe("First Sunday of Advent");
+        expect(adventSunday.title).toBe("First Sunday in Advent");
         expect(adventSunday.morning.first).toEqual([
           "Mal. 3:1-6",
           "Mal. 4:4-6",
@@ -104,11 +104,11 @@ describe("Lessons", () => {
 
       test("weekday lessons include Sunday name and day", () => {
         const all = lessons.getAll();
-        // Tuesday after First Sunday of Advent (Monday Dec 1 is St. Andrew feast)
+        // Tuesday after First Sunday in Advent (Monday Dec 1 is St. Andrew feast)
         const tuesday = all["2025-12-02"];
 
         expect(tuesday.title).toMatch(
-          /\w+day After the First Sunday of Advent/,
+          /\w+day After the First Sunday in Advent/,
         );
       });
     });
@@ -145,22 +145,22 @@ describe("Lessons", () => {
       test("all four Advent Sundays have lessons", () => {
         const all = lessons.getAll();
 
-        expect(all["2025-11-30"]?.title).toBe("First Sunday of Advent");
-        expect(all["2025-12-07"]?.title).toBe("Second Sunday of Advent");
+        expect(all["2025-11-30"]?.title).toBe("First Sunday in Advent");
+        expect(all["2025-12-07"]?.title).toBe("Second Sunday in Advent");
         expect(all["2025-12-14"]?.title).toBe(
-          "Third Sunday of Advent: Gaudete Sunday",
+          "Third Sunday in Advent: Gaudete Sunday",
         );
-        expect(all["2025-12-21"]?.title).toBe("Fourth Sunday of Advent");
+        expect(all["2025-12-21"]?.title).toBe("Fourth Sunday in Advent");
       });
 
       test("Advent weekdays follow Sunday cycle", () => {
         const all = lessons.getAll();
 
-        // Week after First Sunday of Advent
+        // Week after First Sunday in Advent
         // Dec 1 is St. Andrew feast, so it doesn't follow the Sunday cycle
         expect(all["2025-12-01"]?.title).toBe("Saint Andrew, Apostle");
-        expect(all["2025-12-02"]?.title).toContain("First Sunday of Advent");
-        expect(all["2025-12-03"]?.title).toContain("First Sunday of Advent");
+        expect(all["2025-12-02"]?.title).toContain("First Sunday in Advent");
+        expect(all["2025-12-03"]?.title).toContain("First Sunday in Advent");
       });
     });
 
@@ -200,14 +200,14 @@ describe("Lessons", () => {
       test("Lenten Sundays have lessons", () => {
         const all = lessons.getAll();
 
-        expect(all["2026-02-22"]?.title).toBe("First Sunday of Lent");
-        expect(all["2026-03-01"]?.title).toBe("Second Sunday of Lent");
-        expect(all["2026-03-08"]?.title).toBe("Third Sunday of Lent");
+        expect(all["2026-02-22"]?.title).toBe("First Sunday in Lent");
+        expect(all["2026-03-01"]?.title).toBe("Second Sunday in Lent");
+        expect(all["2026-03-08"]?.title).toBe("Third Sunday in Lent");
         expect(all["2026-03-15"]?.title).toBe(
-          "Fourth Sunday of Lent: Laetare Sunday",
+          "Fourth Sunday in Lent: Laetare Sunday",
         );
         expect(all["2026-03-22"]?.title).toBe(
-          "Fifth Sunday of Lent: Passion Sunday",
+          "Fifth Sunday in Lent: Passion Sunday",
         );
       });
 
@@ -273,14 +273,14 @@ describe("Lessons", () => {
       const today = lessons.getToday();
 
       expect(today).toBeDefined();
-      expect(today.title).toBe("First Sunday of Advent");
+      expect(today.title).toBe("First Sunday in Advent");
     });
 
     test("returns correct lessons for weekdays", () => {
       const saturdayLessons = createLessons("2026-01-24");
       const today = saturdayLessons.getToday();
 
-      expect(today.title).toBe("Saturday After the Second Sunday of Epiphany");
+      expect(today.title).toBe("Saturday After the Second Sunday After Epiphany");
       expect(today.morning).toHaveProperty("first");
       expect(today.morning).toHaveProperty("second");
       expect(today.evening).toHaveProperty("first");
@@ -295,7 +295,7 @@ describe("Lessons", () => {
     });
 
     test.each([
-      ["2025-11-30", "First Sunday of Advent"],
+      ["2025-11-30", "First Sunday in Advent"],
       ["2025-12-25", "Christmas Day"],
       ["2026-01-06", "The Epiphany"],
       ["2026-02-18", "Ash Wednesday"],
@@ -348,9 +348,9 @@ describe("Lessons", () => {
         expect(all["2029-01-06"]?.title).toBe("The Epiphany");
       });
 
-      test("First Sunday of Epiphany on Jan 7", () => {
+      test("First Sunday After Epiphany on Jan 7", () => {
         const all = lessons2028.getAll();
-        expect(all["2029-01-07"]?.title).toBe("First Sunday of Epiphany");
+        expect(all["2029-01-07"]?.title).toBe("First Sunday After Epiphany");
       });
     });
 
@@ -397,9 +397,9 @@ describe("Lessons", () => {
         const earlyEaster = createLessons("2007-12-02");
         const all = earlyEaster.getAll();
 
-        // Should still have First Sunday of Epiphany
+        // Should still have First Sunday After Epiphany
         const firstSunday = Object.entries(all).find(
-          ([_, lesson]) => lesson.title === "First Sunday of Epiphany",
+          ([_, lesson]) => lesson.title === "First Sunday After Epiphany",
         );
         expect(firstSunday).toBeDefined();
       });
@@ -411,7 +411,7 @@ describe("Lessons", () => {
 
         // Should have several Sundays of Epiphany
         const epiphanySundays = Object.entries(all).filter(([_, lesson]) =>
-          lesson.title.includes("Sunday of Epiphany"),
+          lesson.title.includes("Sunday After Epiphany"),
         );
         expect(epiphanySundays.length).toBeGreaterThanOrEqual(4);
       });

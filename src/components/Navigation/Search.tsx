@@ -164,20 +164,20 @@ export const Search: React.FC<Props> = ({
         );
       }
 
-      if (item.link.includes("/liturgy/rites/roman-rite/")) {
-        title = title + ": Roman Rite";
+      if (item.link.includes("/liturgy/traditions/roman/")) {
+        title = title + " (Roman Rite)";
       }
 
-      if (item.link.includes("/liturgy/rites/benedictine-rite/")) {
-        title = title + ": Benedictine Rite";
+      if (item.link.includes("/liturgy/traditions/benedictine/")) {
+        title = title + " (Benedictine)";
       }
 
-      if (item.link.includes("/liturgy/rites/sarum-rite/")) {
-        title = title + ": Sarum Rite";
+      if (item.link.includes("/liturgy/traditions/sarum/")) {
+        title = title + " (Sarum)";
       }
 
-      if (item.link.includes("/liturgy/rites/book-of-common-prayer/")) {
-        title = title + ": Book of Common Prayer";
+      if (item.link.includes("/liturgy/traditions/book-of-common-prayer/")) {
+        title = title + " (BCP)";
       }
 
       if (item.link.includes("/liturgy/liturgical-year/")) {

@@ -22,6 +22,10 @@ describe("generateCalendarIcs", () => {
     expect(value).toContain("DURATION:P1D");
     const titles = [...value.matchAll(/^SUMMARY:(.*)/gm)].map((match) => match[1]);
     expect(titles.length).toBeGreaterThan(0);
+    for (const ordinal of ["First", "Second", "Third", "Fourth"]) {
+      expect(titles.join("\n")).toContain(`${ordinal} Sunday in Advent`);
+    }
+    expect(titles.join("\n")).not.toContain("Sunday of Advent");
     expect(titles.join("\n")).not.toMatch(/<[^>]+>|\[[^\]]+\]\([^)]+\)|\*/);
   });
 

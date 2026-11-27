@@ -61,7 +61,7 @@ export class Lectionary {
       const events = calendarData[date] || [];
       const dayLessons = lessonData[date];
 
-      // Primary observance: calendar event title, or lessons title (e.g., "Tuesday After the Fourth Sunday of Epiphany")
+      // Primary observance: calendar event title, or lessons title (e.g., "Tuesday After the Fourth Sunday After Epiphany")
       // When withLinks=false (default), strip markdown links
       const formatTitle = (title: string) => withLinks ? title : stripMarkdownLinks(title);
       const primaryObservance = events[0]
