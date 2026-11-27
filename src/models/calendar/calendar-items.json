@@ -1,82 +1,82 @@
 [
   {
     "date": "11-30",
-    "title": "[Saint Andrew](/liturgy/liturgical-year/saints/saint-andrew), Apostle",
+    "title": "[Saint Andrew](/church/liturgical-year/saints/saint-andrew), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "12-06",
-    "title": "[Saint Nicholas](/liturgy/liturgical-year/saints/saint-nicholas), Bishop",
+    "title": "[Saint Nicholas](/church/liturgical-year/saints/saint-nicholas), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "12-08",
-    "title": "[The Conception of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary)",
+    "title": "[The Conception of the Blessed Virgin Mary](/church/liturgical-year/saints/conception-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "12-13",
-    "title": "[Saint Lucy](/liturgy/liturgical-year/saints/saint-lucy), Virgin and Martyr",
+    "title": "[Saint Lucy](/church/liturgical-year/saints/saint-lucy), Virgin and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "12-16",
-    "title": "O Antiphons: [O Sapientia](/liturgy/music/chants/o-sapientia)",
+    "title": "O Antiphons: [O Sapientia](/church/music/chants/o-sapientia)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-17",
-    "title": "O Antiphons: [O Adonai](/liturgy/music/chants/o-adonai)",
+    "title": "O Antiphons: [O Adonai](/church/music/chants/o-adonai)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-18",
-    "title": "O Antiphons: [O Radix Jesse](/liturgy/music/chants/o-radix-jesse)",
+    "title": "O Antiphons: [O Radix Jesse](/church/music/chants/o-radix-jesse)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-19",
-    "title": "O Antiphons: [O Clavis David](/liturgy/music/chants/o-clavis-david)",
+    "title": "O Antiphons: [O Clavis David](/church/music/chants/o-clavis-david)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-20",
-    "title": "O Antiphons: [O Oriens](/liturgy/music/chants/o-oriens)",
+    "title": "O Antiphons: [O Oriens](/church/music/chants/o-oriens)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-21",
-    "title": "[Saint Thomas](/liturgy/liturgical-year/saints/saint-thomas), Apostle",
+    "title": "[Saint Thomas](/church/liturgical-year/saints/saint-thomas), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "12-21",
-    "title": "O Antiphons: [O Rex gentium](/liturgy/music/chants/o-rex-gentium)",
+    "title": "O Antiphons: [O Rex gentium](/church/music/chants/o-rex-gentium)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-22",
-    "title": "O Antiphons: [O Emmanuel](/liturgy/music/chants/o-emmanuel)",
+    "title": "O Antiphons: [O Emmanuel](/church/music/chants/o-emmanuel)",
     "rank": 9,
     "isNote": true
   },
   {
     "date": "12-23",
-    "title": "O Antiphons: [O Virgo virginum](/liturgy/music/chants/o-virgo-virginum)",
+    "title": "O Antiphons: [O Virgo virginum](/church/music/chants/o-virgo-virginum)",
     "rank": 9,
     "isNote": true
   },
@@ -88,40 +88,40 @@
   },
   {
     "date": "12-25",
-    "title": "[Christmas Day](/liturgy/liturgical-year/seasons/christmastide/christmas-day)",
+    "title": "[Christmas Day](/church/liturgical-year/seasons/christmastide/christmas-day)",
     "rank": 2,
     "isFeast": true,
     "isPrincipalFeast": true
   },
   {
     "date": "12-26",
-    "title": "[Saint Stephen](/liturgy/liturgical-year/seasons/christmastide/stephen), Deacon and Martyr",
+    "title": "[Saint Stephen](/church/liturgical-year/seasons/christmastide/stephen), Deacon and Martyr",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "12-27",
-    "title": "[Saint John](/liturgy/liturgical-year/seasons/christmastide/john), Apostle and Evangelist",
+    "title": "[Saint John](/church/liturgical-year/seasons/christmastide/john), Apostle and Evangelist",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "12-28",
-    "title": "[The Holy Innocents](/liturgy/liturgical-year/seasons/christmastide/holy-innocents)",
+    "title": "[The Holy Innocents](/church/liturgical-year/seasons/christmastide/holy-innocents)",
     "rank": 4,
     "isFeast": true
   },
   {
     "date": "12-29",
-    "title": "[Saint Thomas of Canterbury](/liturgy/liturgical-year/saints/saint-thomas-of-canterbury), Bishop and Martyr",
+    "title": "[Saint Thomas of Canterbury](/church/liturgical-year/saints/saint-thomas-of-canterbury), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-01",
-    "title": "[The Circumcision of Christ](/liturgy/liturgical-year/seasons/christmastide/circumcision-of-christ)",
+    "title": "[The Circumcision of Christ](/church/liturgical-year/seasons/christmastide/circumcision-of-christ)",
     "rank": 4,
     "isFeast": true
   },
@@ -133,366 +133,366 @@
   },
   {
     "date": "01-06",
-    "title": "[The Epiphany](/liturgy/liturgical-year/seasons/epiphanytide/epiphany)",
+    "title": "[The Epiphany](/church/liturgical-year/seasons/epiphanytide/epiphany)",
     "rank": 2,
     "isFeast": true,
     "isPrincipalFeast": true
   },
   {
     "date": "01-13",
-    "title": "[Saint Hilary](/liturgy/liturgical-year/saints/saint-hilary), Bishop",
+    "title": "[Saint Hilary](/church/liturgical-year/saints/saint-hilary), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-17",
-    "title": "[Saint Anthony](/liturgy/liturgical-year/saints/saint-anthony), Abbot",
+    "title": "[Saint Anthony](/church/liturgical-year/saints/saint-anthony), Abbot",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-21",
-    "title": "[Saint Agnes](/liturgy/liturgical-year/saints/saint-agnes), Virgin and Martyr",
+    "title": "[Saint Agnes](/church/liturgical-year/saints/saint-agnes), Virgin and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-22",
-    "title": "[Saint Vincent](/liturgy/liturgical-year/saints/saint-vincent), Deacon and Martyr",
+    "title": "[Saint Vincent](/church/liturgical-year/saints/saint-vincent), Deacon and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-25",
-    "title": "[The Conversion of Saint Paul](/liturgy/liturgical-year/saints/conversion-of-saint-paul)",
+    "title": "[The Conversion of Saint Paul](/church/liturgical-year/saints/conversion-of-saint-paul)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "01-26",
-    "title": "[Saint Polycarp](/liturgy/liturgical-year/saints/saint-polycarp), Bishop and Martyr",
+    "title": "[Saint Polycarp](/church/liturgical-year/saints/saint-polycarp), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "01-27",
-    "title": "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom), Bishop",
+    "title": "[Saint John Chrysostom](/church/liturgical-year/saints/saint-john-chrysostom), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "02-01",
-    "title": "[Saint Ignatius](/liturgy/liturgical-year/saints/saint-ignatius), Bishop and Martyr",
+    "title": "[Saint Ignatius](/church/liturgical-year/saints/saint-ignatius), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "02-02",
-    "title": "[The Purification of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/epiphanytide/purification)",
+    "title": "[The Purification of the Blessed Virgin Mary](/church/liturgical-year/seasons/epiphanytide/purification)",
     "rank": 4,
     "isFeast": true
   },
   {
     "date": "02-10",
-    "title": "[Saint Scholastica](/liturgy/liturgical-year/saints/saint-scholastica), Virgin",
+    "title": "[Saint Scholastica](/church/liturgical-year/saints/saint-scholastica), Virgin",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "02-24",
-    "title": "[Saint Matthias](/liturgy/liturgical-year/saints/saint-matthias), Apostle",
+    "title": "[Saint Matthias](/church/liturgical-year/saints/saint-matthias), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "03-07",
-    "title": "[Saints Perpetua and Felicity](/liturgy/liturgical-year/saints/saints-perpetua-and-felicity), Martyrs",
+    "title": "[Saints Perpetua and Felicity](/church/liturgical-year/saints/saints-perpetua-and-felicity), Martyrs",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-08",
-    "title": "[Saint Thomas Aquinas](/liturgy/liturgical-year/saints/saint-thomas-aquinas), Priest",
+    "title": "[Saint Thomas Aquinas](/church/liturgical-year/saints/saint-thomas-aquinas), Priest",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-12",
-    "title": "[Saint Gregory the Great](/liturgy/liturgical-year/saints/saint-gregory-the-great), Bishop",
+    "title": "[Saint Gregory the Great](/church/liturgical-year/saints/saint-gregory-the-great), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-17",
-    "title": "[Saint Patrick](/liturgy/liturgical-year/saints/saint-patrick), Bishop",
+    "title": "[Saint Patrick](/church/liturgical-year/saints/saint-patrick), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-18",
-    "title": "[Saint Anselm](/liturgy/liturgical-year/saints/saint-anselm), Bishop",
+    "title": "[Saint Anselm](/church/liturgical-year/saints/saint-anselm), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-19",
-    "title": "[Saint Joseph](/liturgy/liturgical-year/saints/saint-joseph), Spouse of the Blessed Virgin Mary",
+    "title": "[Saint Joseph](/church/liturgical-year/saints/saint-joseph), Spouse of the Blessed Virgin Mary",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-20",
-    "title": "[Saint Joachim](/liturgy/liturgical-year/saints/saint-joachim), Father of the Blessed Virgin Mary",
+    "title": "[Saint Joachim](/church/liturgical-year/saints/saint-joachim), Father of the Blessed Virgin Mary",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "03-21",
-    "title": "[Saint Benedict](/liturgy/liturgical-year/saints/saint-benedict), Abbot",
+    "title": "[Saint Benedict](/church/liturgical-year/saints/saint-benedict), Abbot",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "04-04",
-    "title": "[Saint Ambrose](/liturgy/liturgical-year/saints/saint-ambrose), Bishop",
+    "title": "[Saint Ambrose](/church/liturgical-year/saints/saint-ambrose), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "04-23",
-    "title": "[Saint George](/liturgy/liturgical-year/saints/saint-george), Martyr",
+    "title": "[Saint George](/church/liturgical-year/saints/saint-george), Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "04-25",
-    "title": "[Saint Mark](/liturgy/liturgical-year/saints/saint-mark), Evangelist",
+    "title": "[Saint Mark](/church/liturgical-year/saints/saint-mark), Evangelist",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "05-01",
-    "title": "[Saints Philip and James](/liturgy/liturgical-year/saints/saints-philip-and-james), Apostles",
+    "title": "[Saints Philip and James](/church/liturgical-year/saints/saints-philip-and-james), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "05-26",
-    "title": "[Saint Augustine of Canterbury](/liturgy/liturgical-year/saints/saint-augustine-of-canterbury), Bishop",
+    "title": "[Saint Augustine of Canterbury](/church/liturgical-year/saints/saint-augustine-of-canterbury), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "05-27",
-    "title": "[Saint Bede the Venerable](/liturgy/liturgical-year/saints/saint-bede-the-venerable), Priest",
+    "title": "[Saint Bede the Venerable](/church/liturgical-year/saints/saint-bede-the-venerable), Priest",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "06-05",
-    "title": "[Saint Boniface](/liturgy/liturgical-year/saints/saint-boniface), Bishop and Martyr",
+    "title": "[Saint Boniface](/church/liturgical-year/saints/saint-boniface), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "06-11",
-    "title": "[Saint Barnabas](/liturgy/liturgical-year/saints/saint-barnabas), Apostle",
+    "title": "[Saint Barnabas](/church/liturgical-year/saints/saint-barnabas), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "06-14",
-    "title": "[Saint Basil the Great](/liturgy/liturgical-year/saints/saint-basil-the-great), Bishop",
+    "title": "[Saint Basil the Great](/church/liturgical-year/saints/saint-basil-the-great), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "06-24",
-    "title": "[The Nativity of Saint John the Baptist](/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist)",
+    "title": "[The Nativity of Saint John the Baptist](/church/liturgical-year/saints/nativity-of-saint-john-the-baptist)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "06-29",
-    "title": "[Saints Peter and Paul](/liturgy/liturgical-year/saints/saints-peter-and-paul), Apostles",
+    "title": "[Saints Peter and Paul](/church/liturgical-year/saints/saints-peter-and-paul), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "07-02",
-    "title": "[The Visitation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/trinitytide/visitation)",
+    "title": "[The Visitation of the Blessed Virgin Mary](/church/liturgical-year/seasons/trinitytide/visitation)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "07-22",
-    "title": "[Saint Mary Magdalene](/liturgy/liturgical-year/saints/saint-mary-magdalene)",
+    "title": "[Saint Mary Magdalene](/church/liturgical-year/saints/saint-mary-magdalene)",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "07-25",
-    "title": "[Saint James](/liturgy/liturgical-year/saints/saint-james), Apostle",
+    "title": "[Saint James](/church/liturgical-year/saints/saint-james), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "07-26",
-    "title": "[Saint Anne](/liturgy/liturgical-year/saints/saint-anne), Mother of the Blessed Virgin Mary",
+    "title": "[Saint Anne](/church/liturgical-year/saints/saint-anne), Mother of the Blessed Virgin Mary",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "07-27",
-    "title": "[Saint Martha](/liturgy/liturgical-year/saints/saint-martha)",
+    "title": "[Saint Martha](/church/liturgical-year/saints/saint-martha)",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "08-05",
-    "title": "[Saint Dominic](/liturgy/liturgical-year/saints/saint-dominic), Priest",
+    "title": "[Saint Dominic](/church/liturgical-year/saints/saint-dominic), Priest",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "08-06",
-    "title": "[The Transfiguration of Christ](/liturgy/liturgical-year/seasons/trinitytide/transfiguration)",
+    "title": "[The Transfiguration of Christ](/church/liturgical-year/seasons/trinitytide/transfiguration)",
     "rank": 4,
     "isFeast": true
   },
   {
     "date": "08-07",
-    "title": "[The Holy Name of Jesus](/liturgy/liturgical-year/seasons/trinitytide/holy-name)",
+    "title": "[The Holy Name of Jesus](/church/liturgical-year/seasons/trinitytide/holy-name)",
     "rank": 4,
     "isFeast": true
   },
   {
     "date": "08-10",
-    "title": "[Saint Lawrence](/liturgy/liturgical-year/saints/saint-lawrence), Deacon and Martyr",
+    "title": "[Saint Lawrence](/church/liturgical-year/saints/saint-lawrence), Deacon and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "08-12",
-    "title": "[Saint Clare](/liturgy/liturgical-year/saints/saint-clare), Virgin",
+    "title": "[Saint Clare](/church/liturgical-year/saints/saint-clare), Virgin",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "08-15",
-    "title": "[The Blessed Virgin Mary](/liturgy/liturgical-year/saints/blessed-virgin-mary)",
+    "title": "[The Blessed Virgin Mary](/church/liturgical-year/saints/blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "08-20",
-    "title": "[Saint Bernard](/liturgy/liturgical-year/saints/saint-bernard), Abbot",
+    "title": "[Saint Bernard](/church/liturgical-year/saints/saint-bernard), Abbot",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "08-24",
-    "title": "[Saint Bartholomew](/liturgy/liturgical-year/saints/saint-bartholomew), Apostle",
+    "title": "[Saint Bartholomew](/church/liturgical-year/saints/saint-bartholomew), Apostle",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "08-28",
-    "title": "[Saint Augustine](/liturgy/liturgical-year/saints/saint-augustine), Bishop",
+    "title": "[Saint Augustine](/church/liturgical-year/saints/saint-augustine), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "08-29",
-    "title": "[The Beheading of Saint John the Baptist](/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist)",
+    "title": "[The Beheading of Saint John the Baptist](/church/liturgical-year/saints/beheading-of-saint-john-the-baptist)",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "09-08",
-    "title": "[The Nativity of the Blessed Virgin Mary](/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary)",
+    "title": "[The Nativity of the Blessed Virgin Mary](/church/liturgical-year/saints/nativity-of-the-blessed-virgin-mary)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "09-14",
-    "title": "[The Exaltation of the Holy Cross](/liturgy/liturgical-year/seasons/trinitytide/holy-cross)",
+    "title": "[The Exaltation of the Holy Cross](/church/liturgical-year/seasons/trinitytide/holy-cross)",
     "rank": 4,
     "isFeast": true
   },
   {
     "date": "09-15",
-    "title": "[Saint Cyprian](/liturgy/liturgical-year/saints/saint-cyprian), Bishop and Martyr",
+    "title": "[Saint Cyprian](/church/liturgical-year/saints/saint-cyprian), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "09-21",
-    "title": "[Saint Matthew](/liturgy/liturgical-year/saints/saint-matthew), Apostle and Evangelist",
+    "title": "[Saint Matthew](/church/liturgical-year/saints/saint-matthew), Apostle and Evangelist",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "09-29",
-    "title": "[Saint Michael and all Angels](/liturgy/liturgical-year/saints/saint-michael-and-all-angels)",
+    "title": "[Saint Michael and all Angels](/church/liturgical-year/saints/saint-michael-and-all-angels)",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "09-30",
-    "title": "[Saint Jerome](/liturgy/liturgical-year/saints/saint-jerome), Priest",
+    "title": "[Saint Jerome](/church/liturgical-year/saints/saint-jerome), Priest",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "10-04",
-    "title": "[Saint Francis of Assisi](/liturgy/liturgical-year/saints/saint-francis-of-assisi)",
+    "title": "[Saint Francis of Assisi](/church/liturgical-year/saints/saint-francis-of-assisi)",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "10-09",
-    "title": "[Saint Denis and Companions](/liturgy/liturgical-year/saints/saint-denis-and-companions), Martyrs",
+    "title": "[Saint Denis and Companions](/church/liturgical-year/saints/saint-denis-and-companions), Martyrs",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "10-18",
-    "title": "[Saint Luke](/liturgy/liturgical-year/saints/saint-luke), Evangelist",
+    "title": "[Saint Luke](/church/liturgical-year/saints/saint-luke), Evangelist",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "10-28",
-    "title": "[Saints Simon and Jude](/liturgy/liturgical-year/saints/saints-simon-and-jude), Apostles",
+    "title": "[Saints Simon and Jude](/church/liturgical-year/saints/saints-simon-and-jude), Apostles",
     "rank": 4,
     "isFeast": true,
     "isSaint": true
   },
   {
     "date": "10-31",
-    "title": "[All Hallows' Eve](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-hallows-eve)",
+    "title": "[All Hallows' Eve](/church/liturgical-year/seasons/trinitytide/allhallowtide/all-hallows-eve)",
     "rank": 8,
     "isVigil": true
   },
   {
     "date": "11-01",
-    "title": "[All Saints' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-saints-day)",
+    "title": "[All Saints' Day](/church/liturgical-year/seasons/trinitytide/allhallowtide/all-saints-day)",
     "rank": 2,
     "isFeast": true,
     "isPrincipalFeast": true,
@@ -500,37 +500,37 @@
   },
   {
     "date": "11-02",
-    "title": "[All Souls' Day](/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day)",
+    "title": "[All Souls' Day](/church/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day)",
     "rank": 3,
     "isGreaterObservance": true
   },
   {
     "date": "11-11",
-    "title": "[Saint Martin of Tours](/liturgy/liturgical-year/saints/saint-martin-of-tours), Bishop",
+    "title": "[Saint Martin of Tours](/church/liturgical-year/saints/saint-martin-of-tours), Bishop",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "11-19",
-    "title": "[Saint Elizabeth of Hungary](/liturgy/liturgical-year/saints/saint-elizabeth-of-hungary), Religious",
+    "title": "[Saint Elizabeth of Hungary](/church/liturgical-year/saints/saint-elizabeth-of-hungary), Religious",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "11-22",
-    "title": "[Saint Cecilia](/liturgy/liturgical-year/saints/saint-cecilia), Virgin and Martyr",
+    "title": "[Saint Cecilia](/church/liturgical-year/saints/saint-cecilia), Virgin and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "11-23",
-    "title": "[Saint Clement](/liturgy/liturgical-year/saints/saint-clement), Bishop and Martyr",
+    "title": "[Saint Clement](/church/liturgical-year/saints/saint-clement), Bishop and Martyr",
     "rank": 6,
     "isSaint": true
   },
   {
     "date": "11-25",
-    "title": "[Saint Catherine of Alexandria](/liturgy/liturgical-year/saints/saint-catherine-of-alexandria), Virgin and Martyr",
+    "title": "[Saint Catherine of Alexandria](/church/liturgical-year/saints/saint-catherine-of-alexandria), Virgin and Martyr",
     "rank": 6,
     "isSaint": true
   }

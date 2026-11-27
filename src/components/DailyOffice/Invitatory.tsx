@@ -23,7 +23,7 @@ export const Invitatory: React.FC<Props> = ({
     return (
       <p>
         <strong>
-          <Link href="/liturgy/music/chants/pascha-nostrum" target="_blank">
+          <Link href="/church/music/chants/pascha-nostrum" target="_blank">
             Pascha nostrum
           </Link>
         </strong>{" "}
@@ -35,7 +35,7 @@ export const Invitatory: React.FC<Props> = ({
   return (
     <p>
       <strong>
-        <Link href="/liturgy/music/chants/venite" target="_blank">
+        <Link href="/church/music/chants/venite" target="_blank">
           Venite
         </Link>
       </strong>{" "}

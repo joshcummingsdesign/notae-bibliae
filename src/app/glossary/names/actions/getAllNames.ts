@@ -13,7 +13,7 @@ export const getAllNames = async (): Promise<Names[]> => {
   const matches = [...content.matchAll(/^##\s+(.*)$/gm)].map((m) => m[1]);
 
   return matches.map((text) => ({
-    title: "Name: " + text,
+    title: "Names: " + text,
     link:
       pathname +
       "#" +

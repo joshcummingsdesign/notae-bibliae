@@ -7,21 +7,22 @@ interface Terms {
 }
 
 const TERMS_SOURCES = [
-  { file: "src/app/glossary/liturgical-terms/page.mdx", path: "/glossary/liturgical-terms" },
-  { file: "src/app/glossary/historical-terms/page.mdx", path: "/glossary/historical-terms" },
-  { file: "src/app/glossary/theological-terms/page.mdx", path: "/glossary/theological-terms" },
+  { file: "src/app/glossary/liturgical-terms/page.mdx", path: "/glossary/liturgical-terms", title: "Liturgical Terms" },
+  { file: "src/app/glossary/historical-terms/page.mdx", path: "/glossary/historical-terms", title: "Historical Terms" },
+  { file: "src/app/glossary/theological-terms/page.mdx", path: "/glossary/theological-terms", title: "Theological Terms" },
 ];
 
 const parseTermsFromFile = async (
   filename: string,
-  pathname: string
+  pathname: string,
+  sectionTitle: string
 ): Promise<Terms[]> => {
   const filePath = path.join(process.cwd(), filename);
   const content = await fs.readFile(filePath, "utf-8");
   const matches = [...content.matchAll(/^##\s+(.*)$/gm)].map((m) => m[1]);
 
   return matches.map((text) => ({
-    title: "Term: " + text,
+    title: `${sectionTitle}: ${text}`,
     link:
       pathname +
       "#" +
@@ -36,8 +37,8 @@ const parseTermsFromFile = async (
 
 async function main() {
   const results = await Promise.all(
-    TERMS_SOURCES.map(({ file, path: pathname }) =>
-      parseTermsFromFile(file, pathname)
+    TERMS_SOURCES.map(({ file, path: pathname, title }) =>
+      parseTermsFromFile(file, pathname, title)
     )
   );
   const terms = results.flat();

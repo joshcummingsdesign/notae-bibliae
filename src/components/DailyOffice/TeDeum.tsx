@@ -9,7 +9,7 @@ export const TeDeum: React.FC<Props> = ({ isLent }) => {
     return (
       <p>
         <strong>
-          <Link href="/liturgy/music/chants/benedicite" target="_blank">
+          <Link href="/church/music/chants/benedicite" target="_blank">
             Benedicite
           </Link>
         </strong>{" "}
@@ -21,7 +21,7 @@ export const TeDeum: React.FC<Props> = ({ isLent }) => {
   return (
     <p>
       <strong>
-        <Link href="/liturgy/music/chants/te-deum" target="_blank">
+        <Link href="/church/music/chants/te-deum" target="_blank">
           Te Deum
         </Link>
       </strong>{" "}

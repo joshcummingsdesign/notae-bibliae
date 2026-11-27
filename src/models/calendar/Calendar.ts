@@ -155,7 +155,7 @@ export class Calendar {
       {
         date: firstSundayOfAdvent.add(2, "week").format("YYYY-MM-DD"),
         title:
-          "Third Sunday in Advent: [Gaudete Sunday](/liturgy/liturgical-year/seasons/advent/gaudete-sunday)",
+          "Third Sunday in Advent: [Gaudete Sunday](/church/liturgical-year/seasons/advent/gaudete-sunday)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -182,21 +182,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Advent](/liturgy/liturgical-year/seasons/advent/ember-days-in-advent)",
+          "[Ember Wednesday in Advent](/church/liturgical-year/seasons/advent/ember-days-in-advent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Advent](/liturgy/liturgical-year/seasons/advent/ember-days-in-advent)",
+          "[Ember Friday in Advent](/church/liturgical-year/seasons/advent/ember-days-in-advent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Advent](/liturgy/liturgical-year/seasons/advent/ember-days-in-advent)",
+          "[Ember Saturday in Advent](/church/liturgical-year/seasons/advent/ember-days-in-advent)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -349,7 +349,7 @@ export class Calendar {
       {
         date: septuagesima.format("YYYY-MM-DD"),
         title:
-          "[Septuagesima](/liturgy/liturgical-year/seasons/pre-lent/septuagesima)",
+          "[Septuagesima](/church/liturgical-year/seasons/pre-lent/septuagesima)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -357,7 +357,7 @@ export class Calendar {
       {
         date: sexagesima.format("YYYY-MM-DD"),
         title:
-          "[Sexagesima](/liturgy/liturgical-year/seasons/pre-lent/sexagesima)",
+          "[Sexagesima](/church/liturgical-year/seasons/pre-lent/sexagesima)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -365,7 +365,7 @@ export class Calendar {
       {
         date: quinquagesima.format("YYYY-MM-DD"),
         title:
-          "[Quinquagesima](/liturgy/liturgical-year/seasons/pre-lent/quinquagesima)",
+          "[Quinquagesima](/church/liturgical-year/seasons/pre-lent/quinquagesima)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -438,7 +438,7 @@ export class Calendar {
       {
         date: passionSunday.subtract(1, "week").format("YYYY-MM-DD"),
         title:
-          "Fourth Sunday in Lent: [Laetare Sunday](/liturgy/liturgical-year/seasons/lent/laetare-sunday)",
+          "Fourth Sunday in Lent: [Laetare Sunday](/church/liturgical-year/seasons/lent/laetare-sunday)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -446,7 +446,7 @@ export class Calendar {
       {
         date: passionSunday.format("YYYY-MM-DD"),
         title:
-          "Fifth Sunday in Lent: [Passion Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday)",
+          "Fifth Sunday in Lent: [Passion Sunday](/church/liturgical-year/seasons/lent/passiontide/passion-sunday)",
         rank: 1,
         isSunday: true,
         isPrincipalSunday: true,
@@ -465,21 +465,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Lent](/liturgy/liturgical-year/seasons/lent/ember-days-in-lent)",
+          "[Ember Wednesday in Lent](/church/liturgical-year/seasons/lent/ember-days-in-lent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Lent](/liturgy/liturgical-year/seasons/lent/ember-days-in-lent)",
+          "[Ember Friday in Lent](/church/liturgical-year/seasons/lent/ember-days-in-lent)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Lent](/liturgy/liturgical-year/seasons/lent/ember-days-in-lent)",
+          "[Ember Saturday in Lent](/church/liturgical-year/seasons/lent/ember-days-in-lent)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -496,7 +496,7 @@ export class Calendar {
       {
         date: holyWeekStart.format("YYYY-MM-DD"),
         title:
-          "[Palm Sunday](/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday)",
+          "[Palm Sunday](/church/liturgical-year/seasons/lent/passiontide/palm-sunday)",
         rank: 3,
         isSunday: true,
         isGreaterObservance: true,
@@ -504,49 +504,49 @@ export class Calendar {
       {
         date: holyWeekStart.add(1, "day").format("YYYY-MM-DD"),
         title:
-          "[Monday of Holy Week](/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday)",
+          "[Monday of Holy Week](/church/liturgical-year/seasons/lent/passiontide/holy-monday)",
         rank: 3,
         isGreaterObservance: true,
       },
       {
         date: holyWeekStart.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Tuesday of Holy Week](/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
+          "[Tuesday of Holy Week](/church/liturgical-year/seasons/lent/passiontide/holy-tuesday)",
         rank: 3,
         isGreaterObservance: true,
       },
       {
         date: holyWeekStart.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Wednesday of Holy Week](/liturgy/liturgical-year/seasons/lent/passiontide/holy-wednesday)",
+          "[Wednesday of Holy Week](/church/liturgical-year/seasons/lent/passiontide/holy-wednesday)",
         rank: 3,
         isGreaterObservance: true,
       },
       {
         date: holyWeekStart.add(4, "day").format("YYYY-MM-DD"),
         title:
-          "[Maundy Thursday](/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
+          "[Maundy Thursday](/church/liturgical-year/seasons/lent/passiontide/maundy-thursday)",
         rank: 3,
         isGreaterObservance: true,
       },
       {
         date: holyWeekStart.add(5, "day").format("YYYY-MM-DD"),
         title:
-          "[Good Friday](/liturgy/liturgical-year/seasons/lent/passiontide/good-friday)",
+          "[Good Friday](/church/liturgical-year/seasons/lent/passiontide/good-friday)",
         rank: 3,
         isGreaterObservance: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
         title:
-          "[Holy Saturday](/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday)",
+          "[Holy Saturday](/church/liturgical-year/seasons/lent/passiontide/holy-saturday)",
         rank: 3,
         isGreaterObservance: true,
       },
       {
         date: holyWeekStart.add(6, "day").format("YYYY-MM-DD"),
         title:
-          "[Easter Vigil](/liturgy/liturgical-year/seasons/eastertide/easter-vigil)",
+          "[Easter Vigil](/church/liturgical-year/seasons/eastertide/easter-vigil)",
         rank: 8,
         isVigil: true,
       },
@@ -565,7 +565,7 @@ export class Calendar {
       {
         date: ashWednesday.format("YYYY-MM-DD"),
         title:
-          "[Ash Wednesday](/liturgy/liturgical-year/seasons/lent/ash-wednesday)",
+          "[Ash Wednesday](/church/liturgical-year/seasons/lent/ash-wednesday)",
         rank: 3,
         isGreaterObservance: true,
       },
@@ -597,7 +597,7 @@ export class Calendar {
       {
         date: annunciation.format("YYYY-MM-DD"),
         title:
-          "[The Annunciation of the Blessed Virgin Mary](/liturgy/liturgical-year/seasons/lent/annunciation)",
+          "[The Annunciation of the Blessed Virgin Mary](/church/liturgical-year/seasons/lent/annunciation)",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
@@ -624,7 +624,7 @@ export class Calendar {
       {
         date: easter.format("YYYY-MM-DD"),
         title:
-          "[Easter Day](/liturgy/liturgical-year/seasons/eastertide/easter-day)",
+          "[Easter Day](/church/liturgical-year/seasons/eastertide/easter-day)",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
@@ -674,7 +674,7 @@ export class Calendar {
       {
         date: easter.add(7, "day").format("YYYY-MM-DD"),
         title:
-          "[Second Sunday of Easter](/liturgy/liturgical-year/seasons/eastertide/second-sunday-of-easter)",
+          "[Second Sunday of Easter](/church/liturgical-year/seasons/eastertide/second-sunday-of-easter)",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
@@ -701,7 +701,7 @@ export class Calendar {
       {
         date: easter.add(35, "day").format("YYYY-MM-DD"),
         title:
-          "Sixth Sunday of Easter: [Rogation Sunday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
+          "Sixth Sunday of Easter: [Rogation Sunday](/church/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 7,
         isSunday: true,
         isPrincipalSunday: true,
@@ -709,21 +709,21 @@ export class Calendar {
       {
         date: ascension.subtract(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Rogation Monday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
+          "[Rogation Monday](/church/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: ascension.subtract(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Rogation Tuesday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
+          "[Rogation Tuesday](/church/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: ascension.subtract(1, "day").format("YYYY-MM-DD"),
         title:
-          "[Rogation Wednesday](/liturgy/liturgical-year/seasons/eastertide/rogation-days)",
+          "[Rogation Wednesday](/church/liturgical-year/seasons/eastertide/rogation-days)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -736,7 +736,7 @@ export class Calendar {
       {
         date: ascension.format("YYYY-MM-DD"),
         title:
-          "[Ascension Day](/liturgy/liturgical-year/seasons/eastertide/ascensiontide/ascension-day)",
+          "[Ascension Day](/church/liturgical-year/seasons/eastertide/ascensiontide/ascension-day)",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
@@ -775,7 +775,7 @@ export class Calendar {
       {
         date: pentecost.format("YYYY-MM-DD"),
         title:
-          "[Pentecost (Whitsunday)](/liturgy/liturgical-year/seasons/whitsuntide/pentecost)",
+          "[Pentecost (Whitsunday)](/church/liturgical-year/seasons/whitsuntide/pentecost)",
         rank: 2,
         isFeast: true,
         isPrincipalFeast: true,
@@ -815,21 +815,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Whitsuntide](/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
+          "[Ember Wednesday in Whitsuntide](/church/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Whitsuntide](/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
+          "[Ember Friday in Whitsuntide](/church/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Whitsuntide](/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
+          "[Ember Saturday in Whitsuntide](/church/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -876,7 +876,7 @@ export class Calendar {
       if (sunday.isSameOrAfter(christTheKing, "day")) break;
       const title =
         i === 0
-          ? "[Trinity Sunday](/liturgy/liturgical-year/seasons/trinitytide/trinity-sunday)"
+          ? "[Trinity Sunday](/church/liturgical-year/seasons/trinitytide/trinity-sunday)"
           : i === 25
             ? "Third Sunday Before Advent"
             : i === 26
@@ -906,7 +906,7 @@ export class Calendar {
     days.push({
       date: corpusChristi.format("YYYY-MM-DD"),
       title:
-        "[Corpus Christi](/liturgy/liturgical-year/seasons/trinitytide/corpus-christi)",
+        "[Corpus Christi](/church/liturgical-year/seasons/trinitytide/corpus-christi)",
       rank: 4,
       isFeast: true,
     });
@@ -933,21 +933,21 @@ export class Calendar {
       {
         date: wednesdayAfter.format("YYYY-MM-DD"),
         title:
-          "[Ember Wednesday in Trinitytide](/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
+          "[Ember Wednesday in Trinitytide](/church/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(2, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Friday in Trinitytide](/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
+          "[Ember Friday in Trinitytide](/church/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
         rank: 5,
         isLesserObservance: true,
       },
       {
         date: wednesdayAfter.add(3, "day").format("YYYY-MM-DD"),
         title:
-          "[Ember Saturday in Trinitytide](/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
+          "[Ember Saturday in Trinitytide](/church/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide)",
         rank: 5,
         isLesserObservance: true,
       },
@@ -1717,49 +1717,49 @@ export class Calendar {
       [`${year}-12-16`]: {
         title: "O Sapientia",
         text: "O come, thou Wisdom from on high, *\nWho orderest all things mightily;\nTo us the path of knowledge show,\nAnd teach us in her ways to go.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-sapientia",
+        link: "/church/music/chants/o-sapientia",
         verse: "Isaiah 11:2",
       },
       [`${year}-12-17`]: {
         title: "O Adonai",
         text: "O come, O come, thou Lord of Might; *\nWho to thy tribes, on Sinai's height,\nIn ancient times didst give the law,\nIn cloud, and majesty, and awe.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-adonai",
+        link: "/church/music/chants/o-adonai",
         verse: "Isaiah 33:22",
       },
       [`${year}-12-18`]: {
         title: "O Radix Jesse",
         text: "O come, thou Rod of Jesse, free *\nThine own from Satan's tyranny;\nFrom depths of hell thy people save,\nAnd give them victory o'er the grave.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-radix-jesse",
+        link: "/church/music/chants/o-radix-jesse",
         verse: "Isaiah 11:10",
       },
       [`${year}-12-19`]: {
         title: "O Clavis David",
         text: "O come, thou Key of David, come *\nAnd open wide our heavenly home;\nMake safe the way that leads on high,\nAnd close the path to misery.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-clavis-david",
+        link: "/church/music/chants/o-clavis-david",
         verse: "Isaiah 22:22",
       },
       [`${year}-12-20`]: {
         title: "O Oriens",
         text: "O come, thou Dayspring, come and cheer *\nOur spirits by thine Advent here;\nDisperse the gloomy clouds of night,\nAnd death's dark shadows put to flight.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-oriens",
+        link: "/church/music/chants/o-oriens",
         verse: "Isaiah 60:1-3",
       },
       [`${year}-12-21`]: {
         title: "O Rex gentium",
         text: "O come, Desire of Nations, bind *\nIn one the hearts of all mankind;\nBid thou our sad divisions cease,\nAnd be thyself our King of Peace.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-rex-gentium",
+        link: "/church/music/chants/o-rex-gentium",
         verse: "Isaiah 2:4",
       },
       [`${year}-12-22`]: {
         title: "O Emmanuel",
         text: "O come, O come, Emmanuel, *\nAnd ransom captive Israel;\nThat mourns in lonely exile here,\nUntil the Son of God appear.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-emmanuel",
+        link: "/church/music/chants/o-emmanuel",
         verse: "Isaiah 7:14",
       },
       [`${year}-12-23`]: {
         title: "O Virgo virginum",
         text: "O Virgin of virgins, how shall this be? *\nFor never was there one like unto thee.\nDaughters of Sion, why marvel ye at me?\nBehold ye now the divine mystery.\nRejoice! Rejoice! Emmanuel\nShall come to thee, O Israel!",
-        link: "/liturgy/music/chants/o-virgo-virginum",
+        link: "/church/music/chants/o-virgo-virginum",
         verse: "Isaiah 7:14",
       },
     };

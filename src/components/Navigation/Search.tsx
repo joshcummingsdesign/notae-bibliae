@@ -131,19 +131,19 @@ export const Search: React.FC<Props> = ({
     },
     {
       title: "Hallelujah",
-      link: "/liturgy/music/chants/alleluia",
+      link: "/church/music/chants/alleluia",
     },
     {
       title: "Candlemas",
-      link: "/liturgy/liturgical-year/seasons/epiphanytide/purification",
+      link: "/church/liturgical-year/seasons/epiphanytide/purification",
     },
     {
       title: "The Presentation of Jesus",
-      link: "/liturgy/liturgical-year/seasons/epiphanytide/purification",
+      link: "/church/liturgical-year/seasons/epiphanytide/purification",
     },
     {
       title: "Michaelmas",
-      link: "/liturgy/liturgical-year/saints/saint-michael-and-all-angels",
+      link: "/church/liturgical-year/saints/saint-michael-and-all-angels",
     },
   ];
 
@@ -157,6 +157,10 @@ export const Search: React.FC<Props> = ({
     .map((item) => {
       let title = item.title;
 
+      if (/^\/church\/traditions\/[^/]+$/.test(item.link)) {
+        title = `Traditions: ${title}`;
+      }
+
       if (item.title.includes("A Brief History of the Reformation")) {
         title = item.title.replace(
           /A Brief History of the Reformation, Part (\d): (.*)/,
@@ -164,27 +168,27 @@ export const Search: React.FC<Props> = ({
         );
       }
 
-      if (item.link.includes("/liturgy/traditions/roman/")) {
+      if (item.link.includes("/church/traditions/roman/")) {
         title = title + " (Roman Rite)";
       }
 
-      if (item.link.includes("/liturgy/traditions/benedictine/")) {
+      if (item.link.includes("/church/traditions/benedictine/")) {
         title = title + " (Benedictine)";
       }
 
-      if (item.link.includes("/liturgy/traditions/sarum/")) {
+      if (item.link.includes("/church/traditions/sarum/")) {
         title = title + " (Sarum)";
       }
 
-      if (item.link.includes("/liturgy/traditions/book-of-common-prayer/")) {
+      if (item.link.includes("/church/traditions/anglican/")) {
         title = title + " (BCP)";
       }
 
-      if (item.link.includes("/liturgy/liturgical-year/")) {
+      if (item.link.includes("/church/liturgical-year/")) {
         title = "Liturgical Year: " + title;
       }
 
-      if (item.link.includes("/liturgy/daily-office/")) {
+      if (item.link.includes("/church/daily-office/")) {
         title = "Daily Office: " + title;
       }
 

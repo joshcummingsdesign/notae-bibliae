@@ -52,10 +52,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         "monthly";
 
       if (node.link === "/meditations") changeFrequency = "weekly";
-      if (node.link === "/liturgy/calendar") changeFrequency = "yearly";
-      if (node.link === "/liturgy/daily-office/morning-prayer")
+      if (node.link === "/church/liturgical-year/calendar") changeFrequency = "yearly";
+      if (node.link === "/church/daily-office/morning-prayer")
         changeFrequency = "daily";
-      if (node.link === "/liturgy/daily-office/evening-prayer")
+      if (node.link === "/church/daily-office/evening-prayer")
         changeFrequency = "daily";
       else if (node.link.startsWith("/glossary")) priority = 0.2;
       else if (node.link.startsWith("/bible/languages")) priority = 0.2;

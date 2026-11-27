@@ -27,11 +27,11 @@ describe("appendAnchorToMarkdownLink", () => {
   test("appends anchor to link with existing path segments", () => {
     expect(
       appendAnchorToMarkdownLink(
-        "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom), Bishop",
+        "[Saint John Chrysostom](/church/liturgical-year/saints/saint-john-chrysostom), Bishop",
         "#evening-prayer"
       )
     ).toBe(
-      "[Saint John Chrysostom](/liturgy/liturgical-year/saints/saint-john-chrysostom#evening-prayer), Bishop"
+      "[Saint John Chrysostom](/church/liturgical-year/saints/saint-john-chrysostom#evening-prayer), Bishop"
     );
   });
 

@@ -533,165 +533,165 @@ export const menuItems: MenuNode[] = [
     ],
   },
   {
-    title: "Liturgy",
-    link: "/liturgy",
+    title: "Church",
+    link: "/church",
     priority: 0.8,
     children: [
       {
         title: "Liturgical Year",
-        link: "/liturgy/liturgical-year",
+        link: "/church/liturgical-year",
         priority: 0.7,
         children: [
           {
             title: "Preface",
-            link: "/liturgy/liturgical-year/preface",
+            link: "/church/liturgical-year/preface",
             priority: 0.6,
           },
           {
             title: "Calendar",
-            link: "/liturgy/liturgical-year/calendar",
+            link: "/church/liturgical-year/calendar",
             priority: 0.6,
           },
           {
             title: "Proper of Seasons",
-            link: "/liturgy/liturgical-year/seasons",
+            link: "/church/liturgical-year/seasons",
             priority: 0.6,
             children: [
               {
                 title: "Advent",
-                link: "/liturgy/liturgical-year/seasons/advent",
+                link: "/church/liturgical-year/seasons/advent",
                 children: [
                   {
                     title: "Advent Wreath",
-                    link: "/liturgy/liturgical-year/seasons/advent/advent-wreath",
+                    link: "/church/liturgical-year/seasons/advent/advent-wreath",
                   },
                   {
                     title: "Gaudete Sunday",
-                    link: "/liturgy/liturgical-year/seasons/advent/gaudete-sunday",
+                    link: "/church/liturgical-year/seasons/advent/gaudete-sunday",
                   },
                   {
                     title: "Ember Days in Advent",
-                    link: "/liturgy/liturgical-year/seasons/advent/ember-days-in-advent",
+                    link: "/church/liturgical-year/seasons/advent/ember-days-in-advent",
                   },
                   {
                     title: "O Antiphons",
-                    link: "/liturgy/liturgical-year/seasons/advent/o-antiphons",
+                    link: "/church/liturgical-year/seasons/advent/o-antiphons",
                   },
                 ],
               },
               {
                 title: "Christmastide",
-                link: "/liturgy/liturgical-year/seasons/christmastide",
+                link: "/church/liturgical-year/seasons/christmastide",
                 children: [
                   {
                     title: "Christmas Day",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/christmas-day",
+                    link: "/church/liturgical-year/seasons/christmastide/christmas-day",
                   },
                   {
                     title: "Saint Stephen",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/stephen",
+                    link: "/church/liturgical-year/seasons/christmastide/stephen",
                   },
                   {
                     title: "Saint John",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/john",
+                    link: "/church/liturgical-year/seasons/christmastide/john",
                   },
                   {
                     title: "The Holy Innocents",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/holy-innocents",
+                    link: "/church/liturgical-year/seasons/christmastide/holy-innocents",
                   },
                   {
                     title: "The Circumcision of Christ",
-                    link: "/liturgy/liturgical-year/seasons/christmastide/circumcision-of-christ",
+                    link: "/church/liturgical-year/seasons/christmastide/circumcision-of-christ",
                   },
                 ],
               },
               {
                 title: "Epiphanytide",
-                link: "/liturgy/liturgical-year/seasons/epiphanytide",
+                link: "/church/liturgical-year/seasons/epiphanytide",
                 children: [
                   {
                     title: "The Epiphany",
-                    link: "/liturgy/liturgical-year/seasons/epiphanytide/epiphany",
+                    link: "/church/liturgical-year/seasons/epiphanytide/epiphany",
                   },
                   {
                     title: "The Purification",
-                    link: "/liturgy/liturgical-year/seasons/epiphanytide/purification",
+                    link: "/church/liturgical-year/seasons/epiphanytide/purification",
                   },
                 ],
               },
               {
                 title: "Pre-Lent",
-                link: "/liturgy/liturgical-year/seasons/pre-lent",
+                link: "/church/liturgical-year/seasons/pre-lent",
                 children: [
                   {
                     title: "Septuagesima",
-                    link: "/liturgy/liturgical-year/seasons/pre-lent/septuagesima",
+                    link: "/church/liturgical-year/seasons/pre-lent/septuagesima",
                   },
                   {
                     title: "Sexagesima",
-                    link: "/liturgy/liturgical-year/seasons/pre-lent/sexagesima",
+                    link: "/church/liturgical-year/seasons/pre-lent/sexagesima",
                   },
                   {
                     title: "Quinquagesima",
-                    link: "/liturgy/liturgical-year/seasons/pre-lent/quinquagesima",
+                    link: "/church/liturgical-year/seasons/pre-lent/quinquagesima",
                   },
                 ],
               },
               {
                 title: "Lent",
-                link: "/liturgy/liturgical-year/seasons/lent",
+                link: "/church/liturgical-year/seasons/lent",
                 children: [
                   {
                     title: "Ash Wednesday",
-                    link: "/liturgy/liturgical-year/seasons/lent/ash-wednesday",
+                    link: "/church/liturgical-year/seasons/lent/ash-wednesday",
                   },
                   {
                     title: "Ember Days in Lent",
-                    link: "/liturgy/liturgical-year/seasons/lent/ember-days-in-lent",
+                    link: "/church/liturgical-year/seasons/lent/ember-days-in-lent",
                   },
                   {
                     title: "Laetare Sunday",
-                    link: "/liturgy/liturgical-year/seasons/lent/laetare-sunday",
+                    link: "/church/liturgical-year/seasons/lent/laetare-sunday",
                   },
                   {
                     title: "The Annunciation",
-                    link: "/liturgy/liturgical-year/seasons/lent/annunciation",
+                    link: "/church/liturgical-year/seasons/lent/annunciation",
                   },
                   {
                     title: "Passiontide",
-                    link: "/liturgy/liturgical-year/seasons/lent/passiontide",
+                    link: "/church/liturgical-year/seasons/lent/passiontide",
                     children: [
                       {
                         title: "Passion Sunday",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/passion-sunday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/passion-sunday",
                       },
                       {
                         title: "Palm Sunday",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/palm-sunday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/palm-sunday",
                       },
                       {
                         title: "Monday of Holy Week",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-monday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-monday",
                       },
                       {
                         title: "Tuesday of Holy Week",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-tuesday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-tuesday",
                       },
                       {
                         title: "Wednesday of Holy Week",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-wednesday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-wednesday",
                       },
                       {
                         title: "Maundy Thursday",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/maundy-thursday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/maundy-thursday",
                       },
                       {
                         title: "Good Friday",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/good-friday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/good-friday",
                       },
                       {
                         title: "Holy Saturday",
-                        link: "/liturgy/liturgical-year/seasons/lent/passiontide/holy-saturday",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-saturday",
                       },
                     ],
                   },
@@ -699,31 +699,31 @@ export const menuItems: MenuNode[] = [
               },
               {
                 title: "Eastertide",
-                link: "/liturgy/liturgical-year/seasons/eastertide",
+                link: "/church/liturgical-year/seasons/eastertide",
                 children: [
                   {
                     title: "Easter Vigil",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/easter-vigil",
+                    link: "/church/liturgical-year/seasons/eastertide/easter-vigil",
                   },
                   {
                     title: "Easter Day",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/easter-day",
+                    link: "/church/liturgical-year/seasons/eastertide/easter-day",
                   },
                   {
                     title: "Second Sunday of Easter",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/second-sunday-of-easter",
+                    link: "/church/liturgical-year/seasons/eastertide/second-sunday-of-easter",
                   },
                   {
                     title: "Rogation Days",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/rogation-days",
+                    link: "/church/liturgical-year/seasons/eastertide/rogation-days",
                   },
                   {
                     title: "Ascensiontide",
-                    link: "/liturgy/liturgical-year/seasons/eastertide/ascensiontide",
+                    link: "/church/liturgical-year/seasons/eastertide/ascensiontide",
                     children: [
                       {
                         title: "Ascension Day",
-                        link: "/liturgy/liturgical-year/seasons/eastertide/ascensiontide/ascension-day",
+                        link: "/church/liturgical-year/seasons/eastertide/ascensiontide/ascension-day",
                       },
                     ],
                   },
@@ -731,65 +731,65 @@ export const menuItems: MenuNode[] = [
               },
               {
                 title: "Whitsuntide",
-                link: "/liturgy/liturgical-year/seasons/whitsuntide",
+                link: "/church/liturgical-year/seasons/whitsuntide",
                 children: [
                   {
                     title: "Pentecost (Whitsunday)",
-                    link: "/liturgy/liturgical-year/seasons/whitsuntide/pentecost",
+                    link: "/church/liturgical-year/seasons/whitsuntide/pentecost",
                   },
                   {
                     title: "Ember Days in Whitsuntide",
-                    link: "/liturgy/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide",
+                    link: "/church/liturgical-year/seasons/whitsuntide/ember-days-in-whitsuntide",
                   },
                 ],
               },
               {
                 title: "Trinitytide",
-                link: "/liturgy/liturgical-year/seasons/trinitytide",
+                link: "/church/liturgical-year/seasons/trinitytide",
                 children: [
                   {
                     title: "Trinity Sunday",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/trinity-sunday",
+                    link: "/church/liturgical-year/seasons/trinitytide/trinity-sunday",
                   },
                   {
                     title: "Corpus Christi",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/corpus-christi",
+                    link: "/church/liturgical-year/seasons/trinitytide/corpus-christi",
                   },
                   {
                     title: "The Visitation",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/visitation",
+                    link: "/church/liturgical-year/seasons/trinitytide/visitation",
                   },
                   {
                     title: "The Transfiguration of Christ",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/transfiguration",
+                    link: "/church/liturgical-year/seasons/trinitytide/transfiguration",
                   },
                   {
                     title: "The Holy Name of Jesus",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/holy-name",
+                    link: "/church/liturgical-year/seasons/trinitytide/holy-name",
                   },
                   {
                     title: "The Exaltation of the Holy Cross",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/holy-cross",
+                    link: "/church/liturgical-year/seasons/trinitytide/holy-cross",
                   },
                   {
                     title: "Ember Days in Trinitytide",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide",
+                    link: "/church/liturgical-year/seasons/trinitytide/ember-days-in-trinitytide",
                   },
                   {
                     title: "Allhallowtide",
-                    link: "/liturgy/liturgical-year/seasons/trinitytide/allhallowtide",
+                    link: "/church/liturgical-year/seasons/trinitytide/allhallowtide",
                     children: [
                       {
                         title: "All Hallows' Eve",
-                        link: "/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-hallows-eve",
+                        link: "/church/liturgical-year/seasons/trinitytide/allhallowtide/all-hallows-eve",
                       },
                       {
                         title: "All Saints' Day",
-                        link: "/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-saints-day",
+                        link: "/church/liturgical-year/seasons/trinitytide/allhallowtide/all-saints-day",
                       },
                       {
                         title: "All Souls' Day",
-                        link: "/liturgy/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day",
+                        link: "/church/liturgical-year/seasons/trinitytide/allhallowtide/all-souls-day",
                       },
                     ],
                   },
@@ -799,992 +799,997 @@ export const menuItems: MenuNode[] = [
           },
           {
             title: "Proper of Saints",
-            link: "/liturgy/liturgical-year/saints",
+            link: "/church/liturgical-year/saints",
             priority: 0.6,
             inPageNav: true,
             children: [
               {
                 title: "Saint Agnes",
-                link: "/liturgy/liturgical-year/saints/saint-agnes",
+                link: "/church/liturgical-year/saints/saint-agnes",
               },
               {
                 title: "Saint Ambrose",
-                link: "/liturgy/liturgical-year/saints/saint-ambrose",
+                link: "/church/liturgical-year/saints/saint-ambrose",
               },
               {
                 title: "Saint Andrew",
-                link: "/liturgy/liturgical-year/saints/saint-andrew",
+                link: "/church/liturgical-year/saints/saint-andrew",
               },
               {
                 title: "Saint Anne",
-                link: "/liturgy/liturgical-year/saints/saint-anne",
+                link: "/church/liturgical-year/saints/saint-anne",
               },
               {
                 title: "Saint Anselm",
-                link: "/liturgy/liturgical-year/saints/saint-anselm",
+                link: "/church/liturgical-year/saints/saint-anselm",
               },
               {
                 title: "Saint Anthony",
-                link: "/liturgy/liturgical-year/saints/saint-anthony",
+                link: "/church/liturgical-year/saints/saint-anthony",
               },
               {
                 title: "Saint Augustine",
-                link: "/liturgy/liturgical-year/saints/saint-augustine",
+                link: "/church/liturgical-year/saints/saint-augustine",
               },
               {
                 title: "Saint Augustine of Canterbury",
-                link: "/liturgy/liturgical-year/saints/saint-augustine-of-canterbury",
+                link: "/church/liturgical-year/saints/saint-augustine-of-canterbury",
               },
               {
                 title: "Saint Barnabas",
-                link: "/liturgy/liturgical-year/saints/saint-barnabas",
+                link: "/church/liturgical-year/saints/saint-barnabas",
               },
               {
                 title: "Saint Bartholomew",
-                link: "/liturgy/liturgical-year/saints/saint-bartholomew",
+                link: "/church/liturgical-year/saints/saint-bartholomew",
               },
               {
                 title: "Saint Basil the Great",
-                link: "/liturgy/liturgical-year/saints/saint-basil-the-great",
+                link: "/church/liturgical-year/saints/saint-basil-the-great",
               },
               {
                 title: "Saint Bede the Venerable",
-                link: "/liturgy/liturgical-year/saints/saint-bede-the-venerable",
+                link: "/church/liturgical-year/saints/saint-bede-the-venerable",
               },
               {
                 title: "The Beheading of Saint John the Baptist",
-                link: "/liturgy/liturgical-year/saints/beheading-of-saint-john-the-baptist",
+                link: "/church/liturgical-year/saints/beheading-of-saint-john-the-baptist",
               },
               {
                 title: "Saint Benedict",
-                link: "/liturgy/liturgical-year/saints/saint-benedict",
+                link: "/church/liturgical-year/saints/saint-benedict",
               },
               {
                 title: "Saint Bernard",
-                link: "/liturgy/liturgical-year/saints/saint-bernard",
+                link: "/church/liturgical-year/saints/saint-bernard",
               },
               {
                 title: "The Blessed Virgin Mary",
-                link: "/liturgy/liturgical-year/saints/blessed-virgin-mary",
+                link: "/church/liturgical-year/saints/blessed-virgin-mary",
               },
               {
                 title: "Saint Boniface",
-                link: "/liturgy/liturgical-year/saints/saint-boniface",
+                link: "/church/liturgical-year/saints/saint-boniface",
               },
               {
                 title: "Saint Catherine of Alexandria",
-                link: "/liturgy/liturgical-year/saints/saint-catherine-of-alexandria",
+                link: "/church/liturgical-year/saints/saint-catherine-of-alexandria",
               },
               {
                 title: "Saint Cecilia",
-                link: "/liturgy/liturgical-year/saints/saint-cecilia",
+                link: "/church/liturgical-year/saints/saint-cecilia",
               },
               {
                 title: "Saint Clare",
-                link: "/liturgy/liturgical-year/saints/saint-clare",
+                link: "/church/liturgical-year/saints/saint-clare",
               },
               {
                 title: "Saint Clement",
-                link: "/liturgy/liturgical-year/saints/saint-clement",
+                link: "/church/liturgical-year/saints/saint-clement",
               },
               {
                 title: "The Conception of the Blessed Virgin Mary",
-                link: "/liturgy/liturgical-year/saints/conception-of-the-blessed-virgin-mary",
+                link: "/church/liturgical-year/saints/conception-of-the-blessed-virgin-mary",
               },
               {
                 title: "The Conversion of Saint Paul",
-                link: "/liturgy/liturgical-year/saints/conversion-of-saint-paul",
+                link: "/church/liturgical-year/saints/conversion-of-saint-paul",
               },
               {
                 title: "Saint Cyprian",
-                link: "/liturgy/liturgical-year/saints/saint-cyprian",
+                link: "/church/liturgical-year/saints/saint-cyprian",
               },
               {
                 title: "Saint Denis and Companions",
-                link: "/liturgy/liturgical-year/saints/saint-denis-and-companions",
+                link: "/church/liturgical-year/saints/saint-denis-and-companions",
               },
               {
                 title: "Saint Dominic",
-                link: "/liturgy/liturgical-year/saints/saint-dominic",
+                link: "/church/liturgical-year/saints/saint-dominic",
               },
               {
                 title: "Saint Elizabeth of Hungary",
-                link: "/liturgy/liturgical-year/saints/saint-elizabeth-of-hungary",
+                link: "/church/liturgical-year/saints/saint-elizabeth-of-hungary",
               },
               {
                 title: "Saint Francis of Assisi",
-                link: "/liturgy/liturgical-year/saints/saint-francis-of-assisi",
+                link: "/church/liturgical-year/saints/saint-francis-of-assisi",
               },
               {
                 title: "Saint George",
-                link: "/liturgy/liturgical-year/saints/saint-george",
+                link: "/church/liturgical-year/saints/saint-george",
               },
               {
                 title: "Saint Gregory the Great",
-                link: "/liturgy/liturgical-year/saints/saint-gregory-the-great",
+                link: "/church/liturgical-year/saints/saint-gregory-the-great",
               },
               {
                 title: "Saint Hilary",
-                link: "/liturgy/liturgical-year/saints/saint-hilary",
+                link: "/church/liturgical-year/saints/saint-hilary",
               },
               {
                 title: "Saint Ignatius",
-                link: "/liturgy/liturgical-year/saints/saint-ignatius",
+                link: "/church/liturgical-year/saints/saint-ignatius",
               },
               {
                 title: "Saint James",
-                link: "/liturgy/liturgical-year/saints/saint-james",
+                link: "/church/liturgical-year/saints/saint-james",
               },
               {
                 title: "Saint Jerome",
-                link: "/liturgy/liturgical-year/saints/saint-jerome",
+                link: "/church/liturgical-year/saints/saint-jerome",
               },
               {
                 title: "Saint Joachim",
-                link: "/liturgy/liturgical-year/saints/saint-joachim",
+                link: "/church/liturgical-year/saints/saint-joachim",
               },
               {
                 title: "Saint John Chrysostom",
-                link: "/liturgy/liturgical-year/saints/saint-john-chrysostom",
+                link: "/church/liturgical-year/saints/saint-john-chrysostom",
               },
               {
                 title: "Saint Joseph",
-                link: "/liturgy/liturgical-year/saints/saint-joseph",
+                link: "/church/liturgical-year/saints/saint-joseph",
               },
               {
                 title: "Saint Lawrence",
-                link: "/liturgy/liturgical-year/saints/saint-lawrence",
+                link: "/church/liturgical-year/saints/saint-lawrence",
               },
               {
                 title: "Saint Lucy",
-                link: "/liturgy/liturgical-year/saints/saint-lucy",
+                link: "/church/liturgical-year/saints/saint-lucy",
               },
               {
                 title: "Saint Luke",
-                link: "/liturgy/liturgical-year/saints/saint-luke",
+                link: "/church/liturgical-year/saints/saint-luke",
               },
               {
                 title: "Saint Mark",
-                link: "/liturgy/liturgical-year/saints/saint-mark",
+                link: "/church/liturgical-year/saints/saint-mark",
               },
               {
                 title: "Saint Martha",
-                link: "/liturgy/liturgical-year/saints/saint-martha",
+                link: "/church/liturgical-year/saints/saint-martha",
               },
               {
                 title: "Saint Martin of Tours",
-                link: "/liturgy/liturgical-year/saints/saint-martin-of-tours",
+                link: "/church/liturgical-year/saints/saint-martin-of-tours",
               },
               {
                 title: "Saint Mary Magdalene",
-                link: "/liturgy/liturgical-year/saints/saint-mary-magdalene",
+                link: "/church/liturgical-year/saints/saint-mary-magdalene",
               },
               {
                 title: "Saint Matthew",
-                link: "/liturgy/liturgical-year/saints/saint-matthew",
+                link: "/church/liturgical-year/saints/saint-matthew",
               },
               {
                 title: "Saint Matthias",
-                link: "/liturgy/liturgical-year/saints/saint-matthias",
+                link: "/church/liturgical-year/saints/saint-matthias",
               },
               {
                 title: "Saint Michael and all Angels",
-                link: "/liturgy/liturgical-year/saints/saint-michael-and-all-angels",
+                link: "/church/liturgical-year/saints/saint-michael-and-all-angels",
               },
               {
                 title: "The Nativity of the Blessed Virgin Mary",
-                link: "/liturgy/liturgical-year/saints/nativity-of-the-blessed-virgin-mary",
+                link: "/church/liturgical-year/saints/nativity-of-the-blessed-virgin-mary",
               },
               {
                 title: "The Nativity of Saint John the Baptist",
-                link: "/liturgy/liturgical-year/saints/nativity-of-saint-john-the-baptist",
+                link: "/church/liturgical-year/saints/nativity-of-saint-john-the-baptist",
               },
               {
                 title: "Saint Nicholas",
-                link: "/liturgy/liturgical-year/saints/saint-nicholas",
+                link: "/church/liturgical-year/saints/saint-nicholas",
               },
               {
                 title: "Saint Patrick",
-                link: "/liturgy/liturgical-year/saints/saint-patrick",
+                link: "/church/liturgical-year/saints/saint-patrick",
               },
               {
                 title: "Saints Perpetua and Felicity",
-                link: "/liturgy/liturgical-year/saints/saints-perpetua-and-felicity",
+                link: "/church/liturgical-year/saints/saints-perpetua-and-felicity",
               },
               {
                 title: "Saints Peter and Paul",
-                link: "/liturgy/liturgical-year/saints/saints-peter-and-paul",
+                link: "/church/liturgical-year/saints/saints-peter-and-paul",
               },
               {
                 title: "Saints Philip and James",
-                link: "/liturgy/liturgical-year/saints/saints-philip-and-james",
+                link: "/church/liturgical-year/saints/saints-philip-and-james",
               },
               {
                 title: "Saint Polycarp",
-                link: "/liturgy/liturgical-year/saints/saint-polycarp",
+                link: "/church/liturgical-year/saints/saint-polycarp",
               },
               {
                 title: "Saint Scholastica",
-                link: "/liturgy/liturgical-year/saints/saint-scholastica",
+                link: "/church/liturgical-year/saints/saint-scholastica",
               },
               {
                 title: "Saints Simon and Jude",
-                link: "/liturgy/liturgical-year/saints/saints-simon-and-jude",
+                link: "/church/liturgical-year/saints/saints-simon-and-jude",
               },
               {
                 title: "Saint Thomas",
-                link: "/liturgy/liturgical-year/saints/saint-thomas",
+                link: "/church/liturgical-year/saints/saint-thomas",
               },
               {
                 title: "Saint Thomas Aquinas",
-                link: "/liturgy/liturgical-year/saints/saint-thomas-aquinas",
+                link: "/church/liturgical-year/saints/saint-thomas-aquinas",
               },
               {
                 title: "Saint Thomas of Canterbury",
-                link: "/liturgy/liturgical-year/saints/saint-thomas-of-canterbury",
+                link: "/church/liturgical-year/saints/saint-thomas-of-canterbury",
               },
               {
                 title: "Saint Vincent",
-                link: "/liturgy/liturgical-year/saints/saint-vincent",
+                link: "/church/liturgical-year/saints/saint-vincent",
               },
             ],
           },
           {
             title: "Ranking",
-            link: "/liturgy/liturgical-year/ranking",
+            link: "/church/liturgical-year/ranking",
             priority: 0.6,
             inPageNav: true,
           },
           {
             title: "Notes",
-            link: "/liturgy/liturgical-year/notes",
+            link: "/church/liturgical-year/notes",
             priority: 0.6,
           },
         ],
       },
       {
         title: "Daily Office",
-        link: "/liturgy/daily-office",
+        link: "/church/daily-office",
         priority: 0.7,
         children: [
           {
             title: "Preface",
-            link: "/liturgy/daily-office/preface",
+            link: "/church/daily-office/preface",
           },
           {
             title: "Ordinary",
-            link: "/liturgy/daily-office/ordinary",
+            link: "/church/daily-office/ordinary",
             inPageNav: true,
           },
           {
             title: "Morning Prayer",
-            link: "/liturgy/daily-office/morning-prayer",
+            link: "/church/daily-office/morning-prayer",
           },
           {
             title: "Evening Prayer",
-            link: "/liturgy/daily-office/evening-prayer",
+            link: "/church/daily-office/evening-prayer",
           },
           {
             title: "Lectionary",
-            link: "/liturgy/daily-office/lectionary",
+            link: "/church/daily-office/lectionary",
           },
           {
             title: "Chant Rubrics",
-            link: "/liturgy/daily-office/chant-rubrics",
+            link: "/church/daily-office/chant-rubrics",
             inPageNav: true,
           },
           {
             title: "Psalter",
-            link: "/liturgy/daily-office/psalter",
+            link: "/church/daily-office/psalter",
             inPageNav: true,
           },
         ],
       },
       {
+        title: "Prayers",
+        link: "/church/prayers",
+        priority: 0.7,
+        children: [
+          {
+            title: "Sign of the Cross",
+            link: "/church/prayers/sign-of-the-cross",
+          },
+          {
+            title: "Eastern Cross",
+            link: "/church/prayers/eastern-cross",
+          },
+          {
+            title: "Our Father",
+            link: "/church/prayers/our-father",
+          },
+          {
+            title: "Glory Be",
+            link: "/church/prayers/glory-be",
+          },
+          {
+            title: "Jesus Prayer",
+            link: "/church/prayers/jesus-prayer",
+          },
+          {
+            title: "Hail Mary",
+            link: "/church/prayers/hail-mary",
+          },
+          {
+            title: "Hail Holy Queen",
+            link: "/church/prayers/hail-holy-queen",
+          },
+          {
+            title: "O My Jesus",
+            link: "/church/prayers/o-my-jesus",
+          },
+          {
+            title: "Rosary",
+            link: "/church/prayers/rosary",
+          },
+          {
+            title: "Luther Morning Prayer",
+            link: "/church/prayers/luther-morning-prayer",
+          },
+          {
+            title: "Luther Evening Prayer",
+            link: "/church/prayers/luther-evening-prayer",
+          },
+        ],
+      },
+      {
+        title: "Creeds",
+        link: "/church/creeds",
+        priority: 0.7,
+        children: [
+          {
+            title: "Apostles' Creed",
+            link: "/church/creeds/apostles-creed",
+          },
+          {
+            title: "Nicene Creed",
+            link: "/church/creeds/nicene-creed",
+          },
+          {
+            title: "Niceno-Constantinopolitan Creed",
+            link: "/church/creeds/niceno-constantinopolitan-creed",
+          },
+          {
+            title: "Chalcedonian Creed",
+            link: "/church/creeds/chalcedonian-creed",
+          },
+          {
+            title: "Nicene Creed with Filioque",
+            link: "/church/creeds/nicene-creed-with-filioque",
+          },
+          {
+            title: "Athanasian Creed",
+            link: "/church/creeds/athanasian-creed",
+          },
+        ],
+      },
+      {
+        title: "Music",
+        link: "/church/music",
+        priority: 0.7,
+        children: [
+          {
+            title: "Chants",
+            link: "/church/music/chants",
+            priority: 0.6,
+            children: [
+              {
+                title: "Agnus Dei",
+                link: "/church/music/chants/agnus-dei",
+              },
+              {
+                title: "Alleluia",
+                link: "/church/music/chants/alleluia",
+              },
+              {
+                title: "Benedicamus",
+                link: "/church/music/chants/benedicamus",
+              },
+              {
+                title: "Benedicite",
+                link: "/church/music/chants/benedicite",
+              },
+              {
+                title: "Benedictus",
+                link: "/church/music/chants/benedictus",
+              },
+              {
+                title: "Benedictus es, Domine",
+                link: "/church/music/chants/benedictus-es-domine",
+              },
+              {
+                title: "Credo",
+                link: "/church/music/chants/credo",
+              },
+              {
+                title: "Deus, Creator omnium",
+                link: "/church/music/chants/deus-creator-omnium",
+              },
+              {
+                title: "Deus in adjutorium",
+                link: "/church/music/chants/deus-in-adjutorium",
+              },
+              {
+                title: "Domine, labia mea",
+                link: "/church/music/chants/domine-labia-mea",
+              },
+              {
+                title: "Facta est cum Angelo",
+                link: "/church/music/chants/facta-est-cum-angelo",
+              },
+              {
+                title: "Gloria",
+                link: "/church/music/chants/gloria",
+              },
+              {
+                title: "Gloria Patri",
+                link: "/church/music/chants/gloria-patri",
+              },
+              {
+                title: "Iste pauper",
+                link: "/church/music/chants/iste-pauper",
+              },
+              {
+                title: "Kyrie",
+                link: "/church/music/chants/kyrie",
+              },
+              {
+                title: "Magnificat",
+                link: "/church/music/chants/magnificat",
+              },
+              {
+                title: "Multitudo languentium",
+                link: "/church/music/chants/multitudo-languentium",
+              },
+              {
+                title: "Nunc dimittis",
+                link: "/church/music/chants/nunc-dimittis",
+              },
+              {
+                title: "O Adonai",
+                link: "/church/music/chants/o-adonai",
+              },
+              {
+                title: "O Clavis David",
+                link: "/church/music/chants/o-clavis-david",
+              },
+              {
+                title: "O Emmanuel",
+                link: "/church/music/chants/o-emmanuel",
+              },
+              {
+                title: "O Oriens",
+                link: "/church/music/chants/o-oriens",
+              },
+              {
+                title: "O Radix Jesse",
+                link: "/church/music/chants/o-radix-jesse",
+              },
+              {
+                title: "O Rex gentium",
+                link: "/church/music/chants/o-rex-gentium",
+              },
+              {
+                title: "O Sapientia",
+                link: "/church/music/chants/o-sapientia",
+              },
+              {
+                title: "O Virgo virginum",
+                link: "/church/music/chants/o-virgo-virginum",
+              },
+              {
+                title: "Pascha nostrum",
+                link: "/church/music/chants/pascha-nostrum",
+              },
+              {
+                title: "Salva nos, Domine",
+                link: "/church/music/chants/salva-nos-domine",
+              },
+              {
+                title: "Sanctus",
+                link: "/church/music/chants/sanctus",
+              },
+              {
+                title: "Song of Habakkuk",
+                link: "/church/music/chants/song-of-habakkuk",
+              },
+              {
+                title: "Song of Hannah",
+                link: "/church/music/chants/song-of-hannah",
+              },
+              {
+                title: "Song of Hezekiah",
+                link: "/church/music/chants/song-of-hezekiah",
+              },
+              {
+                title: "Song of Isaiah",
+                link: "/church/music/chants/song-of-isaiah",
+              },
+              {
+                title: "Song of Moses from Deut., Pt. 1",
+                link: "/church/music/chants/song-of-moses-deut-pt-1",
+              },
+              {
+                title: "Song of Moses from Deut., Pt. 2",
+                link: "/church/music/chants/song-of-moses-deut-pt-2",
+              },
+              {
+                title: "Song of Moses from Exod.",
+                link: "/church/music/chants/song-of-moses-exod",
+              },
+              {
+                title: "Te decet laus",
+                link: "/church/music/chants/te-decet-laus",
+              },
+              {
+                title: "Te Deum",
+                link: "/church/music/chants/te-deum",
+              },
+              {
+                title: "Veni, redemptor gentium",
+                link: "/church/music/chants/veni-redemptor-gentium",
+              },
+              {
+                title: "Veni Sancte Spiritus",
+                link: "/church/music/chants/veni-sancte-spiritus",
+              },
+              {
+                title: "Venite",
+                link: "/church/music/chants/venite",
+              },
+              {
+                title: "Victimae paschali laudes",
+                link: "/church/music/chants/victimae-paschali-laudes",
+              },
+            ],
+          },
+          {
+            title: "Hymns",
+            link: "/church/music/hymns",
+            priority: 0.6,
+            children: [
+              {
+                title: "40 Days and 40 Nights",
+                link: "/church/music/hymns/40-days-and-40-nights",
+              },
+              {
+                title: "A Mighty Fortress Is Our God",
+                link: "/church/music/hymns/a-mighty-fortress-Is-our-god",
+              },
+              {
+                title: "Again We Keep This Solemn Fast",
+                link: "/church/music/hymns/again-we-keep-this-solemn-fast",
+              },
+              {
+                title: "All Creatures of Our God and King",
+                link: "/church/music/hymns/all-creatures-of-our-god-and-king",
+              },
+              {
+                title: "All Hail the Power of Jesus' Name",
+                link: "/church/music/hymns/all-hail-the-power-of-jesus-name",
+              },
+              {
+                title: "Amazing Grace",
+                link: "/church/music/hymns/amazing-grace",
+              },
+              {
+                title: "Angels from the Realms of Glory",
+                link: "/church/music/hymns/angels-from-the-realms-of-glory",
+              },
+              {
+                title: "Angels We Have Heard on High",
+                link: "/church/music/hymns/angels-we-have-heard-on-high",
+              },
+              {
+                title: "Away in a Manger",
+                link: "/church/music/hymns/away-in-a-manger",
+              },
+              {
+                title: "Be Still My Soul",
+                link: "/church/music/hymns/be-still-my-soul",
+              },
+              {
+                title: "Be Thou My Vision",
+                link: "/church/music/hymns/be-thou-my-vision",
+              },
+              {
+                title: "Blessed Assurance",
+                link: "/church/music/hymns/blessed-assurance",
+              },
+              {
+                title: "Christ the Lord Is Risen Today",
+                link: "/church/music/hymns/christ-the-lord-is-risen-today",
+              },
+              {
+                title: "Come, Thou Long Expected Jesus",
+                link: "/church/music/hymns/come-thou-long-expected-jesus",
+              },
+              {
+                title: "Come, Thou Redeemer of the Earth",
+                link: "/church/music/hymns/come-thou-redeemer-of-the-earth",
+              },
+              {
+                title: "Crown Him with Many Crowns",
+                link: "/church/music/hymns/crown-him-with-many-crowns",
+              },
+              {
+                title: "For All the Saints",
+                link: "/church/music/hymns/for-all-the-saints",
+              },
+              {
+                title: "For the Beauty of the Earth",
+                link: "/church/music/hymns/for-the-beauty-of-the-earth",
+              },
+              {
+                title: "From Heaven Above to Earth I Come",
+                link: "/church/music/hymns/from-heaven-above-to-earth-i-come",
+              },
+              {
+                title: "Go, Tell It on the Mountain",
+                link: "/church/music/hymns/go-tell-it-on-the-mountain",
+              },
+              {
+                title: "God Rest Ye Merry Gentlemen",
+                link: "/church/music/hymns/god-rest-ye-merry-gentlemen",
+              },
+              {
+                title: "Haleluhu",
+                link: "/church/music/hymns/haleluhu",
+              },
+              {
+                title: "Hark! The Herald Angels Sing",
+                link: "/church/music/hymns/hark-the-herald-angels-sing",
+              },
+              {
+                title: "Here I Am, Lord",
+                link: "/church/music/hymns/here-i-am-lord",
+              },
+              {
+                title: "Hosanna, Loud Hosanna",
+                link: "/church/music/hymns/hosanna-loud-hosanna",
+              },
+              {
+                title: "How Firm a Foundation",
+                link: "/church/music/hymns/how-firm-a-foundation",
+              },
+              {
+                title: "I Surrender All",
+                link: "/church/music/hymns/i-surrender-all",
+              },
+              {
+                title: "I Want to Walk as a Child of the Light",
+                link: "/church/music/hymns/i-want-to-walk-as-a-child-of-the-light",
+              },
+              {
+                title: "In the Garden",
+                link: "/church/music/hymns/in-the-garden",
+              },
+              {
+                title: "It Is Well with My Soul",
+                link: "/church/music/hymns/it-is-well-with-my-soul",
+              },
+              {
+                title: "Jesu, Joy of Man's Desiring",
+                link: "/church/music/hymns/jesu-joy-of-mans-desiring",
+              },
+              {
+                title: "Jesus Christ Is Risen Today",
+                link: "/church/music/hymns/jesus-christ-is-risen-today",
+              },
+              {
+                title: "Jesus Loves Me",
+                link: "/church/music/hymns/jesus-loves-me",
+              },
+              {
+                title: "Joy to the World",
+                link: "/church/music/hymns/joy-to-the-world",
+              },
+              {
+                title: "Just as I Am",
+                link: "/church/music/hymns/just-as-i-am",
+              },
+              {
+                title: "Ki L'olam Hasdo",
+                link: "/church/music/hymns/ki-lolam-hasdo",
+              },
+              {
+                title: "Let There Be Peace On Earth",
+                link: "/church/music/hymns/let-there-be-peace-on-earth",
+              },
+              {
+                title: "Lift High the Cross",
+                link: "/church/music/hymns/lift-high-the-cross",
+              },
+              {
+                title: "Lord Jesus, Think on Me",
+                link: "/church/music/hymns/lord-jesus-think-on-me",
+              },
+              {
+                title: "Lord, Who Throughout These Forty Days",
+                link: "/church/music/hymns/lord-who-throughout-these-forty-days",
+              },
+              {
+                title: "Love Came Down at Christmas",
+                link: "/church/music/hymns/love-came-down-at-christmas",
+              },
+              {
+                title: "Morning Has Broken",
+                link: "/church/music/hymns/morning-has-broken",
+              },
+              {
+                title: "Now Thank We All Our God",
+                link: "/church/music/hymns/now-thank-we-all-our-god",
+              },
+              {
+                title: "O Come, All Ye Faithful",
+                link: "/church/music/hymns/o-come-all-ye-faithful",
+              },
+              {
+                title: "O Come, O Come, Emmanuel",
+                link: "/church/music/hymns/o-come-o-come-emmanuel",
+              },
+              {
+                title: "O Holy Night",
+                link: "/church/music/hymns/o-holy-night",
+              },
+              {
+                title: "O How I Love Jesus",
+                link: "/church/music/hymns/o-how-i-love-jesus",
+              },
+              {
+                title: "O Little Town of Bethlehem",
+                link: "/church/music/hymns/o-little-town-of-bethlehem",
+              },
+              {
+                title: "O for a Thousand Tongues to Sing",
+                link: "/church/music/hymns/o-for-a-thousand-tongues-to-sing",
+              },
+              {
+                title: "Onward, Christian Soldiers",
+                link: "/church/music/hymns/onward-christian-soldiers",
+              },
+              {
+                title: "Praise God, from Whom All Blessings Flow",
+                link: "/church/music/hymns/praise-god-from-whom-all-blessings-flow",
+              },
+              {
+                title: "Praise to the Lord, the Almighty",
+                link: "/church/music/hymns/praise-to-the-lord-the-almighty",
+              },
+              {
+                title: "Praise My Soul, the King of Heaven",
+                link: "/church/music/hymns/praise-my-soul-the-king-of-heaven",
+              },
+              {
+                title: "Silent Night",
+                link: "/church/music/hymns/silent-night",
+              },
+              {
+                title: "Softly and Tenderly",
+                link: "/church/music/hymns/softly-and-tenderly",
+              },
+              {
+                title: "Spirit of the Living God",
+                link: "/church/music/hymns/spirit-of-the-living-god",
+              },
+              {
+                title: "Take My Life, and Let It Be",
+                link: "/church/music/hymns/take-my-life-and-let-it-be",
+              },
+              {
+                title: "Take up Thy Cross, the Savior Said",
+                link: "/church/music/hymns/take-up-thy-cross-the-savior-said",
+              },
+              {
+                title: "The First Noel",
+                link: "/church/music/hymns/the-first-noel",
+              },
+              {
+                title: "Thine Be the Glory",
+                link: "/church/music/hymns/thine-be-the-glory",
+              },
+              {
+                title: "Unto Us Is Born a Son",
+                link: "/church/music/hymns/unto-us-is-born-a-son",
+              },
+              {
+                title: "We Three Kings",
+                link: "/church/music/hymns/we-three-kings",
+              },
+              {
+                title: "What a Friend We Have in Jesus",
+                link: "/church/music/hymns/what-a-friend-we-have-in-jesus",
+              },
+              {
+                title: "Where Charity and Love Prevail",
+                link: "/church/music/hymns/where-charity-and-love-prevail",
+              },
+              {
+                title: "Where He Leads Me",
+                link: "/church/music/hymns/where-he-leads-me",
+              },
+            ],
+          },
+          {
+            title: "Songs",
+            link: "/church/music/songs",
+            priority: 0.6,
+            children: [
+              {
+                title: "Good King Wenceslas",
+                link: "/church/music/songs/good-king-wenceslas",
+              },
+              {
+                title: "Handel's Messiah",
+                link: "/church/music/songs/handels-messiah",
+              },
+              {
+                title: "Here We Come A-Wassailing",
+                link: "/church/music/songs/here-we-come-a-wassailing",
+              },
+              {
+                title: "Hey, Ho, Nobody Home",
+                link: "/church/music/songs/hey-ho-nobody-home",
+              },
+              {
+                title: "Souling Song",
+                link: "/church/music/songs/souling-song",
+              },
+              {
+                title: "The Holly and the Ivy",
+                link: "/church/music/songs/the-holly-and-the-ivy",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Liturgical Colors",
+        link: "/church/liturgical-colors",
+      },
+      {
+        title: "Vesture",
+        link: "/church/vesture",
+        priority: 0.7,
+        children: [
+          {
+            title: "Vestments",
+            link: "/church/vesture/vestments",
+          },
+          {
+            title: "Clerical Dress",
+            link: "/church/vesture/clerical-dress",
+          },
+          {
+            title: "Monastic Habit",
+            link: "/church/vesture/monastic-habit",
+          },
+        ],
+      },
+      {
+        title: "Ornaments",
+        link: "/church/ornaments",
+      },
+      {
         title: "Traditions",
-        link: "/liturgy/traditions",
+        link: "/church/traditions",
         priority: 0.7,
         children: [
           {
             title: "Roman",
-            link: "/liturgy/traditions/roman",
+            link: "/church/traditions/roman",
             priority: 0.6,
             children: [
               {
                 title: "Mass",
-                link: "/liturgy/traditions/roman/mass",
+                link: "/church/traditions/roman/mass",
                 inPageNav: true,
               },
             ],
           },
           {
             title: "Augustinian",
-            link: "/liturgy/traditions/augustinian",
+            link: "/church/traditions/augustinian",
             priority: 0.6,
             children: [
               {
                 title: "The Rule of Saint Augustine",
-                link: "/liturgy/traditions/augustinian/the-rule-of-saint-augustine",
+                link: "/church/traditions/augustinian/the-rule-of-saint-augustine",
               },
             ],
           },
           {
             title: "Benedictine",
-            link: "/liturgy/traditions/benedictine",
+            link: "/church/traditions/benedictine",
             priority: 0.6,
             children: [
               {
                 title: "The Rule of Saint Benedict",
-                link: "/liturgy/traditions/benedictine/the-rule-of-saint-benedict",
+                link: "/church/traditions/benedictine/the-rule-of-saint-benedict",
               },
               {
                 title: "Liturgy of the Hours",
-                link: "/liturgy/traditions/benedictine/liturgy-of-the-hours",
+                link: "/church/traditions/benedictine/liturgy-of-the-hours",
                 inPageNav: true,
               },
             ],
           },
           {
             title: "Sarum",
-            link: "/liturgy/traditions/sarum",
+            link: "/church/traditions/sarum",
             priority: 0.6,
             children: [
               {
                 title: "Liturgy of the Hours",
-                link: "/liturgy/traditions/sarum/liturgy-of-the-hours",
+                link: "/church/traditions/sarum/liturgy-of-the-hours",
                 inPageNav: true,
               },
             ],
           },
           {
             title: "Franciscan",
-            link: "/liturgy/traditions/franciscan",
+            link: "/church/traditions/franciscan",
             priority: 0.6,
             children: [
               {
                 title: "The Rule of Saint Francis",
-                link: "/liturgy/traditions/franciscan/the-rule-of-saint-francis",
+                link: "/church/traditions/franciscan/the-rule-of-saint-francis",
               },
             ],
           },
           {
             title: "Dominican",
-            link: "/liturgy/traditions/dominican",
+            link: "/church/traditions/dominican",
             priority: 0.6,
             children: [
               {
                 title: "Primitive Constitutions",
-                link: "/liturgy/traditions/dominican/primitive-constitutions",
+                link: "/church/traditions/dominican/primitive-constitutions",
               },
             ],
           },
           {
-            title: "Book of Common Prayer",
-            link: "/liturgy/traditions/book-of-common-prayer",
+            title: "Anglican",
+            link: "/church/traditions/anglican",
             priority: 0.6,
             children: [
               {
+                title: "Book of Common Prayer",
+                link: "/church/traditions/anglican/book-of-common-prayer",
+                priority: 0.6,
+              },
+              {
                 title: "Morning Prayer",
-                link: "/liturgy/traditions/book-of-common-prayer/morning-prayer",
+                link: "/church/traditions/anglican/morning-prayer",
                 inPageNav: true,
               },
               {
                 title: "Evening Prayer",
-                link: "/liturgy/traditions/book-of-common-prayer/evening-prayer",
+                link: "/church/traditions/anglican/evening-prayer",
                 inPageNav: true,
               },
             ],
           },
         ],
-      },
-      {
-        title: "Prayers",
-        link: "/liturgy/prayers",
-        priority: 0.7,
-        children: [
-          {
-            title: "Sign of the Cross",
-            link: "/liturgy/prayers/sign-of-the-cross",
-          },
-          {
-            title: "Eastern Cross",
-            link: "/liturgy/prayers/eastern-cross",
-          },
-          {
-            title: "Our Father",
-            link: "/liturgy/prayers/our-father",
-          },
-          {
-            title: "Glory Be",
-            link: "/liturgy/prayers/glory-be",
-          },
-          {
-            title: "Jesus Prayer",
-            link: "/liturgy/prayers/jesus-prayer",
-          },
-          {
-            title: "Hail Mary",
-            link: "/liturgy/prayers/hail-mary",
-          },
-          {
-            title: "Hail Holy Queen",
-            link: "/liturgy/prayers/hail-holy-queen",
-          },
-          {
-            title: "O My Jesus",
-            link: "/liturgy/prayers/o-my-jesus",
-          },
-          {
-            title: "Rosary",
-            link: "/liturgy/prayers/rosary",
-          },
-          {
-            title: "Luther Morning Prayer",
-            link: "/liturgy/prayers/luther-morning-prayer",
-          },
-          {
-            title: "Luther Evening Prayer",
-            link: "/liturgy/prayers/luther-evening-prayer",
-          },
-        ],
-      },
-      {
-        title: "Creeds",
-        link: "/liturgy/creeds",
-        priority: 0.7,
-        children: [
-          {
-            title: "Apostles' Creed",
-            link: "/liturgy/creeds/apostles-creed",
-          },
-          {
-            title: "Nicene Creed",
-            link: "/liturgy/creeds/nicene-creed",
-          },
-          {
-            title: "Niceno-Constantinopolitan Creed",
-            link: "/liturgy/creeds/niceno-constantinopolitan-creed",
-          },
-          {
-            title: "Chalcedonian Creed",
-            link: "/liturgy/creeds/chalcedonian-creed",
-          },
-          {
-            title: "Nicene Creed with Filioque",
-            link: "/liturgy/creeds/nicene-creed-with-filioque",
-          },
-          {
-            title: "Athanasian Creed",
-            link: "/liturgy/creeds/athanasian-creed",
-          },
-        ],
-      },
-      {
-        title: "Music",
-        link: "/liturgy/music",
-        priority: 0.7,
-        children: [
-          {
-            title: "Chants",
-            link: "/liturgy/music/chants",
-            priority: 0.6,
-            children: [
-              {
-                title: "Agnus Dei",
-                link: "/liturgy/music/chants/agnus-dei",
-              },
-              {
-                title: "Alleluia",
-                link: "/liturgy/music/chants/alleluia",
-              },
-              {
-                title: "Benedicamus",
-                link: "/liturgy/music/chants/benedicamus",
-              },
-              {
-                title: "Benedicite",
-                link: "/liturgy/music/chants/benedicite",
-              },
-              {
-                title: "Benedictus",
-                link: "/liturgy/music/chants/benedictus",
-              },
-              {
-                title: "Benedictus es, Domine",
-                link: "/liturgy/music/chants/benedictus-es-domine",
-              },
-              {
-                title: "Credo",
-                link: "/liturgy/music/chants/credo",
-              },
-              {
-                title: "Deus, Creator omnium",
-                link: "/liturgy/music/chants/deus-creator-omnium",
-              },
-              {
-                title: "Deus in adjutorium",
-                link: "/liturgy/music/chants/deus-in-adjutorium",
-              },
-              {
-                title: "Domine, labia mea",
-                link: "/liturgy/music/chants/domine-labia-mea",
-              },
-              {
-                title: "Facta est cum Angelo",
-                link: "/liturgy/music/chants/facta-est-cum-angelo",
-              },
-              {
-                title: "Gloria",
-                link: "/liturgy/music/chants/gloria",
-              },
-              {
-                title: "Gloria Patri",
-                link: "/liturgy/music/chants/gloria-patri",
-              },
-              {
-                title: "Iste pauper",
-                link: "/liturgy/music/chants/iste-pauper",
-              },
-              {
-                title: "Kyrie",
-                link: "/liturgy/music/chants/kyrie",
-              },
-              {
-                title: "Magnificat",
-                link: "/liturgy/music/chants/magnificat",
-              },
-              {
-                title: "Multitudo languentium",
-                link: "/liturgy/music/chants/multitudo-languentium",
-              },
-              {
-                title: "Nunc dimittis",
-                link: "/liturgy/music/chants/nunc-dimittis",
-              },
-              {
-                title: "O Adonai",
-                link: "/liturgy/music/chants/o-adonai",
-              },
-              {
-                title: "O Clavis David",
-                link: "/liturgy/music/chants/o-clavis-david",
-              },
-              {
-                title: "O Emmanuel",
-                link: "/liturgy/music/chants/o-emmanuel",
-              },
-              {
-                title: "O Oriens",
-                link: "/liturgy/music/chants/o-oriens",
-              },
-              {
-                title: "O Radix Jesse",
-                link: "/liturgy/music/chants/o-radix-jesse",
-              },
-              {
-                title: "O Rex gentium",
-                link: "/liturgy/music/chants/o-rex-gentium",
-              },
-              {
-                title: "O Sapientia",
-                link: "/liturgy/music/chants/o-sapientia",
-              },
-              {
-                title: "O Virgo virginum",
-                link: "/liturgy/music/chants/o-virgo-virginum",
-              },
-              {
-                title: "Pascha nostrum",
-                link: "/liturgy/music/chants/pascha-nostrum",
-              },
-              {
-                title: "Salva nos, Domine",
-                link: "/liturgy/music/chants/salva-nos-domine",
-              },
-              {
-                title: "Sanctus",
-                link: "/liturgy/music/chants/sanctus",
-              },
-              {
-                title: "Song of Habakkuk",
-                link: "/liturgy/music/chants/song-of-habakkuk",
-              },
-              {
-                title: "Song of Hannah",
-                link: "/liturgy/music/chants/song-of-hannah",
-              },
-              {
-                title: "Song of Hezekiah",
-                link: "/liturgy/music/chants/song-of-hezekiah",
-              },
-              {
-                title: "Song of Isaiah",
-                link: "/liturgy/music/chants/song-of-isaiah",
-              },
-              {
-                title: "Song of Moses from Deut., Pt. 1",
-                link: "/liturgy/music/chants/song-of-moses-deut-pt-1",
-              },
-              {
-                title: "Song of Moses from Deut., Pt. 2",
-                link: "/liturgy/music/chants/song-of-moses-deut-pt-2",
-              },
-              {
-                title: "Song of Moses from Exod.",
-                link: "/liturgy/music/chants/song-of-moses-exod",
-              },
-              {
-                title: "Te decet laus",
-                link: "/liturgy/music/chants/te-decet-laus",
-              },
-              {
-                title: "Te Deum",
-                link: "/liturgy/music/chants/te-deum",
-              },
-              {
-                title: "Veni, redemptor gentium",
-                link: "/liturgy/music/chants/veni-redemptor-gentium",
-              },
-              {
-                title: "Veni Sancte Spiritus",
-                link: "/liturgy/music/chants/veni-sancte-spiritus",
-              },
-              {
-                title: "Venite",
-                link: "/liturgy/music/chants/venite",
-              },
-              {
-                title: "Victimae paschali laudes",
-                link: "/liturgy/music/chants/victimae-paschali-laudes",
-              },
-            ],
-          },
-          {
-            title: "Hymns",
-            link: "/liturgy/music/hymns",
-            priority: 0.6,
-            children: [
-              {
-                title: "40 Days and 40 Nights",
-                link: "/liturgy/music/hymns/40-days-and-40-nights",
-              },
-              {
-                title: "A Mighty Fortress Is Our God",
-                link: "/liturgy/music/hymns/a-mighty-fortress-Is-our-god",
-              },
-              {
-                title: "Again We Keep This Solemn Fast",
-                link: "/liturgy/music/hymns/again-we-keep-this-solemn-fast",
-              },
-              {
-                title: "All Creatures of Our God and King",
-                link: "/liturgy/music/hymns/all-creatures-of-our-god-and-king",
-              },
-              {
-                title: "All Hail the Power of Jesus' Name",
-                link: "/liturgy/music/hymns/all-hail-the-power-of-jesus-name",
-              },
-              {
-                title: "Amazing Grace",
-                link: "/liturgy/music/hymns/amazing-grace",
-              },
-              {
-                title: "Angels from the Realms of Glory",
-                link: "/liturgy/music/hymns/angels-from-the-realms-of-glory",
-              },
-              {
-                title: "Angels We Have Heard on High",
-                link: "/liturgy/music/hymns/angels-we-have-heard-on-high",
-              },
-              {
-                title: "Away in a Manger",
-                link: "/liturgy/music/hymns/away-in-a-manger",
-              },
-              {
-                title: "Be Still My Soul",
-                link: "/liturgy/music/hymns/be-still-my-soul",
-              },
-              {
-                title: "Be Thou My Vision",
-                link: "/liturgy/music/hymns/be-thou-my-vision",
-              },
-              {
-                title: "Blessed Assurance",
-                link: "/liturgy/music/hymns/blessed-assurance",
-              },
-              {
-                title: "Christ the Lord Is Risen Today",
-                link: "/liturgy/music/hymns/christ-the-lord-is-risen-today",
-              },
-              {
-                title: "Come, Thou Long Expected Jesus",
-                link: "/liturgy/music/hymns/come-thou-long-expected-jesus",
-              },
-              {
-                title: "Come, Thou Redeemer of the Earth",
-                link: "/liturgy/music/hymns/come-thou-redeemer-of-the-earth",
-              },
-              {
-                title: "Crown Him with Many Crowns",
-                link: "/liturgy/music/hymns/crown-him-with-many-crowns",
-              },
-              {
-                title: "For All the Saints",
-                link: "/liturgy/music/hymns/for-all-the-saints",
-              },
-              {
-                title: "For the Beauty of the Earth",
-                link: "/liturgy/music/hymns/for-the-beauty-of-the-earth",
-              },
-              {
-                title: "From Heaven Above to Earth I Come",
-                link: "/liturgy/music/hymns/from-heaven-above-to-earth-i-come",
-              },
-              {
-                title: "Go, Tell It on the Mountain",
-                link: "/liturgy/music/hymns/go-tell-it-on-the-mountain",
-              },
-              {
-                title: "God Rest Ye Merry Gentlemen",
-                link: "/liturgy/music/hymns/god-rest-ye-merry-gentlemen",
-              },
-              {
-                title: "Haleluhu",
-                link: "/liturgy/music/hymns/haleluhu",
-              },
-              {
-                title: "Hark! The Herald Angels Sing",
-                link: "/liturgy/music/hymns/hark-the-herald-angels-sing",
-              },
-              {
-                title: "Here I Am, Lord",
-                link: "/liturgy/music/hymns/here-i-am-lord",
-              },
-              {
-                title: "Hosanna, Loud Hosanna",
-                link: "/liturgy/music/hymns/hosanna-loud-hosanna",
-              },
-              {
-                title: "How Firm a Foundation",
-                link: "/liturgy/music/hymns/how-firm-a-foundation",
-              },
-              {
-                title: "I Surrender All",
-                link: "/liturgy/music/hymns/i-surrender-all",
-              },
-              {
-                title: "I Want to Walk as a Child of the Light",
-                link: "/liturgy/music/hymns/i-want-to-walk-as-a-child-of-the-light",
-              },
-              {
-                title: "In the Garden",
-                link: "/liturgy/music/hymns/in-the-garden",
-              },
-              {
-                title: "It Is Well with My Soul",
-                link: "/liturgy/music/hymns/it-is-well-with-my-soul",
-              },
-              {
-                title: "Jesu, Joy of Man's Desiring",
-                link: "/liturgy/music/hymns/jesu-joy-of-mans-desiring",
-              },
-              {
-                title: "Jesus Christ Is Risen Today",
-                link: "/liturgy/music/hymns/jesus-christ-is-risen-today",
-              },
-              {
-                title: "Jesus Loves Me",
-                link: "/liturgy/music/hymns/jesus-loves-me",
-              },
-              {
-                title: "Joy to the World",
-                link: "/liturgy/music/hymns/joy-to-the-world",
-              },
-              {
-                title: "Just as I Am",
-                link: "/liturgy/music/hymns/just-as-i-am",
-              },
-              {
-                title: "Ki L'olam Hasdo",
-                link: "/liturgy/music/hymns/ki-lolam-hasdo",
-              },
-              {
-                title: "Let There Be Peace On Earth",
-                link: "/liturgy/music/hymns/let-there-be-peace-on-earth",
-              },
-              {
-                title: "Lift High the Cross",
-                link: "/liturgy/music/hymns/lift-high-the-cross",
-              },
-              {
-                title: "Lord Jesus, Think on Me",
-                link: "/liturgy/music/hymns/lord-jesus-think-on-me",
-              },
-              {
-                title: "Lord, Who Throughout These Forty Days",
-                link: "/liturgy/music/hymns/lord-who-throughout-these-forty-days",
-              },
-              {
-                title: "Love Came Down at Christmas",
-                link: "/liturgy/music/hymns/love-came-down-at-christmas",
-              },
-              {
-                title: "Morning Has Broken",
-                link: "/liturgy/music/hymns/morning-has-broken",
-              },
-              {
-                title: "Now Thank We All Our God",
-                link: "/liturgy/music/hymns/now-thank-we-all-our-god",
-              },
-              {
-                title: "O Come, All Ye Faithful",
-                link: "/liturgy/music/hymns/o-come-all-ye-faithful",
-              },
-              {
-                title: "O Come, O Come, Emmanuel",
-                link: "/liturgy/music/hymns/o-come-o-come-emmanuel",
-              },
-              {
-                title: "O Holy Night",
-                link: "/liturgy/music/hymns/o-holy-night",
-              },
-              {
-                title: "O How I Love Jesus",
-                link: "/liturgy/music/hymns/o-how-i-love-jesus",
-              },
-              {
-                title: "O Little Town of Bethlehem",
-                link: "/liturgy/music/hymns/o-little-town-of-bethlehem",
-              },
-              {
-                title: "O for a Thousand Tongues to Sing",
-                link: "/liturgy/music/hymns/o-for-a-thousand-tongues-to-sing",
-              },
-              {
-                title: "Onward, Christian Soldiers",
-                link: "/liturgy/music/hymns/onward-christian-soldiers",
-              },
-              {
-                title: "Praise God, from Whom All Blessings Flow",
-                link: "/liturgy/music/hymns/praise-god-from-whom-all-blessings-flow",
-              },
-              {
-                title: "Praise to the Lord, the Almighty",
-                link: "/liturgy/music/hymns/praise-to-the-lord-the-almighty",
-              },
-              {
-                title: "Praise My Soul, the King of Heaven",
-                link: "/liturgy/music/hymns/praise-my-soul-the-king-of-heaven",
-              },
-              {
-                title: "Silent Night",
-                link: "/liturgy/music/hymns/silent-night",
-              },
-              {
-                title: "Softly and Tenderly",
-                link: "/liturgy/music/hymns/softly-and-tenderly",
-              },
-              {
-                title: "Spirit of the Living God",
-                link: "/liturgy/music/hymns/spirit-of-the-living-god",
-              },
-              {
-                title: "Take My Life, and Let It Be",
-                link: "/liturgy/music/hymns/take-my-life-and-let-it-be",
-              },
-              {
-                title: "Take up Thy Cross, the Savior Said",
-                link: "/liturgy/music/hymns/take-up-thy-cross-the-savior-said",
-              },
-              {
-                title: "The First Noel",
-                link: "/liturgy/music/hymns/the-first-noel",
-              },
-              {
-                title: "Thine Be the Glory",
-                link: "/liturgy/music/hymns/thine-be-the-glory",
-              },
-              {
-                title: "Unto Us Is Born a Son",
-                link: "/liturgy/music/hymns/unto-us-is-born-a-son",
-              },
-              {
-                title: "We Three Kings",
-                link: "/liturgy/music/hymns/we-three-kings",
-              },
-              {
-                title: "What a Friend We Have in Jesus",
-                link: "/liturgy/music/hymns/what-a-friend-we-have-in-jesus",
-              },
-              {
-                title: "Where Charity and Love Prevail",
-                link: "/liturgy/music/hymns/where-charity-and-love-prevail",
-              },
-              {
-                title: "Where He Leads Me",
-                link: "/liturgy/music/hymns/where-he-leads-me",
-              },
-            ],
-          },
-          {
-            title: "Songs",
-            link: "/liturgy/music/songs",
-            priority: 0.6,
-            children: [
-              {
-                title: "Good King Wenceslas",
-                link: "/liturgy/music/songs/good-king-wenceslas",
-              },
-              {
-                title: "Handel's Messiah",
-                link: "/liturgy/music/songs/handels-messiah",
-              },
-              {
-                title: "Here We Come A-Wassailing",
-                link: "/liturgy/music/songs/here-we-come-a-wassailing",
-              },
-              {
-                title: "Hey, Ho, Nobody Home",
-                link: "/liturgy/music/songs/hey-ho-nobody-home",
-              },
-              {
-                title: "Souling Song",
-                link: "/liturgy/music/songs/souling-song",
-              },
-              {
-                title: "The Holly and the Ivy",
-                link: "/liturgy/music/songs/the-holly-and-the-ivy",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "Vesture",
-        link: "/liturgy/vesture",
-        priority: 0.7,
-        children: [
-          {
-            title: "Vestments",
-            link: "/liturgy/vesture/vestments",
-          },
-          {
-            title: "Clerical Dress",
-            link: "/liturgy/vesture/clerical-dress",
-          },
-          {
-            title: "Monastic Habit",
-            link: "/liturgy/vesture/monastic-habit",
-          },
-        ],
-      },
-      {
-        title: "Liturgical Colors",
-        link: "/liturgy/liturgical-colors",
-      },
-      {
-        title: "Church Ornaments",
-        link: "/liturgy/church-ornaments",
       },
     ],
   },
@@ -3069,7 +3074,7 @@ export const menuItems: MenuNode[] = [
         link: "/meditations?category=Church+History",
       },
       {
-        title: "Liturgy",
+        title: "Church",
         link: "/meditations?category=Liturgy",
       },
       {

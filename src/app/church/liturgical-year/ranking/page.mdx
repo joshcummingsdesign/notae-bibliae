@@ -1,0 +1,78 @@
+import { FeastRankingTable } from "@/components/Calendar";
+
+export const metadata = {
+  title: "Liturgical Year: Ranking — Notae Bibliae",
+  description: "A simplified ranking system for the liturgical year.",
+};
+
+<Initial text="Liturgical Year: Ranking" />
+
+The following is a harmonization of the ranking systems used in the 1928 American *Book of Common Prayer* and the [Use of Sarum](/church/traditions/sarum). It accommodates the calendar's supplementation of the Prayer Book's observances to preserve its liturgical heritage.
+
+## Ranks
+
+<FeastRankingTable />
+
+<br/>
+
+---
+
+## Examples
+
+### Principal Sundays
+  - Sundays in Advent
+  - Septuagesima
+  - Sexagesima
+  - Quinquagesima
+  - Sundays in Lent
+  - Rogation Sunday
+  - Sunday After Ascension Day
+
+### Principal Feasts
+  - Christmas Day
+  - The Epiphany
+  - The Annunciation
+  - Octave of Easter
+  - Ascension Day
+  - Whitsuntide, except Ember Days
+  - Trinity Sunday
+  - All Saints' Day
+
+### Greater Observances
+  - Ash Wednesday
+  - Holy Week
+  - All Souls' Day
+
+### Feasts
+  - The Circumcision of Christ
+  - Marian Feasts
+  - Corpus Christi
+  - The Transfiguration of Christ
+  - The Holy Name of Jesus
+  - The Exaltation of the Holy Cross
+  - Apostles and Evangelists
+  - Biblical Martyrs
+
+### Lesser Observances
+  - Ember Days
+  - Rogation Days
+
+### Commemorations
+  - Saints
+  - Martyrs
+  - Church Fathers
+
+### Ordinary Sundays
+  - All other Sundays of the liturgical year
+
+---
+
+## Precedence
+
+- If a Principal Feast falls on a Principal Sunday, the Principal Feast is transferred to the next available date.
+- If a Principal Feast falls on an Ordinary Sunday, the Ordinary Sunday is omitted.
+- If a Greater Observance falls on an Ordinary Sunday, the Ordinary Sunday is omitted.
+- If a Feast falls on a higher-ranking day, the Feast is transferred to the next available date.
+- If a Feast falls on an Ordinary Sunday, the Feast takes precedence, but the [Collect](/glossary/liturgical-terms#collect) for the Sunday is said after the Collect for the Feast.
+- If a Commemoration falls on a higher-ranking day, the Commemoration is omitted.
+- If a Commemoration falls on an Ordinary Sunday, the Sunday takes precedence, but the Collect for the Commemoration is said after the Collect for the Sunday.

@@ -4,7 +4,7 @@ export const NuncDimittis = () => {
   return (
     <p>
       <strong>
-        <Link href="/liturgy/music/chants/nunc-dimittis" target="blank">
+        <Link href="/church/music/chants/nunc-dimittis" target="blank">
           Nunc dimittis
         </Link>
       </strong>{" "}
