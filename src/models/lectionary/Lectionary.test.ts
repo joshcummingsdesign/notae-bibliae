@@ -301,7 +301,7 @@ describe("Lectionary", () => {
       test.each([
         ["2025-11-30", "First Sunday in Advent"],
         ["2025-12-07", "Second Sunday in Advent"],
-        ["2025-12-14", "Third Sunday in Advent: Gaudete Sunday"],
+        ["2025-12-14", "Gaudete Sunday"],
         ["2025-12-21", "Fourth Sunday in Advent"],
       ] as const)("%s retains its lessons, collect, and communion", (date, title) => {
         const day = allData[date];
@@ -324,7 +324,7 @@ describe("Lectionary", () => {
           "Second Sunday in Advent"
         );
         expect(allData["2025-12-14"].primaryObservance).toContain(
-          "Third Sunday in Advent"
+          "Gaudete Sunday"
         );
         expect(allData["2025-12-21"].primaryObservance).toBe(
           "Fourth Sunday in Advent"
@@ -359,8 +359,8 @@ describe("Lectionary", () => {
       ["2026-02-22", "First Sunday in Lent"],
       ["2026-03-01", "Second Sunday in Lent"],
       ["2026-03-08", "Third Sunday in Lent"],
-      ["2026-03-15", "Fourth Sunday in Lent: Laetare Sunday"],
-      ["2026-03-22", "Fifth Sunday in Lent: Passion Sunday"],
+      ["2026-03-15", "Laetare Sunday"],
+      ["2026-03-22", "Passion Sunday"],
     ] as const)("%s retains its Lenten lessons, collect, and communion", (date, title) => {
       const day = allData[date];
       expect(day.primaryObservance).toBe(title);

@@ -19,6 +19,8 @@ describe("GET /events/liturgical-calendar.ics", () => {
     expect(before.headers.get("Cache-Control")).toBe("no-store");
     const previousYear = await before.text();
     expect(previousYear).toContain("BEGIN:VCALENDAR");
+    expect(previousYear).toContain("\r\nDURATION:P1D\r\n");
+    expect(previousYear).not.toContain("DURATION:P1DT");
     expect(previousYear).toContain("DTSTART;VALUE=DATE:20251130");
 
     vi.setSystemTime(new Date("2026-11-29T08:00:00Z"));

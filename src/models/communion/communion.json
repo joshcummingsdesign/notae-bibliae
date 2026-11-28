@@ -7,7 +7,7 @@
     "epistle": ["Rom. 15:4-13"],
     "gospel": ["Luke 21:25-33"]
   },
-  "Third Sunday in Advent: Gaudete Sunday": {
+  "Gaudete Sunday": {
     "epistle": ["1 Cor. 4:1-5"],
     "gospel": ["Matt. 11:2-10"]
   },
@@ -47,15 +47,15 @@
     "epistle": ["1 John 3:1-8"],
     "gospel": ["Matt. 24:23-31"]
   },
-  "Septuagesima": {
+  "Septuagesima Sunday": {
     "epistle": ["1 Cor. 9:24-27"],
     "gospel": ["Matt. 20:1-16"]
   },
-  "Sexagesima": {
+  "Sexagesima Sunday": {
     "epistle": ["2 Cor. 11:19-31"],
     "gospel": ["Luke 8:4-15"]
   },
-  "Quinquagesima": {
+  "Quinquagesima Sunday": {
     "epistle": ["1 Cor. 13:1-13"],
     "gospel": ["Luke 18:31-43"]
   },
@@ -71,31 +71,31 @@
     "epistle": ["Eph. 5:1-14"],
     "gospel": ["Luke 11:14-28"]
   },
-  "Fourth Sunday in Lent: Laetare Sunday": {
+  "Laetare Sunday": {
     "epistle": ["Gal. 4:21-31"],
     "gospel": ["John 6:1-14"]
   },
-  "Fifth Sunday in Lent: Passion Sunday": {
+  "Passion Sunday": {
     "epistle": ["Heb. 9:11-15"],
     "gospel": ["John 8:46-59"]
   },
-  "Second Sunday of Easter": {
+  "Low Sunday": {
     "epistle": ["1 John 5:4-12"],
     "gospel": ["John 20:19-23"]
   },
-  "Third Sunday of Easter": {
+  "Second Sunday After Easter": {
     "epistle": ["1 Pet. 2:19-25"],
     "gospel": ["John 10:11-16"]
   },
-  "Fourth Sunday of Easter": {
+  "Third Sunday After Easter": {
     "epistle": ["1 Pet. 2:11-17"],
     "gospel": ["John 16:16-22"]
   },
-  "Fifth Sunday of Easter": {
+  "Fourth Sunday After Easter": {
     "epistle": ["James 1:17-21"],
     "gospel": ["John 16:5-15"]
   },
-  "Sixth Sunday of Easter: Rogation Sunday": {
+  "Rogation Sunday": {
     "epistle": ["James 1:22-27"],
     "gospel": ["John 16:23-33"]
   },
@@ -312,15 +312,15 @@
     "epistle": ["Phil. 2:5-11"],
     "gospel": ["Matt. 27:1-54"]
   },
-  "Monday of Holy Week": {
+  "Monday in Holy Week": {
     "epistle": ["Isa. 63:1-19"],
     "gospel": ["Mark 14:1-72"]
   },
-  "Tuesday of Holy Week": {
+  "Tuesday in Holy Week": {
     "epistle": ["Isa. 50:5-11"],
     "gospel": ["Mark 15:1-39"]
   },
-  "Wednesday of Holy Week": {
+  "Wednesday in Holy Week": {
     "epistle": ["Heb. 9:16-28"],
     "gospel": ["Luke 22:1-71"]
   },
@@ -508,7 +508,7 @@
     "epistle": ["2 Cor. 4:1-6"],
     "gospel": ["Matt. 9:9-13"]
   },
-  "Saint Michael and all Angels": {
+  "Saint Michael and All Angels": {
     "epistle": ["Rev. 12:7-12"],
     "gospel": ["Matt. 18:1-10"]
   },

@@ -624,16 +624,16 @@ export const menuItems: MenuNode[] = [
                 link: "/church/liturgical-year/seasons/pre-lent",
                 children: [
                   {
-                    title: "Septuagesima",
-                    link: "/church/liturgical-year/seasons/pre-lent/septuagesima",
+                    title: "Septuagesima Sunday",
+                    link: "/church/liturgical-year/seasons/pre-lent/septuagesima-sunday",
                   },
                   {
-                    title: "Sexagesima",
-                    link: "/church/liturgical-year/seasons/pre-lent/sexagesima",
+                    title: "Sexagesima Sunday",
+                    link: "/church/liturgical-year/seasons/pre-lent/sexagesima-sunday",
                   },
                   {
-                    title: "Quinquagesima",
-                    link: "/church/liturgical-year/seasons/pre-lent/quinquagesima",
+                    title: "Quinquagesima Sunday",
+                    link: "/church/liturgical-year/seasons/pre-lent/quinquagesima-sunday",
                   },
                 ],
               },
@@ -670,16 +670,16 @@ export const menuItems: MenuNode[] = [
                         link: "/church/liturgical-year/seasons/lent/passiontide/palm-sunday",
                       },
                       {
-                        title: "Monday of Holy Week",
-                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-monday",
+                        title: "Monday in Holy Week",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/monday-in-holy-week",
                       },
                       {
-                        title: "Tuesday of Holy Week",
-                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-tuesday",
+                        title: "Tuesday in Holy Week",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/tuesday-in-holy-week",
                       },
                       {
-                        title: "Wednesday of Holy Week",
-                        link: "/church/liturgical-year/seasons/lent/passiontide/holy-wednesday",
+                        title: "Wednesday in Holy Week",
+                        link: "/church/liturgical-year/seasons/lent/passiontide/wednesday-in-holy-week",
                       },
                       {
                         title: "Maundy Thursday",
@@ -710,8 +710,8 @@ export const menuItems: MenuNode[] = [
                     link: "/church/liturgical-year/seasons/eastertide/easter-day",
                   },
                   {
-                    title: "Second Sunday of Easter",
-                    link: "/church/liturgical-year/seasons/eastertide/second-sunday-of-easter",
+                    title: "Low Sunday",
+                    link: "/church/liturgical-year/seasons/eastertide/low-sunday",
                   },
                   {
                     title: "Rogation Days",
@@ -988,7 +988,7 @@ export const menuItems: MenuNode[] = [
                 link: "/church/liturgical-year/saints/saint-matthias",
               },
               {
-                title: "Saint Michael and all Angels",
+                title: "Saint Michael and All Angels",
                 link: "/church/liturgical-year/saints/saint-michael-and-all-angels",
               },
               {

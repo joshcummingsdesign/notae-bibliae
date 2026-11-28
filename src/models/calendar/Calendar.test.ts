@@ -372,9 +372,9 @@ describe("Calendar", () => {
       test("returns Septuagesima, Sexagesima, and Quinquagesima", () => {
         const days = cal.getPreLentFeastDays();
         expect(days).toHaveLength(3);
-        expect(days[0].title).toContain("Septuagesima");
-        expect(days[1].title).toContain("Sexagesima");
-        expect(days[2].title).toContain("Quinquagesima");
+        expect(days[0].title).toContain("Septuagesima Sunday");
+        expect(days[1].title).toContain("Sexagesima Sunday");
+        expect(days[2].title).toContain("Quinquagesima Sunday");
       });
 
       test("all are rank 1 principal Sundays", () => {
@@ -1202,6 +1202,14 @@ describe("Calendar", () => {
         "O Emmanuel",
         "O Virgo virginum",
       ]);
+    });
+
+    test("calendar notes show only the antiphon name and retain its link", () => {
+      const days = cal.getAll(true);
+      for (const [date, antiphon] of Object.entries(cal.getOAntiphons())) {
+        const note = days[date].find((item) => item.isNote);
+        expect(note?.title).toBe(`[${antiphon.title}](${antiphon.link})`);
+      }
     });
 
     test("each antiphon has required properties", () => {

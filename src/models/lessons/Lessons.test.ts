@@ -148,7 +148,7 @@ describe("Lessons", () => {
         expect(all["2025-11-30"]?.title).toBe("First Sunday in Advent");
         expect(all["2025-12-07"]?.title).toBe("Second Sunday in Advent");
         expect(all["2025-12-14"]?.title).toBe(
-          "Third Sunday in Advent: Gaudete Sunday",
+          "Gaudete Sunday",
         );
         expect(all["2025-12-21"]?.title).toBe("Fourth Sunday in Advent");
       });
@@ -204,11 +204,42 @@ describe("Lessons", () => {
         expect(all["2026-03-01"]?.title).toBe("Second Sunday in Lent");
         expect(all["2026-03-08"]?.title).toBe("Third Sunday in Lent");
         expect(all["2026-03-15"]?.title).toBe(
-          "Fourth Sunday in Lent: Laetare Sunday",
+          "Laetare Sunday",
         );
         expect(all["2026-03-22"]?.title).toBe(
-          "Fifth Sunday in Lent: Passion Sunday",
+          "Passion Sunday",
         );
+      });
+
+      test.each([
+        ["2026-02-01", "Septuagesima Sunday"],
+        ["2026-02-08", "Sexagesima Sunday"],
+        ["2026-02-15", "Quinquagesima Sunday"],
+        ["2026-02-19", "Thursday After Ash Wednesday"],
+        ["2026-02-20", "Friday After Ash Wednesday"],
+        ["2026-02-21", "Saturday After Ash Wednesday"],
+        ["2026-03-15", "Laetare Sunday"],
+        ["2025-12-14", "Gaudete Sunday"],
+        ["2026-03-22", "Passion Sunday"],
+        ["2026-09-29", "Saint Michael and All Angels"],
+        ["2026-03-30", "Monday in Holy Week"],
+        ["2026-03-31", "Tuesday in Holy Week"],
+        ["2026-04-01", "Wednesday in Holy Week"],
+        ["2026-04-12", "Low Sunday"],
+        ["2026-04-19", "Second Sunday After Easter"],
+        ["2026-04-26", "Third Sunday After Easter"],
+        ["2026-05-03", "Fourth Sunday After Easter"],
+        ["2026-05-10", "Rogation Sunday"],
+        ["2026-05-11", "Rogation Monday"],
+        ["2026-05-12", "Rogation Tuesday"],
+        ["2026-05-13", "Rogation Wednesday"],
+        ["2026-05-17", "Sunday After Ascension Day"],
+      ])("%s retains its proper under the renamed title", (date, title) => {
+        const entry = lessons.getAll()[date];
+        expect(entry.title).toBe(title);
+        const readings = lessonData[title as keyof typeof lessonData][0];
+        expect(entry.morning).toEqual(readings.morning);
+        expect(entry.evening).toEqual(readings.evening);
       });
 
       test("Holy Week has lessons", () => {

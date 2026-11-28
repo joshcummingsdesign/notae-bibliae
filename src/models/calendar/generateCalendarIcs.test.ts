@@ -19,12 +19,16 @@ describe("generateCalendarIcs", () => {
     expect(dates).toHaveLength(Object.values(calendar.getSeasonItems())
       .reduce((count, items) => count + Object.keys(items).length, 0));
     expect(value).toContain("BEGIN:VCALENDAR");
-    expect(value).toContain("DURATION:P1D");
+    const durations = [...value.matchAll(/^DURATION:([^\r\n]+)/gm)]
+      .map((match) => match[1]);
+    expect(durations).toHaveLength(dates.length);
+    expect(durations.every((duration) => duration === "P1D")).toBe(true);
     const titles = [...value.matchAll(/^SUMMARY:(.*)/gm)].map((match) => match[1]);
     expect(titles.length).toBeGreaterThan(0);
-    for (const ordinal of ["First", "Second", "Third", "Fourth"]) {
+    for (const ordinal of ["First", "Second", "Fourth"]) {
       expect(titles.join("\n")).toContain(`${ordinal} Sunday in Advent`);
     }
+    expect(titles.join("\n")).toContain("Gaudete Sunday");
     expect(titles.join("\n")).not.toContain("Sunday of Advent");
     expect(titles.join("\n")).not.toMatch(/<[^>]+>|\[[^\]]+\]\([^)]+\)|\*/);
   });

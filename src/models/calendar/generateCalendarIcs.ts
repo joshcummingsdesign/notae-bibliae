@@ -17,5 +17,6 @@ export function generateCalendarIcs(calendar = new Calendar()): string {
   if (error || !value) {
     throw new Error("Calendar generation failed", { cause: error });
   }
-  return value;
+  // ics appends an empty time component to day-only durations.
+  return value.replace(/^DURATION:P1DT(?=\r?$)/gm, "DURATION:P1D");
 }

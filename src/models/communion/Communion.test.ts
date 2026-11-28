@@ -105,7 +105,7 @@ describe("Communion", () => {
 
         expect(all["2025-11-30"][0].title).toBe("First Sunday in Advent");
         expect(all["2025-12-07"][0].title).toBe("Second Sunday in Advent");
-        expect(all["2025-12-14"][0].title).toContain("Third Sunday in Advent");
+        expect(all["2025-12-14"][0].title).toContain("Gaudete Sunday");
         expect(all["2025-12-21"][0].title).toBe("Fourth Sunday in Advent");
       });
 
@@ -113,7 +113,7 @@ describe("Communion", () => {
         const all = communion.getAll();
 
         expect(all["2026-04-05"][0].title).toBe("Easter Day");
-        expect(all["2026-04-12"][0].title).toBe("Second Sunday of Easter");
+        expect(all["2026-04-12"][0].title).toBe("Low Sunday");
       });
 
       test("Trinity Sundays have communion readings", () => {
@@ -159,6 +159,35 @@ describe("Communion", () => {
     });
 
     describe("Holy Week", () => {
+      test.each([
+        ["2026-02-01", "Septuagesima Sunday"],
+        ["2026-02-08", "Sexagesima Sunday"],
+        ["2026-02-15", "Quinquagesima Sunday"],
+        ["2026-03-15", "Laetare Sunday"],
+        ["2025-12-14", "Gaudete Sunday"],
+        ["2026-03-22", "Passion Sunday"],
+        ["2026-09-29", "Saint Michael and All Angels"],
+        ["2026-03-30", "Monday in Holy Week"],
+        ["2026-03-31", "Tuesday in Holy Week"],
+        ["2026-04-01", "Wednesday in Holy Week"],
+        ["2026-04-12", "Low Sunday"],
+        ["2026-04-19", "Second Sunday After Easter"],
+        ["2026-04-26", "Third Sunday After Easter"],
+        ["2026-05-03", "Fourth Sunday After Easter"],
+        ["2026-05-10", "Rogation Sunday"],
+        ["2026-05-11", "Rogation Monday"],
+        ["2026-05-12", "Rogation Tuesday"],
+        ["2026-05-13", "Rogation Wednesday"],
+        ["2026-05-17", "Sunday After Ascension Day"],
+      ])("%s retains its proper under the renamed title", (date, title) => {
+        const entry = communion.getAll()[date][0];
+        expect(entry.title).toBe(title);
+        const readings =
+          communion.readings[title as keyof typeof communion.readings];
+        expect(entry.epistle).toEqual(readings.epistle);
+        expect(entry.gospel).toEqual(readings.gospel);
+      });
+
       test("Palm Sunday has communion reading", () => {
         const all = communion.getAll();
         expect(all["2026-03-29"][0].title).toContain("Palm Sunday");
